@@ -7,6 +7,7 @@ from typing import Tuple
 
 import numpy as np
 import pandas as pd
+from numpy.lib.stride_tricks import sliding_window_view
 from tslearn.metrics import dtw
 
 
@@ -50,6 +51,30 @@ def min_subseq_distance(series: np.ndarray, shapelet: np.ndarray) -> Tuple[float
     L = len(shapelet)
     s = np.asarray(series, dtype=float)
     sh = np.asarray(shapelet, dtype=float)
+
+    if s.ndim == 1 and sh.ndim == 1 and len(s) >= L:
+        windows = sliding_window_view(s, L)
+        n_windows = windows.shape[0]
+        acc = np.full((L, L, n_windows), np.inf, dtype=float)
+
+        for i in range(L):
+            for j in range(L):
+                cost = (windows[:, i] - sh[j]) ** 2
+                if i == 0 and j == 0:
+                    acc[i, j] = cost
+                else:
+                    prev = []
+                    if i > 0:
+                        prev.append(acc[i - 1, j])
+                    if j > 0:
+                        prev.append(acc[i, j - 1])
+                    if i > 0 and j > 0:
+                        prev.append(acc[i - 1, j - 1])
+                    acc[i, j] = cost + np.minimum.reduce(prev)
+
+        dists = np.sqrt(acc[-1, -1])
+        best_pos = int(np.argmin(dists))
+        return float(dists[best_pos]), best_pos
 
     best = np.inf
     best_pos = None

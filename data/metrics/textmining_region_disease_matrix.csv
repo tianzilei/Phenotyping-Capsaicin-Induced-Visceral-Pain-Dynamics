@@ -1,0 +1,9 @@
+source,Belching Disorder,Biliary Pain-like,Chronic Nausea Vomiting Syndrome,Functional Abdominal Bloating/Distension-like,Functional Constipation / Defecatory Disorder-like,Functional Dyspepsia - PDS-like,Irritable Bowel Syndrome-like,Unspecified Functional GI Symptom Pattern
+epigastrium,1.0,1.0,1.0,1.0,0.0,1.0,0.0,1.0
+hypogastrium,0.0,38.0,0.0,63.0,9.0,0.0,23.0,21.0
+left hypochondrium,0.0,22.0,0.0,13.0,1.0,0.0,7.0,3.0
+left inguinal,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0
+right hypochondrium,1.0,86.0,1.0,39.0,4.0,1.0,17.0,10.0
+right inguinal,0.0,1.0,0.0,2.0,0.0,0.0,0.0,0.0
+right lumbar,0.0,14.0,0.0,20.0,2.0,0.0,10.0,5.0
+umbilical,0.0,1.0,0.0,1.0,0.0,0.0,1.0,0.0

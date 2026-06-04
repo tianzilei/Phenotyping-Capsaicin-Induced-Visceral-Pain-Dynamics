@@ -399,7 +399,6 @@ def generate_report(baseline_path: str | None = None) -> dict[str, str]:
         "region_summary": str(Path(METRICS_DIR) / "baseline_region_code_summary.csv"),
         "symptom_summary": str(Path(METRICS_DIR) / "baseline_symptom_code_summary.csv"),
         "data_quality": str(Path(METRICS_DIR) / "baseline_data_quality.csv"),
-        "figure_cluster": str(Path(FIGURES_DIR) / "baseline_vas_trajectory_by_cluster.png"),
     }
 
     _numeric_summary(df).to_csv(outputs["numeric_summary"], index=False, encoding="utf-8-sig")
@@ -411,8 +410,6 @@ def generate_report(baseline_path: str | None = None) -> dict[str, str]:
     symptom_summary.to_csv(outputs["symptom_summary"], index=False, encoding="utf-8-sig")
     data_quality.to_csv(outputs["data_quality"], index=False, encoding="utf-8-sig")
 
-    _plot_vas_trajectory(df, vas_cols, "cluster", outputs["figure_cluster"])
-
     _write_report(
         df=df,
         vas_time_summary=vas_time_summary,
@@ -421,7 +418,7 @@ def generate_report(baseline_path: str | None = None) -> dict[str, str]:
         symptom_summary=symptom_summary,
         data_quality=data_quality,
         output_path=outputs["report"],
-        figures=[outputs["figure_cluster"]],
+        figures=[],
     )
     return outputs
 

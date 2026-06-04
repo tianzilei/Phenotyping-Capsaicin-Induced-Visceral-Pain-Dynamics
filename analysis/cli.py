@@ -17,6 +17,8 @@ from analysis.constants import (
 )
 from analysis.visualization.style import set_publication_style
 
+GENERATE_STANDALONE_FIGURES = False
+
 
 def save_to_baseline(baseline_path: str, updates_df: pd.DataFrame, id_col: str = "ID"):
     """Save analysis results back to baseline file (always overwrites)."""
@@ -212,44 +214,37 @@ def _run_figures(args):
     output_dir = args.output_dir if args.output_dir else FIGURES_DIR
     os.makedirs(output_dir, exist_ok=True)
 
-    # Import the figure generation functions
     from analysis.figures.manuscript import (
-        generate_figure1,
-        generate_figure2,
-        generate_figure3,
-        generate_figure4,
-        generate_figure5,
-        generate_figure6,
-        generate_figure7,
+        FIGURE_MAP,
+        SUPPLEMENT_DIR,
+        SUPPLEMENT_FIGURE_MAP,
+        clean_figure_outputs,
     )
 
-    figure_map = {
-        "1": ("figure1_temporal_dynamics.png", generate_figure1),
-        "2": ("figure2_clustering.png", generate_figure2),
-        "3": ("figure3_shapelets.png", generate_figure3),
-        "4": ("figure4_symptom_distribution.png", generate_figure4),
-        "5": ("figure5_network_analysis.png", generate_figure5),
-        "6": ("figure6_prediction.png", generate_figure6),
-        "7": ("figure7_cluster_prediction.png", generate_figure7),
-    }
+    figure_map = FIGURE_MAP
+    supplement_map = SUPPLEMENT_FIGURE_MAP
+    supplement_dir = os.path.join(output_dir, SUPPLEMENT_DIR)
 
     if target_figures:
         for fig_num in target_figures:
-            if fig_num not in figure_map:
-                print(f"Unknown figure number: {fig_num}. Available: 1-7")
+            if fig_num in figure_map:
+                filename, gen_fn = figure_map[fig_num]
+                gen_fn(os.path.join(output_dir, filename))
+            elif fig_num in supplement_map:
+                filename, gen_fn = supplement_map[fig_num]
+                gen_fn(os.path.join(supplement_dir, filename))
+            else:
+                print(f"Unknown figure number: {fig_num}. Available: 1-4, s1-s8")
                 continue
-            filename, gen_fn = figure_map[fig_num]
-            gen_fn(os.path.join(output_dir, filename))
     else:
-        generate_figure1(os.path.join(output_dir, "figure1_temporal_dynamics.png"))
-        generate_figure2(os.path.join(output_dir, "figure2_clustering.png"))
-        generate_figure3(os.path.join(output_dir, "figure3_shapelets.png"))
-        generate_figure4(os.path.join(output_dir, "figure4_symptom_distribution.png"))
-        generate_figure5(os.path.join(output_dir, "figure5_network_analysis.png"))
-        generate_figure6(os.path.join(output_dir, "figure6_prediction.png"))
-        generate_figure7(os.path.join(output_dir, "figure7_cluster_prediction.png"))
+        clean_figure_outputs(output_dir)
+        for filename, gen_fn in figure_map.values():
+            gen_fn(os.path.join(output_dir, filename))
+        for filename, gen_fn in supplement_map.values():
+            gen_fn(os.path.join(supplement_dir, filename))
 
-    print(f"\nAll figures saved to {output_dir}")
+    print(f"\nMain figures saved to {output_dir}")
+    print(f"Supplementary figures saved to {supplement_dir}")
 
 
 def _run_trajectory(args):
@@ -286,7 +281,7 @@ def _run_trajectory(args):
         sil_avg, sil_values = clustering.compute_dtw_silhouette(X, labels)
         print(f"Silhouette score: {sil_avg:.4f}")
 
-        if not args.no_plot:
+        if not args.no_plot and GENERATE_STANDALONE_FIGURES:
             plotting.plot_cluster_centroids(
                 centroids,
                 labels,
@@ -348,7 +343,7 @@ def _run_trajectory(args):
     logrank_p = km_result["logrank_pvalue"]
     print(f"Survival: median relief={median_relief} min, p={logrank_p:.4f}")
 
-    if not args.no_plot:
+    if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         # Plot KM curves
         fig, axes = plt.subplots(1, 2, figsize=(12, 5))
         km_result["kmf_onset"].plot_survival_function(ax=axes[0], ci_show=True)
@@ -365,7 +360,7 @@ def _run_trajectory(args):
         print("Survival KM curves saved")
 
     print(f"Results saved to {METRICS_DIR}")
-    if not args.no_plot:
+    if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         print(f"Figures saved to {figures_dir}")
 
 
@@ -414,7 +409,7 @@ def _run_textmining(args):
     for name, matrix in matrices.items():
         matrix.to_csv(os.path.join(METRICS_DIR, f"textmining_{name}_matrix.csv"))
 
-    if not args.no_plot:
+    if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         plotting.plot_cooccurrence_heatmaps(
             matrices,
             save_path=os.path.join(figures_dir, "cooccurrence_heatmaps.png"),
@@ -431,7 +426,7 @@ def _run_textmining(args):
     print(f"Rome IV mapping saved to baseline: {args.baseline}")
 
     print(f"Results saved to {METRICS_DIR}")
-    if not args.no_plot:
+    if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         print(f"Figures saved to {figures_dir}")
 
 
@@ -511,7 +506,7 @@ def _run_predict(args):
 
         all_preds_list.append(preds)
 
-        if not args.no_plot:
+        if not args.no_plot and GENERATE_STANDALONE_FIGURES:
             plotting.plot_observed_vs_predicted(
                 preds,
                 save_path=os.path.join(figures_dir, "regression_scatter.png"),
@@ -572,7 +567,7 @@ def _run_predict(args):
         print(f"Prediction results saved to baseline: {args.baseline}")
 
     print(f"Results saved to {METRICS_DIR}")
-    if not args.no_plot:
+    if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         print(f"Figures saved to {figures_dir}")
 
 

@@ -1,0 +1,30 @@
+node_type,name,count
+symptom,abdominal distension,403
+region,right hypochondrium,527
+region,hypogastrium,421
+symptom,heartburn,49
+symptom,belching,78
+symptom,nausea,263
+disease,Functional Abdominal Bloating/Distension-like,64
+disease,Biliary Pain-like,86
+symptom,palpitations,76
+symptom,irritability,82
+disease,Unspecified Functional GI Symptom Pattern,22
+symptom,abdominal pain,261
+region,left hypochondrium,168
+symptom,acid regurgitation,131
+symptom,loss of appetite,34
+symptom,tenesmus,53
+symptom,bloating,78
+disease,Functional Constipation / Defecatory Disorder-like,9
+region,epigastrium,13
+disease,Functional Dyspepsia - PDS-like,1
+disease,Chronic Nausea Vomiting Syndrome,1
+region,right lumbar,170
+disease,Irritable Bowel Syndrome-like,28
+region,umbilical,7
+symptom,vomiting,94
+region,right inguinal,22
+region,left inguinal,15
+region,left lumbar,2
+disease,Belching Disorder,1

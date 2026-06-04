@@ -1,0 +1,13 @@
+source,Belching Disorder,Biliary Pain-like,Chronic Nausea Vomiting Syndrome,Functional Abdominal Bloating/Distension-like,Functional Constipation / Defecatory Disorder-like,Functional Dyspepsia - PDS-like,Irritable Bowel Syndrome-like,Unspecified Functional GI Symptom Pattern
+abdominal distension,0.0,61.0,1.0,60.0,6.0,1.0,26.0,8.0
+abdominal pain,0.0,53.0,0.0,21.0,4.0,0.0,28.0,12.0
+acid regurgitation,0.0,21.0,0.0,14.0,4.0,0.0,4.0,5.0
+belching,1.0,11.0,0.0,9.0,1.0,0.0,2.0,6.0
+bloating,0.0,11.0,0.0,12.0,0.0,0.0,3.0,2.0
+heartburn,0.0,8.0,0.0,5.0,0.0,0.0,2.0,2.0
+irritability,1.0,13.0,0.0,6.0,0.0,0.0,1.0,15.0
+loss of appetite,0.0,7.0,1.0,2.0,1.0,1.0,0.0,2.0
+nausea,0.0,52.0,1.0,35.0,4.0,1.0,12.0,13.0
+palpitations,1.0,9.0,0.0,5.0,1.0,0.0,2.0,16.0
+tenesmus,1.0,6.0,0.0,6.0,9.0,0.0,4.0,2.0
+vomiting,0.0,17.0,0.0,11.0,3.0,0.0,9.0,7.0

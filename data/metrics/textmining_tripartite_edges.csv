@@ -1,0 +1,179 @@
+edge_type,source,target,weight
+symptom_region,abdominal distension,right hypochondrium,110
+symptom_region,abdominal distension,hypogastrium,59
+symptom_region,heartburn,right hypochondrium,14
+symptom_region,heartburn,hypogastrium,7
+symptom_region,belching,right hypochondrium,20
+symptom_region,belching,hypogastrium,16
+symptom_region,nausea,right hypochondrium,52
+symptom_region,nausea,hypogastrium,47
+symptom_disease,abdominal distension,Functional Abdominal Bloating/Distension-like,60
+symptom_disease,heartburn,Functional Abdominal Bloating/Distension-like,5
+symptom_disease,belching,Functional Abdominal Bloating/Distension-like,9
+symptom_disease,nausea,Functional Abdominal Bloating/Distension-like,35
+region_disease,right hypochondrium,Functional Abdominal Bloating/Distension-like,39
+region_disease,hypogastrium,Functional Abdominal Bloating/Distension-like,63
+symptom_disease,abdominal distension,Biliary Pain-like,61
+symptom_disease,heartburn,Biliary Pain-like,8
+symptom_disease,belching,Biliary Pain-like,11
+symptom_disease,nausea,Biliary Pain-like,52
+region_disease,right hypochondrium,Biliary Pain-like,86
+region_disease,hypogastrium,Biliary Pain-like,38
+symptom_region,palpitations,hypogastrium,15
+symptom_region,irritability,hypogastrium,14
+symptom_disease,palpitations,Unspecified Functional GI Symptom Pattern,16
+symptom_disease,irritability,Unspecified Functional GI Symptom Pattern,15
+symptom_disease,nausea,Unspecified Functional GI Symptom Pattern,13
+region_disease,hypogastrium,Unspecified Functional GI Symptom Pattern,21
+symptom_region,abdominal pain,left hypochondrium,20
+symptom_region,abdominal distension,left hypochondrium,38
+symptom_region,nausea,left hypochondrium,19
+symptom_region,abdominal pain,right hypochondrium,53
+symptom_region,acid regurgitation,right hypochondrium,32
+symptom_region,loss of appetite,right hypochondrium,8
+symptom_disease,abdominal pain,Biliary Pain-like,53
+symptom_disease,acid regurgitation,Biliary Pain-like,21
+symptom_disease,loss of appetite,Biliary Pain-like,7
+symptom_region,palpitations,right hypochondrium,17
+symptom_region,tenesmus,right hypochondrium,10
+symptom_region,abdominal pain,hypogastrium,42
+symptom_region,acid regurgitation,hypogastrium,22
+symptom_region,irritability,right hypochondrium,17
+symptom_disease,palpitations,Biliary Pain-like,9
+symptom_disease,irritability,Biliary Pain-like,13
+symptom_disease,abdominal pain,Unspecified Functional GI Symptom Pattern,12
+symptom_disease,acid regurgitation,Unspecified Functional GI Symptom Pattern,5
+symptom_disease,belching,Unspecified Functional GI Symptom Pattern,6
+region_disease,right hypochondrium,Unspecified Functional GI Symptom Pattern,10
+symptom_region,bloating,right hypochondrium,18
+symptom_disease,bloating,Biliary Pain-like,11
+symptom_region,acid regurgitation,left hypochondrium,11
+symptom_region,tenesmus,hypogastrium,9
+symptom_disease,abdominal distension,Functional Constipation / Defecatory Disorder-like,6
+symptom_disease,acid regurgitation,Functional Constipation / Defecatory Disorder-like,4
+symptom_disease,tenesmus,Functional Constipation / Defecatory Disorder-like,9
+region_disease,right hypochondrium,Functional Constipation / Defecatory Disorder-like,4
+region_disease,hypogastrium,Functional Constipation / Defecatory Disorder-like,9
+symptom_disease,acid regurgitation,Functional Abdominal Bloating/Distension-like,14
+symptom_disease,tenesmus,Functional Abdominal Bloating/Distension-like,6
+symptom_region,abdominal distension,epigastrium,1
+symptom_region,nausea,epigastrium,1
+symptom_region,loss of appetite,epigastrium,1
+symptom_disease,abdominal distension,Functional Dyspepsia - PDS-like,1
+symptom_disease,nausea,Functional Dyspepsia - PDS-like,1
+symptom_disease,loss of appetite,Functional Dyspepsia - PDS-like,1
+region_disease,epigastrium,Functional Dyspepsia - PDS-like,1
+region_disease,right hypochondrium,Functional Dyspepsia - PDS-like,1
+region_disease,epigastrium,Biliary Pain-like,1
+symptom_disease,abdominal distension,Chronic Nausea Vomiting Syndrome,1
+symptom_disease,nausea,Chronic Nausea Vomiting Syndrome,1
+symptom_disease,loss of appetite,Chronic Nausea Vomiting Syndrome,1
+region_disease,epigastrium,Chronic Nausea Vomiting Syndrome,1
+region_disease,right hypochondrium,Chronic Nausea Vomiting Syndrome,1
+symptom_disease,loss of appetite,Functional Abdominal Bloating/Distension-like,2
+region_disease,epigastrium,Functional Abdominal Bloating/Distension-like,1
+symptom_disease,abdominal distension,Unspecified Functional GI Symptom Pattern,8
+symptom_disease,palpitations,Functional Abdominal Bloating/Distension-like,5
+symptom_disease,irritability,Functional Abdominal Bloating/Distension-like,6
+symptom_region,palpitations,left hypochondrium,5
+symptom_region,loss of appetite,hypogastrium,6
+symptom_disease,loss of appetite,Unspecified Functional GI Symptom Pattern,2
+symptom_region,abdominal pain,right lumbar,19
+symptom_region,bloating,left hypochondrium,9
+symptom_region,bloating,hypogastrium,12
+symptom_region,bloating,right lumbar,9
+symptom_region,abdominal distension,right lumbar,27
+symptom_region,acid regurgitation,right lumbar,12
+symptom_region,nausea,right lumbar,21
+symptom_disease,abdominal pain,Irritable Bowel Syndrome-like,28
+symptom_disease,bloating,Irritable Bowel Syndrome-like,3
+symptom_disease,abdominal distension,Irritable Bowel Syndrome-like,26
+symptom_disease,acid regurgitation,Irritable Bowel Syndrome-like,4
+symptom_disease,nausea,Irritable Bowel Syndrome-like,12
+region_disease,right hypochondrium,Irritable Bowel Syndrome-like,17
+region_disease,left hypochondrium,Irritable Bowel Syndrome-like,7
+region_disease,hypogastrium,Irritable Bowel Syndrome-like,23
+region_disease,right lumbar,Irritable Bowel Syndrome-like,10
+symptom_disease,abdominal pain,Functional Abdominal Bloating/Distension-like,21
+symptom_disease,bloating,Functional Abdominal Bloating/Distension-like,12
+region_disease,left hypochondrium,Functional Abdominal Bloating/Distension-like,13
+region_disease,right lumbar,Functional Abdominal Bloating/Distension-like,20
+region_disease,left hypochondrium,Biliary Pain-like,22
+region_disease,right lumbar,Biliary Pain-like,14
+symptom_region,heartburn,left hypochondrium,3
+symptom_region,heartburn,right lumbar,6
+symptom_disease,heartburn,Irritable Bowel Syndrome-like,2
+symptom_region,irritability,right lumbar,8
+symptom_disease,irritability,Irritable Bowel Syndrome-like,1
+symptom_region,abdominal pain,umbilical,1
+symptom_region,abdominal distension,umbilical,1
+symptom_region,vomiting,right hypochondrium,17
+symptom_region,vomiting,umbilical,1
+symptom_region,vomiting,hypogastrium,18
+symptom_disease,vomiting,Irritable Bowel Syndrome-like,9
+region_disease,umbilical,Irritable Bowel Syndrome-like,1
+symptom_disease,vomiting,Functional Abdominal Bloating/Distension-like,11
+region_disease,umbilical,Functional Abdominal Bloating/Distension-like,1
+symptom_disease,vomiting,Biliary Pain-like,17
+region_disease,umbilical,Biliary Pain-like,1
+symptom_disease,tenesmus,Biliary Pain-like,6
+symptom_disease,vomiting,Unspecified Functional GI Symptom Pattern,7
+symptom_disease,belching,Irritable Bowel Syndrome-like,2
+symptom_disease,tenesmus,Irritable Bowel Syndrome-like,4
+symptom_disease,abdominal pain,Functional Constipation / Defecatory Disorder-like,4
+symptom_disease,belching,Functional Constipation / Defecatory Disorder-like,1
+symptom_disease,vomiting,Functional Constipation / Defecatory Disorder-like,3
+symptom_region,vomiting,left hypochondrium,4
+symptom_region,irritability,left hypochondrium,6
+symptom_region,abdominal pain,right inguinal,5
+symptom_region,abdominal pain,left inguinal,3
+symptom_region,acid regurgitation,right inguinal,3
+symptom_region,acid regurgitation,left inguinal,3
+symptom_region,belching,right lumbar,5
+symptom_region,belching,right inguinal,2
+symptom_region,belching,left inguinal,2
+symptom_region,heartburn,right inguinal,1
+symptom_region,heartburn,left inguinal,1
+symptom_region,nausea,right inguinal,2
+symptom_region,nausea,left inguinal,1
+symptom_region,vomiting,right lumbar,4
+symptom_region,tenesmus,left hypochondrium,2
+symptom_region,tenesmus,right lumbar,2
+symptom_disease,nausea,Functional Constipation / Defecatory Disorder-like,4
+region_disease,left hypochondrium,Functional Constipation / Defecatory Disorder-like,1
+region_disease,right lumbar,Functional Constipation / Defecatory Disorder-like,2
+symptom_region,abdominal distension,right inguinal,3
+symptom_region,abdominal distension,left inguinal,1
+symptom_region,vomiting,right inguinal,2
+symptom_region,vomiting,left inguinal,1
+region_disease,right inguinal,Functional Abdominal Bloating/Distension-like,2
+region_disease,left inguinal,Functional Abdominal Bloating/Distension-like,2
+symptom_region,loss of appetite,left hypochondrium,3
+symptom_region,loss of appetite,right lumbar,2
+symptom_disease,loss of appetite,Functional Constipation / Defecatory Disorder-like,1
+symptom_disease,heartburn,Unspecified Functional GI Symptom Pattern,2
+region_disease,left hypochondrium,Unspecified Functional GI Symptom Pattern,3
+region_disease,right lumbar,Unspecified Functional GI Symptom Pattern,5
+symptom_region,nausea,umbilical,1
+symptom_region,nausea,left lumbar,1
+symptom_region,palpitations,right lumbar,4
+symptom_region,belching,left hypochondrium,2
+symptom_disease,palpitations,Irritable Bowel Syndrome-like,2
+symptom_disease,bloating,Unspecified Functional GI Symptom Pattern,2
+symptom_region,bloating,right inguinal,1
+symptom_region,bloating,left inguinal,1
+symptom_disease,palpitations,Functional Constipation / Defecatory Disorder-like,1
+symptom_disease,tenesmus,Unspecified Functional GI Symptom Pattern,2
+region_disease,right inguinal,Biliary Pain-like,1
+symptom_region,belching,epigastrium,1
+symptom_region,tenesmus,epigastrium,1
+symptom_region,palpitations,epigastrium,1
+symptom_region,irritability,epigastrium,1
+region_disease,epigastrium,Unspecified Functional GI Symptom Pattern,1
+symptom_disease,belching,Belching Disorder,1
+symptom_disease,tenesmus,Belching Disorder,1
+symptom_disease,palpitations,Belching Disorder,1
+symptom_disease,irritability,Belching Disorder,1
+region_disease,epigastrium,Belching Disorder,1
+region_disease,right hypochondrium,Belching Disorder,1
+symptom_region,tenesmus,left lumbar,1
