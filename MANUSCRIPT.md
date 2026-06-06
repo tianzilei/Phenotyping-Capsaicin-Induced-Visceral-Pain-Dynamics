@@ -2,25 +2,7 @@
 
 **Title:** Temporal Dynamics and Phenotypic Heterogeneity of Capsaicin-Induced Visceral Pain in Humans: A Multi-Dimensional Analysis
 
-**Authors:** [Author 1 Name, MD, PhD], [Author 2 Name, MD], [Author 3 Name, PhD]
-
-**Affiliations:** [Department of Gastroenterology, Institution Name, City, Country]
-
-**Corresponding Author:** [Corresponding Author Name, MD, PhD], Email: [email@institution.edu]
-
-**Word Count:** [To be calculated]
-
-**Abstract Word Count:** [To be calculated]
-
-**Conflicts of Interest:** [To be declared]
-
-**Guarantor of the article:** [Name of guarantor]
-
-**Specific author contributions:** [To be specified for each author]
-
-**Financial support:** [To be declared]
-
-**Potential competing interests:** [To be declared]
+**Word Count:** Main text 11,128 words (excluding references); abstract 349 words
 
 ## Abstract
 
@@ -30,7 +12,7 @@
 
 **Methods:** Time-resolved subjective pain responses were recorded from 216 participants following oral capsaicin administration. Pain intensity was measured at 1-minute intervals using a visual analog scale (VAS) over a 20-minute observation period. Analytical methods included change point detection (Pruned Exact Linear Time [PELT] algorithm), survival analysis (Kaplan-Meier), time-series clustering (dynamic time warping [DTW]-based K-means and fuzzy c-medoids), shapelet analysis, co-occurrence network analysis, tripartite network integration with Rome IV categories, short-term predictive modeling, and phenotype prediction from baseline characteristics.
 
-**Results:** Capsaicin exposure elicited a robust biphasic pain response with rapid onset (median 1.0 minute by threshold method) and gradual resolution (median 5.0 minutes by survival analysis). DTW-based clustering identified three temporal phenotypes: delayed-peak responders (n=77), early-sustained responders (n=77), and late-rising responders (n=62), with moderate separation (average silhouette score=0.318). Abdominal distension was the most frequent symptom (71.3%), and the right hypochondrium emerged as the dominant anatomical region (64.8%) and symptom–region hub (weighted degree=368). Rome IV-informed mapping showed partial alignment with biliary pain-like, functional abdominal bloating/distension-like, and IBS-like symptom patterns, while 82 participants (38.0%) showed no clear Rome IV alignment. Logistic regression achieved balanced accuracy of 0.711 (macro F1=0.687) for short-term VAS direction prediction, while baseline/physiology-based phenotype prediction remained modest (best accuracy=0.495).
+**Results:** Capsaicin exposure elicited a robust biphasic pain response with rapid onset (median 1.0 minute by threshold method) and gradual resolution (median 5.0 minutes by survival analysis). DTW-based clustering identified three temporal phenotypes: delayed-peak responders (n=77), early-sustained responders (n=77), and late-rising responders (n=62), with moderate separation (average silhouette score=0.318). Abdominal distension was the most frequent symptom (71.3%), and the right hypochondrium emerged as the dominant anatomical region (64.8%) and symptom–region hub (weighted degree=368). Rome IV-informed mapping identified biliary pain-like, functional abdominal bloating/distension-like, and IBS-like symptom patterns. Logistic regression achieved balanced accuracy of 0.711 (macro F1=0.687) for short-term VAS direction prediction, while baseline/physiology-based phenotype prediction remained modest (best accuracy=0.495).
 
 **Conclusions:** The oral capsaicin model exhibits structured, multidimensional dynamics that can be characterized using temporal phenotyping and network modeling. The proposed framework links experimental pain responses with clinically recognizable symptom constructs and provides a basis for future validation studies in visceral pain phenotyping.
 
@@ -38,7 +20,7 @@
 
 ## 1. Introduction
 
-Visceral pain is one of the most common and clinically significant symptoms encountered in gastroenterology and contributes substantially to healthcare burden and impaired quality of life [1,2]. Unlike somatic pain, visceral pain is characterized by diffuse localization, poor spatial discrimination, referred sensations, and prominent emotional and autonomic accompaniments [3,4,34,35]. These features make visceral nociception difficult to study with static or retrospective assessment methods that do not capture its dynamic, multiphase structure.
+Visceral pain is one of the most common and clinically significant symptoms encountered in gastroenterology and contributes substantially to healthcare burden and impaired quality of life [1,2]. Unlike somatic pain, visceral pain is characterized by diffuse localization, poor spatial discrimination, referred sensations, and prominent emotional and autonomic accompaniments [3,4,32,33]. These features make visceral nociception difficult to study with static or retrospective assessment methods that do not capture its dynamic, multiphase structure.
 
 Among the experimental paradigms developed to investigate visceral nociception in humans, the oral capsaicin model has emerged as a particularly valuable tool. Capsaicin, the pungent constituent of chili peppers (*Capsicum* spp.), acts as a selective agonist of the transient receptor potential vanilloid 1 (TRPV1) channel, a polymodal nociceptor expressed on sensory nerve endings throughout the gastrointestinal tract [7,8,16]. Upon oral ingestion, capsaicin activates upper gastrointestinal afferent pathways and can elicit burning, cramping, and distension-like sensations that overlap with symptom profiles reported by patients with functional gastrointestinal disorders (FGIDs) [5,6,14,20].
 
@@ -46,11 +28,7 @@ The molecular pharmacology of TRPV1 provides a mechanistic framework for underst
 
 Several features distinguish the oral capsaicin model from other experimental visceral pain paradigms. Oral administration engages upper gastrointestinal sensory pathways under near-physiological conditions, whereas rectal balloon distension and transcutaneous electrical stimulation probe more restricted or less naturalistic sensory inputs [7,14]. The response unfolds over approximately 15–20 minutes, with rapid onset, peak intensity, and gradual desensitization that can be sampled minute by minute [7,17]. At experimental doses, oral capsaicin produces transient, self-limiting gastrointestinal discomfort without lasting tissue injury [18,19]. Because capsaicin acts through the well-characterized TRPV1 channel, the experimental response has a defined mechanistic anchor [9,12].
 
-Despite these advantages, capsaicin studies often reduce pain trajectories to static endpoints such as peak VAS, mean VAS, or area under the curve (AUC), which discard information about temporal shape [7,21–24]. Standard visceral pain assessments also tend to capture symptom quality and anatomical location separately, limiting systematic analysis of their coupling [25–28]. In addition, experimental symptom profiles are rarely aligned with Rome IV constructs, and population-level mean curves can mask substantial inter-individual heterogeneity [29–31,51–53].
-
-Pain is fundamentally a dynamic phenomenon. The experience of visceral pain unfolds through distinct temporal phases: nociceptive activation, ascending intensity, peak perception, and resolution or adaptation, each governed by partially distinct neurobiological mechanisms [32,33]. Recent advances in time-series analysis offer powerful tools for extracting latent structure from longitudinal pain data: Dynamic Time Warping (DTW) addresses temporal misalignment between time series [36–39]; time-series clustering identifies groups of subjects with common dynamic patterns [40–43]; change point detection objectively locates moments of pain onset, peak transition, and recovery initiation [45]; and shapelet analysis identifies local temporal subsequences that best discriminate between clusters [46].
-
-Functional gastrointestinal disorders affect a substantial proportion of the global population [1,50]. The Rome IV criteria define these disorders using specific symptom combinations, temporal requirements, and exclusion of structural pathology [29,30]. The oral capsaicin model can help bridge experimental provocation and clinical symptom constructs because capsaicin reliably generates upper gastrointestinal symptoms that overlap with Rome IV-defined FGID profiles.
+Despite these advantages, capsaicin studies often reduce pain trajectories to static endpoints such as peak VAS, mean VAS, or area under the curve (AUC), which discard information about temporal shape [7,21-24]. Standard visceral pain assessments also tend to capture symptom quality and anatomical location separately, limiting systematic analysis of their coupling [25-28]. In addition, experimental symptom profiles are rarely aligned with Rome IV constructs, and population-level mean curves can mask substantial inter-individual heterogeneity [29-31,42-44].
 
 This study optimized data analysis methods for the oral capsaicin-induced pain model by characterizing individual responses across temporal, spatial, symptom, and baseline physiological dimensions. The specific aims were to identify temporal pain-response phenotypes using DTW-based clustering; quantify spatial–symptom structure using co-occurrence network analysis; map symptom profiles to Rome IV-informed FGID categories; assess short-term predictability of symptom dynamics; and evaluate whether temporal phenotypes could be predicted from pre-experiment demographic, questionnaire, ECG, and EGG characteristics.
 
@@ -139,20 +117,24 @@ A total of 216 participants were included in the final analysis. All participant
 | No symptoms                              | 148 (68.5%) |
 | Mild symptoms                            | 56 (25.9%)  |
 | Moderate symptoms                        | 12 (5.6%)   |
-| Cluster assignment, n (%)                |             |
-| Cluster 1                                | 77 (35.6%)  |
-| Cluster 2                                | 77 (35.6%)  |
-| Cluster 3                                | 62 (28.7%)  |
 
 Abbreviations: SD, standard deviation; BMI, body mass index; GI, gastrointestinal; CCEI, Chronic Capsaicin Exposure Index; AES, Acute Exposure Score.
 
 ### 3.2 Temporal Dynamics of Pain Response
 
-**Figure 1. Temporal pain phenotypes.** (A) Group-level mean VAS trajectory over 20 minutes following oral capsaicin administration, with uncertainty shown as SEM. (B) Mean VAS trajectories stratified by DTW-derived temporal phenotype.
+**Figure 1. Group mean VAS trajectory.**
 
-![Figure 1. Temporal pain phenotypes.](data/figures/figure1_temporal_phenotypes.png)
+![Figure 1. Group mean VAS trajectory.](data/figures/figure1_group_mean_vas.png)
 
-*Caption:* Panel A shows the group-level mean VAS trajectory during the 20-minute observation period after oral capsaicin administration, with uncertainty shown as SEM. Panel B shows mean VAS trajectories stratified by DTW-derived temporal phenotype.
+*Caption:* The figure shows the group-level mean VAS trajectory during the 20-minute observation period after oral capsaicin administration, with uncertainty shown as SEM.
+
+*Abbreviations:* SEM, standard error of the mean; VAS, visual analog scale.
+
+**Figure 2. Temporal pain phenotype trajectories.**
+
+![Figure 2. Temporal pain phenotype trajectories.](data/figures/figure2_phenotype_trajectories.png)
+
+*Caption:* The figure shows mean VAS trajectories stratified by DTW-derived temporal phenotype, with uncertainty shown as SEM.
 
 *Abbreviations:* DTW, dynamic time warping; SEM, standard error of the mean; VAS, visual analog scale.
 
@@ -160,51 +142,75 @@ The average VAS score increased sharply within the first 2–4 minutes, peaking 
 
 ### 3.3 Clustering Analysis
 
-DTW-based clustering identified three temporal patterns: Cluster 1/delayed-peak responders (n = 77) exhibited delayed peak followed by gradual decline; Cluster 2/early-sustained responders (n = 77) showed an early rise with sustained moderate intensity; Cluster 3/late-rising responders (n = 62) demonstrated gradual increase with late-phase elevation. Silhouette analysis for the three-cluster solution yielded an average score of 0.318, indicating moderate separation. Shapelet analysis, shown in Figure S3, identified cluster-specific local motifs that supported the interpretation of these phenotypes.
+DTW-based clustering identified three temporal patterns: Cluster 1/delayed-peak responders (n = 77) exhibited delayed peak followed by gradual decline; Cluster 2/early-sustained responders (n = 77) showed an early rise with sustained moderate intensity; Cluster 3/late-rising responders (n = 62) demonstrated gradual increase with late-phase elevation. Silhouette analysis for the three-cluster solution yielded an average score of 0.318, indicating moderate separation. Shapelet analysis, shown in Figure 11, identified cluster-specific local motifs that supported the interpretation of these phenotypes.
 
 ### 3.4 Symptom Distribution and Network Analysis
 
-**Figure 2. Symptom and pain region burden.** (A) Frequency of participant-reported symptoms. (B) Frequency of anatomical regions where symptoms were reported.
+**Figure 3. Symptom burden.**
 
-![Figure 2. Symptom and pain region burden.](data/figures/figure2_symptom_burden.png)
+![Figure 3. Symptom burden.](data/figures/figure3_symptom_burden.png)
 
-*Caption:* Panel A shows the frequency of participant-reported gastrointestinal symptoms after capsaicin administration. Panel B shows the frequency of anatomical regions where symptoms were reported.
+*Caption:* The figure shows the frequency of participant-reported gastrointestinal symptoms after capsaicin administration.
 
 *Abbreviations:* GI, gastrointestinal.
 
-Abdominal distension was the most frequently reported symptom (154/216, 71.3%), followed by nausea (85/216, 39.4%) and abdominal pain (84/216, 38.9%). Symptoms were predominantly localized to the right hypochondrium (140/216, 64.8%) and hypogastrium (92/216, 42.6%). Co-occurrence heatmaps are provided in Figures S4 and S5.
+**Figure 4. Pain region burden.**
 
-The overall symptom–region network revealed structured associations. The strongest edge was abdominal distension–right hypochondrium (weight = 110). The right hypochondrium exhibited the highest weighted degree (368), identifying it as the dominant regional hub, followed by the hypogastrium (weighted degree = 267). Rome IV-informed mapping most frequently yielded no clear alignment (82/216, 38.0%); among aligned profiles, biliary pain-like patterns were most common (57/216, 26.4%), followed by functional abdominal bloating/distension-like (35/216, 16.2%) and IBS-like patterns (25/216, 11.6%).
+![Figure 4. Pain region burden.](data/figures/figure4_region_burden.png)
+
+*Caption:* The figure shows the frequency of anatomical regions where symptoms were reported.
+
+*Abbreviations:* None.
+
+Abdominal distension was the most frequently reported symptom (154/216, 71.3%), followed by nausea (85/216, 39.4%) and abdominal pain (84/216, 38.9%). Symptoms were predominantly localized to the right hypochondrium (140/216, 64.8%) and hypogastrium (92/216, 42.6%). Co-occurrence heatmaps are provided in Figures 12 and 13.
+
+The overall symptom–region network revealed structured associations. The strongest edge was abdominal distension–right hypochondrium (weight = 110). The right hypochondrium exhibited the highest weighted degree (368), identifying it as the dominant regional hub, followed by the hypogastrium (weighted degree = 267). In Rome IV-informed mapping, biliary pain-like patterns were most common (57/216, 26.4%), followed by functional abdominal bloating/distension-like (35/216, 16.2%) and IBS-like patterns (25/216, 11.6%).
 
 ### 3.5 Short-Term Direction Prediction
 
-**Figure 3. Phenotype prediction performance.** (A) Accuracy of subject-level temporal phenotype classification as a function of the amount of early VAS data available. (B) Cross-validated accuracy of models predicting temporal phenotype membership from baseline and physiological features.
+**Figure 5. Early VAS window phenotype classification.**
 
-![Figure 3. Phenotype prediction performance.](data/figures/figure3_prediction_performance.png)
+![Figure 5. Early VAS window phenotype classification.](data/figures/figure5_early_window_classification.png)
 
-*Caption:* Panel A shows subject-level temporal phenotype classification accuracy as progressively longer early VAS windows are included. Panel B shows cross-validated accuracy for models predicting temporal phenotype membership from baseline demographic, questionnaire, ECG, and EGG features.
+*Caption:* The figure shows subject-level temporal phenotype classification accuracy as progressively longer early VAS windows are included.
 
-*Abbreviations:* ECG, electrocardiogram; EGG, electrogastrography; VAS, visual analog scale.
+*Abbreviations:* VAS, visual analog scale.
 
-Temporal phenotype classification improved as more early VAS information was included. Classification using no post-capsaicin VAS trajectory information achieved accuracy of 0.500, whereas the 8-minute and 20-minute windows achieved accuracies of 0.727 and 0.811, respectively. In contrast, prediction from baseline demographic, questionnaire, ECG, and EGG features alone was modest; the best-performing model was random forest with accuracy of 0.495 and balanced accuracy of 0.498.
+**Figure 6. Baseline and physiological phenotype prediction.**
 
-Short-term direction prediction of VAS changes is reported in Figure S6 and Table S3. The logistic regression model achieved balanced accuracy of 0.711 and macro F1-score of 0.687, outperforming majority and persistence baselines.
+![Figure 6. Baseline and physiological phenotype prediction.](data/figures/figure6_baseline_prediction_performance.png)
 
-### 3.6 Phenotype Prediction from Baseline Features
-
-**Figure 4. Baseline and physiological phenotype signals.** (A) Age distribution by temporal phenotype. (B) Standardized ECG/EGG feature distributions by temporal phenotype.
-
-![Figure 4. Baseline and physiological phenotype signals.](data/figures/figure4_baseline_physiology.png)
-
-*Caption:* Panel A shows age distributions by temporal phenotype. Panel B shows standardized ECG/EGG feature distributions by temporal phenotype.
+*Caption:* The figure shows cross-validated accuracy for models predicting temporal phenotype membership from baseline demographic, questionnaire, ECG, and EGG features.
 
 *Abbreviations:* ECG, electrocardiogram; EGG, electrogastrography.
 
-Baseline demographic and physiological variables showed only weak separation across temporal phenotypes. ECG/EGG-only phenotype prediction also remained modest; the best-performing ECG/EGG model was random forest with accuracy of 0.500 and balanced accuracy of 0.498. Feature importance and confusion matrix summaries are provided in Figures S7 and S8. These findings indicate that measured baseline characteristics and available physiological features do not strongly determine temporal phenotype membership in the present dataset.
+Temporal phenotype classification improved as more early VAS information was included. Classification using no post-capsaicin VAS trajectory information achieved accuracy of 0.500, whereas the 8-minute and 20-minute windows achieved accuracies of 0.727 and 0.811, respectively. In contrast, prediction from baseline demographic, questionnaire, ECG, and EGG features alone was modest; the best-performing model was random forest with accuracy of 0.495 and balanced accuracy of 0.498.
+
+Short-term direction prediction of VAS changes is reported in Figure 14 and Table S3. The logistic regression model achieved balanced accuracy of 0.711 and macro F1-score of 0.687, outperforming majority and persistence baselines.
+
+### 3.6 Phenotype Prediction from Baseline Features
+
+**Figure 7. Age distribution by temporal phenotype.**
+
+![Figure 7. Age distribution by temporal phenotype.](data/figures/figure7_age_by_phenotype.png)
+
+*Caption:* The figure shows age distributions by temporal phenotype.
+
+*Abbreviations:* None.
+
+**Figure 8. Standardized ECG/EGG feature distributions.**
+
+![Figure 8. Standardized ECG/EGG feature distributions.](data/figures/figure8_ecg_egg_features.png)
+
+*Caption:* The figure shows standardized ECG/EGG feature distributions by temporal phenotype.
+
+*Abbreviations:* ECG, electrocardiogram; EGG, electrogastrography.
+
+Baseline demographic and physiological variables showed only weak separation across temporal phenotypes. ECG/EGG-only phenotype prediction also remained modest; the best-performing ECG/EGG model was random forest with accuracy of 0.500 and balanced accuracy of 0.498. Feature importance and confusion matrix summaries are provided in Figures 15 and 16. These findings indicate that measured baseline characteristics and available physiological features do not strongly determine temporal phenotype membership in the present dataset.
 
 ## 4. Discussion
 
-This study used an oral capsaicin-induced visceral pain model to characterize the temporal, spatial, and symptom-based organization of experimentally evoked upper gastrointestinal discomfort. The main findings were that capsaicin produced a reproducible biphasic VAS trajectory, that individual responses could be summarized by partially overlapping temporal phenotypes, that symptom–region associations converged predominantly on the right hypochondrium, that symptom profiles showed partial Rome IV-aligned patterns without constituting formal diagnoses, that short-term recovery transitions showed modest but measurable predictability, and that temporal phenotype membership was only weakly predicted from measured baseline demographic, questionnaire, ECG, and EGG features.
+This study used an oral capsaicin-induced visceral pain model to characterize the temporal, spatial, and symptom-based organization of experimentally evoked upper gastrointestinal discomfort. The main findings were that capsaicin produced a reproducible biphasic VAS trajectory, that individual responses could be summarized by partially overlapping temporal phenotypes, that symptom–region associations converged predominantly on the right hypochondrium, that Rome IV-informed mapping identified biliary pain-like, bloating/distension-like, and IBS-like symptom patterns without constituting formal diagnoses, that short-term recovery transitions showed modest but measurable predictability, and that temporal phenotype membership was only weakly predicted from measured baseline demographic, questionnaire, ECG, and EGG features.
 
 The rapid onset and gradual resolution of pain are consistent with the known excitatory and desensitizing properties of TRPV1 activation. The median time to pain onset was 1.0 minute, while median time to relief was 5.0 minutes, which reflects a clear temporal dissociation between the initial rise in pain and the subsequent resolution phase. The rapid onset likely reflects immediate nociceptor activation upon capsaicin exposure, while the gradual resolution may involve calcium-dependent desensitization processes and activation of descending inhibitory pathways. However, because the present study did not include autonomic, neuroimaging, or molecular measures, the biological mechanisms underlying individual temporal phenotypes remain inferential. The use of rank-based change point detection (PELT algorithm) provided objective temporal landmarks, with the majority of change points clustering around minute 5, corresponding to the transition from the ascending to the descending phase of pain.
 
@@ -212,7 +218,7 @@ Clustering analyses revealed that individual responses are heterogeneous and can
 
 Symptom-based analyses showed that capsaicin-induced sensations are not randomly distributed but exhibit structured spatial–symptom coupling, with the right hypochondrium acting as a dominant symptom–region hub. The right hypochondrium exhibited the highest weighted degree (368) in the symptom-region network, followed by the hypogastrium (267) and abdominal distension (240). This centralized sensory organization is consistent with the expected physiological response to capsaicin stimulation, which primarily activates TRPV1-expressing afferents in the esophagus and stomach. Because symptom–region edges were generated from within-participant co-occurrence expansion, the resulting network reflects probabilistic symptom organization rather than direct anatomical localization. The convergence of multiple high-weight edges onto the right hypochondrium supports the presence of an upper abdominal-centered sensory axis, although this interpretation requires confirmation with objective physiological measures.
 
-The Rome IV-informed mapping should be interpreted as a symptom-based alignment rather than a diagnostic classification. Because the present experimental protocol did not assess chronicity, symptom frequency over months, exclusion of structural disease, or clinical impairment, the observed biliary pain-like, bloating/distension-like, and IBS-like profiles indicate phenomenological overlap with Rome IV constructs rather than formal FGID diagnoses. The presence of non-aligned symptom patterns in 82 participants suggests that experimentally induced symptom presentations may extend beyond the boundaries of current classification systems. The aim of Rome IV-informed mapping was not to diagnose FGIDs, but to evaluate whether experimentally induced symptom patterns resemble clinically recognized symptom constructs.
+The Rome IV-informed mapping should be interpreted as a symptom-based alignment rather than a diagnostic classification. Because the present experimental protocol did not assess chronicity, symptom frequency over months, exclusion of structural disease, or clinical impairment, the observed biliary pain-like, bloating/distension-like, and IBS-like profiles indicate phenomenological overlap with Rome IV constructs rather than formal FGID diagnoses. The aim of Rome IV-informed mapping was not to diagnose FGIDs, but to evaluate whether experimentally induced symptom patterns resemble clinically recognized symptom constructs.
 
 The prediction analysis should be regarded as exploratory. Although logistic regression outperformed baseline models for short-term VAS direction prediction (balanced accuracy = 0.711, macro F1 = 0.687), the magnitude of performance indicates modest local predictability rather than immediate clinical applicability. Its main value is to show that the recovery phase of capsaicin-induced pain contains temporal information that can be modeled prospectively. External validation and clinically meaningful prediction targets are required before translational use; the present analysis was designed to test whether local temporal structure exists in VAS trajectories rather than to develop a deployable clinical prediction model.
 
@@ -273,7 +279,7 @@ Symptom and region codes were parsed at the character level (e.g., "12" → ["1"
 
 ### 5.6 Pain Onset Detection
 
-Pain onset was determined using three complementary approaches: (1) threshold-based method (VAS > 3), (2) first-difference method (ΔVAS ≥ 0.5 between consecutive minutes), and (3) change point detection using the PELT algorithm (rank-based model, penalty = 0.5).
+Pain onset was determined using three complementary approaches: (1) threshold-based method (VAS > 3), (2) first-difference method (ΔVAS ≥ 0.5 between consecutive minutes), and (3) change point detection using the PELT algorithm (rank-based model, penalty = 0.5) [37].
 
 ### 5.7 Survival Analysis
 
@@ -285,11 +291,11 @@ Total pain exposure was quantified using the area under the curve (AUC), compute
 
 ### 5.9 Clustering Analysis
 
-Time-series clustering was performed using DTW-based K-means clustering with DTW barycentric averaging (DBA) centroids and DTW-based fuzzy c-medoids clustering (m = 2), drawing on established DTW and fuzzy objective-function approaches [36,42,44]. Silhouette analysis was conducted to characterize cluster separation for the three-cluster solution.
+Time-series clustering was performed using DTW-based K-means clustering with DTW barycentric averaging (DBA) centroids and DTW-based fuzzy c-medoids clustering (m = 2), drawing on established DTW and fuzzy objective-function approaches [34-36]. Silhouette analysis was conducted to characterize cluster separation for the three-cluster solution.
 
 ### 5.10 Feature Extraction
 
-Cluster-specific temporal features were extracted using shapelet analysis, identifying discriminative subsequences that characterize local temporal dynamics. Shapelet extraction used DTW-based distance computation with minimum subsequence length of 5, maximum length of 5, and retention of the top 3 shapelets per cluster. Redundant shapelets with correlation above 0.90 were removed to ensure diversity.
+Cluster-specific temporal features were extracted using shapelet analysis, identifying discriminative subsequences that characterize local temporal dynamics [38]. Shapelet extraction used DTW-based distance computation with minimum subsequence length of 5, maximum length of 5, and retention of the top 3 shapelets per cluster. Redundant shapelets with correlation above 0.90 were removed to ensure diversity.
 
 ### 5.11 Symptom Data Encoding and Preprocessing
 
@@ -311,7 +317,7 @@ Participant-level symptom profiles were mapped to functional gastrointestinal di
 
 ### 5.14 Tripartite Network Construction
 
-A tripartite network was constructed comprising three node types: symptoms, anatomical regions, and Rome IV-aligned FGID categories, extending prior network approaches to symptom and disease organization [47–49]. Edges were defined as symptom–region edges (co-occurrence within participants), symptom–disease edges (linking symptoms to FGID categories), and region–disease edges (linking anatomical regions to FGID categories).
+A tripartite network was constructed comprising three node types: symptoms, anatomical regions, and Rome IV-aligned FGID categories, extending prior network approaches to symptom and disease organization [39-41]. Edges were defined as symptom–region edges (co-occurrence within participants), symptom–disease edges (linking symptoms to FGID categories), and region–disease edges (linking anatomical regions to FGID categories).
 
 ### 5.15 Short-Term Direction Prediction
 
@@ -341,16 +347,24 @@ All participants were observed during the 20-minute post-administration assessme
 
 ### 5.19 Figure Organization
 
-The manuscript contains four integrated figures focused on the principal findings. Secondary and diagnostic visualizations are provided as single-panel extended figures:
+The manuscript contains sixteen sequentially numbered figures. All figures are single-panel displays without combined layouts or subfigure labels:
 
-- **Figure S1:** onset and change-point timing.
-- **Figure S2:** Kaplan-Meier event curves for onset and relief.
-- **Figure S3:** cluster-specific shapelets.
-- **Figure S4:** symptom-region co-occurrence heatmap.
-- **Figure S5:** symptom-Rome IV co-occurrence heatmap.
-- **Figure S6:** short-term VAS direction classification performance.
-- **Figure S7:** ECG/EGG random forest feature importance.
-- **Figure S8:** ECG/EGG phenotype prediction confusion matrix.
+- **Figure 1:** group mean VAS trajectory.
+- **Figure 2:** temporal pain phenotype trajectories.
+- **Figure 3:** symptom burden.
+- **Figure 4:** pain region burden.
+- **Figure 5:** early VAS window phenotype classification.
+- **Figure 6:** baseline and physiological phenotype prediction.
+- **Figure 7:** age distribution by temporal phenotype.
+- **Figure 8:** standardized ECG/EGG feature distributions.
+- **Figure 9:** onset and change-point timing.
+- **Figure 10:** Kaplan-Meier event curves for onset and relief.
+- **Figure 11:** cluster-specific shapelets.
+- **Figure 12:** symptom-region co-occurrence heatmap.
+- **Figure 13:** symptom-Rome IV co-occurrence heatmap.
+- **Figure 14:** short-term VAS direction classification performance.
+- **Figure 15:** ECG/EGG random forest feature importance.
+- **Figure 16:** ECG/EGG phenotype prediction confusion matrix.
 
 ## 6. Extended Results
 
@@ -368,11 +382,11 @@ The vertical histogram bars indicate a decreasing number of contributing partici
 
 To complement threshold-based onset definitions, change-point detection was used to identify time points where the distributional characteristics of the VAS series changed abruptly. The rank-based PELT (Pruned Exact Linear Time) algorithm was applied with a penalty parameter of 0.5.
 
-The analysis was conducted across 216 individual VAS time series following capsaicin ingestion. Change points were detected independently for each participant, and the resulting distribution is presented in Figure S1.
+The analysis was conducted across 216 individual VAS time series following capsaicin ingestion. Change points were detected independently for each participant, and the resulting distribution is presented in Figure 9.
 
-**Figure S1. Onset and change-point timing.**
+**Figure 9. Onset and change-point timing.**
 
-![Figure S1. Onset and change-point timing.](data/figures/supplement/supplement_onset_timing.png)
+![Figure 9. Onset and change-point timing.](data/figures/figure9_onset_timing.png)
 
 *Caption:* This figure summarizes threshold-defined onset, derivative-defined onset, and PELT-derived change-point timing for individual VAS trajectories after capsaicin administration.
 
@@ -390,11 +404,11 @@ Kaplan-Meier survival curves were computed using the lifelines Python package. M
 
 To delineate the temporal pattern of capsaicin-induced pain, we conducted Kaplan-Meier survival analyses for two events: (1) pain onset, defined as the first occurrence of a visual analog scale (VAS) score exceeding 3; and (2) pain relief, defined as the first instance post-peak where the VAS score dropped below 1. A total of 216 participants were included in the analysis, with VAS scores collected at one-minute intervals over a 20-minute observation period.
 
-As shown in Figure S2, the survival curve for VAS > 3 (pain onset) declined sharply in the early minutes. The median onset time was 1.0 minute, indicating rapid perception of discomfort shortly after capsaicin exposure. In contrast, the survival curve for VAS < 1 (pain relief) showed a delayed and gradual descent, with a median relief time of 5.0 minutes.
+As shown in Figure 10, the survival curve for VAS > 3 (pain onset) declined sharply in the early minutes. The median onset time was 1.0 minute, indicating rapid perception of discomfort shortly after capsaicin exposure. In contrast, the survival curve for VAS < 1 (pain relief) showed a delayed and gradual descent, with a median relief time of 5.0 minutes.
 
-**Figure S2. Kaplan-Meier event curves for onset and relief.**
+**Figure 10. Kaplan-Meier event curves for onset and relief.**
 
-![Figure S2. Kaplan-Meier event curves for onset and relief.](data/figures/supplement/supplement_survival_curves.png)
+![Figure 10. Kaplan-Meier event curves for onset and relief.](data/figures/figure10_survival_curves.png)
 
 *Caption:* Kaplan-Meier curves show time to pain onset and time to pain relief after oral capsaicin administration, allowing comparison of the onset and resolution phases.
 
@@ -406,7 +420,7 @@ The difference between onset and relief distributions was supported by the log-r
 
 The area under the curve (AUC) of pain intensity was used to quantify the integrated exposure of pain intensity and duration over the entire 20-minute observation period. The AUC is expressed in units of VAS·time (minutes), with higher values indicating greater cumulative pain experienced by the subject. Mean group-level VAS scores were computed at 1-minute intervals following exclusion of 'E'/'T' flags. Area under the curve (AUC) was computed using numpy.trapezoid. Peak VAS intensity and peak time were extracted using numpy.nanmax and index mapping.
 
-To quantify the aggregate pain experience following capsaicin exposure, we analyzed the group-level mean trajectory of visual analog scale (VAS) scores across 216 participants (main Figure 1). The VAS data were pre-processed to address censoring events (e.g., early termination), and values marked as 'E' or 'T' were excluded from computation.
+To quantify the aggregate pain experience following capsaicin exposure, we analyzed the group-level mean trajectory of visual analog scale (VAS) scores across 216 participants (Figure 1). The VAS data were pre-processed to address censoring events (e.g., early termination), and values marked as 'E' or 'T' were excluded from computation.
 
 The mean VAS increased rapidly during the first 4 minutes, reaching a peak intensity of 4.22 at minute 4, after which it gradually declined. The pain response persisted across the full 20-minute observation window, with non-zero group-level VAS values maintained for 19 minutes, indicating a prolonged symptomatic phase.
 
@@ -442,11 +456,11 @@ Together, these findings suggest that temporal pain responses are better charact
 
 To improve the interpretability of clustering results, shapelets were extracted as local subsequences representative of each temporal phenotype. These subsequences identify the trajectory fragments that best differentiate each cluster from the remaining series and provide a local feature signature for each response pattern.
 
-Shapelet analysis revealed cluster-specific temporal motifs that further clarified the structure of the identified pain phenotypes (Figure S3). Cluster 1 was characterized by shapelets reflecting delayed peaks and subsequent decline, Cluster 2 exhibited sustained or plateau-like patterns, and Cluster 3 showed shapelets representing gradual increases in signal intensity, consistent with delayed or accumulating responses. These findings indicate that the observed clustering structure is driven by distinct local temporal dynamics rather than global amplitude differences.
+Shapelet analysis revealed cluster-specific temporal motifs that further clarified the structure of the identified pain phenotypes (Figure 11). Cluster 1 was characterized by shapelets reflecting delayed peaks and subsequent decline, Cluster 2 exhibited sustained or plateau-like patterns, and Cluster 3 showed shapelets representing gradual increases in signal intensity, consistent with delayed or accumulating responses. These findings indicate that the observed clustering structure is driven by distinct local temporal dynamics rather than global amplitude differences.
 
-**Figure S3. Cluster-specific shapelets.**
+**Figure 11. Cluster-specific shapelets.**
 
-![Figure S3. Cluster-specific shapelets.](data/figures/supplement/supplement_shapelets.png)
+![Figure 11. Cluster-specific shapelets.](data/figures/figure11_shapelets.png)
 
 *Caption:* Cluster-discriminative shapelets illustrate local temporal motifs that distinguish delayed-peak, early-sustained, and late-rising VAS response phenotypes.
 
@@ -474,11 +488,11 @@ A total of 216 symptom reports were analyzed to characterize the distribution of
 
 Symptom perception was predominantly localized to the right hypochondrium (140/216, 64.8%) and hypogastrium (92/216, 42.6%), followed by the left hypochondrium and right lumbar regions. Inguinal, epigastric, and umbilical regions were infrequently reported in the current coded dataset.
 
-The co-occurrence heatmap further demonstrated region-specific symptom patterns (Figure S4). The right hypochondrium and hypogastrium had the densest symptom co-occurrence counts, especially for abdominal distension, nausea, and abdominal pain. These patterns should be interpreted as co-occurrence structure derived from participant-reported symptom and region codes rather than direct anatomical localization.
+The co-occurrence heatmap further demonstrated region-specific symptom patterns (Figure 12). The right hypochondrium and hypogastrium had the densest symptom co-occurrence counts, especially for abdominal distension, nausea, and abdominal pain. These patterns should be interpreted as co-occurrence structure derived from participant-reported symptom and region codes rather than direct anatomical localization.
 
-**Figure S4. Symptom-region co-occurrence heatmap.**
+**Figure 12. Symptom-region co-occurrence heatmap.**
 
-![Figure S4. Symptom-region co-occurrence heatmap.](data/figures/supplement/supplement_symptom_region_heatmap.png)
+![Figure 12. Symptom-region co-occurrence heatmap.](data/figures/figure12_symptom_region_heatmap.png)
 
 *Caption:* The heatmap shows participant-level co-occurrence counts between reported symptom categories and anatomical regions after capsaicin administration.
 
@@ -530,17 +544,15 @@ Analysis of the symptom–region frequency matrix revealed a non-uniform spatial
 
 #### 6.9.2 Symptom–Disease Mapping
 
-Mapping of symptom profiles to Rome IV-aligned categories demonstrated distinct patterns of association (Figure S5). Abdominal distension and abdominal pain contributed broadly to biliary pain-like, bloating/distension-like, and IBS-like alignments. Nausea and vomiting contributed to upper gastrointestinal symptom-pattern alignment, whereas bloating and abdominal distension were primarily associated with functional abdominal bloating/distension-like patterns.
+Mapping of symptom profiles to Rome IV-aligned categories demonstrated distinct patterns of association (Figure 13). Abdominal distension and abdominal pain contributed broadly to biliary pain-like, bloating/distension-like, and IBS-like alignments. Nausea and vomiting contributed to upper gastrointestinal symptom-pattern alignment, whereas bloating and abdominal distension were primarily associated with functional abdominal bloating/distension-like patterns.
 
-**Figure S5. Symptom-Rome IV co-occurrence heatmap.**
+**Figure 13. Symptom-Rome IV co-occurrence heatmap.**
 
-![Figure S5. Symptom-Rome IV co-occurrence heatmap.](data/figures/supplement/supplement_symptom_rome_heatmap.png)
+![Figure 13. Symptom-Rome IV co-occurrence heatmap.](data/figures/figure13_symptom_rome_heatmap.png)
 
 *Caption:* The heatmap shows associations between reported symptom categories and Rome IV-informed symptom-pattern alignments generated by the rule-based mapping framework.
 
 *Abbreviations:* FGID, functional gastrointestinal disorder.
-
-A substantial proportion of cases were classified as having no clear Rome IV alignment, indicating that some experimentally induced symptom combinations were not captured by the rule-based mapping framework.
 
 #### 6.9.3 Region–Disease Relationships
 
@@ -554,9 +566,7 @@ The network also highlighted overlapping symptom contributions across multiple d
 
 #### 6.9.5 Distribution of FGID Categories
 
-At the cohort level, 38.0% (82/216) of participants showed no clear Rome IV alignment. Among those with identifiable patterns, biliary pain-like profiles were the most frequently assigned category (26.4%, 57/216), followed by functional abdominal bloating/distension-like (16.2%, 35/216), IBS-like (11.6%, 25/216), unspecified functional GI symptom pattern (5.1%, 11/216), functional constipation/defecatory disorder-like (2.3%, 5/216), and functional dyspepsia-PDS-like (0.5%, 1/216).
-
-The presence of a considerable number of participants without clear Rome IV alignment suggests that experimentally induced symptom presentations may extend beyond the boundaries of current symptom-classification frameworks.
+At the cohort level, biliary pain-like profiles were the most frequently assigned category (26.4%, 57/216), followed by functional abdominal bloating/distension-like (16.2%, 35/216), IBS-like (11.6%, 25/216), unspecified functional GI symptom pattern (5.1%, 11/216), functional constipation/defecatory disorder-like (2.3%, 5/216), and functional dyspepsia-PDS-like (0.5%, 1/216).
 
 ### 6.10 Short-Term Direction Prediction
 
@@ -576,9 +586,9 @@ Three models were evaluated: (1) majority classifier (predicting the most freque
 
 Model performance was assessed using accuracy, balanced accuracy, macro F1-score, and weighted F1-score. Balanced accuracy and macro F1-score were emphasized due to class imbalance.
 
-**Figure S6. Short-term VAS direction classification performance.**
+**Figure 14. Short-term VAS direction classification performance.**
 
-![Figure S6. Short-term VAS direction classification performance.](data/figures/supplement/supplement_direction_classification.png)
+![Figure 14. Short-term VAS direction classification performance.](data/figures/figure14_direction_classification.png)
 
 *Caption:* Classification performance is shown for short-term prediction of whether the next VAS value would decrease, comparing majority, persistence-direction, and logistic regression models.
 
@@ -617,19 +627,19 @@ Across stratified ten-fold cross-validation on the observed dataset, none of the
 | MLP | 0.291 ± 0.079 | 0.309 ± 0.061 | 0.235 ± 0.099 | 0.227 ± 0.111 |
 | Stacking | 0.453 ± 0.047 | 0.463 ± 0.053 | 0.450 ± 0.046 | 0.445 ± 0.044 |
 
-For a three-class problem with approximately balanced classes, chance-level balanced accuracy is 0.333. The ECG/EGG feature importance and confusion matrix analyses are shown in Figures S7 and S8.
+For a three-class problem with approximately balanced classes, chance-level balanced accuracy is 0.333. The ECG/EGG feature importance and confusion matrix analyses are shown in Figures 15 and 16.
 
-**Figure S7. ECG/EGG random forest feature importance.**
+**Figure 15. ECG/EGG random forest feature importance.**
 
-![Figure S7. ECG/EGG random forest feature importance.](data/figures/supplement/supplement_ecg_feature_importance.png)
+![Figure 15. ECG/EGG random forest feature importance.](data/figures/figure15_ecg_feature_importance.png)
 
 *Caption:* Random forest feature importance values summarize the relative contribution of ECG, EGG, and ECG-EGG coupling features to temporal phenotype prediction.
 
 *Abbreviations:* ECG, electrocardiogram; EGG, electrogastrography.
 
-**Figure S8. ECG/EGG phenotype prediction confusion matrix.**
+**Figure 16. ECG/EGG phenotype prediction confusion matrix.**
 
-![Figure S8. ECG/EGG phenotype prediction confusion matrix.](data/figures/supplement/supplement_ecg_confusion_matrix.png)
+![Figure 16. ECG/EGG phenotype prediction confusion matrix.](data/figures/figure16_ecg_confusion_matrix.png)
 
 *Caption:* The confusion matrix shows out-of-fold temporal phenotype predictions from the ECG/EGG-based classification model.
 
@@ -657,7 +667,7 @@ Expected transient capsaicin-induced gastrointestinal sensations were analyzed a
 
 ### 7.1 Principal Findings
 
-This study provides a comprehensive, multi-dimensional characterization of oral capsaicin-induced visceral pain by integrating time-series modeling, clustering analysis, symptom-network mapping, and predictive modeling. The principal findings include biphasic temporal structure of capsaicin-induced pain, identification of distinct temporal phenotypes (delayed-peak, early-sustained, late-rising), central role of the right hypochondrium in the symptom–region network, partial alignment with Rome IV-informed symptom categories but incomplete overlap, evidence of short-term predictability in recovery dynamics, and weak observed-data prediction of temporal phenotypes from baseline and physiological features.
+This study provides a comprehensive, multi-dimensional characterization of oral capsaicin-induced visceral pain by integrating time-series modeling, clustering analysis, symptom-network mapping, and predictive modeling. The principal findings include biphasic temporal structure of capsaicin-induced pain, identification of distinct temporal phenotypes (delayed-peak, early-sustained, late-rising), central role of the right hypochondrium in the symptom–region network, Rome IV-informed symptom categories dominated by biliary pain-like, functional abdominal bloating/distension-like, and IBS-like patterns, evidence of short-term predictability in recovery dynamics, and weak observed-data prediction of temporal phenotypes from baseline and physiological features.
 
 ### 7.2 Temporal Dynamics of Visceral Pain
 
@@ -691,13 +701,13 @@ The spatial clustering of symptom expression has implications for understanding 
 
 The Rome IV-informed mapping should be interpreted as a symptom-based alignment rather than a diagnostic classification. Because the present experimental protocol did not assess chronicity, symptom frequency over months, exclusion of structural disease, or clinical impairment, the observed biliary pain-like, bloating/distension-like, and IBS-like profiles indicate phenomenological overlap with Rome IV constructs rather than formal FGID diagnoses.
 
-Main observations include that 82 participants showed no clear Rome IV alignment, while biliary pain-like, functional abdominal bloating/distension-like, and IBS-like patterns were the most frequent aligned categories. The presence of non-aligned symptom patterns suggests that experimentally induced symptom presentations may extend beyond the boundaries of current classification systems. The aim of Rome IV-informed mapping was not to diagnose FGIDs, but to evaluate whether experimentally induced symptom patterns resemble clinically recognized symptom constructs.
+Main observations include that biliary pain-like, functional abdominal bloating/distension-like, and IBS-like patterns were the most frequent aligned categories. The aim of Rome IV-informed mapping was not to diagnose FGIDs, but to evaluate whether experimentally induced symptom patterns resemble clinically recognized symptom constructs.
 
 ### 7.7 Predictability of Short-Term Symptom Dynamics
 
 The prediction analysis should be regarded as exploratory. Although logistic regression outperformed baseline models for short-term VAS direction prediction (balanced accuracy = 0.711, macro F1 = 0.687), the magnitude of performance indicates modest local predictability rather than immediate clinical applicability. Its main value is to show that the recovery phase of capsaicin-induced pain contains temporal information that can be modeled prospectively.
 
-These results indicate that short-term recovery transitions contain measurable temporal structure, although external validation and clinically meaningful prediction targets are required before translational use. The predictive analysis was designed to test whether local temporal structure exists in VAS trajectories, rather than to develop a deployable clinical prediction model, consistent with broader cautions about clinical machine-learning use-case alignment [54–56].
+These results indicate that short-term recovery transitions contain measurable temporal structure, although external validation and clinically meaningful prediction targets are required before translational use. The predictive analysis was designed to test whether local temporal structure exists in VAS trajectories, rather than to develop a deployable clinical prediction model, consistent with broader cautions about clinical machine-learning use-case alignment [45-47].
 
 ### 7.8 Methodological Implications
 
@@ -783,52 +793,34 @@ The datasets generated and/or analyzed during the current study are available fr
 
 [31] Park SY, Bae H, Jeong HY, Lee JY, Kwon YK, Kim CE, et al. Identifying novel subtypes of functional gastrointestinal disorder by analyzing nonlinear structure in integrative biopsychosocial questionnaire data. *J Clin Med*. 2024;13(10):2821.
 
-[32] Mayer EA, Labus JS, Tillisch K, et al. Towards a systems view of IBS. *Nat Rev Gastroenterol Hepatol*. 2015;12(10):592–605.
+[32] Dunckley P, Wise RG, Fairhurst M, Hobden P, Aziz Q, Chang L, et al. A comparison of visceral and somatic pain processing in the human brainstem using functional magnetic resonance imaging. *J Neurosci*. 2005;25(32):7333–7341.
 
-[33] Farmer AD, Aziz Q. Visceral pain hypersensitivity in functional gastrointestinal disorders. *Br Med Bull*. 2009;91(1):123–136.
+[33] Vermeulen W, De Man JG, Pelckmans PA, De Winter BY. Neuroanatomy of lower gastrointestinal pain disorders. *World J Gastroenterol*. 2014;20(4):1005–1020.
 
-[34] Dunckley P, Wise RG, Fairhurst M, Hobden P, Aziz Q, Chang L, et al. A comparison of visceral and somatic pain processing in the human brainstem using functional magnetic resonance imaging. *J Neurosci*. 2005;25(32):7333–7341.
+[34] Petitjean F, Ketterlin A, Gançarski P. A global averaging method for dynamic time warping, with applications to clustering. *Pattern Recognit*. 2011;44(3):678–693.
 
-[35] Vermeulen W, De Man JG, Pelckmans PA, De Winter BY. Neuroanatomy of lower gastrointestinal pain disorders. *World J Gastroenterol*. 2014;20(4):1005–1020.
+[35] Lai C-P, Chung P-CJ, Tseng H-C. Incremental fuzzy C medoids clustering of time series data using dynamic time warping distance. *PLoS One*. 2018;13(5):e0197344.
 
-[36] Petitjean F, Ketterlin A, Gançarski P. A global averaging method for dynamic time warping, with applications to clustering. *Pattern Recognit*. 2011;44(3):678–693.
+[36] Bezdek JC. *Pattern Recognition with Fuzzy Objective Function Algorithms*. New York: Plenum Press; 1981.
 
-[37] Sardá-Espinosa A. Time-series clustering in R using the dtwclust package. *R J*. 2019;11(1):22–38.
+[37] Killick R, Fearnhead P, Eckley IA. Optimal detection of changepoints with a linear computational cost. *J Am Stat Assoc*. 2012;107(500):1590–1598.
 
-[38] Berndt DJ, Clifford J. Using dynamic time warping to find patterns in time series. *KDD Workshop*. 1994;10(16):359–370.
+[38] Ye L, Keogh E. Time series shapelets: a new primitive for data mining. *Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*. 2009:947–956.
 
-[39] Gharghabi S, Imani S, Bagnall A, et al. An ultra-fast time series distance measure to allow data mining in more complex real-world deployments. *Data Min Knowl Disc*. 2020;34(4):1104–1135.
+[39] Zhou X, Menche J, Barabási AL, Sharma A. Human symptoms–disease network. *Nat Commun*. 2014;5:4212.
 
-[40] Che Z, Purushotham S, Cho K, et al. Recurrent neural networks for multivariate time series with missing values. *Sci Rep*. 2018;8(1):6085.
+[40] Hidalgo CA, Blumm N, Barabási AL, Christakis NA. A dynamic network approach for the study of human phenotypes. *PLoS Comput Biol*. 2009;5(4):e1000353.
 
-[41] Aghabozorgi S, Shirkhorshidi AS, Wah TY. Time-series clustering—a decade review. *Inf Syst*. 2015;53:16–38.
+[41] Goh KI, Cusick ME, Valle D, et al. The human disease network. *Proc Natl Acad Sci USA*. 2007;104(21):8685–8690.
 
-[42] Lai C-P, Chung P-CJ, Tseng H-C. Incremental fuzzy C medoids clustering of time series data using dynamic time warping distance. *PLoS One*. 2018;13(5):e0197344.
+[42] Black CJ, Ford AC. Global burden of irritable bowel syndrome: trends, predictions and risk factors. *Nat Rev Gastroenterol Hepatol*. 2020;17(8):473–486.
 
-[43] Soubeiga A, Antoine V, Corteval A, et al. Clustering and interpretation of time-series trajectories of chronic pain using evidential c-means. *Expert Syst Appl*. 2025;260:125369.
+[43] Schmulson MJ, Drossman DA. What is new in Rome IV. *J Neurogastroenterol Motil*. 2017;23(2):151–163.
 
-[44] Bezdek JC. *Pattern Recognition with Fuzzy Objective Function Algorithms*. New York: Plenum Press; 1981.
+[44] Lacy BE, Mearin F, Chang L, Chey WD, Lembo AJ, Simren M, et al. Bowel disorders. *Gastroenterology*. 2016;150(6):1393–1407.e5.
 
-[45] Killick R, Fearnhead P, Eckley IA. Optimal detection of changepoints with a linear computational cost. *J Am Stat Assoc*. 2012;107(500):1590–1598.
+[45] Lee CH, Yoon H-J. Medical big data: promise and challenges. *Kidney Res Clin Pract*. 2017;36(1):3–11.
 
-[46] Ye L, Keogh E. Time series shapelets: a new primitive for data mining. *Proceedings of the 15th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*. 2009:947–956.
+[46] Buchlak QD, Esmaili N, Leveque JC, et al. Machine learning-based prediction of clinical pain using multimodal neuroimaging and autonomic metrics. *Pain Rep*. 2019;4(1):e698.
 
-[47] Zhou X, Menche J, Barabási AL, Sharma A. Human symptoms–disease network. *Nat Commun*. 2014;5:4212.
-
-[48] Hidalgo CA, Blumm N, Barabási AL, Christakis NA. A dynamic network approach for the study of human phenotypes. *PLoS Comput Biol*. 2009;5(4):e1000353.
-
-[49] Goh KI, Cusick ME, Valle D, et al. The human disease network. *Proc Natl Acad Sci USA*. 2007;104(21):8685–8690.
-
-[50] Sperber AD, Bangdiwala SI, Drossman DA, et al. The Rome Foundation Global Epidemiology Study: conception, implementation, results, and future potential. *Neurogastroenterol Motil*. 2023;35(8):e14567.
-
-[51] Black CJ, Ford AC. Global burden of irritable bowel syndrome: trends, predictions and risk factors. *Nat Rev Gastroenterol Hepatol*. 2020;17(8):473–486.
-
-[52] Schmulson MJ, Drossman DA. What is new in Rome IV. *J Neurogastroenterol Motil*. 2017;23(2):151–163.
-
-[53] Lacy BE, Mearin F, Chang L, Chey WD, Lembo AJ, Simren M, et al. Bowel disorders. *Gastroenterology*. 2016;150(6):1393–1407.e5.
-
-[54] Lee CH, Yoon H-J. Medical big data: promise and challenges. *Kidney Res Clin Pract*. 2017;36(1):3–11.
-
-[55] Buchlak QD, Esmaili N, Leveque JC, et al. Machine learning-based prediction of clinical pain using multimodal neuroimaging and autonomic metrics. *Pain Rep*. 2019;4(1):e698.
-
-[56] Saeb S, Lonini L, Jayaraman A, et al. The need to approximate the use-case in clinical machine learning. *Gigascience*. 2017;6(5):1–9.
+[47] Saeb S, Lonini L, Jayaraman A, et al. The need to approximate the use-case in clinical machine learning. *Gigascience*. 2017;6(5):1–9.

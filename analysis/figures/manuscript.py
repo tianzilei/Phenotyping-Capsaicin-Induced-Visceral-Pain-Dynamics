@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Generate main and supplementary manuscript figures with seaborn."""
+"""Generate standalone manuscript figures with seaborn."""
 
 from __future__ import annotations
 
 import os
+import shutil
 from pathlib import Path
 
 import matplotlib
@@ -25,7 +26,6 @@ PALETTE_NAME = "magma"
 PALETTE = sns.color_palette(PALETTE_NAME, n_colors=8)
 CLUSTER_PALETTE = {0: PALETTE[1], 1: PALETTE[3], 2: PALETTE[5]}
 CLUSTER_NAMES = {0: "Delayed-peak", 1: "Early-sustained", 2: "Late-rising"}
-SUPPLEMENT_DIR = "supplement"
 
 
 def _ensure_dir(path: str) -> str:
@@ -47,15 +47,14 @@ def _no_data(ax: plt.Axes, title: str) -> None:
 
 
 def clean_figure_outputs(output_dir: str = FIGURES_DIR) -> None:
-    """Remove old main and supplementary PNG outputs."""
+    """Remove old manuscript PNG outputs."""
     out = Path(output_dir)
     out.mkdir(parents=True, exist_ok=True)
     for png in out.glob("*.png"):
         png.unlink()
-    supp = out / SUPPLEMENT_DIR
-    supp.mkdir(parents=True, exist_ok=True)
-    for png in supp.glob("*.png"):
-        png.unlink()
+    supp = out / "supplement"
+    if supp.exists():
+        shutil.rmtree(supp)
 
 
 def _time_from_vas_col(col: str) -> int:
@@ -135,11 +134,11 @@ def _cluster_legend(ax: plt.Axes, values: pd.Series) -> None:
 
 
 def generate_figure1(output_path: str) -> None:
-    """Main Figure 1: core temporal dynamics."""
-    print("Generating Figure 1: Main temporal phenotypes...")
+    """Figure 1: group mean VAS trajectory."""
+    print("Generating Figure 1: group mean VAS trajectory...")
     df, vas_cols = _load_baseline()
     long_df = _vas_long(df, vas_cols)
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     sns.lineplot(
         data=long_df,
@@ -149,11 +148,20 @@ def generate_figure1(output_path: str) -> None:
         errorbar="se",
         marker="o",
         color=PALETTE[2],
-        ax=axes[0],
+        ax=ax,
     )
-    axes[0].set_title("(A) Group Mean VAS Trajectory", fontweight="bold")
-    axes[0].set_xlabel("Time (min)")
-    axes[0].set_ylabel("VAS")
+    ax.set_title("Group Mean VAS Trajectory", fontweight="bold")
+    ax.set_xlabel("Time (min)")
+    ax.set_ylabel("VAS")
+    _save(fig, output_path)
+
+
+def generate_figure2(output_path: str) -> None:
+    """Figure 2: phenotype-specific VAS trajectories."""
+    print("Generating Figure 2: phenotype trajectories...")
+    df, vas_cols = _load_baseline()
+    long_df = _vas_long(df, vas_cols)
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     if "cluster" in long_df.columns:
         sns.lineplot(
@@ -165,28 +173,26 @@ def generate_figure1(output_path: str) -> None:
             errorbar="se",
             marker="o",
             palette=CLUSTER_PALETTE,
-            ax=axes[1],
+            ax=ax,
         )
-        _cluster_legend(axes[1], long_df["cluster"])
+        _cluster_legend(ax, long_df["cluster"])
     else:
-        _no_data(axes[1], "(B) Phenotype Trajectories")
-    axes[1].set_title("(B) Phenotype Trajectories", fontweight="bold")
-    axes[1].set_xlabel("Time (min)")
-    axes[1].set_ylabel("VAS")
-
-    fig.suptitle("Figure 1. Temporal Pain Phenotypes", fontweight="bold", y=1.02)
+        _no_data(ax, "Phenotype Trajectories")
+    ax.set_title("Phenotype-Specific VAS Trajectories", fontweight="bold")
+    ax.set_xlabel("Time (min)")
+    ax.set_ylabel("VAS")
     _save(fig, output_path)
 
 
-def generate_figure2(output_path: str) -> None:
-    """Main Figure 2: core symptom and region burden."""
-    print("Generating Figure 2: Main symptom burden...")
+def generate_figure3(output_path: str) -> None:
+    """Figure 3: symptom burden."""
+    print("Generating Figure 3: symptom burden...")
     df, _ = _load_baseline()
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     symptom = _code_summary(df, "Symptom_codes", parse_compact_codes, SYMPTOM_CODE_MAP)
     if symptom.empty:
-        _no_data(axes[0], "(A) Symptom Burden")
+        _no_data(ax, "Symptom Burden")
     else:
         sns.barplot(
             data=symptom,
@@ -195,15 +201,23 @@ def generate_figure2(output_path: str) -> None:
             hue="label",
             palette=PALETTE_NAME,
             legend=False,
-            ax=axes[0],
+            ax=ax,
         )
-        axes[0].set_title("(A) Symptom Burden", fontweight="bold")
-        axes[0].set_xlabel("Participants (%)")
-        axes[0].set_ylabel("")
+        ax.set_title("Symptom Burden", fontweight="bold")
+        ax.set_xlabel("Participants (%)")
+        ax.set_ylabel("")
+    _save(fig, output_path)
+
+
+def generate_figure4(output_path: str) -> None:
+    """Figure 4: pain region burden."""
+    print("Generating Figure 4: pain region burden...")
+    df, _ = _load_baseline()
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     region = _code_summary(df, "Region_code", parse_region_codes, REGION_CODE_MAP)
     if region.empty:
-        _no_data(axes[1], "(B) Pain Region Burden")
+        _no_data(ax, "Pain Region Burden")
     else:
         sns.barplot(
             data=region,
@@ -212,24 +226,22 @@ def generate_figure2(output_path: str) -> None:
             hue="label",
             palette=PALETTE_NAME,
             legend=False,
-            ax=axes[1],
+            ax=ax,
         )
-        axes[1].set_title("(B) Pain Region Burden", fontweight="bold")
-        axes[1].set_xlabel("Participants (%)")
-        axes[1].set_ylabel("")
-
-    fig.suptitle("Figure 2. Symptom and Pain Region Burden", fontweight="bold", y=1.02)
+        ax.set_title("Pain Region Burden", fontweight="bold")
+        ax.set_xlabel("Participants (%)")
+        ax.set_ylabel("")
     _save(fig, output_path)
 
 
-def generate_figure3(output_path: str) -> None:
-    """Main Figure 3: core phenotype prediction results."""
-    print("Generating Figure 3: Main prediction performance...")
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+def generate_figure5(output_path: str) -> None:
+    """Figure 5: early VAS window classification."""
+    print("Generating Figure 5: early VAS window classification...")
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     windows = _read_metric("subject_classification_window_comparison.csv")
     if windows is None or windows.empty:
-        _no_data(axes[0], "(A) Early Window Phenotype Classification")
+        _no_data(ax, "Early Window Phenotype Classification")
     else:
         sns.lineplot(
             data=windows,
@@ -237,22 +249,29 @@ def generate_figure3(output_path: str) -> None:
             y="accuracy_mean",
             marker="o",
             color=PALETTE[4],
-            ax=axes[0],
+            ax=ax,
         )
-        axes[0].fill_between(
+        ax.fill_between(
             windows["prefix_minutes"],
             windows["accuracy_mean"] - windows["accuracy_sd"],
             windows["accuracy_mean"] + windows["accuracy_sd"],
             color=PALETTE[4],
             alpha=0.18,
         )
-        axes[0].set_title("(A) Early VAS Window Comparison", fontweight="bold")
-        axes[0].set_xlabel("Prefix window (min)")
-        axes[0].set_ylabel("Accuracy")
+        ax.set_title("Early VAS Window Classification", fontweight="bold")
+        ax.set_xlabel("Prefix window (min)")
+        ax.set_ylabel("Accuracy")
+    _save(fig, output_path)
+
+
+def generate_figure6(output_path: str) -> None:
+    """Figure 6: phenotype prediction from baseline and physiology."""
+    print("Generating Figure 6: baseline and physiology prediction...")
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     cluster_pred = _read_metric("cluster_prediction_metrics.csv")
     if cluster_pred is None or cluster_pred.empty:
-        _no_data(axes[1], "(B) Phenotype Prediction")
+        _no_data(ax, "Phenotype Prediction")
     else:
         plot_df = cluster_pred.sort_values("accuracy_mean", ascending=False)
         sns.barplot(
@@ -262,25 +281,23 @@ def generate_figure3(output_path: str) -> None:
             hue="model",
             palette=PALETTE_NAME,
             legend=False,
-            ax=axes[1],
+            ax=ax,
         )
-        axes[1].set_title("(B) Baseline/Physiology Phenotype Prediction", fontweight="bold")
-        axes[1].set_xlabel("Accuracy")
-        axes[1].set_ylabel("")
-
-    fig.suptitle("Figure 3. Phenotype Prediction Performance", fontweight="bold", y=1.02)
+        ax.set_title("Baseline/Physiology Phenotype Prediction", fontweight="bold")
+        ax.set_xlabel("Accuracy")
+        ax.set_ylabel("")
     _save(fig, output_path)
 
 
-def generate_figure4(output_path: str) -> None:
-    """Main Figure 4: core physiological phenotype signal."""
-    print("Generating Figure 4: Main baseline and physiology...")
+def generate_figure7(output_path: str) -> None:
+    """Figure 7: age distribution by phenotype."""
+    print("Generating Figure 7: age by phenotype...")
     df, _ = _load_baseline()
     df = df.copy()
     if "cluster" in df.columns:
         df["cluster"] = pd.to_numeric(df["cluster"], errors="coerce")
         df["phenotype"] = df["cluster"].map(CLUSTER_NAMES)
-    fig, axes = plt.subplots(1, 2, figsize=(16, 6))
+    fig, ax = plt.subplots(figsize=(8, 6))
 
     if "phenotype" in df.columns and "Age" in df.columns:
         sns.boxplot(
@@ -290,13 +307,25 @@ def generate_figure4(output_path: str) -> None:
             hue="phenotype",
             palette=list(CLUSTER_PALETTE.values()),
             legend=False,
-            ax=axes[0],
+            ax=ax,
         )
-        axes[0].set_title("(A) Age by Phenotype", fontweight="bold")
-        axes[0].set_xlabel("")
-        axes[0].set_ylabel("Age")
+        ax.set_title("Age by Phenotype", fontweight="bold")
+        ax.set_xlabel("")
+        ax.set_ylabel("Age")
     else:
-        _no_data(axes[0], "(A) Age by Phenotype")
+        _no_data(ax, "Age by Phenotype")
+    _save(fig, output_path)
+
+
+def generate_figure8(output_path: str) -> None:
+    """Figure 8: standardized ECG/EGG features."""
+    print("Generating Figure 8: standardized ECG/EGG features...")
+    df, _ = _load_baseline()
+    df = df.copy()
+    if "cluster" in df.columns:
+        df["cluster"] = pd.to_numeric(df["cluster"], errors="coerce")
+        df["phenotype"] = df["cluster"].map(CLUSTER_NAMES)
+    fig, ax = plt.subplots(figsize=(9, 6))
 
     phys_cols = [
         c
@@ -319,25 +348,24 @@ def generate_figure4(output_path: str) -> None:
             y="z_value",
             hue="phenotype",
             palette=list(CLUSTER_PALETTE.values()),
-            ax=axes[1],
+            ax=ax,
         )
-        axes[1].set_title("(B) Standardized ECG/EGG Features", fontweight="bold")
-        axes[1].set_xlabel("")
-        axes[1].set_ylabel("Z-score")
-        axes[1].tick_params(axis="x", rotation=25)
+        ax.set_title("Standardized ECG/EGG Features", fontweight="bold")
+        ax.set_xlabel("")
+        ax.set_ylabel("Z-score")
+        ax.tick_params(axis="x", rotation=25)
     else:
-        _no_data(axes[1], "(B) Standardized ECG/EGG Features")
+        _no_data(ax, "Standardized ECG/EGG Features")
 
-    fig.suptitle("Figure 4. Baseline and Physiological Phenotype Signals", fontweight="bold", y=1.02)
     _save(fig, output_path)
 
 
-def generate_supplement_onset(output_path: str) -> None:
-    print("Generating Supplement: onset timing...")
+def generate_figure9(output_path: str) -> None:
+    print("Generating Figure 9: onset timing...")
     cp = _read_metric("trajectory_change_points.csv")
     fig, ax = plt.subplots(figsize=(8, 6))
     if cp is None or cp.empty:
-        _no_data(ax, "Supplementary Figure. Onset and Change-Point Timing")
+        _no_data(ax, "Onset and Change-Point Timing")
     else:
         cp_long = cp.melt(
             value_vars=[
@@ -363,18 +391,18 @@ def generate_supplement_onset(output_path: str) -> None:
             alpha=0.55,
             ax=ax,
         )
-        ax.set_title("Supplementary Figure. Onset and Change-Point Timing", fontweight="bold")
+        ax.set_title("Onset and Change-Point Timing", fontweight="bold")
         ax.set_xlabel("Time (min)")
         ax.set_ylabel("Participants")
     _save(fig, output_path)
 
 
-def generate_supplement_survival(output_path: str) -> None:
-    print("Generating Supplement: survival curves...")
+def generate_figure10(output_path: str) -> None:
+    print("Generating Figure 10: Kaplan-Meier event curves...")
     surv = _read_metric("trajectory_survival_data.csv")
     fig, ax = plt.subplots(figsize=(8, 6))
     if surv is None or surv.empty:
-        _no_data(ax, "Supplementary Figure. Kaplan-Meier Event Curves")
+        _no_data(ax, "Kaplan-Meier Event Curves")
     else:
         from lifelines import KaplanMeierFitter
 
@@ -397,14 +425,14 @@ def generate_supplement_survival(output_path: str) -> None:
             palette=[PALETTE[2], PALETTE[5]],
             ax=ax,
         )
-        ax.set_title("Supplementary Figure. Kaplan-Meier Event Curves", fontweight="bold")
+        ax.set_title("Kaplan-Meier Event Curves", fontweight="bold")
         ax.set_xlabel("Time (min)")
         ax.set_ylabel("Survival probability")
     _save(fig, output_path)
 
 
-def generate_supplement_shapelets(output_path: str) -> None:
-    print("Generating Supplement: shapelets...")
+def generate_figure11(output_path: str) -> None:
+    print("Generating Figure 11: cluster-specific shapelets...")
     df, vas_cols = _load_baseline()
     fig, ax = plt.subplots(figsize=(9, 6))
     try:
@@ -434,48 +462,48 @@ def generate_supplement_shapelets(output_path: str) -> None:
             linewidth=2,
             ax=ax,
         )
-        ax.set_title("Supplementary Figure. Cluster-Specific Shapelets", fontweight="bold")
+        ax.set_title("Cluster-Specific Shapelets", fontweight="bold")
         ax.set_xlabel("Local time")
         ax.set_ylabel("Normalized VAS")
     except Exception as exc:
-        _no_data(ax, f"Supplementary Figure. Shapelets unavailable: {exc}")
+        _no_data(ax, f"Shapelets unavailable: {exc}")
     _save(fig, output_path)
 
 
-def generate_supplement_symptom_region(output_path: str) -> None:
-    print("Generating Supplement: symptom-region heatmap...")
+def generate_figure12(output_path: str) -> None:
+    print("Generating Figure 12: symptom-region heatmap...")
     fig, ax = plt.subplots(figsize=(9, 7))
     matrix = _top_matrix("textmining_symptom_region_matrix.csv", n_rows=10, n_cols=9)
     if matrix is None:
-        _no_data(ax, "Supplementary Figure. Symptom-Region Co-occurrence")
+        _no_data(ax, "Symptom-Region Co-occurrence")
     else:
         sns.heatmap(matrix, cmap=PALETTE_NAME, ax=ax, cbar_kws={"label": "Count"})
-        ax.set_title("Supplementary Figure. Symptom-Region Co-occurrence", fontweight="bold")
+        ax.set_title("Symptom-Region Co-occurrence", fontweight="bold")
         ax.set_xlabel("Region")
         ax.set_ylabel("Symptom")
     _save(fig, output_path)
 
 
-def generate_supplement_symptom_rome(output_path: str) -> None:
-    print("Generating Supplement: symptom-Rome heatmap...")
+def generate_figure13(output_path: str) -> None:
+    print("Generating Figure 13: symptom-Rome IV heatmap...")
     fig, ax = plt.subplots(figsize=(9, 7))
     matrix = _top_matrix("textmining_symptom_disease_matrix.csv", n_rows=10, n_cols=8)
     if matrix is None:
-        _no_data(ax, "Supplementary Figure. Symptom-Rome IV Co-occurrence")
+        _no_data(ax, "Symptom-Rome IV Co-occurrence")
     else:
         sns.heatmap(matrix, cmap=PALETTE_NAME, ax=ax, cbar_kws={"label": "Count"})
-        ax.set_title("Supplementary Figure. Symptom-Rome IV Co-occurrence", fontweight="bold")
+        ax.set_title("Symptom-Rome IV Co-occurrence", fontweight="bold")
         ax.set_xlabel("Rome IV category")
         ax.set_ylabel("Symptom")
     _save(fig, output_path)
 
 
-def generate_supplement_direction_models(output_path: str) -> None:
-    print("Generating Supplement: direction classification...")
+def generate_figure14(output_path: str) -> None:
+    print("Generating Figure 14: VAS direction classification...")
     fig, ax = plt.subplots(figsize=(9, 6))
     cls = _read_metric("prediction_classification_summary.csv")
     if cls is None or cls.empty:
-        _no_data(ax, "Supplementary Figure. VAS Direction Classification")
+        _no_data(ax, "VAS Direction Classification")
     else:
         cls_long = cls.melt(
             id_vars="model",
@@ -484,19 +512,19 @@ def generate_supplement_direction_models(output_path: str) -> None:
             value_name="value",
         )
         sns.barplot(data=cls_long, x="model", y="value", hue="metric", palette=PALETTE_NAME, ax=ax)
-        ax.set_title("Supplementary Figure. VAS Direction Classification", fontweight="bold")
+        ax.set_title("VAS Direction Classification", fontweight="bold")
         ax.set_xlabel("")
         ax.set_ylabel("Score")
         ax.tick_params(axis="x", rotation=20)
     _save(fig, output_path)
 
 
-def generate_supplement_ecg_importance(output_path: str) -> None:
-    print("Generating Supplement: ECG/EGG feature importance...")
+def generate_figure15(output_path: str) -> None:
+    print("Generating Figure 15: ECG/EGG feature importance...")
     fig, ax = plt.subplots(figsize=(8, 7))
     imp = _read_metric("ecg_egg_cluster_prediction_rf_importance.csv")
     if imp is None or imp.empty:
-        _no_data(ax, "Supplementary Figure. ECG/EGG Feature Importance")
+        _no_data(ax, "ECG/EGG Feature Importance")
     else:
         top = imp.sort_values("importance", ascending=False).head(12)
         sns.barplot(
@@ -508,19 +536,19 @@ def generate_supplement_ecg_importance(output_path: str) -> None:
             legend=False,
             ax=ax,
         )
-        ax.set_title("Supplementary Figure. Random Forest Feature Importance", fontweight="bold")
+        ax.set_title("Random Forest Feature Importance", fontweight="bold")
         ax.set_xlabel("Importance")
         ax.set_ylabel("")
     _save(fig, output_path)
 
 
-def generate_supplement_ecg_confusion(output_path: str) -> None:
-    print("Generating Supplement: ECG/EGG confusion matrix...")
+def generate_figure16(output_path: str) -> None:
+    print("Generating Figure 16: ECG/EGG confusion matrix...")
     fig, ax = plt.subplots(figsize=(7, 6))
     cm = _read_metric("ecg_egg_cluster_prediction_cm.csv")
     metrics = _read_metric("ecg_egg_cluster_prediction_metrics.csv")
     if cm is None or cm.empty or metrics is None or metrics.empty:
-        _no_data(ax, "Supplementary Figure. ECG/EGG Confusion Matrix")
+        _no_data(ax, "ECG/EGG Confusion Matrix")
     else:
         best_model = metrics.sort_values("accuracy_mean", ascending=False).iloc[0]["model"]
         cm_best = cm[cm["model"] == best_model]
@@ -530,28 +558,29 @@ def generate_supplement_ecg_confusion(output_path: str) -> None:
             .fillna(0)
         )
         sns.heatmap(matrix, annot=True, fmt=".0f", cmap=PALETTE_NAME, cbar_kws={"label": "Count"}, ax=ax)
-        ax.set_title(f"Supplementary Figure. ECG/EGG Confusion Matrix: {best_model}", fontweight="bold")
+        ax.set_title(f"ECG/EGG Confusion Matrix: {best_model}", fontweight="bold")
         ax.set_xlabel("Predicted phenotype")
         ax.set_ylabel("True phenotype")
     _save(fig, output_path)
 
 
 FIGURE_MAP = {
-    "1": ("figure1_temporal_phenotypes.png", generate_figure1),
-    "2": ("figure2_symptom_burden.png", generate_figure2),
-    "3": ("figure3_prediction_performance.png", generate_figure3),
-    "4": ("figure4_baseline_physiology.png", generate_figure4),
-}
-
-SUPPLEMENT_FIGURE_MAP = {
-    "s1": ("supplement_onset_timing.png", generate_supplement_onset),
-    "s2": ("supplement_survival_curves.png", generate_supplement_survival),
-    "s3": ("supplement_shapelets.png", generate_supplement_shapelets),
-    "s4": ("supplement_symptom_region_heatmap.png", generate_supplement_symptom_region),
-    "s5": ("supplement_symptom_rome_heatmap.png", generate_supplement_symptom_rome),
-    "s6": ("supplement_direction_classification.png", generate_supplement_direction_models),
-    "s7": ("supplement_ecg_feature_importance.png", generate_supplement_ecg_importance),
-    "s8": ("supplement_ecg_confusion_matrix.png", generate_supplement_ecg_confusion),
+    "1": ("figure1_group_mean_vas.png", generate_figure1),
+    "2": ("figure2_phenotype_trajectories.png", generate_figure2),
+    "3": ("figure3_symptom_burden.png", generate_figure3),
+    "4": ("figure4_region_burden.png", generate_figure4),
+    "5": ("figure5_early_window_classification.png", generate_figure5),
+    "6": ("figure6_baseline_prediction_performance.png", generate_figure6),
+    "7": ("figure7_age_by_phenotype.png", generate_figure7),
+    "8": ("figure8_ecg_egg_features.png", generate_figure8),
+    "9": ("figure9_onset_timing.png", generate_figure9),
+    "10": ("figure10_survival_curves.png", generate_figure10),
+    "11": ("figure11_shapelets.png", generate_figure11),
+    "12": ("figure12_symptom_region_heatmap.png", generate_figure12),
+    "13": ("figure13_symptom_rome_heatmap.png", generate_figure13),
+    "14": ("figure14_direction_classification.png", generate_figure14),
+    "15": ("figure15_ecg_feature_importance.png", generate_figure15),
+    "16": ("figure16_ecg_confusion_matrix.png", generate_figure16),
 }
 
 
@@ -560,11 +589,7 @@ def main() -> None:
     clean_figure_outputs(FIGURES_DIR)
     for filename, generator in FIGURE_MAP.values():
         generator(os.path.join(FIGURES_DIR, filename))
-    supplement_dir = os.path.join(FIGURES_DIR, SUPPLEMENT_DIR)
-    for filename, generator in SUPPLEMENT_FIGURE_MAP.values():
-        generator(os.path.join(supplement_dir, filename))
-    print(f"\nMain figures saved to {FIGURES_DIR}")
-    print(f"Supplementary figures saved to {supplement_dir}")
+    print(f"\nManuscript figures saved to {FIGURES_DIR}")
 
 
 if __name__ == "__main__":

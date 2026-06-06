@@ -216,35 +216,25 @@ def _run_figures(args):
 
     from analysis.figures.manuscript import (
         FIGURE_MAP,
-        SUPPLEMENT_DIR,
-        SUPPLEMENT_FIGURE_MAP,
         clean_figure_outputs,
     )
 
     figure_map = FIGURE_MAP
-    supplement_map = SUPPLEMENT_FIGURE_MAP
-    supplement_dir = os.path.join(output_dir, SUPPLEMENT_DIR)
 
     if target_figures:
         for fig_num in target_figures:
             if fig_num in figure_map:
                 filename, gen_fn = figure_map[fig_num]
                 gen_fn(os.path.join(output_dir, filename))
-            elif fig_num in supplement_map:
-                filename, gen_fn = supplement_map[fig_num]
-                gen_fn(os.path.join(supplement_dir, filename))
             else:
-                print(f"Unknown figure number: {fig_num}. Available: 1-4, s1-s8")
+                print(f"Unknown figure number: {fig_num}. Available: 1-16")
                 continue
     else:
         clean_figure_outputs(output_dir)
         for filename, gen_fn in figure_map.values():
             gen_fn(os.path.join(output_dir, filename))
-        for filename, gen_fn in supplement_map.values():
-            gen_fn(os.path.join(supplement_dir, filename))
 
-    print(f"\nMain figures saved to {output_dir}")
-    print(f"Supplementary figures saved to {supplement_dir}")
+    print(f"\nManuscript figures saved to {output_dir}")
 
 
 def _run_trajectory(args):
