@@ -23,7 +23,7 @@ from analysis.constants import (
     SUBJECT_INFO_FILE,
     SYMPTOM_CODE_MAP,
 )
-from analysis.data_loader import get_vas_columns, load_unified_baseline
+from analysis.data_loader import get_vas_columns, load_analysis_ready_baseline
 from analysis.parsing import map_codes, parse_compact_codes, parse_region_codes
 from analysis.tables.baseline import generate_baseline_table
 from analysis.tables.formatter import format_mean_sd, format_n_percent
@@ -184,7 +184,8 @@ def _categorical_summary(df: pd.DataFrame) -> pd.DataFrame:
         "Baseline_GI_symptoms",
         "top_rome_disease",
         "predicted_direction",
-        "prediction_model",
+        "delta_model",
+        "direction_model",
     ]
     rows = []
     for col in categorical_cols:
@@ -361,7 +362,7 @@ def _write_report(
 
 def generate_report(baseline_path: str | None = None) -> dict[str, str]:
     _ensure_dirs()
-    df = load_unified_baseline(baseline_path)
+    df = load_analysis_ready_baseline(baseline_path)
     vas_cols = sorted(get_vas_columns(df), key=_time_from_vas_col)
 
     subject_vas = _build_vas_subject_summary(df, vas_cols)

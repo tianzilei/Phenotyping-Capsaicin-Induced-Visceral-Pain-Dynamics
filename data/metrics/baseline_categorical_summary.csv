@@ -1,14 +1,14 @@
 ﻿variable,level,n,percent
 Sex,女,125,57.9
 Sex,男,91,42.1
-cluster,0,77,35.6
-cluster,1,77,35.6
-cluster,2,62,28.7
+cluster,1,84,38.9
+cluster,2,74,34.3
+cluster,0,58,26.9
 Alcohol_consumption,非饮酒者,116,53.7
 Alcohol_consumption,偶尔饮酒者,83,38.4
 Alcohol_consumption,经常饮酒者,17,7.9
-Recent_spicy_intake_24h,1.0,140,64.8
-Recent_spicy_intake_24h,0.0,76,35.2
+Recent_spicy_intake_24h,1.0,149,69.0
+Recent_spicy_intake_24h,0.0,67,31.0
 Baseline_GI_symptoms,No symptoms,148,68.5
 Baseline_GI_symptoms,Mild symptoms,56,25.9
 Baseline_GI_symptoms,Moderate symptoms,12,5.6
@@ -19,8 +19,10 @@ top_rome_disease,Irritable Bowel Syndrome-like,25,11.6
 top_rome_disease,Unspecified Functional GI Symptom Pattern,11,5.1
 top_rome_disease,Functional Constipation / Defecatory Disorder-like,5,2.3
 top_rome_disease,Functional Dyspepsia - PDS-like,1,0.5
-predicted_direction,1.0,147,68.1
-predicted_direction,0.0,66,30.6
+predicted_direction,0.0,141,65.3
+predicted_direction,1.0,72,33.3
 predicted_direction,Missing,3,1.4
-prediction_model,Majority,213,98.6
-prediction_model,Missing,3,1.4
+delta_model,Ridge,213,98.6
+delta_model,Missing,3,1.4
+direction_model,Logistic,213,98.6
+direction_model,Missing,3,1.4

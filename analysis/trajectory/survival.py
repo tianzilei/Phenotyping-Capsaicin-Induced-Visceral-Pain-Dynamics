@@ -10,6 +10,7 @@ import numpy as np
 
 def compute_km_curves(
     ts_data: np.ndarray,
+    time_values: np.ndarray | None = None,
     onset_thresh: float = 3.0,
     relief_thresh: float = 1.0,
 ) -> Dict:
@@ -20,6 +21,8 @@ def compute_km_curves(
     ----------
     ts_data : np.ndarray
         2D array of VAS values (subjects x timepoints).
+    time_values : np.ndarray, optional
+        Observed time labels corresponding to columns in ``ts_data``.
     onset_thresh : float
         VAS threshold for pain onset event.
     relief_thresh : float
@@ -35,39 +38,55 @@ def compute_km_curves(
         - onset_observed: list of event indicators
         - relief_time: list of event times
         - relief_observed: list of event indicators
-        - logrank_pvalue: p-value from log-rank test
+        - comparison_note: explanation of why no direct log-rank comparison is used
     """
     from lifelines import KaplanMeierFitter
-    from lifelines.statistics import logrank_test
 
     n_timepoints = ts_data.shape[1]
+    if time_values is None:
+        time_values = np.arange(1, n_timepoints + 1)
+    else:
+        time_values = np.asarray(time_values)
+        if len(time_values) != n_timepoints:
+            raise ValueError("time_values must have the same length as ts_data columns")
 
-    # Event 1: First VAS > onset_thresh
+    # Event 1: First VAS >= onset_thresh
     event1_time, event1_observed = [], []
     for row in ts_data:
-        above = np.where(row > onset_thresh)[0]
+        valid_mask = ~np.isnan(row)
+        if not np.any(valid_mask):
+            event1_time.append(time_values[0])
+            event1_observed.append(0)
+            continue
+        observed_times = time_values[valid_mask]
+        observed_values = row[valid_mask]
+        above = np.where(observed_values >= onset_thresh)[0]
         if len(above) > 0:
-            event1_time.append(above[0])
+            event1_time.append(observed_times[above[0]])
             event1_observed.append(1)
         else:
-            event1_time.append(n_timepoints - 1)
+            event1_time.append(observed_times[-1])
             event1_observed.append(0)
 
     # Event 2: First VAS < relief_thresh after peak
     event2_time, event2_observed = [], []
     for row in ts_data:
-        if np.all(np.isnan(row)):
-            event2_time.append(n_timepoints - 1)
+        valid_mask = ~np.isnan(row)
+        if not np.any(valid_mask):
+            event2_time.append(time_values[0])
             event2_observed.append(0)
             continue
-        peak_idx = np.nanargmax(row)
-        after_peak = row[peak_idx:]
-        below = np.where(after_peak < relief_thresh)[0]
+        observed_times = time_values[valid_mask]
+        observed_values = row[valid_mask]
+        peak_idx = int(np.argmax(observed_values))
+        after_peak_values = observed_values[peak_idx:]
+        after_peak_times = observed_times[peak_idx:]
+        below = np.where(after_peak_values < relief_thresh)[0]
         if len(below) > 0:
-            event2_time.append(peak_idx + below[0])
+            event2_time.append(after_peak_times[below[0]])
             event2_observed.append(1)
         else:
-            event2_time.append(n_timepoints - 1)
+            event2_time.append(observed_times[-1])
             event2_observed.append(0)
 
     # Fit models
@@ -77,20 +96,12 @@ def compute_km_curves(
     kmf1.fit(
         event1_time,
         event_observed=event1_observed,
-        label=f"VAS > {onset_thresh} (Onset)",
+        label=f"VAS >= {onset_thresh} (Onset)",
     )
     kmf2.fit(
         event2_time,
         event_observed=event2_observed,
         label=f"VAS < {relief_thresh} (Relief)",
-    )
-
-    # Log-rank test
-    result = logrank_test(
-        event1_time,
-        event2_time,
-        event_observed_A=event1_observed,
-        event_observed_B=event2_observed,
     )
 
     return {
@@ -100,7 +111,10 @@ def compute_km_curves(
         "onset_observed": event1_observed,
         "relief_time": event2_time,
         "relief_observed": event2_observed,
-        "logrank_pvalue": result.p_value,
+        "comparison_note": (
+            "No direct log-rank p-value is reported because onset and relief "
+            "are different event definitions measured on the same participants."
+        ),
     }
 
 
@@ -120,8 +134,6 @@ def summarize_survival(km_result: Dict) -> str:
     """
     kmf1 = km_result["kmf_onset"]
     kmf2 = km_result["kmf_relief"]
-    pval = km_result["logrank_pvalue"]
-
     lines = ["== Median Time Estimates =="]
 
     # Onset
@@ -136,9 +148,7 @@ def summarize_survival(km_result: Dict) -> str:
     else:
         lines.append("VAS Relief: Median time not reached (right-censored)")
 
-    lines.append("\n== Log-rank Test ==")
-    lines.append(f"p-value: {pval:.4f}")
-    sig = "Statistically significant" if pval < 0.05 else "No significant difference"
-    lines.append(sig)
+    lines.append("\n== Comparison Note ==")
+    lines.append(km_result["comparison_note"])
 
     return "\n".join(lines)

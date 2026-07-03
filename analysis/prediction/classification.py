@@ -196,7 +196,7 @@ def build_direction_dataset(
     time_cols: List[str],
     window: int = 3,
     target_mode: str = "direction",
-    include_cluster: bool = True,
+    include_cluster: bool = False,
     include_phenotype: bool = True,
 ) -> Tuple[pd.DataFrame, str]:
     """
@@ -213,10 +213,10 @@ def build_direction_dataset(
     target_mode : str
         'direction3' for -1/0/+1, 'direction' for binary up/down.
     include_cluster : bool
-        Whether to include cluster as a feature.
+        Whether to include an externally provided cluster as a feature.
     include_phenotype : bool
-        Whether to include subject-level phenotype features
-        (average VAS and cluster label).
+        Whether to include causal subject-level summary features computed
+        only from observations available up to the current time point.
 
     Returns
     -------
@@ -224,20 +224,6 @@ def build_direction_dataset(
         Supervised DataFrame and target column name.
     """
     from analysis.prediction.common import clean_time_series
-
-    # Pre-compute subject-level phenotype features
-    subject_avg_vas = {}
-    subject_cluster = {}
-    if include_phenotype:
-        for _, row in df.iterrows():
-            sid = row.get("ID", row.name)
-            raw_vals = row[time_cols]
-            vals = clean_time_series(raw_vals)
-            valid = vals.dropna()
-            if len(valid) > 0:
-                subject_avg_vas[sid] = valid.mean()
-            if "cluster" in df.columns:
-                subject_cluster[sid] = row["cluster"]
 
     records = []
 
@@ -247,25 +233,6 @@ def build_direction_dataset(
         raw_vals = row[time_cols]
         vals = clean_time_series(raw_vals)
         vals_list = vals.values.tolist()
-
-        # Find local extrema positions for this subject's series
-        valid_indices = [i for i, v in enumerate(vals_list) if not np.isnan(v)]
-        valid_values = [vals_list[i] for i in valid_indices]
-
-        local_max_idx = None
-        local_min_idx = None
-        if len(valid_indices) > 0:
-            max_val = max(valid_values)
-            min_val = min(valid_values)
-            # First occurrence of max/min
-            for idx in valid_indices:
-                if vals_list[idx] == max_val:
-                    local_max_idx = idx
-                    break
-            for idx in valid_indices:
-                if vals_list[idx] == min_val:
-                    local_min_idx = idx
-                    break
 
         for i in range(window, len(vals_list) - 1):
             feature_vals = vals_list[i - window : i]
@@ -312,24 +279,32 @@ def build_direction_dataset(
             # Time index as a feature (normalized to 0-1 range over 20 minutes)
             record["time_idx_feature"] = i / max(len(vals_list) - 1, 1)
 
-            # Distance to local extrema (normalized)
-            series_len = len(vals_list)
-            if local_max_idx is not None:
-                record["dist_to_max"] = abs(i - local_max_idx) / max(series_len - 1, 1)
+            history = vals.iloc[: i + 1].dropna()
+            history_len = len(history)
+            running_max = history.max() if history_len else current
+            running_min = history.min() if history_len else current
+            max_positions = history.index[history == running_max]
+            min_positions = history.index[history == running_min]
+            if len(max_positions) > 0:
+                last_max_pos = vals.index.get_loc(max_positions[-1])
+                record["steps_since_running_max"] = i - last_max_pos
             else:
-                record["dist_to_max"] = 1.0
-            if local_min_idx is not None:
-                record["dist_to_min"] = abs(i - local_min_idx) / max(series_len - 1, 1)
+                record["steps_since_running_max"] = 0
+            if len(min_positions) > 0:
+                last_min_pos = vals.index.get_loc(min_positions[-1])
+                record["steps_since_running_min"] = i - last_min_pos
             else:
-                record["dist_to_min"] = 1.0
+                record["steps_since_running_min"] = 0
+            record["gap_to_running_max"] = running_max - current
+            record["gap_from_running_min"] = current - running_min
 
-            # Subject-level phenotype features
+            # Subject-level features restricted to information available so far
             if include_phenotype:
-                if subject_id in subject_avg_vas:
-                    record["avg_vas"] = subject_avg_vas[subject_id]
-                if include_cluster and subject_id in subject_cluster:
-                    record["cluster"] = subject_cluster[subject_id]
-            elif include_cluster and "cluster" in df.columns:
+                record["avg_vas_so_far"] = history.mean() if history_len else current
+                record["vas_sd_so_far"] = history.std(ddof=0) if history_len > 1 else 0.0
+                record["running_range_so_far"] = running_max - running_min
+
+            if include_cluster and "cluster" in df.columns:
                 record["cluster"] = row["cluster"]
 
             # Target

@@ -28,6 +28,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.svm import SVC
 
+from analysis.data_loader import load_analysis_ready_baseline
+
 CLUSTER_NAMES = {0: "Delayed-peak", 1: "Early-sustained", 2: "Late-rising"}
 
 BASELINE_FEATURES = [
@@ -112,7 +114,7 @@ CATEGORICAL_FEATURES = [
 
 def load_baseline_data(baseline_path: str) -> pd.DataFrame:
     """Load baseline data and keep only relevant features + cluster label."""
-    df = pd.read_csv(baseline_path)
+    df = load_analysis_ready_baseline(baseline_path)
     cols = BASELINE_FEATURES + ["cluster", "ID"]
     cols = [c for c in cols if c in df.columns]
     return df[cols].copy()
@@ -140,7 +142,7 @@ def encode_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[str, LabelEnco
 
 def build_cluster_prediction_dataset(
     baseline_path: str,
-) -> Tuple[pd.DataFrame, List[str]]:
+) -> Tuple[pd.DataFrame, pd.Series, List[str]]:
     """
     Build the full dataset for cluster prediction.
 
@@ -166,20 +168,9 @@ def build_cluster_prediction_dataset(
     return X_encoded, y, list(X_encoded.columns)
 
 
-def evaluate_cluster_prediction(
-    X: pd.DataFrame,
-    y: pd.Series,
-    n_splits: int = 10,
-    random_state: int = 42,
-) -> Dict:
-    """
-    Evaluate multiple classifiers for cluster prediction using stratified CV.
-
-    Returns dict with per-model metrics, confusion matrices, and feature importances.
-    """
-    cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
-
-    models = {
+def _make_models(random_state: int = 42) -> Dict[str, object]:
+    """Return the candidate phenotype-prediction models."""
+    return {
         "Logistic Regression": Pipeline(
             [
                 ("scaler", StandardScaler()),
@@ -289,6 +280,19 @@ def evaluate_cluster_prediction(
         ),
     }
 
+
+def evaluate_cluster_prediction(
+    X: pd.DataFrame,
+    y: pd.Series,
+    n_splits: int = 10,
+    random_state: int = 42,
+) -> Dict:
+    """
+    Evaluate multiple classifiers for cluster prediction using stratified CV.
+    """
+    cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
+    models = _make_models(random_state=random_state)
+
     results = {}
 
     for name, model in models.items():
@@ -299,10 +303,9 @@ def evaluate_cluster_prediction(
             y,
             cv=cv,
             scoring=scoring,
-            return_estimator=True,
+            return_train_score=False,
         )
-
-        metrics = {
+        results[name] = {
             "accuracy_mean": cv_results["test_accuracy"].mean(),
             "accuracy_sd": cv_results["test_accuracy"].std(),
             "balanced_accuracy_mean": cv_results["test_balanced_accuracy"].mean(),
@@ -311,28 +314,6 @@ def evaluate_cluster_prediction(
             "f1_macro_sd": cv_results["test_f1_macro"].std(),
             "f1_weighted_mean": cv_results["test_f1_weighted"].mean(),
             "f1_weighted_sd": cv_results["test_f1_weighted"].std(),
-        }
-
-        # Aggregate confusion matrix across folds
-        cms = []
-        for est in cv_results["estimator"]:
-            y_pred = est.predict(X)  # full-set prediction for CM visualization
-            cms.append(confusion_matrix(y, y_pred, labels=[0, 1, 2]))
-
-        # Feature importance (for tree-based models)
-        feature_importance = None
-        if hasattr(models[name], "feature_importances_"):
-            feature_importance = models[name].feature_importances_
-        elif hasattr(models[name], "named_steps"):
-            clf = models[name].named_steps["clf"]
-            if hasattr(clf, "coef_"):
-                # For logistic regression, use mean absolute coefficients
-                coef = clf.coef_
-                feature_importance = np.mean(np.abs(coef), axis=0)
-
-        results[name] = {
-            "metrics": metrics,
-            "feature_importance": feature_importance,
         }
 
     return results
@@ -366,10 +347,8 @@ def run_cluster_prediction(
     # Save metrics
     os.makedirs(output_dir, exist_ok=True)
     rows = []
-    for model_name, res in results.items():
-        row = {"model": model_name}
-        row.update(res["metrics"])
-        rows.append(row)
+    for model_name, metrics in results.items():
+        rows.append({"model": model_name, **metrics})
     metrics_df = pd.DataFrame(rows)
     metrics_df.to_csv(
         os.path.join(output_dir, "cluster_prediction_metrics.csv"), index=False
@@ -378,115 +357,7 @@ def run_cluster_prediction(
 
     # Save fold-level metrics for more detailed analysis
     cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
-    models = {
-        "Logistic Regression": Pipeline(
-            [
-                ("scaler", StandardScaler()),
-                (
-                    "clf",
-                    LogisticRegression(
-                        max_iter=1000,
-                        class_weight="balanced",
-                        random_state=random_state,
-                    ),
-                ),
-            ]
-        ),
-        "Random Forest": RandomForestClassifier(
-            n_estimators=200,
-            max_depth=5,
-            class_weight="balanced",
-            random_state=random_state,
-            n_jobs=-1,
-        ),
-        "Gradient Boosting": GradientBoostingClassifier(
-            n_estimators=100,
-            max_depth=3,
-            random_state=random_state,
-        ),
-        "HistGradientBoosting": HistGradientBoostingClassifier(
-            max_iter=200,
-            max_depth=5,
-            random_state=random_state,
-        ),
-        "MLP": Pipeline(
-            [
-                ("scaler", StandardScaler()),
-                (
-                    "clf",
-                    MLPClassifier(
-                        hidden_layer_sizes=(64, 32),
-                        max_iter=1000,
-                        early_stopping=True,
-                        validation_fraction=0.1,
-                        n_iter_no_change=20,
-                        random_state=random_state,
-                    ),
-                ),
-            ]
-        ),
-        "Stacking": StackingClassifier(
-            estimators=[
-                (
-                    "lr",
-                    Pipeline(
-                        [
-                            ("scaler", StandardScaler()),
-                            (
-                                "clf",
-                                LogisticRegression(
-                                    max_iter=1000,
-                                    class_weight="balanced",
-                                    random_state=random_state,
-                                ),
-                            ),
-                        ]
-                    ),
-                ),
-                (
-                    "rf",
-                    RandomForestClassifier(
-                        n_estimators=200,
-                        max_depth=5,
-                        class_weight="balanced",
-                        random_state=random_state,
-                        n_jobs=-1,
-                    ),
-                ),
-                (
-                    "svm",
-                    Pipeline(
-                        [
-                            ("scaler", StandardScaler()),
-                            (
-                                "clf",
-                                SVC(
-                                    kernel="rbf",
-                                    class_weight="balanced",
-                                    random_state=random_state,
-                                ),
-                            ),
-                        ]
-                    ),
-                ),
-                (
-                    "hgb",
-                    HistGradientBoostingClassifier(
-                        max_iter=200,
-                        max_depth=5,
-                        random_state=random_state,
-                    ),
-                ),
-            ],
-            final_estimator=LogisticRegression(
-                max_iter=1000,
-                class_weight="balanced",
-                random_state=random_state,
-            ),
-            cv=5,
-            n_jobs=-1,
-        ),
-    }
+    models = _make_models(random_state=random_state)
 
     fold_rows = []
     for model_name, model in models.items():
@@ -568,8 +439,7 @@ def run_cluster_prediction(
     print("\n" + "=" * 60)
     print("Cluster Prediction Results Summary")
     print("=" * 60)
-    for model_name, res in results.items():
-        m = res["metrics"]
+    for model_name, m in results.items():
         print(f"\n{model_name}:")
         acc = f"{m['accuracy_mean']:.3f} +/- {m['accuracy_sd']:.3f}"
         bal = f"{m['balanced_accuracy_mean']:.3f} +/- {m['balanced_accuracy_sd']:.3f}"

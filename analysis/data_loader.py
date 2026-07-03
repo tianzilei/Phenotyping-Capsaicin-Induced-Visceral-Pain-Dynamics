@@ -1,13 +1,82 @@
 """
 Data loading and cleaning utilities for VAS data, metadata, and signals.
-All data is loaded from the unified subject_baseline_info.csv file.
 """
 
 import os
+from pathlib import Path
 from typing import List
 
 import numpy as np
 import pandas as pd
+
+ECG_EGG_FEATURE_COLUMNS = [
+    "mean_HR",
+    "median_HR",
+    "min_HR",
+    "max_HR",
+    "HR_sd",
+    "HR_cv",
+    "mean_RR",
+    "median_RR",
+    "min_RR",
+    "max_RR",
+    "SDNN",
+    "RMSSD",
+    "pNN50",
+    "pNN20",
+    "CVSD",
+    "total_power",
+    "LF_power",
+    "HF_power",
+    "LF_HF_ratio",
+    "log_LF",
+    "log_HF",
+    "log_total_power",
+    "LFnu",
+    "HFnu",
+    "SD1",
+    "SD2",
+    "SD1_SD2_ratio",
+    "ECG_SQI",
+    "ECG_artifact_ratio",
+    "ECG_RR_edit_ratio",
+    "dominant_freq_cpm",
+    "mean_freq_cpm",
+    "median_freq_cpm",
+    "dominant_power",
+    "total_power_egg",
+    "log_DP",
+    "log_total_power_egg",
+    "pct_normogastria",
+    "pct_bradygastria",
+    "pct_tachygastria",
+    "power_ratio",
+    "spectral_entropy",
+    "spectral_flatness",
+    "DF_instability",
+    "egg_signal_energy",
+    "egg_rms",
+    "EGG_SQI",
+    "EGG_artifact_ratio",
+    "hr_egg_correlation",
+    "ecg_egg_cross_corr_max",
+    "ecg_egg_lag",
+    "ecg_egg_coherence_mean",
+    "ecg_egg_energy_ratio",
+]
+
+GENERATED_BASELINE_COLUMNS = ECG_EGG_FEATURE_COLUMNS + [
+    "cluster",
+    "top_rome_disease",
+    "rome_match_score",
+    "predicted_vas_delta",
+    "target_vas_delta",
+    "predicted_direction",
+    "target_direction",
+    "prediction_model",
+    "delta_model",
+    "direction_model",
+]
 
 
 def load_unified_baseline(filepath: str = None) -> pd.DataFrame:
@@ -29,6 +98,84 @@ def load_unified_baseline(filepath: str = None) -> pd.DataFrame:
     if filepath is None:
         filepath = SUBJECT_INFO_FILE
     return pd.read_csv(filepath)
+
+
+def strip_generated_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Drop analysis-generated columns from a baseline dataframe."""
+    drop_cols = [col for col in GENERATED_BASELINE_COLUMNS if col in df.columns]
+    return df.drop(columns=drop_cols)
+
+
+def _merge_generated_output(
+    df: pd.DataFrame, metric_path: Path, columns: list[str], rename_map: dict | None = None
+) -> pd.DataFrame:
+    if not metric_path.exists():
+        return df
+
+    generated = pd.read_csv(metric_path)
+    if rename_map:
+        generated = generated.rename(columns=rename_map)
+
+    keep_cols = ["ID"] + [col for col in columns if col in generated.columns]
+    if len(keep_cols) == 1:
+        return df
+
+    generated = generated[keep_cols].copy()
+    overlap = [col for col in keep_cols if col != "ID" and col in df.columns]
+    if overlap:
+        df = df.drop(columns=overlap)
+    return df.merge(generated, on="ID", how="left")
+
+
+def load_analysis_ready_baseline(filepath: str = None) -> pd.DataFrame:
+    """
+    Load the raw baseline file and optionally merge analysis-generated outputs.
+
+    This keeps ``BaselineData.csv`` as a source-data table while still letting
+    downstream analysis reuse derived cluster labels, Rome mapping, prediction
+    summaries, and ECG/EGG features when their standalone output files exist.
+    """
+    from analysis.constants import METRICS_DIR
+
+    df = load_unified_baseline(filepath)
+    metrics_dir = Path(METRICS_DIR)
+
+    df = _merge_generated_output(
+        df,
+        metrics_dir / "trajectory_clustered.csv",
+        ["cluster"],
+    )
+    df = _merge_generated_output(
+        df,
+        metrics_dir / "textmining_rome_subject_summary.csv",
+        ["top_rome_disease", "rome_match_score"],
+    )
+    df = _merge_generated_output(
+        df,
+        metrics_dir / "prediction_subject_level.csv",
+        [
+            "predicted_vas_delta",
+            "target_vas_delta",
+            "predicted_direction",
+            "target_direction",
+            "prediction_model",
+            "delta_model",
+            "direction_model",
+        ],
+    )
+    if "prediction_model" in df.columns and "delta_model" not in df.columns:
+        df = df.rename(columns={"prediction_model": "delta_model"})
+
+    ecg_metric_candidates = [
+        metrics_dir / "ecg_egg_features_extracted.csv",
+        metrics_dir / "ecg_egg_features.csv",
+    ]
+    for metric_path in ecg_metric_candidates:
+        if metric_path.exists():
+            df = _merge_generated_output(df, metric_path, ECG_EGG_FEATURE_COLUMNS)
+            break
+
+    return df
 
 
 def get_vas_columns(df: pd.DataFrame) -> List[str]:

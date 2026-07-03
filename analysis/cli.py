@@ -4,6 +4,7 @@ import argparse
 import os
 
 import matplotlib
+import numpy as np
 import pandas as pd
 
 matplotlib.use("Agg")
@@ -18,27 +19,6 @@ from analysis.constants import (
 from analysis.visualization.style import set_publication_style
 
 GENERATE_STANDALONE_FIGURES = False
-
-
-def save_to_baseline(baseline_path: str, updates_df: pd.DataFrame, id_col: str = "ID"):
-    """Save analysis results back to baseline file (always overwrites)."""
-    baseline = pd.read_csv(baseline_path)
-    new_cols = [c for c in updates_df.columns if c != id_col]
-
-    # Ensure ID columns are the same type before merging
-    baseline[id_col] = baseline[id_col].astype(str)
-    updates_df = updates_df.copy()
-    updates_df[id_col] = updates_df[id_col].astype(str)
-
-    baseline = baseline.merge(updates_df, on=id_col, how="left", suffixes=("", "_new"))
-
-    for col in new_cols:
-        new_col = f"{col}_new"
-        if new_col in baseline.columns:
-            baseline[col] = baseline[new_col]
-            baseline = baseline.drop(columns=[new_col])
-
-    baseline.to_csv(baseline_path, index=False, encoding="utf-8-sig")
 
 
 def main():
@@ -101,6 +81,20 @@ def main():
     ecg_parser.add_argument(
         "--re-extract", action="store_true", help="Re-extract features from raw signals"
     )
+    ecg_parser.add_argument(
+        "--skip-classification",
+        action="store_true",
+        help="Only export ECG/EGG features and skip phenotype classification",
+    )
+
+    # Baseline phenotype prediction command
+    cluster_pred_parser = subparsers.add_parser(
+        "cluster-predict",
+        help="Predict phenotype from baseline demographics and physiology",
+    )
+    cluster_pred_parser.add_argument(
+        "--n-splits", type=int, default=10, help="Number of stratified CV folds"
+    )
 
     # Subject classification command
     subj_parser = subparsers.add_parser(
@@ -150,6 +144,30 @@ def main():
         help="Specific figures to generate (e.g., 1 2 3). Default: all",
     )
 
+    pipeline_parser = subparsers.add_parser(
+        "pipeline", help="Run the full reproducible manuscript analysis pipeline"
+    )
+    pipeline_parser.add_argument(
+        "--re-extract-ecg-egg",
+        action="store_true",
+        help="Re-extract ECG/EGG features from raw signals before classification",
+    )
+    pipeline_parser.add_argument(
+        "--skip-figures",
+        action="store_true",
+        help="Skip final figure generation",
+    )
+    pipeline_parser.add_argument(
+        "--skip-tables",
+        action="store_true",
+        help="Skip final table generation",
+    )
+    pipeline_parser.add_argument(
+        "--skip-baseline-report",
+        action="store_true",
+        help="Skip the final baseline report generation",
+    )
+
     args = parser.parse_args()
 
     if args.command is None:
@@ -170,6 +188,8 @@ def main():
         _run_predict(args)
     elif args.command == "ecg-egg":
         _run_ecg_egg(args)
+    elif args.command == "cluster-predict":
+        _run_cluster_predict(args)
     elif args.command == "subject-classify":
         _run_subject_classify(args)
     elif args.command == "tables":
@@ -178,6 +198,8 @@ def main():
         _run_baseline_report(args)
     elif args.command == "figures":
         _run_figures(args)
+    elif args.command == "pipeline":
+        _run_pipeline(args)
 
 
 def _run_tables(args):
@@ -214,12 +236,9 @@ def _run_figures(args):
     output_dir = args.output_dir if args.output_dir else FIGURES_DIR
     os.makedirs(output_dir, exist_ok=True)
 
-    from analysis.figures.manuscript import (
-        FIGURE_MAP,
-        clean_figure_outputs,
-    )
+    from analysis.figures.manuscript import clean_figure_outputs, make_figure_map
 
-    figure_map = FIGURE_MAP
+    figure_map = make_figure_map(args.baseline)
 
     if target_figures:
         for fig_num in target_figures:
@@ -239,10 +258,7 @@ def _run_figures(args):
 
 def _run_trajectory(args):
     """Run trajectory analysis."""
-    from analysis.data_loader import (
-        get_vas_columns,
-        load_unified_baseline,
-    )
+    from analysis.data_loader import get_vas_columns, load_unified_baseline
     from analysis.trajectory import change_point, clustering, plotting, survival
 
     baseline_df = load_unified_baseline(args.baseline)
@@ -259,7 +275,9 @@ def _run_trajectory(args):
     final_labels = None
     if args.method in ("dtw-kmeans", "all"):
         print("Running DTW-KMeans clustering...")
-        X, X_raw, scaler = clustering.prepare_vas_data(vas_df, time_cols)
+        X, X_raw, scaler = clustering.prepare_vas_data(
+            vas_df, time_cols, tail_fill="carry_forward"
+        )
         labels, centroids, model = clustering.dtw_kmeans_cluster(
             X, n_clusters=args.n_clusters
         )
@@ -280,7 +298,9 @@ def _run_trajectory(args):
 
     if args.method in ("fuzzy-cmedoids", "all"):
         print("Running Fuzzy C-Medoids clustering...")
-        X, X_raw, scaler = clustering.prepare_vas_data(vas_df, time_cols)
+        X, X_raw, scaler = clustering.prepare_vas_data(
+            vas_df, time_cols, tail_fill="carry_forward"
+        )
         labels, memberships, medoid_indices = clustering.fuzzy_c_medoids(
             X, n_clusters=args.n_clusters
         )
@@ -289,17 +309,10 @@ def _run_trajectory(args):
         baseline_df["cluster"] = labels
         baseline_df.to_csv(output_csv, index=False)
 
-    if final_labels is not None:
-        cluster_df = pd.DataFrame(
-            {"ID": baseline_df["ID"].values, "cluster": final_labels}
-        )
-        save_to_baseline(args.baseline, cluster_df)
-        print(f"Cluster labels saved to baseline: {args.baseline}")
-
     # Change point detection
     print("Running change point detection...")
-    vas_wide = baseline_df.set_index("ID")[vas_cols].copy()
-    vas_wide = vas_wide.apply(pd.to_numeric, errors="coerce")
+    vas_wide = clustering.clean_vas_table(baseline_df, vas_cols)
+    vas_wide.index = baseline_df["ID"]
     vas_wide.columns = [
         int(c.replace("VAS_", "").replace("min", "")) for c in vas_wide.columns
     ]
@@ -314,9 +327,13 @@ def _run_trajectory(args):
 
     # Survival analysis
     print("Running survival analysis...")
-    X, _, _ = clustering.prepare_vas_data(baseline_df, vas_cols)
-    X_raw = X.squeeze() if X.ndim == 3 else X
-    km_result = survival.compute_km_curves(X_raw, onset_thresh=3.0)
+    survival_input = clustering.clean_vas_table(baseline_df, vas_cols)
+    time_values = np.array([int(c.replace("VAS_", "").replace("min", "")) for c in vas_cols])
+    km_result = survival.compute_km_curves(
+        survival_input.values,
+        time_values=time_values,
+        onset_thresh=3.0,
+    )
     survival_df = pd.DataFrame(
         {
             "ID": baseline_df["ID"],
@@ -330,8 +347,12 @@ def _run_trajectory(args):
         os.path.join(METRICS_DIR, "trajectory_survival_data.csv"), index=False
     )
     median_relief = km_result["kmf_relief"].median_survival_time_
-    logrank_p = km_result["logrank_pvalue"]
-    print(f"Survival: median relief={median_relief} min, p={logrank_p:.4f}")
+    if np.isfinite(median_relief):
+        median_relief_text = f"{median_relief} min"
+    else:
+        median_relief_text = "not reached within observed follow-up"
+    print(f"Survival: median relief={median_relief_text}")
+    print(km_result["comparison_note"])
 
     if not args.no_plot and GENERATE_STANDALONE_FIGURES:
         # Plot KM curves
@@ -412,8 +433,10 @@ def _run_textmining(args):
             "rome_match_score": rome_df["top_score"],
         }
     )
-    save_to_baseline(args.baseline, rome_results)
-    print(f"Rome IV mapping saved to baseline: {args.baseline}")
+    rome_results.to_csv(
+        os.path.join(METRICS_DIR, "textmining_rome_subject_summary.csv"), index=False
+    )
+    print("Rome IV mapping saved to metrics/textmining_rome_subject_summary.csv")
 
     print(f"Results saved to {METRICS_DIR}")
     if not args.no_plot and GENERATE_STANDALONE_FIGURES:
@@ -422,9 +445,9 @@ def _run_textmining(args):
 
 def _run_fusion(args):
     """Run network fusion analysis."""
-    from analysis.data_loader import load_unified_baseline
+    from analysis.data_loader import load_analysis_ready_baseline
 
-    baseline_df = load_unified_baseline(args.baseline)
+    baseline_df = load_analysis_ready_baseline(args.baseline)
 
     symptom_cols = ["Region_code", "Symptom_codes"]
     available_cols = [c for c in symptom_cols if c in baseline_df.columns]
@@ -469,6 +492,10 @@ def _run_predict(args):
     from analysis.data_loader import get_vas_columns, load_unified_baseline
     from analysis.prediction import classification, common, plotting, regression
 
+    def _mode_or_nan(series: pd.Series):
+        mode = series.mode(dropna=True)
+        return mode.iloc[0] if not mode.empty else np.nan
+
     baseline_df = load_unified_baseline(args.baseline)
     vas_cols = get_vas_columns(baseline_df)
     time_cols = vas_cols
@@ -476,7 +503,8 @@ def _run_predict(args):
     figures_dir = FIGURES_DIR
     os.makedirs(figures_dir, exist_ok=True)
 
-    all_preds_list = []
+    regression_subject_preds = None
+    classification_subject_preds = None
 
     if args.task in ("regression", "both"):
         print("Building regression dataset...")
@@ -494,18 +522,33 @@ def _run_predict(args):
             os.path.join(METRICS_DIR, "prediction_regression_summary.csv"), index=False
         )
 
-        all_preds_list.append(preds)
-
         if not args.no_plot and GENERATE_STANDALONE_FIGURES:
             plotting.plot_observed_vs_predicted(
                 preds,
                 save_path=os.path.join(figures_dir, "regression_scatter.png"),
             )
 
+        regression_subject_preds = (
+            preds.groupby("subject_id", as_index=False)
+            .agg({"predicted": "mean", "target": "mean"})
+            .rename(
+                columns={
+                    "subject_id": "ID",
+                    "predicted": "predicted_vas_delta",
+                    "target": "target_vas_delta",
+                }
+            )
+        )
+        regression_subject_preds["delta_model"] = "Ridge"
+
     if args.task in ("classification", "both"):
         print("Building classification dataset...")
         data, y_col = classification.build_direction_dataset(
-            baseline_df, time_cols, window=args.window
+            baseline_df,
+            time_cols,
+            window=args.window,
+            include_cluster=False,
+            include_phenotype=True,
         )
 
         print("Evaluating classification models...")
@@ -527,34 +570,38 @@ def _run_predict(args):
         with open(cms_path, "w") as f:
             json.dump({k: v.tolist() for k, v in cms.items()}, f)
 
-        all_preds_list.append(preds)
+        subject_level_preds = preds[preds["model"] == "Logistic"].copy()
+        if subject_level_preds.empty:
+            subject_level_preds = preds.copy()
 
-    if all_preds_list:
-        all_preds = pd.concat(all_preds_list, ignore_index=True)
-
-        subject_preds = (
-            all_preds.groupby("subject_id")
-            .agg({"predicted": "mean", "target": "mean"})
-            .reset_index()
-        )
-        subject_preds.columns = ["ID", "predicted_vas_delta", "target_vas_delta"]
-
-        if "model" in all_preds.columns:
-            model_preds = (
-                all_preds.groupby("subject_id")["model"]
-                .agg(lambda x: x.value_counts().index[0] if len(x) > 0 else "unknown")
-                .reset_index()
+        classification_subject_preds = (
+            subject_level_preds.groupby("subject_id", as_index=False)
+            .agg(
+                predicted_direction=("predicted", _mode_or_nan),
+                target_direction=("target", _mode_or_nan),
             )
-            model_preds.columns = ["ID", "prediction_model"]
-            subject_preds = subject_preds.merge(model_preds, on="ID", how="left")
+            .rename(columns={"subject_id": "ID"})
+        )
+        classification_subject_preds["direction_model"] = (
+            subject_level_preds["model"].mode(dropna=True).iloc[0]
+            if not subject_level_preds["model"].mode(dropna=True).empty
+            else "unknown"
+        )
 
-        if "predicted" in all_preds.columns:
-            subject_preds["predicted_direction"] = subject_preds[
-                "predicted_vas_delta"
-            ].apply(lambda x: 1 if x > 0.1 else (-1 if x < -0.1 else 0))
+    subject_frames = [
+        frame
+        for frame in [regression_subject_preds, classification_subject_preds]
+        if frame is not None
+    ]
+    if subject_frames:
+        subject_preds = subject_frames[0]
+        for frame in subject_frames[1:]:
+            subject_preds = subject_preds.merge(frame, on="ID", how="outer")
 
-        save_to_baseline(args.baseline, subject_preds)
-        print(f"Prediction results saved to baseline: {args.baseline}")
+        subject_preds.to_csv(
+            os.path.join(METRICS_DIR, "prediction_subject_level.csv"), index=False
+        )
+        print("Prediction subject summaries saved to metrics/prediction_subject_level.csv")
 
     print(f"Results saved to {METRICS_DIR}")
     if not args.no_plot and GENERATE_STANDALONE_FIGURES:
@@ -563,10 +610,14 @@ def _run_predict(args):
 
 def _run_ecg_egg(args):
     """Run ECG/EGG analysis."""
-    from analysis.data_loader import check_signal_files, load_unified_baseline
+    from analysis.data_loader import (
+        ECG_EGG_FEATURE_COLUMNS,
+        check_signal_files,
+        load_analysis_ready_baseline,
+    )
     from analysis.ecg_egg import classification, features
 
-    baseline_df = load_unified_baseline(args.baseline)
+    baseline_df = load_analysis_ready_baseline(args.baseline)
 
     figures_dir = FIGURES_DIR
     os.makedirs(figures_dir, exist_ok=True)
@@ -588,68 +639,15 @@ def _run_ecg_egg(args):
             os.path.join(METRICS_DIR, "ecg_egg_features_extracted.csv"), index=False
         )
 
-        ecg_egg_feature_cols = [
-            "mean_HR",
-            "median_HR",
-            "min_HR",
-            "max_HR",
-            "HR_sd",
-            "HR_cv",
-            "mean_RR",
-            "median_RR",
-            "min_RR",
-            "max_RR",
-            "SDNN",
-            "RMSSD",
-            "pNN50",
-            "pNN20",
-            "CVSD",
-            "total_power",
-            "LF_power",
-            "HF_power",
-            "LF_HF_ratio",
-            "log_LF",
-            "log_HF",
-            "log_total_power",
-            "LFnu",
-            "HFnu",
-            "SD1",
-            "SD2",
-            "SD1_SD2_ratio",
-            "ECG_SQI",
-            "ECG_artifact_ratio",
-            "ECG_RR_edit_ratio",
-            "dominant_freq_cpm",
-            "mean_freq_cpm",
-            "median_freq_cpm",
-            "dominant_power",
-            "total_power_egg",
-            "log_DP",
-            "log_total_power_egg",
-            "pct_normogastria",
-            "pct_bradygastria",
-            "pct_tachygastria",
-            "power_ratio",
-            "spectral_entropy",
-            "spectral_flatness",
-            "DF_instability",
-            "egg_signal_energy",
-            "egg_rms",
-            "EGG_SQI",
-            "EGG_artifact_ratio",
-            "hr_egg_correlation",
-            "ecg_egg_cross_corr_max",
-            "ecg_egg_lag",
-            "ecg_egg_coherence_mean",
-            "ecg_egg_energy_ratio",
-        ]
+        ecg_egg_feature_cols = ECG_EGG_FEATURE_COLUMNS
         available_feature_cols = [
             c for c in ecg_egg_feature_cols if c in features_df.columns
         ]
         features_to_save = features_df[["ID"] + available_feature_cols].copy()
-
-        save_to_baseline(args.baseline, features_to_save)
-        print(f"ECG/EGG features saved to baseline: {args.baseline}")
+        features_to_save.to_csv(
+            os.path.join(METRICS_DIR, "ecg_egg_features.csv"), index=False
+        )
+        print("ECG/EGG feature subset saved to metrics/ecg_egg_features.csv")
 
         print(f"Features extracted and saved to {METRICS_DIR}")
     else:
@@ -727,6 +725,28 @@ def _run_ecg_egg(args):
         )
         print(f"Results saved to {METRICS_DIR}")
 
+    if args.skip_classification:
+        print("Skipped ECG/EGG phenotype classification.")
+        return
+
+    classification.run_ecg_egg_cluster_classification(
+        baseline_path=args.baseline,
+        output_dir=METRICS_DIR,
+    )
+    print("ECG/EGG phenotype classification saved to metrics outputs.")
+
+
+def _run_cluster_predict(args):
+    """Run baseline phenotype prediction."""
+    from analysis.prediction.cluster_predict import run_cluster_prediction
+
+    run_cluster_prediction(
+        baseline_path=args.baseline,
+        output_dir=METRICS_DIR,
+        n_splits=args.n_splits,
+    )
+    print(f"Results saved to {METRICS_DIR}")
+
 
 def _run_subject_classify(args):
     """Run subject-level temporal phenotype classification."""
@@ -753,6 +773,119 @@ def _run_subject_classify(args):
         print("\nSubject classification results:")
         print(metrics.to_string(index=False))
     print(f"Results saved to {METRICS_DIR}")
+
+
+def _run_pipeline(args):
+    """Run the full manuscript analysis pipeline in a fixed order."""
+    final_steps = []
+    if not args.skip_baseline_report:
+        final_steps.append(("Baseline report", _run_baseline_report))
+    if not args.skip_tables:
+        final_steps.append(("Manuscript tables", _run_tables))
+    if not args.skip_figures:
+        final_steps.append(("Manuscript figures", _run_figures))
+
+    pipeline_steps = [
+        (
+            "Trajectory clustering, change points, and survival",
+            _run_trajectory,
+            argparse.Namespace(
+                baseline=args.baseline,
+                method="dtw-kmeans",
+                n_clusters=3,
+                no_plot=True,
+            ),
+        ),
+        (
+            "Text mining and Rome IV mapping",
+            _run_textmining,
+            argparse.Namespace(
+                baseline=args.baseline,
+                no_plot=True,
+            ),
+        ),
+        (
+            "Minute-level VAS prediction",
+            _run_predict,
+            argparse.Namespace(
+                baseline=args.baseline,
+                task="both",
+                window=3,
+                no_plot=True,
+            ),
+        ),
+        (
+            "ECG/EGG feature export and classification",
+            _run_ecg_egg,
+            argparse.Namespace(
+                baseline=args.baseline,
+                data_dir=ECG_EGG_DATA_DIR,
+                no_plot=True,
+                re_extract=args.re_extract_ecg_egg,
+                skip_classification=False,
+            ),
+        ),
+        (
+            "Baseline phenotype prediction",
+            _run_cluster_predict,
+            argparse.Namespace(
+                baseline=args.baseline,
+                n_splits=10,
+            ),
+        ),
+        (
+            "Early-window phenotype classification",
+            _run_subject_classify,
+            argparse.Namespace(
+                baseline=args.baseline,
+                prefix_minutes=8,
+                compare_prefixes=True,
+            ),
+        ),
+        (
+            "Network fusion",
+            _run_fusion,
+            argparse.Namespace(
+                baseline=args.baseline,
+                no_plot=True,
+            ),
+        ),
+    ]
+
+    total_steps = len(pipeline_steps) + len(final_steps)
+
+    for index, (label, runner, runner_args) in enumerate(pipeline_steps, start=1):
+        print(f"\n[{index}/{total_steps}] {label}")
+        runner(runner_args)
+
+    next_step = len(pipeline_steps) + 1
+
+    if not args.skip_baseline_report:
+        print(f"\n[{next_step}/{total_steps}] Baseline report")
+        _run_baseline_report(argparse.Namespace(baseline=args.baseline))
+        next_step += 1
+
+    if not args.skip_tables:
+        print(f"\n[{next_step}/{total_steps}] Manuscript tables")
+        _run_tables(
+            argparse.Namespace(
+                baseline=args.baseline,
+                output_dir=METRICS_DIR,
+            )
+        )
+        next_step += 1
+
+    if not args.skip_figures:
+        print(f"\n[{next_step}/{total_steps}] Manuscript figures")
+        _run_figures(
+            argparse.Namespace(
+                baseline=args.baseline,
+                output_dir=FIGURES_DIR,
+                figures=None,
+            )
+        )
+
+    print("\nPipeline complete.")
 
 
 if __name__ == "__main__":

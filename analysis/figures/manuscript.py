@@ -6,6 +6,7 @@ from __future__ import annotations
 import os
 import shutil
 from pathlib import Path
+from typing import Callable
 
 import matplotlib
 
@@ -16,9 +17,9 @@ import pandas as pd
 import seaborn as sns
 
 from analysis.constants import FIGURES_DIR, METRICS_DIR, REGION_CODE_MAP, SYMPTOM_CODE_MAP
-from analysis.data_loader import get_vas_columns, load_unified_baseline
+from analysis.data_loader import get_vas_columns, load_analysis_ready_baseline
 from analysis.parsing import map_codes, parse_compact_codes, parse_region_codes
-from analysis.trajectory.clustering import dtw_kmeans_cluster, prepare_vas_data
+from analysis.trajectory.clustering import prepare_vas_data
 from analysis.trajectory.shapelets import extract_shapelets
 from analysis.visualization.style import set_publication_style
 
@@ -26,6 +27,18 @@ PALETTE_NAME = "magma"
 PALETTE = sns.color_palette(PALETTE_NAME, n_colors=8)
 CLUSTER_PALETTE = {0: PALETTE[1], 1: PALETTE[3], 2: PALETTE[5]}
 CLUSTER_NAMES = {0: "Delayed-peak", 1: "Early-sustained", 2: "Late-rising"}
+_BASELINE_SOURCE_PATH: str | None = None
+_METRICS_SOURCE_DIR = METRICS_DIR
+
+
+def configure_sources(
+    baseline_path: str | None = None,
+    metrics_dir: str = METRICS_DIR,
+) -> None:
+    """Configure the baseline file and metrics directory used by figure builders."""
+    global _BASELINE_SOURCE_PATH, _METRICS_SOURCE_DIR
+    _BASELINE_SOURCE_PATH = baseline_path
+    _METRICS_SOURCE_DIR = metrics_dir
 
 
 def _ensure_dir(path: str) -> str:
@@ -62,7 +75,7 @@ def _time_from_vas_col(col: str) -> int:
 
 
 def _load_baseline() -> tuple[pd.DataFrame, list[str]]:
-    df = load_unified_baseline()
+    df = load_analysis_ready_baseline(_BASELINE_SOURCE_PATH)
     vas_cols = sorted(get_vas_columns(df), key=_time_from_vas_col)
     return df, vas_cols
 
@@ -82,7 +95,7 @@ def _vas_long(df: pd.DataFrame, vas_cols: list[str]) -> pd.DataFrame:
 
 
 def _read_metric(name: str) -> pd.DataFrame | None:
-    path = Path(METRICS_DIR) / name
+    path = Path(_METRICS_SOURCE_DIR) / name
     if not path.exists():
         return None
     return pd.read_csv(path)
@@ -434,38 +447,160 @@ def generate_figure10(output_path: str) -> None:
 def generate_figure11(output_path: str) -> None:
     print("Generating Figure 11: cluster-specific shapelets...")
     df, vas_cols = _load_baseline()
-    fig, ax = plt.subplots(figsize=(9, 6))
     try:
+        if "cluster" not in df.columns:
+            raise ValueError("cluster labels are missing; run trajectory first")
+
+        cluster_labels = pd.to_numeric(df["cluster"], errors="coerce")
+        valid_mask = cluster_labels.notna()
+        if not valid_mask.any():
+            raise ValueError("cluster labels are empty; run trajectory first")
+
+        df = df.loc[valid_mask].reset_index(drop=True)
+        labels = cluster_labels.loc[valid_mask].astype(int).to_numpy()
         X, X_raw, _ = prepare_vas_data(df, vas_cols)
-        labels, _, _ = dtw_kmeans_cluster(X, n_clusters=3)
-        shapelets = extract_shapelets(X_raw, labels, n_clusters=3, min_len=5, max_len=5, top_k=3)
-        rows = []
-        for _, row in shapelets.iterrows():
-            target = int(row["target_cluster"]) - 1
-            for j in range(1, int(row["length"]) + 1):
-                rows.append(
-                    {
-                        "shapelet_id": f"{target}-{int(row['source_subject'])}-{int(row['start'])}",
-                        "local_time": j,
-                        "value": row[f"shapelet_pt{j}"],
-                        "phenotype": CLUSTER_NAMES.get(target, f"Cluster {target}"),
-                    }
-                )
-        sns.lineplot(
-            data=pd.DataFrame(rows),
-            x="local_time",
-            y="value",
-            hue="phenotype",
-            units="shapelet_id",
-            estimator=None,
-            palette={CLUSTER_NAMES[k]: v for k, v in CLUSTER_PALETTE.items()},
-            linewidth=2,
-            ax=ax,
+        n_clusters = len(np.unique(labels))
+        shapelets = extract_shapelets(
+            X_raw,
+            labels,
+            n_clusters=n_clusters,
+            min_len=5,
+            max_len=5,
+            top_k=3,
         )
-        ax.set_title("Cluster-Specific Shapelets", fontweight="bold")
-        ax.set_xlabel("Local time")
-        ax.set_ylabel("Normalized VAS")
+        shapelets = shapelets.sort_values(
+            ["target_cluster", "auc", "cohens_d"],
+            ascending=[True, False, False],
+        ).reset_index(drop=True)
+        n_clusters = int(shapelets["target_cluster"].nunique())
+        top_k = int(shapelets.groupby("target_cluster").size().max())
+        fig, axes = plt.subplots(
+            n_clusters,
+            top_k,
+            figsize=(12.8, 7.4),
+            sharex=True,
+            sharey=True,
+            constrained_layout=True,
+        )
+        axes = np.atleast_2d(axes)
+        all_values = []
+        for _, row in shapelets.iterrows():
+            all_values.extend(
+                [row[f"shapelet_pt{j}"] for j in range(1, int(row["length"]) + 1)]
+            )
+        y_min = min(all_values) - 0.2
+        y_max = max(all_values) + 0.2
+        total_time = len(vas_cols)
+
+        panel_idx = 0
+        for cluster_pos, target_cluster in enumerate(sorted(shapelets["target_cluster"].unique())):
+            cluster_shapelets = (
+                shapelets[shapelets["target_cluster"] == target_cluster]
+                .sort_values(["auc", "cohens_d"], ascending=[False, False])
+                .reset_index(drop=True)
+            )
+            phenotype_idx = int(target_cluster) - 1
+            color = CLUSTER_PALETTE.get(phenotype_idx, PALETTE[cluster_pos])
+            phenotype_name = CLUSTER_NAMES.get(
+                phenotype_idx, f"Cluster {int(target_cluster)}"
+            )
+
+            for shapelet_pos in range(top_k):
+                ax = axes[cluster_pos, shapelet_pos]
+                if shapelet_pos >= len(cluster_shapelets):
+                    ax.set_axis_off()
+                    continue
+
+                row = cluster_shapelets.iloc[shapelet_pos]
+                shapelet_length = int(row["length"])
+                shapelet_start = int(row["start"])
+                source_subject = int(row["source_subject"])
+                # `start` is zero-based on the original 20-minute trajectory.
+                # Plot on the absolute post-capsaicin timeline rather than local
+                # shapelet coordinates so the motif timing remains visible.
+                x = np.arange(shapelet_start + 1, shapelet_start + shapelet_length + 1)
+                y = np.array(
+                    [row[f"shapelet_pt{j}"] for j in range(1, shapelet_length + 1)],
+                    dtype=float,
+                )
+                full_x = np.arange(1, total_time + 1)
+                full_y = np.asarray(X_raw[source_subject], dtype=float).reshape(-1)
+
+                ax.plot(
+                    full_x,
+                    full_y,
+                    color=color,
+                    linewidth=1.7,
+                    linestyle="--",
+                    alpha=0.28,
+                    zorder=1,
+                )
+                ax.plot(x, y, color=color, linewidth=2.8, marker="o", markersize=4.5, zorder=3)
+                ax.fill_between(x, 0, y, color=color, alpha=0.08)
+                ax.axhline(0, color="#b9b9b9", linewidth=0.8, linestyle="--", zorder=0)
+                ax.grid(alpha=0.18, linewidth=0.7)
+                ax.set_xlim(0, total_time)
+                ax.set_ylim(y_min, y_max)
+                ax.set_xticks([0, 5, 10, 15, 20])
+                if cluster_pos == 0:
+                    ax.set_title(
+                        f"Top shapelet {shapelet_pos + 1}",
+                        fontsize=11,
+                        pad=10,
+                        fontweight="bold",
+                    )
+                ax.text(
+                    0.02,
+                    0.97,
+                    f"({chr(65 + panel_idx)})",
+                    transform=ax.transAxes,
+                    ha="left",
+                    va="top",
+                    fontsize=10,
+                    fontweight="bold",
+                )
+                if shapelet_pos == 0:
+                    ax.text(
+                        0.11,
+                        0.97,
+                        phenotype_name,
+                        transform=ax.transAxes,
+                        ha="left",
+                        va="top",
+                        fontsize=11,
+                        fontweight="bold",
+                    )
+                ax.text(
+                    0.98,
+                    0.97,
+                    (
+                        f"AUC {row['auc']:.3f}\n"
+                        f"d {row['cohens_d']:.2f}\n"
+                        f"t={x[0]}-{x[-1]} min"
+                    ),
+                    transform=ax.transAxes,
+                    ha="right",
+                    va="top",
+                    fontsize=8.8,
+                    bbox={
+                        "boxstyle": "round,pad=0.25",
+                        "facecolor": "white",
+                        "edgecolor": "#d7d7d7",
+                        "alpha": 0.92,
+                    },
+                )
+                if cluster_pos == n_clusters - 1:
+                    ax.set_xlabel("Post-capsaicin time (min)")
+                panel_idx += 1
+
+        fig.suptitle(
+            "Cluster-Specific Shapelets",
+            fontsize=14,
+            fontweight="bold",
+            y=1.02,
+        )
     except Exception as exc:
+        fig, ax = plt.subplots(figsize=(9, 6))
         _no_data(ax, f"Shapelets unavailable: {exc}")
     _save(fig, output_path)
 
@@ -564,28 +699,38 @@ def generate_figure16(output_path: str) -> None:
     _save(fig, output_path)
 
 
-FIGURE_MAP = {
-    "1": ("figure1_group_mean_vas.png", generate_figure1),
-    "2": ("figure2_phenotype_trajectories.png", generate_figure2),
-    "3": ("figure3_symptom_burden.png", generate_figure3),
-    "4": ("figure4_region_burden.png", generate_figure4),
-    "5": ("figure5_early_window_classification.png", generate_figure5),
-    "6": ("figure6_baseline_prediction_performance.png", generate_figure6),
-    "7": ("figure7_age_by_phenotype.png", generate_figure7),
-    "8": ("figure8_ecg_egg_features.png", generate_figure8),
-    "9": ("figure9_onset_timing.png", generate_figure9),
-    "10": ("figure10_survival_curves.png", generate_figure10),
-    "11": ("figure11_shapelets.png", generate_figure11),
-    "12": ("figure12_symptom_region_heatmap.png", generate_figure12),
-    "13": ("figure13_symptom_rome_heatmap.png", generate_figure13),
-    "14": ("figure14_direction_classification.png", generate_figure14),
-    "15": ("figure15_ecg_feature_importance.png", generate_figure15),
-    "16": ("figure16_ecg_confusion_matrix.png", generate_figure16),
-}
+def make_figure_map(
+    baseline_path: str | None = None,
+    metrics_dir: str = METRICS_DIR,
+) -> dict[str, tuple[str, Callable[[str], None]]]:
+    """Return the manuscript figure registry for the requested data sources."""
+    configure_sources(baseline_path=baseline_path, metrics_dir=metrics_dir)
+    return {
+        "1": ("figure1_group_mean_vas.png", generate_figure1),
+        "2": ("figure2_phenotype_trajectories.png", generate_figure2),
+        "3": ("figure3_symptom_burden.png", generate_figure3),
+        "4": ("figure4_region_burden.png", generate_figure4),
+        "5": ("figure5_early_window_classification.png", generate_figure5),
+        "6": ("figure6_baseline_prediction_performance.png", generate_figure6),
+        "7": ("figure7_age_by_phenotype.png", generate_figure7),
+        "8": ("figure8_ecg_egg_features.png", generate_figure8),
+        "9": ("figure9_onset_timing.png", generate_figure9),
+        "10": ("figure10_survival_curves.png", generate_figure10),
+        "11": ("figure11_shapelets.png", generate_figure11),
+        "12": ("figure12_symptom_region_heatmap.png", generate_figure12),
+        "13": ("figure13_symptom_rome_heatmap.png", generate_figure13),
+        "14": ("figure14_direction_classification.png", generate_figure14),
+        "15": ("figure15_ecg_feature_importance.png", generate_figure15),
+        "16": ("figure16_ecg_confusion_matrix.png", generate_figure16),
+    }
+
+
+FIGURE_MAP = make_figure_map()
 
 
 def main() -> None:
     set_publication_style()
+    configure_sources()
     clean_figure_outputs(FIGURES_DIR)
     for filename, generator in FIGURE_MAP.values():
         generator(os.path.join(FIGURES_DIR, filename))

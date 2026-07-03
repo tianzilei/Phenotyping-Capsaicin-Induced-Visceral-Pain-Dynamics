@@ -8,7 +8,7 @@ from typing import Optional
 import pandas as pd
 
 from analysis.constants import METRICS_DIR
-from analysis.data_loader import load_unified_baseline
+from analysis.data_loader import load_analysis_ready_baseline
 from analysis.tables.baseline import generate_baseline_table
 from analysis.tables.network import (
     generate_network_nodes_table,
@@ -44,7 +44,7 @@ def generate_all_tables(
     os.makedirs(output_dir, exist_ok=True)
 
     # Load data
-    baseline_df = load_unified_baseline(baseline_path)
+    baseline_df = load_analysis_ready_baseline(baseline_path)
     edges_df = pd.read_csv(os.path.join(METRICS_DIR, "textmining_tripartite_edges.csv"))
     pred_fold_df = pd.read_csv(
         os.path.join(METRICS_DIR, "prediction_classification_fold_metrics.csv")
@@ -71,7 +71,7 @@ def generate_all_tables(
     tables["table_s3_prediction"] = generate_prediction_table(pred_fold_df)
 
     # Table S4: Adverse events
-    tables["table_s4_adverse_events"] = generate_adverse_events_table()
+    tables["table_s4_adverse_events"] = generate_adverse_events_table(baseline_df)
 
     # Save to files
     for name, content in tables.items():

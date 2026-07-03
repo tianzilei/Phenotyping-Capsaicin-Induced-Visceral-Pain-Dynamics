@@ -13,10 +13,28 @@ from tslearn.preprocessing import TimeSeriesScalerMeanVariance
 from tslearn.utils import to_time_series_dataset
 
 
+def clean_vas_table(df: pd.DataFrame, time_cols: list) -> pd.DataFrame:
+    """
+    Convert VAS columns to numeric and right-censor all values after the first E/T.
+    """
+
+    def censor_et(row: pd.Series) -> pd.Series:
+        result = row.copy()
+        for i, val in enumerate(row):
+            if str(val) in ("E", "T"):
+                result.iloc[i:] = np.nan
+                break
+        return result
+
+    data = df[time_cols].apply(censor_et, axis=1)
+    return data.apply(pd.to_numeric, errors="coerce")
+
+
 def prepare_vas_data(
     df: pd.DataFrame,
     time_cols: list,
     normalize: bool = True,
+    tail_fill: str = "carry_forward",
 ) -> Tuple[np.ndarray, np.ndarray, TimeSeriesKMeans]:
     """
     Load, clean, and format VAS data for tslearn.
@@ -29,6 +47,10 @@ def prepare_vas_data(
         Time column names (e.g., ['1min', '2min', ...]).
     normalize : bool
         Whether to apply z-normalization.
+    tail_fill : str
+        How to handle censored/missing tail values for fixed-length clustering.
+        ``carry_forward`` preserves the last observed state instead of forcing
+        an artificial drop to zero.
 
     Returns
     -------
@@ -36,21 +58,18 @@ def prepare_vas_data(
         X (tslearn format), X_raw (n_samples, n_timepoints), scaler (or None).
     """
 
-    # Clean data: E/T censoring (propagate NaN after first E/T), then interpolate gaps
-    def censor_et(row):
-        """Once E/T appears, set all subsequent values to NaN."""
-        result = row.copy()
-        for i, val in enumerate(row):
-            if str(val) in ("E", "T"):
-                result.iloc[i:] = np.nan
-                break
-        return result
+    data = clean_vas_table(df, time_cols)
 
-    data = df[time_cols].apply(censor_et, axis=1)
-    data = data.apply(pd.to_numeric, errors="coerce")
-
-    # Interpolate only pre-censoring gaps, fill remaining with 0
-    data = data.interpolate(axis=1, limit_area="inside").fillna(0)
+    # Interpolate only internal gaps before extending the censored tail.
+    data = data.interpolate(axis=1, limit_area="inside")
+    if tail_fill == "carry_forward":
+        data = data.ffill(axis=1).bfill(axis=1)
+    elif tail_fill == "zero":
+        data = data.fillna(0)
+    elif tail_fill in ("none", None):
+        pass
+    else:
+        raise ValueError(f"Unknown tail_fill mode: {tail_fill}")
 
     X_raw = data.values
 

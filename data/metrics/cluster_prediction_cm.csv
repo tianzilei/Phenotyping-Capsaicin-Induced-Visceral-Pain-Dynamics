@@ -1,55 +1,55 @@
 model,true_cluster,predicted_cluster,count
-Logistic Regression,0,0,33
-Logistic Regression,0,1,27
-Logistic Regression,0,2,17
-Logistic Regression,1,0,32
-Logistic Regression,1,1,22
-Logistic Regression,1,2,23
-Logistic Regression,2,0,17
-Logistic Regression,2,1,17
-Logistic Regression,2,2,28
-Random Forest,0,0,40
-Random Forest,0,1,23
-Random Forest,0,2,14
-Random Forest,1,0,23
-Random Forest,1,1,33
-Random Forest,1,2,21
-Random Forest,2,0,15
-Random Forest,2,1,13
-Random Forest,2,2,34
-Gradient Boosting,0,0,42
-Gradient Boosting,0,1,24
-Gradient Boosting,0,2,11
-Gradient Boosting,1,0,26
-Gradient Boosting,1,1,36
-Gradient Boosting,1,2,15
-Gradient Boosting,2,0,22
-Gradient Boosting,2,1,16
-Gradient Boosting,2,2,24
-HistGradientBoosting,0,0,41
-HistGradientBoosting,0,1,26
-HistGradientBoosting,0,2,10
-HistGradientBoosting,1,0,30
-HistGradientBoosting,1,1,29
-HistGradientBoosting,1,2,18
-HistGradientBoosting,2,0,15
-HistGradientBoosting,2,1,21
-HistGradientBoosting,2,2,26
-MLP,0,0,18
-MLP,0,1,17
-MLP,0,2,42
-MLP,1,0,22
-MLP,1,1,12
-MLP,1,2,43
-MLP,2,0,17
-MLP,2,1,12
-MLP,2,2,33
-Stacking,0,0,31
-Stacking,0,1,32
-Stacking,0,2,14
+Logistic Regression,0,0,38
+Logistic Regression,0,1,12
+Logistic Regression,0,2,8
+Logistic Regression,1,0,24
+Logistic Regression,1,1,34
+Logistic Regression,1,2,26
+Logistic Regression,2,0,6
+Logistic Regression,2,1,26
+Logistic Regression,2,2,42
+Random Forest,0,0,42
+Random Forest,0,1,11
+Random Forest,0,2,5
+Random Forest,1,0,18
+Random Forest,1,1,41
+Random Forest,1,2,25
+Random Forest,2,0,6
+Random Forest,2,1,22
+Random Forest,2,2,46
+Gradient Boosting,0,0,36
+Gradient Boosting,0,1,15
+Gradient Boosting,0,2,7
+Gradient Boosting,1,0,7
+Gradient Boosting,1,1,48
+Gradient Boosting,1,2,29
+Gradient Boosting,2,0,5
+Gradient Boosting,2,1,28
+Gradient Boosting,2,2,41
+HistGradientBoosting,0,0,37
+HistGradientBoosting,0,1,12
+HistGradientBoosting,0,2,9
+HistGradientBoosting,1,0,11
+HistGradientBoosting,1,1,50
+HistGradientBoosting,1,2,23
+HistGradientBoosting,2,0,4
+HistGradientBoosting,2,1,27
+HistGradientBoosting,2,2,43
+MLP,0,0,21
+MLP,0,1,14
+MLP,0,2,23
+MLP,1,0,10
+MLP,1,1,33
+MLP,1,2,41
+MLP,2,0,8
+MLP,2,1,19
+MLP,2,2,47
+Stacking,0,0,42
+Stacking,0,1,10
+Stacking,0,2,6
 Stacking,1,0,22
 Stacking,1,1,31
-Stacking,1,2,24
-Stacking,2,0,9
-Stacking,2,1,17
-Stacking,2,2,36
+Stacking,1,2,31
+Stacking,2,0,6
+Stacking,2,1,19
+Stacking,2,2,49

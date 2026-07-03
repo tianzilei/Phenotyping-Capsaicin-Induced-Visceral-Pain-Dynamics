@@ -1,0 +1,217 @@
+ID,top_rome_disease,rome_match_score
+SUBJECT001,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT002,Biliary Pain-like,4.0
+SUBJECT003,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT004,No Match,0.0
+SUBJECT005,Biliary Pain-like,7.0
+SUBJECT006,No Match,0.0
+SUBJECT007,No Match,0.0
+SUBJECT008,No Match,0.0
+SUBJECT009,Biliary Pain-like,4.0
+SUBJECT010,Biliary Pain-like,6.0
+SUBJECT011,No Match,0.0
+SUBJECT012,No Match,0.0
+SUBJECT013,No Match,0.0
+SUBJECT014,Biliary Pain-like,4.0
+SUBJECT015,No Match,0.0
+SUBJECT016,Biliary Pain-like,4.0
+SUBJECT017,No Match,0.0
+SUBJECT018,Biliary Pain-like,4.0
+SUBJECT019,Functional Constipation / Defecatory Disorder-like,5.0
+SUBJECT020,Functional Dyspepsia - PDS-like,8.0
+SUBJECT021,No Match,0.0
+SUBJECT022,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT023,No Match,0.0
+SUBJECT024,No Match,0.0
+SUBJECT025,No Match,0.0
+SUBJECT026,No Match,0.0
+SUBJECT027,Biliary Pain-like,5.0
+SUBJECT028,No Match,0.0
+SUBJECT029,No Match,0.0
+SUBJECT030,No Match,0.0
+SUBJECT031,No Match,0.0
+SUBJECT032,Irritable Bowel Syndrome-like,10.0
+SUBJECT033,Irritable Bowel Syndrome-like,8.0
+SUBJECT034,Irritable Bowel Syndrome-like,6.0
+SUBJECT035,Irritable Bowel Syndrome-like,6.0
+SUBJECT036,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT037,No Match,0.0
+SUBJECT038,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT039,Biliary Pain-like,6.0
+SUBJECT040,Biliary Pain-like,4.0
+SUBJECT041,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT042,Irritable Bowel Syndrome-like,8.0
+SUBJECT043,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT044,No Match,0.0
+SUBJECT045,Biliary Pain-like,4.0
+SUBJECT046,No Match,0.0
+SUBJECT047,Unspecified Functional GI Symptom Pattern,4.0
+SUBJECT048,No Match,0.0
+SUBJECT049,Functional Constipation / Defecatory Disorder-like,5.0
+SUBJECT050,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT051,Biliary Pain-like,7.0
+SUBJECT052,Biliary Pain-like,4.0
+SUBJECT053,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT054,No Match,0.0
+SUBJECT055,No Match,0.0
+SUBJECT056,Irritable Bowel Syndrome-like,8.0
+SUBJECT057,Biliary Pain-like,9.0
+SUBJECT058,Biliary Pain-like,5.0
+SUBJECT059,No Match,0.0
+SUBJECT060,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT061,No Match,0.0
+SUBJECT062,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT063,No Match,0.0
+SUBJECT064,No Match,0.0
+SUBJECT065,Biliary Pain-like,5.0
+SUBJECT066,No Match,0.0
+SUBJECT067,Biliary Pain-like,5.0
+SUBJECT068,Unspecified Functional GI Symptom Pattern,4.0
+SUBJECT069,Biliary Pain-like,7.0
+SUBJECT070,Irritable Bowel Syndrome-like,8.0
+SUBJECT071,No Match,0.0
+SUBJECT072,Biliary Pain-like,6.0
+SUBJECT073,Unspecified Functional GI Symptom Pattern,4.0
+SUBJECT074,No Match,0.0
+SUBJECT075,No Match,0.0
+SUBJECT076,Biliary Pain-like,9.0
+SUBJECT077,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT078,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT079,No Match,0.0
+SUBJECT080,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT081,Biliary Pain-like,4.0
+SUBJECT082,No Match,0.0
+SUBJECT083,No Match,0.0
+SUBJECT084,No Match,0.0
+SUBJECT085,Biliary Pain-like,4.0
+SUBJECT086,Functional Abdominal Bloating/Distension-like,6.0
+SUBJECT087,No Match,0.0
+SUBJECT088,Biliary Pain-like,5.0
+SUBJECT089,Biliary Pain-like,5.0
+SUBJECT090,Biliary Pain-like,8.0
+SUBJECT091,Irritable Bowel Syndrome-like,6.0
+SUBJECT092,No Match,0.0
+SUBJECT093,No Match,0.0
+SUBJECT094,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT095,No Match,0.0
+SUBJECT096,Irritable Bowel Syndrome-like,6.0
+SUBJECT097,Functional Constipation / Defecatory Disorder-like,4.0
+SUBJECT098,Biliary Pain-like,6.0
+SUBJECT099,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT100,Biliary Pain-like,4.0
+SUBJECT101,No Match,0.0
+SUBJECT102,No Match,0.0
+SUBJECT103,No Match,0.0
+SUBJECT104,Biliary Pain-like,5.0
+SUBJECT105,Biliary Pain-like,6.0
+SUBJECT106,No Match,0.0
+SUBJECT107,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT108,No Match,0.0
+SUBJECT109,No Match,0.0
+SUBJECT110,No Match,0.0
+SUBJECT111,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT112,Biliary Pain-like,4.0
+SUBJECT113,No Match,0.0
+SUBJECT114,Irritable Bowel Syndrome-like,6.0
+SUBJECT115,Irritable Bowel Syndrome-like,8.0
+SUBJECT116,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT117,No Match,0.0
+SUBJECT118,No Match,0.0
+SUBJECT119,Biliary Pain-like,4.0
+SUBJECT120,No Match,0.0
+SUBJECT121,Irritable Bowel Syndrome-like,6.0
+SUBJECT122,No Match,0.0
+SUBJECT123,Functional Abdominal Bloating/Distension-like,7.0
+SUBJECT124,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT125,Biliary Pain-like,6.0
+SUBJECT126,Biliary Pain-like,6.0
+SUBJECT127,No Match,0.0
+SUBJECT128,No Match,0.0
+SUBJECT129,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT130,Biliary Pain-like,4.0
+SUBJECT131,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT132,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT133,No Match,0.0
+SUBJECT134,Irritable Bowel Syndrome-like,8.0
+SUBJECT135,Irritable Bowel Syndrome-like,6.0
+SUBJECT136,Biliary Pain-like,4.0
+SUBJECT137,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT138,Biliary Pain-like,7.0
+SUBJECT139,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT140,No Match,0.0
+SUBJECT141,Biliary Pain-like,4.0
+SUBJECT142,No Match,0.0
+SUBJECT143,No Match,0.0
+SUBJECT144,Biliary Pain-like,4.0
+SUBJECT145,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT146,Biliary Pain-like,5.0
+SUBJECT147,Biliary Pain-like,4.0
+SUBJECT148,Biliary Pain-like,7.0
+SUBJECT149,Functional Abdominal Bloating/Distension-like,7.0
+SUBJECT150,No Match,0.0
+SUBJECT151,Irritable Bowel Syndrome-like,6.0
+SUBJECT152,No Match,0.0
+SUBJECT153,Biliary Pain-like,8.0
+SUBJECT154,No Match,0.0
+SUBJECT155,Irritable Bowel Syndrome-like,8.0
+SUBJECT156,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT157,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT158,No Match,0.0
+SUBJECT159,Irritable Bowel Syndrome-like,6.0
+SUBJECT160,No Match,0.0
+SUBJECT161,Biliary Pain-like,5.0
+SUBJECT162,Biliary Pain-like,4.0
+SUBJECT163,Biliary Pain-like,6.0
+SUBJECT164,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT165,Biliary Pain-like,4.0
+SUBJECT166,Biliary Pain-like,5.0
+SUBJECT167,No Match,0.0
+SUBJECT168,Irritable Bowel Syndrome-like,6.0
+SUBJECT169,No Match,0.0
+SUBJECT170,No Match,0.0
+SUBJECT171,Irritable Bowel Syndrome-like,6.0
+SUBJECT172,No Match,0.0
+SUBJECT173,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT174,Biliary Pain-like,4.0
+SUBJECT175,Functional Constipation / Defecatory Disorder-like,5.0
+SUBJECT176,Biliary Pain-like,6.0
+SUBJECT177,No Match,0.0
+SUBJECT178,Biliary Pain-like,6.0
+SUBJECT179,Functional Abdominal Bloating/Distension-like,7.0
+SUBJECT180,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT181,Biliary Pain-like,6.0
+SUBJECT182,No Match,0.0
+SUBJECT183,Irritable Bowel Syndrome-like,6.0
+SUBJECT184,Functional Abdominal Bloating/Distension-like,6.0
+SUBJECT185,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT186,No Match,0.0
+SUBJECT187,Irritable Bowel Syndrome-like,6.0
+SUBJECT188,No Match,0.0
+SUBJECT189,Irritable Bowel Syndrome-like,6.0
+SUBJECT190,Functional Constipation / Defecatory Disorder-like,5.0
+SUBJECT191,No Match,0.0
+SUBJECT192,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT193,Biliary Pain-like,4.0
+SUBJECT194,Irritable Bowel Syndrome-like,6.0
+SUBJECT195,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT196,No Match,0.0
+SUBJECT197,Irritable Bowel Syndrome-like,6.0
+SUBJECT198,No Match,0.0
+SUBJECT199,Biliary Pain-like,4.0
+SUBJECT200,Irritable Bowel Syndrome-like,8.0
+SUBJECT201,Unspecified Functional GI Symptom Pattern,4.0
+SUBJECT202,Biliary Pain-like,6.0
+SUBJECT203,Functional Abdominal Bloating/Distension-like,5.0
+SUBJECT204,Biliary Pain-like,6.0
+SUBJECT205,Biliary Pain-like,6.0
+SUBJECT206,Functional Abdominal Bloating/Distension-like,4.0
+SUBJECT207,Biliary Pain-like,7.0
+SUBJECT208,No Match,0.0
+SUBJECT209,No Match,0.0
+SUBJECT210,No Match,0.0
+SUBJECT211,Unspecified Functional GI Symptom Pattern,6.0
+SUBJECT212,No Match,0.0
+SUBJECT213,No Match,0.0
+SUBJECT214,No Match,0.0
+SUBJECT215,No Match,0.0
+SUBJECT216,No Match,0.0

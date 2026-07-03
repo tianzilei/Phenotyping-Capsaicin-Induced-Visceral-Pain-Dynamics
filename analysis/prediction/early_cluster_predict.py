@@ -41,6 +41,7 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.svm import SVC
 
+from analysis.data_loader import load_analysis_ready_baseline
 from analysis.prediction.cluster_predict import (
     BASELINE_FEATURES,
     CATEGORICAL_FEATURES,
@@ -145,7 +146,7 @@ def build_subject_classification_dataset(
     ``prefix_minutes=0`` gives a strict baseline-only dataset. Positive values
     add early VAS trajectory features up to that minute.
     """
-    df = pd.read_csv(baseline_path)
+    df = load_analysis_ready_baseline(baseline_path)
     if "cluster" not in df.columns:
         raise ValueError("Expected a 'cluster' column in the baseline file.")
 

@@ -71,10 +71,18 @@ def detect_rank_change_point(row: pd.Series, penalty: float = 0.5) -> float:
     try:
         import ruptures as rpt
 
-        signal = row.values.astype(float)
+        valid = row.dropna()
+        if len(valid) < 3:
+            return np.nan
+
+        signal = valid.values.astype(float)
         algo = rpt.Pelt(model="rank").fit(signal)
         result = algo.predict(pen=penalty)
-        return result[0] if result else np.nan
+        interior_points = [cp for cp in result if 0 < cp < len(signal)]
+        if not interior_points:
+            return np.nan
+        cp = interior_points[0]
+        return valid.index[cp - 1]
     except Exception:
         return np.nan
 

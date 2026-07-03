@@ -4,7 +4,7 @@
 
 - Input file: `BaselineData.csv`
 - Participants: 216
-- Variables: 103
+- Variables: 105
 - Duplicate IDs: 0
 
 ## Table 1
@@ -20,7 +20,7 @@
 | Height, cm, mean ± SD                    | 167.2 ± 8.9 |
 | Weight, kg, mean ± SD                    | 60.3 ± 12.0 |
 | BMI, kg/m², mean ± SD                    | 21.4 ± 3.3  |
-| Time since last meal, hours, mean ± SD   | 4.0 ± 1.9   |
+| Time since last meal, hours, mean ± SD   | 4.1 ± 2.0   |
 | Alcohol consumption, n (%)               |             |
 | Non-drinker                              | 116 (53.7%) |
 | Occasional drinker                       | 83 (38.4%)  |
@@ -30,18 +30,18 @@
 | Preference for spicy food, mean ± SD     | 3.2 ± 1.1   |
 | Maximum tolerable spiciness, mean ± SD   | 3.3 ± 1.0   |
 | CCEI, mean ± SD                          | 20.1 ± 14.8 |
-| Recent spicy food intake (24h), n (%)    | 0.6 ± 0.5   |
-| Time since last intake, hours, mean ± SD | 9.7 ± 4.7   |
-| Number of episodes (24h), mean ± SD      | 0.9 ± 1.1   |
+| Recent spicy food intake (24h), n (%)    | 0.7 ± 0.5   |
+| Time since last intake, hours, mean ± SD | 9.2 ± 5.8   |
+| Number of episodes (24h), mean ± SD      | 1.2 ± 1.1   |
 | AES, mean ± SD                           | 5.3 ± 6.8   |
 | Baseline GI symptoms, n (%)              |             |
 | No symptoms                              | 148 (68.5%) |
 | Mild symptoms                            | 56 (25.9%)  |
 | Moderate symptoms                        | 12 (5.6%)   |
 | Cluster assignment, n (%)                |             |
-| Cluster 1                                | 77 (35.6%)  |
-| Cluster 2                                | 77 (35.6%)  |
-| Cluster 3                                | 62 (28.7%)  |
+| Cluster 1                                | 58 (26.9%)  |
+| Cluster 2                                | 84 (38.9%)  |
+| Cluster 3                                | 74 (34.3%)  |
 
 ## VAS Time-Course Summary
 
@@ -72,9 +72,9 @@
 
 | cluster   |   n | female_n_pct   | age_mean_sd   | bmi_mean_sd   | vas_avg_mean_sd   | vas_peak_mean_sd   | peak_time_median_iqr   | ccei_mean_sd   | aes_mean_sd   | ecg_sqi_mean_sd   | egg_sqi_mean_sd   |
 |:----------|----:|:---------------|:--------------|:--------------|:------------------|:-------------------|:-----------------------|:---------------|:--------------|:------------------|:------------------|
-| Cluster 1 |  77 | 43 (55.8%)     | 20.4 ± 1.5    | 21.5 ± 2.7    | 4.8 ± 2.0         | 6.2 ± 2.4          | 5.0 (3.0-7.0)          | 16.6 ± 13.2    | 3.5 ± 6.0     | 75.5 ± 2.9        | 99.5 ± 1.7        |
-| Cluster 2 |  77 | 42 (54.5%)     | 20.5 ± 2.5    | 21.0 ± 3.4    | 4.5 ± 1.8         | 5.9 ± 1.9          | 2.0 (1.0-3.0)          | 19.3 ± 12.4    | 5.9 ± 6.4     | 75.3 ± 2.4        | 99.6 ± 1.6        |
-| Cluster 3 |  62 | 40 (64.5%)     | 20.2 ± 1.1    | 21.9 ± 3.8    | 4.6 ± 1.7         | 5.9 ± 2.0          | 11.0 (7.0-13.8)        | 25.5 ± 17.8    | 6.9 ± 7.9     | 75.1 ± 2.4        | 99.8 ± 0.7        |
+| Cluster 1 |  58 | 38 (65.5%)     | 20.2 ± 1.2    | 21.7 ± 3.7    | 4.4 ± 2.0         | 6.2 ± 2.5          | 9.0 (4.0-13.8)         | 28.6 ± 18.1    | 9.3 ± 8.9     | 82.2 ± 10.7       | 96.8 ± 8.3        |
+| Cluster 2 |  84 | 47 (56.0%)     | 20.6 ± 2.4    | 21.2 ± 3.4    | 2.8 ± 0.9         | 5.7 ± 1.9          | 2.0 (1.0-3.0)          | 19.9 ± 11.6    | 5.0 ± 5.6     | 82.2 ± 10.4       | 96.0 ± 8.3        |
+| Cluster 3 |  74 | 40 (54.1%)     | 20.3 ± 1.5    | 21.6 ± 2.8    | 3.6 ± 1.4         | 6.1 ± 2.2          | 6.0 (4.0-8.0)          | 13.6 ± 11.7    | 2.6 ± 4.6     | 83.7 ± 10.8       | 97.8 ± 3.7        |
 
 ## Region Code Summary
 

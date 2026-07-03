@@ -31,7 +31,7 @@
 
 | Item | Value | Data Entry Variable | Coding/Notes |
 |---|---|---|---|
-| Time since last meal, hours | ______ | Time_since_last_meal_h | Decimals allowed, e.g., 3.5 |
+| Time since last meal, hours | ______ | Time_since_last_meal_h | Integer hours only, e.g., `3` |
 | Alcohol consumption | [ ] Non-drinker [ ] Occasional drinker [ ] Regular drinker | Alcohol_consumption | Recommended values: `Non-drinker` / `Occasional drinker` / `Regular drinker` |
 | Baseline gastrointestinal symptoms | [ ] No symptoms [ ] Mild symptoms [ ] Moderate symptoms [ ] Severe symptoms | Baseline_GI_symptoms | Recommended values: `No symptoms` / `Mild symptoms` / `Moderate symptoms` / `Severe symptoms` |
 | Baseline symptom description | ______ | baseline_symptom_description | Briefly describe symptoms if present |
@@ -68,7 +68,7 @@ Please recall spicy food intake during the 24 hours before the experiment.
 | Question | Item | Value | Data Entry Variable | Coding/Notes |
 |---|---|---|---|---|
 | Q6 | Any spicy food intake in the past 24 hours | [ ] No [ ] Yes | Recent_spicy_intake_24h | 0=No; 1=Yes |
-| Q7 | Time since most recent spicy food intake, hours | ______ | Time_since_last_intake_h | Enter `NA` if Q6=No |
+| Q7 | Time since most recent spicy food intake, hours | ______ | Time_since_last_intake_h | Integer hours only; enter `NA` if Q6=No |
 | Q8 | Number of spicy food intake episodes in the past 24 hours | ______ | Spicy_episodes_24h | Integer; enter 0 if Q6=No |
 
 If Q8 >= 1, record each episode:
