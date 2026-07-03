@@ -2,6 +2,7 @@
 Shared utilities for VAS prediction: data loading, feature engineering.
 """
 
+import re
 from typing import List, Tuple
 
 import numpy as np
@@ -25,10 +26,8 @@ def get_time_cols(df: pd.DataFrame) -> List[str]:
     time_cols = [col for col in df.columns if "min" in col and "Avg" not in col]
 
     def extract_num(col):
-        try:
-            return int(col.replace("min", ""))
-        except ValueError:
-            return 0
+        match = re.search(r"(\d+)\s*min", str(col))
+        return int(match.group(1)) if match else 0
 
     time_cols.sort(key=extract_num)
     return time_cols
@@ -213,6 +212,6 @@ def make_feature_cols(data: pd.DataFrame) -> List[str]:
     list of str
         Feature column names.
     """
-    exclude = {"subject_id", "time_idx", "target", "cluster", "avg_vas"}
+    exclude = {"subject_id", "time_idx", "target"}
     feature_cols = [col for col in data.columns if col not in exclude]
     return sorted(feature_cols)

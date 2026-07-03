@@ -6,6 +6,8 @@ Includes threshold-based, derivative-based, and PELT methods.
 import numpy as np
 import pandas as pd
 
+_PELT_WARNING_EMITTED = False
+
 
 def detect_pain_onset(row: pd.Series, threshold: float = 3.0) -> float:
     """
@@ -68,9 +70,9 @@ def detect_rank_change_point(row: pd.Series, penalty: float = 0.5) -> float:
     float
         Detected change point index, or np.nan on failure.
     """
-    try:
-        import ruptures as rpt
+    import ruptures as rpt
 
+    try:
         valid = row.dropna()
         if len(valid) < 3:
             return np.nan
@@ -83,7 +85,11 @@ def detect_rank_change_point(row: pd.Series, penalty: float = 0.5) -> float:
             return np.nan
         cp = interior_points[0]
         return valid.index[cp - 1]
-    except Exception:
+    except (ValueError, RuntimeError, FloatingPointError) as exc:
+        global _PELT_WARNING_EMITTED
+        if not _PELT_WARNING_EMITTED:
+            print(f"Warning: PELT change-point detection failed for at least one row: {exc}")
+            _PELT_WARNING_EMITTED = True
         return np.nan
 
 

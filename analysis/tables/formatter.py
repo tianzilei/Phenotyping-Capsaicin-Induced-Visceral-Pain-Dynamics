@@ -45,11 +45,31 @@ def df_to_markdown(
                 lambda x: f"{x:{float_fmt}}" if pd.notna(x) else ""
             )
 
-    # Convert to markdown
-    md = df_fmt.to_markdown(index=index)
+    if index:
+        df_fmt = df_fmt.reset_index()
+    md = _simple_markdown_table(df_fmt)
     lines.append(md)
     lines.append("")
     return "\n".join(lines)
+
+
+def _simple_markdown_table(df: pd.DataFrame) -> str:
+    """Render a GitHub-flavored Markdown table without optional dependencies."""
+    columns = [str(col) for col in df.columns]
+    rows = [[str(value) if pd.notna(value) else "" for value in row] for row in df.to_numpy()]
+    widths = []
+    for idx, col in enumerate(columns):
+        cell_widths = [len(row[idx]) for row in rows] if rows else [0]
+        widths.append(max(len(col), *cell_widths))
+
+    def fmt_row(values: list[str]) -> str:
+        cells = [f" {value:<{widths[idx]}} " for idx, value in enumerate(values)]
+        return "|" + "|".join(cells) + "|"
+
+    header = fmt_row(columns)
+    separator = "|" + "|".join(f" {'-' * width} " for width in widths) + "|"
+    body = [fmt_row(row) for row in rows]
+    return "\n".join([header, separator, *body])
 
 
 def build_table_1_row(

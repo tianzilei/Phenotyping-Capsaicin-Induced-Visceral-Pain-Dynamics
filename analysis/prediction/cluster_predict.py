@@ -9,9 +9,10 @@ from typing import Dict, List, Tuple
 
 import numpy as np
 import pandas as pd
+from sklearn.base import clone
+from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import (
     GradientBoostingClassifier,
-    HistGradientBoostingClassifier,
     RandomForestClassifier,
     StackingClassifier,
 )
@@ -23,9 +24,10 @@ from sklearn.metrics import (
     f1_score,
 )
 from sklearn.model_selection import StratifiedKFold, cross_validate
+from sklearn.impute import SimpleImputer
 from sklearn.neural_network import MLPClassifier
 from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import LabelEncoder, StandardScaler
+from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.svm import SVC
 
 from analysis.data_loader import load_analysis_ready_baseline
@@ -120,26 +122,6 @@ def load_baseline_data(baseline_path: str) -> pd.DataFrame:
     return df[cols].copy()
 
 
-def encode_features(df: pd.DataFrame) -> Tuple[pd.DataFrame, Dict[str, LabelEncoder]]:
-    """One-hot encode categorical features, leave numeric as-is."""
-    encoders = {}
-    frames = []
-
-    for col in df.columns:
-        if col in CATEGORICAL_FEATURES:
-            le = LabelEncoder()
-            encoded = le.fit_transform(df[col].astype(str))
-            encoders[col] = le
-            # One-hot
-            ohe = pd.get_dummies(encoded, prefix=col, dtype=int)
-            frames.append(ohe)
-        else:
-            frames.append(df[[col]])
-
-    result = pd.concat(frames, axis=1)
-    return result, encoders
-
-
 def build_cluster_prediction_dataset(
     baseline_path: str,
 ) -> Tuple[pd.DataFrame, pd.Series, List[str]]:
@@ -149,7 +131,7 @@ def build_cluster_prediction_dataset(
     Returns
     -------
     X_df : pd.DataFrame
-        Feature matrix (encoded, ready for modeling).
+        Raw feature matrix. Encoding and imputation are fitted inside each CV fold.
     y : pd.Series
         Cluster labels (0, 1, 2).
     feature_names : list of str
@@ -158,81 +140,83 @@ def build_cluster_prediction_dataset(
     df = load_baseline_data(baseline_path)
     y = df["cluster"]
     X_raw = df.drop(columns=["cluster", "ID"])
-    X_encoded, _ = encode_features(X_raw)
+    valid = pd.to_numeric(y, errors="coerce").notna()
+    X_raw = X_raw.loc[valid].copy()
+    y = pd.to_numeric(y.loc[valid], errors="coerce").astype(int)
 
-    # Fill NaN with median
-    for col in X_encoded.columns:
-        if X_encoded[col].isnull().any():
-            X_encoded[col] = X_encoded[col].fillna(X_encoded[col].median())
+    return X_raw, y, list(X_raw.columns)
 
-    return X_encoded, y, list(X_encoded.columns)
+
+def _make_preprocessor(X: pd.DataFrame) -> ColumnTransformer:
+    """Fit-safe preprocessing for numeric and categorical baseline features."""
+    categorical = [
+        c for c in X.columns if c in CATEGORICAL_FEATURES or X[c].dtype == object
+    ]
+    numeric = [c for c in X.columns if c not in categorical]
+    return ColumnTransformer(
+        transformers=[
+            (
+                "num",
+                Pipeline(
+                    [
+                        ("impute", SimpleImputer(strategy="median")),
+                        ("scale", StandardScaler()),
+                    ]
+                ),
+                numeric,
+            ),
+            (
+                "cat",
+                Pipeline(
+                    [
+                        ("impute", SimpleImputer(strategy="most_frequent")),
+                        ("onehot", OneHotEncoder(handle_unknown="ignore")),
+                    ]
+                ),
+                categorical,
+            ),
+        ],
+        verbose_feature_names_out=False,
+        sparse_threshold=0.0,
+    )
 
 
 def _make_models(random_state: int = 42) -> Dict[str, object]:
     """Return the candidate phenotype-prediction models."""
     return {
-        "Logistic Regression": Pipeline(
-            [
-                ("scaler", StandardScaler()),
-                (
-                    "clf",
-                    LogisticRegression(
-                        max_iter=1000,
-                        class_weight="balanced",
-                        random_state=random_state,
-                    ),
-                ),
-            ]
+        "Logistic Regression": LogisticRegression(
+            max_iter=1000,
+            class_weight="balanced",
+            random_state=random_state,
         ),
         "Random Forest": RandomForestClassifier(
             n_estimators=200,
             max_depth=5,
             class_weight="balanced",
             random_state=random_state,
-            n_jobs=-1,
+            n_jobs=1,
         ),
         "Gradient Boosting": GradientBoostingClassifier(
             n_estimators=100,
             max_depth=3,
             random_state=random_state,
         ),
-        "HistGradientBoosting": HistGradientBoostingClassifier(
-            max_iter=200,
-            max_depth=5,
+        "MLP": MLPClassifier(
+            hidden_layer_sizes=(64, 32),
+            max_iter=1000,
+            early_stopping=True,
+            validation_fraction=0.1,
+            n_iter_no_change=20,
             random_state=random_state,
-        ),
-        "MLP": Pipeline(
-            [
-                ("scaler", StandardScaler()),
-                (
-                    "clf",
-                    MLPClassifier(
-                        hidden_layer_sizes=(64, 32),
-                        max_iter=1000,
-                        early_stopping=True,
-                        validation_fraction=0.1,
-                        n_iter_no_change=20,
-                        random_state=random_state,
-                    ),
-                ),
-            ]
         ),
         "Stacking": StackingClassifier(
             estimators=[
                 (
                     "lr",
-                    Pipeline(
-                        [
-                            ("scaler", StandardScaler()),
-                            (
-                                "clf",
-                                LogisticRegression(
-                                    max_iter=1000,
-                                    class_weight="balanced",
-                                    random_state=random_state,
-                                ),
-                            ),
-                        ]
+                    LogisticRegression(
+                        max_iter=1000,
+                        class_weight="balanced",
+                        random_state=random_state,
                     ),
                 ),
                 (
@@ -242,30 +226,14 @@ def _make_models(random_state: int = 42) -> Dict[str, object]:
                         max_depth=5,
                         class_weight="balanced",
                         random_state=random_state,
-                        n_jobs=-1,
+                        n_jobs=1,
                     ),
                 ),
                 (
                     "svm",
-                    Pipeline(
-                        [
-                            ("scaler", StandardScaler()),
-                            (
-                                "clf",
-                                SVC(
-                                    kernel="rbf",
-                                    class_weight="balanced",
-                                    random_state=random_state,
-                                ),
-                            ),
-                        ]
-                    ),
-                ),
-                (
-                    "hgb",
-                    HistGradientBoostingClassifier(
-                        max_iter=200,
-                        max_depth=5,
+                    SVC(
+                        kernel="rbf",
+                        class_weight="balanced",
                         random_state=random_state,
                     ),
                 ),
@@ -276,7 +244,7 @@ def _make_models(random_state: int = 42) -> Dict[str, object]:
                 random_state=random_state,
             ),
             cv=5,
-            n_jobs=-1,
+            n_jobs=1,
         ),
     }
 
@@ -292,10 +260,15 @@ def evaluate_cluster_prediction(
     """
     cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
     models = _make_models(random_state=random_state)
+    preprocessor = _make_preprocessor(X)
+    pipelines = {
+        name: Pipeline([("prep", clone(preprocessor)), ("clf", model)])
+        for name, model in models.items()
+    }
 
     results = {}
 
-    for name, model in models.items():
+    for name, model in pipelines.items():
         scoring = ["accuracy", "balanced_accuracy", "f1_macro", "f1_weighted"]
         cv_results = cross_validate(
             model,
@@ -332,7 +305,7 @@ def run_cluster_prediction(
     """
     import os
 
-    X, y, feature_names = build_cluster_prediction_dataset(baseline_path)
+    X, y, _ = build_cluster_prediction_dataset(baseline_path)
 
     print(f"Dataset: {X.shape[0]} samples, {X.shape[1]} features")
     print("Cluster distribution:")
@@ -358,14 +331,16 @@ def run_cluster_prediction(
     # Save fold-level metrics for more detailed analysis
     cv = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
     models = _make_models(random_state=random_state)
+    preprocessor = _make_preprocessor(X)
 
     fold_rows = []
     for model_name, model in models.items():
         for fold_idx, (train_idx, test_idx) in enumerate(cv.split(X, y)):
             X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
             y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-            model.fit(X_train, y_train)
-            y_pred = model.predict(X_test)
+            pipe = Pipeline([("prep", clone(preprocessor)), ("clf", clone(model))])
+            pipe.fit(X_train, y_train)
+            y_pred = pipe.predict(X_test)
 
             fold_rows.append(
                 {
@@ -394,8 +369,9 @@ def run_cluster_prediction(
         for fold_idx, (train_idx, test_idx) in enumerate(cv.split(X, y)):
             X_train, X_test = X.iloc[train_idx], X.iloc[test_idx]
             y_train, y_test = y.iloc[train_idx], y.iloc[test_idx]
-            model.fit(X_train, y_train)
-            y_pred_all[test_idx] = model.predict(X_test)
+            pipe = Pipeline([("prep", clone(preprocessor)), ("clf", clone(model))])
+            pipe.fit(X_train, y_train)
+            y_pred_all[test_idx] = pipe.predict(X_test)
 
         cm = confusion_matrix(y, y_pred_all, labels=[0, 1, 2])
         for i in range(3):
@@ -413,10 +389,16 @@ def run_cluster_prediction(
     cm_df.to_csv(os.path.join(output_dir, "cluster_prediction_cm.csv"), index=False)
 
     # Save feature importance for best model (Logistic Regression as primary)
-    lr_model = models["Logistic Regression"]
-    # Need to fit on all data to get coefficients
-    lr_model.fit(X, y)
-    lr_coef = lr_model.named_steps["clf"].coef_
+    fitted_preprocessor = clone(preprocessor).fit(X, y)
+    X_processed = fitted_preprocessor.transform(X)
+    feature_names = list(fitted_preprocessor.get_feature_names_out())
+    lr_model = LogisticRegression(
+        max_iter=1000,
+        class_weight="balanced",
+        random_state=random_state,
+    )
+    lr_model.fit(X_processed, y)
+    lr_coef = lr_model.coef_
 
     coef_records = []
     for cluster_idx in range(3):

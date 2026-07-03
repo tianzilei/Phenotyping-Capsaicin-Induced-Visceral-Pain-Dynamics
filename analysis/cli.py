@@ -3,6 +3,12 @@
 import argparse
 import os
 
+os.environ.setdefault("LOKY_MAX_CPU_COUNT", "1")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+os.environ.setdefault("NUMEXPR_NUM_THREADS", "1")
+
 import matplotlib
 import numpy as np
 import pandas as pd
@@ -459,6 +465,8 @@ def _run_fusion(args):
     cols_to_include = ["ID"] + available_cols
     if "cluster" in baseline_df.columns:
         cols_to_include.append("cluster")
+    else:
+        raise ValueError("Fusion requires cluster labels; run trajectory first.")
 
     fusion_df = baseline_df[cols_to_include].copy()
     fusion_df = fusion_df.rename(
@@ -473,7 +481,11 @@ def _run_fusion(args):
     )
 
     cluster_symptom_df, cluster_region_df = compute_cluster_symptom_weights(
-        fusion_df, cluster_col="cluster", symptom_col="Symptom", region_col="Region"
+        fusion_df,
+        cluster_col="cluster",
+        id_col="ID",
+        symptom_col="Symptom",
+        region_col="Region",
     )
 
     cluster_symptom_df.to_csv(
@@ -612,10 +624,8 @@ def _run_ecg_egg(args):
     """Run ECG/EGG analysis."""
     from analysis.data_loader import (
         ECG_EGG_FEATURE_COLUMNS,
-        check_signal_files,
         load_analysis_ready_baseline,
     )
-    from analysis.ecg_egg import classification, features
 
     baseline_df = load_analysis_ready_baseline(args.baseline)
 
@@ -623,33 +633,11 @@ def _run_ecg_egg(args):
     os.makedirs(figures_dir, exist_ok=True)
 
     if args.re_extract:
-        print("Re-extracting features from raw signals...")
-        from analysis.data_loader import load_subject_metadata
-
-        baseline_df = load_subject_metadata(args.baseline)
-        baseline_df["file_stem"] = baseline_df["ACQ_CNP_files"].str.replace(
-            ".acq", "", regex=False
+        raise RuntimeError(
+            "Raw ECG/EGG signal feature extraction is not available in this repository. "
+            "Run without --re-extract to export precomputed ECG/EGG features and "
+            "classify phenotypes."
         )
-        meta = check_signal_files(baseline_df, args.data_dir)
-
-        print(f"Processing {len(meta)} subjects with signal files...")
-        features_df = features.build_feature_matrix(meta, args.data_dir)
-        features_df = classification.add_clinical_features(features_df, meta)
-        features_df.to_csv(
-            os.path.join(METRICS_DIR, "ecg_egg_features_extracted.csv"), index=False
-        )
-
-        ecg_egg_feature_cols = ECG_EGG_FEATURE_COLUMNS
-        available_feature_cols = [
-            c for c in ecg_egg_feature_cols if c in features_df.columns
-        ]
-        features_to_save = features_df[["ID"] + available_feature_cols].copy()
-        features_to_save.to_csv(
-            os.path.join(METRICS_DIR, "ecg_egg_features.csv"), index=False
-        )
-        print("ECG/EGG feature subset saved to metrics/ecg_egg_features.csv")
-
-        print(f"Features extracted and saved to {METRICS_DIR}")
     else:
         ecg_egg_cols = [
             "ID",
@@ -729,7 +717,9 @@ def _run_ecg_egg(args):
         print("Skipped ECG/EGG phenotype classification.")
         return
 
-    classification.run_ecg_egg_cluster_classification(
+    from analysis.prediction.ecg_egg_cluster import run_ecg_egg_cluster_classification
+
+    run_ecg_egg_cluster_classification(
         baseline_path=args.baseline,
         output_dir=METRICS_DIR,
     )

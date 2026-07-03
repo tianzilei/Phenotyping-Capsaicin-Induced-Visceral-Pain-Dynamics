@@ -13,6 +13,7 @@ from analysis.parsing import map_codes, parse_compact_codes, parse_region_codes
 def compute_cluster_symptom_weights(
     cluster_df: pd.DataFrame,
     cluster_col: str = "cluster",
+    id_col: str = "ID",
     symptom_col: str = "Symptom",
     region_col: str = "Region",
     symptom_code_map: Optional[Dict] = None,
@@ -46,6 +47,13 @@ def compute_cluster_symptom_weights(
         symptom_code_map = SYMPTOM_CODE_MAP
     if region_code_map is None:
         region_code_map = REGION_CODE_MAP
+    if cluster_col not in cluster_df.columns:
+        raise ValueError(f"Expected cluster column '{cluster_col}' in fusion input.")
+
+    if id_col in cluster_df.columns:
+        cluster_sizes = cluster_df.groupby(cluster_col)[id_col].nunique()
+    else:
+        cluster_sizes = cluster_df.groupby(cluster_col).size()
 
     # Parse symptoms and regions for each subject
     records = []
@@ -70,9 +78,6 @@ def compute_cluster_symptom_weights(
             records.append({"cluster": cluster, "region": r})
 
     records_df = pd.DataFrame(records)
-
-    # Compute weights (proportion of subjects in cluster reporting each symptom/region)
-    cluster_sizes = records_df.groupby("cluster").size()
 
     if len(cluster_sizes) == 0:
         return pd.DataFrame(columns=["cluster", "symptom", "weight"]), pd.DataFrame(

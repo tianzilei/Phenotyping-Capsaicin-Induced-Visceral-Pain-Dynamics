@@ -26,6 +26,7 @@ from analysis.constants import (
 from analysis.data_loader import get_vas_columns, load_analysis_ready_baseline
 from analysis.parsing import map_codes, parse_compact_codes, parse_region_codes
 from analysis.tables.baseline import generate_baseline_table
+from analysis.tables.formatter import df_to_markdown
 from analysis.tables.formatter import format_mean_sd, format_n_percent
 
 
@@ -331,25 +332,25 @@ def _write_report(
         "",
         "## VAS Time-Course Summary",
         "",
-        vas_time_summary.to_markdown(index=False),
+        df_to_markdown(vas_time_summary).strip(),
         "",
         "## Summary by Cluster",
         "",
-        cluster_summary.to_markdown(index=False),
+        df_to_markdown(cluster_summary).strip(),
         "",
         "## Region Code Summary",
         "",
-        region_summary.to_markdown(index=False),
+        df_to_markdown(region_summary).strip(),
         "",
         "## Symptom Code Summary",
         "",
-        symptom_summary.to_markdown(index=False),
+        df_to_markdown(symptom_summary).strip(),
         "",
         "## Data Quality Notes",
         "",
         "Columns with missing values or VAS stop/end codes are shown below.",
         "",
-        missing_core.to_markdown(index=False) if not missing_core.empty else "No missing values found in core columns.",
+        df_to_markdown(missing_core).strip() if not missing_core.empty else "No missing values found in core columns.",
         "",
         "## Figures",
         "",

@@ -3,6 +3,7 @@ Data loading and cleaning utilities for VAS data, metadata, and signals.
 """
 
 import os
+import re
 from pathlib import Path
 from typing import List
 
@@ -462,10 +463,8 @@ def get_time_cols(df: pd.DataFrame) -> List[str]:
     time_cols = [col for col in df.columns if "min" in col and "Avg" not in col]
 
     def extract_num(col):
-        try:
-            return int(col.replace("min", ""))
-        except ValueError:
-            return 0
+        match = re.search(r"(\d+)\s*min", str(col))
+        return int(match.group(1)) if match else 0
 
     time_cols.sort(key=extract_num)
     return time_cols
