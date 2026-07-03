@@ -1145,11 +1145,11 @@ def generate_composite_figure1(output_path: str) -> None:
         panel_specs={
             "A": (generate_figure1, "A"),
             "B": (generate_figure2, "B"),
-            "C": (generate_figure10, "C"),
+            "C": (generate_figure9, "C"),
+            "D": (generate_figure10, "D"),
         },
-        mosaic=[["A", "B"], ["C", "C"]],
-        figsize=(12.4, 11.0),
-        suptitle="Temporal Dynamics of Oral Capsaicin-Induced Visceral Pain",
+        mosaic=[["A", "B"], ["C", "D"]],
+        figsize=(12.8, 10.6),
     )
 
 
@@ -1161,10 +1161,11 @@ def generate_composite_figure2(output_path: str) -> None:
         panel_specs={
             "A": (generate_figure3, "A"),
             "B": (generate_figure4, "B"),
+            "C": (generate_figure12, "C"),
+            "D": (generate_figure13, "D"),
         },
-        mosaic=[["A", "B"]],
-        figsize=(12.0, 5.8),
-        suptitle="Symptom and Spatial Burden of Capsaicin-Induced Visceral Pain",
+        mosaic=[["A", "B"], ["C", "D"]],
+        figsize=(12.8, 10.8),
     )
 
 
@@ -1175,11 +1176,12 @@ def generate_composite_figure3(output_path: str) -> None:
         output_path=output_path,
         panel_specs={
             "A": (generate_figure5, "A"),
-            "B": (generate_figure14, "B"),
+            "B": (generate_figure6, "B"),
+            "C": (generate_figure14, "C"),
+            "D": (generate_figure16, "D"),
         },
-        mosaic=[["A", "B"]],
-        figsize=(12.4, 5.8),
-        suptitle="Predictability of Pain Evolution and Temporal Phenotype",
+        mosaic=[["A", "B"], ["C", "D"]],
+        figsize=(12.8, 10.4),
     )
 
 

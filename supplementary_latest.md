@@ -2,7 +2,7 @@
 
 **Supplementary Material for:** "Temporal Dynamics and Phenotypic Heterogeneity in Oral Capsaicin-Induced Human Visceral Pain"
 
-The appendix provides methodological detail, interpretation of the supplementary figures and tables, and reporting material for the intervention and observational design. The main manuscript presents the core narrative; this appendix preserves analytic detail, auxiliary visualizations, and reporting artifacts that may help reviewers assess reproducibility and interpretation.
+The appendix provides methodological detail, interpretation of the supplementary figures and tables, and reporting material for the intervention and observational design. The main manuscript presents the core narrative through three four-panel composite figures; this appendix preserves the corresponding standalone panels, additional auxiliary visualizations, and reporting artifacts that may help reviewers assess reproducibility and interpretation.
 
 Citation numbers in this appendix follow the main manuscript reference list.
 
@@ -24,11 +24,13 @@ The baseline phenotype-prediction matrix contained demographic variables, questi
 
 ECG-derived variables included heart-rate-variability and signal-quality measures. EGG-derived variables included dominant frequency, power, rhythm-band proportions, entropy, flatness, instability, and signal-quality indices. ECG-EGG coupling variables included cross-correlation, lag, coherence, energy ratio, and heart rate-EGG correlation summaries. Missing values were imputed with column medians.
 
-The primary model set included class-balanced logistic regression, class-balanced random forest, gradient boosting, histogram-based gradient boosting, multilayer perceptron with early stopping, and a stacking ensemble. Stratified ten-fold cross-validation estimated model performance, with balanced accuracy and macro F1 as the primary metrics. A complementary classifier family used the same encoded matrix to generate the feature-importance and confusion-matrix summaries shown in Figures 16 and 17.
+The primary model set included class-balanced logistic regression, class-balanced random forest, gradient boosting, histogram-based gradient boosting, multilayer perceptron with early stopping, and a stacking ensemble. Stratified ten-fold cross-validation estimated model performance, with balanced accuracy and macro F1 as the primary metrics. A complementary classifier family used the same encoded matrix to generate the feature-importance and confusion-matrix summaries shown in Figures 15 and 16.
 
 These analyses tested whether pre-exposure trait-like information could predict temporal phenotype membership without the evolving pain trajectory. The feature matrix is a heterogeneous baseline descriptor set, not a mechanistically unified biomarker panel. The supplementary feature-importance outputs rank variables that contributed within the fitted models; they do not identify stable causal determinants of phenotype membership.
 
 ## Supplementary Results
+
+Figures 4-16 provide standalone views or additional diagnostics for analyses that are condensed into the composite main-text Figures 1-3.
 
 ### S3. Early-window temporal phenotype classification
 
@@ -37,6 +39,8 @@ These analyses tested whether pre-exposure trait-like information could predict 
 ![Figure 4. Early VAS window phenotype classification.](data/figures/figure5_early_window_classification.png)
 
 *Legend:* Subject-level temporal phenotype classification performance as progressively longer early VAS windows are included.
+
+This standalone panel corresponds to the early-window classification summary incorporated into main-text Figure 3A.
 
 Classification performance increased with longer early VAS windows. The best-performing model at 0 minutes was ExtraTrees, with accuracy 0.615 and balanced accuracy 0.632. At 3 minutes, histogram-based gradient boosting reached accuracy 0.726 and balanced accuracy 0.722. At 5 minutes, ExtraTrees reached accuracy 0.792 and balanced accuracy 0.790. At 8 minutes, sparse logistic regression reached accuracy 0.828 and balanced accuracy 0.821. At 20 minutes, sparse logistic regression reached accuracy 0.902 and balanced accuracy 0.897.
 
@@ -49,6 +53,8 @@ The stepwise performance gain across longer windows indicates that phenotype-rel
 ![Figure 5. Baseline and physiological phenotype prediction.](data/figures/figure6_baseline_prediction_performance.png)
 
 *Legend:* Cross-validated performance of models predicting temporal phenotype membership from baseline demographic and questionnaire-derived exposure-history and symptom features, together with ECG, EGG, and ECG-EGG coupling features.
+
+This standalone panel corresponds to the baseline-plus-physiology prediction summary incorporated into main-text Figure 3B.
 
 Across the primary model set, histogram-based gradient boosting achieved the highest mean accuracy (0.601 +/- 0.126), whereas random forest achieved the highest mean balanced accuracy (0.610 +/- 0.083). Logistic regression reached accuracy 0.527 and balanced accuracy 0.544. Multilayer perceptron showed the lowest performance.
 
@@ -82,6 +88,8 @@ Visual separation in a subset of features did not translate into strong multivar
 
 *Legend:* Threshold-defined onset, derivative-defined onset, and PELT-derived change-point timing for individual VAS trajectories after capsaicin administration.
 
+This standalone panel corresponds to the timing summary incorporated into main-text Figure 1C.
+
 Most PELT change points occurred at minute 5 (164 participants), with smaller concentrations at minutes 10 (41 participants) and 15 (3 participants).
 
 The concentration around minute 5 provides an empirical anchor for a common early transition from rise to stabilization or decline. It also supports trajectory-oriented analyses, because the timing structure was not uniformly distributed across the observation window.
@@ -91,6 +99,8 @@ The concentration around minute 5 provides an empirical anchor for a common earl
 ![Figure 9. Kaplan-Meier event curves for onset and relief.](data/figures/figure10_survival_curves.png)
 
 *Legend:* Kaplan-Meier curves for time to pain onset and time to pain relief after oral capsaicin administration.
+
+This standalone panel corresponds to the survival summary incorporated into main-text Figure 1D.
 
 Median onset occurred at 1.0 minute. Median relief was not reached within follow-up because only 12 of 216 participants met the relief criterion.
 
@@ -114,6 +124,8 @@ These local motifs help explain why DTW-based clustering separated the phenotype
 
 *Legend:* Participant-level co-occurrence counts between reported symptom categories and anatomical regions after capsaicin administration.
 
+This standalone panel corresponds to the symptom-region heatmap incorporated into main-text Figure 2C.
+
 The largest co-occurrence counts were concentrated in the right hypochondrium and hypogastrium, particularly for abdominal distension, nausea, and abdominal pain.
 
 The visualization distinguishes recurrent symptom-region combinations from isolated reports. It shows which symptom-region pairings dominated the cohort-level experiential profile, not which anatomical site generated the sensation.
@@ -123,6 +135,8 @@ The visualization distinguishes recurrent symptom-region combinations from isola
 ![Figure 12. Symptom-Rome IV co-occurrence heatmap.](data/figures/figure13_symptom_rome_heatmap.png)
 
 *Legend:* Associations between reported symptom categories and Rome IV-informed symptom-pattern alignments generated by the rule-based mapping framework.
+
+This standalone panel corresponds to the symptom-Rome IV-informed heatmap incorporated into main-text Figure 2D.
 
 Abdominal distension and abdominal pain contributed across biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like alignments.
 
@@ -168,6 +182,8 @@ The Sankey view emphasizes that the three temporal phenotypes did not differ onl
 
 *Legend:* Performance for short-term prediction of whether the next VAS value would decrease, comparing majority, persistence-direction, and logistic regression models.
 
+This standalone panel corresponds to the short-term direction-prediction summary incorporated into main-text Figure 3C.
+
 Logistic regression achieved the highest balanced accuracy (0.654 +/- 0.016) and macro F1 (0.626 +/- 0.012). The majority classifier yielded higher raw accuracy because of class imbalance but remained at balanced accuracy 0.500. The persistence-direction model showed intermediate performance.
 
 The divergence between raw accuracy and balanced accuracy reflects the imbalance in direction labels. The logistic model's improvement in balanced accuracy reflects better discrimination across both classes, not a simple tendency to predict the majority state.
@@ -198,6 +214,8 @@ The ranked variables identify predictors that contributed within this fitted mod
 
 *Legend:* Out-of-fold temporal phenotype predictions from the best-performing complementary classifier (random forest).
 
+This standalone panel corresponds to the confusion-matrix summary incorporated into main-text Figure 3D.
+
 The confusion matrix showed partial separation across the three temporal phenotypes.
 
 The matrix suggests partial overlap between neighboring response patterns, consistent with recurring temporal patterns along a continuum rather than rigidly separated classes.
@@ -226,7 +244,7 @@ The timing analyses clarify that early divergence does not imply a single unifor
 
 Figure 10 adds a local view of the trajectory signal. Each panel places the highlighted shapelet inside its underlying trajectory, showing that similar absolute intensities can belong to different temporal contexts: a value of moderate intensity may represent a rising segment in one phenotype, a plateau in another, or a declining segment in a third. That distinction explains why shape-based methods such as DTW and shapelets are useful for trajectory phenotyping [33-36]. In the present dataset, delayed-peak motifs had deferred maxima followed by decline, early-sustained motifs had relatively flat or slowly resolving plateaus, and late-rising motifs had upward fragments appearing later in the observation period. The supplementary figure helps explain how the clustering retained temporal organization even when trajectories overlapped at individual time points.
 
-Figures 6, 7, 8, 16, and 17 suggest that baseline demographic, exposure-history, symptom, ECG, EGG, and ECG-EGG coupling variables contained some between-phenotype structure, but not enough for high-accuracy phenotype recovery. Age distributions overlapped, standardized physiology features showed partial visual separation, and complementary classifier diagnostics indicated incomplete class discrimination. The temporal phenotypes recurred within this dataset, but the available pre-exposure feature set did not predict phenotype membership with high accuracy. The present baseline matrix captures some trait-like variability, but it does not constitute a stable biomarker panel for phenotype assignment.
+Figures 5, 6, 7, 15, and 16 suggest that baseline demographic, exposure-history, symptom, ECG, EGG, and ECG-EGG coupling variables contained some between-phenotype structure, but not enough for high-accuracy phenotype recovery. Age distributions overlapped, standardized physiology features showed partial visual separation, and complementary classifier diagnostics indicated incomplete class discrimination. The temporal phenotypes recurred within this dataset, but the available pre-exposure feature set did not predict phenotype membership with high accuracy. The present baseline matrix captures some trait-like variability, but it does not constitute a stable biomarker panel for phenotype assignment.
 
 The symptom-region and Rome IV-informed analyses extend the interpretation from time-course structure to phenomenological structure. Figures 11, 12, and 13, together with Tables S1 and S2, show that the cohort-level experience was not spatially or symptomatically diffuse. Repeated pairings centered on the right hypochondrium and hypogastrium, and several symptom categories contributed across biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like alignments. Figure 13 further shows that these alignments were reached through overlapping phenotype-to-symptom-region flows rather than through fully segregated phenotype-specific branches. These pairings indicate that oral capsaicin evokes more than a unitary "pain intensity" response. It produces structured constellations of discomfort, distension, nausea, and regionally perceived sensations that can overlap with clinically recognized symptom constructs at the level of phenomenology [7,8,10,11,24,25,31].
 
