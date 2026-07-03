@@ -7,3 +7,12 @@ __pycache__/
 
 # ECG/EGG raw signal data
 ecg_egg/
+
+# Microsoft Word temp/lock files
+~$*.docx
+
+# Local combined manuscript draft
+manuscript_supplementary_combined.docx
+
+# Local manuscript information notes
+information.md

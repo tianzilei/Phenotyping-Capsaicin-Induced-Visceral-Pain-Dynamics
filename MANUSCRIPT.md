@@ -2,29 +2,27 @@
 
 **Title:** Temporal Dynamics and Phenotypic Heterogeneity in Oral Capsaicin-Induced Human Visceral Pain
 
-**Authors:** To be completed before submission.
+**Authors:** Zilei Tian, PhD, Jianzhen Jiang, PhD, MD, Chongkai Luo, MS, Jingya Cao, PhD, MD, Xueping Yu, PhD, MD, Sijing Chen, MS, Jing Li, MS, Tao Yin, PhD, MD, and Fang Zeng, PhD, MD.
 
-**Affiliations:** To be completed before submission.
+**Affiliations:** 1. Acupuncture and Tuina School, The 3rd Teaching Hospital, Chengdu University of Traditional Chinese Medicine, Chengdu, Sichuan, China; 2. Acupuncture and Brain Science Research Center, Chengdu University of Traditional Chinese Medicine, Chengdu, Sichuan, China; 3. Key Laboratory of Acupuncture for Senile Disease (Chengdu University of TCM), Ministry of Education, Chengdu, Sichuan, China; 4. Sichuan College of Traditional Chinese Medicine, Mianyang, Sichuan, China. Author-affiliation mapping: Zilei Tian (1,2); Jianzhen Jiang (1,2); Chongkai Luo (1,2); Jingya Cao (1,2); Xueping Yu (4); Sijing Chen (1); Jing Li (1); Tao Yin (1,2,3); Fang Zeng (1,2,3).
 
-**Corresponding author:** To be completed before submission.
+**Corresponding author:** Fang Zeng, Acupuncture and Tuina School, The 3rd Teaching Hospital, Chengdu University of Traditional Chinese Medicine, Chengdu, Sichuan, China. Email: zengfang@cdutcm.edu.cn.
 
 **Text Word Count:** about 2,970 words, excluding title page, abstract, references, tables, and figure legends
 
-**Guarantor of the article:** To be completed before submission.
+**Guarantor of the article:** Fang Zeng.
 
-**Specific author contributions:** To be completed before submission. Each author should confirm approval of the final submitted draft.
+**Specific author contributions:** Zilei Tian: Conceptualization, methodology, formal analysis, data curation, visualization, writing-original draft, and writing-review and editing. Jianzhen Jiang: Methodology, investigation, data curation, and writing-review and editing. Chongkai Luo: Investigation, data curation, validation, and writing-review and editing. Jingya Cao: Investigation, data curation, and writing-review and editing. Xueping Yu: Formal analysis, visualization, and writing-review and editing. Sijing Chen: Data curation, investigation, project administration, and writing-review and editing. Jing Li: Resources, validation, and writing-review and editing. Tao Yin: Methodology, supervision, validation, and writing-review and editing. Fang Zeng: Funding acquisition, resources, supervision, project administration, and writing-review and editing. All authors approved the final submitted draft.
 
-**Financial support:** To be completed before submission, including the funder role in study design, data collection, analysis, interpretation, writing, and publication decisions.
+**Financial support:** The authors declare that financial support was received for this work and/or its publication. This study was supported by the National Outstanding Youth Science Fund Project of National Natural Science Foundation of China (grant number 82225050), the National Natural Science Foundation of China (grant number 82205285), Sichuan Provincial Natural Science Foundation Youth Fund Project (grant number 2024NSFSC11860), China Scholarship Council (grant number 202408730003), and Sichuan Province Tianfu Qingcheng Program (grant number 600008241023). The funding bodies provided financial support for the study and/or its publication. No funder had a direct role in data collection, data analysis, data interpretation, or drafting of the manuscript beyond the contributions of the funded authors described in the author-contributions statement. Fang Zeng, the corresponding author, contributed to funding acquisition, supervision, project administration, resources, and writing-review and editing as an author-investigator.
 
-**Potential competing interests:** To be completed before submission.
+**Potential competing interests:** None declared.
 
 **Needs verification before submission**
 
-- Add authors, affiliations, corresponding author details, guarantor statement, funding, and competing interests.
 - Replace the masked registry information with the public registration link or registry identifier.
-- Replace the placeholder code repository URL in the data-availability statement.
+- Insert the final public OSF link and the final public code repository link in the data-availability statement.
 - Verify reference metadata for entries affected by source-draft encoding artifacts, especially references 22, 24, 34, 38, and 39.
-- Confirm which non-primary figures and tables will remain in the supplementary package before submission.
 
 ## Abstract
 
@@ -216,27 +214,31 @@ The Medical Ethics Committee of the Affiliated Hospital of Chengdu University of
 
 ### Funding
 
-To be completed before submission.
+The authors declare that financial support was received for this work and/or its publication. This study was supported by the National Outstanding Youth Science Fund Project of National Natural Science Foundation of China (grant number 82225050), the National Natural Science Foundation of China (grant number 82205285), Sichuan Provincial Natural Science Foundation Youth Fund Project (grant number 2024NSFSC11860), China Scholarship Council (grant number 202408730003), and Sichuan Province Tianfu Qingcheng Program (grant number 600008241023). The funding bodies provided financial support for the study and/or its publication. No funder had a direct role in data collection, data analysis, data interpretation, or drafting of the manuscript beyond the contributions of the funded authors described in the author-contributions statement. Fang Zeng, the corresponding author, contributed to funding acquisition, supervision, project administration, resources, and writing-review and editing as an author-investigator.
 
 ### Competing interests
 
-To be completed before submission.
+The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
 
 ### Author contributions
 
-To be completed before submission using journal-required author contribution language.
+ZT: Conceptualization, methodology, formal analysis, data curation, visualization, writing-original draft, and writing-review and editing. JJ: Methodology, investigation, data curation, and writing-review and editing. CL: Investigation, data curation, validation, and writing-review and editing. JC: Investigation, data curation, and writing-review and editing. XY: Formal analysis, visualization, and writing-review and editing. SC: Data curation, investigation, project administration, and writing-review and editing. JL: Resources, validation, and writing-review and editing. TY: Methodology, supervision, validation, and writing-review and editing. FZ: Funding acquisition, resources, supervision, project administration, and writing-review and editing. All authors approved the final submitted draft.
 
 ### AI assistance disclosure
 
-To be completed before submission if AI-assisted writing, image production, graphical element production, data collection, or data analysis tools were used.
+The authors declare that no generative artificial intelligence or AI-assisted technologies were used in the writing of this manuscript, the production of images or graphical elements, or the collection and analysis of data.
+
+### Acknowledgments
+
+The authors gratefully acknowledge support from the National Natural Science Foundation of China and thank all participants and staff involved in the trial for their valuable contributions.
 
 ## Data availability statement
 
-The datasets generated and/or analyzed during the current study are available from the corresponding author on reasonable request. The analysis code used in this study should be linked here with the final public repository URL before submission.
+The electrocardiographic and electrogastrographic datasets generated and/or analyzed during the current study will be made publicly available through the Open Science Framework (OSF). The analysis code will be made publicly available through the project's GitHub repository. The final public OSF link and the final public code repository link should be inserted before submission.
 
 ## Supplementary material
 
-Detailed supplementary methods and results are provided in the accompanying Supplementary Appendix.
+Detailed supplementary methods and results are provided in the accompanying Supplementary Appendix. The final supplementary package will retain Supplementary Methods S1-S2, Figures S1-S5, and Tables S1-S4, which provide expanded early-window classification details, baseline-plus-physiology summaries, shapelet motifs, symptom-region and Rome IV-informed network summaries, short-term direction-prediction metrics, complementary feature-importance diagnostics, and adverse-event tabulations that extend but do not duplicate the main-text composite figures and Table 1.
 
 ## References
 

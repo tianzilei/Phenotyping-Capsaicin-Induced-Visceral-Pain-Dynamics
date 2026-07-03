@@ -4,6 +4,8 @@
 
 This appendix provides expanded methods and supporting figures and tables that are not displayed directly in the main-text composite figures.
 
+Final retained supplementary scope: Supplementary Methods S1-S2, Figures S1-S5, and Tables S1-S4.
+
 Citation numbers in this appendix follow the main manuscript reference list.
 
 ## Supplementary Methods
