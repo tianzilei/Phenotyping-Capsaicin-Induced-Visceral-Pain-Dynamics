@@ -4,11 +4,14 @@ from __future__ import annotations
 
 import json
 import os
+import tempfile
 from pathlib import Path
 
-os.environ.setdefault("MPLCONFIGDIR", "/private/tmp/matplotlib-capsaicin")
+_CACHE_ROOT = Path(tempfile.gettempdir())
+
+os.environ.setdefault("MPLCONFIGDIR", str(_CACHE_ROOT / "matplotlib-capsaicin"))
 os.makedirs(os.environ["MPLCONFIGDIR"], exist_ok=True)
-os.environ.setdefault("XDG_CACHE_HOME", "/private/tmp/fontconfig-capsaicin")
+os.environ.setdefault("XDG_CACHE_HOME", str(_CACHE_ROOT / "fontconfig-capsaicin"))
 os.makedirs(os.environ["XDG_CACHE_HOME"], exist_ok=True)
 
 import seaborn as sns

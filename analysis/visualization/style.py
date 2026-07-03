@@ -22,15 +22,16 @@ def set_publication_style():
             "figure.facecolor": "white",
             # Font
             "font.family": "sans-serif",
-            "font.size": 12,
-            "axes.titlesize": 14,
-            "axes.labelsize": 12,
-            "xtick.labelsize": 10,
-            "ytick.labelsize": 10,
-            "legend.fontsize": 10,
+            "font.size": 10,
+            "axes.titlesize": 12,
+            "axes.labelsize": 10,
+            "xtick.labelsize": 8.5,
+            "ytick.labelsize": 8.5,
+            "legend.fontsize": 8.5,
+            "legend.title_fontsize": 9,
             # Lines
-            "lines.linewidth": 2.0,
-            "lines.markersize": 6,
+            "lines.linewidth": 1.8,
+            "lines.markersize": 4.5,
             # Axes
             "axes.linewidth": 1.0,
             "axes.grid": True,
@@ -41,7 +42,7 @@ def set_publication_style():
             "grid.linewidth": 0.5,
             # Legend
             "legend.frameon": True,
-            "legend.framealpha": 0.8,
+            "legend.framealpha": 0.75,
             # Savefig
             "savefig.dpi": 300,
             "savefig.bbox": "tight",

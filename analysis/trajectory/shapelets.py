@@ -8,7 +8,21 @@ from typing import Tuple
 import numpy as np
 import pandas as pd
 from numpy.lib.stride_tricks import sliding_window_view
-from tslearn.metrics import dtw
+
+try:
+    from tslearn.metrics import dtw
+except ImportError:
+    def dtw(x: np.ndarray, y: np.ndarray) -> float:
+        """Small local DTW fallback used when tslearn is unavailable."""
+        x = np.asarray(x, dtype=float).reshape(-1)
+        y = np.asarray(y, dtype=float).reshape(-1)
+        acc = np.full((len(x) + 1, len(y) + 1), np.inf, dtype=float)
+        acc[0, 0] = 0.0
+        for i in range(1, len(x) + 1):
+            for j in range(1, len(y) + 1):
+                cost = (x[i - 1] - y[j - 1]) ** 2
+                acc[i, j] = cost + min(acc[i - 1, j], acc[i, j - 1], acc[i - 1, j - 1])
+        return float(np.sqrt(acc[-1, -1]))
 
 
 def z_norm(x: np.ndarray, eps: float = 1e-8) -> np.ndarray:
