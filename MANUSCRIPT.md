@@ -24,7 +24,7 @@
 - Replace the masked registry information with the public registration link or registry identifier.
 - Replace the placeholder code repository URL in the data-availability statement.
 - Verify reference metadata for entries affected by source-draft encoding artifacts, especially references 22, 24, 34, 38, and 39.
-- Confirm whether Figures 5-16 and Tables S1-S4 will be submitted as supplementary material.
+- Confirm which non-primary figures and tables will remain in the supplementary package before submission.
 
 ## Abstract
 
@@ -136,35 +136,27 @@ Abbreviations: AES, Acute Exposure Score; BMI, body mass index; CCEI, Chronic Ca
 
 ### Temporal VAS dynamics
 
-**Figure 1. Group mean VAS trajectory.**
+**Figure 1. Temporal dynamics of oral capsaicin-induced visceral pain.**
 
-![Figure 1. Group mean VAS trajectory.](data/figures/figure1_group_mean_vas.png)
+![Figure 1. Temporal dynamics of oral capsaicin-induced visceral pain.](data/figures/figure1_temporal_dynamics_composite.png)
 
-*Caption:* Group-level mean VAS trajectory during the 20-minute observation period after oral capsaicin administration, with SEM uncertainty.
+*Caption:* Panel A shows the group-level mean VAS trajectory during the 20-minute observation period, with SEM uncertainty. Panel B shows mean VAS trajectories stratified by DTW-derived temporal phenotype. Panel C shows Kaplan-Meier curves for time to pain onset and time to pain relief.
 
-The cohort mean VAS trajectory rose during the first 4 minutes, peaked at 4.22 at minute 4, and then declined while remaining above zero throughout follow-up. Median threshold-defined onset occurred at 1.0 minute. The modal PELT change point occurred at minute 5, and the Kaplan-Meier median relief time was not reached within 20 minutes because only 12 of 216 participants met the relief criterion. Among participants with calculable values, mean participant-level AUC was 53.17 VAS-minutes.
+The cohort mean VAS trajectory rose during the first 4 minutes, peaked at 4.22 at minute 4, and then declined while remaining above zero throughout follow-up (Figure 1A). Median threshold-defined onset occurred at 1.0 minute. The modal PELT change point occurred at minute 5, and the Kaplan-Meier median relief time was not reached within 20 minutes because only 12 of 216 participants met the relief criterion (Figure 1C). Among participants with calculable values, mean participant-level AUC was 53.17 VAS-minutes.
 
 ### Temporal phenotypes
 
-**Figure 2. Temporal pain phenotype trajectories.**
-
-![Figure 2. Temporal pain phenotype trajectories.](data/figures/figure2_phenotype_trajectories.png)
-
-*Caption:* Mean VAS trajectories stratified by DTW-derived temporal phenotype, with SEM uncertainty.
-
-DTW-based clustering identified three temporal patterns: delayed-peak responders (n=58), early-sustained responders (n=84), and late-rising responders (n=74). The average silhouette score was 0.299, indicating moderate separation among overlapping classes. Fuzzy clustering and shapelet analysis were consistent with these phenotypes but did not support sharply separated subtypes.
+DTW-based clustering identified three temporal patterns: delayed-peak responders (n=58), early-sustained responders (n=84), and late-rising responders (n=74) (Figure 1B). The average silhouette score was 0.299, indicating moderate separation among overlapping classes. Fuzzy clustering and shapelet analysis were consistent with these phenotypes but did not support sharply separated subtypes.
 
 ### Symptoms, anatomical regions, and Rome IV-informed mapping
 
-**Figure 3. Symptom burden.**
+**Figure 2. Symptom and spatial burden of capsaicin-induced visceral pain.**
 
-![Figure 3. Symptom burden.](data/figures/figure3_symptom_burden.png)
+![Figure 2. Symptom and spatial burden of capsaicin-induced visceral pain.](data/figures/figure2_symptom_spatial_burden_composite.png)
 
-**Figure 4. Pain region burden.**
+*Caption:* Panel A shows the ranked symptom burden across participants. Panel B shows the ranked burden of perceived anatomical regions.
 
-![Figure 4. Pain region burden.](data/figures/figure4_region_burden.png)
-
-Across 216 participants, abdominal distension was the most frequent reported symptom (154/216, 71.3%), followed by nausea (85/216, 39.4%) and abdominal pain (84/216, 38.9%). The most frequently reported anatomical regions were the right hypochondrium (140/216, 64.8%) and hypogastrium (92/216, 42.6%).
+Across 216 participants, abdominal distension was the most frequent reported symptom (154/216, 71.3%), followed by nausea (85/216, 39.4%) and abdominal pain (84/216, 38.9%) (Figure 2A). The most frequently reported anatomical regions were the right hypochondrium (140/216, 64.8%) and hypogastrium (92/216, 42.6%) (Figure 2B).
 
 Rome IV-informed mapping aligned mainly with biliary pain-like (57/216, 26.4%), functional abdominal bloating/distension-like (35/216, 16.2%), and irritable bowel syndrome-like (25/216, 11.6%) patterns. These categories describe symptom-pattern alignment, not formal FGID diagnoses.
 
@@ -176,9 +168,15 @@ The tripartite network remained centered on the right hypochondrium and hypogast
 
 ### Prediction and classification
 
-Temporal phenotype classification improved as the early VAS window length increased: accuracy was 0.615 without post-capsaicin trajectory information, 0.828 with an 8-minute window, and 0.902 with the full 20-minute trajectory.
+**Figure 3. Predictability of pain evolution and temporal phenotype.**
 
-Short-term direction prediction of the next VAS change was moderate. Logistic regression achieved balanced accuracy of 0.654 +/- 0.016 and macro F1 of 0.626 +/- 0.012, outperforming the majority baseline in class-balanced performance. Recent trajectory history carried some information about entry into the recovery phase.
+![Figure 3. Predictability of pain evolution and temporal phenotype.](data/figures/figure3_prediction_composite.png)
+
+*Caption:* Panel A shows subject-level temporal phenotype classification as progressively longer early VAS windows are included. Panel B shows model performance for predicting whether the next VAS value will decrease.
+
+Temporal phenotype classification improved as the early VAS window length increased (Figure 3A): accuracy was 0.615 without post-capsaicin trajectory information, 0.828 with an 8-minute window, and 0.902 with the full 20-minute trajectory.
+
+Short-term direction prediction of the next VAS change was moderate (Figure 3B). Logistic regression achieved balanced accuracy of 0.654 +/- 0.016 and macro F1 of 0.626 +/- 0.012, outperforming the majority baseline in class-balanced performance. Recent trajectory history carried some information about entry into the recovery phase.
 
 Prediction from baseline demographic and questionnaire-derived exposure-history and symptom features, together with ECG, EGG, and ECG-EGG coupling features, remained modest. In the primary model set, histogram-based gradient boosting achieved the highest mean accuracy (0.601), while random forest achieved the highest mean balanced accuracy (0.610). The measured baseline and physiological features did not classify phenotype membership with high accuracy.
 

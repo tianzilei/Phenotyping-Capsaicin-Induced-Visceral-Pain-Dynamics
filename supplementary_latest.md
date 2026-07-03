@@ -32,9 +32,9 @@ These analyses tested whether pre-exposure trait-like information could predict 
 
 ### S3. Early-window temporal phenotype classification
 
-**Figure 5. Early VAS window phenotype classification.**
+**Figure 4. Early VAS window phenotype classification.**
 
-![Figure 5. Early VAS window phenotype classification.](data/figures/figure5_early_window_classification.png)
+![Figure 4. Early VAS window phenotype classification.](data/figures/figure5_early_window_classification.png)
 
 *Legend:* Subject-level temporal phenotype classification performance as progressively longer early VAS windows are included.
 
@@ -44,19 +44,19 @@ The stepwise performance gain across longer windows indicates that phenotype-rel
 
 ### S4. Expanded baseline-plus-physiology phenotype summaries
 
-**Figure 6. Baseline and physiological phenotype prediction.**
+**Figure 5. Baseline and physiological phenotype prediction.**
 
-![Figure 6. Baseline and physiological phenotype prediction.](data/figures/figure6_baseline_prediction_performance.png)
+![Figure 5. Baseline and physiological phenotype prediction.](data/figures/figure6_baseline_prediction_performance.png)
 
 *Legend:* Cross-validated performance of models predicting temporal phenotype membership from baseline demographic and questionnaire-derived exposure-history and symptom features, together with ECG, EGG, and ECG-EGG coupling features.
 
 Across the primary model set, histogram-based gradient boosting achieved the highest mean accuracy (0.601 +/- 0.126), whereas random forest achieved the highest mean balanced accuracy (0.610 +/- 0.083). Logistic regression reached accuracy 0.527 and balanced accuracy 0.544. Multilayer perceptron showed the lowest performance.
 
-Pre-exposure demographic, behavioral, and physiological descriptors captured only modest between-phenotype signal. The evolving VAS trajectory in Figure 5 contained more phenotype-specific information than the baseline feature matrix.
+Pre-exposure demographic, behavioral, and physiological descriptors captured only modest between-phenotype signal. The evolving VAS trajectory in Figure 4 contained more phenotype-specific information than the baseline feature matrix.
 
-**Figure 7. Age distribution by temporal phenotype.**
+**Figure 6. Age distribution by temporal phenotype.**
 
-![Figure 7. Age distribution by temporal phenotype.](data/figures/figure7_age_by_phenotype.png)
+![Figure 6. Age distribution by temporal phenotype.](data/figures/figure7_age_by_phenotype.png)
 
 *Legend:* Age distributions stratified by temporal phenotype.
 
@@ -64,9 +64,9 @@ Age distributions overlapped across delayed-peak, early-sustained, and late-risi
 
 The overlap is consistent with the broader baseline-prediction results and indicates that age alone did not organize the time-based phenotypes identified here.
 
-**Figure 8. Standardized ECG/EGG feature distributions.**
+**Figure 7. Standardized ECG/EGG feature distributions.**
 
-![Figure 8. Standardized ECG/EGG feature distributions.](data/figures/figure8_ecg_egg_features.png)
+![Figure 7. Standardized ECG/EGG feature distributions.](data/figures/figure8_ecg_egg_features.png)
 
 *Legend:* Standardized ECG and EGG feature distributions across temporal phenotypes.
 
@@ -76,9 +76,9 @@ Visual separation in a subset of features did not translate into strong multivar
 
 ### S5. Onset timing, survival curves, and local temporal motifs
 
-**Figure 9. Onset and change-point timing.**
+**Figure 8. Onset and change-point timing.**
 
-![Figure 9. Onset and change-point timing.](data/figures/figure9_onset_timing.png)
+![Figure 8. Onset and change-point timing.](data/figures/figure9_onset_timing.png)
 
 *Legend:* Threshold-defined onset, derivative-defined onset, and PELT-derived change-point timing for individual VAS trajectories after capsaicin administration.
 
@@ -86,9 +86,9 @@ Most PELT change points occurred at minute 5 (164 participants), with smaller co
 
 The concentration around minute 5 provides an empirical anchor for a common early transition from rise to stabilization or decline. It also supports trajectory-oriented analyses, because the timing structure was not uniformly distributed across the observation window.
 
-**Figure 10. Kaplan-Meier event curves for onset and relief.**
+**Figure 9. Kaplan-Meier event curves for onset and relief.**
 
-![Figure 10. Kaplan-Meier event curves for onset and relief.](data/figures/figure10_survival_curves.png)
+![Figure 9. Kaplan-Meier event curves for onset and relief.](data/figures/figure10_survival_curves.png)
 
 *Legend:* Kaplan-Meier curves for time to pain onset and time to pain relief after oral capsaicin administration.
 
@@ -96,9 +96,9 @@ Median onset occurred at 1.0 minute. Median relief was not reached within follow
 
 The asymmetry between rapid onset and incompletely observed relief indicates that upward and downward phases should not be treated as mirror images. Onset was concentrated early, whereas recovery extended beyond the follow-up window for most participants.
 
-**Figure 11. Cluster-specific shapelets.**
+**Figure 10. Cluster-specific shapelets.**
 
-![Figure 11. Cluster-specific shapelets.](data/figures/figure11_shapelets.png)
+![Figure 10. Cluster-specific shapelets.](data/figures/figure11_shapelets.png)
 
 *Legend:* Sub-figures are arranged by phenotype in rows and by shapelet rank in columns. Each panel shows one cluster-discriminative shapelet illustrating a local temporal motif for the delayed-peak, early-sustained, or late-rising phenotype.
 
@@ -108,9 +108,9 @@ These local motifs help explain why DTW-based clustering separated the phenotype
 
 ### S6. Symptom-region and Rome IV-informed supplementary visualizations
 
-**Figure 12. Symptom-region co-occurrence heatmap.**
+**Figure 11. Symptom-region co-occurrence heatmap.**
 
-![Figure 12. Symptom-region co-occurrence heatmap.](data/figures/figure12_symptom_region_heatmap.png)
+![Figure 11. Symptom-region co-occurrence heatmap.](data/figures/figure12_symptom_region_heatmap.png)
 
 *Legend:* Participant-level co-occurrence counts between reported symptom categories and anatomical regions after capsaicin administration.
 
@@ -118,9 +118,9 @@ The largest co-occurrence counts were concentrated in the right hypochondrium an
 
 The visualization distinguishes recurrent symptom-region combinations from isolated reports. It shows which symptom-region pairings dominated the cohort-level experiential profile, not which anatomical site generated the sensation.
 
-**Figure 13. Symptom-Rome IV co-occurrence heatmap.**
+**Figure 12. Symptom-Rome IV co-occurrence heatmap.**
 
-![Figure 13. Symptom-Rome IV co-occurrence heatmap.](data/figures/figure13_symptom_rome_heatmap.png)
+![Figure 12. Symptom-Rome IV co-occurrence heatmap.](data/figures/figure13_symptom_rome_heatmap.png)
 
 *Legend:* Associations between reported symptom categories and Rome IV-informed symptom-pattern alignments generated by the rule-based mapping framework.
 
@@ -152,9 +152,9 @@ Tables S1 and S2 add a network summary that the heatmaps alone do not fully conv
 
 This distinction between degree and weighted degree matters for interpretation. Degree reflects how widely a node participated across symptom-region combinations, whereas weighted degree reflects how often those combinations recurred in the cohort. Taken together, the node rankings indicate that the capsaicin response pattern was structured around a small set of recurrent symptom-region hubs rather than dispersed evenly across all possible pairings. In that sense, the network view complements the trajectory analyses by showing that heterogeneity was organized not only across time, but also across symptom quality and perceived anatomical distribution.
 
-**Figure 14. Sankey diagram linking temporal phenotype, symptom burden, perceived region, and Rome IV-informed pattern.**
+**Figure 13. Sankey diagram linking temporal phenotype, symptom burden, perceived region, and Rome IV-informed pattern.**
 
-![Figure 14. Sankey diagram linking temporal phenotype, symptom burden, perceived region, and Rome IV-informed pattern.](data/figures/figure14_network_sankey.png)
+![Figure 13. Sankey diagram linking temporal phenotype, symptom burden, perceived region, and Rome IV-informed pattern.](data/figures/figure14_network_sankey.png)
 
 *Legend:* Flow widths represent participant-level symptom-region co-occurrence counts expanded within each temporal phenotype and linked to the participant's top Rome IV-informed category. To preserve readability, lower-frequency symptoms, regions, and Rome-pattern categories were grouped into `Other` nodes. Rome-pattern labels report participant-level `n (%)` together with flow counts.
 
@@ -162,9 +162,9 @@ The Sankey view emphasizes that the three temporal phenotypes did not differ onl
 
 ### S7. Short-term VAS direction prediction
 
-**Figure 15. Short-term VAS direction classification performance.**
+**Figure 14. Short-term VAS direction classification performance.**
 
-![Figure 15. Short-term VAS direction classification performance.](data/figures/figure14_direction_classification.png)
+![Figure 14. Short-term VAS direction classification performance.](data/figures/figure14_direction_classification.png)
 
 *Legend:* Performance for short-term prediction of whether the next VAS value would decrease, comparing majority, persistence-direction, and logistic regression models.
 
@@ -182,9 +182,9 @@ The divergence between raw accuracy and balanced accuracy reflects the imbalance
 
 ### S8. Complementary classifier diagnostics
 
-**Figure 16. Complementary phenotype-classification random forest feature importance.**
+**Figure 15. Complementary phenotype-classification random forest feature importance.**
 
-![Figure 16. Complementary phenotype-classification random forest feature importance.](data/figures/figure15_ecg_feature_importance.png)
+![Figure 15. Complementary phenotype-classification random forest feature importance.](data/figures/figure15_ecg_feature_importance.png)
 
 *Legend:* Random forest feature importance values from the complementary baseline-plus-physiology phenotype-classification analysis.
 
@@ -192,9 +192,9 @@ The highest-ranked variables included CCEI, spicy food preference, AES, usual sp
 
 The ranked variables identify predictors that contributed within this fitted model family. The importance profile remains model-specific and does not imply that these variables are stable standalone markers of phenotype membership across datasets or modeling choices.
 
-**Figure 17. Complementary phenotype-classification confusion matrix.**
+**Figure 16. Complementary phenotype-classification confusion matrix.**
 
-![Figure 17. Complementary phenotype-classification confusion matrix.](data/figures/figure16_ecg_confusion_matrix.png)
+![Figure 16. Complementary phenotype-classification confusion matrix.](data/figures/figure16_ecg_confusion_matrix.png)
 
 *Legend:* Out-of-fold temporal phenotype predictions from the best-performing complementary classifier (random forest).
 
@@ -220,21 +220,21 @@ Nine participants (4.2%) experienced T-coded adverse events that ended the trial
 
 ### S10. Interpretation of supplementary analyses
 
-The supplementary analyses keep the main interpretation bounded: the observed heterogeneity was temporal, structured, and only partly recoverable from baseline descriptors. In Figure 5, classification improved as short post-capsaicin VAS prefixes were added, indicating that phenotype-relevant information became visible early in the response, before the complete 20-minute trajectory was available. The delayed-peak, early-sustained, and late-rising patterns were not generated only by end-of-window summaries; they began to diverge within the early post-exposure interval, consistent with broader pain-literature interest in temporal dynamics as a distinct analytic domain rather than a by-product of static intensity measurement [26,27].
+The supplementary analyses keep the main interpretation bounded: the observed heterogeneity was temporal, structured, and only partly recoverable from baseline descriptors. In Figure 4, classification improved as short post-capsaicin VAS prefixes were added, indicating that phenotype-relevant information became visible early in the response, before the complete 20-minute trajectory was available. The delayed-peak, early-sustained, and late-rising patterns were not generated only by end-of-window summaries; they began to diverge within the early post-exposure interval, consistent with broader pain-literature interest in temporal dynamics as a distinct analytic domain rather than a by-product of static intensity measurement [26,27].
 
-The timing analyses clarify that early divergence does not imply a single uniform transition point for every participant. Figure 9 shows a strong concentration of PELT-derived change points around minute 5, but not an exclusive change point at that minute. Figure 10 shows rapid onset and incompletely observed relief during follow-up. Together, these results support an asymmetric view of the pain trajectory: the ascending phase was concentrated early, whereas the descending phase was slower, more heterogeneous, and often incomplete within the observation window. That asymmetry is consistent with prior experimental and mechanistic work on capsaicin and TRPV1 signaling, which suggests that visceral responses are shaped by initial receptor activation as well as downstream modulation, sensitization, and desensitization processes over time [12,15-18,20-22].
+The timing analyses clarify that early divergence does not imply a single uniform transition point for every participant. Figure 8 shows a strong concentration of PELT-derived change points around minute 5, but not an exclusive change point at that minute. Figure 9 shows rapid onset and incompletely observed relief during follow-up. Together, these results support an asymmetric view of the pain trajectory: the ascending phase was concentrated early, whereas the descending phase was slower, more heterogeneous, and often incomplete within the observation window. That asymmetry is consistent with prior experimental and mechanistic work on capsaicin and TRPV1 signaling, which suggests that visceral responses are shaped by initial receptor activation as well as downstream modulation, sensitization, and desensitization processes over time [12,15-18,20-22].
 
-Figure 11 adds a local view of the trajectory signal. Each panel places the highlighted shapelet inside its underlying trajectory, showing that similar absolute intensities can belong to different temporal contexts: a value of moderate intensity may represent a rising segment in one phenotype, a plateau in another, or a declining segment in a third. That distinction explains why shape-based methods such as DTW and shapelets are useful for trajectory phenotyping [33-36]. In the present dataset, delayed-peak motifs had deferred maxima followed by decline, early-sustained motifs had relatively flat or slowly resolving plateaus, and late-rising motifs had upward fragments appearing later in the observation period. The supplementary figure helps explain how the clustering retained temporal organization even when trajectories overlapped at individual time points.
+Figure 10 adds a local view of the trajectory signal. Each panel places the highlighted shapelet inside its underlying trajectory, showing that similar absolute intensities can belong to different temporal contexts: a value of moderate intensity may represent a rising segment in one phenotype, a plateau in another, or a declining segment in a third. That distinction explains why shape-based methods such as DTW and shapelets are useful for trajectory phenotyping [33-36]. In the present dataset, delayed-peak motifs had deferred maxima followed by decline, early-sustained motifs had relatively flat or slowly resolving plateaus, and late-rising motifs had upward fragments appearing later in the observation period. The supplementary figure helps explain how the clustering retained temporal organization even when trajectories overlapped at individual time points.
 
 Figures 6, 7, 8, 16, and 17 suggest that baseline demographic, exposure-history, symptom, ECG, EGG, and ECG-EGG coupling variables contained some between-phenotype structure, but not enough for high-accuracy phenotype recovery. Age distributions overlapped, standardized physiology features showed partial visual separation, and complementary classifier diagnostics indicated incomplete class discrimination. The temporal phenotypes recurred within this dataset, but the available pre-exposure feature set did not predict phenotype membership with high accuracy. The present baseline matrix captures some trait-like variability, but it does not constitute a stable biomarker panel for phenotype assignment.
 
-The symptom-region and Rome IV-informed analyses extend the interpretation from time-course structure to phenomenological structure. Figures 12, 13, and 14, together with Tables S1 and S2, show that the cohort-level experience was not spatially or symptomatically diffuse. Repeated pairings centered on the right hypochondrium and hypogastrium, and several symptom categories contributed across biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like alignments. Figure 14 further shows that these alignments were reached through overlapping phenotype-to-symptom-region flows rather than through fully segregated phenotype-specific branches. These pairings indicate that oral capsaicin evokes more than a unitary "pain intensity" response. It produces structured constellations of discomfort, distension, nausea, and regionally perceived sensations that can overlap with clinically recognized symptom constructs at the level of phenomenology [7,8,10,11,24,25,31].
+The symptom-region and Rome IV-informed analyses extend the interpretation from time-course structure to phenomenological structure. Figures 11, 12, and 13, together with Tables S1 and S2, show that the cohort-level experience was not spatially or symptomatically diffuse. Repeated pairings centered on the right hypochondrium and hypogastrium, and several symptom categories contributed across biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like alignments. Figure 13 further shows that these alignments were reached through overlapping phenotype-to-symptom-region flows rather than through fully segregated phenotype-specific branches. These pairings indicate that oral capsaicin evokes more than a unitary "pain intensity" response. It produces structured constellations of discomfort, distension, nausea, and regionally perceived sensations that can overlap with clinically recognized symptom constructs at the level of phenomenology [7,8,10,11,24,25,31].
 
-The network summaries also help distinguish prevalence from structural prominence. A symptom can be frequent yet analytically limited if it remains tied to one region, whereas a hub-like symptom or region participates in many pairings and helps organize the broader co-occurrence pattern. Figure 14 adds a phenotype-aware flow view to this logic by showing that the main temporal clusters converge onto overlapping symptom-region hubs rather than completely separate symptom repertoires. It also shows that the terminal Rome-pattern layer was dominated by a small number of common outputs plus a substantial `No Match` remainder. In the present data, the leading nodes combined both properties: they were common and structurally central. That pattern suggests that the induced experience was not assembled from random symptom lists but from recurring symptom-region configurations that reappeared across participants. This is useful for future experimental phenotyping because it identifies which perceptual elements may be most informative when moving beyond scalar VAS endpoints.
+The network summaries also help distinguish prevalence from structural prominence. A symptom can be frequent yet analytically limited if it remains tied to one region, whereas a hub-like symptom or region participates in many pairings and helps organize the broader co-occurrence pattern. Figure 13 adds a phenotype-aware flow view to this logic by showing that the main temporal clusters converge onto overlapping symptom-region hubs rather than completely separate symptom repertoires. It also shows that the terminal Rome-pattern layer was dominated by a small number of common outputs plus a substantial `No Match` remainder. In the present data, the leading nodes combined both properties: they were common and structurally central. That pattern suggests that the induced experience was not assembled from random symptom lists but from recurring symptom-region configurations that reappeared across participants. This is useful for future experimental phenotyping because it identifies which perceptual elements may be most informative when moving beyond scalar VAS endpoints.
 
 At the same time, the network results should remain descriptive. The present construction expanded participant-level symptom-region combinations into cohort-level co-occurrence counts, so it highlights recurrence and concentration rather than causal pathways or organ-specific generators. The Rome IV-informed layer adds construct-level context by showing which symptom sets overlapped with clinically recognized patterns, but it does not convert an acute provocation model into a diagnostic framework. These analyses therefore sharpen the phenomenological description of the capsaicin response while preserving clear boundaries around mechanism, anatomical inference, and FGID classification.
 
-The short-term direction-prediction analysis in Figure 15 and Table S3 provides a narrower perspective on temporal organization. This task did not predict phenotype membership or overall response burden. It asked whether recent trajectory history could predict the next minute-to-minute direction of VAS change. Logistic regression showed moderate performance, suggesting that local trajectory state contained information about immediate future movement. This result is consistent with the broader trajectory findings and indicates local temporal dependencies even when longer-term recovery remains heterogeneous.
+The short-term direction-prediction analysis in Figure 14 and Table S3 provides a narrower perspective on temporal organization. This task did not predict phenotype membership or overall response burden. It asked whether recent trajectory history could predict the next minute-to-minute direction of VAS change. Logistic regression showed moderate performance, suggesting that local trajectory state contained information about immediate future movement. This result is consistent with the broader trajectory findings and indicates local temporal dependencies even when longer-term recovery remains heterogeneous.
 
 The safety summary matters because censoring affects what the time-course methods estimate. T-coded trial terminations were treated as adverse events, and once an `E` or `T` marker appeared, subsequent VAS values were censored in the early-window analyses. This rule preserves the temporal integrity of the observed data rather than imputing unobserved post-termination values. All T-coded events resolved within 30 minutes, and no serious adverse events occurred, supporting the tolerability of the model within the monitored setting. A small subgroup did not complete the full protocol. The reported trajectory structure therefore reflects both between-participant heterogeneity and the operating boundary imposed by symptom tolerance. Future studies should make that boundary explicit when comparing window lengths, defining relief, or handling incomplete follow-up.
 

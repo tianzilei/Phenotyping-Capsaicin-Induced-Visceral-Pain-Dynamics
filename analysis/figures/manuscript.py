@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import os
 import shutil
+import tempfile
 import textwrap
 from pathlib import Path
 from typing import Callable
@@ -175,6 +176,50 @@ def _short_rome_label(label: object) -> str:
 
 def _title(ax: plt.Axes, title: str) -> None:
     ax.set_title(title, fontweight="normal", fontsize=11, pad=7)
+
+
+def _panel_label(ax: plt.Axes, label: str) -> None:
+    ax.text(
+        0.02,
+        0.98,
+        label,
+        transform=ax.transAxes,
+        ha="left",
+        va="top",
+        fontsize=12,
+        fontweight="bold",
+        color="#111111",
+        bbox={
+            "boxstyle": "round,pad=0.18",
+            "facecolor": "white",
+            "edgecolor": "none",
+            "alpha": 0.88,
+        },
+    )
+
+
+def _compose_generated_panels(
+    output_path: str,
+    panel_specs: dict[str, tuple[Callable[[str], None], str]],
+    mosaic: list[list[str]],
+    figsize: tuple[float, float],
+    suptitle: str | None = None,
+) -> None:
+    """Render existing figure generators into a composite publication figure."""
+    with tempfile.TemporaryDirectory() as tmpdir:
+        fig = plt.figure(figsize=figsize, constrained_layout=True)
+        axes = fig.subplot_mosaic(mosaic)
+        for key, ax in axes.items():
+            generator, label = panel_specs[key]
+            panel_path = Path(tmpdir) / f"{key}.png"
+            generator(str(panel_path))
+            image = plt.imread(panel_path)
+            ax.imshow(image)
+            ax.set_axis_off()
+            _panel_label(ax, label)
+        if suptitle:
+            fig.suptitle(suptitle, fontsize=12, fontweight="normal")
+        _save(fig, output_path)
 
 
 def _annotate_hbars(ax: plt.Axes, fmt: str = "{:.1f}") -> None:
@@ -1092,6 +1137,52 @@ def generate_figure16(output_path: str) -> None:
     _save(fig, output_path)
 
 
+def generate_composite_figure1(output_path: str) -> None:
+    """Main-text Figure 1: temporal dynamics composite."""
+    print("Generating composite Figure 1: temporal dynamics...")
+    _compose_generated_panels(
+        output_path=output_path,
+        panel_specs={
+            "A": (generate_figure1, "A"),
+            "B": (generate_figure2, "B"),
+            "C": (generate_figure10, "C"),
+        },
+        mosaic=[["A", "B"], ["C", "C"]],
+        figsize=(12.4, 11.0),
+        suptitle="Temporal Dynamics of Oral Capsaicin-Induced Visceral Pain",
+    )
+
+
+def generate_composite_figure2(output_path: str) -> None:
+    """Main-text Figure 2: symptom and spatial burden composite."""
+    print("Generating composite Figure 2: symptom and spatial burden...")
+    _compose_generated_panels(
+        output_path=output_path,
+        panel_specs={
+            "A": (generate_figure3, "A"),
+            "B": (generate_figure4, "B"),
+        },
+        mosaic=[["A", "B"]],
+        figsize=(12.0, 5.8),
+        suptitle="Symptom and Spatial Burden of Capsaicin-Induced Visceral Pain",
+    )
+
+
+def generate_composite_figure3(output_path: str) -> None:
+    """Main-text Figure 3: prediction composite."""
+    print("Generating composite Figure 3: predictability...")
+    _compose_generated_panels(
+        output_path=output_path,
+        panel_specs={
+            "A": (generate_figure5, "A"),
+            "B": (generate_figure14, "B"),
+        },
+        mosaic=[["A", "B"]],
+        figsize=(12.4, 5.8),
+        suptitle="Predictability of Pain Evolution and Temporal Phenotype",
+    )
+
+
 def make_figure_map(
     baseline_path: str | None = None,
     metrics_dir: str = METRICS_DIR,
@@ -1115,6 +1206,9 @@ def make_figure_map(
         "14": ("figure14_direction_classification.png", generate_figure14),
         "15": ("figure15_ecg_feature_importance.png", generate_figure15),
         "16": ("figure16_ecg_confusion_matrix.png", generate_figure16),
+        "C1": ("figure1_temporal_dynamics_composite.png", generate_composite_figure1),
+        "C2": ("figure2_symptom_spatial_burden_composite.png", generate_composite_figure2),
+        "C3": ("figure3_prediction_composite.png", generate_composite_figure3),
     }
 
 
