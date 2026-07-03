@@ -18,7 +18,7 @@ For each early window, predictors included the raw minute-level VAS values and d
 
 Candidate classifiers included sparse logistic regression, standard logistic regression, radial and linear support vector machines, ridge classification, k-nearest neighbors, random forest, extra trees, histogram-based gradient boosting, and Gaussian naive Bayes. Stratified ten-fold cross-validation generated out-of-fold accuracy, balanced accuracy, macro F1, and weighted F1.
 
-This prefix-based design restricted each model to information available up to the evaluated minute. The analysis therefore tested when trajectory information became sufficiently informative to distinguish delayed-peak, early-sustained, and late-rising response patterns, rather than how well the full trajectory could be reconstructed retrospectively.
+This prefix-based design restricted each model to information available up to the evaluated minute. It tested when trajectory information became informative enough to distinguish delayed-peak, early-sustained, and late-rising response patterns, rather than how well the full trajectory could be reconstructed retrospectively.
 
 ### S2. ECG/EGG preprocessing and feature derivation
 
@@ -38,7 +38,7 @@ ECG-derived variables included heart-rate-variability and signal-quality measure
 
 The primary model set included class-balanced logistic regression, class-balanced random forest, gradient boosting, histogram-based gradient boosting, multilayer perceptron with early stopping, and a stacking ensemble. Stratified ten-fold cross-validation estimated model performance, with balanced accuracy and macro F1 as the primary metrics. A complementary classifier family used the same encoded matrix to generate supplementary feature-importance and confusion-matrix summaries.
 
-These analyses asked whether pre-exposure trait-like information could predict temporal phenotype membership without access to the evolving pain trajectory. The resulting matrix should be interpreted as a heterogeneous baseline descriptor set rather than a mechanistically unified biomarker panel. Accordingly, the supplementary feature-importance outputs identify variables that contributed within fitted models; they do not establish stable markers or causal determinants of phenotype membership.
+These analyses asked whether pre-exposure trait-like information could predict temporal phenotype membership without access to the evolving pain trajectory. The resulting matrix should be read as a heterogeneous baseline descriptor set rather than a mechanistically unified biomarker panel. The supplementary feature-importance outputs identify variables that contributed within fitted models; they do not establish stable markers or causal determinants of phenotype membership.
 
 ## Supplementary Results
 
@@ -52,7 +52,7 @@ The following sections retain analyses that extend, rather than duplicate, the m
 
 *Caption:* Age distributions stratified by temporal phenotype.
 
-Age distributions overlapped across delayed-peak, early-sustained, and late-rising phenotypes, with no phenotype showing a clearly separated age profile. This visual pattern is consistent with the broader baseline-prediction result, in which age alone did not materially organize the temporal phenotypes identified in this cohort.
+Age distributions overlapped across delayed-peak, early-sustained, and late-rising phenotypes, with no phenotype showing a clearly separated age profile. Age alone did not meaningfully organize the temporal phenotypes in this cohort.
 
 **Figure S2. Standardized ECG/EGG Feature Distributions.**
 
@@ -60,7 +60,7 @@ Age distributions overlapped across delayed-peak, early-sustained, and late-risi
 
 *Caption:* Standardized ECG and EGG feature distributions across temporal phenotypes for representative baseline physiological features. Abbreviations: ECG, electrocardiographic; EGG, electrogastrographic; HR, heart rate; SDNN, standard deviation of normal-to-normal intervals; LF/HF, low-frequency/high-frequency power ratio; normogastria, EGG power proportion within the normogastric frequency band.
 
-Feature distributions showed partial between-phenotype separation, but substantial overlap persisted across most variables. The representative ECG and EGG features shown here therefore illustrate limited group-level shifts rather than clear baseline physiological separation, consistent with the modest baseline-plus-physiology prediction performance reported in the main text.
+Feature distributions showed partial between-phenotype separation, but substantial overlap persisted across most variables. The representative ECG and EGG features shown here suggest limited group-level shifts, not clear baseline physiological separation, which is consistent with the modest baseline-plus-physiology prediction performance reported in the main text.
 
 ### S5. Local temporal motifs
 
@@ -70,7 +70,7 @@ Feature distributions showed partial between-phenotype separation, but substanti
 
 *Caption:* Sub-figures are arranged by phenotype in rows and by shapelet rank in columns. Each panel shows one cluster-discriminative shapelet, defined here as a short trajectory subsequence that helps distinguish one phenotype from the others. The solid line marks the highlighted shapelet, the dashed line shows the full source trajectory, and the shaded region marks the post-capsaicin time window spanned by the shapelet. AUC denotes the one-vs-rest area under the receiver operating characteristic curve, `d` denotes Cohen's d effect size, and `t` denotes the post-capsaicin time window in minutes.
 
-Delayed-peak responders showed motifs with deferred maxima followed by decline, early-sustained responders showed plateau-like motifs, and late-rising responders showed gradual upward fragments. These local motifs help explain why DTW-based clustering separated the phenotypes even when full-length trajectories overlapped in absolute intensity at some time points. Part of the phenotype signal was therefore embedded in short contiguous subsequences rather than only in global peak value or total pain burden.
+Delayed-peak responders showed motifs with deferred maxima followed by decline, early-sustained responders showed plateau-like motifs, and late-rising responders showed gradual upward fragments. These local motifs explain why DTW-based clustering separated the phenotypes even when full-length trajectories overlapped in absolute intensity at some time points. Part of the phenotype signal was embedded in short contiguous subsequences, not only in global peak value or total pain burden.
 
 ### S6. Symptom-region and Rome IV-informed supplementary visualizations
 
@@ -124,9 +124,9 @@ Delayed-peak responders showed motifs with deferred maxima followed by decline, 
 | abdominal pain | Functional Abdominal Bloating/Distension-like | 21 |
 | vomiting | Biliary Pain-like | 17 |
 
-Tables S1 and S2 complement the heatmaps by identifying the symptom-region pairs and nodes that accounted for the strongest recurrent structure. The right hypochondrium and hypogastrium stood out because they combined broad connectivity with high recurrence, whereas abdominal distension ranked highly as a symptom hub that bridged multiple regions rather than remaining confined to a single location.
+Tables S1 and S2 complement the heatmaps by identifying the symptom-region pairs and nodes that accounted for the strongest recurrent structure. The right hypochondrium and hypogastrium stood out because they combined broad connectivity with high recurrence, while abdominal distension functioned as a symptom hub spanning multiple regions rather than remaining confined to a single location.
 
-Tables S2b and S2c extend this summary into the Rome IV-informed layer. Region-disease links concentrated mainly around biliary pain-like and bloating/distension-like patterns, and symptom-disease links were driven primarily by abdominal distension, abdominal pain, and nausea. Degree reflects the breadth of a node's participation across pairings, whereas weighted degree reflects how often those pairings recurred in the cohort. Together, these rankings indicate that the dominant network signal arose from a limited set of recurrent hubs rather than from a diffuse distribution across all possible symptom-region or symptom-pattern combinations.
+Tables S2b and S2c extend this summary into the Rome IV-informed layer. Region-disease links concentrated mainly around biliary pain-like and bloating/distension-like patterns, and symptom-disease links were driven primarily by abdominal distension, abdominal pain, and nausea. Degree reflects the breadth of a node's participation across pairings, whereas weighted degree reflects how often those pairings recurred in the cohort. The dominant network signal came from a limited set of recurrent hubs rather than from a diffuse distribution across all possible symptom-region or symptom-pattern combinations.
 
 **Figure S4. Temporal phenotype to symptom-region-Rome IV flow structure.**
 
@@ -134,7 +134,7 @@ Tables S2b and S2c extend this summary into the Rome IV-informed layer. Region-d
 
 *Caption:* Flow widths represent participant-level symptom-region co-occurrence counts expanded within each temporal phenotype and linked to each participant's top Rome IV-informed category. To preserve readability, lower-frequency symptoms, regions, and Rome-pattern categories were grouped into `Other` nodes. Rome-pattern labels report participant-level `n (%)` together with flow counts. Label abbreviations: `Abd Pain`, abdominal pain; `R-Hypo`, right hypochondrium; `Hypo`, hypogastrium; `L-Hypo`, left hypochondrium; `R-Lumb`, right lumbar; `IBS-like`, irritable bowel syndrome-like. `Biliary Pain` and `Bloating/Distension` are shortened display labels for the corresponding Rome IV-informed symptom-pattern alignments. `No Match` indicates that no Rome IV-informed category was assigned by the rule-based mapping.
 
-The Sankey view shows that the temporal phenotypes differed in trajectory shape while still converging on a limited set of symptom, region, and Rome IV-informed pathways. Across phenotypes, abdominal distension, nausea, and abdominal pain contributed prominently, and downstream flow remained concentrated in the right hypochondrium, hypogastrium, biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like pathways. The sizable `No Match` branch further indicates that the conservative rule-based mapping left many participant symptom profiles uncategorized.
+The Sankey view shows that the temporal phenotypes differed in trajectory shape but converged on a limited set of symptom, region, and Rome IV-informed pathways. Across phenotypes, abdominal distension, nausea, and abdominal pain contributed prominently, and downstream flow remained concentrated in the right hypochondrium, hypogastrium, biliary pain-like, bloating/distension-like, and irritable bowel syndrome-like pathways. The sizable `No Match` branch indicates that the conservative rule-based mapping left many participant symptom profiles uncategorized.
 
 ### S7. Short-term VAS direction prediction
 
@@ -148,7 +148,7 @@ The Sankey view shows that the temporal phenotypes differed in trajectory shape 
 
 Abbreviations: SD, standard deviation; F1, harmonic mean of precision and recall; Macro F1, unweighted mean of class-specific F1 scores; Weighted F1, support-weighted mean of class-specific F1 scores. The persistence-direction model predicts decrease when the current local slope is sufficiently negative and otherwise predicts non-decrease.
 
-The majority baseline achieved the highest raw accuracy but balanced accuracy of 0.500, indicating limited class-balanced discrimination despite favorable performance on the majority class. By contrast, logistic regression achieved the strongest class-balanced performance, with the highest balanced accuracy, macro F1, and weighted F1 among the three models. Table S3 is retained here because it provides the metric breakdown summarized graphically in the main manuscript.
+The majority baseline achieved the highest raw accuracy but balanced accuracy of 0.500, indicating limited class-balanced discrimination despite favorable performance on the majority class. Logistic regression performed best on the class-balanced metrics, with the highest balanced accuracy, macro F1, and weighted F1 among the three models. Table S3 is retained here because it provides the metric breakdown summarized graphically in the main manuscript.
 
 ### S8. Complementary classifier diagnostics
 
@@ -178,8 +178,8 @@ Nine participants (4.2%) experienced T-coded adverse events that ended the trial
 
 ### S10. Short supplementary interpretation
 
-The retained supplementary materials extend the main manuscript by providing analytic detail, supplementary diagnostics, and additional network summaries without repeating the composite main-text panels. Supplementary Methods S1-S3 document the early-window classification design, the ECG/EGG preprocessing and feature-derivation workflow, and the expanded baseline-plus-physiology prediction framework.
+The supplementary materials add analytic detail, supplementary diagnostics, and additional network summaries without repeating the composite main-text panels. Supplementary Methods S1-S3 document the early-window classification design, the ECG/EGG preprocessing and feature-derivation workflow, and the expanded baseline-plus-physiology prediction framework.
 
-Figures S1 and S2 indicate that age and baseline physiology contained some between-phenotype structure, but not enough to classify temporal phenotypes with high accuracy from pre-exposure information alone. Figure S3 shows that cluster-discriminative local motifs were embedded in short subsequences of the VAS trajectories, whereas Tables S1, S2, S2b, and S2c and Figure S4 show that symptom-region and Rome IV-informed structure was concentrated around recurrent hubs rather than dispersed evenly across the cohort.
+Figures S1 and S2 show some between-phenotype structure in age and baseline physiology, but not enough to classify temporal phenotypes with high accuracy from pre-exposure information alone. Figure S3 shows that cluster-discriminative local motifs were embedded in short subsequences of the VAS trajectories, whereas Tables S1, S2, S2b, and S2c and Figure S4 show that symptom-region and Rome IV-informed structure clustered around recurrent hubs rather than spreading evenly across the cohort.
 
-Table S3, Figure S5, and Table S4 define the interpretive boundaries of short-horizon forecasting, model-specific feature attribution, and safety. Taken together, the appendix supports the main manuscript by clarifying how the temporal phenotypes, symptom-pattern structure, and predictive analyses were derived and by making the supporting evidence easier to evaluate independently.
+Table S3, Figure S5, and Table S4 define the interpretive boundaries of short-horizon forecasting, model-specific feature attribution, and safety. They show how the temporal phenotypes, symptom-pattern structure, and predictive analyses were derived and provide the supporting evidence in full.
