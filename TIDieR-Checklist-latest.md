@@ -35,6 +35,6 @@ Information to include when describing an intervention and the location of the i
 
 ǂ If completing the TIDieR checklist for a protocol, these items are not relevant to the protocol and cannot be described until the study is complete.
 
-\* We strongly recommend using this checklist in conjunction with the TIDieR guide (see *BMJ* 2014;348:g1687) which contains an explanation and elaboration for each item.
+\* This checklist should be used in conjunction with the TIDieR guide (see *BMJ* 2014;348:g1687), which contains an explanation and elaboration for each item.
 
 \* The focus of TIDieR is on reporting details of the intervention elements (and where relevant, comparison elements) of a study. Other elements and methodological features of studies are covered by other reporting statements and checklists and have not been duplicated as part of the TIDieR checklist. When a **randomised trial** is being reported, the TIDieR checklist should be used in conjunction with the CONSORT statement (see www.consort-statement.org) as an extension of **Item 5 of the CONSORT 2010 Statement.** When a **clinical trial protocol** is being reported, the TIDieR checklist should be used in conjunction with the SPIRIT statement as an extension of **Item 11 of the SPIRIT 2013 Statement** (see www.spirit-statement.org). For alternate study designs, TIDieR can be used in conjunction with the appropriate checklist for that study design (see www.equator-network.org).
