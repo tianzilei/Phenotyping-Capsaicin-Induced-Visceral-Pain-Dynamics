@@ -12,6 +12,7 @@ from numpy.lib.stride_tricks import sliding_window_view
 try:
     from tslearn.metrics import dtw
 except ImportError:
+
     def dtw(x: np.ndarray, y: np.ndarray) -> float:
         """Small local DTW fallback used when tslearn is unavailable."""
         x = np.asarray(x, dtype=float).reshape(-1)

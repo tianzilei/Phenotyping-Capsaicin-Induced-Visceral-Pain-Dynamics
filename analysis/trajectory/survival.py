@@ -3,7 +3,7 @@ Kaplan-Meier survival analysis for VAS trajectories.
 Analyzes pain onset and relief timing.
 """
 
-from typing import Dict
+from __future__ import annotations
 
 import numpy as np
 
@@ -13,7 +13,7 @@ def compute_km_curves(
     time_values: np.ndarray | None = None,
     onset_thresh: float = 3.0,
     relief_thresh: float = 1.0,
-) -> Dict:
+) -> dict:
     """
     Compute Kaplan-Meier curves for pain onset and relief.
 
@@ -118,7 +118,7 @@ def compute_km_curves(
     }
 
 
-def summarize_survival(km_result: Dict) -> str:
+def summarize_survival(km_result: dict) -> str:
     """
     Print summary of survival analysis results.
 

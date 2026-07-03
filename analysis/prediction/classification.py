@@ -301,7 +301,9 @@ def build_direction_dataset(
             # Subject-level features restricted to information available so far
             if include_phenotype:
                 record["avg_vas_so_far"] = history.mean() if history_len else current
-                record["vas_sd_so_far"] = history.std(ddof=0) if history_len > 1 else 0.0
+                record["vas_sd_so_far"] = (
+                    history.std(ddof=0) if history_len > 1 else 0.0
+                )
                 record["running_range_so_far"] = running_max - running_min
 
             if include_cluster and "cluster" in df.columns:

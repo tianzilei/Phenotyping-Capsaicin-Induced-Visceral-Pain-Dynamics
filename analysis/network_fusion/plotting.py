@@ -2,13 +2,14 @@
 Plotting functions for network fusion results.
 """
 
+from __future__ import annotations
+
 import os
-from typing import Optional, Tuple
+from typing import TYPE_CHECKING, Optional, Tuple
 
 import matplotlib.pyplot as plt
 import networkx as nx
 import pandas as pd
-import plotly.graph_objects as go
 
 from analysis.constants import (
     CLUSTER_COLORS,
@@ -25,6 +26,20 @@ from analysis.visualization.labels import (
     short_symptom,
 )
 from analysis.visualization.plots import save_figure
+
+if TYPE_CHECKING:
+    import plotly.graph_objects as go
+
+
+def _require_plotly():
+    try:
+        import plotly.graph_objects as go
+    except ModuleNotFoundError as exc:
+        raise ModuleNotFoundError(
+            "plotly is required for network Sankey figures. "
+            "Install the packages from requirements.txt before generating these plots."
+        ) from exc
+    return go
 
 
 def _hex_to_rgba(color: str, alpha: float) -> str:
@@ -61,7 +76,7 @@ def plot_cluster_sankey(
     figsize : tuple
         Figure size in pixels.
     """
-    import plotly.graph_objects as go
+    go = _require_plotly()
 
     # Prepare nodes
     clusters = sorted(cluster_symptom_df["cluster"].unique())
@@ -158,7 +173,7 @@ def plot_grouped_cluster_sankey(
     total_participants: Optional[int] = None,
     width: int = 2200,
     height: Optional[int] = None,
-) -> go.Figure:
+) -> "go.Figure":
     """
     Plot a grouped 4-layer Sankey diagram: phenotype -> symptom -> region -> Rome pattern.
 
@@ -183,6 +198,8 @@ def plot_grouped_cluster_sankey(
     height : int
         Figure height in pixels.
     """
+    go = _require_plotly()
+
     if cluster_label_map is None:
         cluster_label_map = {}
 
@@ -193,12 +210,8 @@ def plot_grouped_cluster_sankey(
         return primary + sinks
 
     cluster_ids = sorted(cluster_symptom_df["source"].unique().tolist())
-    symptom_labels = _ordered_labels(
-        cluster_symptom_df, "target", {"Other symptoms"}
-    )
-    region_labels = _ordered_labels(
-        symptom_region_df, "target", {"Other regions"}
-    )
+    symptom_labels = _ordered_labels(cluster_symptom_df, "target", {"Other symptoms"})
+    region_labels = _ordered_labels(symptom_region_df, "target", {"Other regions"})
     disease_labels = _ordered_labels(
         region_disease_df, "target", {"No Match", "Other Rome patterns"}
     )
@@ -207,8 +220,12 @@ def plot_grouped_cluster_sankey(
         cluster_label_map.get(c, pretty_cluster(int(c)) if str(c).isdigit() else str(c))
         for c in cluster_ids
     ]
-    symptom_display = [short_symptom(s) if s != "Other symptoms" else s for s in symptom_labels]
-    region_display = [short_region(r) if r != "Other regions" else r for r in region_labels]
+    symptom_display = [
+        short_symptom(s) if s != "Other symptoms" else s for s in symptom_labels
+    ]
+    region_display = [
+        short_region(r) if r != "Other regions" else r for r in region_labels
+    ]
     disease_flow_totals = region_disease_df.groupby("target")["value"].sum().to_dict()
     total_flow = sum(disease_flow_totals.values()) or 1
     other_disease_participant_n = None
@@ -223,11 +240,18 @@ def plot_grouped_cluster_sankey(
         )
     disease_display = []
     for disease in disease_labels:
-        base = short_disease(disease) if disease not in {"No Match", "Other Rome patterns"} else disease
+        base = (
+            short_disease(disease)
+            if disease not in {"No Match", "Other Rome patterns"}
+            else disease
+        )
         flow = int(disease_flow_totals.get(disease, 0))
         flow_pct = 100.0 * flow / total_flow
         if disease_participant_counts is not None and total_participants:
-            if disease == "Other Rome patterns" and other_disease_participant_n is not None:
+            if (
+                disease == "Other Rome patterns"
+                and other_disease_participant_n is not None
+            ):
                 participant_n = int(other_disease_participant_n)
             else:
                 participant_n = int(disease_participant_counts.get(disease, 0))
@@ -246,9 +270,7 @@ def plot_grouped_cluster_sankey(
     )
 
     cluster_index = {c: i for i, c in enumerate(cluster_ids)}
-    symptom_index = {
-        s: len(cluster_ids) + i for i, s in enumerate(symptom_labels)
-    }
+    symptom_index = {s: len(cluster_ids) + i for i, s in enumerate(symptom_labels)}
     region_index = {
         r: len(cluster_ids) + len(symptom_labels) + i
         for i, r in enumerate(region_labels)
@@ -260,7 +282,10 @@ def plot_grouped_cluster_sankey(
 
     if height is None:
         max_layer_nodes = max(
-            len(cluster_ids), len(symptom_labels), len(region_labels), len(disease_labels)
+            len(cluster_ids),
+            len(symptom_labels),
+            len(region_labels),
+            len(disease_labels),
         )
         height = max(1100, 220 + max_layer_nodes * 120)
 

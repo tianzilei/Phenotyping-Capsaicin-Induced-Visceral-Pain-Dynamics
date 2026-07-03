@@ -7,14 +7,19 @@ import os
 import tempfile
 from pathlib import Path
 
+import seaborn as sns
+
 _CACHE_ROOT = Path(tempfile.gettempdir())
 
-os.environ.setdefault("MPLCONFIGDIR", str(_CACHE_ROOT / "matplotlib-capsaicin"))
-os.makedirs(os.environ["MPLCONFIGDIR"], exist_ok=True)
-os.environ.setdefault("XDG_CACHE_HOME", str(_CACHE_ROOT / "fontconfig-capsaicin"))
-os.makedirs(os.environ["XDG_CACHE_HOME"], exist_ok=True)
 
-import seaborn as sns
+def _ensure_cache_dirs() -> None:
+    os.environ.setdefault("MPLCONFIGDIR", str(_CACHE_ROOT / "matplotlib-capsaicin"))
+    os.makedirs(os.environ["MPLCONFIGDIR"], exist_ok=True)
+    os.environ.setdefault("XDG_CACHE_HOME", str(_CACHE_ROOT / "fontconfig-capsaicin"))
+    os.makedirs(os.environ["XDG_CACHE_HOME"], exist_ok=True)
+
+
+_ensure_cache_dirs()
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ROOT_CONFIG_FILE = PROJECT_ROOT / "constants.json"

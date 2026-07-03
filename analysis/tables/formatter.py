@@ -56,7 +56,10 @@ def df_to_markdown(
 def _simple_markdown_table(df: pd.DataFrame) -> str:
     """Render a GitHub-flavored Markdown table without optional dependencies."""
     columns = [str(col) for col in df.columns]
-    rows = [[str(value) if pd.notna(value) else "" for value in row] for row in df.to_numpy()]
+    rows = [
+        [str(value) if pd.notna(value) else "" for value in row]
+        for row in df.to_numpy()
+    ]
     widths = []
     for idx, col in enumerate(columns):
         cell_widths = [len(row[idx]) for row in rows] if rows else [0]

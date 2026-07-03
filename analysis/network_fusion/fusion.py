@@ -322,9 +322,7 @@ def build_grouped_sankey_links(
     if region_code_map is None:
         region_code_map = REGION_CODE_MAP
 
-    merged = clustered_df[
-        [id_col, cluster_col, symptom_col, region_col]
-    ].merge(
+    merged = clustered_df[[id_col, cluster_col, symptom_col, region_col]].merge(
         rome_df[[rome_id_col, top_disease_col]],
         left_on=id_col,
         right_on=rome_id_col,
@@ -346,7 +344,9 @@ def build_grouped_sankey_links(
             region_code_map,
         )
         disease = row.get(top_disease_col, "No Match")
-        disease = disease if isinstance(disease, str) and disease.strip() else "No Match"
+        disease = (
+            disease if isinstance(disease, str) and disease.strip() else "No Match"
+        )
 
         if not symptoms or not regions:
             continue

@@ -350,7 +350,9 @@ def _write_report(
         "",
         "Columns with missing values or VAS stop/end codes are shown below.",
         "",
-        df_to_markdown(missing_core).strip() if not missing_core.empty else "No missing values found in core columns.",
+        df_to_markdown(missing_core).strip()
+        if not missing_core.empty
+        else "No missing values found in core columns.",
         "",
         "## Figures",
         "",
@@ -394,8 +396,12 @@ def generate_report(baseline_path: str | None = None) -> dict[str, str]:
     outputs = {
         "report": str(Path(METRICS_DIR) / "baseline_data_analysis.md"),
         "numeric_summary": str(Path(METRICS_DIR) / "baseline_numeric_summary.csv"),
-        "categorical_summary": str(Path(METRICS_DIR) / "baseline_categorical_summary.csv"),
-        "vas_subject_summary": str(Path(METRICS_DIR) / "baseline_vas_subject_summary.csv"),
+        "categorical_summary": str(
+            Path(METRICS_DIR) / "baseline_categorical_summary.csv"
+        ),
+        "vas_subject_summary": str(
+            Path(METRICS_DIR) / "baseline_vas_subject_summary.csv"
+        ),
         "vas_time_summary": str(Path(METRICS_DIR) / "baseline_vas_time_summary.csv"),
         "cluster_summary": str(Path(METRICS_DIR) / "baseline_cluster_summary.csv"),
         "region_summary": str(Path(METRICS_DIR) / "baseline_region_code_summary.csv"),
@@ -403,13 +409,25 @@ def generate_report(baseline_path: str | None = None) -> dict[str, str]:
         "data_quality": str(Path(METRICS_DIR) / "baseline_data_quality.csv"),
     }
 
-    _numeric_summary(df).to_csv(outputs["numeric_summary"], index=False, encoding="utf-8-sig")
-    _categorical_summary(df).to_csv(outputs["categorical_summary"], index=False, encoding="utf-8-sig")
-    subject_vas.to_csv(outputs["vas_subject_summary"], index=False, encoding="utf-8-sig")
-    vas_time_summary.to_csv(outputs["vas_time_summary"], index=False, encoding="utf-8-sig")
-    cluster_summary.to_csv(outputs["cluster_summary"], index=False, encoding="utf-8-sig")
+    _numeric_summary(df).to_csv(
+        outputs["numeric_summary"], index=False, encoding="utf-8-sig"
+    )
+    _categorical_summary(df).to_csv(
+        outputs["categorical_summary"], index=False, encoding="utf-8-sig"
+    )
+    subject_vas.to_csv(
+        outputs["vas_subject_summary"], index=False, encoding="utf-8-sig"
+    )
+    vas_time_summary.to_csv(
+        outputs["vas_time_summary"], index=False, encoding="utf-8-sig"
+    )
+    cluster_summary.to_csv(
+        outputs["cluster_summary"], index=False, encoding="utf-8-sig"
+    )
     region_summary.to_csv(outputs["region_summary"], index=False, encoding="utf-8-sig")
-    symptom_summary.to_csv(outputs["symptom_summary"], index=False, encoding="utf-8-sig")
+    symptom_summary.to_csv(
+        outputs["symptom_summary"], index=False, encoding="utf-8-sig"
+    )
     data_quality.to_csv(outputs["data_quality"], index=False, encoding="utf-8-sig")
 
     _write_report(

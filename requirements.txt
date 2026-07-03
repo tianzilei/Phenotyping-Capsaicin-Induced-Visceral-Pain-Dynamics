@@ -8,3 +8,4 @@ lifelines==0.30.3
 networkx==3.6.1
 matplotlib==3.10.8
 seaborn==0.13.2
+plotly>=5

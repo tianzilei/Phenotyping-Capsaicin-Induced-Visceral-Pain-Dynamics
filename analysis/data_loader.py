@@ -2,10 +2,11 @@
 Data loading and cleaning utilities for VAS data, metadata, and signals.
 """
 
+from __future__ import annotations
+
 import os
 import re
 from pathlib import Path
-from typing import List
 
 import numpy as np
 import pandas as pd
@@ -108,7 +109,10 @@ def strip_generated_columns(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _merge_generated_output(
-    df: pd.DataFrame, metric_path: Path, columns: list[str], rename_map: dict | None = None
+    df: pd.DataFrame,
+    metric_path: Path,
+    columns: list[str],
+    rename_map: dict | None = None,
 ) -> pd.DataFrame:
     if not metric_path.exists():
         return df
@@ -155,17 +159,11 @@ def load_analysis_ready_baseline(filepath: str = None) -> pd.DataFrame:
         df,
         metrics_dir / "prediction_subject_level.csv",
         [
-            "predicted_vas_delta",
-            "target_vas_delta",
             "predicted_direction",
             "target_direction",
-            "prediction_model",
-            "delta_model",
             "direction_model",
         ],
     )
-    if "prediction_model" in df.columns and "delta_model" not in df.columns:
-        df = df.rename(columns={"prediction_model": "delta_model"})
 
     ecg_metric_candidates = [
         metrics_dir / "ecg_egg_features_extracted.csv",
@@ -179,7 +177,7 @@ def load_analysis_ready_baseline(filepath: str = None) -> pd.DataFrame:
     return df
 
 
-def get_vas_columns(df: pd.DataFrame) -> List[str]:
+def get_vas_columns(df: pd.DataFrame) -> list[str]:
     """
     Get VAS time column names from unified baseline.
 
@@ -196,7 +194,7 @@ def get_vas_columns(df: pd.DataFrame) -> List[str]:
     return [col for col in df.columns if col.startswith("VAS_") and "min" in col]
 
 
-def get_clinical_columns(df: pd.DataFrame) -> List[str]:
+def get_clinical_columns(df: pd.DataFrame) -> list[str]:
     """
     Get clinical feature column names from baseline.
 
@@ -221,7 +219,7 @@ def get_clinical_columns(df: pd.DataFrame) -> List[str]:
     return [c for c in clinical if c in df.columns]
 
 
-def get_ecg_egg_columns(df: pd.DataFrame) -> List[str]:
+def get_ecg_egg_columns(df: pd.DataFrame) -> list[str]:
     """
     Get ECG/EGG feature column names from baseline.
 
@@ -293,7 +291,7 @@ def get_ecg_egg_columns(df: pd.DataFrame) -> List[str]:
     return [c for c in ecg_egg if c in df.columns]
 
 
-def get_symptom_columns(df: pd.DataFrame) -> List[str]:
+def get_symptom_columns(df: pd.DataFrame) -> list[str]:
     """
     Get symptom column names from baseline.
 
@@ -446,7 +444,7 @@ def load_vas_wide(filepath: str) -> pd.DataFrame:
     return df_wide
 
 
-def get_time_cols(df: pd.DataFrame) -> List[str]:
+def get_time_cols(df: pd.DataFrame) -> list[str]:
     """
     Detect and sort time columns (e.g., '1min', '2min', ..., '20min').
 

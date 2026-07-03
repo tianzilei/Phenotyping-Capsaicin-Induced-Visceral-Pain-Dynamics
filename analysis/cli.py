@@ -278,7 +278,6 @@ def _run_trajectory(args):
     vas_df = baseline_df[["ID"] + vas_cols].copy()
     time_cols = get_vas_columns(vas_df)
 
-    final_labels = None
     if args.method in ("dtw-kmeans", "all"):
         print("Running DTW-KMeans clustering...")
         X, X_raw, scaler = clustering.prepare_vas_data(
@@ -287,7 +286,6 @@ def _run_trajectory(args):
         labels, centroids, model = clustering.dtw_kmeans_cluster(
             X, n_clusters=args.n_clusters
         )
-        final_labels = labels
 
         baseline_df["cluster"] = labels
         baseline_df.to_csv(output_csv, index=False)
@@ -310,7 +308,6 @@ def _run_trajectory(args):
         labels, memberships, medoid_indices = clustering.fuzzy_c_medoids(
             X, n_clusters=args.n_clusters
         )
-        final_labels = labels
 
         baseline_df["cluster"] = labels
         baseline_df.to_csv(output_csv, index=False)
@@ -334,7 +331,9 @@ def _run_trajectory(args):
     # Survival analysis
     print("Running survival analysis...")
     survival_input = clustering.clean_vas_table(baseline_df, vas_cols)
-    time_values = np.array([int(c.replace("VAS_", "").replace("min", "")) for c in vas_cols])
+    time_values = np.array(
+        [int(c.replace("VAS_", "").replace("min", "")) for c in vas_cols]
+    )
     km_result = survival.compute_km_curves(
         survival_input.values,
         time_values=time_values,
@@ -613,7 +612,9 @@ def _run_predict(args):
         subject_preds.to_csv(
             os.path.join(METRICS_DIR, "prediction_subject_level.csv"), index=False
         )
-        print("Prediction subject summaries saved to metrics/prediction_subject_level.csv")
+        print(
+            "Prediction subject summaries saved to metrics/prediction_subject_level.csv"
+        )
 
     print(f"Results saved to {METRICS_DIR}")
     if not args.no_plot and GENERATE_STANDALONE_FIGURES:
@@ -647,59 +648,7 @@ def _run_ecg_egg(args):
             "Height_cm",
             "Weight_kg",
             "cluster",
-            "mean_HR",
-            "median_HR",
-            "min_HR",
-            "max_HR",
-            "HR_sd",
-            "HR_cv",
-            "mean_RR",
-            "median_RR",
-            "min_RR",
-            "max_RR",
-            "SDNN",
-            "RMSSD",
-            "pNN50",
-            "pNN20",
-            "CVSD",
-            "total_power",
-            "LF_power",
-            "HF_power",
-            "LF_HF_ratio",
-            "log_LF",
-            "log_HF",
-            "log_total_power",
-            "LFnu",
-            "HFnu",
-            "SD1",
-            "SD2",
-            "SD1_SD2_ratio",
-            "ECG_SQI",
-            "ECG_artifact_ratio",
-            "ECG_RR_edit_ratio",
-            "dominant_freq_cpm",
-            "mean_freq_cpm",
-            "median_freq_cpm",
-            "dominant_power",
-            "total_power_egg",
-            "log_DP",
-            "log_total_power_egg",
-            "pct_normogastria",
-            "pct_bradygastria",
-            "pct_tachygastria",
-            "power_ratio",
-            "spectral_entropy",
-            "spectral_flatness",
-            "DF_instability",
-            "egg_signal_energy",
-            "egg_rms",
-            "EGG_SQI",
-            "EGG_artifact_ratio",
-            "hr_egg_correlation",
-            "ecg_egg_cross_corr_max",
-            "ecg_egg_lag",
-            "ecg_egg_coherence_mean",
-            "ecg_egg_energy_ratio",
+            *ECG_EGG_FEATURE_COLUMNS,
         ]
         available_cols = [c for c in ecg_egg_cols if c in baseline_df.columns]
         features_df = baseline_df[available_cols].copy()
@@ -795,11 +744,11 @@ def _run_pipeline(args):
             ),
         ),
         (
-            "Minute-level VAS prediction",
+            "Short-term VAS direction prediction",
             _run_predict,
             argparse.Namespace(
                 baseline=args.baseline,
-                task="both",
+                task="classification",
                 window=3,
                 no_plot=True,
             ),

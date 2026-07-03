@@ -88,7 +88,9 @@ def detect_rank_change_point(row: pd.Series, penalty: float = 0.5) -> float:
     except (ValueError, RuntimeError, FloatingPointError) as exc:
         global _PELT_WARNING_EMITTED
         if not _PELT_WARNING_EMITTED:
-            print(f"Warning: PELT change-point detection failed for at least one row: {exc}")
+            print(
+                f"Warning: PELT change-point detection failed for at least one row: {exc}"
+            )
             _PELT_WARNING_EMITTED = True
         return np.nan
 

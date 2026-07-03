@@ -19,7 +19,12 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 
-from analysis.constants import FIGURES_DIR, METRICS_DIR, REGION_CODE_MAP, SYMPTOM_CODE_MAP
+from analysis.constants import (
+    FIGURES_DIR,
+    METRICS_DIR,
+    REGION_CODE_MAP,
+    SYMPTOM_CODE_MAP,
+)
 from analysis.data_loader import get_vas_columns, load_analysis_ready_baseline
 from analysis.parsing import map_codes, parse_compact_codes, parse_region_codes
 from analysis.visualization.style import set_publication_style
@@ -263,7 +268,9 @@ def _plot_ranked_hbar(
     _annotate_hbars(ax, fmt=annotation_fmt)
 
 
-def _prepare_vas_arrays(df: pd.DataFrame, vas_cols: list[str]) -> tuple[np.ndarray, np.ndarray]:
+def _prepare_vas_arrays(
+    df: pd.DataFrame, vas_cols: list[str]
+) -> tuple[np.ndarray, np.ndarray]:
     data = df[vas_cols].copy()
     for col in data.columns:
         data[col] = pd.to_numeric(data[col], errors="coerce")
@@ -364,7 +371,9 @@ def _code_summary(
 
 def _cluster_legend(ax: plt.Axes, values: pd.Series) -> None:
     handles, _ = ax.get_legend_handles_labels()
-    clusters = sorted(pd.to_numeric(values, errors="coerce").dropna().astype(int).unique())
+    clusters = sorted(
+        pd.to_numeric(values, errors="coerce").dropna().astype(int).unique()
+    )
     ax.legend(
         handles,
         [CLUSTER_NAMES.get(c, f"Cluster {c}") for c in clusters],
@@ -585,7 +594,9 @@ def generate_figure8(output_path: str) -> None:
 
     feature_groups = {
         "ECG": [c for c in ["mean_HR", "SDNN", "LF_HF_ratio"] if c in df.columns],
-        "EGG": [c for c in ["dominant_freq_cpm", "pct_normogastria"] if c in df.columns],
+        "EGG": [
+            c for c in ["dominant_freq_cpm", "pct_normogastria"] if c in df.columns
+        ],
     }
     phys_cols = [c for cols in feature_groups.values() for c in cols]
     if "phenotype" in df.columns and phys_cols:
@@ -673,7 +684,13 @@ def generate_figure9(output_path: str) -> None:
     else:
         cp_long = cp.melt(
             value_vars=[
-                c for c in ["pain_onset_min", "pain_onset_derivative", "change_point_rank"] if c in cp.columns
+                c
+                for c in [
+                    "pain_onset_min",
+                    "pain_onset_derivative",
+                    "change_point_rank",
+                ]
+                if c in cp.columns
             ],
             var_name="method",
             value_name="time_min",
@@ -737,7 +754,9 @@ def generate_figure9(output_path: str) -> None:
             ax.set_ylabel("")
             ax.set_xlim(0.5, 20.5)
             ax.grid(axis="y", alpha=0.18)
-        axes[0].set_title("Onset and Change-Point Timing", fontweight="normal", fontsize=11, pad=7)
+        axes[0].set_title(
+            "Onset and Change-Point Timing", fontweight="normal", fontsize=11, pad=7
+        )
         if len(axes) > 1:
             axes[1].set_ylabel("Participants (%)", fontsize=9)
         else:
@@ -847,7 +866,9 @@ def generate_figure11(output_path: str) -> None:
         total_time = len(vas_cols)
 
         panel_idx = 0
-        for cluster_pos, target_cluster in enumerate(sorted(shapelets["target_cluster"].unique())):
+        for cluster_pos, target_cluster in enumerate(
+            sorted(shapelets["target_cluster"].unique())
+        ):
             cluster_shapelets = (
                 shapelets[shapelets["target_cluster"] == target_cluster]
                 .sort_values(["auc", "cohens_d"], ascending=[False, False])
@@ -889,7 +910,15 @@ def generate_figure11(output_path: str) -> None:
                     alpha=0.16,
                     zorder=1,
                 )
-                ax.plot(x, y, color=color, linewidth=1.8, marker="o", markersize=3.0, zorder=3)
+                ax.plot(
+                    x,
+                    y,
+                    color=color,
+                    linewidth=1.8,
+                    marker="o",
+                    markersize=3.0,
+                    zorder=3,
+                )
                 ax.fill_between(x, 0, y, color=color, alpha=0.04)
                 ax.axhline(0, color="#b9b9b9", linewidth=0.8, linestyle="--", zorder=0)
                 ax.grid(alpha=0.14, linewidth=0.6)
@@ -969,7 +998,9 @@ def generate_figure12(output_path: str) -> None:
         threshold = 7
         annot = matrix.apply(
             lambda col: col.map(
-                lambda value: f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+                lambda value: (
+                    f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+                )
             )
         )
         sns.heatmap(
@@ -989,8 +1020,14 @@ def generate_figure12(output_path: str) -> None:
         ax.set_xlabel("Region")
         ax.set_ylabel("Symptom")
         ax.set_facecolor("white")
-        ax.set_xticklabels([_short_region_label(t.get_text()) for t in ax.get_xticklabels()], rotation=0)
-        ax.set_yticklabels([_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()], rotation=0)
+        ax.set_xticklabels(
+            [_short_region_label(t.get_text()) for t in ax.get_xticklabels()],
+            rotation=0,
+        )
+        ax.set_yticklabels(
+            [_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()],
+            rotation=0,
+        )
         ax.tick_params(axis="x", labelsize=8.3, pad=1.0)
     _save(fig, output_path)
 
@@ -1005,7 +1042,9 @@ def generate_figure13(output_path: str) -> None:
         threshold = 7
         annot = matrix.apply(
             lambda col: col.map(
-                lambda value: f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+                lambda value: (
+                    f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+                )
             )
         )
         sns.heatmap(
@@ -1025,8 +1064,13 @@ def generate_figure13(output_path: str) -> None:
         ax.set_xlabel("Rome IV category")
         ax.set_ylabel("Symptom")
         ax.set_facecolor("white")
-        ax.set_xticklabels([_short_rome_label(t.get_text()) for t in ax.get_xticklabels()], rotation=0)
-        ax.set_yticklabels([_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()], rotation=0)
+        ax.set_xticklabels(
+            [_short_rome_label(t.get_text()) for t in ax.get_xticklabels()], rotation=0
+        )
+        ax.set_yticklabels(
+            [_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()],
+            rotation=0,
+        )
         ax.tick_params(axis="x", labelsize=8.3, pad=1.0)
     _save(fig, output_path)
 
@@ -1040,7 +1084,11 @@ def generate_figure14(output_path: str) -> None:
     else:
         cls_long = cls.melt(
             id_vars="model",
-            value_vars=[c for c in ["accuracy", "balanced_accuracy", "f1_macro"] if c in cls.columns],
+            value_vars=[
+                c
+                for c in ["accuracy", "balanced_accuracy", "f1_macro"]
+                if c in cls.columns
+            ],
             var_name="metric",
             value_name="value",
         )
@@ -1051,8 +1099,16 @@ def generate_figure14(output_path: str) -> None:
             x="model_label",
             y="value",
             hue="metric_label",
-            hue_order=[METRIC_LABELS[key] for key in ["accuracy", "balanced_accuracy", "f1_macro"] if key in cls_long["metric"].unique()],
-            palette={METRIC_LABELS[key]: METRIC_PALETTE[key] for key in METRIC_PALETTE if key in cls_long["metric"].unique()},
+            hue_order=[
+                METRIC_LABELS[key]
+                for key in ["accuracy", "balanced_accuracy", "f1_macro"]
+                if key in cls_long["metric"].unique()
+            ],
+            palette={
+                METRIC_LABELS[key]: METRIC_PALETTE[key]
+                for key in METRIC_PALETTE
+                if key in cls_long["metric"].unique()
+            },
             ax=ax,
         )
         _title(ax, "VAS Direction Classification")
@@ -1064,11 +1120,16 @@ def generate_figure14(output_path: str) -> None:
 
 
 def generate_figure15(output_path: str) -> None:
-    print("Generating Figure 15: complementary phenotype-classification random forest feature importance...")
+    print(
+        "Generating Figure 15: complementary phenotype-classification random forest feature importance..."
+    )
     fig, ax = plt.subplots(figsize=(8.4, 7.1))
     imp = _read_metric("ecg_egg_cluster_prediction_rf_importance.csv")
     if imp is None or imp.empty:
-        _no_data(ax, "Complementary Phenotype-Classification Random Forest Feature Importance")
+        _no_data(
+            ax,
+            "Complementary Phenotype-Classification Random Forest Feature Importance",
+        )
     else:
         top = imp.sort_values("importance", ascending=False).head(12)
         top = top.copy()
@@ -1082,24 +1143,33 @@ def generate_figure15(output_path: str) -> None:
             highlight_top=3,
             annotation_fmt="{:.3f}",
         )
-        _title(ax, "Complementary Phenotype-Classification Random Forest Feature Importance")
+        _title(
+            ax,
+            "Complementary Phenotype-Classification Random Forest Feature Importance",
+        )
         ax.set_xlabel("Importance")
         ax.set_ylabel("")
     _save(fig, output_path)
 
 
 def generate_figure16(output_path: str) -> None:
-    print("Generating Figure 16: complementary phenotype-classification confusion matrix...")
+    print(
+        "Generating Figure 16: complementary phenotype-classification confusion matrix..."
+    )
     fig, ax = plt.subplots(figsize=(7, 6))
     cm = _read_metric("ecg_egg_cluster_prediction_cm.csv")
     metrics = _read_metric("ecg_egg_cluster_prediction_metrics.csv")
     if cm is None or cm.empty or metrics is None or metrics.empty:
         _no_data(ax, "Complementary Phenotype-Classification Confusion Matrix")
     else:
-        best_model = metrics.sort_values("accuracy_mean", ascending=False).iloc[0]["model"]
+        best_model = metrics.sort_values("accuracy_mean", ascending=False).iloc[0][
+            "model"
+        ]
         cm_best = cm[cm["model"] == best_model]
         matrix = (
-            cm_best.pivot(index="true_cluster", columns="predicted_cluster", values="count")
+            cm_best.pivot(
+                index="true_cluster", columns="predicted_cluster", values="count"
+            )
             .reindex(index=[0, 1, 2], columns=[0, 1, 2])
             .fillna(0)
         )
@@ -1211,7 +1281,10 @@ def make_figure_map(
         "15": ("figure15_ecg_feature_importance.png", generate_figure15),
         "16": ("figure16_ecg_confusion_matrix.png", generate_figure16),
         "C1": ("figure1_temporal_dynamics_composite.png", generate_composite_figure1),
-        "C2": ("figure2_symptom_spatial_burden_composite.png", generate_composite_figure2),
+        "C2": (
+            "figure2_symptom_spatial_burden_composite.png",
+            generate_composite_figure2,
+        ),
         "C3": ("figure3_prediction_composite.png", generate_composite_figure3),
     }
 
