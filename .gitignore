@@ -14,5 +14,10 @@ ecg_egg/
 # Local combined manuscript draft
 manuscript_supplementary_combined.docx
 
+# Local DOCX build artifacts
+.codex-docx-build/combined_latest.md
+.codex-docx-build/rendered/
+Temporal_Dynamics_Capsaicin_latest_manuscript_supplementary_*.docx
+
 # Local manuscript information notes
 information.md
