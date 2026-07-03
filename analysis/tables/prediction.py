@@ -6,6 +6,21 @@ import pandas as pd
 
 from analysis.tables.formatter import df_to_markdown
 
+MODEL_DISPLAY_NAMES = {
+    "Majority": "Majority",
+    "PersistenceDir": "Persistence-direction",
+    "Logistic": "Logistic regression",
+    "LogisticRegression": "Logistic regression",
+}
+
+TABLE_S3_FOOTNOTE = (
+    "Abbreviations: SD, standard deviation; F1, harmonic mean of precision and "
+    "recall; Macro F1, unweighted mean of class-specific F1 scores; Weighted F1, "
+    "support-weighted mean of class-specific F1 scores. The persistence-direction "
+    "model predicts decrease when the current local slope is sufficiently negative "
+    "and otherwise predicts non-decrease."
+)
+
 
 def generate_prediction_table(
     fold_metrics_df: pd.DataFrame,
@@ -40,7 +55,8 @@ def generate_prediction_table(
         )
         summary.append(
             {
-                "Model": model_name,
+                "_raw_model": model_name,
+                "Model": MODEL_DISPLAY_NAMES.get(model_name, model_name),
                 "Accuracy (mean ± SD)": accuracy,
                 "Balanced Accuracy": balanced,
                 "Macro F1": macro,
@@ -50,12 +66,15 @@ def generate_prediction_table(
 
     summary_df = pd.DataFrame(summary)
     # Reorder rows to match manuscript order
-    order = ["Majority", "PersistenceDir", "Logistic"]
-    summary_df["_sort"] = summary_df["Model"].apply(
+    order = ["Majority", "PersistenceDir", "Logistic", "LogisticRegression"]
+    summary_df["_sort"] = summary_df["_raw_model"].apply(
         lambda x: order.index(x) if x in order else 99
     )
     summary_df = (
-        summary_df.sort_values("_sort").drop(columns=["_sort"]).reset_index(drop=True)
+        summary_df.sort_values("_sort")
+        .drop(columns=["_sort", "_raw_model"])
+        .reset_index(drop=True)
     )
 
-    return df_to_markdown(summary_df, caption=caption)
+    table_md = df_to_markdown(summary_df, caption=caption).rstrip()
+    return f"{table_md}\n\n{TABLE_S3_FOOTNOTE}\n"

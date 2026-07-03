@@ -151,10 +151,12 @@ def _feature_importance_label(feature: object) -> str:
 def _short_model_label(model: object) -> str:
     label = str(model)
     replacements = {
-        "LogisticRegression": "Logistic",
+        "LogisticRegression": "Logistic\nregression",
+        "Logistic": "Logistic\nregression",
         "RandomForest": "Random forest",
         "HistGradientBoosting": "Hist. gradient\nboosting",
-        "PersistenceDir": "Persistence\ndirection",
+        "PersistenceDir": "Persistence-\ndirection",
+        "MLP": "Multilayer\nperceptron",
         "SVM_RBF": "SVM RBF",
     }
     return replacements.get(label, label.replace("_", " "))
@@ -649,7 +651,7 @@ def generate_figure8(output_path: str) -> None:
                 columnspacing=1.4,
             )
         fig.suptitle(
-            "Standardized ECG/EGG Features",
+            "Standardized ECG/EGG Feature Distributions",
             fontsize=11,
             fontweight="normal",
             y=1.03,
@@ -657,7 +659,7 @@ def generate_figure8(output_path: str) -> None:
         fig.subplots_adjust(top=0.82, wspace=0.10)
     else:
         fig, ax = plt.subplots(figsize=(9, 6))
-        _no_data(ax, "Standardized ECG/EGG Features")
+        _no_data(ax, "Standardized ECG/EGG Feature Distributions")
 
     _save(fig, output_path)
 
@@ -1062,11 +1064,11 @@ def generate_figure14(output_path: str) -> None:
 
 
 def generate_figure15(output_path: str) -> None:
-    print("Generating Figure 15: ECG/EGG feature importance...")
+    print("Generating Figure 15: complementary phenotype-classification random forest feature importance...")
     fig, ax = plt.subplots(figsize=(8.4, 7.1))
     imp = _read_metric("ecg_egg_cluster_prediction_rf_importance.csv")
     if imp is None or imp.empty:
-        _no_data(ax, "ECG/EGG Feature Importance")
+        _no_data(ax, "Complementary Phenotype-Classification Random Forest Feature Importance")
     else:
         top = imp.sort_values("importance", ascending=False).head(12)
         top = top.copy()
@@ -1080,19 +1082,19 @@ def generate_figure15(output_path: str) -> None:
             highlight_top=3,
             annotation_fmt="{:.3f}",
         )
-        _title(ax, "Random Forest Feature Importance")
+        _title(ax, "Complementary Phenotype-Classification Random Forest Feature Importance")
         ax.set_xlabel("Importance")
         ax.set_ylabel("")
     _save(fig, output_path)
 
 
 def generate_figure16(output_path: str) -> None:
-    print("Generating Figure 16: ECG/EGG confusion matrix...")
+    print("Generating Figure 16: complementary phenotype-classification confusion matrix...")
     fig, ax = plt.subplots(figsize=(7, 6))
     cm = _read_metric("ecg_egg_cluster_prediction_cm.csv")
     metrics = _read_metric("ecg_egg_cluster_prediction_metrics.csv")
     if cm is None or cm.empty or metrics is None or metrics.empty:
-        _no_data(ax, "ECG/EGG Confusion Matrix")
+        _no_data(ax, "Complementary Phenotype-Classification Confusion Matrix")
     else:
         best_model = metrics.sort_values("accuracy_mean", ascending=False).iloc[0]["model"]
         cm_best = cm[cm["model"] == best_model]
@@ -1115,7 +1117,7 @@ def generate_figure16(output_path: str) -> None:
             ax=ax,
         )
         ax.set_title(
-            "ECG/EGG Confusion Matrix",
+            "Complementary Phenotype-Classification Confusion Matrix",
             fontweight="normal",
             pad=11,
         )
