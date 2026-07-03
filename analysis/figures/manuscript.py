@@ -13,7 +13,7 @@ import matplotlib
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from matplotlib.colors import PowerNorm
+from matplotlib.colors import LinearSegmentedColormap, PowerNorm
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -27,6 +27,10 @@ PALETTE_NAME = "magma"
 PALETTE = sns.color_palette(PALETTE_NAME, n_colors=8)
 CLUSTER_PALETTE = {0: PALETTE[1], 1: PALETTE[3], 2: PALETTE[5]}
 CLUSTER_NAMES = {0: "Delayed-peak", 1: "Early-sustained", 2: "Late-rising"}
+PHENOTYPE_ORDER = [CLUSTER_NAMES[idx] for idx in sorted(CLUSTER_NAMES)]
+PHENOTYPE_PALETTE = {
+    CLUSTER_NAMES[idx]: CLUSTER_PALETTE[idx] for idx in sorted(CLUSTER_NAMES)
+}
 CLUSTER_TICK_LABELS = {
     0: "Delayed\npeak",
     1: "Early\nsustained",
@@ -35,7 +39,30 @@ CLUSTER_TICK_LABELS = {
 NOMINAL_BAR_COLOR = "#5f6470"
 HIGHLIGHT_COLOR = "#b73779"
 PERFORMANCE_COLOR = "#3f6c8a"
-HEATMAP_CMAP = sns.color_palette("rocket_r", as_cmap=True)
+NEUTRAL_LINE_COLOR = "#5d6978"
+METHOD_PALETTE = {
+    "VAS > 3": "#7088a3",
+    "Derivative": "#b1708e",
+    "PELT": "#c98c65",
+}
+EVENT_PALETTE = {
+    "Onset": "#587998",
+    "Relief": "#c17866",
+}
+METRIC_PALETTE = {
+    "accuracy": HIGHLIGHT_COLOR,
+    "balanced_accuracy": PERFORMANCE_COLOR,
+    "f1_macro": "#8c98aa",
+}
+METRIC_LABELS = {
+    "accuracy": "Accuracy",
+    "balanced_accuracy": "Balanced accuracy",
+    "f1_macro": "Macro F1",
+}
+HEATMAP_CMAP = LinearSegmentedColormap.from_list(
+    "manuscript_heatmap",
+    ["#fbf4ec", "#efb07d", "#ef6b4f", "#c82462", "#120b2d"],
+)
 _BASELINE_SOURCE_PATH: str | None = None
 _METRICS_SOURCE_DIR = METRICS_DIR
 
@@ -83,12 +110,50 @@ def _short_feature_label(feature: str) -> str:
     return labels.get(feature, feature.replace("_", " "))
 
 
+def _short_region_label(label: object) -> str:
+    replacements = {
+        "right hypochondrium": "Right hypo-\nchondrium",
+        "left hypochondrium": "Left hypo-\nchondrium",
+        "hypogastrium": "Hypo-\ngastrium",
+        "right lumbar": "Right\nlumbar",
+        "left lumbar": "Left\nlumbar",
+        "right inguinal": "Right\ninguinal",
+        "left inguinal": "Left\ninguinal",
+        "epigastrium": "Epigastrium",
+        "umbilical": "Umbilical",
+    }
+    return replacements.get(str(label).lower(), _wrap_label(label, width=12))
+
+
+def _feature_importance_label(feature: object) -> str:
+    labels = {
+        "CCEI": "CCEI",
+        "AES": "AES",
+        "BMI": "BMI",
+        "Spicy_food_preference": "Spicy food preference",
+        "Usual_spiciness_level": "Usual spiciness",
+        "Time_since_last_intake_h": "Time since last intake",
+        "Spicy_food_frequency": "Spicy food frequency",
+        "Spicy_episodes_24h": "Spicy episodes (24 h)",
+        "Max_tolerable_spiciness": "Max tolerable spiciness",
+        "ECG_artifact_ratio": "ECG artifact ratio",
+        "ecg_egg_coherence_mean": "ECG-EGG coherence",
+        "hr_egg_correlation": "HR-EGG correlation",
+        "EGG_SQI": "EGG SQI",
+        "spectral_flatness": "Spectral flatness",
+        "pct_normogastria": "Normogastria (%)",
+    }
+    label = labels.get(str(feature), str(feature).replace("_", " "))
+    return _wrap_label(label, width=20)
+
+
 def _short_model_label(model: object) -> str:
     label = str(model)
     replacements = {
         "LogisticRegression": "Logistic",
         "RandomForest": "Random forest",
         "HistGradientBoosting": "Hist. gradient\nboosting",
+        "PersistenceDir": "Persistence\ndirection",
         "SVM_RBF": "SVM RBF",
     }
     return replacements.get(label, label.replace("_", " "))
@@ -109,12 +174,12 @@ def _short_rome_label(label: object) -> str:
 
 
 def _title(ax: plt.Axes, title: str) -> None:
-    ax.set_title(title, fontweight="normal", pad=8)
+    ax.set_title(title, fontweight="normal", fontsize=11, pad=7)
 
 
 def _annotate_hbars(ax: plt.Axes, fmt: str = "{:.1f}") -> None:
     x_min, x_max = ax.get_xlim()
-    pad = (x_max - x_min) * 0.012
+    pad = (x_max - x_min) * 0.018
     for patch in ax.patches:
         width = patch.get_width()
         if not np.isfinite(width):
@@ -128,7 +193,7 @@ def _annotate_hbars(ax: plt.Axes, fmt: str = "{:.1f}") -> None:
             fontsize=8,
             color="#333333",
         )
-    ax.set_xlim(x_min, x_max + (x_max - x_min) * 0.12)
+    ax.set_xlim(x_min, x_max + (x_max - x_min) * 0.15)
 
 
 def _plot_ranked_hbar(
@@ -138,6 +203,7 @@ def _plot_ranked_hbar(
     y: str,
     color: str = NOMINAL_BAR_COLOR,
     highlight_top: int = 1,
+    annotation_fmt: str = "{:.1f}",
 ) -> None:
     colors = [color] * len(data)
     for i in range(min(highlight_top, len(colors))):
@@ -147,7 +213,7 @@ def _plot_ranked_hbar(
     ax.set_yticks(positions)
     ax.set_yticklabels(data[y])
     ax.invert_yaxis()
-    _annotate_hbars(ax)
+    _annotate_hbars(ax, fmt=annotation_fmt)
 
 
 def _prepare_vas_arrays(df: pd.DataFrame, vas_cols: list[str]) -> tuple[np.ndarray, np.ndarray]:
@@ -252,7 +318,19 @@ def _code_summary(
 def _cluster_legend(ax: plt.Axes, values: pd.Series) -> None:
     handles, _ = ax.get_legend_handles_labels()
     clusters = sorted(pd.to_numeric(values, errors="coerce").dropna().astype(int).unique())
-    ax.legend(handles, [CLUSTER_NAMES.get(c, f"Cluster {c}") for c in clusters], title="Phenotype")
+    ax.legend(
+        handles,
+        [CLUSTER_NAMES.get(c, f"Cluster {c}") for c in clusters],
+        title="Phenotype",
+        frameon=False,
+        loc="upper center",
+        bbox_to_anchor=(0.5, -0.14),
+        ncol=max(1, len(clusters)),
+        fontsize=8,
+        title_fontsize=8.3,
+        handlelength=2.0,
+        columnspacing=1.4,
+    )
 
 
 def generate_figure1(output_path: str) -> None:
@@ -269,7 +347,7 @@ def generate_figure1(output_path: str) -> None:
         estimator="mean",
         errorbar="se",
         marker="o",
-        color=PALETTE[2],
+        color=NEUTRAL_LINE_COLOR,
         ax=ax,
     )
     for collection in ax.collections:
@@ -321,6 +399,8 @@ def generate_figure3(output_path: str) -> None:
     if symptom.empty:
         _no_data(ax, "Symptom Burden")
     else:
+        symptom = symptom.copy()
+        symptom["label"] = symptom["label"].map(lambda x: _wrap_label(x, width=18))
         _plot_ranked_hbar(ax, symptom, x="percent", y="label")
         _title(ax, "Symptom Burden")
         ax.set_xlabel("Participants (%)")
@@ -338,6 +418,8 @@ def generate_figure4(output_path: str) -> None:
     if region.empty:
         _no_data(ax, "Pain Region Burden")
     else:
+        region = region.copy()
+        region["label"] = region["label"].map(_short_region_label)
         _plot_ranked_hbar(ax, region, x="percent", y="label")
         _title(ax, "Pain Region Burden")
         ax.set_xlabel("Participants (%)")
@@ -360,14 +442,14 @@ def generate_figure5(output_path: str) -> None:
             y="accuracy_mean",
             marker="o",
             markersize=4,
-            color=PALETTE[4],
+            color=HIGHLIGHT_COLOR,
             ax=ax,
         )
         ax.fill_between(
             windows["prefix_minutes"],
             windows["accuracy_mean"] - windows["accuracy_sd"],
             windows["accuracy_mean"] + windows["accuracy_sd"],
-            color=PALETTE[4],
+            color=HIGHLIGHT_COLOR,
             alpha=0.10,
         )
         _title(ax, "Early VAS Window Classification")
@@ -395,6 +477,7 @@ def generate_figure6(output_path: str) -> None:
             y="model_label",
             color=PERFORMANCE_COLOR,
             highlight_top=1,
+            annotation_fmt="{:.2f}",
         )
         _title(ax, "Baseline/Physiology Phenotype Prediction")
         ax.set_xlabel("Accuracy")
@@ -418,7 +501,9 @@ def generate_figure7(output_path: str) -> None:
             x="phenotype",
             y="Age",
             hue="phenotype",
-            palette=list(CLUSTER_PALETTE.values()),
+            order=PHENOTYPE_ORDER,
+            hue_order=PHENOTYPE_ORDER,
+            palette=PHENOTYPE_PALETTE,
             fliersize=2.5,
             legend=False,
             ax=ax,
@@ -427,6 +512,7 @@ def generate_figure7(output_path: str) -> None:
             data=df,
             x="phenotype",
             y="Age",
+            order=PHENOTYPE_ORDER,
             color="#333333",
             alpha=0.28,
             jitter=0.18,
@@ -466,7 +552,13 @@ def generate_figure8(output_path: str) -> None:
             lambda x: (x - x.mean()) / (x.std() + 1e-8)
         )
         phys["feature_label"] = phys["feature"].map(_short_feature_label)
-        fig, axes = plt.subplots(1, 2, figsize=(10.5, 5.8), sharey=True)
+        fig, axes = plt.subplots(
+            1,
+            2,
+            figsize=(10.0, 5.2),
+            sharey=True,
+            gridspec_kw={"wspace": 0.10},
+        )
         handles = labels = None
         for ax, (group, cols) in zip(axes, feature_groups.items()):
             group_df = phys[phys["feature"].isin(cols)].copy()
@@ -479,17 +571,19 @@ def generate_figure8(output_path: str) -> None:
                 x="feature_label",
                 y="z_value",
                 hue="phenotype",
+                hue_order=PHENOTYPE_ORDER,
                 order=order,
-                palette=list(CLUSTER_PALETTE.values()),
-                fliersize=1.8,
-                linewidth=0.9,
+                palette=PHENOTYPE_PALETTE,
+                width=0.72,
+                fliersize=1.2,
+                linewidth=0.85,
                 ax=ax,
             )
             ax.axhline(0, color="#9a9a9a", linewidth=0.8, linestyle="--", zorder=0)
             _title(ax, group)
             ax.set_xlabel("")
             ax.set_ylabel("Z-score" if group == "ECG" else "")
-            ax.tick_params(axis="x", rotation=0)
+            ax.tick_params(axis="x", rotation=0, labelsize=7.8, pad=1.5)
             if handles is None:
                 handles, labels = ax.get_legend_handles_labels()
             legend = ax.get_legend()
@@ -502,11 +596,20 @@ def generate_figure8(output_path: str) -> None:
                 title="Phenotype",
                 loc="upper center",
                 ncol=3,
-                bbox_to_anchor=(0.5, 1.02),
+                bbox_to_anchor=(0.5, 0.985),
                 frameon=False,
+                fontsize=7.8,
+                title_fontsize=8.2,
+                handlelength=1.8,
+                columnspacing=1.4,
             )
-        fig.suptitle("Standardized ECG/EGG Features", fontsize=12, fontweight="normal", y=1.09)
-        fig.tight_layout()
+        fig.suptitle(
+            "Standardized ECG/EGG Features",
+            fontsize=11,
+            fontweight="normal",
+            y=1.03,
+        )
+        fig.subplots_adjust(top=0.82, wspace=0.10)
     else:
         fig, ax = plt.subplots(figsize=(9, 6))
         _no_data(ax, "Standardized ECG/EGG Features")
@@ -541,38 +644,58 @@ def generate_figure9(output_path: str) -> None:
         fig, axes = plt.subplots(
             len(methods),
             1,
-            figsize=(8.2, 1.95 * len(methods) + 1.0),
+            figsize=(8.0, 1.75 * len(methods) + 1.15),
             sharex=True,
             constrained_layout=True,
         )
         axes = np.atleast_1d(axes)
-        colors = sns.color_palette(PALETTE_NAME, n_colors=max(3, len(methods)))
+        bins = np.arange(0.5, 21.6, 1.0)
         for idx, (ax, method) in enumerate(zip(axes, methods)):
             method_df = cp_long[cp_long["method"] == method]
             sns.histplot(
                 data=method_df,
                 x="time_min",
-                bins=range(0, 22),
-                color=colors[idx],
-                alpha=0.52,
+                bins=bins,
+                stat="percent",
+                color=METHOD_PALETTE.get(method, NOMINAL_BAR_COLOR),
+                alpha=0.58,
                 edgecolor="white",
-                linewidth=0.7,
+                linewidth=0.6,
+                shrink=0.92,
                 ax=ax,
             )
             median = method_df["time_min"].median()
             ax.axvline(median, color="#333333", linewidth=1.0, linestyle="--")
             ax.text(
-                0.99,
-                0.78,
-                f"Median {median:.1f} min",
+                0.02,
+                0.88,
+                method,
                 transform=ax.transAxes,
-                ha="right",
-                va="center",
-                fontsize=8,
+                ha="left",
+                va="top",
+                fontsize=8.4,
+                fontweight="semibold",
+                color="#333333",
             )
-            ax.set_ylabel(method)
-            ax.grid(axis="y", alpha=0.22)
-        axes[0].set_title("Onset and Change-Point Timing", fontweight="normal", pad=8)
+            ax.text(
+                0.02,
+                0.72,
+                f"Median {median:.1f} min\nn={len(method_df)}",
+                transform=ax.transAxes,
+                ha="left",
+                va="top",
+                fontsize=7.6,
+                color="#444444",
+            )
+            ax.set_ylabel("")
+            ax.set_xlim(0.5, 20.5)
+            ax.grid(axis="y", alpha=0.18)
+        axes[0].set_title("Onset and Change-Point Timing", fontweight="normal", fontsize=11, pad=7)
+        if len(axes) > 1:
+            axes[1].set_ylabel("Participants (%)", fontsize=9)
+        else:
+            axes[0].set_ylabel("Participants (%)", fontsize=9)
+        axes[-1].set_xticks([1, 5, 10, 15, 20])
         axes[-1].set_xlabel("Time (min)")
     _save(fig, output_path)
 
@@ -596,13 +719,22 @@ def generate_figure10(output_path: str) -> None:
                 ax=ax,
                 ci_show=True,
                 show_censors=True,
-                color=PALETTE[2] if label == "Onset" else PALETTE[5],
+                color=EVENT_PALETTE[label],
                 linewidth=1.9,
                 censor_styles={"ms": 4, "marker": "|"},
             )
         _title(ax, "Kaplan-Meier Event Curves")
         ax.set_xlabel("Time (min)")
         ax.set_ylabel("Survival probability")
+        ax.legend(
+            title="",
+            frameon=False,
+            loc="upper center",
+            bbox_to_anchor=(0.5, -0.11),
+            ncol=2,
+            handlelength=2.2,
+            columnspacing=1.8,
+        )
     _save(fig, output_path)
 
 
@@ -652,7 +784,7 @@ def generate_figure11(output_path: str) -> None:
         fig, axes = plt.subplots(
             n_clusters,
             top_k,
-            figsize=(12.8, 7.4),
+            figsize=(12.2, 6.9),
             sharex=True,
             sharey=True,
             constrained_layout=True,
@@ -705,13 +837,13 @@ def generate_figure11(output_path: str) -> None:
                     full_x,
                     full_y,
                     color=color,
-                    linewidth=1.3,
+                    linewidth=1.1,
                     linestyle="--",
-                    alpha=0.20,
+                    alpha=0.16,
                     zorder=1,
                 )
-                ax.plot(x, y, color=color, linewidth=2.0, marker="o", markersize=3.4, zorder=3)
-                ax.fill_between(x, 0, y, color=color, alpha=0.05)
+                ax.plot(x, y, color=color, linewidth=1.8, marker="o", markersize=3.0, zorder=3)
+                ax.fill_between(x, 0, y, color=color, alpha=0.04)
                 ax.axhline(0, color="#b9b9b9", linewidth=0.8, linestyle="--", zorder=0)
                 ax.grid(alpha=0.14, linewidth=0.6)
                 ax.set_xlim(0, total_time)
@@ -720,8 +852,8 @@ def generate_figure11(output_path: str) -> None:
                 if cluster_pos == 0:
                     ax.set_title(
                         f"Top shapelet {shapelet_pos + 1}",
-                        fontsize=9,
-                        pad=7,
+                        fontsize=8.0,
+                        pad=5,
                         fontweight="normal",
                     )
                 ax.text(
@@ -731,20 +863,20 @@ def generate_figure11(output_path: str) -> None:
                     transform=ax.transAxes,
                     ha="left",
                     va="top",
-                    fontsize=8.5,
+                    fontsize=7.2,
                     fontweight="bold",
                 )
                 if shapelet_pos == 0:
-                    ax.text(
-                        0.11,
-                        0.97,
+                    ax.set_ylabel(
                         phenotype_name,
-                        transform=ax.transAxes,
-                        ha="left",
-                        va="top",
-                        fontsize=8.8,
-                        fontweight="bold",
+                        rotation=0,
+                        fontsize=8.0,
+                        fontweight="semibold",
+                        labelpad=30,
+                        va="center",
                     )
+                else:
+                    ax.tick_params(labelleft=False)
                 ax.text(
                     0.98,
                     0.97,
@@ -756,12 +888,12 @@ def generate_figure11(output_path: str) -> None:
                     transform=ax.transAxes,
                     ha="right",
                     va="top",
-                    fontsize=7.6,
+                    fontsize=6.6,
                     bbox={
-                        "boxstyle": "round,pad=0.25",
+                        "boxstyle": "round,pad=0.18",
                         "facecolor": "white",
-                        "edgecolor": "#d7d7d7",
-                        "alpha": 0.92,
+                        "edgecolor": "none",
+                        "alpha": 0.80,
                     },
                 )
                 if cluster_pos == n_clusters - 1:
@@ -770,9 +902,9 @@ def generate_figure11(output_path: str) -> None:
 
         fig.suptitle(
             "Cluster-Specific Shapelets",
-            fontsize=12,
+            fontsize=10.5,
             fontweight="normal",
-            y=1.015,
+            y=1.03,
         )
     except Exception as exc:
         fig, ax = plt.subplots(figsize=(9, 6))
@@ -787,14 +919,20 @@ def generate_figure12(output_path: str) -> None:
     if matrix is None:
         _no_data(ax, "Symptom-Region Co-occurrence")
     else:
-        annot = matrix.where(matrix >= matrix.to_numpy().max() * 0.25, other=np.nan)
+        threshold = 7
+        annot = matrix.apply(
+            lambda col: col.map(
+                lambda value: f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+            )
+        )
         sns.heatmap(
             matrix,
+            mask=matrix.eq(0),
             cmap=HEATMAP_CMAP,
-            norm=PowerNorm(gamma=0.65, vmin=0, vmax=float(matrix.to_numpy().max())),
+            norm=PowerNorm(gamma=0.42, vmin=0, vmax=float(matrix.to_numpy().max())),
             annot=annot,
-            fmt=".0f",
-            annot_kws={"fontsize": 7.5},
+            fmt="",
+            annot_kws={"fontsize": 7.0},
             linewidths=0.4,
             linecolor="white",
             ax=ax,
@@ -803,8 +941,10 @@ def generate_figure12(output_path: str) -> None:
         _title(ax, "Symptom-Region Co-occurrence")
         ax.set_xlabel("Region")
         ax.set_ylabel("Symptom")
-        ax.set_xticklabels([_wrap_label(t.get_text(), width=11) for t in ax.get_xticklabels()], rotation=0)
+        ax.set_facecolor("white")
+        ax.set_xticklabels([_short_region_label(t.get_text()) for t in ax.get_xticklabels()], rotation=0)
         ax.set_yticklabels([_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()], rotation=0)
+        ax.tick_params(axis="x", labelsize=8.3, pad=1.0)
     _save(fig, output_path)
 
 
@@ -815,14 +955,20 @@ def generate_figure13(output_path: str) -> None:
     if matrix is None:
         _no_data(ax, "Symptom-Rome IV Co-occurrence")
     else:
-        annot = matrix.where(matrix >= matrix.to_numpy().max() * 0.25, other=np.nan)
+        threshold = 7
+        annot = matrix.apply(
+            lambda col: col.map(
+                lambda value: f"{value:.0f}" if pd.notna(value) and value >= threshold else ""
+            )
+        )
         sns.heatmap(
             matrix,
+            mask=matrix.eq(0),
             cmap=HEATMAP_CMAP,
-            norm=PowerNorm(gamma=0.65, vmin=0, vmax=float(matrix.to_numpy().max())),
+            norm=PowerNorm(gamma=0.42, vmin=0, vmax=float(matrix.to_numpy().max())),
             annot=annot,
-            fmt=".0f",
-            annot_kws={"fontsize": 7.5},
+            fmt="",
+            annot_kws={"fontsize": 7.0},
             linewidths=0.4,
             linecolor="white",
             ax=ax,
@@ -831,8 +977,10 @@ def generate_figure13(output_path: str) -> None:
         _title(ax, "Symptom-Rome IV Co-occurrence")
         ax.set_xlabel("Rome IV category")
         ax.set_ylabel("Symptom")
+        ax.set_facecolor("white")
         ax.set_xticklabels([_short_rome_label(t.get_text()) for t in ax.get_xticklabels()], rotation=0)
         ax.set_yticklabels([_wrap_label(t.get_text(), width=18) for t in ax.get_yticklabels()], rotation=0)
+        ax.tick_params(axis="x", labelsize=8.3, pad=1.0)
     _save(fig, output_path)
 
 
@@ -850,12 +998,14 @@ def generate_figure14(output_path: str) -> None:
             value_name="value",
         )
         cls_long["model_label"] = cls_long["model"].map(_short_model_label)
+        cls_long["metric_label"] = cls_long["metric"].map(METRIC_LABELS)
         sns.barplot(
             data=cls_long,
             x="model_label",
             y="value",
-            hue="metric",
-            palette=sns.color_palette("Set2", n_colors=3),
+            hue="metric_label",
+            hue_order=[METRIC_LABELS[key] for key in ["accuracy", "balanced_accuracy", "f1_macro"] if key in cls_long["metric"].unique()],
+            palette={METRIC_LABELS[key]: METRIC_PALETTE[key] for key in METRIC_PALETTE if key in cls_long["metric"].unique()},
             ax=ax,
         )
         _title(ax, "VAS Direction Classification")
@@ -868,14 +1018,14 @@ def generate_figure14(output_path: str) -> None:
 
 def generate_figure15(output_path: str) -> None:
     print("Generating Figure 15: ECG/EGG feature importance...")
-    fig, ax = plt.subplots(figsize=(8, 7))
+    fig, ax = plt.subplots(figsize=(8.4, 7.1))
     imp = _read_metric("ecg_egg_cluster_prediction_rf_importance.csv")
     if imp is None or imp.empty:
         _no_data(ax, "ECG/EGG Feature Importance")
     else:
         top = imp.sort_values("importance", ascending=False).head(12)
         top = top.copy()
-        top["feature_label"] = top["feature"].map(lambda x: _wrap_label(str(x).replace("_", " "), width=24))
+        top["feature_label"] = top["feature"].map(_feature_importance_label)
         _plot_ranked_hbar(
             ax,
             top,
@@ -883,6 +1033,7 @@ def generate_figure15(output_path: str) -> None:
             y="feature_label",
             color=PERFORMANCE_COLOR,
             highlight_top=3,
+            annotation_fmt="{:.3f}",
         )
         _title(ax, "Random Forest Feature Importance")
         ax.set_xlabel("Importance")
@@ -918,16 +1069,20 @@ def generate_figure16(output_path: str) -> None:
             linecolor="white",
             ax=ax,
         )
-        _title(ax, "ECG/EGG Confusion Matrix")
+        ax.set_title(
+            "ECG/EGG Confusion Matrix",
+            fontweight="normal",
+            pad=11,
+        )
         ax.text(
             0.5,
-            1.02,
+            1.01,
             _short_model_label(best_model),
             transform=ax.transAxes,
             ha="center",
             va="bottom",
-            fontsize=9,
-            color="#555555",
+            fontsize=8.2,
+            color="#5b5b5b",
         )
         labels = [CLUSTER_TICK_LABELS[i] for i in matrix.index]
         ax.set_xticklabels(labels, rotation=0)
