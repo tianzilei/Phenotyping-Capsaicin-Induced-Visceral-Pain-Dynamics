@@ -1,0 +1,15 @@
+{
+  "version": "final_vas_complete_inclusion_v1",
+  "source": "01_data/processed/e_coded_20260916T144438Z_5c144eb7/BaselineData_E_coded.csv",
+  "estimand_population": "Subjects with all VAS_1min through VAS_20min cells present and finite numeric",
+  "rules": {
+    "required_columns": ["VAS_1min", "VAS_2min", "VAS_3min", "VAS_4min", "VAS_5min", "VAS_6min", "VAS_7min", "VAS_8min", "VAS_9min", "VAS_10min", "VAS_11min", "VAS_12min", "VAS_13min", "VAS_14min", "VAS_15min", "VAS_16min", "VAS_17min", "VAS_18min", "VAS_19min", "VAS_20min"],
+    "numeric_range": [0, 10],
+    "zero_is_valid": true,
+    "reject_tokens": ["E", "T", "", "NA", "NaN", "inf", "-inf"],
+    "no_imputation": true,
+    "filename_T_stage_exclusion": true,
+    "retain_exclusion_reason": true
+  },
+  "source_is_not_modified": true
+}

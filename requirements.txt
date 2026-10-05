@@ -1,0 +1,2 @@
+# Full recorded Python environment; standard-library QC/demo needs no install.
+-r dependencies/project-python312-20261003-v2.lock.txt

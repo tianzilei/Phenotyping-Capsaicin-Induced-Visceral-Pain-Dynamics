@@ -1,0 +1,51 @@
+{
+  "version": "scientific_figures_20261004_v1",
+  "type": "reporting_and_rendering_only_no_new_inference",
+  "source_bundle": "/private/capsaicin-owner/.local/share/capsaicin-dask/deliveries/scientific_report_sources_20261004_v3",
+  "source_manifest_sha256": "ebac4ef1f8b6061310cba9d332f828380845dd262aaa62554f53825ea1e83729",
+  "Gemini": {
+    "initial_request": "req_efreSE8aKgDZNTzNWSn-eQ",
+    "initial_result": "res_067e653e1a9d8e7a6b83",
+    "correction_request": "req_cLU_5KyhQ4O0OV-CbER9mw",
+    "correction_result": "res_b3b024536bbb190c37cd",
+    "independent_validation": false
+  },
+  "main_figures": [
+    "observed_support_and_first_codes",
+    "observed_means_composition_and_continuous_span_changes",
+    "recorded_symptoms_regions_and_all_108_cooccurrences",
+    "complete_FPCA_variance_bases_and_model_modes",
+    "all20_repeat_internal_prediction_levels_and_paired_differences"
+  ],
+  "main_tables": [
+    "cohort_and_analysis_sets",
+    "minute_support_composition_and_mean_finite_rates",
+    "prediction_all_models_MAE_RMSE_and_paired_ranges"
+  ],
+  "supplement_figures": [
+    "FPCA_subspace_axis_stability_and_whole_curve_reconstruction",
+    "GAMM_reference_and_apVar_diagnostics",
+    "candidate_model_support_and_diagnostic_retention",
+    "missing_rating_algebraic_bounds_and_all_current_MC_statuses",
+    "training_partition_recovery_and_baseline_development"
+  ],
+  "machine_readable_tables": "all18 modules; 139 recorded-code statistics; 364 finite-change statistics; all1255 current MC statistics; 24 complete FPCA diagnostics; all200fold/20repeat aggregates; 176 cluster metrics; 96 variability; 178 candidate; all recovery/baseline metrics",
+  "formats": [
+    "PNG_300dpi",
+    "PDF_vector",
+    "SVG_vector",
+    "CSV_full_precision",
+    "Markdown_report",
+    "HTML_report"
+  ],
+  "display_language": "English source codes and labels on scientific figures; Chinese interpretation/captions",
+  "dose": "investigator confirmed 10% w/v x 10 microlitre = 1 mg",
+  "uncertainty": "exact q.025-q.975 descriptive resampling endpoints with stage-specific B; no population coverage or simultaneous-band claim",
+  "prediction": "all20 points + median/min/max; primary original weighting, person-weight sensitivity in supplement",
+  "finite_change_incomplete_marker": "hollow marker/dagger for actual displayed insufficient statistics; all32 new insufficient in full tables",
+  "phi_unit": "weighted basis amplitude, minute^-1/2 for fixed trapezoid minute weights",
+  "clinical_or_safety_claims": false,
+  "primary_p_q": null,
+  "sealed_opened": false,
+  "old_outputs_overwritten": false
+}

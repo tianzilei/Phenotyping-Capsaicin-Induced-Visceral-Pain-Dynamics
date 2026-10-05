@@ -1,0 +1,12 @@
+{
+  "version": "egg_unitless_probes_v1",
+  "pool": "development",
+  "status": "frozen_advisory_features_no_acceptance_thresholds",
+  "target_sampling_hz": 20,
+  "subslow_band_hz": [0.005, 0.016666666666666666],
+  "reference_band_hz": [0.005, 0.15],
+  "ecg_harmonics": [1, 2],
+  "coherence_half_width_hz": 0.05,
+  "thresholds": null,
+  "rest_stage_use": "paired_description_only_never_filter_stimulus_by_rest_frequency_or_amplitude"
+}

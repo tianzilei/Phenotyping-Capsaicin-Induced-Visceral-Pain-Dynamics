@@ -1,0 +1,91 @@
+{
+  "version": "source_mapping_admission_20260927_v2",
+  "status": "frozen_for_main_analysis_candidates",
+  "policy": "filename_structure_and_algorithm_match",
+  "description": "Accept explicit matcher statuses and evidence-bearing links from later accepted mapping pipelines. Blank status alone is neither acceptance nor rejection.",
+  "accepted_match_statuses": [
+    "accepted_strict",
+    "accepted_relaxed",
+    "accepted_relaxed_session_expansion"
+  ],
+  "excluded_match_statuses": [
+    "unresolved",
+    "unresolved_mapping_without_verified_subject"
+  ],
+  "required_fields": [
+    "current_subject_id",
+    "path",
+    "filename",
+    "stage"
+  ],
+  "eligible_stages": [
+    "E",
+    "N",
+    "C"
+  ],
+  "ignore_filenames": [
+    "._*"
+  ],
+  "ambiguity": {
+    "shared_physical_file": "retain_as_candidate_but_mark_shared_and_do_not_count_as_independent_person",
+    "multiple_files_for_subject": "retain_all_algorithmically_accepted_files_for_downstream_source_adjudication",
+    "unmatched_record": "retain_in_audit_only"
+  },
+  "accepted_blank_status_rules": [
+    {
+      "name": "enc_matching_v3_supported",
+      "bases": [
+        "source_code_and_reviewed_alias",
+        "exact_source_name_chat_date_code_abbreviation",
+        "exact_source_name_chat_confirmed_historical_code_abbreviation_visit_unverified",
+        "unique_same_date_abbreviation_cross_device_code_variant",
+        "source_code_reviewed_alias_short_spelling_complementary_E_rest",
+        "missing_abbreviation_unique_date_code_anchor",
+        "missing_code_exact_source_name_chat_date_and_abbreviation",
+        "same_code_abbreviation_variant_same_date_anchor"
+      ],
+      "equals": {
+        "supported": "True",
+        "rule_version": "enc_matching_v3"
+      }
+    },
+    {
+      "name": "reverse_log_supported",
+      "bases": [
+        "source_code_date_log_corroborates_short_abbreviation",
+        "exact_log_participant_actual_date_and_existing_identity_anchor"
+      ],
+      "required_fields": [
+        "evidence_log_path",
+        "evidence_log_sha256"
+      ]
+    },
+    {
+      "name": "chat_code_correction",
+      "bases": [
+        "exact_chat_date_source_name_cross_device_code_typo"
+      ],
+      "equals": {
+        "chat_date_match": "True",
+        "abbreviation_match": "True"
+      },
+      "required_fields": [
+        "chat_message_keys"
+      ],
+      "equal_fields": {
+        "corrected_subject_id": "current_subject_id"
+      }
+    },
+    {
+      "name": "chat_log_clock_rest_anchor",
+      "bases": [
+        "accepted_chat_log_clock_rest_anchor"
+      ],
+      "required_fields": [
+        "chat_message_keys",
+        "log_interval_evidence",
+        "device_timestamps"
+      ]
+    }
+  ]
+}

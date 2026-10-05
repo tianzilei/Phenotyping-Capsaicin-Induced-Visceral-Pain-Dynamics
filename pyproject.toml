@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capsaicin-dynamics"
+version = "0.1.0"
+description = "Data contracts and execution design for capsaicin pain dynamics"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+capsaicin = "capsaicin.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+required-version = "==0.16.10"
+line-length = 88
+target-version = "py311"
+extend-exclude = ["*.md", "02_quality_control", "08_outputs"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = ["E401", "E9", "F821", "F822", "F823"]

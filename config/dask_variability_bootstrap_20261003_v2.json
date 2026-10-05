@@ -1,0 +1,100 @@
+{
+  "version": "dask_variability_bootstrap_20261003_v2",
+  "status": "frozen_independent_fixed_precision_extension",
+  "parent": "config/resampling_server_plan_20261003_v2.json",
+  "master_seed": 2026100312,
+  "replicates": 200000,
+  "batch_size": 1000,
+  "checkpoints": [
+    200000
+  ],
+  "statistic_family_size": 96,
+  "MC_total_error_probability": 0.05,
+  "MC_allocation": "96_statistics_times2_endpoints_times_single_fixed_final_checkpoint_separate_from_v1_pilot_no_combined_all_look_claim",
+  "quantile": "generalized_inverse_order_ceiling_Bp_ties_retained",
+  "MC_absolute_tolerance": {
+    "VAS": 0.01,
+    "VAS_squared": 0.01,
+    "VAS_minutes": 0.01,
+    "minutes": 0.01,
+    "proportion": 0.002
+  },
+  "MC_rule": "both_2percent_of_empirical_range_width_and_unit_specific_absolute_tolerance_zero_width_requires_zero_MC_width",
+  "source": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/people_private.csv",
+  "source_manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json",
+  "expected_people": 215,
+  "expected_complete": {
+    "1_10": 206,
+    "1_20": 56
+  },
+  "windows": [
+    [
+      1,
+      20
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      5
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      11,
+      15
+    ],
+    [
+      16,
+      20
+    ]
+  ],
+  "intervals": [
+    [
+      1,
+      20
+    ],
+    [
+      1,
+      10
+    ]
+  ],
+  "residual": {
+    "degrees": [
+      1,
+      2
+    ],
+    "minimum_points": 6,
+    "minimum_adjacent_pairs": 3,
+    "variance": "SSE_over_n_minus_degree_minus1",
+    "fit": "OLS_centered_actual_observed_minutes",
+    "mssd": "actual_one_minute_residual_pairs_only"
+  },
+  "raw_summary": "median_of_eligible_people_at_least3_actual_adjacent_pairs_primary_complete_window_sensitivity",
+  "paired_summary": "mean_late16_20_minus_early1_5_people_complete_in_both",
+  "burden_summary": "median_of_complete_interval_people_exact_piecewise_linear_auc_first_time_moment_and_midpoint_late_fraction",
+  "bootstrap_frame": "all215_true_people_same_whole_person_multiplicities_across96_summaries_recompute_eligible_denominator",
+  "historical_bootstrap_difference": "historical_R_sampled_fixed_eligible_counts_separately_new_joint_whole_cohort_scheme_frozen_here_same_descriptive_estimands",
+  "median_definition": "expanded_sample_median_even_n_average_two_middle_values",
+  "failure": "undefined_eligibility_or_zero_area_retained_no_redraw_ranges_conditional_on_defined_values",
+  "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
+  "runtime_lock": "dependencies/project-python312-20261003-v2.lock.txt",
+  "driver_timeout_seconds": 86400,
+  "per_task_threads": 1,
+  "source_mutation": false,
+  "primary_physiology_tests": false,
+  "scientific_gates_changed": false,
+  "not_in_this_batch": [
+    "functional_depth_refit",
+    "GAMM_FPCA_cluster_refits",
+    "20_repeat_nested_CV",
+    "Markov_null_phase_tests"
+  ],
+  "parent_execution": "config/dask_variability_bootstrap_20261003_v1.json",
+  "extension_reason": "39of96_MC_insufficient_in_independent_fixed20k_pilot",
+  "parent_execution_sha256": "80af8a3f6cfe4060eb20adfc6f8f0051dcf307408e96c8dea2ed51e620c58f08"
+}

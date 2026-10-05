@@ -1,0 +1,61 @@
+{
+  "version": "et_followup_v3",
+  "status": "frozen_provisional",
+  "role": "additional_exploratory_analysis",
+  "frozen_after": "provisional_vas_v1_results_and_user_E_T_clarifications",
+  "seed": 20260916,
+  "data_config": "config/provisional_vas_v3.json",
+  "semantics_config": "config/vas_marker_semantics_v4.json",
+  "interval_minutes": [
+    1,
+    20
+  ],
+  "scale": [
+    0,
+    10
+  ],
+  "E_audit": {
+    "window": "two_scheduled_minutes_immediately_preceding_first_E",
+    "criterion": "both_numeric_and_exactly_zero",
+    "interpretation": "already_processed_E_full_contiguous_zero_run_normalized",
+    "autocorrect": false,
+    "assume_first_E_is_pain_free_onset": false
+  },
+  "T_audit": {
+    "retain_pre_stop_observations": true,
+    "assign_individual_cause": false
+  },
+  "marker_distribution": {
+    "estimand": "empirical_fraction_of_candidate_rows_with_first_recorded_E_or_T_by_scheduled_minute",
+    "denominator": "all_candidate_rows",
+    "event_time": "first_marker_column_only_not_verified_stop_time",
+    "method": "empirical_counts_no_Kaplan_Meier"
+  },
+  "observed_curve": {
+    "estimand": "mean_VAS_among_rows_observed_at_each_minute",
+    "uncertainty": "subject_bootstrap_pointwise_percentiles",
+    "bootstrap_replicates": 2000,
+    "level": 0.95,
+    "minimum_valid_fraction": 0.8,
+    "group_comparisons": "descriptive_by_eventual_marker_not_causal_or_predictive"
+  },
+  "bounds": {
+    "estimand": "candidate_cohort_mean_of_bounded_unobserved_VAS_and_trapezoidal_area_1_to_20",
+    "method": "algebraic_extremes_over_all_unobserved_cells",
+    "unknown_contributions": [
+      "E",
+      "T",
+      "other_missing"
+    ],
+    "assume_post_E_zero": false,
+    "assume_post_T_high": false,
+    "meaning": "finite_sample_identification_ranges_not_confidence_intervals_or_imputed_data",
+    "counterfactual_caveat": "continued_observation_VAS_requires_a_well_defined_post_stop_care_regime_not_currently_verified",
+    "numerical_bias_scenarios": null
+  },
+  "model_refit": false,
+  "model_refit_reason": "requires_matching_refitted_v3_model",
+  "prediction_enabled": false,
+  "physiology_enabled": false,
+  "timeout_seconds": 300
+}

@@ -1,0 +1,3153 @@
+{
+  "version": "public_release_inventory_20261005_code_review_v1",
+  "created_utc": "2026-10-05T09:46:58.170058+00:00",
+  "source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
+  "source_worktree_was_dirty": true,
+  "source_snapshot": {
+    "src/capsaicin/__init__.py": {
+      "source_sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+      "published_sha256": "91447944015cec709e8aa7655f7e9d64e1e4508e7023a57fe3746911c0fc6fed",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/acq_segments.py": {
+      "source_sha256": "205b5844fbeb2eae19f567a7692c6e0f781b2b63092950465238b46267ab8c02",
+      "published_sha256": "bcb6402405040bec562f5eec116c4332b12d098a28c694bde25dd676bd45102b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/acq_source_selection.py": {
+      "source_sha256": "cdbccae52658e8067add9fb3f27c2f20acf4da9815c20a3172b904c47c83ed88",
+      "published_sha256": "2ec3d5af41106ea1b6582ae7dcaf598de340d1f38ab40a098b616e99dee0463e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/analysis.py": {
+      "source_sha256": "1cd5861f96d8a40b45bacdb83ce3e1e67a608d9b2715e712b14af9ec15c077c0",
+      "published_sha256": "aa273035a11d033de7c2c3536b5cf6dc52f7859205eedc20d9b0957679e63871",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/baseline.py": {
+      "source_sha256": "aad945744f14c670e3719d24fee08f9f0f4e76c951bbb482116575f1b85bf64b",
+      "published_sha256": "af9edbf13596a23cd2938863a6f3d2236715380bbf06c0fa5d81f41c9679bbce",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/cli.py": {
+      "source_sha256": "6edce339c59087ba2f8176379af3ce50538bd41e1dba5c48df1516245aefbc44",
+      "published_sha256": "6396b8932b66814c993660fe283c20e1e7fdb183c18b7153e619203f00c7d4e1",
+      "transformation": "publication CLI/status/rendering adapter; aggregate inventory explicitly reports history not checked; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/completion.py": {
+      "source_sha256": "46e366dc890f8f1b866474b2ef08ee81e8a5d517686fd18394d9f6b8431f55fc",
+      "published_sha256": "542c5f66712c30f28a69e48252b4146d0b2102f4859cc9bd6d9f9a036713ece3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/contracts.py": {
+      "source_sha256": "6386c5f204e0929075755f80ec4cfa43928b0188a4f6ec0841f2544a5008fc20",
+      "published_sha256": "ffd8630461d6f818f320774599692541d3302b74312c14f5597f7ce59d28b056",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/crosstalk_calibration.py": {
+      "source_sha256": "dfb8c35c54b4586881f89d366982c3455c80b6799e20f6b85481e3459a1c7791",
+      "published_sha256": "eb35fbd134872b4aef5f02450495621acdacaf546412f68ac172716e4157e0b5",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/data_locations.py": {
+      "source_sha256": "c99b133bcd5d26362f15ffb6dab45158806067a8393fa5f4732ea6289767ff31",
+      "published_sha256": "1676679e08863db309ea790200bf3ff7dd47439f35efd5540e2d6a0d6e200461",
+      "transformation": "none; publication CLI/status/rendering adapter; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/derivative_v5.py": {
+      "source_sha256": "7eae52d3f69272d3b2bdd4f05025db8019cdeab9ed3ebbf28a99eecd951c4d15",
+      "published_sha256": "3e77413f3be3ee408e17b7b36be5e184643c19c14b89ccf6f710c6b8103d6969",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_cluster_legacy.py": {
+      "source_sha256": "9a8c199763646807eb715f2f67f813df5efe0dcb8172b4b591ca58c36171c76c",
+      "published_sha256": "df13dabe901a45a38676a189631f6ad50b6b178fd8317ce036f64bf9a374cc79",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_development.py": {
+      "source_sha256": "885a6f64a12b00bb32e35b843395ef10b4e00de95ad5a5180412649cd799c2a5",
+      "published_sha256": "1dabe6723f4778a1c7c32822be0a2cb2f9d0565c890494501103362aa3ba4ebd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_observation.py": {
+      "source_sha256": "3b7fc7ba59eb73efc9b8743ec507b6cc063e22cd91f0a6b2b26c8d270cc50161",
+      "published_sha256": "175b6cac8d5581310f77e709a5c8e6b822b3b4c6d6b85c969dc2d7d07ed9fc31",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_prediction.py": {
+      "source_sha256": "037c7fd0e111e1d2bb96f98efdb354b11ef4ff3f1418238b9454f2bd8a58109c",
+      "published_sha256": "ad1b22a102f9c197246b77abace03f2a21af04d1ac0c19760950926397419d01",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_r.py": {
+      "source_sha256": "c345022091e1ec09daf406e775217073d4661ca66aaecad1cbbd30385d72128c",
+      "published_sha256": "5231557b9eefe25404bc65041d5ddcb27c11f8c6df9d716659ed736e2a470a05",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_r_plan.py": {
+      "source_sha256": "51438551c119baf230a74d8bfc2d76069e99d228304366240cd27fa91896a1b0",
+      "published_sha256": "477bd27c8845c1f0be76c9856ca49986bff2fb62d77530f459ba86734728aebd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_remaining.py": {
+      "source_sha256": "b849fdc5df81f5c7888592c41d492b87ead7af44b1fc62b1f1672e00551dcb2e",
+      "published_sha256": "e4fca108e6eb63a16377abe8f3df224e00103242d8e13b42dfc908898e711448",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/distributed_variability.py": {
+      "source_sha256": "1c99312238f02619e8711436f234ac5e44898b6099ddb11ce659028efb25f7c5",
+      "published_sha256": "f623baf3ce251a40531896eec28932ab5507ca574e59b74dab4172348988397f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/e_coding.py": {
+      "source_sha256": "61ccc0e0db297911bbaa30bd8708f8269a9779a6919e3d687bfd0e9f6f544879",
+      "published_sha256": "3038dbaca6b4a7434603283c4216da0ac431bef4941b9e61d8c9e4019156068d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/ecg_candidates.py": {
+      "source_sha256": "06220e5130050666b23dc09dce10dba6371c617906b12e4289dd58ef1496c847",
+      "published_sha256": "0d60c430772060663d8a7c4290f4cd10e3978940f5be3d3ae18bce88b381bdaf",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/ecg_lead_stability.py": {
+      "source_sha256": "a8048fbd48f4245996cf58bab32ef1e9d8352a90c0a9527c0c78b080cb2e52dd",
+      "published_sha256": "dbd4ac0bd22b5e94aa7dd1fdcbc5cb85f3694e5fd24c5952ac437ef9c3628a4b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/ecg_rr_candidates_v2.py": {
+      "source_sha256": "ed9686ae7532d92dd839b5b81bc886b4b0200c8bb511324765ce610734d608df",
+      "published_sha256": "ddeb43734f80c43f0723be5b17b08a0911b2a7de6c4260537b7cd1dcd19e2d53",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/egg_motion_diagnostic.py": {
+      "source_sha256": "7dd7235d133cea6a92ab6b5cfbd86ce6f29be5457838f29eedb2a0c6b7f7d383",
+      "published_sha256": "82b939dfeb92168b93ff233f06b4ba363ff18a9628800c1cd9c0fb88e6945633",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/egg_peaks.py": {
+      "source_sha256": "ef0f948fba94b273a708b79857fd49df584c10bd623ff13a8ac1a7c119ed546c",
+      "published_sha256": "7f4c70c8297811dcab3b040f6e9ed9d9382c5c039f7cdd895dd03ca0242e8f1e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/egg_spectral_resolution.py": {
+      "source_sha256": "4d95cb18f59ae8b55d7362293f5b97bf10212f52310c543e0923f64bf9bd457e",
+      "published_sha256": "f012b31c919a6b9bf26b9dc4fed5c881673acb4f0dadcec64ce3810c876ae467",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/egg_stability.py": {
+      "source_sha256": "60cf3863924f05d2f9c46ae197b30919867f730acae7eabd82fa3f1eaec7dbf3",
+      "published_sha256": "c58a6aa85c2eaea596935d18e0fcca39592ef81f7ac2a17894ee444ada168ef7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/egg_unitless_probes.py": {
+      "source_sha256": "8b8792dad9a47d6c6c64aaaf1799ecf32ceb198b750a318a3b4edd8a7905ac15",
+      "published_sha256": "1028ddeb8ab6b727c22c6248709f9cba318b00dfbe9b54b0a08f2019760095e1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/electrophysiology_qc_v2.py": {
+      "source_sha256": "09e343faec5b7a1ad77a5e22d072deee916e3b65826729cfa8e9d3e3ddfbf025",
+      "published_sha256": "c4005b23a59838e12042017ee9e2a67f8a950ab7654ab23b26bb5c69eded9586",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/event_clocks.py": {
+      "source_sha256": "77ab55dced1e312b9637ca05043fd693d49d8faa55214c2903c11c50de8162e2",
+      "published_sha256": "022740b6e2a2d40e7640b7efff735367307a67abdae55d20a6fd4ee2a74d68e1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/fnirs_source_selection.py": {
+      "source_sha256": "87aa9104409076db646cbb71c2d0608ccac6fb83c977b6b95c106163518e6d6d",
+      "published_sha256": "2cbe1a3a06b32a8888ece683421892cb7e9927f2985751b4a653d05ed1ce48bd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/hash_baseline.py": {
+      "source_sha256": "6ed7cb109ae0bac40ba3596d225142f85397862929b2ffa2063236062abb545a",
+      "published_sha256": "7a2ff13a2092e7d01049fcb3c84d55bc9eb16ab51e8b28f3136b6ae2e2881a92",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/missingness.py": {
+      "source_sha256": "46eed8ae39d03e3f34d7f77857524c7d9dd7bad4987a6d2b21a340ba84b6bed5",
+      "published_sha256": "0a0658fa365eb58084ea48141dfc93d1718791871b671793635fcb60c2258f99",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/paired_candidate_change.py": {
+      "source_sha256": "20cad3fab4d4f3cddb425b30dae5d67f4f44850139c51236d500315f15f59942",
+      "published_sha256": "b4c03dac8eb4701c3dce730388a888bff353197cf104139d14cc5a36a7fe8ed6",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/participant_matching.py": {
+      "source_sha256": "37b15d767de9976b103748413cfbe6ea38456ebc40c251071441355fbf24e99d",
+      "published_sha256": "7a445312aed1e18063801fa3d751a0c8a515d6dd0d227db44bbeecfffecfe654",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/qc.py": {
+      "source_sha256": "6514a3bd7949c17075b13a00468c21cbd98385c985876d2a7c9454be4ff485aa",
+      "published_sha256": "13f0dfada612138fe4941c14803324c2de82aa92b0cb77875a2e40d4a9b06256",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/readiness.py": {
+      "source_sha256": "7acba95a53738ce20af68cecda0bb00679200d45039f5155f668d774c75e3068",
+      "published_sha256": "955425443f66f8e49d31fd0e3260de5298fbdc3ea9f917c2883e6732df08610b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/reanalysis.py": {
+      "source_sha256": "e0a9493f32da41793e4b288d2f9c0b15df505916b5802e65155ba5d828e71a35",
+      "published_sha256": "5401eeee864bb5355550aaa5c73aa397a227bbc114b52bc5397a6be9d83dde4b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/reanalysis_signals.py": {
+      "source_sha256": "5bd3f7c3ade9747bc49e2da4f8c01da42dbf4f0ebae7345c91ee8725ff8349d0",
+      "published_sha256": "c1e29a72c7217721bd08f45269f8089cd660df2a8eb08634f6851790eb433b2d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/reference_validation.py": {
+      "source_sha256": "0d412162a3b1b20666d9f43674f450921a9325f8c228ffb8994f42d3496603c2",
+      "published_sha256": "97ae81825d74db24fbf1a4d4835311e72576936122e7d53f53c8f30ce1b6284a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/rest_relative_deviation.py": {
+      "source_sha256": "6be702b60d9ebec4f077837d73df10861f53e4981befd607f8c97356610abe14",
+      "published_sha256": "bf7943fdf94f75b41b827aaf3e34f4f41d99e25b35db66a239ca3a13665d5eb7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/rest_state.py": {
+      "source_sha256": "f360f87f8a8690c52736c599059ee3734d7115723ee1c04aca8682541b979c8f",
+      "published_sha256": "06e0f69ee328264b92e92299988e61ebf97ff6d8ec5aa106b54ced6aba31d4c3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/science_completion.py": {
+      "source_sha256": "49ffa304a49fc18ff068e4112289de02980b42d8e4dfa70bbb068b1a6b78793f",
+      "published_sha256": "1f39087b7f8e1bf7da55cb683bf32b7e65ab3cdc116b97648447510918f73f34",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/signal_spectra.py": {
+      "source_sha256": "2151d2f95219df8b43797ca8d96a0ce4b036446fec16bcd0045a8e98f0f173ad",
+      "published_sha256": "039970f7e84fed74722bbebea82edb173a0fff392f87789c0bd89930cbe23319",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/signal_time.py": {
+      "source_sha256": "84eee91f3288d164c30a46c3a350a69327343db2aac89eb6510ac986d4828d40",
+      "published_sha256": "9af74ccbf2a3bc7bde4a8d903f83b64e3bb74f2ee3d5d521790ee5a8229d23c5",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/states.py": {
+      "source_sha256": "ac0d668a5a5d37117a70965c5ccdd44a47c5df2e10e75aed02ff7ec8cc61a802",
+      "published_sha256": "766f60f1279ae89d882f438d24aa212499d37062cf42615e4439250f4f11579e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/stopping.py": {
+      "source_sha256": "e7589cc5b240e1a998205449c25f5c803a020825ef0e327c1a2dbabc0baa732c",
+      "published_sha256": "cac1392f3fa368a2122959a5d8b4a83ca7df7f50291c486d4303fc1f7f16877d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/sync_verification.py": {
+      "source_sha256": "5b3b10e3a60b650b9fde8aabab04767d10bf1684ba295d668c4a31aaf6271311",
+      "published_sha256": "fd585ba610a6305e3920d3c9922cf8e9448caf3f2b62c6d4e0c69a349574935a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/variability.py": {
+      "source_sha256": "cc47f83dc97ebabf5f0f7f5ef071d01cc6a6daf3050c0de7478b6b7e4a180b39",
+      "published_sha256": "db3fe0b1f88c78a346d42823bbebab241ffa19246010d9fd5a330f0bede9d6dc",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "src/capsaicin/waveform_audit.py": {
+      "source_sha256": "9e6c274521832e92dca70a017c2b201bbc456396cc947cafdd77e218ef07124e",
+      "published_sha256": "196ab3250feec44669f62beab524ab61b3b452ade388450389ba9edbee4ea9b6",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/derivative_bootstrap_v4.R": {
+      "source_sha256": "d202259c5b58b281edaf41f03ea80ca266081f54f1bae3addd4d89c3d076edc7",
+      "published_sha256": "552bfb4ad464c7c9ee61503fd533f3b1bb8a6b8042f7f6a17830fe1731f51985",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/derivative_calibration.R": {
+      "source_sha256": "f6ec9ecd13b43fd92352bdd2d16dbb1762ef08234d4ebb14881567aadb25da44",
+      "published_sha256": "08a6ced51bfe52dd390a28be691bb3e9e413baf32aa82172c9ba75c064a2ef00",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/derivative_candidate_v3.R": {
+      "source_sha256": "048a31c4527c3a8fb62d33f22718e6e9dd3c9ce6fa7bb0dc5071b0ff36b9aa1c",
+      "published_sha256": "7bfe0af61a21ff8f3d4a188b753d90cdc5e75723999a228364180d41d49c37de",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/distributed_vas_backend.R": {
+      "source_sha256": "1090cf75e9a626dbc12a5900d02c81eb1138458adec4b10fb47dc8dfd5750c83",
+      "published_sha256": "eeee2b1a4ae211581b2ce3c46930fdefc958f75851c09477021ebc9931c829ba",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/fpca_followup.R": {
+      "source_sha256": "42a762dfb4142bf2897c551448ab392a6f83a49e817e9716e1090803f87a6b50",
+      "published_sha256": "0dfaa2d481dce92362d28e74cf19aa53d75343b3657fbb22dbad429da8c71e43",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/gamm_diagnostics_backend.R": {
+      "source_sha256": "a04b95529980727300f0b39e63b2cbd77d881659b6c8fbe0af294c9723b9a992",
+      "published_sha256": "5dfc23f7ec90cf5623bf511ad424bc77b3f98ec09049d3142c9e73aa18722a94",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/interfaces.R": {
+      "source_sha256": "cf0cfa1a27c9282d4ffe7e6c6cf4009164fca349faed39b65ae8f02398798790",
+      "published_sha256": "43fa723a5843af091b0f2d68000d0423e90b7803b63fcb3a31419eadae73bfbd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/remaining_descriptives.R": {
+      "source_sha256": "6aacad15badaed25ffd714cc542e6818a11e35affce8040bca5aafc8459de14b",
+      "published_sha256": "b6d06953c0273253b8be13bb9218e00183992b9b2e466fc8d8af6b751b0d9353",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/sparse_fpca.R": {
+      "source_sha256": "88c31676a4413c015f070ad5fcc9d401ffa7f109abb4389a40d2579e8c052fa1",
+      "published_sha256": "76e31c25fb7f714be9564e8935dee122368fb7fb2d75b81ee0e466eb89e5e020",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "R/vas_models.R": {
+      "source_sha256": "bce5339061c578b1700994152f0bd4d90b99a00a9baf66a309658fe65dda9f35",
+      "published_sha256": "da1831d98cfe078eab1c28a801c73a889d2cf842fa36d89ef1fc64d6d1bf7a46",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/clinical.schema.json": {
+      "source_sha256": "125d81e409691923937c76934d63913f3f6680da6e2b56ef672eec56c0e0fa1c",
+      "published_sha256": "125d81e409691923937c76934d63913f3f6680da6e2b56ef672eec56c0e0fa1c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/clinical.template.csv": {
+      "source_sha256": "94c3651928d364c1817bd553e0416bd8e600ea955f9f4f9544fd3e911091e729",
+      "published_sha256": "94c3651928d364c1817bd553e0416bd8e600ea955f9f4f9544fd3e911091e729",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/fnirs_channels.schema.json": {
+      "source_sha256": "c2f04f7f765769491951926124f7aee3a0983131de2661595036792d0be87331",
+      "published_sha256": "c2f04f7f765769491951926124f7aee3a0983131de2661595036792d0be87331",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/fnirs_channels.template.csv": {
+      "source_sha256": "e97cb6ebb2c489550b12ea3099ef9e97a2bfb6256d131fb2b7d4ad8962ba7b0b",
+      "published_sha256": "e97cb6ebb2c489550b12ea3099ef9e97a2bfb6256d131fb2b7d4ad8962ba7b0b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/physiology_windows.schema.json": {
+      "source_sha256": "7e2d3f03e7fa0bc8d72e4626a5a3f30342a06fc4263fbe880b38591ddc2d22be",
+      "published_sha256": "7e2d3f03e7fa0bc8d72e4626a5a3f30342a06fc4263fbe880b38591ddc2d22be",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/physiology_windows.template.csv": {
+      "source_sha256": "3c79cacfeb891f61d908056cddf813543a647ff2bd2d97843c9b7cb1262f7e4b",
+      "published_sha256": "3c79cacfeb891f61d908056cddf813543a647ff2bd2d97843c9b7cb1262f7e4b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/signal_events.schema.json": {
+      "source_sha256": "191887ccbcec25fb19dfb28237caf752ac682cef09e849f000ad29f948662957",
+      "published_sha256": "191887ccbcec25fb19dfb28237caf752ac682cef09e849f000ad29f948662957",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/signal_events.template.csv": {
+      "source_sha256": "2fa7cbc8a35c3adc2828cfb9b5d8620cd1f83a27f3c1131b02548f30e57dd231",
+      "published_sha256": "2fa7cbc8a35c3adc2828cfb9b5d8620cd1f83a27f3c1131b02548f30e57dd231",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/signal_manifest.schema.json": {
+      "source_sha256": "95c509daee11d9ed125bcedc2e9707c8f63506a83eb9313dd06dac5ff1c0f8a0",
+      "published_sha256": "95c509daee11d9ed125bcedc2e9707c8f63506a83eb9313dd06dac5ff1c0f8a0",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/signal_manifest.template.csv": {
+      "source_sha256": "6193fe28b0ae2b00586fda35e1080318da63c65ec30666d234748c40e256a5a3",
+      "published_sha256": "6193fe28b0ae2b00586fda35e1080318da63c65ec30666d234748c40e256a5a3",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/subjects.schema.json": {
+      "source_sha256": "a56916b780ba7a019f3b54216b931a61b1e86738786ec5e310f94b864a06809e",
+      "published_sha256": "a56916b780ba7a019f3b54216b931a61b1e86738786ec5e310f94b864a06809e",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/subjects.template.csv": {
+      "source_sha256": "5736ea53527c1779221b2b323cf7551737edf08b2c5cc0fb214056bb721ecc7f",
+      "published_sha256": "5736ea53527c1779221b2b323cf7551737edf08b2c5cc0fb214056bb721ecc7f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/termination_events.schema.json": {
+      "source_sha256": "6bbc9e25cd55578e779ae9ee28be457a0bbb650dafddabb5242e993012afc51a",
+      "published_sha256": "6bbc9e25cd55578e779ae9ee28be457a0bbb650dafddabb5242e993012afc51a",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/termination_events.template.csv": {
+      "source_sha256": "52dbdb6e2c1b2a6ee0d1ea05c01bfde37fae3c2704db83aabff7e2243dba2c59",
+      "published_sha256": "52dbdb6e2c1b2a6ee0d1ea05c01bfde37fae3c2704db83aabff7e2243dba2c59",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/vas_long.schema.json": {
+      "source_sha256": "040a27c18154415da6d11a45f722c1a75a0104f2de3cb201bd818ae439c3a86b",
+      "published_sha256": "040a27c18154415da6d11a45f722c1a75a0104f2de3cb201bd818ae439c3a86b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "schemas/vas_long.template.csv": {
+      "source_sha256": "dbbef351580a0e120e5003a8304f3fb857bfd1106c3a33379a7640d987b8d7fb",
+      "published_sha256": "dbbef351580a0e120e5003a8304f3fb857bfd1106c3a33379a7640d987b8d7fb",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/project-python312-20261003-v1.in": {
+      "source_sha256": "30fa15ffe2937a45345ac7f7d4189f94298e2d602cfce89692b47805578aa2ec",
+      "published_sha256": "30fa15ffe2937a45345ac7f7d4189f94298e2d602cfce89692b47805578aa2ec",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/project-python312-20261003-v1.lock.txt": {
+      "source_sha256": "3b719fc88ce2d261529419411152ecde8132db9bf2d889aa41728f54951fc573",
+      "published_sha256": "0b7258d61dbfd983b9d6000174b66ca36bba8b62ce280c6d99d75f1421071094",
+      "transformation": "none; local dependency paths generalized",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/project-python312-20261003-v2.in": {
+      "source_sha256": "4ed5d8fba353f32561727aa4cb79de07762a0e20eda9b3b71d195906f9e8f245",
+      "published_sha256": "4ed5d8fba353f32561727aa4cb79de07762a0e20eda9b3b71d195906f9e8f245",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/project-python312-20261003-v2.lock.txt": {
+      "source_sha256": "cdba7146e45959308c815eb9b74de7d5058c92f45596a6192727981426b1b03c",
+      "published_sha256": "e1c0c2e00891dcedc62024330594a21122405f865472d09688827a54303aa06c",
+      "transformation": "none; local dependency paths generalized",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/r-packages.txt": {
+      "source_sha256": "49a71e0bb2dd35bfe9b72a1551926a58ba835a0743c0e385d57e610729c1ecf7",
+      "published_sha256": "49a71e0bb2dd35bfe9b72a1551926a58ba835a0743c0e385d57e610729c1ecf7",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/r-runtime-20261003-v1.csv": {
+      "source_sha256": "928c7913e0009346d8423adb2d763c9da20671afa50e6027cd4c8b473daedf52",
+      "published_sha256": "928c7913e0009346d8423adb2d763c9da20671afa50e6027cd4c8b473daedf52",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/requirements-core.txt": {
+      "source_sha256": "4175baa352ddd23876e6e66b3c91ae87070485d4924e2427fcce0407d854691d",
+      "published_sha256": "357668604cf0fcbed9e7c6d27fdfc65a2cde0ce98726f43cc8b531faebe34507",
+      "transformation": "none; private configuration test/documentation clarified",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/requirements-dask-control-20261003.txt": {
+      "source_sha256": "57d703331a377d1d14b9578ecd8dc721ccf953950afd7950be06585ca42f3a65",
+      "published_sha256": "57d703331a377d1d14b9578ecd8dc721ccf953950afd7950be06585ca42f3a65",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "dependencies/requirements-optional.in": {
+      "source_sha256": "af7c0e8dff3a604c6b7d49c236091e1f1382801b8e1ee26aba5914124e8c2fb8",
+      "published_sha256": "af7c0e8dff3a604c6b7d49c236091e1f1382801b8e1ee26aba5914124e8c2fb8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/fixtures/README.md": {
+      "source_sha256": "66f8bd62297570400136cecd8395b3469228079836bcef54440a7db6eed8341a",
+      "published_sha256": "66f8bd62297570400136cecd8395b3469228079836bcef54440a7db6eed8341a",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/fixtures/synthetic_vas.csv": {
+      "source_sha256": "ee2d02fedc0c7b25d834d4c041b8f429900841e3adbd90704c403113530920e2",
+      "published_sha256": "ee2d02fedc0c7b25d834d4c041b8f429900841e3adbd90704c403113530920e2",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_R_followup.py": {
+      "source_sha256": "119c76447a1adba6c22c0febebbc3e81f18fc43e8375368f5157ba42acb64c2b",
+      "published_sha256": "b066ee8bb4294173245d5f4b9316a48a5529dfc0674677c508338c60bc1f6a55",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_acq_segments.py": {
+      "source_sha256": "40eb8368a48cd56e8e74f724705b7ba79002a459d3e797eaf9d10d39f5e08be1",
+      "published_sha256": "e3ff5e79fb11e47fc121bf885ffc21f1f8fca3a093cc5c1b52240eab93d26182",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_acq_source_selection.py": {
+      "source_sha256": "1c3b23673cf992fd54c87f42d54db2d9c27da589f7054b66d69681ecbcfc8295",
+      "published_sha256": "155695f35c583bbabc4a1739ccc9f25b319fd74da648a15a4fa9c6bd5c4efbc8",
+      "transformation": "synthetic fixture identifier prefix clarified; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_analysis.py": {
+      "source_sha256": "846082134d73e9c137a4a671275c26da515c0e65a9f704bcb08f89b098c571ae",
+      "published_sha256": "5bb54f3e76368864289df814f272931d80012cc0f8550f5c6ca647ddf1249636",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_baseline.py": {
+      "source_sha256": "70478744184a2fbf7329ab78ee6fafac6bd27f9a8de555a4a303596666b717d0",
+      "published_sha256": "6a999f2cf39be1571c5d5b8d8561d8f621a91e28ede5d85019f104d0cf76682b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_candidate_associations.py": {
+      "source_sha256": "57d8bbee93845f7968650de61a3543ea1d0a5ed1e00d2f17e3aa4c8efa3af426",
+      "published_sha256": "1003702993fff79d380e813fa6d4831f09f8f0b81517f3af2d792d5255a15a20",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_completion.py": {
+      "source_sha256": "9fad0fc3e8fe1583dd045ca1460ac2fff5cf371706ae0b2302225003c1c0aece",
+      "published_sha256": "7743a6629ac723d5c67e95fb14f89c0f6ccfb7033573d2d72b69450064d4f8ac",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_contracts.py": {
+      "source_sha256": "1f42ba94d6feb9a21cd04d5cb6dd1d2c123bccf4d3fceeaa3511c808a6c3f23a",
+      "published_sha256": "5da36981354208696a0c603a163ea7419c8495c380f1a3a123cda520ec014a48",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_crosstalk_calibration.py": {
+      "source_sha256": "efdf6e7025e04b482d47b3555206c2504a8f66802dadf4c97e20d6b9a96e9311",
+      "published_sha256": "b3d9b9a5e5f3dd5b51c8b156799e2c1524d1a3dda734e3f13998a0c5694ada67",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_data_migration.py": {
+      "source_sha256": "91e6ef6112180ed406636662af543dadc0fb5d994ac23ecb0b85acb33e8a6008",
+      "published_sha256": "5c728d1586d28fff696dcce6abd2e9d42479d4482440b11f4337c4cb97d758a2",
+      "transformation": "none; private configuration test/documentation clarified; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_derivative_v5.py": {
+      "source_sha256": "2e4d4b2628ceab6f682c102ff866cefb984a5fd1111837ad393d954772a06732",
+      "published_sha256": "8e44036188488b98ec82b4b50ec7e268bc6c9cd3e238b30a0f39ac2ac08f9378",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_development.py": {
+      "source_sha256": "61efd53cc05393b273b04ffdd4d8967d611dde3cecc97a3e9fc836d6e962438d",
+      "published_sha256": "cb7ae996a3aec233820b4c9018b97df6f0c0d62b3f9d3cfc6b19e680a8a9f822",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_observation.py": {
+      "source_sha256": "d065be87097e3c3caeb9be0f64be561a1be8e62011e438bb62f427bee9523919",
+      "published_sha256": "0764e3456ad0c849b47afbfa09ddc5ccdb074f45d867fec632178af7eb9505a2",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_prediction.py": {
+      "source_sha256": "f3968fe83a07f8c4a2de046443b35e798182dda12a4525e4559cfd000d676020",
+      "published_sha256": "1256213020d4b4256170fb9a5a90490ec8d72aa85f4968d9f65c3a069dee65cd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_r.py": {
+      "source_sha256": "bbd5a71d10dce5b8b63c753d05bea471e3c08339d95e24e7f8119f6c1bc98610",
+      "published_sha256": "12c924562c0eb7b405eff83bba7450b2f909c6d3da88cff6d2454a75249a8111",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_r_verification.py": {
+      "source_sha256": "eb2d8a585a80ebf0d57cb2b2fabea90e1e98e353e2d28fefc4e1e378df011e00",
+      "published_sha256": "4edd52ad88352dbc69af2f93a0b522329caab5ebc3935d5635bda675084e5ae4",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_remaining.py": {
+      "source_sha256": "2f1fa49df498a814213f58dc3111bdeecaff422a6441ad8aa0c4b06b44346568",
+      "published_sha256": "b27c5610214ee4c654474355dd70240651b95b74f64cd8fb271edac06c2e4a31",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_distributed_variability.py": {
+      "source_sha256": "a54f0583676d0e79f6216b168502b32b85782e587fcceda4767bf814592d2f29",
+      "published_sha256": "35a971b01e39c34e6df34cfe2c490ad322da75182f56c849aa70cde22268018b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_e_coding.py": {
+      "source_sha256": "0c3482819671a72059fd5a5a83038fbba73961d1c1a39ad424af3e4a5d32b1c1",
+      "published_sha256": "f036bef797009bd8679ef6b002b2ba081d756c7d18b46286c2fc8aeb75da27b0",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_earlier_E_sessions.py": {
+      "source_sha256": "40f5d2e45f5fa3cf403890e5508edf65a99124235feed9e8f5c8b8f61460eb9b",
+      "published_sha256": "7b624c4d5e3e010bbe706c7327f68df9ad32db29a3e1aa0033bffac75af9187c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_ecg_candidate_sensitivity.py": {
+      "source_sha256": "c1b32541dac5859dcb4220f855a92d9e92846bc41abd2995137117a95bb9a8fd",
+      "published_sha256": "33a0539a28f4cf495ad02088fa0f877bb2dfc804d852296eaf47c7fd0cbd595c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_ecg_candidates.py": {
+      "source_sha256": "9f366f24a5fdee449ce90a87b65925e837e7b819c6dfa1842a8510de8c7ef768",
+      "published_sha256": "f5e96ff22e81a06755ce25fb8ae94bacfdce853c089062984093d3e680f1b6de",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_ecg_lead_stability.py": {
+      "source_sha256": "4562c3f5a7bdc977038f38832a3eb491f79db34678a8c6d9a370741909bb2435",
+      "published_sha256": "45cf27ba96a4ce97f74a8854031fa6a48c44b5b4532fc59fc9aab75d351c1b12",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_ecg_rr_candidates_v2.py": {
+      "source_sha256": "49238238ef84404105849b9d89371ac392165c7e869675a1e7a7c64745e6a65d",
+      "published_sha256": "48f07ff0b315d12299de381be29bf395f7dc9179b7fdc8ee18f820e3af2d2b89",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_motion_comparison.py": {
+      "source_sha256": "4346dfd2db43ee5caa3b29ef619d7b7874c0aa453b5ed6b8c9e9e24b7968239b",
+      "published_sha256": "5eb950bf34bd93ac88f03dabd6345619141f0a65285f059e8d8b55cb609e89bb",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_motion_diagnostic.py": {
+      "source_sha256": "ff75a0068a021f997fececf4271f9fc87674ff409a7ae2050059c3d5278c80f2",
+      "published_sha256": "54f542224b3b00cda69074ee3e62351b154f8b4059f67c0924a1f0685f5d9c20",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_motion_sweep.py": {
+      "source_sha256": "c5dfbcf7afe4d672543dac17378d8758e19d78f400daf47ea1e8a85fba2953ab",
+      "published_sha256": "2c4f28d2cb1f6a92bbc247581ebbb32335c46ddf26801ced7e6bc9ff27388b43",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_peaks.py": {
+      "source_sha256": "898e88bca5039c29a30cce3c8a1014d1b56046cb4891674b7db8642e088086cb",
+      "published_sha256": "d07f9b6111f4e8fe8492740fa5d1bbcc374bb0e0ebddf37022af42bc37946b56",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_spectral_resolution.py": {
+      "source_sha256": "8456a23503ee773c6c865d06927bcb6ac57668d272e534fc9cf57883908b4b85",
+      "published_sha256": "d3eed11cc27c247f86dc325ede0cad4916404cda8f7ff645faecd221bb0698fa",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_stability.py": {
+      "source_sha256": "d611fa9dff1a0325acbb82898333a5eb64af94bae1b5663511e77e8e1c7eac4e",
+      "published_sha256": "f99c3719818d80e7a84a6a9ace8775ab8ed4d3d98a487384af21822f0c0abc07",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_unitless_pair.py": {
+      "source_sha256": "55501566838efdc333cb81f24694a8c55972760faa4cccc132b2f5b13e724d51",
+      "published_sha256": "5ba23271d5242eac987f754f8b4485de29fb573b1fffebb832437063506141f9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_egg_unitless_probes.py": {
+      "source_sha256": "079d3d109bde0b578018e4f35a856bea521187bce893462a6250144782ba3d2f",
+      "published_sha256": "3326bee2db847cecc79933853b4b09b1364a896f17747a9e8b3c5c3001299656",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_electrophysiology_qc_v2.py": {
+      "source_sha256": "155ef32a0e882dab3f5e3237b3679e261adcd55b5427d578f1baf7f24dccbb77",
+      "published_sha256": "544a4d4433da614c0292b623eed8ca0662bcd4de8bd328fde7cf7f9530dfdc11",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_enc_signal_inventory.py": {
+      "source_sha256": "a829a536f997dff7eec313a4001881bf4ab6a1f06f5314bca9ff9c3ed80b949a",
+      "published_sha256": "a829a536f997dff7eec313a4001881bf4ab6a1f06f5314bca9ff9c3ed80b949a",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_event_clocks.py": {
+      "source_sha256": "bc5586c1aae425da9148c7c1c4e5d12e1e1fa7c45a948bda3cd791325ec5a3aa",
+      "published_sha256": "bc82c701f96c04a0577319f7c41bae9e95f729f66cf8b76904b06d79828154b3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_extended_enc_mapping.py": {
+      "source_sha256": "b479e3c56cb9ee0d6d1f6b47542393c828823f5d5c74594a8272c81cb1937f05",
+      "published_sha256": "04afbfae8f11d6ae5a81e5d2c3f05656073c01b2a1a2c50a2b85c0d0fb420bf1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_fnirs_roi_parser.py": {
+      "source_sha256": "1ba2dea741c089bbd99da1417829f0c993a90c2f9ca4b081c2f73fe089b1a089",
+      "published_sha256": "d57a1fae12d3809e0b6ca7122ad19f4dd99844e85f678b82bb53f80c1c7ef4f5",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_fnirs_source_selection.py": {
+      "source_sha256": "dd9c332930da683ed4f0ea477ee76106a9da0170e50eb199ce0cf2f04b093e7f",
+      "published_sha256": "23b87fa4a224792a14de27dc3bf0f6433626dd1ec3ecdcb0fb862fe4cc357d46",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_hash_baseline.py": {
+      "source_sha256": "3639651b2f2f59730e662160c0023e82be04ee3066d306cc650606b5b28b5de0",
+      "published_sha256": "06ef1444d9f0927174cf2bbd14c32fe6f547049ce224fee349b3977f2de112e6",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_missingness.py": {
+      "source_sha256": "98a420f9d5dfa0af6e40059e381c3faad12f20d9e1c7c695db612c667491ff0b",
+      "published_sha256": "09a5c7e40d381f2f8e85c23985df02eab146546e87101b5afc7a50109a36d1dd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_paired_candidate_change.py": {
+      "source_sha256": "c29c0fc10a0d0f7d8dd19e2ee9501f4c26cdb2e7dd6cd0a882566c63fb14e9d9",
+      "published_sha256": "b51900710cd5165a27afacd085d48e8477f306b846a011e5008068e5a884d0cc",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_participant_matching.py": {
+      "source_sha256": "a98437424b35393b68bb864bd4b8e5a65c003cef7f5edeeb5ca55666da77a9bd",
+      "published_sha256": "a98437424b35393b68bb864bd4b8e5a65c003cef7f5edeeb5ca55666da77a9bd",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_readiness.py": {
+      "source_sha256": "3ec123db8d07cbdf8aa6d37169cccbb3918c1d741633717b70a6d3682df131bd",
+      "published_sha256": "cb807d3e0984d972497c57460576fe5fe43148f39e555e6ce9615b726251c2aa",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_reanalysis.py": {
+      "source_sha256": "a27153abafc4475ec9e3814edecfd3775afc4b50f8efbb10eabd0b4e22ae2081",
+      "published_sha256": "4fac1f1dd8748b065c00a48d9dad3cb45fa5063ada8e0c8032fbe9f13d7218d3",
+      "transformation": "synthetic fixture identifier prefix clarified; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_reanalysis_signals.py": {
+      "source_sha256": "6893099478313389424b9c5f5f73543c54910f4dc54b71459800ad7da6d5c75b",
+      "published_sha256": "81178b52d903c1b5f8f6c1b94d0f01c1773d00240cf0183c5c219d0ef71a4422",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_recent_electrophysiology_integrity.py": {
+      "source_sha256": "9525ee768428ffa86dc5a312dbd711f0f9d3394fc5e8cdc275d04eccfc6e3225",
+      "published_sha256": "bf556a25b45be4ca7f1c22ea558c79f00602bc7c310084c824e2d101471766dd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_recheck_unmatched_chat.py": {
+      "source_sha256": "9e8c85e620828d72cfd9e315c90de4d28829c1fe9d0c43b6ff497b8b26eb4ac4",
+      "published_sha256": "07840f29f559af1d1b69af0d342c1def4afa2e834d701693e893abbddb4477ef",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_reference_validation.py": {
+      "source_sha256": "335d76d0646d7ce88a9f1498a6f282cda611ab8771c771f27ef62eb949d8e931",
+      "published_sha256": "65d2ccdff7a46adec83b3091eded480203fc61233fc17be7bb444c65b70a32f8",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_relaxed_enc_mapping.py": {
+      "source_sha256": "cccd455efb9b82d49c70a60b40157e0323b8abcf30889dbe1297eee661b1ae52",
+      "published_sha256": "00fc92333214c47dfb83cdf483fce927396d80c1004caad61b6c8123a8b5d173",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_rest_relative_deviation.py": {
+      "source_sha256": "9a6971ebf629f63883e5d3ac42440703cfb4331bd1737dc257e3bfd25f80f85e",
+      "published_sha256": "48253cb9b71962018752ed8ec397202e6b5d407b8651cffa7eda2852071f28de",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_rest_state.py": {
+      "source_sha256": "9f0d04795397bbbb5f24df6cecade8a6ea99f707492556a3ebd67eb981043624",
+      "published_sha256": "7fd95630b6e5af5568f3ec4e5dc67a94cb839dac0d1f42612023a181c4bb5104",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_reverse_unmatched_enc.py": {
+      "source_sha256": "1f4c7944c5a439e4a6f29312271376c51e0fd4ecb73b62d96207a132fcb8e201",
+      "published_sha256": "4f15b9c3b5d0ec323cf0765ba3338d62b038a8dac0c38cca17372cd62596ddeb",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_science_completion.py": {
+      "source_sha256": "038be76e0a3514ad2c205a2d064c64487862eee8ddda24fb726d96de1dd12f4e",
+      "published_sha256": "2f0ed562052b8a077d421035d5d0c0cb7381751ba82107ebb44a43f56232eeaa",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_sensitivity_review.py": {
+      "source_sha256": "176594051d2adef661e16643401ccfcbaef727e8f31539cedb722c37bdd22caf",
+      "published_sha256": "596acf240ca7f647e86245a7682bc4f7744d7052ec90b677ca65d41ae9102b15",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_signal_spectra.py": {
+      "source_sha256": "c0edd588adfdbbfc1e64e8ed4117cddc5e5f39862b587d8e5fd6ed5310299a56",
+      "published_sha256": "d945f01763995afcdf8c6f38b35689c912aea130d8c60bd7f04dae2af28b90e3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_signal_time.py": {
+      "source_sha256": "ff622ef07d3ed2b99fdde38347d612fec8081407d99ac50fe5bec4b2ee2f4f0c",
+      "published_sha256": "39318f07627a32a4c12bdbde2ad13bd207394fa0d31c092ea5627849c59f1ba2",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_source_admission_v2.py": {
+      "source_sha256": "006dcff08812d637c6b703845c3b1af50c3b61935939c3dcb2f516955cee718d",
+      "published_sha256": "d239b8ff05e680d3f64af451b63784dca43a184f5673f422c9dbc9ad285c6ef0",
+      "transformation": "synthetic fixture identifier prefix clarified; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_states.py": {
+      "source_sha256": "eab1b00b6e0893b57eacfdfabb42b1127713158cd4b74a63afcbb3de8a4c2801",
+      "published_sha256": "830f2d35e413575745e28e52ccc87977a5f1c789049ae958d03844d3f4df4315",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_stopping.py": {
+      "source_sha256": "db824ed281eb5b753b7d1adf197d04ac549c6e6b6cc589c5d24e633ead463216",
+      "published_sha256": "f5a55897896a715526a39b8977748d300d0a86965f7b62c47046c8485b339f2f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_sync_verification.py": {
+      "source_sha256": "2a557d76b758ddf35110fc898dcc90c12c5f3837e3e0a73be5b93c8c918c24a3",
+      "published_sha256": "b9dcd75c77ebfd4ee5dd65ed848da9cc8f325fab8b2feeb2fc02a263e5ee2a50",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_time_linkage.py": {
+      "source_sha256": "0c49006102e6a53b014bd9e61749825bcd0ee315fefa4c0b1ab5566dde375283",
+      "published_sha256": "1f24db14efa88a5705f3f208087745400728650f8f88eedd31fe50722dc76b8e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_validation_resource_inventory.py": {
+      "source_sha256": "0e06a39ef4772ac488ffe62b8f9287a05629ef992d97726d9c2f54345b34b9c8",
+      "published_sha256": "cab0fc83245fc0c0d723c8803bd2ffa1ec5a2bb1051beaf6fc5d65a0d2ad040b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_variability.py": {
+      "source_sha256": "0b6e4d5722d6e357fea792084592e91cd087dd7c991d9f0e68e1abe2ba8e2725",
+      "published_sha256": "66bf194501d6dcd678d4d95f04afe18b3d21a22b7da51e91a4d0ed0403ceeaff",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "tests/test_waveform_audit.py": {
+      "source_sha256": "9e02ea285a564512471fcfa6636374fae76741ede0068076c11275fdd22752a0",
+      "published_sha256": "252213febe48b38b391324a04f11c29027522daa8c7e4482f6330692199a1b57",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "run.py": {
+      "source_sha256": "a879f9ff56510fed516202f588e4f5c001ba04c649e9a290eafe2f45b8c2c06d",
+      "published_sha256": "77cc9f3283cc647b1557a9cc9c9a7888e2bf6893c75f4fdfbb8134d768ee4f5a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "pyproject.toml": {
+      "source_sha256": "721b968a488444ef33520330bdfdca0ba0623865b7af89b59535e13e12e291bf",
+      "published_sha256": "523f2c26e86613f5a5f1f8690f68882018e5ccf769b4dbef72abc569866b712b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "renv.lock": {
+      "source_sha256": "879b3b36e78bdad6273daeee90f863ff0489520eed39052f5a9fc4735b3657dc",
+      "published_sha256": "879b3b36e78bdad6273daeee90f863ff0489520eed39052f5a9fc4735b3657dc",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    ".python-version": {
+      "source_sha256": "aa0d6581054e6e4ff3f91839deca7a854ad37221b8784d060b42d0f847ff1a3b",
+      "published_sha256": "aa0d6581054e6e4ff3f91839deca7a854ad37221b8784d060b42d0f847ff1a3b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/audit_recent_electrophysiology_claims.py": {
+      "source_sha256": "c1d7461d210ee7d92895b4c53131d19b3b443550729ba03e392585d4cf7c920a",
+      "published_sha256": "71a1afe4ea15a02f3cfb2346542fe5fdda00b8672c97d63384407a8d1c3eb4de",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/audit_signal_readiness.py": {
+      "source_sha256": "84881d68edcc14db5c494a26d6f160b790b1f3e996669308ba7062935c6e6154",
+      "published_sha256": "d3d6bbddf430a3cfcf12c579eb7a52e1550349e6f95ef21464951aaa7ac42e52",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/build_enc_signal_inventory.py": {
+      "source_sha256": "1d03b0a7395b48859b35d4f3c1140b2b7d766a43da48aa7fbb34c7816a3f4a16",
+      "published_sha256": "34bc6b31973109c0d88854e0d4a9cb854163594ae39308f9d5e4e90f8466ee97",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/build_extended_enc_mapping.py": {
+      "source_sha256": "5d10e3dfb39792a9aad5f0e930715fbe2f44a47b40b3691e53a9f7350d23bf95",
+      "published_sha256": "8d22e69e4b38f4feda079fc9b7eb1d9426e1d3c9daeba80541cec335ad405e1a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/build_hash_baseline.py": {
+      "source_sha256": "8bf91e66df47bc4dd2f649271b61002cada2041e997277415911249de1375e51",
+      "published_sha256": "f0201be0b2a21b156501441ab58d0dcce4b5b2c545e097f371acf4f0337716dd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/build_relaxed_enc_mapping.py": {
+      "source_sha256": "0348a788858a01069a701885337319286c9444e42171ba43bf82deb67e5578ba",
+      "published_sha256": "9be84e7d12a27abda195e95af1a00f53294384ef58f76184a5b7fed416ae10a7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/build_scientific_figures.py": {
+      "source_sha256": "1b8be10c4ccb25fdd9922cd14a9923cd2f2138e1575188cb4a49113425dc455c",
+      "published_sha256": "b624eb6800a031a8be9a8dfe6c872ba7ce6b7f019f7dcec77a88c036d4206e8d",
+      "transformation": "publication aggregate rendering adapter; historical test count labelled as original analysis batch; pinned formatting with analytical AST/expression equivalence; unpublished narrative replaced by artifact index",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_project_environment.py": {
+      "source_sha256": "cae5e80dbe89eafaa21710298768caa13fa2f6b88e2131dbea55c140c1a4a34c",
+      "published_sha256": "963bf61dfa0fe67945a63fe355d2e00dd9de18c3f4647b09283c0165ec1f552e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_v4_scheduling.py": {
+      "source_sha256": "a3a1c2e1f672a8d7d21a82d04c4b1f48dec0e2571b4472d848b6835d5395199b",
+      "published_sha256": "d6a8d4786c4b40fe08c2da4bf473e5fa3f3ab6dfab24df2fce554d89bfd1888e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/compare_egg_motion_development.py": {
+      "source_sha256": "d00cca4e94cbf654f06c3e3dc84f0b08a04334f94e5aa3a477997115b593d8aa",
+      "published_sha256": "6a9f4c3c568044467f147ef4df9f265d6c212b2af5d461782a93c045af3cdca5",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/diagnose_dask_R_precision.py": {
+      "source_sha256": "d0bcebd6b66751fea3c0595f4fa714258b9692a92b38d9bc1a5170c7b5bfe233",
+      "published_sha256": "2d5778046318ce5a083d2a57f99b6aca39168bf32fd485405b473fa93f045438",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/freeze_earlier_E_sessions.py": {
+      "source_sha256": "60a313384ca7b4f020dc93f9251feec97d461a1f4bb4ef363234ae8fc6944961",
+      "published_sha256": "af36ffdeca8ecb533af0e4c51aae1d8fadbd6736cacd8e84e197a908d143edce",
+      "transformation": "generic helper only; individual adjudication omitted; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/inventory_validation_resources.py": {
+      "source_sha256": "80a2a36136a08d3a07e5e6170e07088d53a912a16c011837b95419599b256a9d",
+      "published_sha256": "4d20cded4b49e7d4a702c19332cfbd02ea6ca00c38a385450f9dc05d49da889a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/match_orphans_by_time.py": {
+      "source_sha256": "f80d9811252b574a36861e49c32dfbb87dad5c055914149de5b7ad3eb3aee411",
+      "published_sha256": "24db8c8e2fdbc1332babbbfca681dcf04ce025d21fedf74dc72a10d4f8450b66",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/migrate_data_to_bids.py": {
+      "source_sha256": "b01e09faa771c0dfbc4f0c15fc4a17fb94b2c55dc68db3fb102518a7063e3efb",
+      "published_sha256": "9e804448228713201afab5490cf557e41a578522307f9cf1c63372cee9970411",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/pair_egg_unitless_probes.py": {
+      "source_sha256": "c49548d2bd27e00313ac94587a5a4bb0d16f16d0691bd654fa08004cb88e4622",
+      "published_sha256": "fdb89493cba1ae6ed86ccd6bc4ba9b19aabf16dc5fe054ce821652a2bde61501",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/path_resolver.py": {
+      "source_sha256": "b5cd482052c19b63f6aa21a1740acf8c626a3fc8b0bcbd4b110fbcc06a01ebe3",
+      "published_sha256": "7d1ff8c86b8b61e459f8fab141be6f7097da6f6f1facf92ef1cf672d4beea301",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/prepare_dask_R_analysis.py": {
+      "source_sha256": "82f45b8afd9a9399ee9645ea53c8223079c04993470d1251b529ecec74a9718c",
+      "published_sha256": "83e27ea95c4df19e669786fa4ba37479151320c3cf247e531cbfcde4d0c74ec1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/prepare_reanalysis_20260926.py": {
+      "source_sha256": "51ddc33742c5f8758dc5fe35571bfa104242e728a01cc6d5ee20ac5935f7b85a",
+      "published_sha256": "1c7ef574938d28cbec56ef9088efae62714443b40026a21aee35e230f39c1f59",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/prepare_scientific_report_sources.py": {
+      "source_sha256": "48aad3d323a35462796d1b0aeddac5fdff488953a6b010062f98f0cf1c56d3d6",
+      "published_sha256": "7c1161a2071000e4564a1a56d7d3279645d7b609eb76542818cc788823e8e29a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/read_legacy_xlsx_audit.py": {
+      "source_sha256": "ee3e52ea6aea0cb76766dfb03b672b3d842bf18e3ec6397590039838b830f8a9",
+      "published_sha256": "5e888b4f356521de4176063c0167c25b6f2eb551f578369825dcddad801345ca",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/recheck_unmatched_chat.py": {
+      "source_sha256": "18f7dd03b593a216c2e73e3a78afaaab800f5442c781613eeb2547a2a5014f20",
+      "published_sha256": "521cce66e81b34758457c97d2a89a542d242e9afeb81fc81c41befdeff56efc9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/report_R_precision_followup.py": {
+      "source_sha256": "7606dc48a3103ba3dab355cd907b24187895e0cf27fe0a6d8b796eff07b23aa6",
+      "published_sha256": "c8bbc7e06dba8674682d6c2488d26656126e4ebf6bdceb337afd5fda576a26d3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/report_dask_R_analysis.py": {
+      "source_sha256": "8b94793463ddebc0ff3516daeb2e51584d1d4929f60b88852e9e2b09758fa274",
+      "published_sha256": "241c28876c2a83d5d58e6e8a22d03540c5b88f04ca7f88599e8314c2a56b9a96",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/reverse_unmatched_enc.py": {
+      "source_sha256": "6f5157e2c3ef34b959a6abb1a47186caf233a9bf415c17f9885853baa5fde0fd",
+      "published_sha256": "3fe12f575c0277de8378bdea2c4074e5f8ce31bbd416d394c07e63a2f4c5b832",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_current_blockers.py": {
+      "source_sha256": "d800b494cfc4ecd58856c91e69a90bbdc99efb24678e191d3afea47a6e8d481a",
+      "published_sha256": "f47458e7d2ffd2baefcb288571742e4b0809bad385c4c20babbb71eb1198bdbd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_derivative_bootstrap_v4.py": {
+      "source_sha256": "b1feba212f2ff6d06249eb0dbb4b28cab81ce0a9c5ec74d81610a19f95f24097",
+      "published_sha256": "402fc93bdbeab05709bafe07407a1e74f06093dd83b9931af8ce3c9cf10b6afd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_derivative_calibration.py": {
+      "source_sha256": "e11ce8dc08b058164f1841323ed191670f86ec9a3c5e505069b2fa71c78a899c",
+      "published_sha256": "5a6b2cff965b70fb817ecd0db3dde181c8a302614a9816d55b1793b9c9276509",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_e_coding_update.py": {
+      "source_sha256": "7f851edc4fc67fae7e9394a6feb8ee58d59f163a77b78550fa7c6b17b3302f62",
+      "published_sha256": "6f6f493fcbe332745a22ad6e281a2000ec781eb75c5dca92290b0ddab1ec77b4",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_ecg_candidate_sensitivity.py": {
+      "source_sha256": "0e2a342ac239f07098e7d5dc7e20c75d909d66c22135e52a82b933b16b395f15",
+      "published_sha256": "8b14b4014ca7696ade74a5c3c2ff70012d4972f76b3ac886e4814c940402b29e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_ecg_candidates.py": {
+      "source_sha256": "68ab4ede9f8044a925dd22fe2b2395a2009728e12b555c7f49c752981cb8c322",
+      "published_sha256": "3fa2715013c940ab99574298088ff6cf89cb7911f47c0fcc93e78b8c8fbf5894",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_peak_clocks.py": {
+      "source_sha256": "775dd428e7f2b37f6115f944af38cbf21df211abaebb443fd1c3918b44717ea8",
+      "published_sha256": "cc12afd1b6012e9633f5cadb262939e08146828daef467b67ad9f19b90635e88",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_sensitivity_readonly.py": {
+      "source_sha256": "6ff9b9a7e77bef3ae5f99ee84928c5edc458b81f4a7af3570febb63af92e2bb4",
+      "published_sha256": "bdc9558fd1f803027e3941680388899cfa115703c8293cdfc715c4a088d79e79",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_signal_spectra.py": {
+      "source_sha256": "5f9f102b204f943cf1d102f3a61a13e7cd7a06f153e7c32f41a28f577526a35f",
+      "published_sha256": "b260677543b0bb17868e30eb3f806dd7751f65fe32e04b837d33b3965d12a3bc",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/review_web.py": {
+      "source_sha256": "d85d6de92c95c10e1ff2a7ec3975da5d05963ccfba63304a78d5bb178a61877e",
+      "published_sha256": "3003dc63d1e8316258291966c038074c9773c3871352c784f944c6d46247145f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_candidate_associations.py": {
+      "source_sha256": "fd96105d365a195676fb9fd595ece5257f36a5ff62c043a520144ee4994c62b7",
+      "published_sha256": "e41ce8a2d1971e49efbaa61a665ca7af0ffc30443842ee32108f58e3e49e5d38",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_complete_physiology.py": {
+      "source_sha256": "2d5461ccc3b5d584ebe0346f6d06955e5ad9fadcffab1ee26489626877d1d91d",
+      "published_sha256": "b95b833f5ca772831fb1eaa7789d18520e0637c1df6c928f0a84c993d89840b4",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_R_analysis.py": {
+      "source_sha256": "2fc0863151b034bd5569b48cbb7ad73e8bb86bf46a04f76d905ceb0defac240f",
+      "published_sha256": "6ab7bb4fa95eb02a3109f3ad41a900fc7424784e97c223a793837764357f6fbf",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_derivative_development.py": {
+      "source_sha256": "7d9155a7568a7309d8c2249825f564c8f70e7559adab656f96140560d1ddd3db",
+      "published_sha256": "3f8eeea4b476c838d34b9439786dbd5705277ae61612df35ac6e265b1cdcfdf0",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_observation_bootstrap.py": {
+      "source_sha256": "71e32bd086e1193406271b694ea3ce5f9a8f965cab51d961df1592b62a5ab384",
+      "published_sha256": "c14da6eb4c16a48a62f8bab1cc9e14eca07cf013f0197fe532e6d4bdb0d9ee04",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_prediction_repeats.py": {
+      "source_sha256": "ed93f31fb09e6a581a21ed8e9da26ed4e3544fcf218ec4d0ba128ad1a2d08c60",
+      "published_sha256": "91b84deb9c6dc81375114055e655f5006ac30d93c3212520419f71b59ecfb770",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_python_remaining.py": {
+      "source_sha256": "8c58c4ea47f26bd73e43701e5d4d8c618d86a5701eef4e1ae4cc847cbc22a283",
+      "published_sha256": "c23468c5544c02c18c2c5ce9fdd6fe2295e9f0d76244e53896c72d4a8f50b72c",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_dask_variability_bootstrap.py": {
+      "source_sha256": "515c779f77bd96cfa1e7d538cc86c23b88b3b9f595d92f3d7eb0c095054f0687",
+      "published_sha256": "61377aa0a36388af11269969db191e2e18802a72c200f642efc6e3977d20b54a",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_bootstrap_v4.py": {
+      "source_sha256": "29b4a1724add1af94c7e3acda8b67d7483c055b6d80a00fe695eddf6d5e2bbb5",
+      "published_sha256": "ad4f26cd9fa0f38ec7173b8a188656fc12120cb8c447f0150e00e8993396bba3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_calibration.py": {
+      "source_sha256": "3a1bb6b37f310635f149d17f5953873325ed98af7f6d1b3cadcfce767e92fbf6",
+      "published_sha256": "55324a674c720714ffa29ada24240793dc3929ad9833054f82e5412051fdb27e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_calibration_v3.py": {
+      "source_sha256": "7984a3bb147d0f8baa6af78d0d07c663909cc9c559f315043f8dac9cf5d5f782",
+      "published_sha256": "fbbe911ac99f55510686f900e23a22887abc68906385448e5ce2a65acac2792b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_v4_parallel.py": {
+      "source_sha256": "c9cf29461161f49aeaac30cd5bc58c45669381889b3b8f58f47203fb4126ae74",
+      "published_sha256": "078f5b7c5931afe33f72aa096f59b98160ea9673ebb5c30179e7fdda03c303d3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_e08_adaptive_egg.py": {
+      "source_sha256": "14aa1cbba38db7c5c479e9e1d2e05667492dc7863a99ec75956519891d87bb10",
+      "published_sha256": "06ce98b3037ae13f51c08fa6781af2081f68b9f773f033ba9cf66c0b89cd30d9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_candidate_quality.py": {
+      "source_sha256": "e6b70acc62b5377a40c6b0d7ff4b1b63f08594ed74371daa34cc7c2f4b76e8f4",
+      "published_sha256": "f188ffd486144263d2e2ad35f5abd62ed699eb77e4cbf8f3a64a9a9e87e2301c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_candidate_sensitivity.py": {
+      "source_sha256": "2b538c5cebe450276cc18395ba818b1114208222fdc15da4529ea191005f918f",
+      "published_sha256": "84a62050005c927cf7e692bae6f94419c3f38e75562832177041501c059469f7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_candidates.py": {
+      "source_sha256": "db6a6f574600d87ef6f6f57d6804541d4fa98e64c84236eebb15a7611dbcb67d",
+      "published_sha256": "a2ecfb7f6618ad4f6694737abb083371bd148d5c0f928fe194bb4242624f7b68",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_egg_paired_candidates.py": {
+      "source_sha256": "9fba924c8712a75958e522dda998f8dfcf213fc5ffad197b70cc80f0f96fc0a8",
+      "published_sha256": "35cf3c6be8f9f69a9b52f7e99c6799cd448b70326a776343942879ae1229e3d4",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_lead_stability.py": {
+      "source_sha256": "f9e237e221fd4b9de70b3760906b87ceebbf14a05b2e59ab4212e3bbe0b5c3fb",
+      "published_sha256": "ee14ba9760509b332f9e72307e3db43b0cf0c883ce550911c63d34351affa35d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_rr_candidates_v2.py": {
+      "source_sha256": "af780720c78a4464659c2cad5dfda50889c079246bcd05c8d7d6c8121a147bc9",
+      "published_sha256": "8b3b5cf6616c6a37fbc53a7722ccf1366482cc26455a45f5bad8cdefd6f73b0d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_rr_sensitivity.py": {
+      "source_sha256": "12533626f3f14f6ec34ea2e748359da56506cd1482464afcf9475f80a502a51a",
+      "published_sha256": "bee634e33398b7310958b7d3dacacfe95f14e8af15854559c8fd853d1c7f07dd",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_ecg_rr_symmetric.py": {
+      "source_sha256": "267e7e6bb3b97fe3e5a8c270d8266e324798b8b21ab0db6a6c3bb6bb961bd748",
+      "published_sha256": "6c634b51a6eb030f102eb40f50c1037db55627192aa94c99249dd1d81174ca20",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_fnirs_association.py": {
+      "source_sha256": "4ca54bd45e6c6c0e9feacec85364a1080b2d1bd71260593587621f0f92bcd0d9",
+      "published_sha256": "170c1b87d8325e40420993498942b71edb973a08b9bd694d74f189ec78ee68ae",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_motion_development_audit.py": {
+      "source_sha256": "ac63c5500d84373ceaa2d1101f1e9e7b7976650bdd43cae5a2d4d89b4453f3d4",
+      "published_sha256": "f9413d889dc7584c557961665329bbaccdd0347e62882a27e08a4d0aceafb25c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_motion_sweep.py": {
+      "source_sha256": "edfa8626fb84b2660a5b63b009d4129669f7095cbfc362f8ff0029f69bceed9e",
+      "published_sha256": "690509992d41196002d76b74b7988d20990cf65fd75e9cd4fff4bdb5c447f5fa",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_peak_diagnostics.py": {
+      "source_sha256": "980a54a6e397facc255281dc690b18bc9ee1af2e3e6d8102b52d9b7261059d8b",
+      "published_sha256": "10cecc0ca617240e348653897e4baf330fedd704214e4446283894dc621e6605",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_stability.py": {
+      "source_sha256": "f1962bdd441eb5bdb71d9c86af827e239715543d845594056c178fb1c8e1492c",
+      "published_sha256": "d51ce098303ee7212599158e50ed49962da6c19984c2cc75028718464d508b51",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_egg_unitless_probes.py": {
+      "source_sha256": "a2f4ab26ee27549f182083f7069d7d5ede6a3d83680b429e8989078ac06c59b8",
+      "published_sha256": "1603d27b2d93b338a53c05832384a776431db5bed358a91efa2b141a3300490f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_electrophysiology_algorithmic_qc.py": {
+      "source_sha256": "fc4adad2e70c0116f071a16cc2d50033b5cc3d128d7bb3006c92d3026c6dcbbf",
+      "published_sha256": "b6b17b5efc8cdaa3645a2df5c2ebe6d78bcf5c18326ae7538b17986fabb7f4ef",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_electrophysiology_development_qc_v2.py": {
+      "source_sha256": "a74937456dafff5732f776c3680e337ba9064b03f22b736e16641761f405d0c6",
+      "published_sha256": "6d499124c8174130ff15e48a12e9ebaff9416f2f2a4e41632ee07a5532d67afa",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_et_followup.py": {
+      "source_sha256": "3fe1ae0b28283d34edcbff56aded005f61da7f37e8d44c65e847cf8f2e386be9",
+      "published_sha256": "60092eafdaa318f7080729f3d26d3db245d8ae0741aed450e2e512cf502c8d01",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_fnirs_roi_association.py": {
+      "source_sha256": "fdddbee74a26b23f9eb2b9dc167beca7179254333b6205c3c24673908a315ef8",
+      "published_sha256": "c87435e7782dfbc4cbe9243691b86dd8afa70cda19151ace9582fe69f03838d1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_fnirs_variable_length_roi.py": {
+      "source_sha256": "c9b6a6dc2f6fe6d5ce19b8cbb9c9fb64ce593a00a95d7018bababd17ae101dd1",
+      "published_sha256": "75cb015605f30eb0796622b065633feadacfc176c864469a686c68eca797f7a7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_fpca_followup.py": {
+      "source_sha256": "595ad8f68ea61c93975851f5b628cd740395c06c58ca480e9b3e7ed291bb084d",
+      "published_sha256": "571936c384232e6b16c9ae8a8d1d22e5add993dd2215d0b8691630b401471a15",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_gamm_nuisance_development.py": {
+      "source_sha256": "aff87e598d58c3fd9b81aeab9033bffaa215a720cff60cab285ee189b16f67ba",
+      "published_sha256": "d6ea742442ebffcf6d0b85d9cd42f10641adcdafa55d8480662974997ee55a15",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_length_aligned_associations.py": {
+      "source_sha256": "cbecccf5ac27606a28c963d8e9ce77ae52f8808ade9bbec27ab78ec2c3bd6a6c",
+      "published_sha256": "bd7cd370ee2a93bc0cd5d2c85904d330cc9b1075801f17b34fda81c86e285e16",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_missingness_audit.py": {
+      "source_sha256": "1f0f0dfcbe6af2a97d3a396d4f95bd7f102a216eb575b75f0080c094a4fa66e8",
+      "published_sha256": "c67f96f4b98eb7f920c040a46ce6cab5b85a2d0506eaf76e75df73f0f9d79e4b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_neurokit_fnirsflow_reanalysis.py": {
+      "source_sha256": "8bbe835929d420c4a7c037bb79bc20998dd6d6cb7aa2bcdbaf5c10f9cab98f4e",
+      "published_sha256": "cbcedc68921f7f96f50baebf2500ac11c1097334fea499ca76379f8bc27845ef",
+      "transformation": "none; local dependency paths generalized; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_next_rating_20260926.py": {
+      "source_sha256": "9f8324e6da920e56295eef126fcaaf1cbde8364a219a5d3f7a305115a15a1ce9",
+      "published_sha256": "fa0d76a9c69fa13af687e5d144dfdc97ad80493b083b4aeb134bffddfa645910",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_prefix_classification_20260926.py": {
+      "source_sha256": "731cbcffbb8a626ca48a4fd7abd9318d4f81a7e73ea188ff70120346e7ee4e57",
+      "published_sha256": "08e81c3677c52e819e8f2fb1eec33da6f61daae06735520e57a67961cfe140be",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_reanalysis_calibration.py": {
+      "source_sha256": "eeaaa4dd727db422a260c5c39686c86878b863f7c2554953b5c25adca9f7b598",
+      "published_sha256": "5a9bb5bd2a5bf482e1fda32b88f7ff53088be240750f06826d5d61eeb2fcdbd2",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_reanalysis_clustering.py": {
+      "source_sha256": "801f906cb344f180de6ee9857479c535fa65b75337f66ead31c15fea9b0f27a1",
+      "published_sha256": "af368afca84b17e1877257303bfa8faf427ad8e9cd471f8f91541ebb98d306ab",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_reanalysis_descriptives.py": {
+      "source_sha256": "0ddf11c4edb503cffcf6036d43108dda9a850faf9a8bfe2e8975b23d2347e43b",
+      "published_sha256": "45e9e8732d0e6fdcbd8b4b4b7309b008fc7089349d582bf179b6c310657089d5",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_reanalysis_fpca_followup.py": {
+      "source_sha256": "67a1f4e9b9e9ab49c96fe8a01ef7ce420f49d22fd58a821e0d0fa2e5afc9606a",
+      "published_sha256": "9cee17db978ed8725581f6a3890c092d64070f0c7abb308f96659265944f2c2d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_reanalysis_signals.py": {
+      "source_sha256": "7ea443c88c087a41b24f9640c792a218d00c56db14f6978b7cbc8dac3b383096",
+      "published_sha256": "4b58593a8f0cca423d3c8280d427e4a190b207f439a855e8de75c76a2ca75044",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_remaining_descriptives.py": {
+      "source_sha256": "bcc2556aad00b99e39317a829aa6b389f148cac8aedb6629fb5739059f28a932",
+      "published_sha256": "f70f60fbc7eeba7e5a713078d46d0d74fc44bd271ab0474320d80da2a1e29702",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_crosstalk_audit.py": {
+      "source_sha256": "4eb957077d54a847c203c21280c67a3fb0fb05b5e323322171e51482fb178331",
+      "published_sha256": "f3d9b69997c0ebfb58ea74650f06f4e60c3494f3db86540ce54558f2a8d693d2",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_post_hrv_pair.py": {
+      "source_sha256": "e41dd64ebc959eeaba61dbfd723fbb8b33202105bb0b2433b3d284c04c088a9d",
+      "published_sha256": "7932782ba1837f0e615cf6b8f02fb84f6a6e0d9c0b38b0f370b9267ca68eca46",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_post_hrv_pair_symmetric.py": {
+      "source_sha256": "4ce06ffed6be4a6a38514e1ebc5857ac0cee9ca72073e6e3947ef776ec8811fb",
+      "published_sha256": "2dad06008cd47f6e24fd9d4f147fc6d80301c77a27da3be47283e754804e95cc",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_relative_deviation.py": {
+      "source_sha256": "5d4f8f03cc24752a2bb155cff6a21e0c33180a3631fea0e6e6fc4ccffc8f4e66",
+      "published_sha256": "f6b75f5f4995ee2e04372d918f4bb8c27bf76523b51b5be6c8deb42b2348e9d1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_relative_deviation_symmetric.py": {
+      "source_sha256": "5df1139a8045eb06ef85561ac7a824b1c878c57452add61d78c3429d1e0330cb",
+      "published_sha256": "4487bdfb4a145178de2130564cca094cedec251ec8f465c0cdb643295b39810f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_signal_reference.py": {
+      "source_sha256": "66acaac40a00188106bd933919a70d2422bdb7ea8b6308ef1a5db4a340df4308",
+      "published_sha256": "3cd16b2a75c14e50d14fca927ddca86be113e13f684689bd18be274734a952ad",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_rest_waveform_qc.py": {
+      "source_sha256": "8965e00f01821fd76e5a7b38b2b3e2ea5842f3d4d65d642c26352c4698e880e2",
+      "published_sha256": "001d3eb7a40b167b0a160b92777980c75428ec0413958364f230ad55a96129f9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_scientific_completion.py": {
+      "source_sha256": "70295daf7ce54eb871e0ac6c940f75864a16c3fcf08413f904e50bcec9f19a1e",
+      "published_sha256": "6c528d4c635339df6e65551e7071a9cc7533f59913c85d504a1af4d34e941735",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_signal_spectra.py": {
+      "source_sha256": "38ad867905263c2b00eba0ed6867e042f4c99e387bf1c76a073da5dad9a57c25",
+      "published_sha256": "bd09a8467f808fa2611eda30cf35589b5499ac9219ceff458b90d692e80a936a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_sparse_fpca.py": {
+      "source_sha256": "002d012480b350fb327afa0f987e9d706eb1cb7e4bababe735018d7b36172087",
+      "published_sha256": "ffd1fa973f5d4d0ba1f23635a503038d70b1a301ab80d898fd5c127ff3a979c3",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_state_descriptions.py": {
+      "source_sha256": "44fb87f432c1d3121c4b5e6bf717ca5529f44ffb0cf37a45c19dfc7d3c5f3e62",
+      "published_sha256": "c937466f59613ce9ceceb3a417765f3bfac4d384312d083089e49b5fedc37f0e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_symptom_context_20260926.py": {
+      "source_sha256": "31f3262d8db2bed26ea18ea21fabf7b485228eb19d387ec11103a5b18f4bf2b0",
+      "published_sha256": "b60aff90414da98c489973898885ff8585b9cef1a6f3987d27feff15a80f7906",
+      "transformation": "none; publication CLI/status/rendering adapter; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_synced_physiology_association.py": {
+      "source_sha256": "4492675b25465f40383ec9bb9eff1cdcd9353ba59120a8161c9b150e07242c50",
+      "published_sha256": "f35cdc0d98533be955e458ffab1dde351f42a2adca8267d0f503b809cb23082f",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_variability_followup.py": {
+      "source_sha256": "7df57cff8a60f268194ea1ed4310dea4a8e97bbdc52b4f1bd620c479ec9dd96b",
+      "published_sha256": "fc0b88973ea3fa3debc70653ef6b4c93a86123cf4776b3bece6ad1d48a373439",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_variable_length_physiology.py": {
+      "source_sha256": "9db7a72aefb70539cbb9f6cf75deba2f51d7cdac609b113b69ce6e9688a8c253",
+      "published_sha256": "f95fd7df45a89a8f05bfaf051fe2a35a8333a0a9c2abe894891c7d477fa5e8a9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_variable_synced_physiology_association.py": {
+      "source_sha256": "28e759b9ec1f3aaa50483cea92261a3b4266649ee9c39cd184d40eda09da519e",
+      "published_sha256": "5644d59fb7cee11331a9956e3589e0b4277710fc3ac63baef2a6dc27a9c7d37d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_waveform_provenance.py": {
+      "source_sha256": "a2e2c194531492f97d19c5e6400b8b319a442ed3cf8f171210c937fb921aa0a7",
+      "published_sha256": "b0aae7de3df4457fa301dbe6da1a1dd92dda9530ebd8dda22c4188df77480006",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_analysis_delivery.py": {
+      "source_sha256": "f25acb172d1ecee0487c657be03964b75539de19b3792df4784280a8cc52ae94",
+      "published_sha256": "3bc43b8b323d51da2c4819f1104dec46b8d5c5c999cb7bdf3a4180d0f62c3778",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_complete_FPCA_replicates.py": {
+      "source_sha256": "129e69663f1969bc0bdefbbda4f28e30857e7f2da7eccee95e26bcc698ef7d97",
+      "published_sha256": "68a6723e2e329a2cfaa38dc7606b5b61ea3853f503699712969bf0d4197312d8",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_current_hash_baseline.py": {
+      "source_sha256": "58c49b4210fb1ae444416efd6e98db99636c1352d8b80b4b6e54d8aa7af4bb14",
+      "published_sha256": "f4185bca4027ac9d65bc145de7a39a88187b4799a1b880983d3fdd134c2f3465",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_dask_R_analysis.py": {
+      "source_sha256": "b6b3c43fcfe0b8ba9e6e0fb776970e10f1725c4819f0b58ed287b215df30b76f",
+      "published_sha256": "5acb71ccdab6c1882a4513c16c27155fe28bcab363858dbb6330e2137db3ab1d",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_data_migration.py": {
+      "source_sha256": "05e242bb193e3efeac8f1c87eb9efbf691d0635fb93c6e705432647cfa9e1ae6",
+      "published_sha256": "d2de74e69c10eaad3e2d541137e6c4541631ba0aca2466aa756d25047e15cbb2",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_fnirs_source_adjudication.py": {
+      "source_sha256": "36fd60250ada5cec27e6b4bc32a631b953fa272ccb5c3b9cc3a793f4327e3c36",
+      "published_sha256": "ce739a25db008b03625b0780a9179ede32ac255337cf990fcdce9264928c32be",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_gamm_nuisance_development.py": {
+      "source_sha256": "91168221e7aab0b81c8ea9498e4a645b980e6442da5c8bfe91debbf228a11a5a",
+      "published_sha256": "c440e065458a6e17ffd2060778770c54955212ab28a743c6c8f8d8cbf279512b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_missingness_audit.py": {
+      "source_sha256": "5820b4cbc817f40fd1f7c2842be8873fca5955ebd7ddd8140f1919d34689775c",
+      "published_sha256": "821b96715f60f6d57008afe09426b7923265baf5bbd502f679f1c4d25d63ca8b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_remaining_descriptives.py": {
+      "source_sha256": "4d3f6d83414da0b07353ba25ffd66734f9fcd687c18214f9f8123d5d8847d09b",
+      "published_sha256": "b2854f29efb709f93c3d0257f89ed6fc747841361ca460001a7d53be45d30261",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_scientific_completion.py": {
+      "source_sha256": "a64faae6217a19976bf274216467ec1ae1d751d11eea47d98c5f98052cc6bfb7",
+      "published_sha256": "1ed662f335a0de7e81e4aaa948ee3778ec58eb151568c43bd0a9c3ff1c75b907",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_scientific_report.py": {
+      "source_sha256": "f49d0c81c53557968767c6fbcf05df20d61c55babcaa9bd05ee89007167fa8b5",
+      "published_sha256": "8b736693ab5b39b57c70627953f8824d47d64edd1d329466c474daa912375f70",
+      "transformation": "site path/network metadata generalized; statistical parameters retained; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/bootstrap.R": {
+      "source_sha256": "c5df1d7d919569f935ea6297d2532b15997588f6b23e7e2432245ea1e93f2e6c",
+      "published_sha256": "08a7eeb970ed7f35a90aeda81178aa406d8e35aeab350aa0bb4e1beb881da25b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_analysis_environment.R": {
+      "source_sha256": "4fe03750afc9fe6f4b47d709fc178fbeee032f5d9c6beef27181bac717a73bd2",
+      "published_sha256": "5d360663dbce0645d0d4f2a743c84ce87b54d460149a172ffdbe06f546f859f9",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_vas_models.R": {
+      "source_sha256": "c9952d836337881ca5bad8cde9f65bf090ba1383ab072e5f7531a60e37f6151c",
+      "published_sha256": "cb6f3a003ed3a45c8dd7b0a157ac4c62059b0c0757847e797180f4f15a848334",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_vas_models.R": {
+      "source_sha256": "351ec207206f57142742fccbd3eda75ff1f9a2e566b814c3801ce1260222f2a3",
+      "published_sha256": "2ab34a38d3a3531a4510e76484eed6fc7d49ed4d0772688e3610bb0b6454848c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/calibrate_vas_gamm.R": {
+      "source_sha256": "0e046a43a2bf5c8f11024312247b5f8adac3deca3b48476900ee90af2d55ce6d",
+      "published_sha256": "b8cf7af9d609f8dbf7094e2cf4a0635e7ee4f1996f30bdd989e1313315a79d05",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_et_followup.R": {
+      "source_sha256": "ceaa2d1bcf98a30c902c40db7960df69acc099a81a6c2a288bffc6e2df460b9f",
+      "published_sha256": "b9954e2935b7e993574fc4fd3ce44a69792fda20ee576807ee78b14f3ab82d1a",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_calibration.R": {
+      "source_sha256": "9adf0dd9740a29d5d9806fb0cce40093751ee1540145fe4e2204f43f1e7dfebb",
+      "published_sha256": "bd2b0fdf9bae0458257adf393f0048b36dcc5f4331982f6f090cd5777b698202",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_derivative_calibration.R": {
+      "source_sha256": "2ac33c70deb23eb82debc5ff0f3aed343b3e77899e64aa62bb61ed31f218ad00",
+      "published_sha256": "b12825c79d48eee047bff0d82b01e8ea7770c0c08bb7bf49aa29c1a82b18e8ac",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_derivative_basis.R": {
+      "source_sha256": "d18ee8c1ac88805af548356a17f4d32097c0197659fb224f398ade6781082f44",
+      "published_sha256": "f6962c8b0211b2582a95d02d2701d1bab5c1423a1f694103b89af23a4025d24b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_derivative_candidate_v3.R": {
+      "source_sha256": "e7920f630f2d133667792d8de0a183933deb7682ff09dabb59b50f71b8c7d8ae",
+      "published_sha256": "6dc0f7cf2ffaa50ebe0420f3d21f971417569a02e85dc3bdd5401c58a4f927a7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_calibration_v3.R": {
+      "source_sha256": "d484dd9761be92a5b8d833d03af7cc9a819afdea1253b127d1a9f87aa12fdeb1",
+      "published_sha256": "6fa802a4e657402d32e0e4f4539bd1fbea75967d2380d89528952514d2044737",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_derivative_bootstrap_v4.R": {
+      "source_sha256": "a8c84e43e609a5ae7fda67db0ef7b1cefeae5bc4084adb3a491a4e51ad2a72b2",
+      "published_sha256": "461e605187fe80caea958316b87b75e81561b221e50fbc7c9e08e8f58183e979",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_derivative_bootstrap_v4.R": {
+      "source_sha256": "9639def8004e42c35f7d89af0b7d7bcb0b2d42c9b4aac3d3835b241b8334e88c",
+      "published_sha256": "cb876f6360ca5e57b39a7894c0354efcec9c1a25beb6079278d0851db0cd6e15",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_derivative_bootstrap_v4.R": {
+      "source_sha256": "8eba9d9fedb0d48f5a539ca08f5368f1694f12576b2b2fcc8986b1adac951837",
+      "published_sha256": "1adfc6823d4ee5f5803f7b3c250d6f2a22b2937352b8b32aa2b793475498eb78",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/derivative_v4_one_replicate.R": {
+      "source_sha256": "8f0b5424d7ad21d233d5f1de28d80ccb5191adf57e17fdb9dbc716879e92cfd1",
+      "published_sha256": "d1a86a5e9556f9849a930e4612be05fdc6201740b063c4ca5bb01b42e9f5ed13",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/variability_followup.R": {
+      "source_sha256": "d683cb0dba431f64e54b7cfb06afdf431ce74ca7368b942f89f23c630523297d",
+      "published_sha256": "9775ad486993807789508a32451b1269cfe523ea850d94c8e6e9ca81d188e419",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_missingness_audit.R": {
+      "source_sha256": "f7aed965aacb451b2cd26524dbcd8dc6e243bdd4f29013964c69b7aeb92788ae",
+      "published_sha256": "1ca1943d5bd2a9863b3f41ea82e16e5f5fcb98c59a33bd40cf84cd140e8ed89c",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_fpca_followup.R": {
+      "source_sha256": "f19e44e5ddb36ce56d8fcfd1ebfcf1c67e001e12548b618765ee1c78cf3adf8f",
+      "published_sha256": "ceba1601a48c77755b0ca764ecf45449eda99d8259d0be2eee48d908b5fed28e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_fpca_followup.R": {
+      "source_sha256": "bb2a1dce8929c8482dbbd662882e88c6d2c948805179fa51bce5358647d1c851",
+      "published_sha256": "078744dc04aa212bfd5e0abbb92a2408beefbf71fa25a2f9c81a7c984799ca32",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/install_sparse_fpca.R": {
+      "source_sha256": "86e15d1c2177687e5235f500240f080501c4ac17f267dcc38dd035e2a4dd5950",
+      "published_sha256": "7b30c7511ab926f3a7a08e34c8bee6d0a41fa6729cf61cfa3655a8617ce81875",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_sparse_fpca.R": {
+      "source_sha256": "001a450146642b6e2152cc0cc2f50787d82c17a13b25dbefc8f9298ddb2f690f",
+      "published_sha256": "5183f5d37a53c7a442d9145e8780cfd7b6252c6ed5cad6ba9edcf95d28ccedc6",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_sparse_fpca.R": {
+      "source_sha256": "a1a9e3237b932bfadd42b327e57f3442f13d94e3ba999fe3127d158b2b37ba1c",
+      "published_sha256": "bd50ebb6df655d398d46095f35ad11ed0b876a7b6f20edc7a872d403ee612d4b",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/verify_sparse_fpca.R": {
+      "source_sha256": "8f522e9e4ebe12ed8c6847d8526049bf2f7e4d340e003037d51e7fabe7e38ecd",
+      "published_sha256": "4a87b4e3d3e12ece247fb5e91986ec2298e8f350912f033d82360d05b11d5bc0",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_remaining_descriptives.R": {
+      "source_sha256": "6a8e1e7e934b0b6aed815d2ee3893af34fa9cf4035cf012b875e18cd9d908cde",
+      "published_sha256": "535407b2ba6ee3c4737a636f5945feb6ee7a1a500c93d64178b5e37855c74587",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/run_remaining_descriptives.R": {
+      "source_sha256": "6004663e47e10259fff076a5e197e49d004f31332d180bfdf665ad89f32a6a58",
+      "published_sha256": "a3c074291267f28013b89dbf9bd149b119065836b435320ff88a5a871c264057",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_signal_spectra.R": {
+      "source_sha256": "bc223a23a9a36f5d33b02cac76f48d5951783ea237c1c7536a89d7c5e35d532c",
+      "published_sha256": "4dcc3189665c751152790e1839448688b178b73a50b92a8a5684c3d12e27f61d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_peak_clock_review.R": {
+      "source_sha256": "a357f1c5a15b2d162115a5a0c23a9b1ded7e13a0850e93de61794139d64edfe4",
+      "published_sha256": "a3543f8588dcffe38ae06955ea3275ee3e11736edc28b6cf704778954497e26e",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/plot_ecg_candidates.R": {
+      "source_sha256": "1bd25fe671fd61c5c90999197c27e77910445d65dfd10830e98469aa66949831",
+      "published_sha256": "5c4ba349b39b07c3a1bda90012af691c1ef77b45f4d87ec13f03c4c7db35bbe7",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_reanalysis_R.R": {
+      "source_sha256": "0f42c861dbc56729f156f557cf92d46c3f9a067c23640bdae7fdb2a80b76b923",
+      "published_sha256": "a847f4caff4eaad60ffdf6c27b56a2c28b5a713644a91fa424fe96c649969614",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/install_reanalysis_R.R": {
+      "source_sha256": "2f9da3705012a8777c6b53a0e6453597db14dc262eb50a71aafe903aa5012eec",
+      "published_sha256": "509b316fff56cf9831fe9ad78e64a3d872da6c4dff58459a70529810901ac811",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/calibrate_reanalysis_CR2.R": {
+      "source_sha256": "cdc2a0043d1547ffe26655d9e2a03d084b2807f5b9f343fa54ad754cea6ffe4a",
+      "published_sha256": "7a4f7883a6c3509e51bc83178ae3130e9c19cfab2ce4f64d985fad0c49500a7d",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/check_distributed_R_runtime.R": {
+      "source_sha256": "a1e17ce8abcbea15c11a20307040ad742f16cddb36bc7335fa1466ec9c0801bb",
+      "published_sha256": "1db616c3bd3a7869b8a8fcfa3bffb37eba8b6ae42e2c230b7166ede251829fb1",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "scripts/test_distributed_R_backend.R": {
+      "source_sha256": "4b7e39f25b64a15db20fa024ce3b0c2df4e192d1dc224d94e871699ddfe1fde2",
+      "published_sha256": "7b74f7587124447be0c5845540875f833d4f2a85b950e09b15234b14e33648de",
+      "transformation": "none; pinned formatting with analytical AST/expression equivalence",
+      "source_origin": "current analysis workspace"
+    },
+    "config/acq_source_selection_20260927_v1.json": {
+      "source_sha256": "687c4f5fbf7e7e95a7746ae58270562e6133e4f6693ea096c98e7b68b4cf15c8",
+      "published_sha256": "687c4f5fbf7e7e95a7746ae58270562e6133e4f6693ea096c98e7b68b4cf15c8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/analysis.json": {
+      "source_sha256": "17bebbd62fa33f5b0bd5def7f929cea2cf8ac571f6980939799175394636ad24",
+      "published_sha256": "17bebbd62fa33f5b0bd5def7f929cea2cf8ac571f6980939799175394636ad24",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/analysis_closeout_v1.json": {
+      "source_sha256": "10003079865be979405363fd351b927702285f826f9f8cd7f60842e62bd58f67",
+      "published_sha256": "10003079865be979405363fd351b927702285f826f9f8cd7f60842e62bd58f67",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/analysis_completion_20261002_v1.json": {
+      "source_sha256": "3e7eb85a3d7a86ee18bf66fa67faafa8e64a77881badb1604870cbb15b1f5b1d",
+      "published_sha256": "856dc42b134ea332d3754e2639655497928dc541ebc38c7682b4645d115bd4fe",
+      "transformation": "site path/network metadata generalized; statistical parameters retained",
+      "source_origin": "current analysis workspace"
+    },
+    "config/blocker_resolution_20261003_v1.json": {
+      "source_sha256": "0f87546e7086d19608a0b7cf4fd5e539fb27717789df84d1302154a36f613e2c",
+      "published_sha256": "0f87546e7086d19608a0b7cf4fd5e539fb27717789df84d1302154a36f613e2c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/candidate_association_20260926_v1.json": {
+      "source_sha256": "ac3ec726107896be7ce0ab7ba7c76dc4d727bf9499ae31aa6dad722ea259fb13",
+      "published_sha256": "ac3ec726107896be7ce0ab7ba7c76dc4d727bf9499ae31aa6dad722ea259fb13",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/chat_recheck_v1.json": {
+      "source_sha256": "eddbbe8bc9b132b04132c8b5ae1151e061c124d7bc819f2c73067e667fed77e1",
+      "published_sha256": "eddbbe8bc9b132b04132c8b5ae1151e061c124d7bc819f2c73067e667fed77e1",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/covariate_adjudication_20260927_v1.json": {
+      "source_sha256": "5472702854d11dc6a94a530a3257d3bd1f570c0c9eb05a30605787462ca257c1",
+      "published_sha256": "5472702854d11dc6a94a530a3257d3bd1f570c0c9eb05a30605787462ca257c1",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/crosstalk_calibration_v1.json": {
+      "source_sha256": "4abcae8218a6d6edaaeccd9f8bb115cb8eb19f6359a047aa00eb23d8babfda92",
+      "published_sha256": "4abcae8218a6d6edaaeccd9f8bb115cb8eb19f6359a047aa00eb23d8babfda92",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_R_analysis_20261003_v1.json": {
+      "source_sha256": "392f2eada87a7126df96c88d3b2be83a05b5a233966c1cd07e3f8396d67fa652",
+      "published_sha256": "582d7d1ed823fbd841511a8a1960f7597952884ece03bd2e08f3b0e836a4f91f",
+      "transformation": "site path/network metadata generalized; statistical parameters retained",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_R_complete_precision_20261004_v1.json": {
+      "source_sha256": "f2beaab544bb31af5153346db1be2a4089a8b590ab23afd6b09b5d679a149bab",
+      "published_sha256": "67b5962a9f5fd98d989f064c6bcb20e8993a8f527347c3ddf078b1eb40070ab5",
+      "transformation": "site path/network metadata generalized; statistical parameters retained",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_R_followup_verification_20261004_v1.json": {
+      "source_sha256": "e363e1d4499ece63952547bab8358f262760fc206c7eea4289559a1bc8257db8",
+      "published_sha256": "e363e1d4499ece63952547bab8358f262760fc206c7eea4289559a1bc8257db8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_derivative_development_20261003_v1.json": {
+      "source_sha256": "722cffa68fd7b32b33bec692c97753f87a0d42e0b2d8da681ce2c4097fedf1e8",
+      "published_sha256": "722cffa68fd7b32b33bec692c97753f87a0d42e0b2d8da681ce2c4097fedf1e8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_observation_bootstrap_20261003_v1.json": {
+      "source_sha256": "684b5f7c2faf00b9b6b7bb75076849f6baab6cdf0aaf1087a123d9e3780bbad0",
+      "published_sha256": "684b5f7c2faf00b9b6b7bb75076849f6baab6cdf0aaf1087a123d9e3780bbad0",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_observation_bootstrap_20261003_v2.json": {
+      "source_sha256": "45eca903ae1707f3ec861e8b98d05ebfb4eb9f9b6be8105b94ce42523c22ba9c",
+      "published_sha256": "45eca903ae1707f3ec861e8b98d05ebfb4eb9f9b6be8105b94ce42523c22ba9c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_prediction_repeats_20261003_v1.json": {
+      "source_sha256": "04805e40d839fdb3da21f365afd513fd6addc52b4ab24f4e4d9451ee9e2b2c94",
+      "published_sha256": "04805e40d839fdb3da21f365afd513fd6addc52b4ab24f4e4d9451ee9e2b2c94",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_python_remaining_20261003_v1.json": {
+      "source_sha256": "9e4aaf9bd27f984423b6d7aabc3c5b7378ec223bb77727fd3cdfbc183b1298e9",
+      "published_sha256": "9e4aaf9bd27f984423b6d7aabc3c5b7378ec223bb77727fd3cdfbc183b1298e9",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_variability_bootstrap_20261003_v1.json": {
+      "source_sha256": "80af8a3f6cfe4060eb20adfc6f8f0051dcf307408e96c8dea2ed51e620c58f08",
+      "published_sha256": "80af8a3f6cfe4060eb20adfc6f8f0051dcf307408e96c8dea2ed51e620c58f08",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/dask_variability_bootstrap_20261003_v2.json": {
+      "source_sha256": "2f9f8861d94186d3989f25d62d975a089e00645eaca6b97e9a5fb0538c8c8661",
+      "published_sha256": "2f9f8861d94186d3989f25d62d975a089e00645eaca6b97e9a5fb0538c8c8661",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/derivative_calibration_v2.json": {
+      "source_sha256": "0e5e16c25af3e271dcd092d96cedbc7c0e7c0875b469908a2190496c4402689b",
+      "published_sha256": "0e5e16c25af3e271dcd092d96cedbc7c0e7c0875b469908a2190496c4402689b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/derivative_calibration_v3.json": {
+      "source_sha256": "20362756a6ef3a1290e240e0bef9c90f4a6d827c3bc3ea915de491aaa1b9a91d",
+      "published_sha256": "20362756a6ef3a1290e240e0bef9c90f4a6d827c3bc3ea915de491aaa1b9a91d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/derivative_calibration_v4.json": {
+      "source_sha256": "95f14f7231d762445411708de5d678e394c24fc979ee812e0e9ba8e598825f9d",
+      "published_sha256": "95f14f7231d762445411708de5d678e394c24fc979ee812e0e9ba8e598825f9d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/derivative_v4_validation_execution.json": {
+      "source_sha256": "0d2b936e8d4aed48b63828e4598177fee4131eb191288bd3b1bf22a9a3c0c81e",
+      "published_sha256": "0d2b936e8d4aed48b63828e4598177fee4131eb191288bd3b1bf22a9a3c0c81e",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/e05_bypass_decision_v1.json": {
+      "source_sha256": "450f5890243dd7175d375e2fe5566f78d0b4c0ed604090562c18975ea5de90c5",
+      "published_sha256": "450f5890243dd7175d375e2fe5566f78d0b4c0ed604090562c18975ea5de90c5",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/e08_adaptive_egg_v1.json": {
+      "source_sha256": "814e9fca8cd83d74eda14aabf956e672ebe8b9e1ed16fa0be798cc6c8602e8c9",
+      "published_sha256": "814e9fca8cd83d74eda14aabf956e672ebe8b9e1ed16fa0be798cc6c8602e8c9",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/e_zero_recode_v1.json": {
+      "source_sha256": "e2d905d1f9c014228d4a2106088f52b705de069d81bfaaac1c61141e9a6e46cf",
+      "published_sha256": "e2d905d1f9c014228d4a2106088f52b705de069d81bfaaac1c61141e9a6e46cf",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/e_zero_recode_v2.json": {
+      "source_sha256": "fc94c4585cbb0281b8aafa0296ca4713551a4bf04bfbce4e38f7d98891ba407b",
+      "published_sha256": "fc94c4585cbb0281b8aafa0296ca4713551a4bf04bfbce4e38f7d98891ba407b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_candidate_quality_v1.json": {
+      "source_sha256": "34522b1b20fe720584a24556d2a38851dd2d7e200937e77487eec3f078e8dd18",
+      "published_sha256": "34522b1b20fe720584a24556d2a38851dd2d7e200937e77487eec3f078e8dd18",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_candidate_review_v1.json": {
+      "source_sha256": "a445a0f002e176df06c07408d15c27ef152c9ad7815caf6f4cfcaf20c89921fa",
+      "published_sha256": "a445a0f002e176df06c07408d15c27ef152c9ad7815caf6f4cfcaf20c89921fa",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_candidate_sensitivity_v1.json": {
+      "source_sha256": "91a2db48764363962369b030f9622676ac701b48a93e75464d9d2e0b842f2af1",
+      "published_sha256": "91a2db48764363962369b030f9622676ac701b48a93e75464d9d2e0b842f2af1",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_candidates_v1.json": {
+      "source_sha256": "aa29ce8c201bf7ba1e16ea3931b6b8f7eea349f0076e03dacbd7af124e33355d",
+      "published_sha256": "aa29ce8c201bf7ba1e16ea3931b6b8f7eea349f0076e03dacbd7af124e33355d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_egg_paired_candidates_v1.json": {
+      "source_sha256": "d46df24bb8972aa858c0dadc4bf3576e4829ba797b3097bbe27448b849a4917c",
+      "published_sha256": "d46df24bb8972aa858c0dadc4bf3576e4829ba797b3097bbe27448b849a4917c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_lead_stability_v1.json": {
+      "source_sha256": "0e443914a6db1b788c3dedbbff9d09ba9b1e4d16edf08c2cee87d1603b3dd3f5",
+      "published_sha256": "0e443914a6db1b788c3dedbbff9d09ba9b1e4d16edf08c2cee87d1603b3dd3f5",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_multilead_v1.json": {
+      "source_sha256": "63de51407e410f949941564bcf5f56073d2168d7fed9f9dc0902831a8fcebb24",
+      "published_sha256": "63de51407e410f949941564bcf5f56073d2168d7fed9f9dc0902831a8fcebb24",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_rr_candidates_v2.json": {
+      "source_sha256": "2656f7f703b79bff5daf788aa66e1cfd310728aced0ccec886ce32eae1f31101",
+      "published_sha256": "2656f7f703b79bff5daf788aa66e1cfd310728aced0ccec886ce32eae1f31101",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_rr_sensitivity_v1.json": {
+      "source_sha256": "c08554eea79e4cf137800fca3387d8e735a0f81bd3a1ff8da99dbe523c98197c",
+      "published_sha256": "c08554eea79e4cf137800fca3387d8e735a0f81bd3a1ff8da99dbe523c98197c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/ecg_rr_symmetric_v1.json": {
+      "source_sha256": "4452b8157c9e928660cdf1a5458c4684e10c23e805c1372d7ac696e05145eed5",
+      "published_sha256": "4452b8157c9e928660cdf1a5458c4684e10c23e805c1372d7ac696e05145eed5",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_fnirs_association_v1.json": {
+      "source_sha256": "5ee9484192f7008ba0960f0be14d43c9b314ad7e3790dc952c44b746de3381bc",
+      "published_sha256": "5ee9484192f7008ba0960f0be14d43c9b314ad7e3790dc952c44b746de3381bc",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_motion_comparison_v1.json": {
+      "source_sha256": "e74a00b722c854ca3c8274cab136384d481548a88f2742890d9a88885ee775d9",
+      "published_sha256": "e74a00b722c854ca3c8274cab136384d481548a88f2742890d9a88885ee775d9",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_motion_diagnostic_v1.json": {
+      "source_sha256": "c563caca7d2608cbedd675134301eea2e4c00e33813fa35712f8ba75637dd1f1",
+      "published_sha256": "c563caca7d2608cbedd675134301eea2e4c00e33813fa35712f8ba75637dd1f1",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_motion_sweep_v1.json": {
+      "source_sha256": "9412dad481815e07257ca7f0de6f15e9791526b9a92549bf91bbe30d8cb66cc3",
+      "published_sha256": "9412dad481815e07257ca7f0de6f15e9791526b9a92549bf91bbe30d8cb66cc3",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_peak_diagnostics_v1.json": {
+      "source_sha256": "69a215858f36a7a47683f702f81b19cb93d986cd509938153bf8df3304fc32cd",
+      "published_sha256": "69a215858f36a7a47683f702f81b19cb93d986cd509938153bf8df3304fc32cd",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_spectral_resolution_v1.json": {
+      "source_sha256": "9e96991757b8877c3d0494b0ef4cdb28aecc71eb56adb387eea571b4ec0696fc",
+      "published_sha256": "9e96991757b8877c3d0494b0ef4cdb28aecc71eb56adb387eea571b4ec0696fc",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_stability_v1.json": {
+      "source_sha256": "7f78eb58c02ee3760f4d6b8a02a46a84d34eaa730a96f3852e66d926f156e30f",
+      "published_sha256": "7f78eb58c02ee3760f4d6b8a02a46a84d34eaa730a96f3852e66d926f156e30f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_unitless_pair_v1.json": {
+      "source_sha256": "4a4234c3f2a758acc4bf4cd5a8ab019a48b3c04ee6b031a2743ffb51dc8861cb",
+      "published_sha256": "4a4234c3f2a758acc4bf4cd5a8ab019a48b3c04ee6b031a2743ffb51dc8861cb",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/egg_unitless_probes_v1.json": {
+      "source_sha256": "3cc92226b48b0fadb1d5692c8bccde34fb99c74e3bba542a170257c90c7c7630",
+      "published_sha256": "3cc92226b48b0fadb1d5692c8bccde34fb99c74e3bba542a170257c90c7c7630",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/electrophysiology_algorithmic_v1.json": {
+      "source_sha256": "229e2183531f87868651e42e4351b9050d87b117cc75ff464c4dcbba9818d9d6",
+      "published_sha256": "229e2183531f87868651e42e4351b9050d87b117cc75ff464c4dcbba9818d9d6",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/electrophysiology_development_qc_v2.json": {
+      "source_sha256": "77d4b957da0606ce4245b6055c29b3056bb3c5f77e95e9508e2487cdd8175c86",
+      "published_sha256": "77d4b957da0606ce4245b6055c29b3056bb3c5f77e95e9508e2487cdd8175c86",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/electrophysiology_review_v2.json": {
+      "source_sha256": "ea78dc95fc9c8721f0ace2e288402cb95bc64340f89c7799d7b573e5ced09055",
+      "published_sha256": "ea78dc95fc9c8721f0ace2e288402cb95bc64340f89c7799d7b573e5ced09055",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/enc_matching_v2.json": {
+      "source_sha256": "82991c1af937f02d4f735ff1deca201d1bc012e1cd136a2fb29ec1932f775346",
+      "published_sha256": "82991c1af937f02d4f735ff1deca201d1bc012e1cd136a2fb29ec1932f775346",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/enc_matching_v3.json": {
+      "source_sha256": "62730c680cf28f4c60f17197c3ad8aecd2521bf256719e9060b6aa9699d193dd",
+      "published_sha256": "62730c680cf28f4c60f17197c3ad8aecd2521bf256719e9060b6aa9699d193dd",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/et_followup_v1.json": {
+      "source_sha256": "8cef2fbd8b8704223274c50c2efd1cfea8bb9e39529b3250de7e4db0fe952689",
+      "published_sha256": "8cef2fbd8b8704223274c50c2efd1cfea8bb9e39529b3250de7e4db0fe952689",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/et_followup_v2.json": {
+      "source_sha256": "7dee341dda1f8229e9fec40cd39412a8dc610ecd2092ea4929486fec1ee4a66d",
+      "published_sha256": "7dee341dda1f8229e9fec40cd39412a8dc610ecd2092ea4929486fec1ee4a66d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/et_followup_v3.json": {
+      "source_sha256": "b00fb0894f738d62e24083d4c4bab59bfe48ab98094031428eb16dff0ec6b0b8",
+      "published_sha256": "b00fb0894f738d62e24083d4c4bab59bfe48ab98094031428eb16dff0ec6b0b8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/event_clock_audit_v1.json": {
+      "source_sha256": "14cff4861ff3638700576ab44e05363aef1d73c7afe7a4a3896a8ac8ac03c42b",
+      "published_sha256": "14cff4861ff3638700576ab44e05363aef1d73c7afe7a4a3896a8ac8ac03c42b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/event_clock_review_v1.json": {
+      "source_sha256": "fc86a80c7554267d49eae02438200f7d58f24a13cab5263cdaae2c5e0e378323",
+      "published_sha256": "fc86a80c7554267d49eae02438200f7d58f24a13cab5263cdaae2c5e0e378323",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/event_semantics_shared_controller_v1.json": {
+      "source_sha256": "15de0efd1cbd01a5c0ae2b3a9c1d5582b4939172ba1a8c3cf3774784f501b42b",
+      "published_sha256": "15de0efd1cbd01a5c0ae2b3a9c1d5582b4939172ba1a8c3cf3774784f501b42b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/export_channel_provenance_v1.json": {
+      "source_sha256": "21e15b68dd284b4a3254c3d1b40f3cefdb2b44e273dd98ef0ae456cbae70fc68",
+      "published_sha256": "21e15b68dd284b4a3254c3d1b40f3cefdb2b44e273dd98ef0ae456cbae70fc68",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/export_prefix_provenance_v1.json": {
+      "source_sha256": "37d3cffc2e53380e80ca36bf3b7c5dc8a9fcc1ff55441b0667206df62557eeba",
+      "published_sha256": "37d3cffc2e53380e80ca36bf3b7c5dc8a9fcc1ff55441b0667206df62557eeba",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/final_vas_complete_inclusion_v1.json": {
+      "source_sha256": "a9224963c07860033142575b40a700ad80162ced8f8d8b759cd49ecf250b9e16",
+      "published_sha256": "a9224963c07860033142575b40a700ad80162ced8f8d8b759cd49ecf250b9e16",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/fnirs_source_adjudication_v1.json": {
+      "source_sha256": "cf11ff075c59503433258143ef62f60875cf64c624d3e8024e4b68a4b16ba20f",
+      "published_sha256": "cf11ff075c59503433258143ef62f60875cf64c624d3e8024e4b68a4b16ba20f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/fnirs_variable_length_roi_v1.json": {
+      "source_sha256": "196abaf21406bce3b8f02f123d2e3a4130145b77ddf63016a597504c97b84b1e",
+      "published_sha256": "196abaf21406bce3b8f02f123d2e3a4130145b77ddf63016a597504c97b84b1e",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/fnirs_variable_length_roi_v2.json": {
+      "source_sha256": "324a09786852e8a32895ba05fdbd2b444247b07471790b4e37da903854b4737d",
+      "published_sha256": "324a09786852e8a32895ba05fdbd2b444247b07471790b4e37da903854b4737d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/fpca_followup_v1.json": {
+      "source_sha256": "b9972272e6d62db2e710b9a357e769738cfeb089e6bc7e647bcd6f1f0885c6ad",
+      "published_sha256": "b9972272e6d62db2e710b9a357e769738cfeb089e6bc7e647bcd6f1f0885c6ad",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/gamm_nuisance_development_20261004_v1.json": {
+      "source_sha256": "11e7e92a7a5e975b0a6b6324d0350cddcfbb4b8ea4d0a38adfbbde4650427a8d",
+      "published_sha256": "11e7e92a7a5e975b0a6b6324d0350cddcfbb4b8ea4d0a38adfbbde4650427a8d",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/local.example.json": {
+      "source_sha256": "755c9eaeca542f7af48ac2ae00cb0250a05ad46f0d582b3e44e27e480d3f6d02",
+      "published_sha256": "755c9eaeca542f7af48ac2ae00cb0250a05ad46f0d582b3e44e27e480d3f6d02",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/missingness_audit_v1.json": {
+      "source_sha256": "f4d2bb028738798407e7ecc1740d13a3a39483e32ee3a7d8e3f1ac9c73d2c0a8",
+      "published_sha256": "f4d2bb028738798407e7ecc1740d13a3a39483e32ee3a7d8e3f1ac9c73d2c0a8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/modules.json": {
+      "source_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
+      "published_sha256": "fb706287bb0915e2c9ea2ab8f225163202583b6cac13f6f341768ba588052b4e",
+      "transformation": "none; publication CLI/status/rendering adapter",
+      "source_origin": "current analysis workspace"
+    },
+    "config/physiology_complete_v1.json": {
+      "source_sha256": "5b1959c51ca03317767b53f35f261ec99ee8e45a98955df6d0b0dcd334cdabf9",
+      "published_sha256": "5b1959c51ca03317767b53f35f261ec99ee8e45a98955df6d0b0dcd334cdabf9",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/physiology_complete_v2.json": {
+      "source_sha256": "23fad0bedb23664de2798520347347c960fc83c05496bd5a02510efbcfc4eb4c",
+      "published_sha256": "23fad0bedb23664de2798520347347c960fc83c05496bd5a02510efbcfc4eb4c",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/physiology_variable_length_v1.json": {
+      "source_sha256": "b51316dc8d301583f3c85889f6b7c25ef4ff0584e75f484db0db44c36e40e0c9",
+      "published_sha256": "b51316dc8d301583f3c85889f6b7c25ef4ff0584e75f484db0db44c36e40e0c9",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/provisional_vas_v1.json": {
+      "source_sha256": "ca361a354579aa36c6d3b97ee0356ec19d073807f8aa2863e992427d2783fa30",
+      "published_sha256": "ca361a354579aa36c6d3b97ee0356ec19d073807f8aa2863e992427d2783fa30",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/provisional_vas_v2.json": {
+      "source_sha256": "658b403604585fb58570ca9728285d09e46718cff1c629456e4f454ab8eb2b29",
+      "published_sha256": "658b403604585fb58570ca9728285d09e46718cff1c629456e4f454ab8eb2b29",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/provisional_vas_v3.json": {
+      "source_sha256": "779b07afddb702166e4daadc0d5b3b44ea231a7aaab8ebd80abe8ce4783e03fd",
+      "published_sha256": "779b07afddb702166e4daadc0d5b3b44ea231a7aaab8ebd80abe8ce4783e03fd",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/reanalysis_20260926_v1.json": {
+      "source_sha256": "60eaf7ce5c3133d4a89b3f255c57b50db9ae0a9604f735d1c02ac1bc0183fcba",
+      "published_sha256": "60eaf7ce5c3133d4a89b3f255c57b50db9ae0a9604f735d1c02ac1bc0183fcba",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/reanalysis_supplement_20260926_v1.json": {
+      "source_sha256": "dcf9c16cae93f2ddf03c3701a37f021fa4681a255c22c1c1eb019e22cb878a65",
+      "published_sha256": "dcf9c16cae93f2ddf03c3701a37f021fa4681a255c22c1c1eb019e22cb878a65",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/remaining_analysis_v1.json": {
+      "source_sha256": "0f3a01e11ca28d3387dc6422a58bea17f7bafaab5ec220f18dc107a3f26f9aeb",
+      "published_sha256": "0f3a01e11ca28d3387dc6422a58bea17f7bafaab5ec220f18dc107a3f26f9aeb",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/resampling_server_plan_20261003_v1.json": {
+      "source_sha256": "dedbb2cd23d04351a3df4b6d6cec1bafd9ea0d5d96be83eb083d28ac3929b9c8",
+      "published_sha256": "dedbb2cd23d04351a3df4b6d6cec1bafd9ea0d5d96be83eb083d28ac3929b9c8",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/resampling_server_plan_20261003_v2.json": {
+      "source_sha256": "d464398eb44da6ebb82b3ab5a440735c6bf617b47502bade9fe0707807670f66",
+      "published_sha256": "d464398eb44da6ebb82b3ab5a440735c6bf617b47502bade9fe0707807670f66",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/resampling_simulation_development_20261003_v1.json": {
+      "source_sha256": "07708a33626a877dd184aa60d064710c99c32238767133b5be85d1c94d070271",
+      "published_sha256": "07708a33626a877dd184aa60d064710c99c32238767133b5be85d1c94d070271",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/resampling_simulation_development_20261003_v2.json": {
+      "source_sha256": "8c4ffcd075f0e219125623f7fab98eec64ec61b9caafb5489cdb7d8ec94d88c2",
+      "published_sha256": "8c4ffcd075f0e219125623f7fab98eec64ec61b9caafb5489cdb7d8ec94d88c2",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/rest_normal_reference_v1.json": {
+      "source_sha256": "d469627ad51c8464d80bb0b0a093db830f8afc120b669e04fec39265d969e8eb",
+      "published_sha256": "d469627ad51c8464d80bb0b0a093db830f8afc120b669e04fec39265d969e8eb",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/rest_relative_deviation_v1.json": {
+      "source_sha256": "3ad0b15c0530f7744f70f19471914650654b651c2d11cf304245ba4915e76944",
+      "published_sha256": "3ad0b15c0530f7744f70f19471914650654b651c2d11cf304245ba4915e76944",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/rest_signal_reference_v1.json": {
+      "source_sha256": "ac2f44d319b0b9d0e0139c97e44445fea798510229ec308059ff40050ea67e31",
+      "published_sha256": "ac2f44d319b0b9d0e0139c97e44445fea798510229ec308059ff40050ea67e31",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/reverse_enc_v1.json": {
+      "source_sha256": "74cfe3ad7fe5206007b0c8f95902b1feb3ea2bda8a5bd4fdffabef93febc5291",
+      "published_sha256": "74cfe3ad7fe5206007b0c8f95902b1feb3ea2bda8a5bd4fdffabef93febc5291",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/scientific_completion_20261004_v1.json": {
+      "source_sha256": "f0abc93d2b5fc6b055be64091b35677ec4d31f9ba31efc559da981ef5d746984",
+      "published_sha256": "c83da00b623632e7bf0c4585d95d7037d9a95f4826bf0402294b5748f1d9b166",
+      "transformation": "site path/network metadata generalized; statistical parameters retained",
+      "source_origin": "current analysis workspace"
+    },
+    "config/scientific_figures_20261004_v1.json": {
+      "source_sha256": "d46c32fb877b36603630849db0273c5c8fa0960c6816c118df0112369c6298c9",
+      "published_sha256": "a1e2979171ae94e47941f72b19598c0e6daff6e5a03eb458b6e35ae60957b8b9",
+      "transformation": "site path/network metadata generalized; statistical parameters retained",
+      "source_origin": "current analysis workspace"
+    },
+    "config/scientific_readiness_v1.json": {
+      "source_sha256": "79db5f2d8e1462a8196d922c634fe16cbea37ca4903fb8717dbc00473c59e755",
+      "published_sha256": "79db5f2d8e1462a8196d922c634fe16cbea37ca4903fb8717dbc00473c59e755",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/signal_spectra_v1.json": {
+      "source_sha256": "392b53eb6702082d3af3af5741d2469fc231380b762978c9c1a6ee71e2c72d1e",
+      "published_sha256": "392b53eb6702082d3af3af5741d2469fc231380b762978c9c1a6ee71e2c72d1e",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/signal_spectra_v2.json": {
+      "source_sha256": "5a37e501d06349754420b1a78b5ca3ab8210ab0c4d2947f0c32cee8f13706c9b",
+      "published_sha256": "5a37e501d06349754420b1a78b5ca3ab8210ab0c4d2947f0c32cee8f13706c9b",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/source_mapping_admission_20260927_v1.json": {
+      "source_sha256": "3291d6f51d499ad050b34489d605b5160b6249a09de44548f751b2ab9793a47f",
+      "published_sha256": "3291d6f51d499ad050b34489d605b5160b6249a09de44548f751b2ab9793a47f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/source_mapping_admission_20260927_v2.json": {
+      "source_sha256": "378b17da9eff77cfb2af1f7425f8d9f237124fbaf74d3f51e951f6848c23f028",
+      "published_sha256": "378b17da9eff77cfb2af1f7425f8d9f237124fbaf74d3f51e951f6848c23f028",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/sparse_fpca_v1.json": {
+      "source_sha256": "ae276e746adda9ddaf268b2908145a273b37c27ffecd9984273de79d1bb85fed",
+      "published_sha256": "ae276e746adda9ddaf268b2908145a273b37c27ffecd9984273de79d1bb85fed",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/synthetic.json": {
+      "source_sha256": "eb2f640e15a2b67a1a3ef53dd27ef0e9cb63c25e5188c3779d32b767b942b9f0",
+      "published_sha256": "eb2f640e15a2b67a1a3ef53dd27ef0e9cb63c25e5188c3779d32b767b942b9f0",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/time_linkage_v1.json": {
+      "source_sha256": "9dd58c2fc4608cd1448acb8cd4457fdaec390ab863efdfcb8e9367e2a018953f",
+      "published_sha256": "9dd58c2fc4608cd1448acb8cd4457fdaec390ab863efdfcb8e9367e2a018953f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/variability_followup_v1.json": {
+      "source_sha256": "de2ba7fea2ddd5b9eaa88cb7714b3914b936e45248abc0b2cae9ede9503af69f",
+      "published_sha256": "de2ba7fea2ddd5b9eaa88cb7714b3914b936e45248abc0b2cae9ede9503af69f",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/vas_marker_semantics_v1.json": {
+      "source_sha256": "e415f08d3e4e85011c01017f738f1c896b6c00dfad242543899f8cba57d069df",
+      "published_sha256": "e415f08d3e4e85011c01017f738f1c896b6c00dfad242543899f8cba57d069df",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/vas_marker_semantics_v2.json": {
+      "source_sha256": "bd85268818160da7c9c93e7215dc62fee8efcf2b0d1c34da2acdafd5dfb0fe7a",
+      "published_sha256": "bd85268818160da7c9c93e7215dc62fee8efcf2b0d1c34da2acdafd5dfb0fe7a",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/vas_marker_semantics_v3.json": {
+      "source_sha256": "be4484794466e3bd4fb0b5220a7d3c683e2bd2d3674d00daa4e457a9e0839e70",
+      "published_sha256": "be4484794466e3bd4fb0b5220a7d3c683e2bd2d3674d00daa4e457a9e0839e70",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/vas_marker_semantics_v4.json": {
+      "source_sha256": "2e2cc4111cc5f9907c2b1186763c52600bae63a9841b142b992cc356fa803264",
+      "published_sha256": "2e2cc4111cc5f9907c2b1186763c52600bae63a9841b142b992cc356fa803264",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "config/waveform_provenance_v1.json": {
+      "source_sha256": "47591620da70565c98f2064392cf47959c5d3a8fe18a27c301891eede97ab691",
+      "published_sha256": "47591620da70565c98f2064392cf47959c5d3a8fe18a27c301891eede97ab691",
+      "transformation": "none",
+      "source_origin": "current analysis workspace"
+    },
+    "resources/legacy_codebook/constants.json": {
+      "source_sha256": "c120ecf6cd089c9a5c05042a1e227ad15d5fa5f756162844ff1ea84d1b7d8251",
+      "published_sha256": "c120ecf6cd089c9a5c05042a1e227ad15d5fa5f756162844ff1ea84d1b7d8251",
+      "transformation": "none",
+      "source_origin": "original publication backup (legacy codebook)"
+    },
+    "resources/legacy_codebook/analysis/rome_matcher.py": {
+      "source_sha256": "267286145fb6a6f720539cb74b5f5b21f48de326bf9c36e21bec303e4ed182ce",
+      "published_sha256": "267286145fb6a6f720539cb74b5f5b21f48de326bf9c36e21bec303e4ed182ce",
+      "transformation": "none",
+      "source_origin": "original publication backup (legacy codebook)"
+    },
+    "resources/legacy_codebook/analysis/rome_rules.py": {
+      "source_sha256": "9ee84797659477d3ad485a7c5e22e8d2907ebe8e9c607ac73f47041f1c95607c",
+      "published_sha256": "9ee84797659477d3ad485a7c5e22e8d2907ebe8e9c607ac73f47041f1c95607c",
+      "transformation": "none",
+      "source_origin": "original publication backup (legacy codebook)"
+    },
+    "config/modules_legacy_20260918.json": {
+      "source_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
+      "published_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
+      "transformation": "historical module inventory retained under dated filename",
+      "source_origin": "current analysis config/modules.json (historical inventory)"
+    }
+  },
+  "excluded_files": [
+    {
+      "file": "scripts/review_remaining_hb_F.py",
+      "reason": "individual-specific adjudication embedded in code"
+    },
+    {
+      "file": "scripts/search_remaining_hb_F.py",
+      "reason": "individual-specific adjudication embedded in code"
+    },
+    {
+      "file": "scripts/verify_session_repair_run.py",
+      "reason": "individual-specific adjudication embedded in code"
+    },
+    {
+      "file": "config/acq_source_selection_20260927_v2.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/acq_source_selection_20260927_v3.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/acq_source_selection_20260927_v4.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/acq_source_selection_20260927_v5.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/acq_source_selection_active.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/covariate_adjudication_active.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/data_locations.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/data_migration_v1.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/fnirs_source_adjudication_active.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/fnirs_source_adjudication_v2.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/fnirs_source_adjudication_v3.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/fnirs_source_adjudication_v4.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/hash_baseline_active.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/hash_baseline_v1.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/source_mapping_admission_active.json",
+      "reason": "private location, identity registry or individual date override"
+    },
+    {
+      "file": "config/local.json",
+      "source_sha256": "2ecf9e48326b5892ac7f4901f38a38c55880cbdd621ef7d427509db890ace446",
+      "reason": "Ignored private local path configuration; never part of public Git tree"
+    },
+    {
+      "file": "MANUSCRIPT.md",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "supplementary_latest.md",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "config/manuscript_variable_length_v1.json",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "config/reporting_scope_20261003_v1.json",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "config/reporting_scope_20261003_v2.json",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "config/main_figures_methods_reporting_20261003_v1.json",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "scripts/verify_unified_results_docs.py",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "scripts/review_waveform_provenance.py",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "data/published/20261004/REPORT.md",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    },
+    {
+      "file": "data/published/20261004/REPORT.html",
+      "reason": "unpublished narrative, submission planning, or obsolete private reporting artifact"
+    }
+  ],
+  "site_metadata_redacted": [
+    "scripts/run_scientific_completion.py",
+    "scripts/diagnose_dask_R_precision.py",
+    "scripts/verify_dask_R_analysis.py",
+    "scripts/run_gamm_nuisance_development.py",
+    "scripts/run_dask_observation_bootstrap.py",
+    "scripts/verify_scientific_completion.py",
+    "scripts/verify_scientific_report.py",
+    "scripts/run_dask_derivative_development.py",
+    "scripts/verify_complete_FPCA_replicates.py",
+    "scripts/run_dask_python_remaining.py",
+    "scripts/run_dask_R_analysis.py",
+    "scripts/run_dask_variability_bootstrap.py",
+    "scripts/run_dask_prediction_repeats.py",
+    "config/reporting_scope_20261003_v2.json",
+    "config/scientific_completion_20261004_v1.json",
+    "config/dask_R_complete_precision_20261004_v1.json",
+    "config/dask_R_analysis_20261003_v1.json",
+    "config/main_figures_methods_reporting_20261003_v1.json",
+    "config/scientific_figures_20261004_v1.json",
+    "config/analysis_completion_20261002_v1.json"
+  ],
+  "aggregate_files": {
+    "data/published/20261004/figure_index.json": {
+      "source_sha256": "aee4ed019aaf9fe12cd2d5d00853257440638e00b95d79f293277364f9242e7d",
+      "published_sha256": "aee4ed019aaf9fe12cd2d5d00853257440638e00b95d79f293277364f9242e7d",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figure_review.pdf": {
+      "source_sha256": "a100e0e8a77fcd3d3a1a68372ac9e1f815a56767b46f4246b26066fac3bea399",
+      "published_sha256": "a100e0e8a77fcd3d3a1a68372ac9e1f815a56767b46f4246b26066fac3bea399",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure1_observation_support.pdf": {
+      "source_sha256": "d351c0c24e93ee3206c58703369371bc2301ccc47c5807f0ab91652f0b5787a2",
+      "published_sha256": "d351c0c24e93ee3206c58703369371bc2301ccc47c5807f0ab91652f0b5787a2",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure1_observation_support.png": {
+      "source_sha256": "1b683a19d32219ed6f41a2d32bc0086798bfa041ba68438e59a062ad09043887",
+      "published_sha256": "1b683a19d32219ed6f41a2d32bc0086798bfa041ba68438e59a062ad09043887",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure1_observation_support.svg": {
+      "source_sha256": "34b45791c941ca54cae1c5e7facb958c0df3d05d1411a6e104ae902e6f54dbed",
+      "published_sha256": "34b45791c941ca54cae1c5e7facb958c0df3d05d1411a6e104ae902e6f54dbed",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure2_VAS_composition_finite_changes.pdf": {
+      "source_sha256": "9aae01d7098edac0a10f7654c4eca884b9d232a8c671acfaccb50dce273b3098",
+      "published_sha256": "9aae01d7098edac0a10f7654c4eca884b9d232a8c671acfaccb50dce273b3098",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure2_VAS_composition_finite_changes.png": {
+      "source_sha256": "c4644ced6cd47126abc1594ea0020559495aaaf5e3f25e65c591864128895de7",
+      "published_sha256": "c4644ced6cd47126abc1594ea0020559495aaaf5e3f25e65c591864128895de7",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure2_VAS_composition_finite_changes.svg": {
+      "source_sha256": "27bf2234f46eb1b957950e4d09676ccc38303bc4bcf5bc80960b06b7fee7b12d",
+      "published_sha256": "27bf2234f46eb1b957950e4d09676ccc38303bc4bcf5bc80960b06b7fee7b12d",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure3_symptoms_regions_cooccurrence.pdf": {
+      "source_sha256": "a11a0fe0530fb923911cecf6e93668ed0f17426a583641455735007efce7223d",
+      "published_sha256": "a11a0fe0530fb923911cecf6e93668ed0f17426a583641455735007efce7223d",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure3_symptoms_regions_cooccurrence.png": {
+      "source_sha256": "73d6a9afe5a5e1d878340928a641cca1eabfc8e5ada7740fa98de70088e9440c",
+      "published_sha256": "73d6a9afe5a5e1d878340928a641cca1eabfc8e5ada7740fa98de70088e9440c",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure3_symptoms_regions_cooccurrence.svg": {
+      "source_sha256": "11e5f7191abc783c1ee7feb3cc175d67613b4ce7a1d35057f9833ef263926572",
+      "published_sha256": "11e5f7191abc783c1ee7feb3cc175d67613b4ce7a1d35057f9833ef263926572",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure4_complete_FPCA.pdf": {
+      "source_sha256": "4456a5fc7dd7c0fa5b61fe739f8d0f878338d48680a62a56f62acdcb6868b01e",
+      "published_sha256": "4456a5fc7dd7c0fa5b61fe739f8d0f878338d48680a62a56f62acdcb6868b01e",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure4_complete_FPCA.png": {
+      "source_sha256": "0e870f3ba05b7060960d749c3d597d07fe85b004a3c584d86eb52296bfac3d42",
+      "published_sha256": "0e870f3ba05b7060960d749c3d597d07fe85b004a3c584d86eb52296bfac3d42",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure4_complete_FPCA.svg": {
+      "source_sha256": "ca5edaf1a6266e9739255e80d65030997fa8e1b76e6ec674aa42af073793293b",
+      "published_sha256": "ca5edaf1a6266e9739255e80d65030997fa8e1b76e6ec674aa42af073793293b",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure5_internal_prediction.pdf": {
+      "source_sha256": "557c48f835365cd5cda8974aca4632f5136abf55695c4dca26cb5508a4bf8cdf",
+      "published_sha256": "557c48f835365cd5cda8974aca4632f5136abf55695c4dca26cb5508a4bf8cdf",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure5_internal_prediction.png": {
+      "source_sha256": "f6b3d0cfc272d0d1e2a1b94f70bc52dc61e17c6a1293052c43a6d64e91e36b4b",
+      "published_sha256": "f6b3d0cfc272d0d1e2a1b94f70bc52dc61e17c6a1293052c43a6d64e91e36b4b",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/Figure5_internal_prediction.svg": {
+      "source_sha256": "48f618d792a5df6b74be8cef13d03f8c1c3bc4db2afeeeec81d6960d29f4dc80",
+      "published_sha256": "48f618d792a5df6b74be8cef13d03f8c1c3bc4db2afeeeec81d6960d29f4dc80",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS1_FPCA_stability_reconstruction.pdf": {
+      "source_sha256": "9976c008cf3bfa3e37da5b0ac8fe0b6052d74359a30b9335bb620a84c45e3806",
+      "published_sha256": "9976c008cf3bfa3e37da5b0ac8fe0b6052d74359a30b9335bb620a84c45e3806",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS1_FPCA_stability_reconstruction.png": {
+      "source_sha256": "d2683406603d9e005b1b9ea278a06b5f9f97fee657617523bec4b19cdd02afb1",
+      "published_sha256": "d2683406603d9e005b1b9ea278a06b5f9f97fee657617523bec4b19cdd02afb1",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS1_FPCA_stability_reconstruction.svg": {
+      "source_sha256": "748f338dd6ee091263b9e948ab4ab26da3b192a023a375f606bb17bd06c21941",
+      "published_sha256": "748f338dd6ee091263b9e948ab4ab26da3b192a023a375f606bb17bd06c21941",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS2_GAMM_numerical_diagnostics.pdf": {
+      "source_sha256": "02c2529b335c544a2312c1acb3ac607b6829b2768d78ded505c167f0ba08fc3f",
+      "published_sha256": "02c2529b335c544a2312c1acb3ac607b6829b2768d78ded505c167f0ba08fc3f",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS2_GAMM_numerical_diagnostics.png": {
+      "source_sha256": "3f2811b544bd3253e24f3ff5aad0398a1732e48e7ec91759f019741f6c39c4ea",
+      "published_sha256": "3f2811b544bd3253e24f3ff5aad0398a1732e48e7ec91759f019741f6c39c4ea",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS2_GAMM_numerical_diagnostics.svg": {
+      "source_sha256": "728a430e93b7c634a45b79063922c82d0bd30c23b38545886810da17c4e84595",
+      "published_sha256": "728a430e93b7c634a45b79063922c82d0bd30c23b38545886810da17c4e84595",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS3_candidate_support_diagnostics.pdf": {
+      "source_sha256": "373b30a64a54d284f3e3f0c8585f11d9a8adc57f2cbf2704237a5406f6877541",
+      "published_sha256": "373b30a64a54d284f3e3f0c8585f11d9a8adc57f2cbf2704237a5406f6877541",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS3_candidate_support_diagnostics.png": {
+      "source_sha256": "0432eb7239c4cc26b6f372363e21df48e0121961cb3c97f3260ca597287c7cd4",
+      "published_sha256": "0432eb7239c4cc26b6f372363e21df48e0121961cb3c97f3260ca597287c7cd4",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS3_candidate_support_diagnostics.svg": {
+      "source_sha256": "dfddcbd324c7ad29dff7448398a6977408b19f3dbd6085c823b4bcac9cdecf46",
+      "published_sha256": "dfddcbd324c7ad29dff7448398a6977408b19f3dbd6085c823b4bcac9cdecf46",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS4_bounds_all_MC_status.pdf": {
+      "source_sha256": "1e126494d7468080e81fbdb266684584f4f4fb890ea5effac6e7eaeecd2a3ac9",
+      "published_sha256": "1e126494d7468080e81fbdb266684584f4f4fb890ea5effac6e7eaeecd2a3ac9",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS4_bounds_all_MC_status.png": {
+      "source_sha256": "5dd71ba2e341fb696f171503277b7ab89994071b69f9cfc028ad618d5c262c15",
+      "published_sha256": "5dd71ba2e341fb696f171503277b7ab89994071b69f9cfc028ad618d5c262c15",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS4_bounds_all_MC_status.svg": {
+      "source_sha256": "7cd95ccfaef0af4057472bdb633677cb2da7fe426173d80772815e7d6ac64a63",
+      "published_sha256": "7cd95ccfaef0af4057472bdb633677cb2da7fe426173d80772815e7d6ac64a63",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS5_partition_recovery_baseline.pdf": {
+      "source_sha256": "31390656202d5f3881d75059ee4f1fe5b5345654e15c6a6d6a3c29e8cf0a9e3a",
+      "published_sha256": "31390656202d5f3881d75059ee4f1fe5b5345654e15c6a6d6a3c29e8cf0a9e3a",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS5_partition_recovery_baseline.png": {
+      "source_sha256": "fdf24f4dd65795d8ac00ad77b2b5d755371d3d260e8e9fef3d4936ab5b7389b0",
+      "published_sha256": "fdf24f4dd65795d8ac00ad77b2b5d755371d3d260e8e9fef3d4936ab5b7389b0",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/figures/FigureS5_partition_recovery_baseline.svg": {
+      "source_sha256": "e224b09e5d2e1c39b2631cdf3dbd8967433f7c548d2ccd1896576c4fc066d7f6",
+      "published_sha256": "e224b09e5d2e1c39b2631cdf3dbd8967433f7c548d2ccd1896576c4fc066d7f6",
+      "kind": "reviewed_aggregate",
+      "rows": null
+    },
+    "data/published/20261004/tables/Table1_cohort_and_analysis_sets.csv": {
+      "source_sha256": "3770512f99847aa96c34ee695c90e245bca5d95b265e35ada7f57c45e5a36cf9",
+      "published_sha256": "3770512f99847aa96c34ee695c90e245bca5d95b265e35ada7f57c45e5a36cf9",
+      "kind": "reviewed_aggregate",
+      "rows": 5
+    },
+    "data/published/20261004/tables/Table2_minute_support_composition_finite_rates.csv": {
+      "source_sha256": "db3c81491a0f60aa317f8baae6502e526b89bdc733a9ccaad667225f2690dbcf",
+      "published_sha256": "db3c81491a0f60aa317f8baae6502e526b89bdc733a9ccaad667225f2690dbcf",
+      "kind": "reviewed_aggregate",
+      "rows": 20
+    },
+    "data/published/20261004/tables/Table3_prediction_primary_paired.csv": {
+      "source_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "published_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "kind": "reviewed_aggregate",
+      "rows": 4
+    },
+    "data/published/20261004/tables/TableS10_partition_recovery_and_baseline.csv": {
+      "source_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "published_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "kind": "reviewed_aggregate",
+      "rows": 232
+    },
+    "data/published/20261004/tables/TableS11_baseline_descriptive.csv": {
+      "source_sha256": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+      "published_sha256": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+      "kind": "reviewed_aggregate",
+      "rows": 12
+    },
+    "data/published/20261004/tables/TableS12_FPCA_redundancy.csv": {
+      "source_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "published_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "kind": "reviewed_aggregate",
+      "rows": 24
+    },
+    "data/published/20261004/tables/TableS13_prediction_all20_repeats.csv": {
+      "source_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "published_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "kind": "reviewed_aggregate",
+      "rows": 800
+    },
+    "data/published/20261004/tables/TableS14_FPCA_FVE_and_basis.csv": {
+      "source_sha256": "196aa8564476360c875251ca8a38f5ba4a2f3db63d1a0863d773b35e0ead4e6c",
+      "published_sha256": "196aa8564476360c875251ca8a38f5ba4a2f3db63d1a0863d773b35e0ead4e6c",
+      "kind": "reviewed_aggregate",
+      "rows": 120
+    },
+    "data/published/20261004/tables/TableS15_FPCA_reconstruction_all_repeats.csv": {
+      "source_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "published_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "kind": "reviewed_aggregate",
+      "rows": 200
+    },
+    "data/published/20261004/tables/TableS16_GAMM_reference_diagnostics.csv": {
+      "source_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "published_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "kind": "reviewed_aggregate",
+      "rows": 7
+    },
+    "data/published/20261004/tables/TableS17_GAMM_conditional_diagnostics.csv": {
+      "source_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "published_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "kind": "reviewed_aggregate",
+      "rows": 39
+    },
+    "data/published/20261004/tables/TableS18_candidate_support_diagnostics.csv": {
+      "source_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "published_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "kind": "reviewed_aggregate",
+      "rows": 3
+    },
+    "data/published/20261004/tables/TableS1_all18_modules.csv": {
+      "source_sha256": "63e3059f23fb18b5114d5bcdfe10f0760bffd3ab26903b81318d58f3d10974e3",
+      "published_sha256": "024880198d9bfaad27c5c6ef3d37c723e9aff4a3f5b4ee11991f85bd6b7430b5",
+      "kind": "reviewed_aggregate",
+      "rows": 18
+    },
+    "data/published/20261004/tables/TableS2_recorded_codes_all139.csv": {
+      "source_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "published_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "kind": "reviewed_aggregate",
+      "rows": 139
+    },
+    "data/published/20261004/tables/TableS3_finite_changes_all364.csv": {
+      "source_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "published_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "kind": "reviewed_aggregate",
+      "rows": 364
+    },
+    "data/published/20261004/tables/TableS4_FPCA_all24_diagnostics.csv": {
+      "source_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "published_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "kind": "reviewed_aggregate",
+      "rows": 24
+    },
+    "data/published/20261004/tables/TableS5_prediction_all_weights.csv": {
+      "source_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "published_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "kind": "reviewed_aggregate",
+      "rows": 40
+    },
+    "data/published/20261004/tables/TableS6_all1255_MC_statistics.csv": {
+      "source_sha256": "f9e6de8fe73f3bdae3749bc920aac47ff5284e38eb30151230aa2c644e62acf3",
+      "published_sha256": "f9e6de8fe73f3bdae3749bc920aac47ff5284e38eb30151230aa2c644e62acf3",
+      "kind": "reviewed_aggregate",
+      "rows": 1255
+    },
+    "data/published/20261004/tables/TableS7_cluster_summary.csv": {
+      "source_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "published_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "kind": "reviewed_aggregate",
+      "rows": 176
+    },
+    "data/published/20261004/tables/TableS8_U06_variability_summary.csv": {
+      "source_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "published_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "kind": "reviewed_aggregate",
+      "rows": 96
+    },
+    "data/published/20261004/tables/TableS9_candidate_summary.csv": {
+      "source_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "published_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "kind": "reviewed_aggregate",
+      "rows": 178
+    },
+    "data/aggregate_sources/20261004/prediction_all_repeat_metrics.csv": {
+      "published_sha256": "af4df2d997257f808f69e8abfe9336b7351cf8a07d38b4822dade5fb275fc37d",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/all_current_MC_statistics.csv": {
+      "published_sha256": "2a07906a5351976e418a8957988551fc26e38db1f4ae4b74024140a36a8be947",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/all_18_modules.csv": {
+      "published_sha256": "024880198d9bfaad27c5c6ef3d37c723e9aff4a3f5b4ee11991f85bd6b7430b5",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/candidate_reference_points.csv": {
+      "published_sha256": "e40a31d52a99aa0fa9875d31f124730b3469186a5dbf7bc19436e1aa62b24616",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/prediction_summary.csv": {
+      "published_sha256": "673d1a3f0b7637702cf3b94db218297f7bb8d39bdc8f914ff61ddf28ad8b43fa",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/cohort.csv": {
+      "published_sha256": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/manifest.json": {
+      "published_sha256": "9c73e3369d6e8c615213c950b49887c5bdfec22785edbac050e04843aefd0bd0",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/observed_curve_latest.csv": {
+      "published_sha256": "1a579e7d20beb805491020534be1de94388145a87b2e6bc96b7d8997d2cb9ca8",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/bounded_means.csv": {
+      "published_sha256": "b0ca51a6cd38f776d948bbed267cf74476ca24063fd124681d620aba6210b687",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/adjacent_composition.csv": {
+      "published_sha256": "77938166bee55f128bdbdd40ad771705f1cc34e68fe3b3f38a26417762c2877a",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/observed_by_marker.csv": {
+      "published_sha256": "dd50aeb829ace8643ba86e091b129af8aaf0796feb254aae0999b6b26f3e9e3e",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/area_bounds.csv": {
+      "published_sha256": "e1103e3ad634a231b18eff21458a11b422a5e5303681fd9a6a71125a6ca90faf",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observed_algebra/marker_distribution.csv": {
+      "published_sha256": "aab21c879f72d3f92abe73c4756ffb1d9d738d0c1dcc4fdd764c6b474e522f7a",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/completion/symptoms_point.json": {
+      "published_sha256": "40a5a4bfd468cb20890bf8b75e64fe8b20e6f660de49ca52d76b53dcd456df52",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/completion/finite_changes_summary.json": {
+      "published_sha256": "e2b73f84255d9261c769ef62839d700d99d5130f1a06a02274c0a375afe52fa5",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/completion/supports.json": {
+      "published_sha256": "3cdc20189c12768ad92e1c02decafafd125a65f2105384f5a2e4cf40570b8509",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/completion/finite_changes_point.json": {
+      "published_sha256": "5243d6fa4dd95285e9a61f00cdd7f6b3a753d6f099f6a03e417562b297826e86",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/completion/symptoms_summary.json": {
+      "published_sha256": "a1ae248b9a88e0ff8e9446b5a2bc156c5bb87835a06921dc5175243dcaee1c44",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/gamm_summary.json": {
+      "published_sha256": "26af83b8900fb9ce884e5271eb5a3c32fd0c6d031e30750c673822242da29629",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/reconstruction_summary.json": {
+      "published_sha256": "a984c875d7c55696dbed4a0192cdf2ebb009baa999b7699da42acbdc10006407",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/sparse_summary.json": {
+      "published_sha256": "21cb88b66f43ba7f6d862ef33dae8e6e95ab9111e8a8d83b932c41a2f7614246",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/complete_summary.json": {
+      "published_sha256": "c0265fbeccfd3b69d9fe6bc075e553c01158971d1dafa84446b4bb4bf06325eb",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G10_complete_k6.json": {
+      "published_sha256": "8a6e4e29d8189976aae3f230e41917e5a509a5ad736902f6131d443cbb734d55",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G20_primary_k6.json": {
+      "published_sha256": "0477c7f7dd7f6e991137ceac9bd751c61c9b9caa834cffbb146b72522383742a",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G10_common_k6.json": {
+      "published_sha256": "f5ec59481c80fba3faa9b427771fbcbd6fdcbcc83dc50c80f74add3c70e9cd6d",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G20_k4.json": {
+      "published_sha256": "5659db160a834918ac4802e3db702d31a21cc00d24a01329788eb37087677203",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G20_k8.json": {
+      "published_sha256": "80c37efafbcb0db301230faacb6d5a41d207f91436d1400de58b38fd3c605aff",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/GAMM_conditional_diagnostics.json": {
+      "published_sha256": "602796e0b341c39bbfcb2bcd0296c557422ea0c655715fbe85640b5bf20fc215",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G20_complete_k6.json": {
+      "published_sha256": "172ac453d35e4015318d78af977854e342a4f923f1901958ed10afdc73dabc7f",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/GAMM_diagnostics/reference_diagnostics__G20_independent_k6.json": {
+      "published_sha256": "8e611de56eb49d4f0e7a5d8714aeb1f6631895d68ef734ba2ad4ab61622d865c",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/derivative_synthetic/development_summary.json": {
+      "published_sha256": "0555901e2fad580a7cf4350ff547a87c5ddf2fc4f0fc1d0466af51aa799488c5",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/derivative_synthetic/smoke_summary.json": {
+      "published_sha256": "3b6442fc584b8137dce087d5f0b5f916b3dbc2a4611962976f5d3edb826797ab",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/gamm_summary.json": {
+      "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/reconstruction_summary.json": {
+      "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/sparse_summary.json": {
+      "published_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/complete_summary.json": {
+      "published_sha256": "db02dca861d05bc232377308e6c87b54116d3176755200574512bb40634cf445",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/redundancy.csv": {
+      "published_sha256": "a0d382d2db6e66d2c7731bf0720a295906deb76a3c1cd78c5f4676204382b3b6",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/variability/U06_variability_summary.json": {
+      "published_sha256": "1d38e0b9a9724f05bb2baba832aab6a330054ddc03c152a8c6884eb0bd08b30f",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/python_remaining/cluster_summary.json": {
+      "published_sha256": "5db7f9c65a6bae4de9ef0489aeab5a6be82926613841176a0dfdfbc860b2069a",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/python_remaining/baseline_summary.json": {
+      "published_sha256": "5f06db145678a18a10b21eeca999131fff7264a1f224cfd001661941f366ea3e",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/python_remaining/recovery_summary.json": {
+      "published_sha256": "eb3d7006071b714857e148ea3b53b8ceca79b27292d03f661dbd1dd070a6bb91",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/python_remaining/candidate_summary.json": {
+      "published_sha256": "5a00c57f19f11d2400820442d2e365e9fa050f9d02917d517201b073ecea3b25",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observations/next_rating_summary.json": {
+      "published_sha256": "63a752b105a8c0a105713e6fb1a2804c7849fac168e2d4eeb2c6866bb9da1fee",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observations/five_to_ten_summary.json": {
+      "published_sha256": "a864568c0bc7d1ff4dc65f0b7cfec5219bbfd2fdbf41f649c4f1a3156c395fe7",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/observations/VAS_observation_summary.json": {
+      "published_sha256": "0c235848c1edf79346e8957035ce24d739e9fbc6ec8cd52200e421dc1a51bdee",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/references/reference__F10.json": {
+      "published_sha256": "c194ea9db199814800340f0ab13f7004de255add78e4105840a7221a39e72f61",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/FPCA_precision/references/reference__F20.json": {
+      "published_sha256": "5cc51980e68431c289235c58c922b6c484c98e63edcdbc1360c78786378740f4",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S20_bw3_4.json": {
+      "published_sha256": "f2913da8e2279647d4cc6ef740d866d966ddc172fe82627959ff66f2e9cba962",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G10_common_k6.json": {
+      "published_sha256": "683502f86caad3fce756595c72fcb3213d208368492f8fc3f7b72b2463fe0007",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G20_complete_k6.json": {
+      "published_sha256": "db09fa992b855a59ee1c49f813c5420c9ecd4e7ed1075c40cf30691d1fe9e710",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G20_primary_k6.json": {
+      "published_sha256": "9808168a11c36f13d5580e6d8d277dede941efc11f1f121fdb2fbbb395117cb6",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G10_complete_k6.json": {
+      "published_sha256": "223c68612f7fbb6ff5a4d51aec7d409f12801a642b931ed6a3dd0ecb97bff945",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S10_bw3_4.json": {
+      "published_sha256": "4116fcc7a9f517af004f68c8cb88ca9e131e655097b456ac6129c810df31b316",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S10_bw2_3.json": {
+      "published_sha256": "c2e027bad9ced6fe47737adec7a26a2aced9af9b8fec252e3fd584524fb778f5",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__F10.json": {
+      "published_sha256": "c194ea9db199814800340f0ab13f7004de255add78e4105840a7221a39e72f61",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G20_k8.json": {
+      "published_sha256": "dadc3131eb416ec11dc9412aa98828e4bb97020fbcfc7410dac004ac61432a54",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G20_k4.json": {
+      "published_sha256": "61e3a825075e32de4cfdc6cc79e6715b7f24d5c55a525d857f7956ba69bd08a7",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__G20_independent_k6.json": {
+      "published_sha256": "d39f4535e896c671b0b8389866beb68342a7dcfc49767ff247140fa8e53c2655",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S10_bw1.5_2.json": {
+      "published_sha256": "84663ce53cdc3094366ff6c3f204202be3028f06d43403c68480b2a2623cb26c",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__F20.json": {
+      "published_sha256": "5cc51980e68431c289235c58c922b6c484c98e63edcdbc1360c78786378740f4",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S20_bw2_3.json": {
+      "published_sha256": "5694b65bacaf776a55a08e18a78bb7136f971caaae872cea86f5e569a420f556",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/aggregate_sources/20261004/R_main/references/reference__S20_bw1.5_2.json": {
+      "published_sha256": "64aa8520ffae5d5a55a44fd3ab1fa9f1e5bb0734df4020786a2e87b34aaf44b6",
+      "kind": "reviewed_aggregate_source"
+    },
+    "data/published/20261004/README.md": {
+      "source_sha256": "59f752040fd02b474692ffd2497ab1efdf2c5ea34f84e59f6a407b94e0581675",
+      "published_sha256": "59f752040fd02b474692ffd2497ab1efdf2c5ea34f84e59f6a407b94e0581675",
+      "transformation": "generated artifact links only; no manuscript narrative",
+      "source_origin": "public aggregate artifact index"
+    }
+  },
+  "source_report_manifest_sha256": "7a9ecd2d23f2a8fdb7967b6970439a818d249cdfbc7bd0d54dafb0ff97c0229f",
+  "source_bundle_manifest_sha256": "ebac4ef1f8b6061310cba9d332f828380845dd262aaa62554f53825ea1e83729",
+  "source_documents": {
+    "README.md": "00903f660a779841eeca818b4eda62a0316e6ab373da307ab6fb5ad8d638e6f0",
+    "docs/analysis_plan.md": "5547d3e04b50cfed3dbd62537ee1d3fd84264fd671abf27ab34f423e9ba4e517",
+    "docs/decision_log.md": "0134c6088c398d0665f38a629da10440a93b1dbbfb1e0bc44a860525543a3000"
+  },
+  "individual_data_in_current_tree": false,
+  "history_status": {
+    "local_history_cleaned": true,
+    "remote_history_cleaned": false,
+    "method": "reviewed clean root, subsequent audited publication/documentation commits only; old Git history retained privately outside repository",
+    "remote_push_performed": false,
+    "scope": "pre-publication snapshot; live receipt is docs/publication_status.json"
+  },
+  "maintenance_scope": {
+    "date": "2026-10-05",
+    "source_snapshot_files": 401,
+    "approved_aggregate_files": 116,
+    "unpublished_writing_excluded_from_current_tree": true,
+    "analytical_expressions_preserved": true,
+    "original_source_hashes_retained": true,
+    "verification_record": "docs/code_review_20261005.json"
+  }
+}

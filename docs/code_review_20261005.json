@@ -1,0 +1,59 @@
+{
+  "version": "code_structure_review_20261005_v1",
+  "status": "PASS",
+  "created_utc": "2026-10-05T12:35:12.217081+00:00",
+  "scope": "current code and public tree; no historical erasure claimed",
+  "base_commit": "89d5a695e8edaba9f89f576bd855555eb1238cc7",
+  "Python_files_checked": 234,
+  "R_files_checked": 43,
+  "original_Python_AST_files_compared": 231,
+  "Python_AST_normalization": [
+    "split import statements",
+    "docstring indentation"
+  ],
+  "analytical_Python_AST_unchanged": true,
+  "R_parse_normalization": "single-expression braces only",
+  "R_normalized_expressions_unchanged": true,
+  "remaining_method_configurations_byte_unchanged": 105,
+  "retained_aggregate_files_byte_unchanged": 115,
+  "rerendered_tables_numerically_equivalent": 21,
+  "rerendered_PNG_pixels_identical": 10,
+  "unpublished_artifacts_removed_from_current_tree": [
+    "MANUSCRIPT.md",
+    "supplementary_latest.md",
+    "config/manuscript_variable_length_v1.json",
+    "config/reporting_scope_20261003_v1.json",
+    "config/reporting_scope_20261003_v2.json",
+    "config/main_figures_methods_reporting_20261003_v1.json",
+    "scripts/verify_unified_results_docs.py",
+    "scripts/review_waveform_provenance.py",
+    "data/published/20261004/REPORT.md",
+    "data/published/20261004/REPORT.html"
+  ],
+  "report_renderer_outputs": "artifact index, figures, tables, and provenance only",
+  "formatter_versions": {
+    "ruff": "0.16.10",
+    "air": "0.12.0"
+  },
+  "tests": {
+    "status": "PASS",
+    "count": 313,
+    "log_sha256": "8eb9a6824cd592b54e352c0c40705e6c58308ef2bdc69e49d3cd6120050a896c"
+  },
+  "real_data_inference_performed": false,
+  "verified_utc": "2026-10-05T12:37:16.017203+00:00",
+  "format_and_lint_checks": "PASS",
+  "comments_and_structure_check": {
+    "status": "PASS",
+    "scope": "current public tree; historical snapshots are not rewritten",
+    "Python_files": 234,
+    "R_files": 43,
+    "failures": []
+  },
+  "Markdown_documents_checked": 13,
+  "local_document_links_checked": 89,
+  "software_environment": {
+    "Python": "Python 3.12.13",
+    "R": "Rscript (R) version 4.6.1 (2026-06-24)"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "version": "dask_python_remaining_20261003_v1",
+  "status": "frozen_native_python_exploratory_execution",
+  "parent": "config/resampling_server_plan_20261003_v2.json",
+  "prior_scientific_config": "config/analysis_completion_20261002_v1.json",
+  "master_seed": 2026100313,
+  "reference_seed": 20260926,
+  "sequence": [
+    "cluster",
+    "recovery",
+    "baseline",
+    "candidate"
+  ],
+  "sources": {
+    "people": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/people_private.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "planned24_inputs": {
+      "path": "08_outputs/hb_combined_20260927T161640Z_7b0bff85/candidate_associations_dcd804f1/model_input_private.csv",
+      "manifest": "08_outputs/hb_combined_20260927T161640Z_7b0bff85/candidate_associations_dcd804f1/manifest.json"
+    },
+    "planned24_results": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/planned_24_candidate_results.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "egg66_inputs": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/egg_hb_model_inputs_private.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "egg66_results": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/egg_hb_66_candidate_results.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "joint22_inputs": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/joint_model_inputs_private.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "joint22_results": {
+      "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/joint_candidate_coefficients.csv",
+      "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+    },
+    "rest_development": {
+      "path": "08_outputs/rest_signal_reference_20260929T165843Z_438daf0e/subject_reference_private.csv",
+      "manifest": "08_outputs/rest_signal_reference_20260929T165843Z_438daf0e/run_manifest.json"
+    }
+  },
+  "expected_people": 215,
+  "expected_complete": {
+    "10": 206,
+    "20": 56
+  },
+  "intervals": [
+    10,
+    20
+  ],
+  "transformations": [
+    "raw",
+    "within_person_centered"
+  ],
+  "methods": [
+    "euclidean_kmeans",
+    "dtw_pam",
+    "fuzzy_cmeans"
+  ],
+  "k": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "cluster_replicates": 5000,
+  "cluster_batch_size": 100,
+  "dtw_radius": 2,
+  "cluster_initializations": {
+    "reference_kmeans": 20,
+    "resampled_kmeans": 5,
+    "fuzzy_kmeans": 5,
+    "pam_iterations": 50,
+    "fuzzy_iterations": 150,
+    "fuzzy_tolerance": 1e-06
+  },
+  "cluster_assignment": "nearest_refitted_center_or_resampled_original_medoid_to_original_unique_people",
+  "cluster_evaluation": {
+    "legacy": "ARI_original_unique_people_vs_full_reference",
+    "supplement": "ARI_unique_out_of_bag_people_vs_full_reference",
+    "OOB_minimum": "2_algebraic_minimum_constant_partition_flagged_not_validated",
+    "jaccard": "Hungarian_unsupervised_full_partition_only_union_zero_score0",
+    "empty_cluster": "retain_original_kernel_result_flag_collapsed_fit_no_reseed",
+    "fuzzy_entropy": "mean_minus_sum_u_log_u_all_and_OOB",
+    "failure": "all_requested_replicates_retained_failure_null_no_redraw"
+  },
+  "recovery": {
+    "intervals": [
+      10,
+      20
+    ],
+    "repeats": 20,
+    "folds": 5,
+    "prefixes": [
+      3,
+      5,
+      8
+    ],
+    "shapelet_prefixes": [
+      5,
+      8
+    ],
+    "length": 5,
+    "maximum_candidates_per_training_class": 40,
+    "kmeans_n_init": 20,
+    "logistic_C": 1,
+    "logistic_max_iter": 2000,
+    "inner_folds": "none_no_tuned_learning_parameters",
+    "reference": "training_full_curve_kmeans_test_nearest_training_center",
+    "selection": "training_only_shapelet_candidate_contrast_original_completion_kernel",
+    "macro_f1": "frozen_classes0to_kminus1_zero_division0",
+    "balanced_accuracy": "mean_recall_present_reference_classes_missing_classes_flagged",
+    "aggregation": "equal_fold_mean_within_each_repeat_no_label_pooling_or_test_matching"
+  },
+  "baseline_recovery": {
+    "intervals": [
+      10,
+      20
+    ],
+    "k": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "folds": 5,
+    "split_seed": 20260926,
+    "partition_seed": 20260926,
+    "pool": "development only for every baseline comparison",
+    "minimum_training_members_per_class": 2,
+    "numeric_questionnaire": [
+      "Age",
+      "BMI",
+      "CCEI",
+      "AES"
+    ],
+    "categorical_questionnaire": [
+      "Sex",
+      "Alcohol_consumption",
+      "Spicy_food_frequency",
+      "Usual_spiciness_level",
+      "Spicy_food_preference",
+      "Max_tolerable_spiciness",
+      "Recent_spicy_intake_24h",
+      "Baseline_GI_symptoms"
+    ],
+    "rest_features": [
+      "candidate_hr_bpm",
+      "candidate_rmssd_ms",
+      "egg_candidate_peak_cpm",
+      "egg_slow_power_ratio",
+      "egg_spectral_entropy",
+      "egg_slow_coherence"
+    ],
+    "preprocessing": "fit median/mode imputation, category encoding and standardization on training persons only",
+    "classifier": "logistic C=1 with training-only preprocessing; majority baseline",
+    "reference": "training-defined full-interval partition; not clinical truth",
+    "comparison": "questionnaire versus questionnaire plus resting candidates on identical eligible people and folds",
+    "role": "development-only candidate feasibility; baseline physiological classification remains unvalidated",
+    "repeats": 20
+  },
+  "candidate_replicates": 20000,
+  "candidate_batch_size": 1000,
+  "candidate_targets": {
+    "planned24": 24,
+    "egg66": 66,
+    "joint22": 22
+  },
+  "candidate_statistics": 178,
+  "candidate_scope": "fixed_source_nominal_QC_and_SD_within_person_FE_coefficients_plus_joint_same_row_SSE_reduction_not_prediction_gain",
+  "candidate_scale": "planned24_bpm_or_candidate_RR_ms_perVAS_or_within_person_SD_perVAS_egg66_Hb_within_person_SD_per_egg_descriptor_joint_VAS_per_candidate_unit_SSE_VAS_squared",
+  "candidate_failure_limit": 0.05,
+  "candidate_intervals": "success_conditional_descriptive_range_never_validated_CI_no_p_q",
+  "MC_error_per_stage": 0.05,
+  "MC_allocation": "separate_stage_families_single_final_checkpoint_cluster176_statistics_candidate178_statistics_each2_endpoints_no_joint_all_stages_claim",
+  "MC_relative_tolerance": 0.02,
+  "MC_cluster_ARI_absolute": 0.005,
+  "MC_cluster_proportion_absolute": 0.002,
+  "MC_cluster_entropy_absolute": 0.002,
+  "MC_candidate_coefficient_absolute": null,
+  "MC_candidate_SSE_absolute": 0.01,
+  "quantile": "generalized_inverse_ceiling_Bp_ties_retained_exact_binomial_MC_ranks",
+  "checkpoints": "fixed5000_cluster_and20000_candidate_final_only_no_effect_direction_or_significance_stopping",
+  "runtime_lock": "dependencies/project-python312-20261003-v2.lock.txt",
+  "driver_timeout_seconds": 86400,
+  "per_task_threads": 1,
+  "scientific_gates_changed": false,
+  "primary_physiology_p_q": null,
+  "sealed_pool_opened": false,
+  "not_in_this_batch": [
+    "R_Gaussian_CAR1_GAMM_full_refits",
+    "R_complete_FPCA_original_backend",
+    "R_fdapace_sparse_FPCA",
+    "real_Markov_derivative_phase_and_validated_physiology",
+    "optional_U07_population_summary_bootstrap"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "ecg_egg_paired_candidates_v1",
+  "pool": "development",
+  "rr_run": "08_outputs/ecg_rr_symmetric_20260929T163754Z_05c586b9",
+  "egg_run": "08_outputs/egg_motion_development_audit_20260929T160048Z_4a12d38e",
+  "baseline_stages": ["N", "C", "P"],
+  "baseline_state_semantics": "experimental_resting_reference_state",
+  "rest_reference_config": "config/rest_normal_reference_v1.json",
+  "stimulus_stage": "E",
+  "features": [
+    "candidate_hr_bpm",
+    "candidate_rmssd_ms",
+    "egg_candidate_peak_cpm",
+    "egg_slow_power_ratio",
+    "egg_spectral_entropy",
+    "egg_slow_coherence"
+  ],
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260929,
+  "rank_association": "spearman_with_leave_one_subject_out_range",
+  "significance_testing": false,
+  "multiple_testing_selection": false,
+  "parameter_selection_from_current_data": false,
+  "status": "development_paired_candidate_description_not_stimulus_effect_or_physiological_validation"
+}

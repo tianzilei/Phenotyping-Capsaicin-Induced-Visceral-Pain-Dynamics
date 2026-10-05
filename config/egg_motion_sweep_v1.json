@@ -1,0 +1,16 @@
+{
+  "version": "egg_motion_sweep_v1",
+  "pool": "development",
+  "status": "frozen_parameter_sensitivity_no_selection_no_acceptance",
+  "derivative_mad_multiples": [6, 8, 10],
+  "local_reference_seconds": [45, 60, 90],
+  "guard_seconds": 2,
+  "coarse_sampling_hz": 10,
+  "spectrum_sampling_hz": 100,
+  "minimum_continuous_seconds": 120,
+  "minimum_total_seconds": 180,
+  "anchor": {"derivative_mad_multiple": 8, "local_reference_seconds": 60},
+  "selection_rule": null,
+  "no_interpolation": true,
+  "no_gap_bridging": true
+}

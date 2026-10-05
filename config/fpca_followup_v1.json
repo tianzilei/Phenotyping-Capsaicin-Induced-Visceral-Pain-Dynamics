@@ -1,0 +1,22 @@
+{
+  "version": "fpca_followup_v1",
+  "status": "frozen_provisional",
+  "input_run": "08_outputs/provisional_vas_20260916T144537Z_11f54777",
+  "estimand": "weighted functional covariance and reconstruction of raw VAS in interval-complete candidate subjects",
+  "scale": "VAS 0-10; no subject standardization; trapezoidal time weights",
+  "intervals": [[1, 20], [1, 10]],
+  "components": [1, 2, 3, 4],
+  "bootstrap_replicates": 500,
+  "bootstrap_unit": "whole subject row pending identity verification",
+  "seed": 917551,
+  "cv_repeats": 10,
+  "cv_folds": 5,
+  "cv_components": [0, 1, 2, 3, 4],
+  "cv_target": "full held-out curve projection on training mean/basis, not future or missing-value prediction",
+  "stability": "rank-ordered leading-k subspace maximum principal angle for each k; matched axis inner products are supplementary",
+  "bootstrap_summary": "median and 2.5/97.5 empirical percentiles, descriptive stability ranges not calibrated confidence intervals",
+  "redundancy": ["mean_VAS", "trapezoidal_AUC", "first_observed_peak_minute"],
+  "dimension_policy": "report all k and 90% sample FVE crossing; no automatic selection or clinical phenotype labels",
+  "limits": "complete-case selection unresolved; not sparse PACE; reconstruction errors use the entire held-out curve for scoring; no inferential p-values",
+  "timeout_seconds": 1800
+}

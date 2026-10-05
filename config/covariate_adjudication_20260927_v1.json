@@ -1,0 +1,21 @@
+{
+  "version": "covariate_adjudication_20260927_v1",
+  "policy": "smallest_numeric_id",
+  "scope": "confirmed same-person aliases with identical VAS values",
+  "authority": "User instruction on 2026-09-27: when covariates conflict, use the record with the smaller participant number",
+  "canonical_alias": "smallest numeric research ID is the selected source row",
+  "source_data_unchanged": true,
+  "audit_fields": [
+    "person_id",
+    "source_alias",
+    "field",
+    "value",
+    "selected_source_alias",
+    "selection_rule",
+    "selected_value"
+  ],
+  "special_cases": {
+    "ACQ_CNP_files": "apply the same source-row rule, but treat the result as file provenance rather than a scientific covariate",
+    "missing_values": "retain the selected source value exactly; do not convert missing to zero or infer a replacement"
+  }
+}

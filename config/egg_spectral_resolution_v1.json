@@ -1,0 +1,9 @@
+{
+  "version": "egg_spectral_resolution_v1",
+  "input_run": "08_outputs/egg_motion_development_audit_20260929T160048Z_4a12d38e",
+  "pool": "development",
+  "dpss_time_half_bandwidth": 3,
+  "duration_caution_below_seconds": 300,
+  "status": "candidate_physical_bandwidth_annotation_not_confidence_interval",
+  "no_record_exclusion": true
+}

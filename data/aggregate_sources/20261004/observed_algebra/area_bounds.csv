@@ -1,0 +1,2 @@
+start_min,end_min,candidate_mean_auc_lower,candidate_mean_auc_upper,width_due_to_E,width_due_to_T,width_due_to_other_missing,unit,interpretation
+1,20,53.841860465116284,90.88837209302326,32.46511627906977,4.5813953488372094,0.0,VAS_minute,bounded_grid_trapezoidal_area_not_observed_auc_or_confidence_interval

@@ -1,0 +1,12 @@
+{
+  "version": "crosstalk_calibration_v1",
+  "source": "Gemini secondary solution, locally frozen before inference",
+  "session_pairing": "same_subject_same_day_same_identifier_E_to_N_or_C",
+  "rest_split_seconds": {"train": 120, "guard": 10, "validation_min": 120, "minimum_total": 250},
+  "template_window_seconds": [-0.1, 0.15],
+  "template_preprocessing": {"bandpass_hz": [0.5, 25.0], "detrend": "linear", "tukey_alpha": 0.2, "aggregate": "median"},
+  "assessment": {"correlation_min": 0.5, "positive_projection_required": true, "alpha_range": [0.5, 1.5], "preserve_length": true, "no_zeroing": true, "no_interpolation": true, "no_gap_bridging": true},
+  "gates": {"exploratory_attenuation_db": 6.0, "legacy_attenuation_db": 15.0, "slow_band_hz": [0.033, 0.067], "null_leakage_db_max": -60.0, "slow_injection_rmse_fraction_max": 0.03, "slow_injection_phase_rad_max": 0.05},
+  "hrv": {"min_valid_nn_fraction": 0.85, "sampen_min_contiguous_seconds": 120},
+  "downstream": {"e04_requires_exploratory_e05_gate": true, "e09": "FULLY_SUPPRESSED"}
+}

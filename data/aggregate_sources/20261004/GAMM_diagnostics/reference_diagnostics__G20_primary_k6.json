@@ -1,0 +1,153 @@
+{
+  "result": {
+    "Hessian": null,
+    "Hessian_note": "apVar is an approximate covariance, not the Hessian; no Hessian recomputation in this diagnostic phase",
+    "R_version": "4.6.1",
+    "VarCorr_columns": [
+      "Variance",
+      "StdDev"
+    ],
+    "VarCorr_rows": [
+      "g =",
+      "Xr1",
+      "Xr2",
+      "Xr3",
+      "Xr4",
+      "subject_id =",
+      "(Intercept)",
+      "Residual"
+    ],
+    "VarCorr_text": [
+      "             Variance        StdDev      ",
+      "g =          pdIdnot(Xr - 1)             ",
+      "Xr1          8.768891e-02    0.2961231327",
+      "Xr2          8.768891e-02    0.2961231327",
+      "Xr3          8.768891e-02    0.2961231327",
+      "Xr4          8.768891e-02    0.2961231327",
+      "subject_id = pdLogChol(1)                ",
+      "(Intercept)  1.462169e-07    0.0003823832",
+      "Residual     4.611482e+00    2.1474360844"
+    ],
+    "VarCorr_values": [
+      [
+        "pdIdnot(Xr - 1)",
+        ""
+      ],
+      [
+        "8.768891e-02",
+        "0.2961231327"
+      ],
+      [
+        "8.768891e-02",
+        "0.2961231327"
+      ],
+      [
+        "8.768891e-02",
+        "0.2961231327"
+      ],
+      [
+        "8.768891e-02",
+        "0.2961231327"
+      ],
+      [
+        "pdLogChol(1)",
+        ""
+      ],
+      [
+        "1.462169e-07",
+        "0.0003823832"
+      ],
+      [
+        "4.611482e+00",
+        "2.1474360844"
+      ]
+    ],
+    "apVar_Pars": [
+      -7.869087358223223,
+      -2.4378214500339697,
+      2.148719072833098,
+      0.7642746116398741
+    ],
+    "apVar_class": [
+      "matrix",
+      "array"
+    ],
+    "apVar_covariance_condition_number": 3310043.2896111384,
+    "apVar_covariance_eigenvalues": [
+      416.8642508235301,
+      0.5445588639543852,
+      0.00573637836199457,
+      0.0001259392141884957
+    ],
+    "apVar_finite_matrix": true,
+    "apVar_matrix": [
+      [
+        416.863421849774,
+        -0.5868073471518602,
+        -0.02553228987298906,
+        -0.01112006134205921
+      ],
+      [
+        -0.5868073471518597,
+        0.5453859754689787,
+        1.535671612376357e-05,
+        -7.360024893073938e-06
+      ],
+      [
+        -0.025532289873106895,
+        1.5356716123956423e-05,
+        0.0049401832831972034,
+        0.0019601109054068594
+      ],
+      [
+        -0.011120061342040402,
+        -7.3600248931056125e-06,
+        0.00196011090540686,
+        0.0009239965344958407
+      ]
+    ],
+    "apVar_message": null,
+    "apVar_natural": true,
+    "apVar_parameter_names": [
+      "reStruct.subject_id",
+      "reStruct.g",
+      "corStruct",
+      "lSigma"
+    ],
+    "apVar_positive_definite": true,
+    "curve": [
+      3.031496090175386,
+      3.49169443861918,
+      3.892821800365075,
+      4.175807188715173,
+      4.281768495123884,
+      4.191865779334697,
+      3.9765984671323187,
+      3.718554186049098,
+      3.4991058865127322,
+      3.352405946507425,
+      3.2512655502322665,
+      3.164396346658134,
+      3.062203053284777,
+      2.940423709303207,
+      2.8142979951073674,
+      2.699567241025681,
+      2.609949442947131,
+      2.544208890669222,
+      2.4944075786588185,
+      2.452575886782167
+    ],
+    "edf": 5.839236638698559,
+    "logLik": -4885.170366239634,
+    "model_formula": "y ~ X - 1",
+    "optimizer_exit_code": null,
+    "optimizer_exit_code_note": "Not retained in returned lme object; no fabricated code",
+    "optimizer_iterations": null,
+    "residual_sigma": 2.1474360844010048,
+    "rho": 0.8955490184004715,
+    "rho_unconstrained": 2.148719072833098,
+    "status": "estimated",
+    "task": "reference__G20_primary_k6",
+    "warnings": []
+  }
+}

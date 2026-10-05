@@ -1,0 +1,19 @@
+{
+  "version": "reanalysis_20260926_v1",
+  "status": "frozen_exploratory_execution",
+  "plan": "docs/analysis_plan_20260926_algorithmic_qc_v2.md",
+  "authorization": "2026-09-26 user requested execution on current workspace, dependencies allowed; proceed without reference annotations and label unvalidated",
+  "seed": 20260926,
+  "identity": "Apply confirmed alias registry to every modality; identical VAS required; conflicting covariates set missing in derived copy",
+  "vas": {"estimand": "observed VAS conditional on observation", "scale": [0,10], "interval": [1,20], "gamm_bootstrap": 1000, "fpca_bootstrap": 500, "descriptive_bootstrap": 2000, "sparse_bootstrap": 100},
+  "reference": {"development_people": 30, "validation_fraction_remaining": 0.5, "status": "not_annotated", "representative_window_per_person": 1, "false_acceptance_upper_target": 0.05, "confidence": 0.95},
+  "windows": {"A": "all five numeric VAS; (60*(first_minute-1),60*last_minute]", "B": "longest run of at least three consecutive numeric minutes, earliest tie", "offset_seconds": [0,-10,10,-30,30,-60,60], "drift_ppm": [0,-100,100], "origin": "recording_start_is_dose_user_confirmed", "timing_status": "nominal_origin_with_unverified_offset_drift_scenarios"},
+  "ecg": {"methods": ["neurokit","kalidas2017"], "sampling_hz": 250, "match_tolerance_seconds": [0.05,0.025], "refine_radius_seconds": 0.05, "rr_range_seconds": [0.3,2.0], "segment_seconds": 10, "agreement_candidate": 0.9, "coverage_candidates": [0.9,0.95], "main_channel": "record-wide maximum detector agreement, channel index tie", "hr": "60/mean accepted original consecutive RR", "rmssd": "candidate RR RMSSD only; consecutive original three peaks; never NN without reference labels", "readiness": "unvalidated_rule_screen"},
+  "egg": {"sampling_hz": 10, "welch_seconds": [128,256], "overlap_fraction": 0.5, "window": "hann_periodic", "detrend": "constant", "scaling": "density", "search_cpm": [1,9], "minimum_segments": 2, "artifact_derivative_mad": 8, "guard_seconds": 2, "lmmse_seconds": [20,40], "peak_status": "descriptive_unvalidated_not_confirmed_gastric_rhythm"},
+  "hb": {"input": "official_Hb_only", "motion_mad": [6,8], "reference_seconds": 60, "guard_seconds": [2,5], "coverage": [0.9,0.95], "roi_common_fraction": [0.5,0.75], "aggregation": "time-supported per-channel means, equal-weight common channels", "highpass": null, "tddr": "synthetic_preservation_test_only", "optical_quality": "not_applicable_Hb_only", "units": "vendor_relative_units_scale_unverified", "readiness": "unvalidated_rule_screen"},
+  "association": {"outcome": "physiology", "predictor": "VAS", "model": "person_fixed_effects_plus_categorical_block", "minimum_distinct_blocks": 2, "primary_inference_gate": "independent_target_QC_validation", "family_size": 24, "multiplicity_primary": "BY_n24", "multiplicity_sensitivity": "BH_n24", "bootstrap": 2000, "maximum_failure_fraction": 0.05, "cr2_simulations_per_scenario": 2000},
+  "prediction": {"time_minutes": 5, "target_minute": 10, "estimand": "observed minute-10 VAS among subjects with numeric minutes 1-5 and 10", "models": ["last_value","ridge","random_forest"], "outer_folds": 5, "inner_folds": 4, "ridge_alpha": [0.1,1,10,100], "forest_depth": [2,4], "forest_trees": 200, "scoring": "MAE", "preprocessing": "training-only standardization; no future covariates"},
+  "clustering": {"role": "complete-trajectory exploratory sensitivity, no tail filling", "intervals": [[1,10],[1,20]], "k": [2,3,4,5], "stability_bootstrap": 100, "methods": ["euclidean_kmeans","dtw_pam","fuzzy_cmeans"], "dtw_radius": 2},
+  "deferred": {"markov": "no supported state thresholds", "phase_coupling": "phase and clock validation absent", "derivative_intervals": "previous calibration failure; curve only", "clinical_hrv": "normal-beat reference absent", "shapelet_phenotype": "no frozen shapelet objective or independent labels"},
+  "timeout_seconds_per_module": 21600
+}

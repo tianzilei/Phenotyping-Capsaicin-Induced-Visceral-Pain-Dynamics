@@ -1,0 +1,11 @@
+{
+  "version": "export_prefix_provenance_v1",
+  "reason": "After whole-length comparisons found historical CSVs usually have exactly 75000 rows, test export-length prefixes without changing prior results",
+  "waveform_run": "02_quality_control/waveform_provenance_20260918T100523Z_0c21f681",
+  "source_config": "config/waveform_provenance_v1.json",
+  "strides": [1, 8],
+  "offsets": [0, 1],
+  "absolute_tolerance_native_mV": 0.000001,
+  "scope": "Every sample of each parseable same-stem export compared; truncate reference only to export length; no padding or repair",
+  "clinical_inference": false
+}

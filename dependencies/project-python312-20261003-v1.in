@@ -1,0 +1,18 @@
+# Python 3.12.13. Scientific baseline: analysis_completion_20261002 environment.json.
+# Additional signal packages follow historical module versions; they require fresh QA.
+numpy==2.2.6
+pandas==2.2.3
+scipy==1.15.3
+scikit-learn==1.6.1
+matplotlib==3.10.1
+h5py==3.13.0
+bioread==3.1.0
+docopt==0.6.2
+cloudpickle==3.1.2
+dask==2026.8.0
+distributed==2026.8.0
+bokeh==3.9.2
+neurokit2==0.2.13
+mne==1.11.0
+openpyxl
+setuptools>=68

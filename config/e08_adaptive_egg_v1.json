@@ -1,0 +1,27 @@
+{
+  "version": "e08_adaptive_egg_v1",
+  "source": "Gemini E08 alternative estimand discussion, frozen locally",
+  "legacy": {
+    "window_seconds": 256,
+    "required_disjoint_windows": 2,
+    "status_when_unavailable": "STRUCTURALLY_UNFULFILLED"
+  },
+  "valid_runs": {
+    "minimum_run_seconds": 120,
+    "minimum_total_seconds": 180,
+    "no_interpolation": true,
+    "no_gap_bridging": true
+  },
+  "quality_score": {
+    "weights": {"coverage": 0.4, "continuity": 0.3, "channel_agreement": 0.3},
+    "minimum": 0.65,
+    "slow_band_hz": [0.033, 0.067]
+  },
+  "spectrum": {
+    "method": "full_run_dpss_multitaper",
+    "time_bandwidth": 3,
+    "tapers": 5,
+    "band_hz": [0.008, 0.150],
+    "slow_band_hz": [0.033, 0.067]
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "M00",
+    "name": "source_audit",
+    "depends_on": [],
+    "inputs": [
+      "source_registry",
+      "codebook",
+      "subject_manifest"
+    ],
+    "output": "02_quality_control",
+    "status": "metadata_tools_ready"
+  },
+  {
+    "id": "M01",
+    "name": "vas_quality_control",
+    "depends_on": [
+      "M00"
+    ],
+    "inputs": [
+      "vas_wide",
+      "subject_manifest",
+      "termination_events"
+    ],
+    "output": "02_quality_control",
+    "status": "wide_validator_ready"
+  },
+  {
+    "id": "M02",
+    "name": "gamm_derivatives",
+    "depends_on": [
+      "M01"
+    ],
+    "inputs": [
+      "vas_long",
+      "frozen_estimand"
+    ],
+    "output": "03_gamm_derivatives",
+    "status": "provisional_runner_implemented",
+    "implementation_scope": "R/vas_models.R; analyze command; independent derivative coverage calibration failed, significant derivative intervals withheld"
+  },
+  {
+    "id": "M03",
+    "name": "fpca",
+    "depends_on": [
+      "M01"
+    ],
+    "inputs": [
+      "vas_long",
+      "frozen_estimand"
+    ],
+    "output": "04_fpca",
+    "status": "complete_case_and_sparse_exploratory_implemented",
+    "implementation_scope": "Weighted-grid complete cases and fdapace sparse working model via scripts/run_sparse_fpca.py; informative dropout unresolved, no confirmed phenotype or prediction"
+  },
+  {
+    "id": "M04",
+    "name": "residual_variability",
+    "depends_on": [
+      "M02"
+    ],
+    "inputs": [
+      "subject_trend_residuals",
+      "vas_long"
+    ],
+    "output": "05_residual_variability",
+    "status": "raw_and_polynomial_residual_descriptives_implemented",
+    "implementation_scope": "Raw SD/MSSD; individual linear/quadratic observed-window residual descriptors; no latent instability or joint location-scale estimator"
+  },
+  {
+    "id": "M05",
+    "name": "physiology_features",
+    "depends_on": [
+      "M00"
+    ],
+    "inputs": [
+      "signal_manifest",
+      "signal_events",
+      "channel_metadata"
+    ],
+    "output": "06_physiology_markov",
+    "status": "spectra_and_ecg_candidate_diagnostics_implemented_artifact_qc_pending",
+    "implementation_scope": "530 ACQ full scans, exact-rate independent ECG/EGG spectra, EGG boundary sensitivity, event-clock audit, and two-method ECG candidate diagnostics in 2304 recording-relative channel windows; 109 synthetic tests and independent timing/count verification; no adjudicated R peaks, accepted HRV, gastric-rhythm or clinical feature estimator; synchronization and SNIRF units/ROI pending"
+  },
+  {
+    "id": "M06",
+    "name": "physiology_association",
+    "depends_on": [
+      "M02",
+      "M03",
+      "M05"
+    ],
+    "inputs": [
+      "physiology_windows",
+      "frozen_covariates"
+    ],
+    "output": "06_physiology_markov",
+    "status": "interface_only"
+  },
+  {
+    "id": "M07",
+    "name": "markov",
+    "depends_on": [
+      "M01"
+    ],
+    "inputs": [
+      "vas_long",
+      "frozen_states"
+    ],
+    "output": "06_physiology_markov",
+    "status": "state_descriptions_implemented_thresholds_pending_regression_interface_only",
+    "implementation_scope": "Actual-adjacent transitions and boundary-censored observed spells; synthetic tests only until justified thresholds frozen"
+  },
+  {
+    "id": "M08",
+    "name": "sensitivity",
+    "depends_on": [
+      "M02",
+      "M03"
+    ],
+    "inputs": [
+      "missingness_scenarios"
+    ],
+    "output": "07_sensitivity",
+    "status": "limited_provisional_sensitivity_implemented",
+    "implementation_scope": "k/correlation/common interval/complete cases, E/T bounds, observed-composition audit, complete and sparse FPCA stability, polynomial residual sensitivity; clinically justified numerical dropout scenarios remain design only"
+  },
+  {
+    "id": "M09",
+    "name": "report",
+    "depends_on": [
+      "M02",
+      "M03",
+      "M04",
+      "M06",
+      "M07",
+      "M08"
+    ],
+    "inputs": [
+      "accepted_module_outputs"
+    ],
+    "output": "08_outputs/reports",
+    "status": "integrated_exploratory_delivery_implemented",
+    "implementation_scope": "Evidence-indexed VAS and signal audit delivery with integrity checks, readiness gates and private review queue; final scientific report remains pending"
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "clinical",
+  "description": "字段语义契约；CSV 的跨行约束见 docs/data_contracts.md",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "age_years",
+    "sex_code",
+    "bmi",
+    "source_reference"
+  ],
+  "properties": {
+    "subject_id": {
+      "description": "研究编号",
+      "type": "string",
+      "minLength": 1
+    },
+    "age_years": {
+      "description": "年龄",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "sex_code": {
+      "description": "遵循代码本",
+      "type": "string"
+    },
+    "bmi": {
+      "description": "BMI",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "source_reference": {
+      "description": "字段来源",
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

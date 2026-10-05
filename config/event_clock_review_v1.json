@@ -1,0 +1,8 @@
+{
+  "version": "event_clock_review_v1",
+  "source_run": "02_quality_control/event_clocks_20260918T104330Z_f5feb319",
+  "purpose": "Post-audit polarity diagnostics after observing long positive dwell and short negative transitions; no assignment of active polarity or clinical event",
+  "digital_definition": "Consecutive transitions returning to initial level with matching intermediate level and strictly increasing time; summarize both positive and negative excursions separately without duration thresholds",
+  "protocol_intervals": "Differences between successive listed start labels within each file, without reconstructing missing events or asserting alignment",
+  "inferential_analysis": false
+}

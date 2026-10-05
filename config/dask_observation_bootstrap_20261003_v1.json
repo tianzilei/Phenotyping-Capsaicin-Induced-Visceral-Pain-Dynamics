@@ -1,0 +1,48 @@
+{
+  "version": "dask_observation_bootstrap_20261003_v1",
+  "status": "frozen_before_distributed_resampling",
+  "parent": "config/resampling_server_plan_20261003_v2.json",
+  "master_seed": 2026100306,
+  "replicates": 20000,
+  "batch_size": 100,
+  "checkpoints": [20000],
+  "statistic_family_size": 110,
+  "MC_total_error_probability": 0.05,
+  "MC_allocation": "Bonferroni_110_statistics_times_2_endpoints_times_1_final_checkpoint",
+  "quantile": "generalized_inverse_order_ceiling_Bp_including_ties",
+  "failure": "undefined_support_retained_no_redraw_success_conditional_empirical_ranges_reported",
+  "MC_rule": "max_endpoint_half_width_le_2percent_empirical_range_width_and_absolute_VAS_0.01_or_proportion_0.002; zero_width_requires_zero_MC_width",
+  "sources": {
+    "people": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/people_private.csv",
+    "people_manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json",
+    "next_rating": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/next_rating_67111ea9/predictions_private.csv",
+    "next_rating_manifest": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/next_rating_67111ea9/manifest.json",
+    "five_to_ten": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/descriptives_eff94054/prediction_private.csv",
+    "five_to_ten_manifest": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/descriptives_eff94054/manifest.json"
+  },
+  "expected_support": {"VAS_observation":215,"next_rating":213,"next_rating_windows":2781,"five_to_ten":206},
+  "sequence": ["VAS_observation","next_rating","five_to_ten"],
+  "VAS_observation": {
+    "estimand": "observed_numeric_mean_VAS_at_actual_minutes1to20_observation_fraction_and_cumulative_first_recorded_E_T_markers",
+    "bootstrap_frame": "all215_people_whole_records_recompute_minute_denominator",
+    "scale": [0,10],
+    "event_time": "marker_column_not_exact_termination_time",
+    "missing_E_T": "never_zero_or_filled_no_baseline_minute0"
+  },
+  "prediction": {
+    "models": ["last_value","ridge","random_forest"],
+    "metrics": ["MAE","RMSE","MAE_model_minus_last_value","RMSE_model_minus_last_value"],
+    "next_rating_weighting": "primary_window_equal_sensitivity_person_equal",
+    "five_to_ten_weighting": "person_equal",
+    "paired": "same_whole_person_multiplicities_all_models_same_targets_and_rows",
+    "role": "fixed_OOF_empirical_resampling_range_conditional_on_already_trained_models",
+    "limitations": "overlapping_training_dependence_retained_no_training_uncertainty_no_population_coverage_claim",
+    "retraining": false
+  },
+  "runtime_lock": "dependencies/project-python312-20261003-v2.lock.txt",
+  "driver_timeout_seconds": 86400,
+  "per_task_threads": 1,
+  "primary_physiology_tests": false,
+  "scientific_gates_changed": false,
+  "not_in_this_batch": ["U06_variability","GAMM_FPCA_cluster_refits","20_repeat_nested_CV","Markov_null_phase_tests"]
+}

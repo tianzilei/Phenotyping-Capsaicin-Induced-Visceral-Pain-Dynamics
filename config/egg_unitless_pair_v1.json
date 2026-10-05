@@ -1,0 +1,9 @@
+{
+  "version": "egg_unitless_pair_v1",
+  "input_run": "08_outputs/egg_unitless_probes_20260929T161328Z_01e4dea9",
+  "status": "paired_development_description_no_filtering_no_inference",
+  "pairing": "same_subject_same_recording_stem_N_or_C_to_E",
+  "metrics": ["subslow_ratio_max", "exact_repeat_fraction_max", "ecg_egg_harmonic_coherence_max"],
+  "thresholds": null,
+  "use_for_artifact_exclusion": false
+}

@@ -1,0 +1,8 @@
+{
+  "version": "reanalysis_supplement_20260926_v1",
+  "status": "frozen_exploratory_execution_before_supplement_results",
+  "next_rating": {"history": "three consecutive actual numeric ratings t-2,t-1,t", "target": "next observed scheduled minute t+1; no crossing gaps", "outer_folds": 5, "inner_folds": 4, "split": "person GroupKFold", "models": ["last_value","ridge","random_forest"], "ridge_alpha": [0.1,1,10,100], "forest_depth": [2,4], "forest_trees": 200, "weighting": "equal eligible window loss, uncertainty resamples whole people", "direction": "predicted versus current VAS; decrease or no decrease", "seed": 20260926},
+  "symptoms": {"selection": "source field names and existing dictionary; no inferred Rome diagnosis", "statistics": "marginal category counts and cooccurrence of explicit symptom/location binary indicators", "conflict": "missing, never majority vote"},
+  "motifs": {"length": 5, "method": "observed nearest segment to each complete-case kmeans cluster mean; display only", "clusters": [2,3,4,5], "scale": "raw VAS", "role": "representative observed motif, not discriminatively trained shapelet or clinical label"},
+  "inference_calibration": {"replicates_per_scenario": 2000, "scenarios": ["balanced40","unbalanced40","unbalanced15"], "alpha": 0.05, "seed": 20260926, "method": "clubSandwich CR2 Satterthwaite", "purpose": "null type-I error engineering evaluation; target QC gate remains separate"}
+}

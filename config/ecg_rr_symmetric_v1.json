@@ -1,0 +1,12 @@
+{
+  "version": "ecg_rr_symmetric_v1",
+  "input_run": "08_outputs/ecg_rr_candidates_v2_20260929T163730Z_bb8803e2",
+  "pool": "development",
+  "rr_bounds_seconds": [0.3, 1.8],
+  "adjacent_log_ratio_jump_fraction": 0.20,
+  "minimum_intervals_per_block": 2,
+  "parameter_selection_from_current_data": false,
+  "interpolation": false,
+  "gap_bridging": false,
+  "status": "time_reversal_invariant_candidate_continuity_not_nn_or_hrv_validation"
+}

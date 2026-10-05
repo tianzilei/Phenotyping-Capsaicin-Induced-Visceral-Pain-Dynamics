@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "vas_long",
+  "description": "字段语义契约；CSV 的跨行约束见 docs/data_contracts.md",
+  "type": "object",
+  "required": [
+    "subject_id",
+    "time_min",
+    "vas",
+    "status",
+    "raw_token",
+    "termination_code"
+  ],
+  "properties": {
+    "subject_id": {
+      "description": "研究编号",
+      "type": "string",
+      "minLength": 1
+    },
+    "time_min": {
+      "description": "实际或已核验的计划分钟；给药为零点",
+      "type": "number"
+    },
+    "vas": {
+      "description": "原始评分；未观测保持空",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "status": {
+      "description": "observed/missing/termination_E/termination_T/post_termination",
+      "type": "string",
+      "enum": [
+        "observed",
+        "missing",
+        "termination_E",
+        "termination_T",
+        "post_termination"
+      ]
+    },
+    "raw_token": {
+      "description": "原始单元格，仅内部数据保存",
+      "type": "string"
+    },
+    "termination_code": {
+      "description": "E/T 或空；仅表示标记存在",
+      "type": "string",
+      "enum": [
+        "",
+        "E",
+        "T"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "observed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "vas": {
+            "type": "number"
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "vas": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "enc_matching_v2",
+  "scope": "file_identity_and_coverage_only",
+  "allowed_stages": [
+    "E",
+    "N",
+    "C"
+  ],
+  "same_code_max_abbreviation_distance": 1,
+  "allow_exact_name_chat_historical_codes": true,
+  "allow_unique_abbreviation_historical_candidates": true,
+  "allow_unknown_phase_as_complete": false,
+  "source_identity_anchor": "verified_source_workbook_name_code_and_VAS",
+  "historical_visit_equivalence": "unverified",
+  "freeze_note": "2026-09-16: user authorized broader matching; rules recorded after inspecting missingness, before extended run; not an inference configuration"
+}

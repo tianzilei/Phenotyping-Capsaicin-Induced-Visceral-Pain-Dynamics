@@ -1,0 +1,31 @@
+{
+  "version": "source_mapping_admission_20260927_v1",
+  "status": "frozen_for_main_analysis_candidates",
+  "policy": "filename_structure_and_algorithm_match",
+  "description": "A source record is a main-analysis candidate when the existing filename parser and matching algorithm assign an accepted status. Unmatched records remain in the audit table and are excluded.",
+  "accepted_match_statuses": [
+    "accepted_strict",
+    "accepted_relaxed",
+    "accepted_relaxed_session_expansion"
+  ],
+  "excluded_match_statuses": [
+    "",
+    "unresolved",
+    "unresolved_mapping_without_verified_subject"
+  ],
+  "required_fields": [
+    "current_subject_id",
+    "path",
+    "filename",
+    "extension",
+    "stage",
+    "match_status"
+  ],
+  "eligible_stages": ["E", "N", "C"],
+  "ignore_filenames": ["._*"],
+  "ambiguity": {
+    "shared_physical_file": "retain_as_candidate_but_mark_shared_and_do_not_count_as_independent_person",
+    "multiple_files_for_subject": "retain_all_algorithmically_accepted_files_for_downstream_source_adjudication",
+    "unmatched_record": "retain_in_audit_only"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "time_linkage_v1",
+  "candidate_date_offsets_days": [0, 1, 3],
+  "log_interval_padding_seconds": 300,
+  "same_session_anchor_max_seconds": 2700,
+  "header_read_bytes": 4096,
+  "supported_requires": ["same_date_exact_name_chat_code", "same_code_existing_rest_anchor", "unique_source_name_log_interval", "no_competing_log_interval"],
+  "time_only_candidates_are_supported": false,
+  "coverage_rest_stages": ["N", "C", "P"],
+  "note": "Recorded after inspecting orphan timestamps, before time-audit run; padding permits device save-time lag, does not establish signal synchronization"
+}

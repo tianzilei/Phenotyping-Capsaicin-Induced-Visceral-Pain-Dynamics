@@ -1,0 +1,135 @@
+{
+  "version": "public_release_verification_20261005_v4",
+  "status": "PASS",
+  "scope": "public tree and locally reachable clean history before authorized push; post-push receipt is publication_status.json",
+  "synthetic_tests": {
+    "count": 310,
+    "result": "PASS",
+    "python": "3.12.13",
+    "command": "python3 -m unittest discover -s tests -v",
+    "log_sha256": "66990c87296de48555505055b7d4899b725f1e632d741685faeea755694c1362"
+  },
+  "restricted_export": {
+    "tables": 12,
+    "canonical_people": 215,
+    "retained_cells_exact": true,
+    "all_real_sources_preserved": true,
+    "original_rows_not_merged": true,
+    "artifact_location": "outside Git; private local export manifest"
+  },
+  "private_current_format_validation": {
+    "people": 215,
+    "scheduled_rows": 4300,
+    "numeric_ratings": 3424,
+    "scientific_readiness_assessed": false
+  },
+  "public_render": {
+    "figures": 10,
+    "tables": 21,
+    "all_numeric_table_values_match": true,
+    "rtol": 1e-12,
+    "atol": 1e-12,
+    "all_PNG_max_pixel_difference": 0,
+    "dpi": 300,
+    "no_Dask_cluster_used": true,
+    "no_private_individual_inputs_used": true,
+    "no_new_inference": true,
+    "renderer_sha256": "97f2f565114d3fedd41fa5831b7f6a357f6cfca12f6edf0453c69914a22d26e5"
+  },
+  "code_compile": "PASS",
+  "git_diff_whitespace": {
+    "status": "PASS",
+    "CRLF_original_source_bytes_preserved": true,
+    "generated_SVG_path_spaces_preserved": true,
+    "command": "git -c core.whitespace=cr-at-eol diff --cached --check"
+  },
+  "source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
+  "source_worktree_was_dirty": true,
+  "source_snapshot_files": 407,
+  "reviewed_aggregate_files": 117,
+  "remote_push_performed": false,
+  "full_scientific_objective_achieved": false,
+  "primary_physiology_p_q": null,
+  "sealed_opened": false,
+  "code_and_exporter_sha256": {
+    "src/capsaicin/privacy.py": "ac5ec6d1839e64266b65cc1dafac6cfc36f3ad293dda82bd3cd787c69f9c14cc",
+    "scripts/deidentify_data.py": "03a3b5813529da85a317f5e692d38ac0cbb80d6a046f090414d91ea4b8f81955",
+    "scripts/verify_public_release.py": "1565ab29ec3671dc54562630b3083837d6965b4328263457ac137de33f8ceda4",
+    "tests/test_privacy.py": "af83877cc8ad1aac9506f7f6de85d4ea6c2d1a03e01810944cd19bc7001aab21",
+    "tests/test_release_guard.py": "6dbf05a7bf7b5d3d45df601b4efc966910be8da3d10e02d29fdba3ee6dda6104",
+    "scripts/verify_public_history.py": "fd482abc8f8c22f042ebb88cb0e19a0267c489e1fd3caf87c2b306c46ac39d98",
+    "tests/test_history_guard.py": "3f471bd224a2718d88e19f01837837db226ac4fa0e1454f1ca511e0b3309eb1e"
+  },
+  "current_worktree_privacy_audit": "PASS",
+  "current_index_privacy_audit": "PASS",
+  "history_free_archive": "prepared from final commit; excludes Git history and restricted data",
+  "local_history_cleanup": {
+    "method": "fresh parentless main root; previous Git directory moved to restricted external backup",
+    "historical_commits_imported": false,
+    "all_reachable_commits_and_stored_objects_audited": true,
+    "fresh_clone_audited": true,
+    "audit_command": "python3 scripts/verify_public_history.py",
+    "status": "PASS",
+    "final_revision_record": "external private cleanup manifest and delivery manifest; excluded here to avoid self-referential commit hash"
+  },
+  "remote_history_cleaned": false,
+  "pre_push_review": {
+    "status": "PASS",
+    "public_text_files": 532,
+    "restricted_identifier_variants_compared": 431,
+    "identifier_matches": 0,
+    "missing_local_document_links": 0,
+    "all_21_tables_reproduced": true,
+    "all_10_PNG_pixel_arrays_exact": true,
+    "cohort_support_and_MC_counts_consistent": true,
+    "concurrent_ref_changes_rejected": true,
+    "detached_HEAD_audited": true,
+    "non_commit_refs_rejected": true,
+    "Desktop_old_main_auto_fetch_temporarily_excluded_locally": true,
+    "remote_push_performed": false
+  },
+  "phase": "pre_publication_snapshot",
+  "created_utc": "2026-10-05T11:37:02.840254+00:00",
+  "final_source_review": {
+    "current_analysis_files": 403,
+    "current_source_hashes_match": true,
+    "additional_modules_or_tests": 0,
+    "source_documents_match": true,
+    "legacy_codebook_files_verified_against_private_backup": 3,
+    "historical_modules_inventory_verified": true
+  },
+  "media_review": {
+    "status": "PASS",
+    "PDF_files": 11,
+    "PDF_pages": 20,
+    "PNG_files": 10,
+    "identifier_or_personal_location_matches": 0,
+    "embedded_attachments_or_active_actions": 0,
+    "figure_book_visual_review": "all ten rendered pages checked"
+  },
+  "documentation_review": {
+    "status": "PASS",
+    "all_public_markdown_and_HTML_links_checked": true,
+    "publication_phases_explicit": true,
+    "numerical_results_unchanged": true,
+    "live_receipt": "docs/publication_status.json",
+    "reviewed_documents": {
+      "AGENTS.md": "e69797b5e8b412fe52bfc59ed43bd2e40800baa79dd335d96e5123dec6c095af",
+      "CRF.md": "be1d80ecedb37429ae50d2b551754a3fb6da805d1e27e02cda8a39a1dd74cec3",
+      "MANUSCRIPT.md": "9f831d9a3206254784ddfeeb7285268456aa050bc35e01a4d09c4342d33a867b",
+      "README.md": "2b00094160f99a4898e0b21140d378788941913348353934ee68f435ed38f4b6",
+      "data/published/20261004/REPORT.html": "f94dcdebab1adbe84676a7ff17acfa8cce71ce2e2eeae58ef2f7665c08570fc4",
+      "data/published/20261004/REPORT.md": "48467adfdb071ba677147434ce93026739776afd69cb5b004acfd4a46b7f93a9",
+      "docs/analysis_plan.md": "51f08517ce1b3ffc54bb0d6072f1a7d74ef164b4bca7d16873dd1963b1021f14",
+      "docs/code_guide.md": "e0f94851a39d9b9c157f46f5a13b49c70dd4bac9e34a5c782a789abee1e20a97",
+      "docs/data_dictionary.md": "2643465fddf8506eebdb9e8a1793f353d63bf5c7fd2ba5e48048ad32e825869a",
+      "docs/data_privacy.md": "418c01983d4a2e78aecb9b74e1a5cebbb3a90f8c2a40e4a2bccc42fabb270bb5",
+      "docs/decision_log.md": "eeaec79dfda5c9a5eaed06bcd9968753504b5fde74b9da10fff6a1e0b773f2bd",
+      "docs/history_cleanup.md": "482eb326862f0858c9ae0c4df423677ba5344716462945aba644bd35ea897ada",
+      "docs/reproducibility.md": "5bc993b8aa9876e1a7ffc0d86d4f7fd285d913623d0cd56c0496abd20df7ea44",
+      "supplementary_latest.md": "f070820142a3a8171f7030090a6b21275b9d654195a8ce39740926ef20ad9539",
+      "tests/fixtures/README.md": "66f8bd62297570400136cecd8395b3469228079836bcef54440a7db6eed8341a"
+    },
+    "count": 15
+  }
+}

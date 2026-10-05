@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "signal_events",
+  "description": "字段语义契约；CSV 的跨行约束见 docs/data_contracts.md",
+  "type": "object",
+  "required": [
+    "recording_id",
+    "event_type",
+    "device_time_s",
+    "challenge_time_s",
+    "alignment_uncertainty_s"
+  ],
+  "properties": {
+    "recording_id": {
+      "description": "记录编号",
+      "type": "string"
+    },
+    "event_type": {
+      "description": "给药/开始/结束/同步触发等",
+      "type": "string"
+    },
+    "device_time_s": {
+      "description": "设备时间",
+      "type": "number"
+    },
+    "challenge_time_s": {
+      "description": "相对给药时间",
+      "type": "number"
+    },
+    "alignment_uncertainty_s": {
+      "description": "对齐误差",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

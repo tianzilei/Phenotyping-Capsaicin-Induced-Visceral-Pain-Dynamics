@@ -1,0 +1,11 @@
+{
+  "version": "acq_source_selection_20260927_v1",
+  "scope": "E-stage native ACQ used for ECG/EGG",
+  "shared_path_owner": "smallest_numeric_subject_id",
+  "ownership_is_identity_merge": false,
+  "multiple_sources": "unique ACQ with acquisition start matching corresponding PsychoPy eval start within 2 seconds and matching E-stage PAT identity",
+  "log_start_tolerance_seconds": 2,
+  "file_size_rule": "audit bytes, channels and samples; never select largest automatically",
+  "unresolved": "retain audit and exclude until supported",
+  "physiological_validation": "unchanged_not_independently_validated"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "ecg_candidate_sensitivity_v1",
+  "source_run": "08_outputs/ecg_candidates_20260918T110350Z_bf44bf6f",
+  "source_config": "config/ecg_candidates_v1.json",
+  "estimand": "Descriptive sensitivity of candidate counts and detector agreement to fixed local-MAD multipliers; no threshold selection or clinical validation",
+  "amplitude_mad_multipliers": [2, 3, 4, 5],
+  "energy_mad_multipliers": [2, 3, 4, 5],
+  "paired_variants": [[2, 2], [3, 3], [4, 4], [5, 5]],
+  "synthetic_seed": 20260918,
+  "synthetic_replicates": 10,
+  "synthetic_cases": ["clean", "inverted", "baseline_and_line", "irregular", "motion_burst", "noise_only", "flat"],
+  "raw_summary": "All 2304 ECG channel windows from source run; fixed 5-20Hz filter, 250ms distance, 50ms matching; no channel selection",
+  "interpretation": "Sensitivity descriptors only. Threshold multipliers are engineering scenarios and are not chosen from observed results.",
+  "timeout_seconds": 1800
+}

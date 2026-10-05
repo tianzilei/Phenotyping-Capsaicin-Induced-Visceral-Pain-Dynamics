@@ -1,0 +1,6 @@
+analysis_set,people,interval_minute,numeric_ratings_in_interval,first_E_people,first_T_people,no_marker_people,symptom_recorded,region_recorded,both_recorded,count_definition
+All observed records,215,1–20,3424,150.0,9.0,56.0,209.0,209.0,204.0,
+Complete minutes 1–10,206,1–10,2060,,,,,,,
+Complete minutes 1–20,56,1–20,1120,,,,,,,
+Next actual rating,213,origins 3–19; targets 4–20,2781,,,,,,,"eligible prediction windows, not all ratings"
+Minute 5 prefix to minute 10,206,inputs 1–5; target 10,206,,,,,,,"prediction targets, not all ratings"

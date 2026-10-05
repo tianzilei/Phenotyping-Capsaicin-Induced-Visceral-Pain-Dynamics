@@ -1,0 +1,9 @@
+{
+  "version": "analysis_closeout_v1",
+  "purpose": "Read-only verification and integrated delivery; no new scientific inference",
+  "sensitivity_run": "08_outputs/ecg_candidate_sensitivity_20260918T120105Z_c0bbfd74",
+  "baseline_candidate_run": "08_outputs/ecg_candidates_20260918T110350Z_bf44bf6f",
+  "policy": "Never modify prior outputs or manifests. Classify current code drift separately from data changes. Missing historical code snapshots are reported, not repaired by rehashing.",
+  "checks": "Unique window/scenario keys, exact multiplier-3 match to D46, synthetic precision/recall and aggregates, observed count changes without assumed monotonicity",
+  "scope": "Existing VAS exploratory results and physiology diagnostics. Final identities, synchronization, beat/artifact acceptance, fNIRS units/ROI, VAS thresholds and calibrated derivative inference remain unresolved."
+}

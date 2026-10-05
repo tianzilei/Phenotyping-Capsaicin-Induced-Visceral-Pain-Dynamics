@@ -1,0 +1,25 @@
+{
+  "version": "electrophysiology_algorithmic_v1",
+  "source_plan": "02_quality_control/电生理方案.md",
+  "lead_mapping": {"ecg_channels": [3, 4, 5], "ecg_labels": ["I", "II", "V3"], "egg_channels": [1, 2], "mapping_basis": "user_confirmed"},
+  "input": {"sampling_hz": 2000, "duration_seconds": 300, "ecg_target_hz": 250, "egg_target_hz": 100, "joint_target_hz": 1},
+  "ecg": {
+    "bandpass_hz": [8.0, 28.0], "filter_order": 4, "energy_window_seconds": 0.12,
+    "refractory_seconds": 0.20, "consensus_tolerance_seconds": 0.020,
+    "refine_radius_seconds": 0.040, "snr_min_db": 6.0, "template_corr_min": 0.75,
+    "rr_bounds_seconds": [0.300, 2.000], "rr_jump_fraction": 0.20,
+    "rr_mad_window_beats": 11, "rr_mad_multiplier": 3.0,
+    "min_valid_rr_fraction": 0.85, "max_ectopic_fraction": 0.05,
+    "synthetic_recall_min": 0.98
+  },
+  "egg": {
+    "raw_target_hz": 100, "slow_band_hz": [0.015, 0.150], "rhythm_cpm": {"brady": [1.0, 2.5], "normo": [2.5, 3.75], "tachy": [3.75, 10.0]},
+    "saturation_uv": 400.0, "flatline_seconds": 3.0, "derivative_mad_multiplier": 4.0,
+    "min_valid_fraction": 0.75, "dominant_power_ratio_min": 0.30, "channel_df_tolerance_cpm": 0.5,
+    "welch_window_seconds": 120, "welch_step_seconds": 30, "welch_min_valid_windows": 4, "peak_prominence_db": 6.0
+  },
+  "crosstalk": {"window_seconds": [-0.050, 0.150], "censor_window_seconds": [-0.060, 0.160], "template_beats": 31, "alignment_tolerance_seconds": 0.005, "qrs_band_hz": [8.0, 25.0], "min_attenuation_db": 15.0, "slow_band_corr_min": 0.98, "primary_mode": "time_censor_only_after_subtraction_failure"},
+  "sync": {"required_overlap_seconds": 295, "max_jitter_seconds": 0.005, "max_drift_ms_per_min": 1.0},
+  "joint": {"min_valid_seconds": 180, "surrogates": 500, "mvar_order": 4, "status": "fully_suppressed_missing_respiration_and_unvalidated_crosstalk", "wavelet_coherence": "disabled"},
+  "provenance": {"no_gap_bridging": true, "no_signal_imputation": true, "preserve_masks": true}
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "status": "synthetic_only",
+  "seed": 20260913,
+  "data": {
+    "id_column": "ID",
+    "vas_column_pattern": "^VAS_(\\d+)min$",
+    "expected_minutes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "vas_min": 0,
+    "vas_max": 10,
+    "missing_tokens": [
+      "",
+      "NA",
+      "N/A",
+      "NaN"
+    ],
+    "termination_tokens": [
+      "E",
+      "T"
+    ],
+    "authoritative_source": null,
+    "codebook_verified": false
+  }
+}

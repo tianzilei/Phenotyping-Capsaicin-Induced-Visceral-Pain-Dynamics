@@ -1,0 +1,22 @@
+{
+  "version": "rest_relative_deviation_v1",
+  "rest_reference_config": "config/rest_normal_reference_v1.json",
+  "waveform_qc_run": "08_outputs/rest_waveform_qc_20260929T083000Z",
+  "hrv_pair_run": "08_outputs/rest_post_hrv_pair_20260929T090000Z",
+  "pair_rule": "same_subject_and_recording_stem_N_preferred_C_fallback",
+  "features": [
+    "candidate_hr_bpm",
+    "candidate_rmssd_ms",
+    "egg_df1_cpm",
+    "egg_df2_cpm",
+    "egg_coherence",
+    "finite_coverage",
+    "flatline_fraction"
+  ],
+  "difference": "stimulus_E_minus_selected_rest",
+  "bootstrap_replicates": 5000,
+  "bootstrap_seed": 20260929,
+  "significance_testing": false,
+  "parameter_selection_from_current_data": false,
+  "status": "within_subject_candidate_deviation_descriptive_not_physiological_effect"
+}

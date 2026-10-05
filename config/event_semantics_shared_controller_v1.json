@@ -1,0 +1,12 @@
+{
+  "version": "event_semantics_shared_controller_v1",
+  "authority": "user_statement_2026-09-19",
+  "controller": "One program simultaneously controls the devices",
+  "semantic_rule": "Events issued by the common controller represent the same experimental instant across devices",
+  "preserve_native_fields": ["device", "channel", "native_level", "native_code", "polarity", "recording_time"],
+  "ttl_rule": "Different TTL levels, polarities and codes are retained as device-native values and are not assigned clinical meaning from numeric level alone",
+  "clock_rule": "Device-local clocks and offsets remain explicit; common-controller semantics do not by themselves prove a unique per-record offset or exact swallowing time",
+  "dose_rule": "Protocol-relative event time may be used only when the event sequence is uniquely anchored; do not label a protocol onset as exact ingestion time without an individual ingestion timestamp",
+  "failure_policy": "Ambiguous, missing or periodic event matches remain unverified and are excluded from dose-relative association",
+  "t_stage_rule": "Exclude filename T acquisition stages; retain VAS-cell T as a participant termination marker"
+}

@@ -1,0 +1,5462 @@
+[
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.8411214953271028,
+    "start_minute": 1,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 1.0,
+    "start_minute": 1,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.8411214953271028,
+    "start_minute": 1,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 1.0,
+    "start_minute": 1,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.5794392523364486,
+    "start_minute": 1,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.07009345794392523,
+    "start_minute": 1,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 2,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.35046728971962615,
+    "start_minute": 1,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.35046728971962615,
+    "start_minute": 2,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.0,
+    "start_minute": 2,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.35046728971962615,
+    "start_minute": 2,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.0,
+    "start_minute": 2,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.4485981308411215,
+    "start_minute": 2,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.16822429906542055,
+    "start_minute": 2,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 1,
+    "people": 214,
+    "point": 0.38317757009345793,
+    "start_minute": 2,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.07981220657276995,
+    "start_minute": 3,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.07981220657276995,
+    "start_minute": 3,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.3427230046948357,
+    "start_minute": 3,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.2676056338028169,
+    "start_minute": 3,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 1,
+    "people": 213,
+    "point": 0.38967136150234744,
+    "start_minute": 3,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": -0.1179245283018868,
+    "start_minute": 4,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 4,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": -0.1179245283018868,
+    "start_minute": 4,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 4,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.24528301886792453,
+    "start_minute": 4,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.30660377358490565,
+    "start_minute": 4,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.4481132075471698,
+    "start_minute": 4,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": -0.12264150943396226,
+    "start_minute": 5,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": -0.12264150943396226,
+    "start_minute": 5,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.22641509433962265,
+    "start_minute": 5,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.29245283018867924,
+    "start_minute": 5,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 1,
+    "people": 212,
+    "point": 0.4811320754716981,
+    "start_minute": 5,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": -0.2132701421800948,
+    "start_minute": 6,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 6,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": -0.2132701421800948,
+    "start_minute": 6,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 6,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": 0.2037914691943128,
+    "start_minute": 6,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": 0.33175355450236965,
+    "start_minute": 6,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 1,
+    "people": 211,
+    "point": 0.46445497630331756,
+    "start_minute": 6,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": -0.06666666666666667,
+    "start_minute": 7,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 7,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": -0.06666666666666667,
+    "start_minute": 7,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 7,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": 0.2,
+    "start_minute": 7,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": 0.29523809523809524,
+    "start_minute": 7,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 1,
+    "people": 210,
+    "point": 0.5047619047619047,
+    "start_minute": 7,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": -0.16346153846153846,
+    "start_minute": 8,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": 0.0,
+    "start_minute": 8,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": -0.16346153846153846,
+    "start_minute": 8,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": 0.0,
+    "start_minute": 8,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": 0.16346153846153846,
+    "start_minute": 8,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": 0.27884615384615385,
+    "start_minute": 8,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 1,
+    "people": 208,
+    "point": 0.5576923076923077,
+    "start_minute": 8,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": -0.10679611650485436,
+    "start_minute": 9,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 9,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": -0.10679611650485436,
+    "start_minute": 9,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 9,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": 0.15048543689320387,
+    "start_minute": 9,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": 0.24757281553398058,
+    "start_minute": 9,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 1,
+    "people": 206,
+    "point": 0.6019417475728155,
+    "start_minute": 9,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": -0.13917525773195877,
+    "start_minute": 10,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": 0.0,
+    "start_minute": 10,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": -0.13917525773195877,
+    "start_minute": 10,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": 0.0,
+    "start_minute": 10,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": 0.19072164948453607,
+    "start_minute": 10,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": 0.30927835051546393,
+    "start_minute": 10,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 1,
+    "people": 194,
+    "point": 0.5,
+    "start_minute": 10,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": -0.13989637305699482,
+    "start_minute": 11,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": -0.13989637305699482,
+    "start_minute": 11,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": 0.18134715025906736,
+    "start_minute": 11,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": 0.27979274611398963,
+    "start_minute": 11,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 1,
+    "people": 193,
+    "point": 0.538860103626943,
+    "start_minute": 11,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": -0.1925133689839572,
+    "start_minute": 12,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": 0.0,
+    "start_minute": 12,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": -0.1925133689839572,
+    "start_minute": 12,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": 0.0,
+    "start_minute": 12,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": 0.11764705882352941,
+    "start_minute": 12,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": 0.2994652406417112,
+    "start_minute": 12,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 1,
+    "people": 187,
+    "point": 0.5828877005347594,
+    "start_minute": 12,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": -0.11299435028248588,
+    "start_minute": 13,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": 0.0,
+    "start_minute": 13,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": -0.11299435028248588,
+    "start_minute": 13,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": 0.0,
+    "start_minute": 13,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": 0.1694915254237288,
+    "start_minute": 13,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": 0.2542372881355932,
+    "start_minute": 13,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 1,
+    "people": 177,
+    "point": 0.576271186440678,
+    "start_minute": 13,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": -0.13095238095238096,
+    "start_minute": 14,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": 0.0,
+    "start_minute": 14,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": -0.13095238095238096,
+    "start_minute": 14,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": 0.0,
+    "start_minute": 14,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": 0.125,
+    "start_minute": 14,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": 0.22023809523809523,
+    "start_minute": 14,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 1,
+    "people": 168,
+    "point": 0.6547619047619048,
+    "start_minute": 14,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": -0.056451612903225805,
+    "start_minute": 15,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 15,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": -0.056451612903225805,
+    "start_minute": 15,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 15,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": 0.1774193548387097,
+    "start_minute": 15,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": 0.28225806451612906,
+    "start_minute": 15,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 1,
+    "people": 124,
+    "point": 0.5403225806451613,
+    "start_minute": 15,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": -0.15853658536585366,
+    "start_minute": 16,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": 0.0,
+    "start_minute": 16,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": -0.15853658536585366,
+    "start_minute": 16,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": 0.0,
+    "start_minute": 16,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": 0.18292682926829268,
+    "start_minute": 16,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": 0.3048780487804878,
+    "start_minute": 16,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 1,
+    "people": 82,
+    "point": 0.5121951219512195,
+    "start_minute": 16,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": -0.18840579710144928,
+    "start_minute": 17,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": 0.0,
+    "start_minute": 17,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": -0.18840579710144928,
+    "start_minute": 17,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": 0.0,
+    "start_minute": 17,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": 0.17391304347826086,
+    "start_minute": 17,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": 0.2318840579710145,
+    "start_minute": 17,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 1,
+    "people": 69,
+    "point": 0.5942028985507246,
+    "start_minute": 17,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": -0.1694915254237288,
+    "start_minute": 18,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": 0.0,
+    "start_minute": 18,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": -0.1694915254237288,
+    "start_minute": 18,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": 0.0,
+    "start_minute": 18,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": 0.2033898305084746,
+    "start_minute": 18,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": 0.288135593220339,
+    "start_minute": 18,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 1,
+    "people": 59,
+    "point": 0.5084745762711864,
+    "start_minute": 18,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": -0.017857142857142856,
+    "start_minute": 19,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": 0.0,
+    "start_minute": 19,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": -0.017857142857142856,
+    "start_minute": 19,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10.0,
+      10.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": 0.0,
+    "start_minute": 19,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": 0.25,
+    "start_minute": 19,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": 0.19642857142857142,
+    "start_minute": 19,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 1,
+    "people": 56,
+    "point": 0.5535714285714286,
+    "start_minute": 19,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 1.191588785046729,
+    "start_minute": 1,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 1.0,
+    "start_minute": 1,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 0.5957943925233645,
+    "start_minute": 1,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 0.5,
+    "start_minute": 1,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 0.6728971962616822,
+    "start_minute": 1,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 0.14485981308411214,
+    "start_minute": 1,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 3,
+    "h_minutes": 2,
+    "people": 214,
+    "point": 0.1822429906542056,
+    "start_minute": 1,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.4225352112676056,
+    "start_minute": 2,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 1.0,
+    "start_minute": 2,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.2112676056338028,
+    "start_minute": 2,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.5,
+    "start_minute": 2,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.5164319248826291,
+    "start_minute": 2,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.2535211267605634,
+    "start_minute": 2,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 4,
+    "h_minutes": 2,
+    "people": 213,
+    "point": 0.2300469483568075,
+    "start_minute": 2,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": -0.04716981132075472,
+    "start_minute": 3,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": -0.02358490566037736,
+    "start_minute": 3,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.37264150943396224,
+    "start_minute": 3,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.36792452830188677,
+    "start_minute": 3,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 5,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.25943396226415094,
+    "start_minute": 3,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": -0.24056603773584906,
+    "start_minute": 4,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 4,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": -0.12028301886792453,
+    "start_minute": 4,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.0,
+    "start_minute": 4,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.2971698113207547,
+    "start_minute": 4,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.39622641509433965,
+    "start_minute": 4,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 2,
+    "people": 212,
+    "point": 0.30660377358490565,
+    "start_minute": 4,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": -0.33649289099526064,
+    "start_minute": 5,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": -0.16824644549763032,
+    "start_minute": 5,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": 0.2559241706161137,
+    "start_minute": 5,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": 0.3981042654028436,
+    "start_minute": 5,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 2,
+    "people": 211,
+    "point": 0.3459715639810427,
+    "start_minute": 5,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": -0.2857142857142857,
+    "start_minute": 6,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 6,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": -0.14285714285714285,
+    "start_minute": 6,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 6,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": 0.2619047619047619,
+    "start_minute": 6,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": 0.44285714285714284,
+    "start_minute": 6,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 2,
+    "people": 210,
+    "point": 0.29523809523809524,
+    "start_minute": 6,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": -0.2403846153846154,
+    "start_minute": 7,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": 0.0,
+    "start_minute": 7,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": -0.1201923076923077,
+    "start_minute": 7,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": 0.0,
+    "start_minute": 7,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": 0.21153846153846154,
+    "start_minute": 7,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": 0.3798076923076923,
+    "start_minute": 7,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 2,
+    "people": 208,
+    "point": 0.40865384615384615,
+    "start_minute": 7,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": -0.27184466019417475,
+    "start_minute": 8,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 8,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": -0.13592233009708737,
+    "start_minute": 8,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 8,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": 0.17475728155339806,
+    "start_minute": 8,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": 0.3786407766990291,
+    "start_minute": 8,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 2,
+    "people": 206,
+    "point": 0.44660194174757284,
+    "start_minute": 8,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": -0.25257731958762886,
+    "start_minute": 9,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": 0.0,
+    "start_minute": 9,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": -0.12628865979381443,
+    "start_minute": 9,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": 0.0,
+    "start_minute": 9,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": 0.20618556701030927,
+    "start_minute": 9,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": 0.4175257731958763,
+    "start_minute": 9,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 2,
+    "people": 194,
+    "point": 0.37628865979381443,
+    "start_minute": 9,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": -0.27979274611398963,
+    "start_minute": 10,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": 0.0,
+    "start_minute": 10,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": -0.13989637305699482,
+    "start_minute": 10,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": 0.0,
+    "start_minute": 10,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": 0.20207253886010362,
+    "start_minute": 10,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": 0.38860103626943004,
+    "start_minute": 10,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 2,
+    "people": 193,
+    "point": 0.40932642487046633,
+    "start_minute": 10,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": -0.33689839572192515,
+    "start_minute": 11,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": -0.16844919786096257,
+    "start_minute": 11,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": 0.18716577540106952,
+    "start_minute": 11,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": 0.39572192513368987,
+    "start_minute": 11,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 2,
+    "people": 187,
+    "point": 0.41711229946524064,
+    "start_minute": 11,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": -0.3333333333333333,
+    "start_minute": 12,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": 0.0,
+    "start_minute": 12,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": -0.16666666666666666,
+    "start_minute": 12,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": 0.0,
+    "start_minute": 12,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": 0.1807909604519774,
+    "start_minute": 12,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": 0.3898305084745763,
+    "start_minute": 12,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 2,
+    "people": 177,
+    "point": 0.4293785310734463,
+    "start_minute": 12,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": -0.23809523809523808,
+    "start_minute": 13,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": 0.0,
+    "start_minute": 13,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": -0.11904761904761904,
+    "start_minute": 13,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": 0.0,
+    "start_minute": 13,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": 0.20238095238095238,
+    "start_minute": 13,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": 0.3273809523809524,
+    "start_minute": 13,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 2,
+    "people": 168,
+    "point": 0.47023809523809523,
+    "start_minute": 13,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": -0.20967741935483872,
+    "start_minute": 14,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 14,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": -0.10483870967741936,
+    "start_minute": 14,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 14,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": 0.20161290322580644,
+    "start_minute": 14,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": 0.3629032258064516,
+    "start_minute": 14,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 2,
+    "people": 124,
+    "point": 0.43548387096774194,
+    "start_minute": 14,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": -0.24390243902439024,
+    "start_minute": 15,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": 0.0,
+    "start_minute": 15,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": -0.12195121951219512,
+    "start_minute": 15,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": 0.0,
+    "start_minute": 15,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": 0.21951219512195122,
+    "start_minute": 15,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": 0.4024390243902439,
+    "start_minute": 15,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 2,
+    "people": 82,
+    "point": 0.3780487804878049,
+    "start_minute": 15,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": -0.3188405797101449,
+    "start_minute": 16,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": 0.0,
+    "start_minute": 16,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": -0.15942028985507245,
+    "start_minute": 16,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": 0.0,
+    "start_minute": 16,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": 0.2028985507246377,
+    "start_minute": 16,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": 0.36231884057971014,
+    "start_minute": 16,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 2,
+    "people": 69,
+    "point": 0.43478260869565216,
+    "start_minute": 16,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": -0.3898305084745763,
+    "start_minute": 17,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": 0.0,
+    "start_minute": 17,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": -0.19491525423728814,
+    "start_minute": 17,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": 0.0,
+    "start_minute": 17,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": 0.1864406779661017,
+    "start_minute": 17,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": 0.4067796610169492,
+    "start_minute": 17,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 2,
+    "people": 59,
+    "point": 0.4067796610169492,
+    "start_minute": 17,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": -0.19642857142857142,
+    "start_minute": 18,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": 0.0,
+    "start_minute": 18,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": -0.09821428571428571,
+    "start_minute": 18,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -5.0,
+      5.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": 0.0,
+    "start_minute": 18,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": 0.26785714285714285,
+    "start_minute": 18,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": 0.375,
+    "start_minute": 18,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 2,
+    "people": 56,
+    "point": 0.35714285714285715,
+    "start_minute": 18,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 1.0047169811320755,
+    "start_minute": 1,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 1.0,
+    "start_minute": 1,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 0.2009433962264151,
+    "start_minute": 1,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 0.2,
+    "start_minute": 1,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 0.5990566037735849,
+    "start_minute": 1,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 0.25,
+    "start_minute": 1,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 6,
+    "h_minutes": 5,
+    "people": 212,
+    "point": 0.1509433962264151,
+    "start_minute": 1,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": -0.037914691943127965,
+    "start_minute": 2,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 2,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": -0.007582938388625593,
+    "start_minute": 2,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": 0.0,
+    "start_minute": 2,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": 0.4218009478672986,
+    "start_minute": 2,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": 0.4028436018957346,
+    "start_minute": 2,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 7,
+    "h_minutes": 5,
+    "people": 211,
+    "point": 0.17535545023696683,
+    "start_minute": 2,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": -0.45714285714285713,
+    "start_minute": 3,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": -0.09142857142857143,
+    "start_minute": 3,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": 0.0,
+    "start_minute": 3,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": 0.3380952380952381,
+    "start_minute": 3,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": 0.4714285714285714,
+    "start_minute": 3,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 8,
+    "h_minutes": 5,
+    "people": 210,
+    "point": 0.19047619047619047,
+    "start_minute": 3,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": -0.7163461538461539,
+    "start_minute": 4,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": -1.0,
+    "start_minute": 4,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": -0.14326923076923076,
+    "start_minute": 4,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": -0.2,
+    "start_minute": 4,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": 0.3076923076923077,
+    "start_minute": 4,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": 0.5240384615384616,
+    "start_minute": 4,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 9,
+    "h_minutes": 5,
+    "people": 208,
+    "point": 0.16826923076923078,
+    "start_minute": 4,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": -0.7038834951456311,
+    "start_minute": 5,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": -0.1407766990291262,
+    "start_minute": 5,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": 0.0,
+    "start_minute": 5,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": 0.2961165048543689,
+    "start_minute": 5,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": 0.4854368932038835,
+    "start_minute": 5,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 10,
+    "h_minutes": 5,
+    "people": 206,
+    "point": 0.21844660194174756,
+    "start_minute": 5,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": -0.7268041237113402,
+    "start_minute": 6,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": -1.0,
+    "start_minute": 6,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": -0.14536082474226802,
+    "start_minute": 6,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": -0.2,
+    "start_minute": 6,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": 0.26288659793814434,
+    "start_minute": 6,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": 0.5309278350515464,
+    "start_minute": 6,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 11,
+    "h_minutes": 5,
+    "people": 194,
+    "point": 0.20618556701030927,
+    "start_minute": 6,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": -0.6528497409326425,
+    "start_minute": 7,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": -1.0,
+    "start_minute": 7,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": -0.1305699481865285,
+    "start_minute": 7,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": -0.2,
+    "start_minute": 7,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": 0.23834196891191708,
+    "start_minute": 7,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": 0.5492227979274611,
+    "start_minute": 7,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 12,
+    "h_minutes": 5,
+    "people": 193,
+    "point": 0.21243523316062177,
+    "start_minute": 7,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": -0.7647058823529411,
+    "start_minute": 8,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": -1.0,
+    "start_minute": 8,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": -0.15294117647058822,
+    "start_minute": 8,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": -0.2,
+    "start_minute": 8,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": 0.18716577540106952,
+    "start_minute": 8,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": 0.5614973262032086,
+    "start_minute": 8,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 13,
+    "h_minutes": 5,
+    "people": 187,
+    "point": 0.25133689839572193,
+    "start_minute": 8,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": -0.7288135593220338,
+    "start_minute": 9,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": -1.0,
+    "start_minute": 9,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": -0.14576271186440676,
+    "start_minute": 9,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": -0.2,
+    "start_minute": 9,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": 0.23163841807909605,
+    "start_minute": 9,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": 0.536723163841808,
+    "start_minute": 9,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 14,
+    "h_minutes": 5,
+    "people": 177,
+    "point": 0.23163841807909605,
+    "start_minute": 9,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": -0.7619047619047619,
+    "start_minute": 10,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": -1.0,
+    "start_minute": 10,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": -0.15238095238095237,
+    "start_minute": 10,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": -0.2,
+    "start_minute": 10,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": 0.2261904761904762,
+    "start_minute": 10,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": 0.5416666666666666,
+    "start_minute": 10,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 15,
+    "h_minutes": 5,
+    "people": 168,
+    "point": 0.23214285714285715,
+    "start_minute": 10,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": -0.6854838709677419,
+    "start_minute": 11,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": -0.13709677419354838,
+    "start_minute": 11,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": 0.0,
+    "start_minute": 11,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": 0.24193548387096775,
+    "start_minute": 11,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": 0.47580645161290325,
+    "start_minute": 11,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 16,
+    "h_minutes": 5,
+    "people": 124,
+    "point": 0.28225806451612906,
+    "start_minute": 11,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": -0.573170731707317,
+    "start_minute": 12,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": -1.0,
+    "start_minute": 12,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": -0.1146341463414634,
+    "start_minute": 12,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": -0.2,
+    "start_minute": 12,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": 0.23170731707317074,
+    "start_minute": 12,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": 0.524390243902439,
+    "start_minute": 12,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 17,
+    "h_minutes": 5,
+    "people": 82,
+    "point": 0.24390243902439024,
+    "start_minute": 12,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": -0.5072463768115942,
+    "start_minute": 13,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": -1.0,
+    "start_minute": 13,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": -0.10144927536231885,
+    "start_minute": 13,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": -0.2,
+    "start_minute": 13,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": 0.2463768115942029,
+    "start_minute": 13,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": 0.5507246376811594,
+    "start_minute": 13,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 18,
+    "h_minutes": 5,
+    "people": 69,
+    "point": 0.2028985507246377,
+    "start_minute": 13,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": -0.6949152542372882,
+    "start_minute": 14,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": -1.0,
+    "start_minute": 14,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": -0.13898305084745763,
+    "start_minute": 14,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": -0.2,
+    "start_minute": 14,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": 0.23728813559322035,
+    "start_minute": 14,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": 0.559322033898305,
+    "start_minute": 14,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 19,
+    "h_minutes": 5,
+    "people": 59,
+    "point": 0.2033898305084746,
+    "start_minute": 14,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": -0.5892857142857143,
+    "start_minute": 15,
+    "statistic": "mean_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -10,
+      10
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": -1.0,
+    "start_minute": 15,
+    "statistic": "median_change",
+    "unit": "VAS"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": -0.11785714285714285,
+    "start_minute": 15,
+    "statistic": "mean_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.01,
+    "bounds": [
+      -2.0,
+      2.0
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": -0.2,
+    "start_minute": 15,
+    "statistic": "median_rate",
+    "unit": "VAS/minute"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": 0.19642857142857142,
+    "start_minute": 15,
+    "statistic": "rise_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": 0.5535714285714286,
+    "start_minute": 15,
+    "statistic": "fall_proportion",
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "count": null,
+    "end_minute": 20,
+    "h_minutes": 5,
+    "people": 56,
+    "point": 0.25,
+    "start_minute": 15,
+    "statistic": "unchanged_proportion",
+    "unit": "proportion"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "version": "remaining_analysis_v1",
+  "status": "frozen_exploratory",
+  "input_run": "08_outputs/provisional_vas_20260916T144537Z_11f54777",
+  "intervals": [[1,20],[1,10]],
+  "residual": {
+    "estimand": "observed-window residual dispersion after individual low-degree polynomial fits, descriptive only",
+    "primary_degree": 1,
+    "sensitivity_degree": 2,
+    "minimum_points": 6,
+    "minimum_adjacent_pairs": 3,
+    "fit_scale": "raw VAS; centered actual minutes, least squares; no interpolation or clipping",
+    "report": "residual SSE/(n-p) and actual adjacent residual MSSD; no measurement-error separation, no individual AR or latent instability claim"
+  },
+  "burden": {
+    "population": "complete interval subjects only",
+    "integration": "exact area and first time moment of piecewise-linear observed VAS segments",
+    "split": "midpoint of each interval: 10.5 or 5.5 min; area zero gives undefined centroid/fraction",
+    "metrics": ["auc", "time_centroid", "late_area_fraction", "first_observed_peak_minute"],
+    "correlation": "Spearman descriptive, no p values"
+  },
+  "functional_depth": {
+    "method": "grid modified band depth: fraction of all pairs containing each value, trapezoid-weighted over time; ties included",
+    "population": "complete interval subjects",
+    "central_fraction": 0.5,
+    "tie_rule": "include all curves tied at the ceil(n/2) cutoff",
+    "output": "deepest curve and central envelope, no outlier removal, envelope not confidence band"
+  },
+  "bootstrap": {"unit":"subject row pending identity verification","replicates":2000,"seed":918011,"role":"pointwise descriptive percentile ranges; no calibrated inference"},
+  "signal_audit": {
+    "mapping":"02_quality_control/time_enc_20260916T123124Z_d4ff4af0/accepted_subject_to_files_private.csv",
+    "allowed_stages":["E","N","C","P"],
+    "P_role":"previously authorized rest supplement, retain label",
+    "scope":"all distinct linked acq/snirf headers and whole snirf numeric validity, no artifact acceptance threshold or physiology associations",
+    "units":"read metadata only; do not infer physical unit or dose synchronization",
+    "hash_scope":"full inspected files, not headers only"
+  },
+  "state_analysis": {"status":"blocked_pending_supported_thresholds","thresholds":null},
+  "physiology_association": {"status":"blocked_pending_verified_alignment_ROI_QC_and_covariates"},
+  "missingness_scenarios": {"status":"bounds_and_observation_support_done; numerical clinical scenarios remain unspecified"},
+  "timeout_seconds":3600
+}

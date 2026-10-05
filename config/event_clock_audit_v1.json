@@ -1,0 +1,14 @@
+{
+  "version": "event_clock_audit_v1",
+  "estimand": "Descriptive event counts and within-source time intervals; no dose alignment or cross-device clock reconstruction",
+  "psychopy_manifest": "02_quality_control/reverse_enc_20260916T052506Z_def32d7d/psychopy_metadata_private.csv",
+  "text_manifest": "02_quality_control/signal_text_headers_20260917T153756Z_76d12bb6/headers_private.csv",
+  "digital_events": "02_quality_control/waveform_provenance_20260918T100523Z_0c21f681/digital_events_private.csv",
+  "psychopy_source": "F:/杰青得气课题软件和脚本/psychopy_edition/lajiaosu_lastrun.py",
+  "global_fields": ["eval.started", "text_3.started"],
+  "local_fields": ["serialPort.started", "serialPort_2.started", "serialPort_3.started", "serialPort_4.started"],
+  "interval_policy": "Differences between successive observed entries, with original CSV row numbers retained; missing fields stay missing; no reconstructed timestamps",
+  "digital_policy": "All exact native transitions retained; rise/fall by sign; pulse is a rise followed immediately by a fall returning to its initial level; polarity and clinical meaning unassigned",
+  "protocol_policy": "Parse HH:MM:SS start labels into seconds; retain task/rest values in native units without claiming verified signal synchronization",
+  "scientific_readiness": false
+}

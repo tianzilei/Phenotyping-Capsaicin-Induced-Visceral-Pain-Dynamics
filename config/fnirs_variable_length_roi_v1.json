@@ -1,0 +1,47 @@
+{
+  "version": "fnirs_variable_length_roi_v1",
+  "decision_date": "2026-09-21",
+  "status": "frozen_for_algorithmic_review_v2_header_corrected",
+  "vas_input": "01_data/processed/e_coded_20260916T144438Z_5c144eb7/BaselineData_E_coded.csv",
+  "mapping": "02_quality_control/time_enc_20260916T123124Z_d4ff4af0/accepted_subject_to_files_private.csv",
+  "roi_mapping": "00_protocol/acquisition_qc_20260919/data/16_fnirs_channel_qc.csv",
+  "event_mapping": "00_protocol/acquisition_qc_20260919/data/03_events_long.csv",
+  "synchronization": {
+    "method": "minute_scale_protocol_relative_block_matching",
+    "vas_resolution_minutes": 1,
+    "block_seconds": 300,
+    "maximum_start_tolerance_seconds": 60,
+    "shared_controller": true,
+    "native_ttl_fields_retained": true,
+    "exact_subsecond_offset_required": false,
+    "dose_time_inferred": false
+  },
+  "input_semantics": {
+    "signal": "vendor_processed_Hb TXT export",
+    "channels": 42,
+    "variables": ["oxyHb", "deoxyHb", "totalHb"],
+    "absolute_units": "not declared; do not report as verified concentration",
+    "filename_T_stage_exclusion": true
+  },
+  "windowing": {
+    "windows": [[1, 5], [6, 10], [11, 15], [16, 20]],
+    "frame": "recording_relative protocol block; minute-scale approximate VAS alignment",
+    "minimum_numeric_vas": 3,
+    "minimum_valid_channel_fraction": 0.5,
+    "no_vas_imputation": true,
+    "no_cross_gap": true
+  },
+  "roi": {
+    "source_is_confirmed_by_user": true,
+    "aggregation": "mean across mapped channels within ROI; Shimadzu TXT HbO/HbR/HbT triplets parsed as one channel",
+    "primary_outputs": ["HbO", "HbR"],
+    "all_mapped_channels_preserved": true
+  },
+  "inference": {
+    "model": "subject fixed effects with categorical 5-minute block and ROI-specific exploratory association",
+    "bootstrap_unit": "subject",
+    "bootstrap_replicates": 2000,
+    "causal_interpretation": false,
+    "human_review": "review algorithmic QC, alignment, and ROI summaries before manuscript use"
+  }
+}

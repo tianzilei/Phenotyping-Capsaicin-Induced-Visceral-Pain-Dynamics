@@ -1,0 +1,5284 @@
+[
+  {
+    "MC_max_endpoint_half_width": 0.0015414346845810112,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A",
+    "denominator_people": 209,
+    "empirical_range_width": 0.13240663053583984,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "abdominal pain",
+    "lower": {
+      "MC_half_width": 0.0015414346845810112,
+      "estimate": 0.33649289099526064,
+      "lower_MC": 0.33495145631067963,
+      "lower_rank": 4741,
+      "upper_MC": 0.33658536585365856,
+      "upper_rank": 5265
+    },
+    "point": 0.4019138755980861,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005840465440168918,
+      "estimate": 0.4688995215311005,
+      "lower_MC": 0.46859903381642515,
+      "lower_rank": 194736,
+      "upper_MC": 0.4694835680751174,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008430166324903121,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B",
+    "denominator_people": 209,
+    "empirical_range_width": 0.09047619047619049,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "bloating",
+    "lower": {
+      "MC_half_width": 0.0004101161995898883,
+      "estimate": 0.08571428571428572,
+      "lower_MC": 0.08571428571428572,
+      "lower_rank": 4741,
+      "upper_MC": 0.0861244019138756,
+      "upper_rank": 5265
+    },
+    "point": 0.1291866028708134,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008430166324903121,
+      "estimate": 0.1761904761904762,
+      "lower_MC": 0.17560975609756097,
+      "lower_rank": 194736,
+      "upper_MC": 0.17703349282296652,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0015050430172742768,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C",
+    "denominator_people": 209,
+    "empirical_range_width": 0.11911468812877257,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "abdominal distension",
+    "lower": {
+      "MC_half_width": 0.0015050430172742768,
+      "estimate": 0.6713615023474179,
+      "lower_MC": 0.6698564593301436,
+      "lower_rank": 4741,
+      "upper_MC": 0.6714285714285714,
+      "upper_rank": 5265
+    },
+    "point": 0.7320574162679426,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0009930038366057214,
+      "estimate": 0.7904761904761904,
+      "lower_MC": 0.7904761904761904,
+      "lower_rank": 194736,
+      "upper_MC": 0.7914691943127962,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0005806391675956812,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D",
+    "denominator_people": 209,
+    "empirical_range_width": 0.07279894276339774,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "heartburn",
+    "lower": {
+      "MC_half_width": 0.0002235536081552289,
+      "estimate": 0.04739336492890995,
+      "lower_MC": 0.04716981132075472,
+      "lower_rank": 4741,
+      "upper_MC": 0.04739336492890995,
+      "upper_rank": 5265
+    },
+    "point": 0.08133971291866028,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005806391675956812,
+      "estimate": 0.1201923076923077,
+      "lower_MC": 0.11961722488038277,
+      "lower_rank": 194736,
+      "upper_MC": 0.12077294685990338,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0011732229123533333,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E",
+    "denominator_people": 209,
+    "empirical_range_width": 0.10766705961213971,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "acid regurgitation",
+    "lower": {
+      "MC_half_width": 0.0006900993743098882,
+      "estimate": 0.14354066985645933,
+      "lower_MC": 0.14285714285714285,
+      "lower_rank": 4741,
+      "upper_MC": 0.14423076923076922,
+      "upper_rank": 5265
+    },
+    "point": 0.19617224880382775,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0011732229123533333,
+      "estimate": 0.25120772946859904,
+      "lower_MC": 0.25118483412322273,
+      "lower_rank": 194736,
+      "upper_MC": 0.2523809523809524,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006968641114982466,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F",
+    "denominator_people": 209,
+    "empirical_range_width": 0.0893919943984129,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "belching",
+    "lower": {
+      "MC_half_width": 0.00039105631210895053,
+      "estimate": 0.08133971291866028,
+      "lower_MC": 0.08095238095238096,
+      "lower_rank": 4741,
+      "upper_MC": 0.08173076923076923,
+      "upper_rank": 5265
+    },
+    "point": 0.12440191387559808,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006968641114982466,
+      "estimate": 0.17073170731707318,
+      "lower_MC": 0.17061611374407584,
+      "lower_rank": 194736,
+      "upper_MC": 0.17142857142857143,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0015193088278646072,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G",
+    "denominator_people": 209,
+    "empirical_range_width": 0.13245198303816408,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "nausea",
+    "lower": {
+      "MC_half_width": 0.0015193088278646072,
+      "estimate": 0.3412322274881517,
+      "lower_MC": 0.3397129186602871,
+      "lower_rank": 4741,
+      "upper_MC": 0.34134615384615385,
+      "upper_rank": 5265
+    },
+    "point": 0.40669856459330145,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0002542588354945141,
+      "estimate": 0.47368421052631576,
+      "lower_MC": 0.47342995169082125,
+      "lower_rank": 194736,
+      "upper_MC": 0.47393364928909953,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0012137867857551776,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H",
+    "denominator_people": 209,
+    "empirical_range_width": 0.09360328638497653,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "vomiting",
+    "lower": {
+      "MC_half_width": 0.0012137867857551776,
+      "estimate": 0.09389671361502347,
+      "lower_MC": 0.09268292682926829,
+      "lower_rank": 4741,
+      "upper_MC": 0.09433962264150944,
+      "upper_rank": 5265
+    },
+    "point": 0.13875598086124402,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008971291866028686,
+      "estimate": 0.1875,
+      "lower_MC": 0.18660287081339713,
+      "lower_rank": 194736,
+      "upper_MC": 0.18779342723004694,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.000464511334076545,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I",
+    "denominator_people": 209,
+    "empirical_range_width": 0.0635994895633944,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "loss of appetite",
+    "lower": {
+      "MC_half_width": 0.00015648752570866786,
+      "estimate": 0.0330188679245283,
+      "lower_MC": 0.03286384976525822,
+      "lower_rank": 4741,
+      "upper_MC": 0.03317535545023697,
+      "upper_rank": 5265
+    },
+    "point": 0.06220095693779904,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.000464511334076545,
+      "estimate": 0.0966183574879227,
+      "lower_MC": 0.09615384615384616,
+      "lower_rank": 194736,
+      "upper_MC": 0.0966183574879227,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0005750828119249207,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J",
+    "denominator_people": 209,
+    "empirical_range_width": 0.07279894276339774,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "tenesmus",
+    "lower": {
+      "MC_half_width": 0.0002235536081552289,
+      "estimate": 0.04739336492890995,
+      "lower_MC": 0.04716981132075472,
+      "lower_rank": 4741,
+      "upper_MC": 0.04739336492890995,
+      "upper_rank": 5265
+    },
+    "point": 0.08133971291866028,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005750828119249207,
+      "estimate": 0.1201923076923077,
+      "lower_MC": 0.11961722488038277,
+      "lower_rank": 194736,
+      "upper_MC": 0.1201923076923077,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008741258741258584,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K",
+    "denominator_people": 209,
+    "empirical_range_width": 0.09177078845325291,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "palpitations",
+    "lower": {
+      "MC_half_width": 0.00042879711126156406,
+      "estimate": 0.09004739336492891,
+      "lower_MC": 0.08962264150943396,
+      "lower_rank": 4741,
+      "upper_MC": 0.09047619047619047,
+      "upper_rank": 5265
+    },
+    "point": 0.1339712918660287,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008741258741258584,
+      "estimate": 0.18181818181818182,
+      "lower_MC": 0.18137254901960784,
+      "lower_rank": 194736,
+      "upper_MC": 0.18269230769230768,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008430166324903121,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L",
+    "denominator_people": 209,
+    "empirical_range_width": 0.09047619047619049,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom",
+    "label": "irritability",
+    "lower": {
+      "MC_half_width": 0.0004062288422477939,
+      "estimate": 0.08571428571428572,
+      "lower_MC": 0.08530805687203792,
+      "lower_rank": 4741,
+      "upper_MC": 0.08571428571428572,
+      "upper_rank": 5265
+    },
+    "point": 0.1291866028708134,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008430166324903121,
+      "estimate": 0.1761904761904762,
+      "lower_MC": 0.1761904761904762,
+      "lower_rank": 194736,
+      "upper_MC": 0.17703349282296652,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00011612783351913625,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "1",
+    "denominator_people": 209,
+    "empirical_range_width": 0.02403846153846154,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.009569377990430622,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00011612783351913625,
+      "estimate": 0.02403846153846154,
+      "lower_MC": 0.02403846153846154,
+      "lower_rank": 194736,
+      "upper_MC": 0.024154589371980676,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0009389671361502705,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "2",
+    "denominator_people": 209,
+    "empirical_range_width": 0.1276324614352783,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0009389671361502705,
+      "estimate": 0.6009389671361502,
+      "lower_MC": 0.6,
+      "lower_rank": 4741,
+      "upper_MC": 0.6009615384615384,
+      "upper_rank": 5265
+    },
+    "point": 0.6650717703349283,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008971704623879084,
+      "estimate": 0.7285714285714285,
+      "lower_MC": 0.7276995305164319,
+      "lower_rank": 194736,
+      "upper_MC": 0.7294685990338164,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008825715347454688,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "3",
+    "denominator_people": 209,
+    "empirical_range_width": 0.11538461538461539,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0008825715347454688,
+      "estimate": 0.18269230769230768,
+      "lower_MC": 0.18181818181818182,
+      "lower_rank": 4741,
+      "upper_MC": 0.18357487922705315,
+      "upper_rank": 5265
+    },
+    "point": 0.23923444976076555,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005159474671669884,
+      "estimate": 0.2980769230769231,
+      "lower_MC": 0.2975609756097561,
+      "lower_rank": 194736,
+      "upper_MC": 0.2985781990521327,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00011612783351913625,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "4",
+    "denominator_people": 209,
+    "empirical_range_width": 0.02403846153846154,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.009569377990430622,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00011612783351913625,
+      "estimate": 0.02403846153846154,
+      "lower_MC": 0.02403846153846154,
+      "lower_rank": 194736,
+      "upper_MC": 0.024154589371980676,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.002206736353077776,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "5",
+    "denominator_people": 209,
+    "empirical_range_width": 0.13467556373676948,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "hypogastrium",
+    "lower": {
+      "MC_half_width": 0.0006608331054598349,
+      "estimate": 0.37264150943396224,
+      "lower_MC": 0.3719806763285024,
+      "lower_rank": 4741,
+      "upper_MC": 0.37320574162679426,
+      "upper_rank": 5265
+    },
+    "point": 0.44019138755980863,
+    "status": "MC_PRECISION_INSUFFICIENT",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.002206736353077776,
+      "estimate": 0.5073170731707317,
+      "lower_MC": 0.507177033492823,
+      "lower_rank": 194736,
+      "upper_MC": 0.5095238095238095,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0010351966873706209,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "6",
+    "denominator_people": 209,
+    "empirical_range_width": 0.10952380952380952,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "right lumbar",
+    "lower": {
+      "MC_half_width": 0.0007290954659375515,
+      "estimate": 0.1523809523809524,
+      "lower_MC": 0.15165876777251186,
+      "lower_rank": 4741,
+      "upper_MC": 0.15311004784688995,
+      "upper_rank": 5265
+    },
+    "point": 0.20574162679425836,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0010351966873706209,
+      "estimate": 0.2619047619047619,
+      "lower_MC": 0.2608695652173913,
+      "lower_rank": 194736,
+      "upper_MC": 0.2621359223300971,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00011612783351913625,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "7",
+    "denominator_people": 209,
+    "empirical_range_width": 0.02403846153846154,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.009569377990430622,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00011612783351913625,
+      "estimate": 0.02403846153846154,
+      "lower_MC": 0.02403846153846154,
+      "lower_rank": 194736,
+      "upper_MC": 0.024154589371980676,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.002211078185548207,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "8",
+    "denominator_people": 209,
+    "empirical_range_width": 0.051038925687324196,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "right inguinal",
+    "lower": {
+      "MC_half_width": 4.735969689794069e-05,
+      "estimate": 0.009708737864077669,
+      "lower_MC": 0.00966183574879227,
+      "lower_rank": 4741,
+      "upper_MC": 0.00975609756097561,
+      "upper_rank": 5265
+    },
+    "point": 0.03349282296650718,
+    "status": "MC_PRECISION_INSUFFICIENT",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.002211078185548207,
+      "estimate": 0.06074766355140187,
+      "lower_MC": 0.05853658536585366,
+      "lower_rank": 194736,
+      "upper_MC": 0.06132075471698113,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00022568269013766712,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "9",
+    "denominator_people": 209,
+    "empirical_range_width": 0.04283435862383231,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "region",
+    "label": "left inguinal",
+    "lower": {
+      "MC_half_width": 2.300331247699714e-05,
+      "estimate": 0.004784688995215311,
+      "lower_MC": 0.004784688995215311,
+      "lower_rank": 4741,
+      "upper_MC": 0.004807692307692308,
+      "upper_rank": 5265
+    },
+    "point": 0.023923444976076555,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00022568269013766712,
+      "estimate": 0.047619047619047616,
+      "lower_MC": 0.04739336492890995,
+      "lower_rank": 194736,
+      "upper_MC": 0.047619047619047616,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0013938287032586594,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.12080178606095904,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0009803921568627416,
+      "estimate": 0.20098039215686275,
+      "lower_MC": 0.2,
+      "lower_rank": 4741,
+      "upper_MC": 0.20192307692307693,
+      "upper_rank": 5265
+    },
+    "point": 0.25980392156862747,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0013938287032586594,
+      "estimate": 0.3217821782178218,
+      "lower_MC": 0.32038834951456313,
+      "lower_rank": 194736,
+      "upper_MC": 0.32195121951219513,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006867156050201217,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08166339853651537,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00028977108084612957,
+      "estimate": 0.059113300492610835,
+      "lower_MC": 0.058823529411764705,
+      "lower_rank": 4741,
+      "upper_MC": 0.059113300492610835,
+      "upper_rank": 5265
+    },
+    "point": 0.09803921568627451,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006867156050201217,
+      "estimate": 0.1407766990291262,
+      "lower_MC": 0.14009661835748793,
+      "lower_rank": 194736,
+      "upper_MC": 0.14146341463414633,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.015,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.001038396522579088,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.111453849832616,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.0007485752921858602,
+      "estimate": 0.15196078431372548,
+      "lower_MC": 0.15121951219512195,
+      "lower_rank": 4741,
+      "upper_MC": 0.15270935960591134,
+      "upper_rank": 5265
+    },
+    "point": 0.20588235294117646,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.001038396522579088,
+      "estimate": 0.2634146341463415,
+      "lower_MC": 0.2623762376237624,
+      "lower_rank": 194736,
+      "upper_MC": 0.263681592039801,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0003846153846153999,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08027363184079603,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0002736318407960195,
+      "estimate": 0.05472636815920398,
+      "lower_MC": 0.054455445544554455,
+      "lower_rank": 4741,
+      "upper_MC": 0.055,
+      "upper_rank": 5265
+    },
+    "point": 0.09313725490196079,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0003846153846153999,
+      "estimate": 0.135,
+      "lower_MC": 0.1346153846153846,
+      "lower_rank": 194736,
+      "upper_MC": 0.13526570048309178,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0002367984844897017,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04361758094600411,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right inguinal",
+    "lower": {
+      "MC_half_width": 2.4147590070511087e-05,
+      "estimate": 0.0049261083743842365,
+      "lower_MC": 0.004901960784313725,
+      "lower_rank": 4741,
+      "upper_MC": 0.0049261083743842365,
+      "upper_rank": 5265
+    },
+    "point": 0.024509803921568627,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0002367984844897017,
+      "estimate": 0.04854368932038835,
+      "lower_MC": 0.04830917874396135,
+      "lower_rank": 194736,
+      "upper_MC": 0.04878048780487805,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03414634146341464,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03414634146341464,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006096668780178477,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07460902003921757,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00023451057642699669,
+      "estimate": 0.04854368932038835,
+      "lower_MC": 0.04830917874396135,
+      "lower_rank": 4741,
+      "upper_MC": 0.04854368932038835,
+      "upper_rank": 5265
+    },
+    "point": 0.08333333333333333,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006096668780178477,
+      "estimate": 0.12315270935960591,
+      "lower_MC": 0.12254901960784313,
+      "lower_rank": 194736,
+      "upper_MC": 0.12376237623762376,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0003658001268107003,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.05456795411817901,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left hypochondrium",
+    "lower": {
+      "MC_half_width": 9.380423057079798e-05,
+      "estimate": 0.01932367149758454,
+      "lower_MC": 0.01932367149758454,
+      "lower_rank": 4741,
+      "upper_MC": 0.019417475728155338,
+      "upper_rank": 5265
+    },
+    "point": 0.04411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0003658001268107003,
+      "estimate": 0.07389162561576355,
+      "lower_MC": 0.07389162561576355,
+      "lower_rank": 194736,
+      "upper_MC": 0.07425742574257425,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00045432807269249476,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.06386896221903396,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00014207909069382033,
+      "estimate": 0.02926829268292683,
+      "lower_MC": 0.02912621359223301,
+      "lower_rank": 4741,
+      "upper_MC": 0.02926829268292683,
+      "upper_rank": 5265
+    },
+    "point": 0.058823529411764705,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00045432807269249476,
+      "estimate": 0.09313725490196079,
+      "lower_MC": 0.09268292682926829,
+      "lower_rank": 194736,
+      "upper_MC": 0.09313725490196079,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0003658001268107003,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.05456795411817901,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right lumbar",
+    "lower": {
+      "MC_half_width": 9.29022668153083e-05,
+      "estimate": 0.01932367149758454,
+      "lower_MC": 0.019230769230769232,
+      "lower_rank": 4741,
+      "upper_MC": 0.01932367149758454,
+      "upper_rank": 5265
+    },
+    "point": 0.04411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0003658001268107003,
+      "estimate": 0.07389162561576355,
+      "lower_MC": 0.07389162561576355,
+      "lower_rank": 194736,
+      "upper_MC": 0.07425742574257425,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.015,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.015,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0009290658243137351,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.1371845388873253,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.000686274509803908,
+      "estimate": 0.46568627450980393,
+      "lower_MC": 0.465,
+      "lower_rank": 4741,
+      "upper_MC": 0.46601941747572817,
+      "upper_rank": 5265
+    },
+    "point": 0.5343137254901961,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0009290658243137351,
+      "estimate": 0.6028708133971292,
+      "lower_MC": 0.6019417475728155,
+      "lower_rank": 194736,
+      "upper_MC": 0.6030150753768844,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0011832319134550406,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.10705095213587237,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0006716417910447858,
+      "estimate": 0.13432835820895522,
+      "lower_MC": 0.13366336633663367,
+      "lower_rank": 4741,
+      "upper_MC": 0.135,
+      "upper_rank": 5265
+    },
+    "point": 0.18627450980392157,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0011832319134550406,
+      "estimate": 0.2413793103448276,
+      "lower_MC": 0.24019607843137256,
+      "lower_rank": 194736,
+      "upper_MC": 0.24154589371980675,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.015,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008958038661009415,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.12465818010372468,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.0007036236618585545,
+      "estimate": 0.22772277227722773,
+      "lower_MC": 0.22705314009661837,
+      "lower_rank": 4741,
+      "upper_MC": 0.22842639593908629,
+      "upper_rank": 5265
+    },
+    "point": 0.28921568627450983,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008958038661009415,
+      "estimate": 0.3523809523809524,
+      "lower_MC": 0.35148514851485146,
+      "lower_rank": 194736,
+      "upper_MC": 0.35294117647058826,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0008761543926118776,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.09268292682926829,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right lumbar",
+    "lower": {
+      "MC_half_width": 0.00042623727208145057,
+      "estimate": 0.08780487804878048,
+      "lower_MC": 0.08737864077669903,
+      "lower_rank": 4741,
+      "upper_MC": 0.08780487804878048,
+      "upper_rank": 5265
+    },
+    "point": 0.1323529411764706,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008761543926118776,
+      "estimate": 0.18048780487804877,
+      "lower_MC": 0.1796116504854369,
+      "lower_rank": 194736,
+      "upper_MC": 0.18090452261306533,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03414634146341464,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03414634146341464,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.000769230769230772,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07076923076923076,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00017587939698492094,
+      "estimate": 0.035,
+      "lower_MC": 0.03482587064676617,
+      "lower_rank": 4741,
+      "upper_MC": 0.035175879396984924,
+      "upper_rank": 5265
+    },
+    "point": 0.06862745098039216,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.000769230769230772,
+      "estimate": 0.10576923076923077,
+      "lower_MC": 0.105,
+      "lower_rank": 194736,
+      "upper_MC": 0.10628019323671498,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03414634146341464,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03414634146341464,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0009764671418806756,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.05220095693779904,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00010101010101010166,
+      "estimate": 0.01,
+      "lower_MC": 0.009950248756218905,
+      "lower_rank": 4741,
+      "upper_MC": 0.010101010101010102,
+      "upper_rank": 5265
+    },
+    "point": 0.03431372549019608,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0009764671418806756,
+      "estimate": 0.06220095693779904,
+      "lower_MC": 0.061224489795918366,
+      "lower_rank": 194736,
+      "upper_MC": 0.06280193236714976,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00026825342632785104,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04479360979576218,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right lumbar",
+    "lower": {
+      "MC_half_width": 4.690211528539899e-05,
+      "estimate": 0.00966183574879227,
+      "lower_MC": 0.00966183574879227,
+      "lower_rank": 4741,
+      "upper_MC": 0.009708737864077669,
+      "upper_rank": 5265
+    },
+    "point": 0.029411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00026825342632785104,
+      "estimate": 0.054455445544554455,
+      "lower_MC": 0.054187192118226604,
+      "lower_rank": 194736,
+      "upper_MC": 0.054455445544554455,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0009500950095009675,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.09900990099009903,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0005172159006945481,
+      "estimate": 0.10396039603960396,
+      "lower_MC": 0.10344827586206896,
+      "lower_rank": 4741,
+      "upper_MC": 0.1044776119402985,
+      "upper_rank": 5265
+    },
+    "point": 0.15196078431372548,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0009500950095009675,
+      "estimate": 0.20297029702970298,
+      "lower_MC": 0.20202020202020202,
+      "lower_rank": 194736,
+      "upper_MC": 0.20388349514563106,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0004221190375685996,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.06232597986720925,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0001207379503525563,
+      "estimate": 0.024630541871921183,
+      "lower_MC": 0.024509803921568627,
+      "lower_rank": 4741,
+      "upper_MC": 0.024630541871921183,
+      "upper_rank": 5265
+    },
+    "point": 0.05392156862745098,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0004221190375685996,
+      "estimate": 0.08695652173913043,
+      "lower_MC": 0.08673469387755102,
+      "lower_rank": 194736,
+      "upper_MC": 0.08737864077669903,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0007485752921858602,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08399961926518179,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00032831480699779814,
+      "estimate": 0.06796116504854369,
+      "lower_MC": 0.06763285024154589,
+      "lower_rank": 4741,
+      "upper_MC": 0.06796116504854369,
+      "upper_rank": 5265
+    },
+    "point": 0.10784313725490197,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0007485752921858602,
+      "estimate": 0.15196078431372548,
+      "lower_MC": 0.15151515151515152,
+      "lower_rank": 194736,
+      "upper_MC": 0.15270935960591134,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00045432807269249476,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.06401104130972778,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right lumbar",
+    "lower": {
+      "MC_half_width": 0.00014207909069382033,
+      "estimate": 0.02912621359223301,
+      "lower_MC": 0.02912621359223301,
+      "lower_rank": 4741,
+      "upper_MC": 0.02926829268292683,
+      "upper_rank": 5265
+    },
+    "point": 0.058823529411764705,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00045432807269249476,
+      "estimate": 0.09313725490196079,
+      "lower_MC": 0.09268292682926829,
+      "lower_rank": 194736,
+      "upper_MC": 0.09313725490196079,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03398058252427184,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03398058252427184,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03398058252427184,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03398058252427184,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006716417910447858,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08054455445544556,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00027092261464952555,
+      "estimate": 0.054455445544554455,
+      "lower_MC": 0.054187192118226604,
+      "lower_rank": 4741,
+      "upper_MC": 0.05472636815920398,
+      "upper_rank": 5265
+    },
+    "point": 0.09313725490196079,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006716417910447858,
+      "estimate": 0.135,
+      "lower_MC": 0.13432835820895522,
+      "lower_rank": 194736,
+      "upper_MC": 0.13526570048309178,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0005738880918220862,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07317073170731708,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00021311863604072528,
+      "estimate": 0.04390243902439024,
+      "lower_MC": 0.043689320388349516,
+      "lower_rank": 4741,
+      "upper_MC": 0.04390243902439024,
+      "upper_rank": 5265
+    },
+    "point": 0.0784313725490196,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005738880918220862,
+      "estimate": 0.11707317073170732,
+      "lower_MC": 0.116751269035533,
+      "lower_rank": 194736,
+      "upper_MC": 0.11764705882352941,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00023451057642699669,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04364172853607462,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / right lumbar",
+    "lower": {
+      "MC_half_width": 2.4147590070511087e-05,
+      "estimate": 0.004901960784313725,
+      "lower_MC": 0.004901960784313725,
+      "lower_rank": 4741,
+      "upper_MC": 0.0049261083743842365,
+      "upper_rank": 5265
+    },
+    "point": 0.024509803921568627,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00023451057642699669,
+      "estimate": 0.04854368932038835,
+      "lower_MC": 0.04830917874396135,
+      "lower_rank": 194736,
+      "upper_MC": 0.04854368932038835,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0001231466430225113,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0001231466430225113,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024875621890547265,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0001231466430225113,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "belching / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0001231466430225113,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024875621890547265,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0010489339903400063,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.11945554920997528,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0009659036028204504,
+      "estimate": 0.19607843137254902,
+      "lower_MC": 0.19597989949748743,
+      "lower_rank": 4741,
+      "upper_MC": 0.19704433497536947,
+      "upper_rank": 5265
+    },
+    "point": 0.2549019607843137,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0010489339903400063,
+      "estimate": 0.3155339805825243,
+      "lower_MC": 0.31527093596059114,
+      "lower_rank": 194736,
+      "upper_MC": 0.3165829145728643,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006716417910447858,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08027363184079603,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0002736318407960195,
+      "estimate": 0.05472636815920398,
+      "lower_MC": 0.054455445544554455,
+      "lower_rank": 4741,
+      "upper_MC": 0.055,
+      "upper_rank": 5265
+    },
+    "point": 0.09313725490196079,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006716417910447858,
+      "estimate": 0.135,
+      "lower_MC": 0.13432835820895522,
+      "lower_rank": 194736,
+      "upper_MC": 0.13526570048309178,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006598984771573613,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.11542705804458175,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00064571674558761,
+      "estimate": 0.17391304347826086,
+      "lower_MC": 0.17326732673267325,
+      "lower_rank": 4741,
+      "upper_MC": 0.17412935323383086,
+      "upper_rank": 5265
+    },
+    "point": 0.23039215686274508,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006598984771573613,
+      "estimate": 0.2893401015228426,
+      "lower_MC": 0.28921568627450983,
+      "lower_rank": 194736,
+      "upper_MC": 0.29,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0007173601147776321,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.08292682926829267,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0003108560497369628,
+      "estimate": 0.06341463414634146,
+      "lower_MC": 0.06310679611650485,
+      "lower_rank": 4741,
+      "upper_MC": 0.06372549019607843,
+      "upper_rank": 5265
+    },
+    "point": 0.10294117647058823,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0007173601147776321,
+      "estimate": 0.14634146341463414,
+      "lower_MC": 0.14634146341463414,
+      "lower_rank": 194736,
+      "upper_MC": 0.14705882352941177,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006096668780178477,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07484353061564455,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00023451057642699669,
+      "estimate": 0.04830917874396135,
+      "lower_MC": 0.04807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.04854368932038835,
+      "upper_rank": 5265
+    },
+    "point": 0.08333333333333333,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006096668780178477,
+      "estimate": 0.12315270935960591,
+      "lower_MC": 0.12254901960784313,
+      "lower_rank": 194736,
+      "upper_MC": 0.12376237623762376,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0001990049751243797,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03499330271718332,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.004807692307692308,
+      "lower_MC": 0.004807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.004807692307692308,
+      "upper_rank": 5265
+    },
+    "point": 0.0196078431372549,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0001990049751243797,
+      "estimate": 0.03980099502487562,
+      "lower_MC": 0.039603960396039604,
+      "lower_rank": 194736,
+      "upper_MC": 0.04,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.015,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0018701576275714643,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07859181251104881,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.0018701576275714643,
+      "estimate": 0.050761421319796954,
+      "lower_MC": 0.05,
+      "lower_rank": 4741,
+      "upper_MC": 0.05263157894736842,
+      "upper_rank": 5265
+    },
+    "point": 0.08823529411764706,
+    "status": "MC_PRECISION_INSUFFICIENT",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.000640362543717049,
+      "estimate": 0.12935323383084577,
+      "lower_MC": 0.12871287128712872,
+      "lower_rank": 194736,
+      "upper_MC": 0.12980769230769232,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0001970346288360167,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03499330271718332,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.004807692307692308,
+      "lower_MC": 0.004807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.004807692307692308,
+      "upper_rank": 5265
+    },
+    "point": 0.0196078431372549,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0001970346288360167,
+      "estimate": 0.03980099502487562,
+      "lower_MC": 0.039603960396039604,
+      "lower_rank": 194736,
+      "upper_MC": 0.03980099502487562,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00012193337560357023,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00012193337560357023,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024630541871921183,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00033151787828558654,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.053586800573888094,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right hypochondrium",
+    "lower": {
+      "MC_half_width": 7.173601147776078e-05,
+      "estimate": 0.014705882352941176,
+      "lower_MC": 0.014634146341463415,
+      "lower_rank": 4741,
+      "upper_MC": 0.014705882352941176,
+      "upper_rank": 5265
+    },
+    "point": 0.0392156862745098,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00033151787828558654,
+      "estimate": 0.06829268292682927,
+      "lower_MC": 0.06796116504854369,
+      "lower_rank": 194736,
+      "upper_MC": 0.06829268292682927,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00016575893914279327,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03398058252427184,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.014705882352941176,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00016575893914279327,
+      "estimate": 0.03398058252427184,
+      "lower_MC": 0.03398058252427184,
+      "lower_rank": 194736,
+      "upper_MC": 0.03414634146341464,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00026825342632785104,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04452535636943433,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / hypogastrium",
+    "lower": {
+      "MC_half_width": 4.690211528539899e-05,
+      "estimate": 0.00966183574879227,
+      "lower_MC": 0.00966183574879227,
+      "lower_rank": 4741,
+      "upper_MC": 0.009708737864077669,
+      "upper_rank": 5265
+    },
+    "point": 0.029411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00026825342632785104,
+      "estimate": 0.054187192118226604,
+      "lower_MC": 0.054187192118226604,
+      "lower_rank": 194736,
+      "upper_MC": 0.054455445544554455,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.003484403147814546,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.06030150753768844,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.003484403147814546,
+      "estimate": 0.020100502512562814,
+      "lower_MC": 0.02,
+      "lower_rank": 4741,
+      "upper_MC": 0.02358490566037736,
+      "upper_rank": 5265
+    },
+    "point": 0.049019607843137254,
+    "status": "MC_PRECISION_INSUFFICIENT",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0008162640614238631,
+      "estimate": 0.08040201005025126,
+      "lower_MC": 0.08,
+      "lower_rank": 194736,
+      "upper_MC": 0.08121827411167512,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0003658001268107003,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.05456795411817901,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / hypogastrium",
+    "lower": {
+      "MC_half_width": 9.380423057079798e-05,
+      "estimate": 0.01932367149758454,
+      "lower_MC": 0.01932367149758454,
+      "lower_rank": 4741,
+      "upper_MC": 0.019417475728155338,
+      "upper_rank": 5265
+    },
+    "point": 0.04411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0003658001268107003,
+      "estimate": 0.07389162561576355,
+      "lower_MC": 0.07389162561576355,
+      "lower_rank": 194736,
+      "upper_MC": 0.07425742574257425,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.024752475247524754,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.00980392156862745,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.024752475247524754,
+      "lower_MC": 0.024752475247524754,
+      "lower_rank": 194736,
+      "upper_MC": 0.024752475247524754,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006096668780178477,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07484353061564455,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.00023451057642699669,
+      "estimate": 0.04830917874396135,
+      "lower_MC": 0.04807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.04854368932038835,
+      "upper_rank": 5265
+    },
+    "point": 0.08333333333333333,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006096668780178477,
+      "estimate": 0.12315270935960591,
+      "lower_MC": 0.12254901960784313,
+      "lower_rank": 194736,
+      "upper_MC": 0.12376237623762376,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0002367984844897017,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04361758094600411,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left hypochondrium",
+    "lower": {
+      "MC_half_width": 2.4147590070511087e-05,
+      "estimate": 0.0049261083743842365,
+      "lower_MC": 0.004901960784313725,
+      "lower_rank": 4741,
+      "upper_MC": 0.0049261083743842365,
+      "upper_rank": 5265
+    },
+    "point": 0.024509803921568627,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0002367984844897017,
+      "estimate": 0.04854368932038835,
+      "lower_MC": 0.04830917874396135,
+      "lower_rank": 194736,
+      "upper_MC": 0.04878048780487805,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0005393743257821049,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07224161844181931,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.0001931807205640887,
+      "estimate": 0.03940886699507389,
+      "lower_MC": 0.0392156862745098,
+      "lower_rank": 4741,
+      "upper_MC": 0.03940886699507389,
+      "upper_rank": 5265
+    },
+    "point": 0.07352941176470588,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005393743257821049,
+      "estimate": 0.11165048543689321,
+      "lower_MC": 0.1111111111111111,
+      "lower_rank": 194736,
+      "upper_MC": 0.11165048543689321,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0001970346288360167,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.03499330271718332,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.004807692307692308,
+      "lower_MC": 0.004807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.004807692307692308,
+      "upper_rank": 5265
+    },
+    "point": 0.0196078431372549,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0001970346288360167,
+      "estimate": 0.03980099502487562,
+      "lower_MC": 0.039603960396039604,
+      "lower_rank": 194736,
+      "upper_MC": 0.03980099502487562,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_1",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / epigastrium",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006096668780178477,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_2",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07484353061564455,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right hypochondrium",
+    "lower": {
+      "MC_half_width": 0.0002322556670382725,
+      "estimate": 0.04830917874396135,
+      "lower_MC": 0.04807692307692308,
+      "lower_rank": 4741,
+      "upper_MC": 0.04830917874396135,
+      "upper_rank": 5265
+    },
+    "point": 0.08333333333333333,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0006096668780178477,
+      "estimate": 0.12315270935960591,
+      "lower_MC": 0.12254901960784313,
+      "lower_rank": 194736,
+      "upper_MC": 0.12376237623762376,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00026825342632785104,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_3",
+    "denominator_people": 204,
+    "empirical_range_width": 0.04452535636943433,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left hypochondrium",
+    "lower": {
+      "MC_half_width": 4.690211528539899e-05,
+      "estimate": 0.00966183574879227,
+      "lower_MC": 0.00966183574879227,
+      "lower_rank": 4741,
+      "upper_MC": 0.009708737864077669,
+      "upper_rank": 5265
+    },
+    "point": 0.029411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00026825342632785104,
+      "estimate": 0.054187192118226604,
+      "lower_MC": 0.054187192118226604,
+      "lower_rank": 194736,
+      "upper_MC": 0.054455445544554455,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_4",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / umbilical",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0005060728744939319,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_5",
+    "denominator_people": 204,
+    "empirical_range_width": 0.07043728724797066,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / hypogastrium",
+    "lower": {
+      "MC_half_width": 0.00035000875021875405,
+      "estimate": 0.03482587064676617,
+      "lower_MC": 0.034653465346534656,
+      "lower_rank": 4741,
+      "upper_MC": 0.035175879396984924,
+      "upper_rank": 5265
+    },
+    "point": 0.06862745098039216,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0005060728744939319,
+      "estimate": 0.10526315789473684,
+      "lower_MC": 0.10476190476190476,
+      "lower_rank": 194736,
+      "upper_MC": 0.10576923076923077,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.00033151787828558654,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_6",
+    "denominator_people": 204,
+    "empirical_range_width": 0.053586800573888094,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right lumbar",
+    "lower": {
+      "MC_half_width": 7.173601147776078e-05,
+      "estimate": 0.014705882352941176,
+      "lower_MC": 0.014634146341463415,
+      "lower_rank": 4741,
+      "upper_MC": 0.014705882352941176,
+      "upper_rank": 5265
+    },
+    "point": 0.0392156862745098,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00033151787828558654,
+      "estimate": 0.06829268292682927,
+      "lower_MC": 0.06796116504854369,
+      "lower_rank": 194736,
+      "upper_MC": 0.06829268292682927,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_7",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left lumbar",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_8",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_9",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left inguinal",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Heartburn",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Heartburn [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Belching Disorder",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Belching Disorder [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Chronic Nausea Vomiting Syndrome",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Chronic Nausea Vomiting Syndrome [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 7.537688442211046e-05,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Dyspepsia - PDS-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.015,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Dyspepsia - PDS-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.004901960784313725,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 7.537688442211046e-05,
+      "estimate": 0.015,
+      "lower_MC": 0.015,
+      "lower_rank": 194736,
+      "upper_MC": 0.01507537688442211,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Dyspepsia - EPS-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Dyspepsia - EPS-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 4741,
+      "upper_MC": 0.0,
+      "upper_rank": 5265
+    },
+    "point": 0.0,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0,
+      "estimate": 0.0,
+      "lower_MC": 0.0,
+      "lower_rank": 194736,
+      "upper_MC": 0.0,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": true
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0009086561453849895,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Irritable Bowel Syndrome-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.09443777511004402,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Irritable Bowel Syndrome-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.00046617631824304173,
+      "estimate": 0.09183673469387756,
+      "lower_MC": 0.09137055837563451,
+      "lower_rank": 4741,
+      "upper_MC": 0.09223300970873786,
+      "upper_rank": 5265
+    },
+    "point": 0.13725490196078433,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0009086561453849895,
+      "estimate": 0.18627450980392157,
+      "lower_MC": 0.18536585365853658,
+      "lower_rank": 194736,
+      "upper_MC": 0.18686868686868688,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0011897963068722706,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Abdominal Bloating/Distension-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.1274559425758064,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Abdominal Bloating/Distension-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0011848341232227333,
+      "estimate": 0.25118483412322273,
+      "lower_MC": 0.25,
+      "lower_rank": 4741,
+      "upper_MC": 0.2512315270935961,
+      "upper_rank": 5265
+    },
+    "point": 0.3137254901960784,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0011897963068722706,
+      "estimate": 0.3786407766990291,
+      "lower_MC": 0.37745098039215685,
+      "lower_rank": 194736,
+      "upper_MC": 0.3793103448275862,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0003658001268107003,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Constipation / Defecatory Disorder-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.05456795411817901,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Constipation / Defecatory Disorder-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 9.380423057079798e-05,
+      "estimate": 0.01932367149758454,
+      "lower_MC": 0.01932367149758454,
+      "lower_rank": 4741,
+      "upper_MC": 0.019417475728155338,
+      "upper_rank": 5265
+    },
+    "point": 0.04411764705882353,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.0003658001268107003,
+      "estimate": 0.07389162561576355,
+      "lower_MC": 0.07389162561576355,
+      "lower_rank": 194736,
+      "upper_MC": 0.07425742574257425,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.0006128173097320055,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Biliary Pain-like",
+    "denominator_people": 204,
+    "empirical_range_width": 0.1355162754757075,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Biliary Pain-like [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.0006128173097320055,
+      "estimate": 0.35467980295566504,
+      "lower_MC": 0.35406698564593303,
+      "lower_rank": 4741,
+      "upper_MC": 0.355,
+      "upper_rank": 5265
+    },
+    "point": 0.4215686274509804,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.00019607843137253722,
+      "estimate": 0.49019607843137253,
+      "lower_MC": 0.49,
+      "lower_rank": 194736,
+      "upper_MC": 0.49029126213592233,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  },
+  {
+    "MC_max_endpoint_half_width": 0.000420168067226917,
+    "absolute_MC_target": 0.002,
+    "attempted": 200000,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Unspecified Functional GI Symptom Pattern",
+    "denominator_people": 204,
+    "empirical_range_width": 0.0847481021394065,
+    "gamma_per_endpoint": 0.00017985611510791367,
+    "kind": "legacy_rule_pattern",
+    "label": "Unspecified Functional GI Symptom Pattern [rule alignment only]",
+    "lower": {
+      "MC_half_width": 0.00032831480699779814,
+      "estimate": 0.06763285024154589,
+      "lower_MC": 0.0673076923076923,
+      "lower_rank": 4741,
+      "upper_MC": 0.06796116504854369,
+      "upper_rank": 5265
+    },
+    "point": 0.10784313725490197,
+    "status": "MC_PRECISION_MET",
+    "uncertainty_role": "success_conditional_descriptive_resampling_range_not_population_CI",
+    "undefined": 0,
+    "unit": "proportion",
+    "upper": {
+      "MC_half_width": 0.000420168067226917,
+      "estimate": 0.1523809523809524,
+      "lower_MC": 0.15196078431372548,
+      "lower_rank": 194736,
+      "upper_MC": 0.15270935960591134,
+      "upper_rank": 195260
+    },
+    "valid": 200000,
+    "zero_width": false
+  }
+]

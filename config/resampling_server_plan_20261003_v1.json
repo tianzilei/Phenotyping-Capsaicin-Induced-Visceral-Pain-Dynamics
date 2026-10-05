@@ -1,0 +1,335 @@
+{
+  "version": "resampling_server_plan_20261003_v1",
+  "status": "resource_and_precision_proposal_not_activated",
+  "study_role": "results_informed_exploratory_planning_not_preregistered",
+  "requested_scope": "existing_manuscript_and_supplement_stability_plus_derivative_Markov_and_valid_null_synthetic_development",
+  "server": {
+    "connection": null,
+    "specifications": null,
+    "execution_started": false,
+    "benchmark_required": true
+  },
+  "scientific_estimator_parameters_changed": false,
+  "primary_physiology_p_q": null,
+  "sealed_pool_opened": false,
+  "real_state_inference_enabled": false,
+  "real_phase_inference_enabled": false,
+  "preserve": {
+    "resampling_unit": "true_person",
+    "time": "actual_observed_minutes",
+    "E_T_and_missing": true,
+    "no_baseline_zero": true,
+    "no_gap_bridging": true,
+    "no_source_mutation": true,
+    "no_retry_until_success_count": true
+  },
+  "budgets": {
+    "cheap_subject_bootstrap_initial": 20000,
+    "full_model_refit_initial": 5000,
+    "paired_rest_candidates_initial": 20000,
+    "bootstrap_precision_checkpoints": [
+      5000,
+      10000,
+      20000,
+      50000,
+      100000,
+      200000
+    ],
+    "expensive_refit_planned_extensions": [
+      10000,
+      20000
+    ],
+    "nested_grouped_cv_repeats": 20,
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "synthetic_confirmatory_replicates_per_cell": 10000,
+    "fixed_null_development_draws": 99999,
+    "fixed_null_confirmation_draws": 999999,
+    "larger_family_optional_fixed_draws": [
+      2999999,
+      3999999
+    ],
+    "null_draw_count_selected_before_confirmation_not_by_significance": true
+  },
+  "precision": {
+    "role": "proposed_engineering_tolerance_not_coverage_proof",
+    "endpoint_MC_interval": "binomial_order_statistics_with_correct_index_bounds_and_ties",
+    "max_endpoint_MC_halfwidth_fraction_of_statistical_interval": 0.02,
+    "VAS_endpoint_MC_halfwidth_max": 0.01,
+    "proportion_MC_tolerance": 0.002,
+    "subspace_angle_degree_MC_tolerance": 0.5,
+    "ARI_MC_tolerance": 0.005,
+    "logical_batches": 10,
+    "zero_width_policy": "report_discrete_mass_and_zero_width_never_divide_by_zero_or_smooth_without_new_estimand",
+    "precision_stopping": "prespecified_checkpoints_and_MC_error_allocation_only_no_effect_or_significance_selection",
+    "limit_failure_status": "MC_PRECISION_INSUFFICIENT",
+    "nominal_coverage_validation": "separate_independent_synthetic_DGP"
+  },
+  "failures": {
+    "existing_module_thresholds_preserved": true,
+    "report": [
+      "attempted",
+      "successful",
+      "failed",
+      "undefined",
+      "valid_boundary",
+      "reason_by_task"
+    ],
+    "no_replacement_replicates": true,
+    "successful_quantiles_role": "conditional_success_range_if_any_failure",
+    "simulation_failure": "counts_as_noncoverage",
+    "infrastructure_resume": "same_logical_replicate_and_seed_not_new_sample"
+  },
+  "rng": {
+    "master_seed": 2026100304,
+    "identity_fields": [
+      "module_id",
+      "cell_id",
+      "replicate_id",
+      "purpose"
+    ],
+    "depends_on_worker_count": false,
+    "depends_on_execution_order": false,
+    "python_builtin_hash_forbidden": true,
+    "cross_hardware_bitwise_guarantee": false
+  },
+  "environment": {
+    "BLAS_threads_per_worker": 1,
+    "RF_n_jobs_per_worker": 1,
+    "container_or_lock_required": true,
+    "retain_old_environment": true,
+    "Windows_Rscript_paths_need_portability_adapter": true,
+    "code_revision_plus_working_tree_snapshot_required": true
+  },
+  "module_matrix": [
+    {
+      "module_id": "U00",
+      "module": "队列与来源",
+      "method": "deterministic_audit",
+      "proposed_replicates": null,
+      "permutation_policy": "not_required",
+      "scope": "source_identity_hash_audit"
+    },
+    {
+      "module_id": "U01",
+      "module": "观察支持与E/T",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_unjustified_permutation",
+      "scope": "observed_support_and_algebraic_sensitivity"
+    },
+    {
+      "module_id": "U02",
+      "module": "GAMM曲线",
+      "method": "subject_full_refit",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_time_shuffle",
+      "scope": "pointwise_curve_not_accepted_derivative"
+    },
+    {
+      "module_id": "U03",
+      "module": "完整/稀疏FPCA",
+      "method": "subject_refit_each_interval_specification",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_label_shuffle",
+      "scope": "subspace_and_reconstruction_stability"
+    },
+    {
+      "module_id": "U04",
+      "module": "DTW/模糊/普通聚类",
+      "method": "subject_cluster_refit",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_naive_post_cluster_permutation",
+      "scope": "retrospective_partition_stability"
+    },
+    {
+      "module_id": "U05",
+      "module": "shapelet",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_independent_fold_tests",
+      "scope": "optional_paired_fixed_oof_conditional_range"
+    },
+    {
+      "module_id": "U06",
+      "module": "波动与负担",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "not_required_for_description",
+      "scope": "adjacency_preserved"
+    },
+    {
+      "module_id": "U07",
+      "module": "症状/部位/Rome",
+      "method": "optional_subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "conditional_on_frozen_null_exchangeability_family",
+      "scope": "description_or_network_stability"
+    },
+    {
+      "module_id": "U08",
+      "module": "ECG同期候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "null_method_development_only",
+      "scope": "primary_p_q_retained_missing"
+    },
+    {
+      "module_id": "U09",
+      "module": "Hb与22联合候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "null_method_development_only",
+      "scope": "relative_scale_candidate_not_prediction_gain"
+    },
+    {
+      "module_id": "U10",
+      "module": "66 EGG-Hb候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "within_person_time_shuffle_disabled",
+      "scope": "neutral_descriptors_candidate_only"
+    },
+    {
+      "module_id": "U11",
+      "module": "基线/静息分类",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": null,
+      "permutation_policy": "not_activated",
+      "scope": "eligible_development_tasks_only_sealed_closed"
+    },
+    {
+      "module_id": "U12",
+      "module": "前缀恢复",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_naive_partition_label_shuffle",
+      "scope": "optional_paired_fixed_oof_range"
+    },
+    {
+      "module_id": "U13",
+      "module": "两项未来评分",
+      "method": "paired_subject_fixed_oof_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "not_needed_for_primary_error_summary",
+      "scope": "213_or_206_eligible_people_task_specific"
+    },
+    {
+      "module_id": "U14",
+      "module": "安全中止",
+      "method": "source_audit",
+      "proposed_replicates": null,
+      "permutation_policy": "not_activated",
+      "scope": "unknown_not_zero"
+    },
+    {
+      "module_id": "U15",
+      "module": "显著导数",
+      "method": "new_independent_synthetic_validation_per_cell",
+      "proposed_replicates": 10000,
+      "permutation_policy": "old_target_not_accepted",
+      "scope": "v5_projection_candidate_jackknife_G"
+    },
+    {
+      "module_id": "U16",
+      "module": "Markov",
+      "method": "synthetic_estimator_development",
+      "proposed_replicates": 10000,
+      "permutation_policy": "real_inference_disabled",
+      "scope": "state_definition_and_real_estimator_not_ready"
+    },
+    {
+      "module_id": "U17",
+      "module": "相位/相干/方向性",
+      "method": "synthetic_stress_design_only",
+      "proposed_replicates": null,
+      "permutation_policy": "real_surrogates_disabled",
+      "scope": "phase_timing_duration_reference_gates"
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "K01",
+      "status": "independent_validation_qualification_unknown",
+      "available_path": "source_and_exposure_scaffold",
+      "retained_boundary": "no_independent_validation_claim"
+    },
+    {
+      "blocker_id": "K02",
+      "status": "R_peak_and_normal_beat_reference_absent",
+      "available_path": "candidate_sensitivity_and_subject_stability",
+      "retained_boundary": "NN_HRV_and_accuracy_not_validated"
+    },
+    {
+      "blocker_id": "K03",
+      "status": "EGG_gastric_source_phase_and_E05_unvalidated",
+      "available_path": "passthrough_neutral_spectra_and_synthetic_stress",
+      "retained_boundary": "no_removal_success_or_gastric_source_claim"
+    },
+    {
+      "blocker_id": "K04",
+      "status": "Hb_scale_target_QC_and_optical_reference_unresolved",
+      "available_path": "existing_relative_scale_sensitivity_and_source_audit",
+      "retained_boundary": "no_absolute_concentration_or_brain_source_claim"
+    },
+    {
+      "blocker_id": "K05",
+      "status": "Hb_cross_device_precise_synchronization_unverified",
+      "available_path": "nominal_five_minute_and_offset_drift_scenarios",
+      "retained_boundary": "phase_lag_real_disabled"
+    },
+    {
+      "blocker_id": "K06",
+      "status": "physiology_target_gate_and_valid_p_q_incomplete",
+      "available_path": "CR2_wild_null_synthetic_development",
+      "retained_boundary": "primary_p_q_retained_missing"
+    },
+    {
+      "blocker_id": "K07",
+      "status": "clinical_reference_and_sparse_class_support_absent",
+      "available_path": "feasible_training_partition_recovery_only",
+      "retained_boundary": "sealed_closed_no_validated_clinical_phenotype"
+    },
+    {
+      "blocker_id": "K08",
+      "status": "instantaneous_derivative_calibration_failed",
+      "available_path": "new_projection_or_finite_change_synthetic_development",
+      "retained_boundary": "new_estimand_does_not_close_old_target"
+    },
+    {
+      "blocker_id": "K09",
+      "status": "state_thresholds_unsupported_regression_not_implemented",
+      "available_path": "synthetic_states_estimator_development",
+      "retained_boundary": "no_real_Markov_without_supported_definition"
+    },
+    {
+      "blocker_id": "K10",
+      "status": "original_duration_rule_and_coupling_identification_unmet",
+      "available_path": "alternative_spectra_and_known_null_shared_driver_simulations",
+      "retained_boundary": "original_spec_not_completed_no_causality"
+    },
+    {
+      "blocker_id": "K11",
+      "status": "post_stop_counterfactual_and_individual_safety_records_unresolved",
+      "available_path": "observed_data_and_algebraic_bounds",
+      "retained_boundary": "no_imputation_or_true_stop_CIF"
+    },
+    {
+      "blocker_id": "K12",
+      "status": "historical_environment_and_administrative_declarations_unresolved",
+      "available_path": "archive_and_new_environment_lock_author_document_review",
+      "retained_boundary": "no_rewrite_historical_evidence"
+    }
+  ],
+  "development_configuration": "config/resampling_simulation_development_20261003_v1.json",
+  "external_advice": {
+    "provider": "gemini_bridge",
+    "conversation_url": "https://gemini.google.com/app/0e825c27e6050046",
+    "results": [
+      "res_a5270aa50e318835d6a5",
+      "res_9a4306c07863dd37c194"
+    ],
+    "independently_verified": false,
+    "original_logs": "09_logs/gemini_resampling_review_20261003"
+  }
+}

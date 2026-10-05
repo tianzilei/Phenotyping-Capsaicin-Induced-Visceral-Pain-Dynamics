@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "status": "frozen_provisional",
+  "seed": 20260913,
+  "analysis_role": "additional_exploratory_analysis",
+  "data": {
+    "id_column": "ID",
+    "vas_column_pattern": "^VAS_(\\d+)min$",
+    "expected_minutes": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "vas_min": 0,
+    "vas_max": 10,
+    "missing_tokens": [
+      "",
+      "NA",
+      "N/A",
+      "NaN"
+    ],
+    "termination_tokens": [
+      "E",
+      "T"
+    ],
+    "authoritative_source": null,
+    "codebook_verified": false,
+    "scale_basis": "Current project CRF.md section 8; source verification remains pending",
+    "termination_semantics": "E already processed after two pain-free minutes; T discontinuation usually excessive stimulation; user confirmed"
+  },
+  "estimand": {
+    "primary": "observed_VAS_trajectory_conditional_on_observation",
+    "target_population": "current candidate baseline rows, identity pending",
+    "analysis_interval_min": [
+      1,
+      20
+    ],
+    "informative_dropout_assumption": "not_resolved"
+  },
+  "gamm": {
+    "basis": "cr",
+    "k_candidate": 6,
+    "k_sensitivity": [
+      4,
+      8
+    ],
+    "method": "REML",
+    "random_intercept": true,
+    "residual_correlation_candidate": "CAR1_on_actual_minutes",
+    "bootstrap_subjects": 200,
+    "simultaneous_level": 0.95,
+    "derivative_grid_per_minute": 1,
+    "platform_epsilon": null,
+    "coefficient_draws": 5000,
+    "bootstrap_role": "provisional stability assessment; formal plan candidate is 1000",
+    "correlation_policy": "CAR1 primary; independent residual fit reported separately, never silent fallback"
+  },
+  "fpca": {
+    "scale": "raw_VAS",
+    "zscore_each_subject": false,
+    "engine_candidate": "fdapace",
+    "fve_candidate": 0.9,
+    "max_components_candidate": 4,
+    "subject_bootstrap": 500,
+    "dimension_selection": "reconstruction_plus_stability",
+    "informative_dropout_identified": false,
+    "engine": "weighted_grid_PCA_complete_cases_only",
+    "role": "complete-case sensitivity, not sparse PACE implementation",
+    "score_scale_plot": 2,
+    "common_interval_min": [
+      1,
+      10
+    ],
+    "selection": "report first four axes and 90% FVE crossing; no confirmed dimension selection"
+  },
+  "variability": {
+    "role": "secondary",
+    "mssd_gap_minutes": 1,
+    "individual_AR1": false,
+    "individual_trend_model": null
+  },
+  "physiology": {
+    "enabled": false,
+    "baseline_window_min": [
+      -5,
+      0
+    ],
+    "post_windows_min": [
+      [
+        0,
+        5
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        10,
+        15
+      ],
+      [
+        15,
+        20
+      ]
+    ],
+    "features": [],
+    "roi": [],
+    "quality_thresholds": null,
+    "primary_outcome": null
+  },
+  "markov": {
+    "enabled": false,
+    "state_thresholds": null,
+    "interval_minutes": 1,
+    "include_E_T_as_pain_states": false,
+    "model_candidate": "discrete_time_transition_regression",
+    "minimum_transition_information_rule": null
+  },
+  "coupling": {
+    "enabled": false,
+    "role": "exploratory",
+    "minimum_cycles": null,
+    "surrogate_method": null
+  },
+  "inference": {
+    "alpha": 0.05,
+    "multiplicity": "BH_within_frozen_secondary_families",
+    "families": [],
+    "cv_unit": "subject",
+    "prediction_enabled": false
+  },
+  "execution_version": "provisional_vas_v3",
+  "identity_verified": false,
+  "scientific_readiness": "provisional_not_final",
+  "execution": {
+    "timeout_seconds": 3600,
+    "common_interval_min": [
+      1,
+      10
+    ],
+    "synthetic": false,
+    "allow_provisional": true,
+    "disabled_reasons": {
+      "sparse_fpca": "fdapace unavailable; sparse estimator not implemented",
+      "individual_residual_variability": "individual trend specification not frozen",
+      "physiology_features": "identity/visit, sampling, channel units, synchronization and signal QC pending",
+      "physiology_association": "physiology QC, primary outcome, covariates and ROI pending",
+      "markov": "pain-state thresholds and transition information rule not frozen",
+      "coupling": "signal QC, cycles, frequency, ROI and surrogate not frozen",
+      "dropout_scenarios": "E/T meanings confirmed; processed E does not require preceding zeros; numerical scenario assumptions not frozen"
+    }
+  },
+  "marker_semantics_config": "config/vas_marker_semantics_v4.json",
+  "coding_rule_config": "config/e_zero_recode_v2.json"
+}

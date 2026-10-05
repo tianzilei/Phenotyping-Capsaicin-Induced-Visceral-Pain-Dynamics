@@ -1,0 +1,323 @@
+{
+  "both_recorded": 204,
+  "finite_intervals": [
+    {
+      "end_minute": 2,
+      "h_minutes": 1,
+      "people": 214,
+      "start_minute": 1
+    },
+    {
+      "end_minute": 3,
+      "h_minutes": 1,
+      "people": 214,
+      "start_minute": 2
+    },
+    {
+      "end_minute": 4,
+      "h_minutes": 1,
+      "people": 213,
+      "start_minute": 3
+    },
+    {
+      "end_minute": 5,
+      "h_minutes": 1,
+      "people": 212,
+      "start_minute": 4
+    },
+    {
+      "end_minute": 6,
+      "h_minutes": 1,
+      "people": 212,
+      "start_minute": 5
+    },
+    {
+      "end_minute": 7,
+      "h_minutes": 1,
+      "people": 211,
+      "start_minute": 6
+    },
+    {
+      "end_minute": 8,
+      "h_minutes": 1,
+      "people": 210,
+      "start_minute": 7
+    },
+    {
+      "end_minute": 9,
+      "h_minutes": 1,
+      "people": 208,
+      "start_minute": 8
+    },
+    {
+      "end_minute": 10,
+      "h_minutes": 1,
+      "people": 206,
+      "start_minute": 9
+    },
+    {
+      "end_minute": 11,
+      "h_minutes": 1,
+      "people": 194,
+      "start_minute": 10
+    },
+    {
+      "end_minute": 12,
+      "h_minutes": 1,
+      "people": 193,
+      "start_minute": 11
+    },
+    {
+      "end_minute": 13,
+      "h_minutes": 1,
+      "people": 187,
+      "start_minute": 12
+    },
+    {
+      "end_minute": 14,
+      "h_minutes": 1,
+      "people": 177,
+      "start_minute": 13
+    },
+    {
+      "end_minute": 15,
+      "h_minutes": 1,
+      "people": 168,
+      "start_minute": 14
+    },
+    {
+      "end_minute": 16,
+      "h_minutes": 1,
+      "people": 124,
+      "start_minute": 15
+    },
+    {
+      "end_minute": 17,
+      "h_minutes": 1,
+      "people": 82,
+      "start_minute": 16
+    },
+    {
+      "end_minute": 18,
+      "h_minutes": 1,
+      "people": 69,
+      "start_minute": 17
+    },
+    {
+      "end_minute": 19,
+      "h_minutes": 1,
+      "people": 59,
+      "start_minute": 18
+    },
+    {
+      "end_minute": 20,
+      "h_minutes": 1,
+      "people": 56,
+      "start_minute": 19
+    },
+    {
+      "end_minute": 3,
+      "h_minutes": 2,
+      "people": 214,
+      "start_minute": 1
+    },
+    {
+      "end_minute": 4,
+      "h_minutes": 2,
+      "people": 213,
+      "start_minute": 2
+    },
+    {
+      "end_minute": 5,
+      "h_minutes": 2,
+      "people": 212,
+      "start_minute": 3
+    },
+    {
+      "end_minute": 6,
+      "h_minutes": 2,
+      "people": 212,
+      "start_minute": 4
+    },
+    {
+      "end_minute": 7,
+      "h_minutes": 2,
+      "people": 211,
+      "start_minute": 5
+    },
+    {
+      "end_minute": 8,
+      "h_minutes": 2,
+      "people": 210,
+      "start_minute": 6
+    },
+    {
+      "end_minute": 9,
+      "h_minutes": 2,
+      "people": 208,
+      "start_minute": 7
+    },
+    {
+      "end_minute": 10,
+      "h_minutes": 2,
+      "people": 206,
+      "start_minute": 8
+    },
+    {
+      "end_minute": 11,
+      "h_minutes": 2,
+      "people": 194,
+      "start_minute": 9
+    },
+    {
+      "end_minute": 12,
+      "h_minutes": 2,
+      "people": 193,
+      "start_minute": 10
+    },
+    {
+      "end_minute": 13,
+      "h_minutes": 2,
+      "people": 187,
+      "start_minute": 11
+    },
+    {
+      "end_minute": 14,
+      "h_minutes": 2,
+      "people": 177,
+      "start_minute": 12
+    },
+    {
+      "end_minute": 15,
+      "h_minutes": 2,
+      "people": 168,
+      "start_minute": 13
+    },
+    {
+      "end_minute": 16,
+      "h_minutes": 2,
+      "people": 124,
+      "start_minute": 14
+    },
+    {
+      "end_minute": 17,
+      "h_minutes": 2,
+      "people": 82,
+      "start_minute": 15
+    },
+    {
+      "end_minute": 18,
+      "h_minutes": 2,
+      "people": 69,
+      "start_minute": 16
+    },
+    {
+      "end_minute": 19,
+      "h_minutes": 2,
+      "people": 59,
+      "start_minute": 17
+    },
+    {
+      "end_minute": 20,
+      "h_minutes": 2,
+      "people": 56,
+      "start_minute": 18
+    },
+    {
+      "end_minute": 6,
+      "h_minutes": 5,
+      "people": 212,
+      "start_minute": 1
+    },
+    {
+      "end_minute": 7,
+      "h_minutes": 5,
+      "people": 211,
+      "start_minute": 2
+    },
+    {
+      "end_minute": 8,
+      "h_minutes": 5,
+      "people": 210,
+      "start_minute": 3
+    },
+    {
+      "end_minute": 9,
+      "h_minutes": 5,
+      "people": 208,
+      "start_minute": 4
+    },
+    {
+      "end_minute": 10,
+      "h_minutes": 5,
+      "people": 206,
+      "start_minute": 5
+    },
+    {
+      "end_minute": 11,
+      "h_minutes": 5,
+      "people": 194,
+      "start_minute": 6
+    },
+    {
+      "end_minute": 12,
+      "h_minutes": 5,
+      "people": 193,
+      "start_minute": 7
+    },
+    {
+      "end_minute": 13,
+      "h_minutes": 5,
+      "people": 187,
+      "start_minute": 8
+    },
+    {
+      "end_minute": 14,
+      "h_minutes": 5,
+      "people": 177,
+      "start_minute": 9
+    },
+    {
+      "end_minute": 15,
+      "h_minutes": 5,
+      "people": 168,
+      "start_minute": 10
+    },
+    {
+      "end_minute": 16,
+      "h_minutes": 5,
+      "people": 124,
+      "start_minute": 11
+    },
+    {
+      "end_minute": 17,
+      "h_minutes": 5,
+      "people": 82,
+      "start_minute": 12
+    },
+    {
+      "end_minute": 18,
+      "h_minutes": 5,
+      "people": 69,
+      "start_minute": 13
+    },
+    {
+      "end_minute": 19,
+      "h_minutes": 5,
+      "people": 59,
+      "start_minute": 14
+    },
+    {
+      "end_minute": 20,
+      "h_minutes": 5,
+      "people": 56,
+      "start_minute": 15
+    }
+  ],
+  "numeric_ratings": 3424,
+  "people": 215,
+  "region_recorded": 209,
+  "region_unrecorded": 6,
+  "symptom_recorded": 209,
+  "symptom_unrecorded": 6
+}

@@ -1,0 +1,1948 @@
+[
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A",
+    "count": 84,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "abdominal pain",
+    "point": 0.4019138755980861,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B",
+    "count": 27,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "bloating",
+    "point": 0.1291866028708134,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C",
+    "count": 153,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "abdominal distension",
+    "point": 0.7320574162679426,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D",
+    "count": 17,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "heartburn",
+    "point": 0.08133971291866028,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E",
+    "count": 41,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "acid regurgitation",
+    "point": 0.19617224880382775,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F",
+    "count": 26,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "belching",
+    "point": 0.12440191387559808,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G",
+    "count": 85,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "nausea",
+    "point": 0.40669856459330145,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H",
+    "count": 29,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "vomiting",
+    "point": 0.13875598086124402,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I",
+    "count": 13,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "loss of appetite",
+    "point": 0.06220095693779904,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J",
+    "count": 17,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "tenesmus",
+    "point": 0.08133971291866028,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K",
+    "count": 28,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "palpitations",
+    "point": 0.1339712918660287,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L",
+    "count": 27,
+    "denominator_people": 209,
+    "kind": "symptom",
+    "label": "irritability",
+    "point": 0.1291866028708134,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "1",
+    "count": 2,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "epigastrium",
+    "point": 0.009569377990430622,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "2",
+    "count": 139,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "right hypochondrium",
+    "point": 0.6650717703349283,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "3",
+    "count": 50,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "left hypochondrium",
+    "point": 0.23923444976076555,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "4",
+    "count": 2,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "umbilical",
+    "point": 0.009569377990430622,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "5",
+    "count": 92,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "hypogastrium",
+    "point": 0.44019138755980863,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "6",
+    "count": 43,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "right lumbar",
+    "point": 0.20574162679425836,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "7",
+    "count": 2,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "left lumbar",
+    "point": 0.009569377990430622,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "8",
+    "count": 7,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "right inguinal",
+    "point": 0.03349282296650718,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "9",
+    "count": 5,
+    "denominator_people": 209,
+    "kind": "region",
+    "label": "left inguinal",
+    "point": 0.023923444976076555,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_1",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / epigastrium",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_2",
+    "count": 53,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right hypochondrium",
+    "point": 0.25980392156862747,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_3",
+    "count": 20,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left hypochondrium",
+    "point": 0.09803921568627451,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_4",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / umbilical",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_5",
+    "count": 42,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / hypogastrium",
+    "point": 0.20588235294117646,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_6",
+    "count": 19,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right lumbar",
+    "point": 0.09313725490196079,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_8",
+    "count": 5,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / right inguinal",
+    "point": 0.024509803921568627,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "A_9",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal pain / left inguinal",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_1",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / epigastrium",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_2",
+    "count": 17,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right hypochondrium",
+    "point": 0.08333333333333333,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_3",
+    "count": 9,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left hypochondrium",
+    "point": 0.04411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_5",
+    "count": 12,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / hypogastrium",
+    "point": 0.058823529411764705,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_6",
+    "count": 9,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right lumbar",
+    "point": 0.04411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_8",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / right inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "B_9",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "bloating / left inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_2",
+    "count": 109,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right hypochondrium",
+    "point": 0.5343137254901961,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_3",
+    "count": 38,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left hypochondrium",
+    "point": 0.18627450980392157,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_4",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / umbilical",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_5",
+    "count": 59,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / hypogastrium",
+    "point": 0.28921568627450983,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_6",
+    "count": 27,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right lumbar",
+    "point": 0.1323529411764706,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_8",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / right inguinal",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "C_9",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "abdominal distension / left inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_1",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / epigastrium",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_2",
+    "count": 14,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right hypochondrium",
+    "point": 0.06862745098039216,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_3",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left hypochondrium",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_5",
+    "count": 7,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / hypogastrium",
+    "point": 0.03431372549019608,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_6",
+    "count": 6,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right lumbar",
+    "point": 0.029411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_8",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / right inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "D_9",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "heartburn / left inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_1",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / epigastrium",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_2",
+    "count": 31,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right hypochondrium",
+    "point": 0.15196078431372548,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_3",
+    "count": 11,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left hypochondrium",
+    "point": 0.05392156862745098,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_5",
+    "count": 22,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / hypogastrium",
+    "point": 0.10784313725490197,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_6",
+    "count": 12,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right lumbar",
+    "point": 0.058823529411764705,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_8",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / right inguinal",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "E_9",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "acid regurgitation / left inguinal",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_2",
+    "count": 19,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / right hypochondrium",
+    "point": 0.09313725490196079,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_3",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / left hypochondrium",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_5",
+    "count": 16,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / hypogastrium",
+    "point": 0.0784313725490196,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_6",
+    "count": 5,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / right lumbar",
+    "point": 0.024509803921568627,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_8",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / right inguinal",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "F_9",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "belching / left inguinal",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_2",
+    "count": 52,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right hypochondrium",
+    "point": 0.2549019607843137,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_3",
+    "count": 19,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left hypochondrium",
+    "point": 0.09313725490196079,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_4",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / umbilical",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_5",
+    "count": 47,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / hypogastrium",
+    "point": 0.23039215686274508,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_6",
+    "count": 21,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right lumbar",
+    "point": 0.10294117647058823,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_7",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left lumbar",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_8",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / right inguinal",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "G_9",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "nausea / left inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_1",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / epigastrium",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_2",
+    "count": 17,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right hypochondrium",
+    "point": 0.08333333333333333,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_3",
+    "count": 4,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left hypochondrium",
+    "point": 0.0196078431372549,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_4",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / umbilical",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_5",
+    "count": 18,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / hypogastrium",
+    "point": 0.08823529411764706,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_6",
+    "count": 4,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right lumbar",
+    "point": 0.0196078431372549,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_8",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / right inguinal",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "H_9",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "vomiting / left inguinal",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_2",
+    "count": 8,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right hypochondrium",
+    "point": 0.0392156862745098,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_3",
+    "count": 3,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left hypochondrium",
+    "point": 0.014705882352941176,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_5",
+    "count": 6,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / hypogastrium",
+    "point": 0.029411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_6",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right lumbar",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_8",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / right inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "I_9",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "loss of appetite / left inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_2",
+    "count": 10,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right hypochondrium",
+    "point": 0.049019607843137254,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_3",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left hypochondrium",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_5",
+    "count": 9,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / hypogastrium",
+    "point": 0.04411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_6",
+    "count": 2,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right lumbar",
+    "point": 0.00980392156862745,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_7",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left lumbar",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_8",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / right inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "J_9",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "tenesmus / left inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_2",
+    "count": 17,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right hypochondrium",
+    "point": 0.08333333333333333,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_3",
+    "count": 5,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left hypochondrium",
+    "point": 0.024509803921568627,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_5",
+    "count": 15,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / hypogastrium",
+    "point": 0.07352941176470588,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_6",
+    "count": 4,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right lumbar",
+    "point": 0.0196078431372549,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_8",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / right inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "K_9",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "palpitations / left inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_1",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / epigastrium",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_2",
+    "count": 17,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right hypochondrium",
+    "point": 0.08333333333333333,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_3",
+    "count": 6,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left hypochondrium",
+    "point": 0.029411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_4",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / umbilical",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_5",
+    "count": 14,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / hypogastrium",
+    "point": 0.06862745098039216,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_6",
+    "count": 8,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right lumbar",
+    "point": 0.0392156862745098,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_7",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left lumbar",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_8",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / right inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "L_9",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "symptom_region_pair",
+    "label": "irritability / left inguinal",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Heartburn",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Heartburn [rule alignment only]",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Belching Disorder",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Belching Disorder [rule alignment only]",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Chronic Nausea Vomiting Syndrome",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Chronic Nausea Vomiting Syndrome [rule alignment only]",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Dyspepsia - PDS-like",
+    "count": 1,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Dyspepsia - PDS-like [rule alignment only]",
+    "point": 0.004901960784313725,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Dyspepsia - EPS-like",
+    "count": 0,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Dyspepsia - EPS-like [rule alignment only]",
+    "point": 0.0,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Irritable Bowel Syndrome-like",
+    "count": 28,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Irritable Bowel Syndrome-like [rule alignment only]",
+    "point": 0.13725490196078433,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Abdominal Bloating/Distension-like",
+    "count": 64,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Abdominal Bloating/Distension-like [rule alignment only]",
+    "point": 0.3137254901960784,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Functional Constipation / Defecatory Disorder-like",
+    "count": 9,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Functional Constipation / Defecatory Disorder-like [rule alignment only]",
+    "point": 0.04411764705882353,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Biliary Pain-like",
+    "count": 86,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Biliary Pain-like [rule alignment only]",
+    "point": 0.4215686274509804,
+    "unit": "proportion"
+  },
+  {
+    "absolute_MC_target": 0.002,
+    "bounds": [
+      0,
+      1
+    ],
+    "code": "Unspecified Functional GI Symptom Pattern",
+    "count": 22,
+    "denominator_people": 204,
+    "kind": "legacy_rule_pattern",
+    "label": "Unspecified Functional GI Symptom Pattern [rule alignment only]",
+    "point": 0.10784313725490197,
+    "unit": "proportion"
+  }
+]

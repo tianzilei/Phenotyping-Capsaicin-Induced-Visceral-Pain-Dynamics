@@ -1,0 +1,11 @@
+{
+  "version": "export_channel_provenance_v1",
+  "reason": "After prefix/order comparison failed, inspected first ECG export: repeated columns match last original ECG channel at stride8, offset0. Validate this hypothesis across every paired export.",
+  "prefix_run": "02_quality_control/export_prefix_20260918T100909Z_972b06eb",
+  "raw_stage_scope": ["E", "N", "C", "P"],
+  "strides": [1, 8],
+  "offsets": [0, 1],
+  "absolute_tolerance_native_mV": 0.000001,
+  "matching": "Each complete export column against every same-label raw channel prefix; report all matching channels and exact duplicate export columns",
+  "scope": "File sample provenance; no clinical inference or identity acceptance"
+}

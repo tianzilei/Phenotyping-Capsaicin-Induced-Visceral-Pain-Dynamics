@@ -1,0 +1,11 @@
+{
+  "version": "reverse_enc_v1",
+  "candidate_stages": ["E", "N", "C"],
+  "coverage_rest_stages": ["N", "C", "P"],
+  "candidate_abbreviation_max_distance": 1,
+  "supported_log_abbreviation_max_distance": 1,
+  "log_date_correction_requires_exact_participant_prefix": true,
+  "preserve_existing_owners": true,
+  "same_name_different_VAS": "review_only",
+  "description": "Reverse orphan recordings to all current identities before comparing missing components; PsychoPy participant/date may resolve malformed stems, never redefine phase"
+}

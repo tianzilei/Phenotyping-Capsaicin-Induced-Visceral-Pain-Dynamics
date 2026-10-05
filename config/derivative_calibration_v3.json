@@ -1,0 +1,81 @@
+{
+  "version": "derivative_calibration_v3",
+  "status": "frozen_before_simulation",
+  "role": "synthetic_method_comparison_not_clinical_inference",
+  "estimand": "analytic_first_derivative_of_generating_population_mean",
+  "scale": "VAS_units_untruncated_Gaussian_model_diagnostic",
+  "interval_minutes": [
+    1,
+    20
+  ],
+  "grid_minutes": 1,
+  "level": 0.95,
+  "coefficient_draws": 2000,
+  "development_seed": 917340,
+  "validation_seed": 919670,
+  "development_replicates": 50,
+  "validation_replicates": 200,
+  "subject_counts": [
+    40,
+    216
+  ],
+  "scenarios_n40": [
+    "flat_complete",
+    "linear_random_missing",
+    "curved_dropout",
+    "wave_dropout",
+    "informative_dropout"
+  ],
+  "scenarios_n216": [
+    "curved_dropout"
+  ],
+  "random_intercept_sd": 0.5,
+  "innovation_sd": 0.3,
+  "ar1": 0.6,
+  "random_missing_probability": 0.15,
+  "noninformative_dropout_last_minutes": [
+    12,
+    20
+  ],
+  "mean_functions": {
+    "flat_complete": "4",
+    "linear_random_missing": "2 + 0.15*t",
+    "curved_dropout": "2 + 0.5*t - 0.02*t^2",
+    "wave_dropout": "4 + sin(2*pi*(t-1)/19)",
+    "informative_dropout": "quadratic; if current observed VAS < 4 after minute 10, end observation after this minute"
+  },
+  "methods": [
+    "cr6_conditional",
+    "bs8_cr1_t",
+    "bs8_cr2_t",
+    "bs10_cr2_t"
+  ],
+  "diagnostics": [
+    "simultaneous_coverage",
+    "boundary_coverage",
+    "interior_coverage",
+    "pointwise_coverage",
+    "signed_bias_by_minute",
+    "empirical_sd_vs_se",
+    "width",
+    "fit_failure",
+    "warnings",
+    "out_of_scale_generated_values"
+  ],
+  "screen": "bs8_cr2_t is the single prespecified candidate; coverage >= 0.90 and success >= 0.98 in every noninformative cell; alternative bs10 is diagnostic, not automatically selected",
+  "validation_gate": "all noninformative cells: coverage >= 0.93, Wilson lower 95% bound >= 0.90, success >= 0.99; counts include failures as noncoverage; this is a limited simulation gate, not universal nominal-coverage proof",
+  "informative_dropout_role": "stress_only_not_a_calibration_gate_or_claim_that_missingness_is_resolved",
+  "clinical_policy": "No replacement unless independent validation gate passes; a failed validation stays failed",
+  "seed_policy": "independent scenario/replicate data seeds and method draw seeds; no tuning using validation outcomes",
+  "development_basis": "v2 bs6 fails wave scenario; v3 increases basis dimension, adds cluster leverage correction; no v2 validation was run",
+  "covariance": "CR2: whiten by each subject marginal covariance; adjust residual by symmetric inverse square root of I-Xw (Xw_all transpose Xw_all)^-1 Xw transpose; use G-1 t reference as an approximation requiring simulation",
+  "flexible_basis": {
+    "degree": 3,
+    "dimensions": [
+      8,
+      10
+    ],
+    "knots": "equally spaced interior; dimension-4 knots; fixed boundaries [1,20]",
+    "penalty": "none"
+  }
+}

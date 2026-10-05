@@ -1,0 +1,11 @@
+{
+  "version": "derivative_v4_validation_execution_v1",
+  "role": "scheduling_only_statistics_and_seeds_unchanged",
+  "workers": 8,
+  "basis": "16 logical CPUs available via os.process_cpu_count; no network",
+  "equivalence_check": "02_quality_control/v4_scheduling_check_48793bec/manifest.json",
+  "worker_adapter": "same R worker text with only outer loop replaced by specified replicate index",
+  "retention": "one immutable directory per outer sample; aggregate after all jobs finish",
+  "validation_rule": "original maximum 200 replicates per cell; no early acceptance; development source hashes checked before launch",
+  "futility": "before any validation results: after each completed outer sample, if even all remaining candidate samples covered and valid cannot meet full planned N=200 coverage/Wilson/success thresholds in one noninformative cell, stop scheduling new work; active jobs finish; status stopped_futility (never completed validation); retain partial denominators and optimistic full-N bound"
+}

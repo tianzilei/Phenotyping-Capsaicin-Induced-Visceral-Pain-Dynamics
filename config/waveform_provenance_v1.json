@@ -1,0 +1,15 @@
+{
+  "version": "waveform_provenance_v1",
+  "scope": "Whole linked ACQ numeric audit and same-stem legacy CSV sample comparison; no clinical feature inference",
+  "prior_audit": "02_quality_control/signal_readiness_20260917T160215Z_88d68734",
+  "mapping": "02_quality_control/time_enc_20260916T123124Z_d4ff4af0/accepted_subject_to_files_private.csv",
+  "legacy_csv_directory": "D:/capsaicin旧版/data/ecg_egg",
+  "allowed_stages": ["E", "N", "C", "P"],
+  "comparison_strides": [1, 8],
+  "comparison_offsets": [0, 1],
+  "absolute_tolerance_native_mV": 0.000001,
+  "comparison_requirement": "Full equal-length vectors, expected ECG100C or EGG100C labels in channel order; no name-based identity acceptance",
+  "constant_definition": "Exact equal finite adjacent samples; nonfinite values break runs; span=(count-1)/header_rate",
+  "artifact_acceptance": null,
+  "timeout_seconds": 1800
+}

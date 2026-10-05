@@ -1,0 +1,20 @@
+{
+  "version": "egg_peak_diagnostics_v1",
+  "source_run": "08_outputs/signal_spectra_20260918T102119Z_324f3d7b",
+  "source_config": "config/signal_spectra_v1.json",
+  "estimand": "Within-recording EGG spectral peak diagnostics, all independent channels and complete recording-relative windows; no clinical inference",
+  "variants": [
+    {"name": "linear128", "segment_seconds": 128, "window_polynomial_degree": 0},
+    {"name": "linear256", "segment_seconds": 256, "window_polynomial_degree": 0},
+    {"name": "quadratic128", "segment_seconds": 128, "window_polynomial_degree": 2}
+  ],
+  "quadratic_note": "Additional whole-window quadratic detrending is diagnostic, not a chosen correction; all variants retain per-segment linear detrending",
+  "peak_definition": "Strict local maximum at an interior FFT bin of the broad band; boundary maxima flagged separately; all local maxima retained, no prominence threshold",
+  "bands_hz": {"low": [0.0083, 0.033], "middle": [0.033, 0.067], "high": [0.067, 0.15]},
+  "matching_tolerance_hz": 0.0078125,
+  "matching_interpretation": "One original 128-second FFT spacing; descriptive only, not physiological reliability acceptance",
+  "synthetic_seed": 20260918,
+  "synthetic_replicates_per_case": 20,
+  "synthetic_cases": ["sine", "quadratic_drift", "sine_plus_drift", "red_noise", "step_artifact"],
+  "timeout_seconds": 1800
+}

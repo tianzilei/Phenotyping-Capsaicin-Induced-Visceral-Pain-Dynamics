@@ -1,0 +1,46 @@
+{
+  "version": "vas_marker_semantics_v3",
+  "recorded_date": "2026-09-16",
+  "authority": "user_clarification_after_provisional_vas_v1_results",
+  "scope": "VAS_cell_markers_not_recording_filename_stages",
+  "T": {
+    "meaning": "trial_discontinued",
+    "meaning_status": "user_confirmed",
+    "usual_context": "participant_requests_discontinuation_due_to_excessive_stimulation",
+    "individual_reason_verified": false,
+    "exact_event_time_verified": false,
+    "retain_pre_marker_numeric_observations": true,
+    "retain_subject": true,
+    "post_marker_handling": "unobserved_no_imputation",
+    "dropout_interpretation": "potentially_informative_stimulation_related_discontinuation",
+    "assume_noninformative_censoring": false
+  },
+  "E": {
+    "meaning": "trial_stopped_after_two_consecutive_minutes_without_pain",
+    "meaning_status": "user_confirmed",
+    "pain_free_duration_minutes": 2,
+    "individual_rule_execution_verified": false,
+    "exact_event_time_verified": false,
+    "retain_pre_marker_numeric_observations": true,
+    "retain_subject": true,
+    "post_marker_handling": "unobserved_no_imputation",
+    "marker_is_numeric_zero": false,
+    "backfill_two_zero_scores": false,
+    "assume_pain_free_through_minute_20": false,
+    "first_marker_is_pain_free_onset": false,
+    "dropout_interpretation": "pain_state_dependent_protocol_stopping",
+    "assume_noninformative_censoring": false,
+    "existing_E_is_processed": true,
+    "preceding_zero_requirement": false,
+    "coding_correction": "four_audited_rows_two_preceding_zeros_to_E_in_analysis_copy",
+    "coded_marker_position_is_verified_event_time": false
+  },
+  "filename_T_stage": {
+    "meaning": "separate_acquisition_sequence",
+    "include": false
+  },
+  "effect_on_existing_model_input": "eight_zero_scores_reclassified_as_E_in_authorized_copy",
+  "effect_on_interpretation": "E_is_protocol_stopping_after_two_pain_free_minutes_T_is_discontinuation_usually_due_to_excessive_stimulation_analyze_mechanisms_separately",
+  "numeric_dropout_sensitivity_parameters": null,
+  "supersedes": "vas_marker_semantics_v2"
+}

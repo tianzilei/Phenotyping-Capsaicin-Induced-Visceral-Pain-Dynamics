@@ -1,0 +1,380 @@
+{
+  "version": "resampling_simulation_development_20261003_v2",
+  "status": "design_only_synthetic_development_not_activated",
+  "human_scope_confirmation": "2026-10-03 user selected simultaneous preparation of derivative, Markov and valid null-test simulation development",
+  "real_participant_inputs_allowed": false,
+  "real_reference_labels_created": false,
+  "real_scientific_gates_changed": false,
+  "master_seed": 2026100306,
+  "seed_components": [
+    "work_package",
+    "stage",
+    "cell",
+    "replicate",
+    "purpose"
+  ],
+  "stages": {
+    "synthetic_smoke": 20,
+    "development_replicates_per_cell": 500,
+    "independent_validation_replicates_per_cell": 10000,
+    "independent_validation_policy": "lock estimator target scenarios thresholds and code after development; new seed streams; do not retune on validation; development failure does not launch full confirmation",
+    "development_counts_are_candidates_not_results": true
+  },
+  "D_derivative": {
+    "implemented_candidate": "src/capsaicin/derivative_v5.py fit_derivative",
+    "implementation_state": "estimator_exists_simulation_and_real_application_not_verified",
+    "parent_config": "config/blocker_resolution_20261003_v1.json",
+    "no_real_application": true,
+    "targets": [
+      "fixed_basis_discrete_projection_derivative",
+      "finite_2_and_5_minute_observed_contiguous_change_or_change_rate_separate_estimand"
+    ],
+    "parameter_lock_required": [
+      "basis_boundary",
+      "coefficient_count",
+      "time_projection_weights",
+      "target_population",
+      "derivative_grid",
+      "alpha",
+      "pointwise_reference",
+      "simultaneity",
+      "support_minima",
+      "failure_rule",
+      "basis_conditioning",
+      "population_vs_realized_design_projection_truth",
+      "bounded_discrete_DGP_target_definition",
+      "power_width_targets",
+      "MC_cell_family_allocation"
+    ],
+    "candidate": "fixed_bs10_delete_person_jackknife_Bonferroni_t",
+    "jackknife_inner_fits": "exact_G_deterministic_no_random_bootstrap",
+    "core_cells": [
+      [
+        "flat_complete",
+        40
+      ],
+      [
+        "linear_random_missing",
+        40
+      ],
+      [
+        "curved_dropout",
+        40
+      ],
+      [
+        "wave_dropout",
+        40
+      ],
+      [
+        "curved_dropout",
+        216
+      ],
+      [
+        "heteroskedastic_complete",
+        40
+      ],
+      [
+        "heavy_tailed_complete",
+        40
+      ],
+      [
+        "informative_dropout",
+        40
+      ]
+    ],
+    "real_support_synthetic_additions": [
+      [
+        10,
+        206
+      ],
+      [
+        20,
+        56
+      ]
+    ],
+    "supplementary_stress": [
+      "basis_misspecification",
+      "bounded_or_discrete_rating_process",
+      "higher_serial_dependence",
+      "low_support_boundary",
+      "missing_contiguous_interval"
+    ],
+    "informative_selection_status": "stress_not_proof_of_identifiability",
+    "truth_policy": "projection truth uses exact frozen discrete design weights; analytic generating derivative separately evaluated under misspecification",
+    "metrics": [
+      "all_grid_coverage",
+      "flat_FWER",
+      "successful_fraction",
+      "interval_width",
+      "boundary_vs_interior",
+      "bias",
+      "support_at_actual_minutes",
+      "MC_intervals"
+    ],
+    "acceptable_tolerance_and_power_targets": "must_be_versioned_before_independent_validation; parent_93_percent_gate_not_relabelled_exact_95_percent_coverage",
+    "alternatives_not_activated": [
+      "bias_aware_spline",
+      "bootstrap_t_inner_999_1999_4999_development_precision_comparison"
+    ],
+    "actual_instantaneous_goal_status": "not_accepted_not_closed_by_projection_or_finite_change",
+    "current_estimator_weights": "equal_observed_rows_OLS_in_src_derivative_v5_not_trapezoid_weighted_unless_new_estimator_version",
+    "projection_truth_specification": "Bprime(grid)*inverse(Btranspose*W*B)*Btranspose*W*mu; W_exactly_matches_frozen_estimator_and_population_or_conditioned_observation_design",
+    "truth_under_random_missingness": "freeze_realized_design_conditional_or_population_observation_weighted_projection_target_per_cell_not_complete_mean_by_default",
+    "misspecification_reporting": "primary_coverage_of_named_projection_target_analytic_derivative_bias_and_coverage_separate_not_original_goal_acceptance",
+    "ten_minute_bs10": "potential_saturated_minute_mean_interpolant_audit_basis_rank_condition_number_boundary_derivative_variance_and_bias",
+    "finite_changes": {
+      "h_minutes": [
+        2,
+        5
+      ],
+      "change_formula": "Y_t_minus_Y_t_minus_h",
+      "rate_formula": "change_divided_by_h",
+      "support": "all_h_plus1_consecutive_actual_numeric_minutes_target_choice_no_gap_bridge",
+      "aggregation": "freeze_each_interval_support_weights_and_simultaneity_before_inference",
+      "real_activation": false
+    },
+    "validation_gate_candidate": {
+      "status": "proposal_requires_final_preconfirmation_lock",
+      "nominal_simultaneous_coverage": 0.95,
+      "allowed_undercoverage": 0.01,
+      "minimum_one_sided_Wilson_coverage_lower": 0.94,
+      "flat_maximum_one_sided_Wilson_FWER_upper": 0.06,
+      "MC_interval_confidence": 0.95,
+      "MC_allocation": "freeze_per_cell_or_simultaneous_across_cells_before_confirmation",
+      "upper_coverage_limit": null,
+      "conservative_coverage": "allowed_report_interval_width_and_power",
+      "failure": "count_as_noncoverage_and_report_flat_false_rejection_bounds_with_failure_disposition",
+      "power_minimum": null,
+      "width_maximum": null,
+      "interpretation": "tolerance_benchmark_not_proof_of_exact95_coverage_or_old_instantaneous_goal"
+    }
+  },
+  "M_Markov": {
+    "implementation_state": "real_regression_interface_only_new_synthetic_estimator_pending_implementation",
+    "real_inference": false,
+    "clinical_VAS_thresholds": null,
+    "input": "synthetic_named_states_S1_S2_S3_only_not_discretized_real_VAS",
+    "estimands": [
+      "adjacent_transition_kernel_for_generated_complete_process",
+      "conditional_observed_transition_probabilities_under_stopping",
+      "censored_observed_dwell_segments"
+    ],
+    "candidate_baseline": "row_multinomial_transition_counts_and_probabilities",
+    "candidate_extension": "pooled_multinomial_transition_model_given_previous_state_and_frozen_time_or_dwell_terms",
+    "candidates_need_implementation_and_tests": true,
+    "reference_kernels": [
+      {
+        "id": "homogeneous_adequate",
+        "matrix": [
+          [
+            0.75,
+            0.2,
+            0.05
+          ],
+          [
+            0.15,
+            0.7,
+            0.15
+          ],
+          [
+            0.05,
+            0.2,
+            0.75
+          ]
+        ]
+      },
+      {
+        "id": "sparse_transitions",
+        "matrix": [
+          [
+            0.96,
+            0.03,
+            0.01
+          ],
+          [
+            0.03,
+            0.94,
+            0.03
+          ],
+          [
+            0.01,
+            0.03,
+            0.96
+          ]
+        ]
+      }
+    ],
+    "persons": [
+      40,
+      56,
+      206
+    ],
+    "scheduled_minutes": 20,
+    "scenario_variants": [
+      "complete",
+      "independent_random_missing",
+      "independent_dropout",
+      "state_dependent_dropout_stress",
+      "time_varying_kernel",
+      "semi_Markov_dwell_dependence",
+      "subject_heterogeneity"
+    ],
+    "no_bridge": true,
+    "stopping_is_pain_state": false,
+    "dwell_policy": "gaps_and_end_right_censor_observed_run; first_record_and_gap_reentry_flag_unknown_sojourn_onset; do_not_reset_unknown_age_to0_or_merge_over_gap",
+    "sparse_support_policy": "record_no_transitions_rank_or_separation; no_data_driven_merge_to_pass",
+    "bootstrap_confirmation_attempts": 20000,
+    "bootstrap_unit": "whole_synthetic_person_all_its_transitions",
+    "metrics": [
+      "truth_or_observed_target_alignment",
+      "transition_bias",
+      "coverage",
+      "convergence",
+      "rare_class_support",
+      "censoring_handling",
+      "first_vs_dwell_model_comparison_on_same_subjects"
+    ],
+    "gate": "implementation_and_synthetic_gates_only; cannot_supply_real_state_rationale",
+    "observation_DGP_timing": {
+      "current_state_only_stopping": "generate_observed_current_state_then_continue_draw_conditionally_independent_of_next_state_given_current_and_frozen_covariates; kernel_may_equal_complete_truth_support_reduces",
+      "next_state_informative": "generate_latent_next_state_then_selection_depends_on_it_observed_kernel_can_differ",
+      "heterogeneity_or_time_selection": "evaluate_selection_weighted_kernel_not_assume_stationary_complete_truth",
+      "truth": "exact_conditional_formula_or_separately_frozen_high_precision_synthetic_reference_no_same_sample_empirical_truth"
+    },
+    "unknown_onset_inference": "observed_segment_duration_description_primary; full_sojourn_survival_requires_frozen_left_censor_or_delayed_entry_likelihood_and_valid_censoring_assumptions_not_auto_KM",
+    "minimum_support": "freeze_person_and_row_transition_support_before_validation_unknown_rows_remain_undefined",
+    "failure_granularity": "unsupported_kernel_row_not_entire_person_failure_valid_zero_cell_not_regression_separation; no_unplanned_pseudocounts_merging_or_discarding_people",
+    "bootstrap_scope": "fixed_small_prespecified_synthetic_precision_case_set_after_calibration_not20k_inner_per10k_outer_default",
+    "outer_interval_coverage_budget": "inner_draws_or_analytic_candidate_selected_in_development_and_locked_before10k_confirmation",
+    "candidate_extension_target": "freeze_marginal_versus_subject_conditional_model_time_dwell_covariates_and_heterogeneity_before_comparing_to_count_kernel"
+  },
+  "N_valid_null": {
+    "implementation_state": "CR2_reference_script_exists_portability_and_extended_simulations_pending; null_imposed_wild_candidate_pending_implementation",
+    "existing_reference_script": "scripts/calibrate_reanalysis_CR2.R",
+    "model": "y_it=person_FE+categorical_block_FE+beta*x_it+error_it",
+    "null": "beta=0",
+    "cluster_unit": "synthetic_person",
+    "conditional_mean_assumptions": "independent_persons_and_correct_null_mean_given_design_for_validity_cells",
+    "methods": [
+      "CR2_Satterthwaite",
+      "null_imposed_studentized_wild_cluster_bootstrap"
+    ],
+    "frozen_before_confirmation_required": [
+      "restricted_fit",
+      "residual_or_score_adjustment",
+      "studentization",
+      "Rademacher_or_Webb_weights",
+      "tail_rule",
+      "rank_failure_policy",
+      "family",
+      "number_of_draws"
+    ],
+    "within_person_time_permutation": false,
+    "unrestricted_person_permutation": false,
+    "actual_primary_physiology_p_q": false,
+    "cluster_counts": [
+      15,
+      40,
+      133,
+      164
+    ],
+    "block_support": [
+      2,
+      3,
+      4
+    ],
+    "valid_cell_variants": [
+      "balanced",
+      "unbalanced_exogenous_support",
+      "within_person_serial_dependence",
+      "heteroskedastic",
+      "cluster_leverage",
+      "skewed_or_heavy_tailed_errors_with_defined_moments"
+    ],
+    "assumption_violation_stress": [
+      "outcome_dependent_missingness",
+      "unobserved_cross_person_common_driver",
+      "endogenous_predictor",
+      "misspecified_time_mean"
+    ],
+    "outer_development": 500,
+    "outer_independent_validation": 10000,
+    "inner_test_draws_development": 9999,
+    "inner_test_draws_at_alpha_05_confirmation_candidate": 9999,
+    "many_hypothesis_tail_precision": "separate_fixed_seed_case_study_999999_or_larger_before_actual_family_null_sampling; not_a_million_inner_draws_in_every_outer_null_replication",
+    "family_design": "24_primary_and_additional_families_require_explicit_claims; do_not_automatically_combine_66_and_22",
+    "metrics": [
+      "type_I_error_with_MC_interval",
+      "fit_and_test_success",
+      "p_value_uniformity_or_superuniformity",
+      "cluster_effective_df",
+      "power_under_separately_frozen_nonzero_beta",
+      "BY_control_for_defined_joint_null_DGP_optional"
+    ],
+    "no_exact_randomization_claim_for_wild": true,
+    "sequential_p_stopping": false,
+    "gate": "simulation_validation_not_independent_physiology_validation",
+    "CR2_FE_contract": "use_verified_FE_compatible_CR2_working_covariance_and_Satterthwaite_implementation_handle_absorbed_singular_directions_no_naive_inverse_IminusHii",
+    "CR2_numerical_reference": "synthetic_match_existing_R_reference_and_residualization_parameter_covariance_df_p_values",
+    "wild_weight_selection": "compare_Rademacher_and_Webb_candidates_on_same_frozen_development_DGP_G15_no_forced_Webb_or_exact_randomization_claim",
+    "G15_Rademacher_support": {
+      "full_patterns": 32768,
+      "enumeration": "optional_symmetry_reduction_only_if_statistic_and_tail_rule_permit",
+      "random_repeated_draws_do_not_increase_support": true
+    },
+    "inner_development_candidates": [
+      999,
+      1999,
+      9999
+    ],
+    "inner_budget_selection": "compare_critical_and_tail_MC_error_typeI_and_power_using_prespecified_common_random_numbers_then_freeze_confirmatory_B_prior_to_new_independent_outer_seeds",
+    "confirmation_budget_not_selected_yet": true,
+    "million_tail_cases": "prespecified_synthetic_fixed_seed_cases_only_real_primary_p_q_gate_stays_closed",
+    "joint_family_DGP_required_for_FDR_claim": true,
+    "null_failures": "report_test_failures_and_rejection_lower_upper_bounds_counting_failures_both_ways_no_silent_drop; CI_failures_noncoverage; acceptance_policy_frozen_before_confirmation"
+  },
+  "validation_checks_required": [
+    "same_seed_and_logical_replicate_same_input_and_statistic_across_serial_parallel_and_resume_in_locked_environment",
+    "synthetic_only_fixtures",
+    "no_subject_duplicate_copy_crossing_prediction_training_and_test",
+    "actual_missing_minute_breaks_transition_and_contiguous_change",
+    "ongoing_dwell_right_censored",
+    "rank_separation_and_unsupported_row_reported_not_replaced",
+    "simulation_failures_count_as_noncoverage",
+    "boundary_spline_support_and_projection_truth_are_separate_from_analytic_truth",
+    "null_draws_fixed_before_significance_no_optional_peeking",
+    "zero_width_discrete_interval_is_reported",
+    "no_real_state_threshold_or_primary_p_q_changed",
+    "same_fold_supervised_label_codebook_no_test_Hungarian_optimization",
+    "gap_reentry_unknown_sojourn_age_retained",
+    "current_state_only_vs_latent_next_state_stopping_truth_separated",
+    "valid_zero_transition_not_unsupported_row_or_regression_separation",
+    "ten_minute_bs10_rank_conditioning_and_projection_truth_match",
+    "FE_CR2_singular_directions_and_reference_df_covariance",
+    "simulation_test_failure_rejection_bounds_not_success_only",
+    "conservative_Bonferroni_not_rejected_for_overcoverage"
+  ],
+  "delivery_contract": [
+    "versioned_candidate_configuration",
+    "synthetic_DGP_source_and_tested_estimator",
+    "development_manifest_and_failures",
+    "locked_independent_validation_config",
+    "per_cell_results_and_MC_precision",
+    "all_failure_disposition",
+    "input_config_code_environment_output_hashes"
+  ],
+  "current_delivery": "configuration_and_design_only_no_fabricated_estimates",
+  "parent_configuration": "config/resampling_simulation_development_20261003_v1.json",
+  "method_review": "docs/full_plan_method_review_20261003.md",
+  "seed_version_policy": "new_v2_logical_streams_stage_separated_old_v1_preserved",
+  "confirmation_can_start": false,
+  "confirmation_blockers": [
+    "exact_DGP_and_truth_per_cell",
+    "estimator_and_failure_contract",
+    "power_and_width_acceptance",
+    "support_rules",
+    "MC_error_allocation",
+    "implemented_estimator_tests_and_portability",
+    "postdevelopment_config_and_code_lock"
+  ]
+}

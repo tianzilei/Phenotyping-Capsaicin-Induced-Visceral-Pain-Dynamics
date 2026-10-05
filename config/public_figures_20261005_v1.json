@@ -1,0 +1,13 @@
+{
+  "version": "public_figures_20261005_v1",
+  "type": "aggregate_rendering_only_no_new_inference",
+  "source_bundle": "data/aggregate_sources/20261004",
+  "source_manifest_sha256": "9c73e3369d6e8c615213c950b49887c5bdfec22785edbac050e04843aefd0bd0",
+  "default_output_root": "08_outputs/public_render",
+  "main_figures": 5,
+  "supplement_figures": 5,
+  "main_tables": 3,
+  "supplement_tables": 18,
+  "primary_p_q": null,
+  "sealed_opened": false
+}

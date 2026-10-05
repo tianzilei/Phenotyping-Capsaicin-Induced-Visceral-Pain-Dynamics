@@ -1,0 +1,12 @@
+{
+  "version": "egg_stability_v1",
+  "pool": "development",
+  "source_motion_config": "config/egg_motion_diagnostic_v1.json",
+  "stationarity_segment_seconds": 120,
+  "truncation_lengths_seconds": [120, 180],
+  "truncation_positions": ["start", "center", "end"],
+  "long_record_minimum_seconds": 300,
+  "target_sampling_hz": 100,
+  "parameter_selection_from_current_data": false,
+  "status": "candidate_spectral_stability_not_gastric_rhythm_validation"
+}

@@ -1,0 +1,36 @@
+{
+  "version": "electrophysiology_review_v2",
+  "source_plan": "02_quality_control/电生理方案.md",
+  "status": "development_review_scaffold_not_inference",
+  "review_unit": "recording_level_shared_time_axis",
+  "channels": {
+    "ecg": ["ECG100C", "ECG100C", "ECG100C"],
+    "egg": ["EGG100C", "EGG100C"]
+  },
+  "ecg": {
+    "manual_reference": "R_peak_time_and_beat_type",
+    "beat_types": ["normal", "abnormal", "uncertain"],
+    "artifact_types": ["motion", "lead_dropout", "saturation", "unreadable", "other"],
+    "review_requires_all_leads": true,
+    "do_not_promote_detector_candidates": true
+  },
+  "egg": {
+    "manual_reference": "artifact_rhythm_and_crosstalk",
+    "rhythm_labels": ["normogastria", "bradygastria", "tachygastria", "mixed", "uncertain", "unreadable"],
+    "artifact_types": ["motion", "drift", "flatline", "saturation", "ecg_crosstalk", "gap", "other"],
+    "review_requires_both_channels": true,
+    "crosstalk_review_precedes_template_subtraction": true
+  },
+  "joint": {
+    "windows_seconds": 60,
+    "full_recording_seconds": 300,
+    "required_outputs": ["shared_timebase", "ecg_egg_crosstalk", "template_suitable"],
+    "coupling_enabled": false,
+    "independent_validation": "not_established"
+  },
+  "provenance": {
+    "preserve_source_data": true,
+    "allow_gap_bridging": false,
+    "allow_signal_imputation_before_review": false
+  }
+}

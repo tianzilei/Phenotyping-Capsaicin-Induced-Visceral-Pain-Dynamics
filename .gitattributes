@@ -1,0 +1,4 @@
+# Preserve audited file bytes on every platform; release hashes are byte hashes.
+* -text
+# Matplotlib SVG path formatting is retained byte-for-byte.
+*.svg whitespace=-trailing-space

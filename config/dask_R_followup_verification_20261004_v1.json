@@ -1,0 +1,11 @@
+{
+  "version": "complete_FPCA_numeric_verification_20261004_v1",
+  "intervals": [10, 20],
+  "replicate_indices_zero_based": [0, 1, 249, 499, 9999, 24999, 49999, 74999, 99998, 99999],
+  "reference_and_replicates": "independent NumPy SVD and exhaustive four-axis matching; Windows workers only",
+  "selection": "fixed positions before complete results; no favorable metric selection",
+  "relative_tolerance": 1e-8,
+  "absolute_tolerance": 1e-8,
+  "full_MC_endpoint_verification": "separate full verifier enumerates binomial ranks for every statistic",
+  "no_new_R_fits": true
+}

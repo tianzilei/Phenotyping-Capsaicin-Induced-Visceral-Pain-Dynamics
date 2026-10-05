@@ -1,0 +1,193 @@
+{
+  "version": "dask_R_complete_precision_20261004_v1",
+  "status": "frozen_independent_fixed_budget_exploratory_MC",
+  "parent": "config/dask_R_analysis_20261003_v1.json",
+  "master_seed": 2026100401,
+  "source": {
+    "path": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/people_private.csv",
+    "manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json"
+  },
+  "expected_people": 215,
+  "expected_complete": {
+    "10": 206,
+    "20": 56
+  },
+  "runtime": {
+    "host": "192.0.2.57",
+    "rscript": "/usr/bin/Rscript",
+    "library": "/home/fedora/project/.r-library-20261003-v1",
+    "R_version": "4.6.1",
+    "timeout_seconds": 1800,
+    "worker_threads": 1,
+    "worker_memory_minimum": 2147483648,
+    "host_concurrency": 4,
+    "subprocess_rss_limit_bytes": 1610612736,
+    "RSS_policy": "sample R process-tree RSS every 0.5s; abort infrastructure task on >1.5GiB; no invented result or new replicate"
+  },
+  "python_lock": "dependencies/project-python312-20261003-v2.lock.txt",
+  "R_lock": "renv.lock",
+  "expected_R_versions": "dependencies/r-runtime-20261003-v1.csv",
+  "preserve": {
+    "subject_resampling": true,
+    "actual_minutes": true,
+    "E_T_missing": true,
+    "baseline_zero": false,
+    "gap_bridging": false,
+    "source_mutation": false,
+    "replacement_failed_replicates": false,
+    "scientific_gates_changed": false,
+    "sealed_pool_opened": false,
+    "primary_physiology_p_q": null,
+    "derivative_inference_enabled": false
+  },
+  "sequence": [
+    "reference",
+    "gamm",
+    "complete",
+    "reconstruction",
+    "sparse"
+  ],
+  "gamm": {
+    "target": "Gaussian identity CAR1 working-model smoothed trend of actually observed scores, not empirical or counterfactual cohort mean",
+    "basis": "cr",
+    "method": "REML",
+    "random_intercept": true,
+    "msMaxIter": 150,
+    "niterEM": 30,
+    "replicates": 0,
+    "batch_size": 20,
+    "minimum_success_fraction": 0.8,
+    "statistics": "pointwise fitted curve at actual integer minute grid; no clipping or derivative bands",
+    "cells": []
+  },
+  "complete": {
+    "target": "raw VAS covariance of interval-complete true people",
+    "centering": "training population minute mean; no within-person standardization",
+    "quadrature": "unchanged original trapezoid endpoint-half weights",
+    "intervals": [
+      10,
+      20
+    ],
+    "components": 4,
+    "replicates": 100000,
+    "batch_size": 500,
+    "statistics": [
+      "cumulative_fve",
+      "angle_deg",
+      "matched_inner"
+    ],
+    "no_failure_publication_gate_in_legacy": true,
+    "reconstruction": {
+      "repeats": 0,
+      "folds": 5,
+      "components": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "baseline": "each heldout full curve individual weighted constant, same weights and target rows",
+      "aggregation": "mean across people within each repeat; complete repeats only; failures retained",
+      "role": "whole-curve reconstruction and split sensitivity; not forecasting or population CI"
+    }
+  },
+  "sparse": {
+    "target": "working smoothed mean/covariance of observed raw VAS under noninformative observation assumptions; selection unresolved",
+    "options": {
+      "dataType": "Sparse",
+      "methodMuCovEst": "smooth",
+      "error": true,
+      "kernel": "gauss",
+      "userBwMu": 2,
+      "userBwCov": 3,
+      "methodXi": "CE",
+      "methodRho": "vanilla",
+      "useBinnedData": "OFF",
+      "useBinnedCov": true,
+      "nRegGrid": 51,
+      "maxK": 49,
+      "methodSelectK": 4,
+      "FVEthreshold": 0.99,
+      "imputeScores": true,
+      "plot": false,
+      "verbose": false
+    },
+    "bandwidths": [
+      [
+        2,
+        3
+      ],
+      [
+        1.5,
+        2
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "intervals": [],
+    "components": 4,
+    "replicates": 0,
+    "batch_size": 10,
+    "minimum_success_fraction": 0.95,
+    "statistics": [
+      "cumulative_fve",
+      "angle_deg"
+    ],
+    "fve": "compute denominator from all positive eigenvalues of smoothed covariance; do not normalize only the first four",
+    "subspace": "weighted QR orthonormalization before principal angles because package functions need not be exactly trapezoid-orthogonal",
+    "no_post_stop_individual_fill": true,
+    "CE_scores_model_derived_not_observations": true
+  },
+  "MC": {
+    "total_error_per_module": 0.05,
+    "families": {
+      "gamm": 120,
+      "complete": 24,
+      "sparse": 48
+    },
+    "endpoints": 2,
+    "checkpoints": [
+      5000
+    ],
+    "quantile": "generalized_inverse_ceiling_Bp",
+    "relative_tolerance": 0.02,
+    "VAS_absolute": 0.01,
+    "proportion_absolute": 0.002,
+    "angle_absolute_degrees": 0.5,
+    "matched_inner_absolute": 0.002,
+    "scope": "separate module MC precision only; successful-fit conditional descriptive ranges, no nominal coverage validation",
+    "no_automatic_extension": true
+  },
+  "RNG": {
+    "indices": "SHA256(master|R_frame|replicate|subject_multiplicity), numpy SeedSequence PCG64 index draws; explicit zero-based subject rows passed to R",
+    "reference_and_fit": "SHA256 logical module/cell/replicate folded to R signed 31-bit seed; per-replicate reset independent of batch or worker",
+    "R_kind": [
+      "Mersenne-Twister",
+      "Inversion",
+      "Rejection"
+    ],
+    "shared_draws": "same cohort and interval share subject index streams across model/bandwidth specifications"
+  },
+  "not_in_this_batch": [
+    "accepted_real_derivative_inference",
+    "validated_physiology",
+    "real_Markov_or_phase",
+    "CR2_or_null_calibration",
+    "sealed_pool_classification"
+  ],
+  "followup_policy": {
+    "pilot_run": "dask_R_prepared_20261003T134447Z_82432c21",
+    "pilot_used_for": "budget planning only; no merging or selection of favorable endpoints",
+    "fixed_new_B_per_interval": 100000,
+    "single_final_MC_checkpoint": true,
+    "all_24_complete_statistics_retained": true,
+    "no_auto_extension": true,
+    "budget_cap_not_precision_guarantee": true,
+    "planning_approximation": "old_B * (old_max_endpoint_half_width / min(.02*old_range_width, absolute_target))^2; local inverse-root-B heuristic, no guarantee",
+    "GAMM_sparse": "diagnostics/planning only in this stage; no bootstrap execution",
+    "source_estimator_and_MC_targets_unchanged": true
+  }
+}

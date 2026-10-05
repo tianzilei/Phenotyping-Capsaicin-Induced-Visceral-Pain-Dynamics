@@ -1,0 +1,146 @@
+[
+  {
+    "id": "U00",
+    "name": "队列与来源",
+    "status": "source_audit_complete",
+    "permitted_target": "来源确定性审计",
+    "scientific_gate": "输入和归属哈希；缺来源保持缺失",
+    "current_run": "private-computation/runs/science_completion_20261003T180414Z_fc7855a4"
+  },
+  {
+    "id": "U01",
+    "name": "观察支持与E/T",
+    "status": "observed_description_complete",
+    "permitted_target": "实测观察过程与代数情景",
+    "scientific_gate": "整队列逐次重算分钟分母；零支持未定义；首次E/T非事件时刻",
+    "current_run": "private-computation/runs/dask_observation_bootstrap_20261003T090651Z_ad45a53d"
+  },
+  {
+    "id": "U02",
+    "name": "GAMM曲线",
+    "status": "working_model_complete_MC_0_of_120",
+    "permitted_target": "工作模型平滑趋势",
+    "scientific_gate": "经验均值对照和越界/协方差诊断；不声称总体实测均值",
+    "current_run": "private-computation/runs/dask_R_prepared_20261003T134447Z_82432c21"
+  },
+  {
+    "id": "U03",
+    "name": "完整/稀疏FPCA",
+    "status": "working_models_complete_complete_MC_12_of_24_sparse_4_of_48",
+    "permitted_target": "完整者FPCA与稀疏工作模型分别报告",
+    "scientific_gate": "同权个人常数重建基线；近重子空间；非信息采样未确认",
+    "current_run": "private-computation/runs/dask_R_prepared_20261003T171859Z_7cec37d3"
+  },
+  {
+    "id": "U04",
+    "name": "DTW/模糊/普通聚类",
+    "status": "partition_sensitivity_complete_MC_1_of_176",
+    "permitted_target": "经验分区稳定性",
+    "scientific_gate": "旧全人ARI保留；新增unique OOB及共同支持契约；非临床表型",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U05",
+    "name": "shapelet",
+    "status": "training_partition_recovery_complete_not_clinical",
+    "permitted_target": "训练定义分区的shapelet恢复",
+    "scientific_gate": "现有折内指标正确保留；补缺类/权重；禁止测试Hungarian优化",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U06",
+    "name": "波动与负担",
+    "status": "observed_metrics_complete_MC_78_of_96",
+    "permitted_target": "波动残差负担深度描述",
+    "scientific_gate": "真相邻；完整面积；零宽离散区间；深度非置信带",
+    "current_run": "private-computation/runs/dask_variability_bootstrap_20261003T105251Z_43abcbc2"
+  },
+  {
+    "id": "U07",
+    "name": "症状/部位/Rome",
+    "status": "recorded_code_description_complete_MC_135_of_139",
+    "permitted_target": "症状部位Rome规则及共现",
+    "scientific_gate": "保留缺失/配对分母；描述无需强制检验或诊断",
+    "current_run": "private-computation/runs/science_completion_20261003T180414Z_fc7855a4"
+  },
+  {
+    "id": "U08",
+    "name": "ECG同期候选",
+    "status": "candidate_only_primary_blocked",
+    "permitted_target": "ECG人内候选关联",
+    "scientific_gate": "来源QC固定条件；杠杆/支持；RR不是NN；主要p/q空",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U09",
+    "name": "Hb与22联合候选",
+    "status": "candidate_only_primary_blocked",
+    "permitted_target": "Hb人内及22联合候选",
+    "scientific_gate": "SD尺度/人FE目标；同样本SSE不当OOF增益；主要p/q空",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U10",
+    "name": "66 EGG-Hb候选",
+    "status": "candidate_only_phase_blocked",
+    "permitted_target": "66中性谱与Hb候选",
+    "scientific_gate": "谱泄漏与相干自由度审计；禁块shuffle；非胃源/脑源确认",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U11",
+    "name": "基线/静息分类",
+    "status": "development_only_sealed_closed",
+    "permitted_target": "21人可行开发分类",
+    "scientific_gate": "不可估计折保留；不强制单变量；sealed关闭；无外部验证",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U12",
+    "name": "前缀恢复",
+    "status": "training_partition_recovery_complete_not_forecasting",
+    "permitted_target": "3/5/8分钟前缀分区恢复",
+    "scientific_gate": "同折同代码本；不混跨折rawcodes；无调参无需强加内4折",
+    "current_run": "private-computation/runs/dask_python_remaining_20261003T114938Z_3ce82611"
+  },
+  {
+    "id": "U13",
+    "name": "两项未来评分",
+    "status": "20_repeats_complete_internal_evaluation",
+    "permitted_target": "两个未来实测评分的内部评价",
+    "scientific_gate": "配对MAE/RMSE；213/206人；固定OOF经验范围非覆盖校准",
+    "current_run": "private-computation/runs/dask_prediction_repeats_20261003T105043Z_8eaf27a2"
+  },
+  {
+    "id": "U14",
+    "name": "安全中止",
+    "status": "coded_stop_description_complete_medical_sources_partial",
+    "permitted_target": "已知安全/中止记录",
+    "scientific_gate": "未知事件不作0；不凭首次编码推真实CIF或完整安全发生率",
+    "current_run": "private-computation/runs/dask_observation_bootstrap_20261003T090651Z_ad45a53d"
+  },
+  {
+    "id": "U15",
+    "name": "显著导数",
+    "status": "finite_changes_complete_MC_336_of_364_instantaneous_derivative_blocked",
+    "permitted_target": "投影导数与另立有限变化开发",
+    "scientific_gate": "旧目标未验收；投影权重真值；覆盖/FWER/宽度/功效待校准",
+    "current_run": "private-computation/runs/science_completion_20261003T180414Z_fc7855a4"
+  },
+  {
+    "id": "U16",
+    "name": "Markov",
+    "status": "interface_design_only_real_analysis_blocked",
+    "permitted_target": "S1/S2/S3转移估计器开发",
+    "scientific_gate": "停机时序；未知停留起点/右删失；真实阈值/回归未具备",
+    "current_run": ""
+  },
+  {
+    "id": "U17",
+    "name": "相位/相干/方向性",
+    "status": "design_only_real_phase_directionality_blocked",
+    "permitted_target": "短谱/相干/时钟压力设计",
+    "scientific_gate": "原双不相交需512秒；平滑带宽非置信界；相位科学gate保留",
+    "current_run": ""
+  }
+]

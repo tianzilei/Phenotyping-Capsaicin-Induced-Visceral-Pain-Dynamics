@@ -1,0 +1,624 @@
+{
+  "version": "resampling_server_plan_20261003_v2",
+  "status": "resource_and_precision_proposal_not_activated",
+  "study_role": "results_informed_exploratory_planning_not_preregistered",
+  "requested_scope": "existing_manuscript_and_supplement_stability_plus_derivative_Markov_and_valid_null_synthetic_development",
+  "server": {
+    "connection": null,
+    "specifications": null,
+    "execution_started": false,
+    "benchmark_required": true
+  },
+  "scientific_estimator_parameters_changed": false,
+  "primary_physiology_p_q": null,
+  "sealed_pool_opened": false,
+  "real_state_inference_enabled": false,
+  "real_phase_inference_enabled": false,
+  "preserve": {
+    "resampling_unit": "true_person",
+    "time": "actual_observed_minutes",
+    "E_T_and_missing": true,
+    "no_baseline_zero": true,
+    "no_gap_bridging": true,
+    "no_source_mutation": true,
+    "no_retry_until_success_count": true
+  },
+  "budgets": {
+    "cheap_subject_bootstrap_initial": 20000,
+    "full_model_refit_initial": 5000,
+    "paired_rest_candidates_initial": 20000,
+    "bootstrap_precision_checkpoints": [
+      5000,
+      10000,
+      20000,
+      50000,
+      100000,
+      200000
+    ],
+    "expensive_refit_planned_extensions": [
+      10000,
+      20000
+    ],
+    "nested_grouped_cv_repeats": 20,
+    "outer_folds": 5,
+    "inner_folds": 4,
+    "synthetic_confirmatory_replicates_per_cell": 10000,
+    "fixed_null_development_draws": 99999,
+    "fixed_null_confirmation_draws": 999999,
+    "larger_family_optional_fixed_draws": [
+      2999999,
+      3999999
+    ],
+    "null_draw_count_selected_before_confirmation_not_by_significance": true
+  },
+  "precision": {
+    "role": "proposed_engineering_tolerance_not_coverage_proof",
+    "endpoint_MC_interval": "binomial_order_statistics_with_correct_index_bounds_and_ties",
+    "max_endpoint_MC_halfwidth_fraction_of_statistical_interval": 0.02,
+    "VAS_endpoint_MC_halfwidth_max": 0.01,
+    "proportion_MC_tolerance": 0.002,
+    "subspace_angle_degree_MC_tolerance": 0.5,
+    "ARI_MC_tolerance": 0.005,
+    "logical_batches": 10,
+    "zero_width_policy": "report_discrete_mass_and_zero_width_never_divide_by_zero_or_smooth_without_new_estimand",
+    "precision_stopping": "prespecified_checkpoints_and_MC_error_allocation_only_no_effect_or_significance_selection",
+    "limit_failure_status": "MC_PRECISION_INSUFFICIENT",
+    "nominal_coverage_validation": "separate_independent_synthetic_DGP",
+    "scope_required_before_execution": [
+      "reported_statistics",
+      "quantiles",
+      "time_grids",
+      "model_tasks",
+      "units",
+      "checkpoint_schedule",
+      "MC_family_error_allocation",
+      "quantile_definition_for_ties"
+    ],
+    "MC_global_failure_probability_candidate": 0.05,
+    "allocation_candidate": "Bonferroni_over_frozen_endpoint_by_task_by_grid_by_checkpoint_events_or_independent_pilot_then_single_fixed_confirmation_not_yet_implemented"
+  },
+  "failures": {
+    "existing_module_thresholds_preserved": true,
+    "report": [
+      "attempted",
+      "successful",
+      "failed",
+      "undefined",
+      "valid_boundary",
+      "reason_by_task"
+    ],
+    "no_replacement_replicates": true,
+    "successful_quantiles_role": "conditional_success_range_if_any_failure",
+    "simulation_failure": "counts_as_noncoverage",
+    "infrastructure_resume": "same_logical_replicate_and_seed_not_new_sample"
+  },
+  "rng": {
+    "master_seed": 2026100304,
+    "identity_fields": [
+      "module_id",
+      "cell_id",
+      "replicate_id",
+      "purpose"
+    ],
+    "depends_on_worker_count": false,
+    "depends_on_execution_order": false,
+    "python_builtin_hash_forbidden": true,
+    "cross_hardware_bitwise_guarantee": false
+  },
+  "environment": {
+    "BLAS_threads_per_worker": 1,
+    "RF_n_jobs_per_worker": 1,
+    "container_or_lock_required": true,
+    "retain_old_environment": true,
+    "Windows_Rscript_paths_need_portability_adapter": true,
+    "code_revision_plus_working_tree_snapshot_required": true
+  },
+  "module_matrix": [
+    {
+      "module_id": "U00",
+      "module": "队列与来源",
+      "method": "deterministic_audit",
+      "proposed_replicates": null,
+      "permutation_policy": "not_required",
+      "scope": "source_identity_hash_audit"
+    },
+    {
+      "module_id": "U01",
+      "module": "观察支持与E/T",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_unjustified_permutation",
+      "scope": "observed_support_and_algebraic_sensitivity"
+    },
+    {
+      "module_id": "U02",
+      "module": "GAMM曲线",
+      "method": "subject_full_refit",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_time_shuffle",
+      "scope": "pointwise_curve_not_accepted_derivative"
+    },
+    {
+      "module_id": "U03",
+      "module": "完整/稀疏FPCA",
+      "method": "subject_refit_each_interval_specification",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_label_shuffle",
+      "scope": "subspace_and_reconstruction_stability"
+    },
+    {
+      "module_id": "U04",
+      "module": "DTW/模糊/普通聚类",
+      "method": "subject_cluster_refit",
+      "proposed_replicates": 5000,
+      "permutation_policy": "no_naive_post_cluster_permutation",
+      "scope": "retrospective_partition_stability"
+    },
+    {
+      "module_id": "U05",
+      "module": "shapelet",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_independent_fold_tests",
+      "scope": "optional_paired_fixed_oof_conditional_range"
+    },
+    {
+      "module_id": "U06",
+      "module": "波动与负担",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "not_required_for_description",
+      "scope": "adjacency_preserved"
+    },
+    {
+      "module_id": "U07",
+      "module": "症状/部位/Rome",
+      "method": "optional_subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "conditional_on_frozen_null_exchangeability_family",
+      "scope": "description_or_network_stability"
+    },
+    {
+      "module_id": "U08",
+      "module": "ECG同期候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "null_method_development_only",
+      "scope": "primary_p_q_retained_missing"
+    },
+    {
+      "module_id": "U09",
+      "module": "Hb与22联合候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "null_method_development_only",
+      "scope": "relative_scale_candidate_not_prediction_gain"
+    },
+    {
+      "module_id": "U10",
+      "module": "66 EGG-Hb候选",
+      "method": "subject_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "within_person_time_shuffle_disabled",
+      "scope": "neutral_descriptors_candidate_only"
+    },
+    {
+      "module_id": "U11",
+      "module": "基线/静息分类",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": null,
+      "permutation_policy": "not_activated",
+      "scope": "eligible_development_tasks_only_sealed_closed"
+    },
+    {
+      "module_id": "U12",
+      "module": "前缀恢复",
+      "method": "training_person_pipeline_repeat_20",
+      "proposed_replicates": 20000,
+      "permutation_policy": "no_naive_partition_label_shuffle",
+      "scope": "optional_paired_fixed_oof_range"
+    },
+    {
+      "module_id": "U13",
+      "module": "两项未来评分",
+      "method": "paired_subject_fixed_oof_bootstrap",
+      "proposed_replicates": 20000,
+      "permutation_policy": "not_needed_for_primary_error_summary",
+      "scope": "213_or_206_eligible_people_task_specific"
+    },
+    {
+      "module_id": "U14",
+      "module": "安全中止",
+      "method": "source_audit",
+      "proposed_replicates": null,
+      "permutation_policy": "not_activated",
+      "scope": "unknown_not_zero"
+    },
+    {
+      "module_id": "U15",
+      "module": "显著导数",
+      "method": "new_independent_synthetic_validation_per_cell",
+      "proposed_replicates": 10000,
+      "permutation_policy": "old_target_not_accepted",
+      "scope": "v5_projection_candidate_jackknife_G"
+    },
+    {
+      "module_id": "U16",
+      "module": "Markov",
+      "method": "synthetic_estimator_development",
+      "proposed_replicates": 10000,
+      "permutation_policy": "real_inference_disabled",
+      "scope": "state_definition_and_real_estimator_not_ready"
+    },
+    {
+      "module_id": "U17",
+      "module": "相位/相干/方向性",
+      "method": "synthetic_stress_design_only",
+      "proposed_replicates": null,
+      "permutation_policy": "real_surrogates_disabled",
+      "scope": "phase_timing_duration_reference_gates"
+    }
+  ],
+  "blockers": [
+    {
+      "blocker_id": "K01",
+      "status": "independent_validation_qualification_unknown",
+      "available_path": "source_and_exposure_scaffold",
+      "retained_boundary": "no_independent_validation_claim"
+    },
+    {
+      "blocker_id": "K02",
+      "status": "R_peak_and_normal_beat_reference_absent",
+      "available_path": "candidate_sensitivity_and_subject_stability",
+      "retained_boundary": "NN_HRV_and_accuracy_not_validated"
+    },
+    {
+      "blocker_id": "K03",
+      "status": "EGG_gastric_source_phase_and_E05_unvalidated",
+      "available_path": "passthrough_neutral_spectra_and_synthetic_stress",
+      "retained_boundary": "no_removal_success_or_gastric_source_claim"
+    },
+    {
+      "blocker_id": "K04",
+      "status": "Hb_scale_target_QC_and_optical_reference_unresolved",
+      "available_path": "existing_relative_scale_sensitivity_and_source_audit",
+      "retained_boundary": "no_absolute_concentration_or_brain_source_claim"
+    },
+    {
+      "blocker_id": "K05",
+      "status": "Hb_cross_device_precise_synchronization_unverified",
+      "available_path": "nominal_five_minute_and_offset_drift_scenarios",
+      "retained_boundary": "phase_lag_real_disabled"
+    },
+    {
+      "blocker_id": "K06",
+      "status": "physiology_target_gate_and_valid_p_q_incomplete",
+      "available_path": "CR2_wild_null_synthetic_development",
+      "retained_boundary": "primary_p_q_retained_missing"
+    },
+    {
+      "blocker_id": "K07",
+      "status": "clinical_reference_and_sparse_class_support_absent",
+      "available_path": "feasible_training_partition_recovery_only",
+      "retained_boundary": "sealed_closed_no_validated_clinical_phenotype"
+    },
+    {
+      "blocker_id": "K08",
+      "status": "instantaneous_derivative_calibration_failed",
+      "available_path": "new_projection_or_finite_change_synthetic_development",
+      "retained_boundary": "new_estimand_does_not_close_old_target"
+    },
+    {
+      "blocker_id": "K09",
+      "status": "state_thresholds_unsupported_regression_not_implemented",
+      "available_path": "synthetic_states_estimator_development",
+      "retained_boundary": "no_real_Markov_without_supported_definition"
+    },
+    {
+      "blocker_id": "K10",
+      "status": "original_duration_rule_and_coupling_identification_unmet",
+      "available_path": "alternative_spectra_and_known_null_shared_driver_simulations",
+      "retained_boundary": "original_spec_not_completed_no_causality"
+    },
+    {
+      "blocker_id": "K11",
+      "status": "post_stop_counterfactual_and_individual_safety_records_unresolved",
+      "available_path": "observed_data_and_algebraic_bounds",
+      "retained_boundary": "no_imputation_or_true_stop_CIF"
+    },
+    {
+      "blocker_id": "K12",
+      "status": "historical_environment_and_administrative_declarations_unresolved",
+      "available_path": "archive_and_new_environment_lock_author_document_review",
+      "retained_boundary": "no_rewrite_historical_evidence"
+    }
+  ],
+  "development_configuration": "config/resampling_simulation_development_20261003_v2.json",
+  "external_advice": {
+    "provider": "gemini_bridge",
+    "conversation_url": "https://gemini.google.com/app/0e825c27e6050046",
+    "results": [
+      "res_a5270aa50e318835d6a5",
+      "res_9a4306c07863dd37c194"
+    ],
+    "independently_verified": false,
+    "original_logs": "09_logs/gemini_resampling_review_20261003",
+    "full_review_logs": "09_logs/gemini_full_plan_review_20261003",
+    "full_review_result_ids": [
+      "res_aefb74e91db0c400944c",
+      "res_c0d945d8a90ac314badb",
+      "res_3cb5c9f39ac310567c62"
+    ]
+  },
+  "parent_configuration": "config/resampling_server_plan_20261003_v1.json",
+  "method_review": "docs/full_plan_method_review_20261003.md",
+  "execution_contract_status": "proposed_not_estimator_activation_requires_module_specific_freeze_and_checks",
+  "all_module_review_does_not_mean_all_validated": true,
+  "module_contracts": {
+    "U00": {
+      "role": "deterministic_source_identity_and_hash_audit",
+      "unknown_sources_remain_missing": true
+    },
+    "U01": {
+      "bootstrap_frame": "all_215_true_people_whole_records_with_replacement",
+      "minute_denominator": "recompute_numeric_observation_support_in_each_replicate",
+      "joint_process_preserved": true,
+      "undefined_minute_or_common_support": "record_UNDEFINED_SUPPORT_no_forced_redraw",
+      "fixed_eligible_slice": "separate_conditional_support_design_if_requested_not_automatically_different_mean_target",
+      "E_T": "cumulative_observed_markers_not_exact_termination_CIF",
+      "constant_121_grid": "hypothetical_constant_sensitivity_not_general_dynamic_bounds",
+      "unobserved_future_MAR_MNAR": "not_identified_from_markers"
+    },
+    "U02": {
+      "target_label": "Gaussian_CAR1_working_model_smoothed_trend_of_observed_records",
+      "not_identical_to": [
+        "empirical_mean_at_each_observed_minute",
+        "full_cohort_counterfactual_mean"
+      ],
+      "estimator": "retain_Gaussian_identity_cr_k6_REML_random_intercept_actual_time_CAR1",
+      "comparators": [
+        "minute_empirical_means_with_support",
+        "complete_1_10_subset",
+        "complete_1_20_subset",
+        "existing_k4_k8_and_independent_error_sensitivities"
+      ],
+      "diagnostics_required": [
+        "residual_time_variance",
+        "serial_correlation_on_actual_time",
+        "residual_distribution",
+        "out_of_0_10_fitted_values_and_intervals",
+        "Hessian_and_optimizer_status",
+        "boundary_estimates_separately"
+      ],
+      "clipping": false,
+      "full_refit_each_person_copy_new_id": true,
+      "missingness": "population_mean_interpretation_needs_model_and_ignorability_conditions_not_confirmed_by_E_T"
+    },
+    "U03": {
+      "complete_target": "raw_VAS_covariance_in_interval_complete_subject_population",
+      "complete_cohort_sizes": {
+        "1_10": 206,
+        "1_20": 56
+      },
+      "centering": "training_population_minute_mean_subtraction_not_person_standardization",
+      "weights": "existing_trapezoid_time_weights_endpoints_half",
+      "baseline": "heldout_person_weighted_constant_mean_using_same_full_test_curve",
+      "baseline_formula": "c_i=sum(w_t*y_it)/sum(w_t); RMSE_i=sqrt(sum(w_t*(y_it-c_i)^2)/sum(w_t))",
+      "comparison": "paired_subject_reconstruction_loss_against_FPCA_with_same_weights_and_train_splits",
+      "baseline_and_FPCA_role": "full_curve_reconstruction_not_future_prediction",
+      "original_FVE_preserved": true,
+      "person_centered_FPCA": "optional_distinct_sensitivity_requires_new_specification",
+      "sparse_target": "working_smoothed_mean_covariance_and_CE_scores_noninformative_observation_assumptions_unconfirmed",
+      "sparse_sampling": "actual_times_and_gaps_retained_no_interpolation_regularization_of_records",
+      "sparse_bandwidths": "retain_2_3_and_1.5_2_3_4_minutes_as_separate_specifications",
+      "sparse_FVE": "full_smoothed_covariance_positive_spectrum_convention_frozen_not_first_four_normalization",
+      "near_repeated_eigenvalues": "weighted_subspace_angles_and_reconstruction_not_axis_only",
+      "no_latent_full_cohort_recovery_or_clinical_phenotype_claim": true
+    },
+    "U04": {
+      "k": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "legacy_ARI_protocol": "reassign_all_original_unique_people_after_bootstrap_refit_preserved_separately",
+      "supplementary_evaluation": [
+        "unique_out_of_bag_people_vs_full_data_reference",
+        "optional_common_OOB_between_prespecified_pairs"
+      ],
+      "OOB_role": "conditional_partition_stability_reference_uses_all_original_people_not_independent_validation",
+      "required_freeze": [
+        "assignment_rule_by_method",
+        "minimum_OOB_and_common_OOB_people",
+        "missing_cluster_policy",
+        "pair_schedule",
+        "initializations",
+        "distance_and_centering",
+        "cluster_Jaccard_mapping",
+        "fuzzy_membership_entropy"
+      ],
+      "Hungarian_matching": "only_unsupervised_partition_alignment_not_supervised_test_score_optimization",
+      "subsampling": "different_perturbation_protocol_if_used_report_separately",
+      "selection": "report_all_k_and_raw_centered_profiles_no_posthoc_best_claim"
+    },
+    "U05": {
+      "train_only": [
+        "partition",
+        "shapelets",
+        "scaler",
+        "classifier"
+      ],
+      "reference": "test_full_curve_assignment_to_training_partition_only_reference_not_predictor",
+      "same_fold_codebook_for_prediction_and_reference": true,
+      "supervised_metrics": "accuracy_macro_F1_balanced_accuracy_with_frozen_k_class_list_and_missing_class_policy",
+      "forbidden": "optimize_supervised_predictions_by_matching_to_test_reference_labels",
+      "aggregation": "within_fold_scalar_metrics_then_frozen_weighting_no_raw_code_pooling",
+      "repeat_role": "20_training_pipeline_partition_sensitivity_not_independent_fold_tests"
+    },
+    "U06": {
+      "adjacency": "actual_one_minute_numeric_pairs_only",
+      "residual": "retain_individual_degree1_primary_degree2_sensitivity_SSE_over_n_minus_p_and_support_minima",
+      "burden": "specified_complete_intervals_exact_piecewise_linear_trapezoid_no_gap_bridge",
+      "zero_width": "report_discrete_mass_interval_width_and_quantile_convention_no_default_smoothing",
+      "depth": "empirical_envelope_not_confidence_band"
+    },
+    "U07": {
+      "role": "symptoms_locations_Rome_rules_descriptive_not_diagnosis",
+      "denominators": "retain209_symptoms209_locations204_paired_with_item_missingness",
+      "bootstrap": "optional_population_summary_or_network_stability",
+      "tests": "inactive_until_explicit_null_exchangeability_and_family_frozen"
+    },
+    "U08": {
+      "role": "within_person_candidate_FE_association_conditioned_on_fixed_source_and_QC",
+      "scale": "candidate_HR_and_RR_RMSSD_not_NN_validated",
+      "current_support": "133_people335_blocks_each_2000_success_historical35pct_failure_not_current",
+      "diagnostics": [
+        "within_person_VAS_variation",
+        "leverage",
+        "effective_subject_support",
+        "rank",
+        "leave_person_sensitivity",
+        "block_confounding"
+      ],
+      "primary_p_q": null
+    },
+    "U09": {
+      "role": "Hb_relative_within_person_block_SD_FE_associations",
+      "scale_bootstrap": "whole_record_person_copy_preserves_its_SD_recomputation_is_identical_when_records_fixed",
+      "uncertainty_captured": "empirical_joint_distribution_of_person_trajectory_and_derived_SD",
+      "not_captured": [
+        "new_within_person_measurements",
+        "alternative_source_ownership",
+        "raw_signal_QC_decisions",
+        "physical_scale_or_brain_specificity"
+      ],
+      "zero_or_small_SD": "freeze_undefined_and_leverage_policy_no_silent_replacement",
+      "within_vs_between": "person_FE_absorbs_time_invariant_person_features_between_target_requires_distinct_model",
+      "joint22": "paired_same_rows_SSE_change_only_no_ordinary_F_test_or_OOF_gain_claim",
+      "family": "existing24_primary_candidate_family_retained_not_activated_66_and22_relationship_requires_explicit_claims",
+      "primary_p_q": null
+    },
+    "U10": {
+      "role": "66_neutral_EGG_Hb_candidate_FE_associations",
+      "within_person_time_shuffle": false,
+      "spectral_estimator_diagnostics": "see_spectral_contract_below_not_gastric_rhythm_or_brain_source_validation",
+      "primary_p_q": null
+    },
+    "U11": {
+      "role": "21_person_development_pool_feasible_tasks_exploratory_only",
+      "sealed_opened": false,
+      "inestimable_folds": "retained_no_class_merging_or_fabricated_metrics",
+      "no_forced_univariate_replacement": true,
+      "no_external_clinical_predictive_claim": true
+    },
+    "U12": {
+      "prefixes_minutes": [
+        3,
+        5,
+        8
+      ],
+      "role": "training_defined_full_curve_partition_recovery",
+      "same_fold_metrics_contract": "U05",
+      "repeats": 20,
+      "inner_CV": "only_if_learning_parameters_requiring_selection_no_automatic_4_inner_folds"
+    },
+    "U13": {
+      "tasks": {
+        "next_rating": {
+          "eligible_people": 213,
+          "eligible_windows": 2781,
+          "history": "three_consecutive_actual_ratings_plus_time",
+          "target": "observed_t_plus1_no_gap",
+          "primary_weighting": "window_equal",
+          "sensitivity_weighting": "person_equal"
+        },
+        "five_to_ten": {
+          "eligible_people": 206,
+          "eligible_rows": 206,
+          "predictors": "observed1_to5",
+          "target": "observed10",
+          "primary_weighting": "person_equal"
+        }
+      },
+      "paired_bootstrap": "same_subject_multiplicities_for_all_models_on_identical_target_rows",
+      "MAE_difference": "MAE_model_minus_MAE_baseline",
+      "RMSE_difference": "sqrt(MSE_model)_minus_sqrt(MSE_baseline)",
+      "comparators": [
+        "last_value",
+        "ridge",
+        "RF"
+      ],
+      "interval_label": "paired_fixed_OOF_empirical_resampling_range",
+      "nominal_population_coverage_claim": false,
+      "overlapping_training_dependence_acknowledged": true,
+      "repeat_CV": "20_repeats_5outer4inner_train_subjects_only_partition_sensitivity_not20_independent_cohorts",
+      "training_uncertainty_alternative": "separate_frozen_full_pipeline_subject_refit_design_and_synthetic_calibration_needed_not_implemented",
+      "duplicate_person_copies": "same_original_ID_group_in_all_training_test_splits",
+      "tests": "not_mandatory_for_primary_error_summary"
+    },
+    "U14": {
+      "role": "known_safety_and_E_T_records_audit",
+      "unknown_events_are_zero": false,
+      "exact_event_time_or_full_safety_rate": "not_available"
+    },
+    "U15": {
+      "role": "synthetic_projection_derivative_and_separate_finite_change_development",
+      "real_application": false,
+      "old_instantaneous_goal": "unaccepted_not_cancelled",
+      "details": "simulation_development_v2_D_derivative"
+    },
+    "U16": {
+      "role": "synthetic_transition_estimator_development",
+      "real_inference": false,
+      "clinical_thresholds": null,
+      "details": "simulation_development_v2_M_Markov"
+    },
+    "U17": {
+      "role": "synthetic_spectral_coherence_timing_stress_design_only",
+      "real_phase_lag_direction_inference": false,
+      "not_N_null_test_work_package": "distinct_spectral_stress_branch"
+    }
+  },
+  "paired_rest_contract": {
+    "strict_pair_counts": "104_total97_symmetric_RR_TierC7_invalid_preserved",
+    "development_pool": "21_candidate_pairs",
+    "bootstrap": "whole_person_rest_and_E_pair_together_each_metric_its_actual_eligible_pairs",
+    "stage_order": "audit_timestamps_do_not_assume_N_C_P_always_before_E",
+    "claim": "observational_condition_relative_difference_not_randomized_stimulus_effect",
+    "RR": "symmetric_candidate_rules_not_NN_validation",
+    "SampEn": "retain_candidate_only_freeze_m_r_SD_definition_length_matches_and_undefined_no_universal300_beat_gate"
+  },
+  "spectral_contract": {
+    "current_source_configuration": "config/e08_adaptive_egg_v1.json",
+    "original_two_disjoint_256s_required_seconds": 512,
+    "alternative_two_50pct_overlap_256s_seconds": 384,
+    "both_exceed_300s_but_are_different_protocols": true,
+    "DPSS_NW": 3,
+    "DPSS_K": 5,
+    "half_bandwidth_formula_hz": "NW/run_duration_seconds",
+    "run120_half_bandwidth_cpm": 1.5,
+    "run180_half_bandwidth_cpm": 1.0,
+    "bandwidth_role": "smoothing_and_leakage_annotation_not_peak_confidence_interval_or_universal_impossibility",
+    "Welch128_bin_spacing_cpm": 0.46875,
+    "zero_padding_improves_physical_resolution": false,
+    "required_synthetic_cases": [
+      "near_band_edge_tones",
+      "two_close_tones",
+      "noise_and_amplitude",
+      "drifting_frequency",
+      "run_truncation",
+      "gaps",
+      "power_band_leakage",
+      "independent_channels",
+      "known_phase",
+      "shared_driver_no_direct_coupling",
+      "offset_and_drift"
+    ],
+    "coherence": "audit_actual_segment_taper_weighting_and_effective_df_K1_nondegenerate_spectral_points_may_be_identically_one",
+    "null_coherence_1_over_K": "conditional_independent_equal_weight_approximation_only_not_universal",
+    "timing_requirement": "derive_from_target_frequency_and_allowed_phase_error_not_automatic_microsecond_requirement",
+    "shared_ACQ_indices": "nominal_ECG_EGG_sampling_shared_not_proof_of_channel_phase_delay",
+    "scientific_reference_gates_changed": false
+  }
+}

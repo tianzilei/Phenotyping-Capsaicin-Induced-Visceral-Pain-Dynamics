@@ -1,0 +1,18 @@
+{
+  "version": "rest_signal_reference_v1",
+  "rest_reference_config": "config/rest_normal_reference_v1.json",
+  "rest_audit_run": "02_quality_control/rest_normal_reference_20260929T164307Z_4acb7a9e",
+  "reference_split": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed/reference_split_private.csv",
+  "ecg_event_tolerance_seconds": 0.03,
+  "ecg_consensus_minimum_leads": 2,
+  "ecg_refractory_seconds": 0.2,
+  "rr_bounds_seconds": [0.3, 1.8],
+  "rr_symmetric_jump_fraction": 0.20,
+  "egg_motion_config": "config/egg_motion_diagnostic_v1.json",
+  "subject_aggregation": "median_across_eligible_rest_recordings",
+  "recordings_are_not_independent_subjects": true,
+  "development_pool_only_for_method_development": true,
+  "sealed_validation_output_semantics": "algorithmically_exposed_inventory_not_independent_validation",
+  "parameter_selection_from_current_data": false,
+  "status": "normal_rest_condition_candidate_signal_reference_not_physiological_gold_standard"
+}

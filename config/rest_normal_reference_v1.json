@@ -1,0 +1,16 @@
+{
+  "version": "rest_normal_reference_v1",
+  "state_label": "experimental_resting_reference_state",
+  "user_semantics": "N/C/P sequences represent the normal resting condition for this project",
+  "eligible_stages": ["N", "C", "P"],
+  "selection_priority": ["N", "C", "P"],
+  "n_c_admission": "accepted_strict",
+  "p_admission": "supported_true_enc_matching_v3_explicit_phase",
+  "preserve_original_stage": true,
+  "concatenate_rest_sequences": false,
+  "pair_with_e_requires_same_subject_and_recording_stem": true,
+  "physiological_normality_claim": false,
+  "normal_beat_or_nn_claim": false,
+  "normal_gastric_rhythm_claim": false,
+  "status": "frozen_experimental_condition_definition"
+}

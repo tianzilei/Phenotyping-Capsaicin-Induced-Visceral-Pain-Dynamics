@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "fnirs_channels",
+  "description": "字段语义契约；CSV 的跨行约束见 docs/data_contracts.md",
+  "type": "object",
+  "required": [
+    "recording_id",
+    "channel_id",
+    "source_id",
+    "detector_id",
+    "distance_mm",
+    "roi",
+    "wavelength_nm",
+    "coordinate_system",
+    "x",
+    "y",
+    "z"
+  ],
+  "properties": {
+    "recording_id": {
+      "description": "记录编号",
+      "type": "string"
+    },
+    "channel_id": {
+      "description": "通道",
+      "type": "string"
+    },
+    "source_id": {
+      "description": "光源",
+      "type": "string"
+    },
+    "detector_id": {
+      "description": "探测器",
+      "type": "string"
+    },
+    "distance_mm": {
+      "description": "距离",
+      "type": "number"
+    },
+    "roi": {
+      "description": "核验后 ROI",
+      "type": "string"
+    },
+    "wavelength_nm": {
+      "description": "波长",
+      "type": "number"
+    },
+    "coordinate_system": {
+      "description": "坐标系统",
+      "type": "string"
+    },
+    "x": {
+      "description": "坐标",
+      "type": "number"
+    },
+    "y": {
+      "description": "坐标",
+      "type": "number"
+    },
+    "z": {
+      "description": "坐标",
+      "type": "number"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,29 @@
+{
+  "version": "vas_marker_semantics_v1",
+  "recorded_date": "2026-09-16",
+  "authority": "user_clarification_after_provisional_vas_v1_results",
+  "scope": "VAS_cell_markers_not_recording_filename_stages",
+  "T": {
+    "meaning": "trial_discontinued",
+    "meaning_status": "user_confirmed",
+    "usual_context": "participant_requests_discontinuation_due_to_excessive_stimulation",
+    "individual_reason_verified": false,
+    "exact_event_time_verified": false,
+    "retain_pre_marker_numeric_observations": true,
+    "retain_subject": true,
+    "post_marker_handling": "unobserved_no_imputation",
+    "dropout_interpretation": "potentially_informative_stimulation_related_discontinuation",
+    "assume_noninformative_censoring": false
+  },
+  "E": {
+    "meaning_status": "not_resolved_by_this_clarification",
+    "handling": "retain_marker_and_observed_values_no_imputation"
+  },
+  "filename_T_stage": {
+    "meaning": "separate_acquisition_sequence",
+    "include": false
+  },
+  "effect_on_existing_model_input": "none",
+  "effect_on_interpretation": "T_is_discontinuation_usually_due_to_excessive_stimulation_not_generic_technical_missingness",
+  "numeric_dropout_sensitivity_parameters": null
+}

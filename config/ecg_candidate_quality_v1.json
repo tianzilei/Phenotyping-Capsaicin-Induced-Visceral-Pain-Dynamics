@@ -1,0 +1,11 @@
+{
+  "version": "ecg_candidate_quality_v1",
+  "semantic_status": "candidate_quality_not_accuracy",
+  "lead_consensus_tolerance_seconds": 0.03,
+  "rr_bounds_seconds": [0.3, 1.8],
+  "rr_jump_fraction": 0.25,
+  "morph_window_seconds": [-0.05, 0.05],
+  "weights": {"multi": 0.35, "morph": 0.25, "rr": 0.25, "negative_control": 0.15},
+  "thresholds": {"tier1_cqs": 0.85, "tier1_multi": 0.8, "tier1_rr": 0.85, "tier2_cqs": 0.7, "tier3_neg_control": 0.6, "human_neg_control": 0.5},
+  "constraints": ["no_interpolation", "no_gap_bridging", "raw_acq_read_only"]
+}

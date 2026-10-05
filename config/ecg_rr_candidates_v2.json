@@ -1,0 +1,13 @@
+{
+  "version": "ecg_rr_candidates_v2",
+  "input_run": "08_outputs/electrophysiology_development_qc_v2_20260929T161830Z_d84e4e8f",
+  "pool": "development",
+  "minimum_distinct_leads": 2,
+  "refractory_seconds": 0.2,
+  "rr_bounds_seconds": [0.3, 1.8],
+  "local_jump_fraction": 0.25,
+  "interpolation": false,
+  "gap_bridging": false,
+  "normal_beat_claim": false,
+  "status": "observed_rr_candidates_not_nn_or_clinical_hrv"
+}

@@ -1,0 +1,15 @@
+{
+  "version": "e_zero_recode_v1",
+  "status": "frozen_user_authorized",
+  "authority": "2026-09-16 user: existing E already processed; four rows with two preceding zeros require E coding",
+  "scope": "only_four_previously_audited_rows_with_two_numeric_zeros_immediately_before_first_E",
+  "expected_subjects": 4,
+  "expected_changed_cells": 8,
+  "replacement": "E",
+  "extend_to_other_zeros": false,
+  "preserve_source": true,
+  "preserve_existing_E_T_and_other_fields": true,
+  "retain_original_zero_values_in_private_change_ledger": true,
+  "first_E_is_verified_stop_time": false,
+  "existing_E_requires_preceding_zeros": false
+}

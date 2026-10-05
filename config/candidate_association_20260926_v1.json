@@ -1,0 +1,21 @@
+{
+  "version": "candidate_association_20260926_v1",
+  "status": "frozen_exploratory_candidate_before_effects",
+  "source_policy": "explicit run arguments and input hashes",
+  "purpose": "diagnose implementability and timing sensitivity of unvalidated signal candidates; not accepted principal inference",
+  "model": "physiology_outcome ~ VAS + person fixed effects + categorical block",
+  "hb_outcome": "within-person standardized block means; sample SD across eligible blocks in each specification; zero SD excluded; SD units/VAS",
+  "hr_outcome": "bpm; 60/mean accepted candidate RR",
+  "rmssd_outcome": "ms of candidate RR differences, not verified NN",
+  "main_candidate": {"support_spec":"A","offset_s":0,"drift_ppm":0,"mad":6,"guard_s":2,"coverage_threshold":0.9,"roi_fraction":0.5},
+  "sensitivity": "all frozen offsets/drifts and A/B; nominal Hb mask/coverage/common-set settings; point estimates and coverage, no scenario selection",
+  "minimum_distinct_blocks": 2,
+  "bootstrap_replicates": 2000,
+  "bootstrap_unit": "whole true person; multiplicity weights equivalent to separately indexed bootstrap copies for person FE",
+  "bootstrap_seed": 20260926,
+  "maximum_bootstrap_failure_fraction": 0.05,
+  "p_values": "not_published_before_target_QC_validation",
+  "fixed_family_size": 24,
+  "primary_status": "not_independently_validated",
+  "scale_limitation": "within-person standardization changes estimand and does not establish common Hb concentration units"
+}

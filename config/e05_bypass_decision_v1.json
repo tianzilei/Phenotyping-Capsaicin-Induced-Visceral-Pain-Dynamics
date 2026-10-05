@@ -1,0 +1,11 @@
+{
+  "version": "e05_bypass_decision_v1",
+  "source": "Gemini follow-up decision using completed E05 audit",
+  "status": "E05_PASSTHROUGH_NO_REMOVAL",
+  "legacy_status": "E05_LEGACY_15DB_FAILED",
+  "trigger": {"projection_correlation_median": 0.019, "projection_correlation_min": 0.5, "event_qrs_attenuation_db_median": 0.0, "exploratory_attenuation_db": 6.0},
+  "action": "preserve_raw_egg_and_bypass_template_regression_projection_and_blanking",
+  "negative_controls": {"slow_wave_injection_rmse_fraction_max": 0.03, "slow_wave_phase_error_rad_max": 0.05, "null_slow_leakage_db_max": -60.0, "use_for_validation": false},
+  "downstream": {"e04": "E04_NEUTRAL_DESCRIPTIVE_DELIVERED", "e04_crosstalk_subtraction_applied": false, "e09": "FULLY_SUPPRESSED"},
+  "constraints": ["no_interpolation", "no_gap_bridging", "raw_acq_read_only"]
+}

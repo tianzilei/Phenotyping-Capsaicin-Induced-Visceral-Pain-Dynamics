@@ -1,0 +1,10 @@
+# 后续实现信号和图形模块时再安装并生成精确锁定；当前核心不使用这些包。
+numpy
+pandas
+scipy
+matplotlib
+openpyxl
+# 仅在 fNIRS 文件格式核验后选用：
+# mne
+# mne-nirs
+# h5py

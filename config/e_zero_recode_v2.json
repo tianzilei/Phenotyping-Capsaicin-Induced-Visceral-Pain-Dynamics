@@ -1,0 +1,16 @@
+{
+  "version": "e_zero_recode_v2",
+  "status": "frozen_user_authorized",
+  "authority": "2026-09-16 user: continue fixing remaining zeros after prior E recoding",
+  "scope": "maximal_contiguous_numeric_zero_run_immediately_before_existing_first_E",
+  "expected_subjects": 4,
+  "expected_changed_cells": 8,
+  "replacement": "E",
+  "include_single_zero_adjacent_to_E": true,
+  "cross_missing_or_nonzero": false,
+  "modify_T_rows": false,
+  "create_E_without_existing_E": false,
+  "preserve_source": true,
+  "first_E_is_verified_stop_time": false,
+  "require_idempotence": true
+}

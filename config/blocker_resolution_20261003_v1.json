@@ -1,0 +1,58 @@
+{
+  "version": "blocker_resolution_20261003_v1",
+  "role": "results_informed_method_development_and_evidence_audit",
+  "primary_physiology_inference": false,
+  "sealed_waveforms_opened": false,
+  "reference_labels_created": false,
+  "clinical_states_invented": false,
+  "derivative_candidate": {
+    "version": "fixed_bs10_subject_jackknife_bonferroni_v5",
+    "basis_coefficients": 10,
+    "degree": 3,
+    "boundaries": [1, 20],
+    "estimation": "unpenalized pooled least squares, delete-one-subject jackknife covariance",
+    "simultaneous_band": "two-sided Bonferroni t with G-1 degrees of freedom over the 20 frozen minute points",
+    "alpha": 0.05,
+    "development_seed": 2026100301,
+    "validation_seed": 2026100302,
+    "development_replicates": 100,
+    "validation_replicates": 500,
+    "minimum_subjects": 20,
+    "minimum_subjects_at_each_grid_point": 0,
+    "support_policy": "simulation permits interpolation under a fixed correctly specified working basis, with actual minute support reported; real application requires complete intervals and at least 20 subjects",
+    "development_gate": "coverage >=0.93 and successful_fraction>=0.99 in every noninformative cell",
+    "validation_gate": "coverage>=0.93 and Wilson95_lower>=0.90 and successful_fraction>=0.99 in every noninformative cell",
+    "failure_policy": "count all unsupported/rank/fit failures as noncoverage; no replacement replicates",
+    "cells": [
+      ["flat_complete", 40], ["linear_random_missing", 40],
+      ["curved_dropout", 40], ["wave_dropout", 40],
+      ["curved_dropout", 216], ["heteroskedastic_complete", 40],
+      ["heavy_tailed_complete", 40], ["informative_dropout", 40]
+    ],
+    "stress_only": ["informative_dropout"],
+    "simulation_target": "analytic derivative of generating population mean at actual minute grid; Gaussian historical scenarios untruncated; informative selection cannot identify this target",
+    "real_target": "derivative of fixed cubic B-spline projection of the conditional mean among complete-interval subjects, NOT an unrestricted instantaneous population derivative",
+    "real_intervals": [[1, 10], [1, 20]],
+    "real_input": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/vas_models/vas_long.csv",
+    "real_application_policy": "only if independent simulation gate passes; full complete interval only; projection target and selected population explicit; no imputation; historical estimator unchanged",
+    "basis_approximation_boundary": "simulated analytic coverage does not prove coverage for arbitrary unmodeled functions or resolve E/T selection"
+  },
+  "reference_contract": {
+    "ecg_matching_tolerance_seconds": 0.15,
+    "matching_tolerance_role": "engineering comparator specification, not acceptable timing-error threshold for HRV",
+    "beat_classes": ["normal", "abnormal", "uncertain"],
+    "reference_requirements": ["source_sha256", "reviewer_id", "independence_attestation", "adjudication_id", "annotation_version"],
+    "hrv_no_bridging": true,
+    "window_start_inclusive_end_exclusive": true
+  },
+  "phase_contract": {
+    "requires": ["gastric_source_reference", "phase_quality_reference", "Hb_target_QC", "named_cross_device_event_anchors", "continuous_effective_duration", "null_model_validation"],
+    "phase_test_real_activation": false,
+    "synthetic_seed": 2026100303,
+    "shared_driver_is_causal_negative_control": true
+  },
+  "clinical_contract": {
+    "requires": ["clinical_target_definition", "independent_reference_label", "assessor_id", "assessment_time", "reference_source", "adequate_subject_support"],
+    "trajectory_cluster_is_reference_label": false
+  }
+}

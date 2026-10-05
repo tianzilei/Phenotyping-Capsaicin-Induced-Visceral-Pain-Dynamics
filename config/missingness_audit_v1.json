@@ -1,0 +1,14 @@
+{
+  "version": "missingness_audit_v1",
+  "status": "frozen_provisional",
+  "role": "M08_observation_support_descriptive_audit",
+  "input_run": "08_outputs/provisional_vas_20260916T144537Z_11f54777",
+  "minutes": [1,20],
+  "categories": ["observed","termination_E","termination_T","pre_marker_missing","post_termination_missing"],
+  "subject_summaries": ["n_observed","first_marker_min","n_pre_marker_missing","n_post_termination_missing","longest_pre_marker_gap","last_observed_min"],
+  "pattern_definition": "20-position status string; no imputation or gap bridging",
+  "adjacent_mean_decomposition": "observed mean(t+1)-mean(t) = paired observed change + composition at start + composition at end; report all 19 pairs; undefined if no overlapping subjects; descriptive not instantaneous derivative or causal dropout effect",
+  "grouping": "eventual E/T/none descriptive only; not a baseline exposure or censoring assumption",
+  "bootstrap": {"unit":"subject_row_pending_identity_verification","replicates":2000,"seed":917441,"level":0.95,"interval":"percentile descriptive pointwise"},
+  "scientific_limits": "termination marker column is encoding position, not verified event time; pre-marker missingness and stopping selection do not identify counterfactual outcomes"
+}

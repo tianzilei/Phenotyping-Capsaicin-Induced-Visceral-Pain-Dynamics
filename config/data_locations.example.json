@@ -1,0 +1,7 @@
+{
+  "active": false,
+  "repository_root_aliases": [],
+  "config_overrides": {},
+  "path_index": null,
+  "note": "Copy to ignored config/local.json or supply CAPSAICIN_DATA_LOCATIONS. Private exact path index is required before setting active=true."
+}

@@ -1,0 +1,60 @@
+{
+  "version": "physiology_variable_length_v1",
+  "decision_date": "2026-09-21",
+  "status": "exploratory_execution_specification_not_preregistered",
+  "vas_input": "01_data/processed/e_coded_20260916T144438Z_5c144eb7/BaselineData_E_coded.csv",
+  "mapping": "02_quality_control/time_enc_20260916T123124Z_d4ff4af0/accepted_subject_to_files_private.csv",
+  "waveform_run": "02_quality_control/waveform_provenance_20260918T100523Z_0c21f681",
+  "event_run": "02_quality_control/event_clocks_20260918T104330Z_f5feb319",
+  "population": "All subjects with at least one finite numeric VAS value; actual observed minutes only",
+  "allowed_stages": [
+    "E",
+    "N",
+    "C",
+    "P"
+  ],
+  "shared_controller": "User confirms simultaneous event commands; native TTL levels and codes need not agree",
+  "synchronization": {
+    "edge_cluster_seconds": 0.2,
+    "match_tolerance_seconds": 0.25,
+    "minimum_matches": 8,
+    "minimum_span_seconds": 300,
+    "alternative_match_count_margin": 2,
+    "distinct_offset_seconds": 1.0,
+    "model": "fnirs_seconds = acq_seconds + offset; slope fixed 1; report fitted drift as diagnostic only",
+    "acceptance": "Unique offset with no competing offset within two matched events, sufficient span and one-to-one order-preserving matches; requires independent event identity anchor for minute labels",
+    "dose_time": "Protocol-relative timing only; no exact swallowing time inferred",
+    "source_scope": "Only current accepted subject-file mapping; other-study package is metadata evidence, not extra participants"
+  },
+  "ecg": {
+    "processor": "neurokit2",
+    "target_rate_hz": 250,
+    "clean_method": "neurokit",
+    "peak_method": "neurokit",
+    "window_seconds": 300,
+    "rr_min_seconds": 0.3,
+    "rr_max_seconds": 2.0,
+    "maximum_correction_fraction": 0.05,
+    "hrv_acceptance": "All raw RR within bounds; Zhao2018 excellent or barely acceptable; nonflat finite full window; no filled gaps; algorithm-screened HRV, not adjudicated clinical NN",
+    "channel_policy": "Process all raw independent ECG channels; first passing channel by raw index for any downstream analysis; never select by VAS",
+    "hrv_metrics": [
+      "HRV_MeanNN",
+      "HRV_SDNN",
+      "HRV_RMSSD"
+    ],
+    "scope": "Full-record cleaning/peak detection, then complete recording-relative 300-second windows. Dose-relative interpretation requires verified event map. EGG has no dedicated validated NeuroKit2 ECG-equivalent pipeline."
+  },
+  "association": {
+    "outcome": "Mean observed VAS in corresponding available block; minimum 3 numeric VAS points; no cross-gap blocks",
+    "exposures": [
+      "mean_hr_bpm",
+      "HRV_RMSSD"
+    ],
+    "estimand": "Exploratory within-subject concurrent association in complete-VAS subjects with aligned QC-passing windows; not causal",
+    "minimum_subjects": 10,
+    "minimum_windows_per_subject": 2,
+    "model": "Subject fixed effects and categorical window time; subject-level bootstrap, 2000 replicates, seed 20260919; both exposures reported as one family",
+    "readiness": "Unique current-record identity, verified VAS-minute event anchor and clock map, valid window/QC; otherwise output not_estimable with counts, never fake a zero effect"
+  },
+  "timeout_seconds": 3600
+}

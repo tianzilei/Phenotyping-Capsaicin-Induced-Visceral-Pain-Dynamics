@@ -1,0 +1,33 @@
+{
+  "version": "derivative_calibration_v4",
+  "status": "frozen_before_new_results",
+  "estimand": "analytic_first_derivative_of_generating_population_mean",
+  "scale": "VAS_per_minute_untruncated_Gaussian_diagnostic",
+  "grid": [1, 20, 1],
+  "level": 0.95,
+  "basis": "unpenalized_bs8_fixed_equally_spaced_knots_boundaries_1_20",
+  "fit": "REML_random_intercept_actual_time_CAR1_refitted_in_every_subject_bootstrap",
+  "methods": ["model_coefficient", "subject_bootstrap_t", "subject_bootstrap_bias_corrected_t"],
+  "candidate": "subject_bootstrap_bias_corrected_t",
+  "bias": "mean_bootstrap_derivative_minus_original; corrected_center=2*original-mean_bootstrap; centered_bootstrap_t_maxima; no claim this removes basis approximation bias",
+  "uncorrected_band": "max_abs((theta_star-theta)/model_se_star); original center and original model SE",
+  "corrected_band": "max_abs((theta_star-mean_theta_star)/model_se_star); corrected center and original model SE",
+  "bootstrap_failure_policy": "no retries; require >=98 percent valid refits; all failures recorded; incomplete outer fit counts as noncoverage",
+  "development_replicates": 20,
+  "validation_replicates": 200,
+  "bootstrap_replicates": 199,
+  "coefficient_draws": 2000,
+  "development_seed": 170931,
+  "validation_seed": 1719931,
+  "workers": 4,
+  "cells": [
+    ["flat_complete",40], ["linear_random_missing",40], ["curved_dropout",40],
+    ["wave_dropout",40], ["informative_dropout",40], ["curved_dropout",216]
+  ],
+  "generator": "synthetic_derivative_data in frozen R/derivative_calibration.R; intercept SD .5; innovation SD .3; AR .6; random dropout 12:20; missing .15",
+  "development_gate": "candidate coverage>=.90 and valid outer fits>=.98 in EVERY noninformative cell; 20 reps is screening only",
+  "validation_gate": "candidate coverage>=.93 and Wilson95_lower>=.90 and valid outer fits>=.99 in EVERY noninformative cell",
+  "informative_role": "stress_only; analytic_population_mean_not_observed_conditional_mean; does_not_resolve_real_E_T",
+  "policy": "only prespecified candidate can advance; failed gate stops this version; independent validation has unchanged code and parameters; real analysis only after independent gate and new config",
+  "timeout_per_cell_seconds": 14400
+}

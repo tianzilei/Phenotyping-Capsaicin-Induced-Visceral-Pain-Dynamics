@@ -1,0 +1,7 @@
+{
+  "version": "ecg_candidate_review_v1",
+  "purpose": "Engineering verification and explicit diagnostic examples, not clinical adjudication or channel selection",
+  "examples": "First window in sorted file order; lowest two-method agreement; lowest agreement between amplitude-method channel pair. Ties use source order. Display first 8 seconds from analysis start, not manually selected beats",
+  "review_queue": "All windows sorted by increasing method agreement; no rejection cutoff",
+  "claims": "No HRV, disease classification, clinical heart-rate acceptance, dose alignment, or subject-level inference"
+}

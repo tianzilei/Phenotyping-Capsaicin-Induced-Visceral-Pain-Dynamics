@@ -1,0 +1,19 @@
+{
+  "version": "sparse_fpca_v1",
+  "status": "frozen_exploratory",
+  "input_run": "08_outputs/provisional_vas_20260916T144537Z_11f54777",
+  "estimand": "working smoothed mean/covariance of observed raw VAS under noninformative observation assumptions; selection unresolved",
+  "intervals": [[1,20],[1,10]],
+  "scale": "raw VAS 0-10; minutes unchanged; no zero or E/T imputation",
+  "engine": "fdapace 0.6.0 Sparse local-linear smoothing and CE scores",
+  "components": 4,
+  "options": {"dataType":"Sparse","methodMuCovEst":"smooth","error":true,"kernel":"gauss","userBwMu":2,"userBwCov":3,"methodXi":"CE","methodRho":"vanilla","useBinnedData":"OFF","useBinnedCov":true,"nRegGrid":51,"maxK":49,"methodSelectK":4,"FVEthreshold":0.99,"imputeScores":true,"plot":false,"verbose":false},
+  "bandwidth_sensitivity": [[1.5,2],[3,4]],
+  "bandwidth_rationale": "engineering working smoothing scales in minutes; sensitivity reported, no optimal bandwidth or cross-validation selection claim",
+  "bootstrap": {"replicates":100,"unit":"subject row pending identity verification","seed":917671,"role":"exploratory stability, not calibrated confidence bands","minimum_success_fraction":0.95},
+  "simulation": {"seed":917672,"repeats":20,"n_subjects":216,"grid":[1,20],"scenarios":["random_sparse","independent_dropout","informative_dropout"],"mean":"4+0.5*sin(2*pi*(t-1)/19)","scores":"independent U(-sqrt(3),sqrt(3)); functions 0.8 and 0.7*sqrt(2)*cos(pi*(t-1)/19)","noise_sd":0.15,"random_sparse":"8 random distinct grid points per subject","independent_dropout":"uniform integer last minute from 10 to 20","informative_dropout":"last minute clamp(round(15-3*score1),7,20)","engineering_gate":"all fits finite and positive-semidefinite fitted covariance; no coverage or phenotype acceptance claim"},
+  "output_policy": "no E/T cell replacement or individual post-stop reconstruction; CE scores are model-derived estimates; no prediction claim",
+  "fve_policy": "compute denominator from all positive eigenvalues of smoothed covariance; do not normalize only the first four",
+  "subspace_metric": "weighted QR orthonormalization before principal angles because package functions need not be exactly trapezoid-orthogonal",
+  "timeout_seconds":3600
+}

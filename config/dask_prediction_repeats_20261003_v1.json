@@ -1,0 +1,80 @@
+{
+  "version": "dask_prediction_repeats_20261003_v1",
+  "status": "frozen_exploratory_training_split_sensitivity",
+  "parent": "config/resampling_server_plan_20261003_v2.json",
+  "source": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/people_private.csv",
+  "source_manifest": "08_outputs/analysis_completion_20261002T152859Z_12f7386c/run_manifest.json",
+  "legacy_configs": [
+    "config/reanalysis_20260926_v1.json",
+    "config/reanalysis_supplement_20260926_v1.json"
+  ],
+  "expected_people": 215,
+  "expected_support": {
+    "next_rating": {
+      "people": 213,
+      "rows": 2781
+    },
+    "five_to_ten": {
+      "people": 206,
+      "rows": 206
+    }
+  },
+  "sequence": [
+    "next_rating",
+    "five_to_ten"
+  ],
+  "master_seed": 2026100311,
+  "repeats": 20,
+  "outer_folds": 5,
+  "inner_folds": 4,
+  "models": [
+    "last_value",
+    "ridge",
+    "random_forest"
+  ],
+  "ridge_alpha": [
+    0.1,
+    1,
+    10,
+    100
+  ],
+  "forest_depth": [
+    2,
+    4
+  ],
+  "forest_trees": 200,
+  "minimum_leaf": {
+    "next_rating": 10,
+    "five_to_ten": 5
+  },
+  "primary_scoring": "inner_MAE_next_rating_window_equal_five_to_ten_person_equal",
+  "preprocessing": "StandardScaler_fit_inside_inner_training_pipeline_then_refit_only_outer_training_people",
+  "split": "shuffled_GroupKFold_whole_people_outer5_inner4",
+  "next_features": "three_actual_consecutive_VAS_tminus2_tminus1_t_plus_actual_minute_t_predict_tplus1",
+  "five_features": "actual_minutes1to5_predict_numeric_minute10",
+  "baseline": "last_actual_value_t_or_minute5",
+  "metrics": [
+    "MAE",
+    "RMSE",
+    "model_minus_last_value"
+  ],
+  "next_primary_weighting": "eligible_windows_equal_person_equal_sensitivity",
+  "five_weighting": "person_equal",
+  "seed_definition": "SHA256_master_stage_repeat_purpose_fold_first4bytes_little_endian_uint32",
+  "repeat_role": "training_and_partition_sensitivity_repeats_and_folds_not_independent_people_or_calibrated_CIs",
+  "reported_repeat_summary": "median_min_max_of20_paired_repeat_metrics_no_p_values_no_best_repeat_selection",
+  "failure": "no_seed_substitution_no_failed_repeat_dropping_infrastructure_resume_same_logical_fold",
+  "runtime_lock": "dependencies/project-python312-20261003-v2.lock.txt",
+  "driver_timeout_seconds": 86400,
+  "per_task_threads": 1,
+  "primary_physiology_tests": false,
+  "scientific_gates_changed": false,
+  "sealed_pool_opened": false,
+  "no_missing_imputation": true,
+  "no_source_mutation": true,
+  "not_in_this_batch": [
+    "GAMM_FPCA_cluster_refits",
+    "Markov_null_phase_tests",
+    "independent_external_prediction_validation"
+  ]
+}

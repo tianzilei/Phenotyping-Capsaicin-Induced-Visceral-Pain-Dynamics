@@ -1,0 +1,15 @@
+{
+  "version": "egg_fnirs_association_v1",
+  "decision_date": "2026-09-21",
+  "status": "exploratory_algorithmic_review",
+  "egg_spectrum_run": "08_outputs/signal_spectra_20260918T102119Z_324f3d7b",
+  "fnirs_roi_run": "08_outputs/fnirs_variable_length_roi_20260921T131008Z_91ddae70",
+  "mapping": "02_quality_control/time_enc_20260916T123124Z_d4ff4af0/accepted_subject_to_files_private.csv",
+  "estimand": "within-subject concurrent association of EGG band-power summaries and fNIRS ROI HbO/HbR summaries in protocol-relative 5-minute blocks",
+  "egg_features": ["broad_power_native2", "norm_power_native2", "norm_fraction"],
+  "vas_alignment": "observed numeric VAS mean per 5-minute block; minimum 3 numeric minutes; no imputation or cross-gap bridging",
+  "model": "subject fixed effects plus categorical block; subject bootstrap",
+  "bootstrap_replicates": 20,
+  "surrogate": "within-subject permutation of EGG block labels, 20 replicates; descriptive null only",
+  "limitations": ["spectral summaries are not continuous synchronized waveforms", "no phase/coherence estimate", "vendor Hb units not verified", "protocol-relative rather than dose-relative timing", "exploratory and non-causal"]
+}

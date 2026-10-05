@@ -1,0 +1,698 @@
+[
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2739
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2739,
+    "metric": "rho",
+    "n": 2739,
+    "quantiles": [
+      0.8636468134021664,
+      0.879477645889145,
+      0.8951715838222539,
+      0.9093243495707432,
+      0.9230796735452426
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2739
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2739,
+    "metric": "edf",
+    "n": 2739,
+    "quantiles": [
+      5.6400400581867,
+      5.743337756281899,
+      5.840691934386768,
+      5.897519332364679,
+      5.921666056346673
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2739
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2739,
+    "metric": "residual_adjacent_correlation",
+    "n": 2739,
+    "quantiles": [
+      -0.022249691879892255,
+      0.013672424989390437,
+      0.060933669955006466,
+      0.10749017156424825,
+      0.1346236139955267
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2261
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2261,
+    "metric": "rho",
+    "n": 2261,
+    "quantiles": [
+      0.8643827287366992,
+      0.879192832692677,
+      0.8951310211934447,
+      0.9097183521703476,
+      0.9159723104712447
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2261
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2261,
+    "metric": "edf",
+    "n": 2261,
+    "quantiles": [
+      5.6022591136097235,
+      5.745900632402658,
+      5.842812202192252,
+      5.898624581542018,
+      5.9308242199480175
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2261
+    },
+    "cell": "G20_primary_k6",
+    "finite_n": 2261,
+    "metric": "residual_adjacent_correlation",
+    "n": 2261,
+    "quantiles": [
+      -0.02858891192836622,
+      0.015699814584092604,
+      0.06217002767255726,
+      0.10695018197736803,
+      0.13522158089167505
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 5000
+    },
+    "cell": "G20_independent_k6",
+    "finite_n": 0,
+    "metric": "rho",
+    "n": 5000,
+    "quantiles": null,
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 5000
+    },
+    "cell": "G20_independent_k6",
+    "finite_n": 5000,
+    "metric": "edf",
+    "n": 5000,
+    "quantiles": [
+      5.414105602405545,
+      5.604520849441234,
+      5.767803813773166,
+      5.857518750447078,
+      5.903185419018862
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 5000
+    },
+    "cell": "G20_independent_k6",
+    "finite_n": 5000,
+    "metric": "residual_adjacent_correlation",
+    "n": 5000,
+    "quantiles": [
+      0.7385257315349354,
+      0.7573939733192546,
+      0.7823312323552463,
+      0.8038196056003627,
+      0.8245368526787249
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2830
+    },
+    "cell": "G20_k4",
+    "finite_n": 2830,
+    "metric": "rho",
+    "n": 2830,
+    "quantiles": [
+      0.8628997632274427,
+      0.878214298713505,
+      0.8940251853704458,
+      0.9082933057530663,
+      0.9220681552328641
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2830
+    },
+    "cell": "G20_k4",
+    "finite_n": 2830,
+    "metric": "edf",
+    "n": 2830,
+    "quantiles": [
+      3.8382168940475725,
+      3.923558458372756,
+      3.957990642870003,
+      3.9743304667342305,
+      3.982022308719482
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2830
+    },
+    "cell": "G20_k4",
+    "finite_n": 2830,
+    "metric": "residual_adjacent_correlation",
+    "n": 2830,
+    "quantiles": [
+      -0.012322957822233686,
+      0.024917415337571604,
+      0.07254139912795067,
+      0.11841744582752714,
+      0.1428205833358381
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2170
+    },
+    "cell": "G20_k4",
+    "finite_n": 2170,
+    "metric": "rho",
+    "n": 2170,
+    "quantiles": [
+      0.8695049098710385,
+      0.8782655058254336,
+      0.8941281693886947,
+      0.9084838240986894,
+      0.9161948947814844
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2170
+    },
+    "cell": "G20_k4",
+    "finite_n": 2170,
+    "metric": "edf",
+    "n": 2170,
+    "quantiles": [
+      3.870459121105997,
+      3.922473470698236,
+      3.957873579802292,
+      3.973483648586612,
+      3.9807771310569118
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2170
+    },
+    "cell": "G20_k4",
+    "finite_n": 2170,
+    "metric": "residual_adjacent_correlation",
+    "n": 2170,
+    "quantiles": [
+      -0.018929785423352705,
+      0.02511877121935734,
+      0.07228243524085837,
+      0.118114533170885,
+      0.14766244663069508
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2744
+    },
+    "cell": "G20_k8",
+    "finite_n": 2744,
+    "metric": "rho",
+    "n": 2744,
+    "quantiles": [
+      0.8724162698698729,
+      0.8805027683937888,
+      0.8962596529601465,
+      0.9109485945564667,
+      0.9245970389152124
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2744
+    },
+    "cell": "G20_k8",
+    "finite_n": 2744,
+    "metric": "edf",
+    "n": 2744,
+    "quantiles": [
+      7.0369020084723415,
+      7.431590087484278,
+      7.6259714951470485,
+      7.74155147116665,
+      7.806960865734039
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2744
+    },
+    "cell": "G20_k8",
+    "finite_n": 2744,
+    "metric": "residual_adjacent_correlation",
+    "n": 2744,
+    "quantiles": [
+      -0.032653589133122836,
+      0.009362043446685328,
+      0.05588925710174976,
+      0.10107096664558468,
+      0.12943190910063324
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2256
+    },
+    "cell": "G20_k8",
+    "finite_n": 2256,
+    "metric": "rho",
+    "n": 2256,
+    "quantiles": [
+      0.8647500911558845,
+      0.8805068591762891,
+      0.89664101885575,
+      0.9106168617635269,
+      0.918720974446547
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2256
+    },
+    "cell": "G20_k8",
+    "finite_n": 2256,
+    "metric": "edf",
+    "n": 2256,
+    "quantiles": [
+      7.236802405963461,
+      7.433808799818228,
+      7.628984809266839,
+      7.7435783770089985,
+      7.805222001165156
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2256
+    },
+    "cell": "G20_k8",
+    "finite_n": 2256,
+    "metric": "residual_adjacent_correlation",
+    "n": 2256,
+    "quantiles": [
+      -0.03163651216471885,
+      0.009264710121084395,
+      0.05619850508628215,
+      0.10407726220277422,
+      0.13168347136135802
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2579
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2579,
+    "metric": "rho",
+    "n": 2579,
+    "quantiles": [
+      0.8527371037983522,
+      0.8692637716017588,
+      0.8878559040481271,
+      0.9046468136951453,
+      0.9159570050102044
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2579
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2579,
+    "metric": "edf",
+    "n": 2579,
+    "quantiles": [
+      5.391827123641386,
+      5.618617537872422,
+      5.761109957807477,
+      5.847641565033927,
+      5.889629974839512
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2579
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2579,
+    "metric": "residual_adjacent_correlation",
+    "n": 2579,
+    "quantiles": [
+      -0.013079097144189703,
+      0.03518765429549805,
+      0.09154270270587933,
+      0.14631652339315848,
+      0.1925489222995238
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2421
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2421,
+    "metric": "rho",
+    "n": 2421,
+    "quantiles": [
+      0.8454282441202844,
+      0.8700081032034084,
+      0.8881569643258266,
+      0.904104318962774,
+      0.9173229711142565
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2421
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2421,
+    "metric": "edf",
+    "n": 2421,
+    "quantiles": [
+      5.45279585512579,
+      5.619356063259246,
+      5.762374253386892,
+      5.845571540966652,
+      5.880213189916144
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2421
+    },
+    "cell": "G10_common_k6",
+    "finite_n": 2421,
+    "metric": "residual_adjacent_correlation",
+    "n": 2421,
+    "quantiles": [
+      -0.005551488591109226,
+      0.03750290827679144,
+      0.09304476329668973,
+      0.1449717122481345,
+      0.18810864241643038
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2459
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2459,
+    "metric": "rho",
+    "n": 2459,
+    "quantiles": [
+      0.8394443758673862,
+      0.856702540941373,
+      0.8757210138407178,
+      0.8912720279302084,
+      0.9016880680356175
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2459
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2459,
+    "metric": "edf",
+    "n": 2459,
+    "quantiles": [
+      5.436961661695251,
+      5.61216219911785,
+      5.7606754514651,
+      5.8454323955723835,
+      5.88647365216909
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2459
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2459,
+    "metric": "residual_adjacent_correlation",
+    "n": 2459,
+    "quantiles": [
+      -0.005942392047161418,
+      0.035173769581648175,
+      0.09008915218959572,
+      0.14314760801726126,
+      0.17290282970028328
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2541
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2541,
+    "metric": "rho",
+    "n": 2541,
+    "quantiles": [
+      0.8381418243268135,
+      0.8567976447415396,
+      0.8752918488877907,
+      0.8913048055230719,
+      0.9011306123360836
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2541
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2541,
+    "metric": "edf",
+    "n": 2541,
+    "quantiles": [
+      5.48201228349302,
+      5.606933896062815,
+      5.7588922642881615,
+      5.843583782382118,
+      5.892309370305777
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2541
+    },
+    "cell": "G10_complete_k6",
+    "finite_n": 2541,
+    "metric": "residual_adjacent_correlation",
+    "n": 2541,
+    "quantiles": [
+      -0.03883900481100098,
+      0.03517244307231178,
+      0.09118264203563185,
+      0.14538352197915302,
+      0.17731789099157383
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2300
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2300,
+    "metric": "rho",
+    "n": 2300,
+    "quantiles": [
+      0.7917709956368436,
+      0.8233041102828277,
+      0.8591221948302112,
+      0.8898785273472768,
+      0.9081039131936242
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2300
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2300,
+    "metric": "edf",
+    "n": 2300,
+    "quantiles": [
+      3.9618462662435103,
+      4.994253484920628,
+      5.452340316145142,
+      5.675459115439132,
+      5.802090803471558
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": false,
+    "apVar_messages": {
+      "Non-positive definite approximate variance-covariance": 2300
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2300,
+    "metric": "residual_adjacent_correlation",
+    "n": 2300,
+    "quantiles": [
+      -0.15058997943459634,
+      -0.09004804168256643,
+      -0.017538947356961605,
+      0.04827817219680149,
+      0.09192514524813765
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2700
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2700,
+    "metric": "rho",
+    "n": 2700,
+    "quantiles": [
+      0.7628343017907142,
+      0.8188924785019656,
+      0.8582870158784254,
+      0.8899346308654086,
+      0.9117338096856349
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2700
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2700,
+    "metric": "edf",
+    "n": 2700,
+    "quantiles": [
+      4.238309702404725,
+      5.0526555034014455,
+      5.481111872019143,
+      5.6959139856417496,
+      5.8270191770732165
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  },
+  {
+    "apVar_finite_matrix": true,
+    "apVar_messages": {
+      "": 2700
+    },
+    "cell": "G20_complete_k6",
+    "finite_n": 2700,
+    "metric": "residual_adjacent_correlation",
+    "n": 2700,
+    "quantiles": [
+      -0.15846463757545987,
+      -0.09140510202224024,
+      -0.015210673309384158,
+      0.05244954611907666,
+      0.10018114201947596
+    ],
+    "role": "post_fit_conditional_descriptive_only"
+  }
+]

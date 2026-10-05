@@ -1,0 +1,9 @@
+{
+  "version": "egg_motion_comparison_v1",
+  "status": "development_only_posthoc_sensitivity_not_quality_validation",
+  "unmasked_run": "08_outputs/electrophysiology_development_qc_v2_20260929T154904Z_c75104f3",
+  "motion_screened_run": "08_outputs/egg_motion_development_audit_20260929T160048Z_4a12d38e",
+  "unit_of_comparison": "same_subject_same_recording_same_stage",
+  "metrics": ["peak_cpm", "slow_power_ratio", "slow_coherence"],
+  "reference_truth_available": false
+}

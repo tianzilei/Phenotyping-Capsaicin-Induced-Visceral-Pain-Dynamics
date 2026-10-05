@@ -1,0 +1,11 @@
+{
+  "version": "chat_recheck_v1",
+  "scope": "remaining_37_rows_chat_number_date_file_audit",
+  "timezone": "UTC+08:00",
+  "rest_stages": ["N", "C", "P"],
+  "excluded_stages": ["A", "T", "B"],
+  "date_code_correction_max_edit_distance": 1,
+  "correction_requires": ["unique_source_name", "exact_name_chat_same_date", "source_name_supported_abbreviation", "accepted_same_date_same_abbreviation_record", "competing_owner_has_different_source_name_abbreviation"],
+  "different_vas_historical_visit": "review_only",
+  "unknown_phase": "review_only"
+}

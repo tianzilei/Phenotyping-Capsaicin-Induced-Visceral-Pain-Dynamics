@@ -1,0 +1,19 @@
+{
+  "version": "scientific_readiness_v1",
+  "status": "pending_evidence_not_authorization",
+  "identity_verified": false,
+  "synchronization_verified": false,
+  "units_verified": false,
+  "signal_qc_passed": false,
+  "roi_mapping": null,
+  "primary_outcome": null,
+  "covariate_rationale": null,
+  "state_thresholds": null,
+  "state_threshold_rationale": null,
+  "transition_information_rule": null,
+  "state_estimator_validated": false,
+  "gastric_peak_verified": false,
+  "phase_quality_verified": false,
+  "adequate_cycles": false,
+  "surrogate_validated": false
+}

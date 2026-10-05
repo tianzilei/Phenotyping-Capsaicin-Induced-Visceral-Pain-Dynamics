@@ -1,0 +1,13 @@
+{
+  "version": "ecg_rr_sensitivity_v1",
+  "input_run": "08_outputs/electrophysiology_development_qc_v2_20260929T161830Z_d84e4e8f",
+  "pool": "development",
+  "rr_bounds_seconds": [0.3, 1.8],
+  "refractory_seconds": 0.2,
+  "jump_fractions": [0.15, 0.20, 0.25, 0.30],
+  "primary_jump_fraction": 0.25,
+  "interpolation": false,
+  "gap_bridging": false,
+  "threshold_selection": false,
+  "status": "development_sensitivity_not_accuracy_or_nn_validation"
+}

@@ -1,0 +1,12 @@
+{
+  "version": "fnirs_source_adjudication_v1",
+  "decision_date": "2026-09-25",
+  "authority": "User: for the six source-conflict groups use the newest file as actual data; older files are erroneous",
+  "scope": "Six groups with differing overlapping Hb samples in the detailed file comparison",
+  "newest_definition": "Strictly latest Measured Date in vendor file header, including time of day; no filesystem modification-time ranking",
+  "ties": "Fail for nonidentical files with equal Measured Date",
+  "older_files": "Exclude old candidate links from future fNIRS estimation; preserve source files and historical runs",
+  "shared_latest_file": "User confirmed the two shared labels are the same participant; use one stable canonical label (smaller existing research ID), preserve alias and source rows",
+  "alias_covariates": "Require identical VAS before selecting one pain series; keep conflicting baseline/covariate values in a private review ledger, never average or overwrite",
+  "apply_to": "fNIRS E-stage TXT selection only; no inferred reassignment of other modalities or historical VAS identities"
+}

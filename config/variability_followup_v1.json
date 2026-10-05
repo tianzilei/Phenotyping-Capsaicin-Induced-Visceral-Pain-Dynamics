@@ -1,0 +1,22 @@
+{
+  "version": "variability_followup_v1",
+  "status": "frozen_provisional",
+  "role": "M04_raw_variability_and_M08_observation_support_sensitivity",
+  "input_run": "08_outputs/provisional_vas_20260916T144537Z_11f54777",
+  "scale": [0,10],
+  "estimand": "distribution_of_subject_raw_VAS_variability_within_observed_window",
+  "windows": [[1,20],[1,10],[1,5],[6,10],[11,15],[16,20]],
+  "planned_minute_difference": 1,
+  "metrics": ["mean_vas","sample_sd","mssd","rmssd","mean_adjacent_change","centered_change_ms"],
+  "identity": "MSSD = mean_adjacent_change^2 + population_variance_of_observed_adjacent_changes; not detrended instability",
+  "primary_summary_eligibility": "at_least_3_actual_adjacent_pairs_within_window",
+  "sensitivity": "all_scheduled_minutes_in_window_observed",
+  "paired_contrast": "late16_20_minus_early1_5_among_subjects_complete_in_both_windows",
+  "subject_weighting": "equal_weight_per_eligible_subject_not_per_pair",
+  "bootstrap": {"unit":"subject_row_pending_identity_verification","replicates":2000,"seed":917440,"level":0.95,"type":"percentile_pointwise_exploratory_not_simultaneous"},
+  "correlations": "descriptive_Spearman_MSSD_vs_mean_and_n_pairs_within_eligible_subjects_each_window; no_p_values",
+  "marker_groups": "eventual_E_T_none_descriptive_only_not_baseline_exposures",
+  "no_imputation": true,
+  "preserve_E_T_and_zeros": true,
+  "scientific_limits": "unequal_observation_and_informative_stopping; raw_metrics_include_trend; no_subject_AR_or_individual_detrended_estimator; no_instantaneous_derivative_claim"
+}

@@ -1,0 +1,11 @@
+{
+  "version": "ecg_lead_stability_v1",
+  "pool": "development",
+  "event_tolerance_seconds": 0.03,
+  "full_consensus_minimum_leads": 2,
+  "pair_consensus_minimum_leads": 2,
+  "symmetric_rr_jump_fraction": 0.20,
+  "pair_definitions": [[0, 1], [0, 2], [1, 2]],
+  "parameter_selection_from_current_data": false,
+  "status": "leave_one_lead_out_internal_stability_not_accuracy"
+}

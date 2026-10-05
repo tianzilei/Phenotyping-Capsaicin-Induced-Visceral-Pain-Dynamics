@@ -1,0 +1,40 @@
+{
+  "version": "ecg_multilead_v1",
+  "status": "development_candidate_detector_not_clinically_validated",
+  "source_protocol": "02_quality_control/电生理方案.md",
+  "lead_order": ["I", "II", "V3"],
+  "lead_order_basis": "three ECG100C channels sorted by source channel index; anatomical labels require source metadata confirmation",
+  "input_rate_hz": 2000,
+  "target_rate_hz": 250,
+  "resampling": "scipy.signal.resample_poly with Kaiser beta 8.6 and line padding; no missing-value fill",
+  "detection_filter": {
+    "type": "zero_phase_butterworth_bandpass_sos",
+    "order": 3,
+    "low_hz": 5.0,
+    "high_hz": 25.0
+  },
+  "morphology_reference": {
+    "notch_hz": 50.0,
+    "notch_quality_factor": 30.0,
+    "lowpass_hz": 45.0,
+    "baseline_highpass_hz": 0.5,
+    "display_median_window_samples_at_250_hz": 5,
+    "display_hampel_window_samples_at_250_hz": 11,
+    "display_hampel_threshold_mad": 6.0,
+    "status": "separate_from_R_peak_detection_and_not_used_by_current_candidate_endpoint"
+  },
+  "spatial_transform": "vx=lead_I; vy=(2/sqrt(3))*lead_II-(1/sqrt(3))*lead_I; vz=lead_V3",
+  "spatial_derivative": "central numerical gradient with seconds as the coordinate",
+  "energy_smoothing_seconds": 0.12,
+  "background_seconds": 0.60,
+  "initialization_seconds": 2.0,
+  "threshold_update_alpha": 0.875,
+  "refractory_seconds": 0.25,
+  "searchback_factor": 1.66,
+  "searchback_threshold_fraction": 0.25,
+  "refine_radius_seconds": 0.04,
+  "lead_consensus_tolerance_seconds": 0.05,
+  "edge_policy": "zero_phase_filter_on_complete_group_window; candidates within 10 seconds of the window edges are retained only as candidate annotations",
+  "missing_policy": "reject nonfinite group windows; no interpolation or gap bridging",
+  "output": "candidate peaks and per-lead local refinements; human review required; no NN-HRV claim"
+}

@@ -1,0 +1,10 @@
+{
+  "sources": {
+    "baseline_csv": null,
+    "ecg_egg_directory": null,
+    "signal_events": null,
+    "subject_manifest": null,
+    "fnirs_directory": null
+  },
+  "note": "复制为 local.json 后填写本机路径；不纳入 Git。候选文件参见 docs/data_inventory.md。"
+}
