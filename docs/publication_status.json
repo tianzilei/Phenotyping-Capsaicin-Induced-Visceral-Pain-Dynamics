@@ -1,14 +1,14 @@
 {
-  "version": "publication_status_20261005_v4",
-  "phase": "clean_snapshot_prepared_host_purge_pending",
+  "version": "publication_status_20261005_v5",
+  "phase": "published_clean_history_host_purge_pending",
   "analysis_as_of": "2026-10-04",
   "public_content": "current code, synthetic fixtures, reviewed aggregate results",
   "individual_records_allowed": false,
   "prior_publication_verified": true,
   "latest_history_replacement_authorized": true,
-  "replacement_push_performed": false,
-  "remote_head_confirmed": false,
-  "fresh_remote_clone_audited": false,
+  "replacement_push_performed": true,
+  "remote_head_confirmed": true,
+  "fresh_remote_clone_audited": true,
   "prepared_snapshot_files": 551,
   "reviewed_aggregate_files": 116,
   "source_snapshot_files": 401,
@@ -21,5 +21,32 @@
   "external_copies_removed": false,
   "scientific_validation_completed": false,
   "last_checked_utc": "2026-10-05T13:06:34.925667+00:00",
-  "receipt_scope": "Preparation of a clean public snapshot; replacement and fresh-clone checks are pending. Host-retained sensitive objects require separate removal. No complete historical-erasure claim."
+  "receipt_scope": "Lease-guarded history replacement and a fresh full GitHub clone passed current-tree and complete-history checks. Former publication history and both older complete-writing blobs are absent from that clone. Host-retained objects remain separately accessible; this receipt does not certify server-side erasure or removal of external copies.",
+  "verified_clean_root": "a91445bc102f513a522b553c21f62ff3e8a60a9b",
+  "fresh_clone_reachable_commits": 1,
+  "old_complete_writing_blobs_in_fresh_clone": false,
+  "prior_publication_history_in_fresh_clone": false,
+  "replacement_verified_utc": "2026-10-05T13:11:40.763915+00:00",
+  "host_retention_checked_utc": "2026-10-05T13:10:45.512551+00:00",
+  "host_objects_anonymously_accessible": true,
+  "host_object_checks": [
+    {
+      "target": "former_complete_history_commit",
+      "HTTP_status": 200,
+      "anonymous": true,
+      "content_returned": false
+    },
+    {
+      "target": "older_complete_manuscript",
+      "HTTP_status": 200,
+      "anonymous": true,
+      "content_returned": true
+    },
+    {
+      "target": "older_complete_supplement",
+      "HTTP_status": 200,
+      "anonymous": true,
+      "content_returned": true
+    }
+  ]
 }
