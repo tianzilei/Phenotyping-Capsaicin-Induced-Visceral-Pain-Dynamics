@@ -2413,8 +2413,8 @@
     },
     "README.md": {
       "source_sha256": "08679d0e5a635673a93b0eb0f3a7a61b1e1dfbaad9a3ac8a9b3a4c44c30f3de8",
-      "published_sha256": "a98b774c3a4a0da5952a7c4a0e7c29e36380c4d009a817148aa954466fb843ab",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "c53a37887502cda188d14f313aa98a6b365d3e55a5d7f4d6c68e9e165f7ad86b",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; README resource navigation, scientific scope and reproduction documentation updated 2026-10-23",
       "source_origin": "public artifact alignment"
     },
     "config/final_artifacts_20261023_v1.json": {
@@ -3799,7 +3799,7 @@
     "original_source_hashes_retained": true,
     "verification_record": "docs/artifact_alignment_verification_20261023.json"
   },
-  "updated_utc": "2026-10-22T23:28:28.473664+00:00",
+  "updated_utc": "2026-10-22T23:41:02.054072+00:00",
   "prior_maintenance_scope": {
     "date": "2026-10-05",
     "source_snapshot_files": 401,
@@ -3818,5 +3818,11 @@
     "source_and_target_cross_checks": "all ten PNG files byte-identical; all 74 new-table rows/rules matched; original analysis files retained",
     "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642",
     "publication_receipt": "docs/artifact_publication_status_20261023.json"
+  },
+  "readme_update": {
+    "date": "2026-10-23",
+    "scope": "current release navigation, measurement and analysis descriptions, reproduction instructions, and verification links",
+    "analytical_code_changed": false,
+    "aggregate_files_changed": false
   }
 }

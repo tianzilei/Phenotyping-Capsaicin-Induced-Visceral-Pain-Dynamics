@@ -1,65 +1,84 @@
 # Capsaicin-Induced Visceral Pain Dynamics
 
-This repository contains the analysis framework for studying the time course and heterogeneity of capsaicin-induced visceral pain. The research examines repeated overall sensation ratings alongside recorded symptoms, baseline characteristics, and candidate physiological signals, with an emphasis on observation support, trajectory structure, and prediction from earlier measurements.
+[![Public release checks](https://github.com/tianzilei/Phenotyping-Capsaicin-Induced-Visceral-Pain-Dynamics/actions/workflows/public-release.yml/badge.svg)](https://github.com/tianzilei/Phenotyping-Capsaicin-Induced-Visceral-Pain-Dynamics/actions/workflows/public-release.yml)
 
-The current code and [analysis plan](docs/analysis_plan.md) reflect an exploratory, results-informed reanalysis of an existing cohort, with analysis results through **October 4, 2026** and public artifacts aligned on **October 23, 2026** to the **October 14, 2026** document revision. The [decision log](docs/decision_log.md) records methodological choices and their scope. The plan is not a preregistration; empirical trajectory groups remain research constructs requiring clinical validation.
+Analysis code, method configurations and public aggregate results for studying the time course and individual variation of responses to an oral capsaicin challenge. The analyses cover overall sensation ratings, symptoms and perceived regions, trajectory structure, early group recognition, later-score prediction and exploratory physiological measurements.
 
-## Research questions
+This is an exploratory, results-informed reanalysis of an existing cohort. The [analysis plan](docs/analysis_plan.md) describes its scientific scope, and the [decision log](docs/decision_log.md) records methodological choices. The plan is not a preregistration.
 
-- How do sensation ratings evolve over the observation period, and how much of an apparent time trend reflects changes within participants versus changes in who remains observed?
-- Which aspects of trajectory shape, finite changes, and variability describe differences between participants?
-- How do recorded symptoms, perceived regions, baseline measures, and candidate physiological features relate to sensation dynamics?
-- How well can earlier ratings predict a later observed rating when evaluation separates participants between training and testing?
+## Current public release
 
-## Study design and measurements
+The **October 23, 2026 export** follows the numbering in the **October 14, 2026 document revision** and uses analysis results completed through **October 4, 2026**. It contains **4 main figures, 6 supporting figures, 3 main tables and 20 supporting tables**.
 
-The analysis uses an existing cohort of **215 participants** exposed to **10% w/v capsaicin, 10 microlitres (1 mg)**. A **custom 0–10 overall sensation score** was recorded at actual integer minutes **1–20**. Zero denotes no discomfort, one any discomfort, and ten an intolerable sensation. This procedure has not been validated as a standard pain or visual analogue scale. Historical `VAS` field and file names refer to this custom score. Analyses distinguish the early 1–10-minute interval from the extended 1–20-minute interval, and use the participants supported by each target. No numerical minute-zero rating is available.
-
-The observation record includes numeric ratings, missing cells, and two stopping codes: **E** records stopping after two consecutive zero ratings with staff-confirmed absence of discomfort; **T** records discontinuation for intolerable sensations rated 10. These codes remain separate from numeric scores and physiological states. Their first recorded minute does not establish an exact event time. Missing ratings are retained, without zero filling or interpolation across gaps.
-
-Recorded symptom and region codes, demographic and questionnaire fields, and candidate electrocardiographic (ECG), haemoglobin, and electrogastrographic (EGG) measures provide additional analysis domains. The [data dictionary](docs/data_dictionary.md) defines their representation and handling.
-
-## Analysis framework
-
-| Domain | Approach | Target and interpretation |
-| --- | --- | --- |
-| Observation process | Audit sources and identities; describe minute-specific support, E/T codes, and adjacent mean-change decompositions. | Distinguish within-participant changes from changes in observer composition. Report explicit denominators. |
-| Sensation time course | Fit Gaussian generalized additive mixed working models with an identity link, cubic regression splines, restricted maximum likelihood, participant random intercepts, and continuous-time first-order autoregressive residual correlation on actual minutes. | Describe smooth trends, with empirical summaries, fit diagnostics, and sensitivity to the time interval, spline basis, and residual correlation. |
-| Functional variation | Apply complete-trajectory functional principal component analysis (FPCA) on the original score scale with fixed trapezoidal time weights; examine component and subspace stability. Evaluate sparse FPCA separately. | Characterize variation under the observation support and assumptions of each model. |
-| Finite changes and variability | Calculate signed changes and rates over 1-, 2-, and 5-minute spans, adjacent variability, polynomial residual descriptors, and area under the curve. | Require numeric observations throughout each eligible change span; preserve actual adjacency for variability and area calculations. |
-| Trajectory grouping | Explore ordinary, fuzzy, and dynamic time warping clustering; assess partition stability and group recovery from short trajectory subsequences (shapelets) or early prefixes. | Study empirical trajectory structure and recovery of training-defined groups. |
-| Symptoms and perceived regions | Describe marginal codes, co-occurrence, and historical rule patterns using field-specific and joint denominators. | Treat missing fields as unrecorded; rule matching does not establish a clinical diagnosis. |
-| Future-rating prediction | Compare persistence, ridge regression, and random forest for the next actual rating and prediction of minute 10 from the minute 5 prefix. | Use 20 repeats of nested participant-level cross-validation, with 5 outer and 4 inner folds and preprocessing fitted within training participants. |
-| Candidate physiology | Examine within-participant ECG, haemoglobin, and EGG associations under source, unit, clock, and signal-quality checks. | Keep candidate association analyses separate from independent physiological validation. |
-
-Complete-curve reconstruction, trajectory-group recovery, and future-rating prediction have different evaluation targets. Clinical Markov states, phase/directionality, calibrated instantaneous derivative inference, and external phenotype validation require additional implementation or evidence. Modules marked `interface_only` or `design_only` remain unavailable estimators. The [detailed plan](docs/analysis_plan.md) and [module inventory](config/modules.json) specify each module's current scope.
-
-## Repository structure
-
-| Location | Contents |
+| Resource | Contents |
 | --- | --- |
-| [`src/capsaicin/`](src/capsaicin/) and [`R/`](R/) | Data contracts, quality control, descriptive analyses, working models, prediction, and explicit readiness gates. |
-| [`config/`](config/) and [`schemas/`](schemas/) | Versioned method parameters, execution contracts, and blank input schemas. |
-| [`dependencies/`](dependencies/) and [`renv.lock`](renv.lock) | Python and R environment records. |
-| [`tests/`](tests/) | Synthetic fixtures and tests for ingestion, analysis contracts, and release integrity. |
-| [`data/aggregate_sources/20261004/`](data/aggregate_sources/20261004/) | Reviewed aggregate inputs for public figure and table rendering. |
-| [`data/published/20261023/`](data/published/20261023/) | Current 4 main/6 supporting figures and 3 main/20 supporting tables. |
-| [`data/published/20261004/`](data/published/20261004/) | Historical 5 main/5 supporting figures and 21-table export. |
-| [`docs/`](docs/) | Analysis plan, methodological decisions, data definitions, code guide, and reproducibility records. |
+| [Current figures and tables](data/published/20261023/README.md) | Complete numbered index with PNG, PDF, SVG and CSV files |
+| [CSV tables](data/published/20261023/tables/) | Cohort and analysis sets; early three-group recognition; future-score errors; Tables S1–S20 |
+| [Figure numbering and sources](docs/artifact_alignment.md) | Mapping from the earlier export and the aggregate sources behind each table |
+| [Reproduction guide](docs/reproducibility.md) | Rendering environment, input hashes and controlled-analysis prerequisites |
+| [Publication receipt](docs/artifact_publication_status_20261023.json) | Verified artifact commit, independent-clone checks and GitHub workflow result |
 
-The [code style guide](docs/code_style.md) defines formatting and contributor checks. The [code guide](docs/code_guide.md) maps analysis domains to their implementations and explains which tasks require controlled participant data or additional execution infrastructure.
+The main figures show [temporal sensation and finite changes](data/published/20261023/figures/Figure1_temporal_sensation.png), [functional trajectory patterns](data/published/20261023/figures/Figure2_temporal_patterns.png), [symptoms and perceived regions](data/published/20261023/figures/Figure3_symptoms_regions.png), and [future-score prediction](data/published/20261023/figures/Figure4_future_score_prediction.png).
 
-## Data and supporting material
+The [October 4 export](data/published/20261004/README.md) retains its earlier numbering and layout. In the current export, **Table 2 describes early group recognition**, and the observation-support plot is **Figure S6**. Table S19 provides all 48 reference group-size specifications; Table S20 provides all ten descriptive symptom-region rules. Table S1 separates historical plans from completed resampling budgets and validation repetitions.
 
-The public repository contains code, synthetic examples, and reviewed aggregate outputs. Real participant records and identity mappings remain outside Git; [data handling](docs/data_privacy.md) documents their treatment. The [release inventory](docs/release_inventory.json) records source and published file hashes.
+## Study and measurements
 
-Aggregate outputs are listed in the [current artifact index](data/published/20261023/README.md), with full-precision [tables](data/published/20261023/tables/). The [artifact alignment guide](docs/artifact_alignment.md) maps the current numbering to the historical export.
+The reconciled cohort contains **215 participants** and **3,424 numerical ratings**. Each participant received **10 microlitres of a 10% w/v capsaicin preparation, equivalent to 1 mg**. Ratings were scheduled at actual integer minutes **1–20**. Complete minutes 1–10 are available for **206 participants** and complete minutes 1–20 for **56**.
 
-Recreate the current artifacts from public aggregate inputs in a fresh directory:
+The recorded outcome is a **custom 0–10 overall sensation score**: 0 denotes no discomfort, 1 any discomfort, and 10 an intolerable sensation. It has not been validated as a standard pain or visual analogue scale. Historical `VAS` field and file names refer to this custom score. No numerical minute-zero rating is available.
+
+**E** records stopping after two consecutive zero ratings with staff-confirmed absence of discomfort; **T** records discontinuation for intolerable sensations rated 10. Numerical ratings, E, T and missing entries remain separate. First recorded codes are recording markers rather than verified exact event times. Missing minutes and post-stop scores are left unfilled.
+
+Symptom and perceived-region information is available for **209 participants per field**, with **204** having both. The [data dictionary](docs/data_dictionary.md) and [field contract](docs/field_contract.md) describe score cells, symptom/region codes, baseline measures and candidate physiological inputs.
+
+## Analyses
+
+| Domain | Implementation and target |
+| --- | --- |
+| Observation support | Minute-specific denominators, E/T counts, and decomposition of observed mean changes into paired changes and observation-composition terms |
+| Sensation time course | Gaussian identity-link additive mixed working models with cubic regression splines, REML, participant random intercepts and actual-time CAR1 residual correlation, with numerical diagnostics and sensitivities |
+| Functional variation | Complete-trajectory FPCA on the original score scale with trapezoidal weights; component/subspace stability, retrospective reconstruction and separate sparse-FPCA sensitivities |
+| Finite changes and variability | Signed changes over 1-, 2- and 5-minute spans, adjacent variability, polynomial residual descriptions and area under the curve; required observations preserve actual adjacency |
+| Trajectory groups | Ordinary, fuzzy and dynamic-time-warping grouping, partition stability, and recovery of training-defined groups from early prefixes or training-selected shapelets |
+| Symptoms and regions | Marginal codes, all symptom-region co-occurrences and descriptive historical rule matches, with field-specific and joint denominators |
+| Future-score prediction | Last-value, ridge and random-forest comparisons using 20 repetitions of nested participant validation: 5 outer and 4 inner folds, with preprocessing fitted within training participants |
+| Candidate physiology | Exploratory ECG, haemoglobin and EGG analyses with source, unit, clock and quality checks; independent physiological validation remains required |
+
+Next-rating prediction uses **2,781 eligible targets from 213 participants**. Prediction of minute 10 from minutes 1–5 uses **206 participants**. Complete-curve reconstruction, trajectory-group recovery and future-score prediction have separate evaluation targets. Empirical groups and descriptive symptom-rule matches do not establish clinical phenotypes or diagnoses. Resampling ranges and validation-repeat ranges retain their stated descriptive roles.
+
+The [18-module inventory](config/modules.json) identifies implemented analyses and remaining scientific gates. Modules marked `interface_only` or `design_only` remain unavailable estimators. External phenotype validation, calibrated instantaneous derivatives, clinical Markov states and phase/directionality inference require further implementation or evidence.
+
+## Reproduce the public figures and tables
+
+Use Python **3.12.13** and the retained graphics package versions:
 
 ```sh
 python3 -m pip install -r dependencies/requirements-rendering.txt
 python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY
 ```
 
-This exports the final figure layout, the three-group recognition table, all 48 reference group sizes, all ten descriptive symptom-region rules, and a module inventory separating historical plans from completed budgets. The renderer performs no model fitting or new resampling.
+Choose a new output directory. The builder checks reviewed input hashes before and after rendering and exports the current figures, 23 CSV tables, figure index, layout diagnostics and provenance manifests. It uses public aggregates without participant records, model fitting or new resampling. PNGs use 600 dpi; PDFs embed TrueType fonts; SVGs retain editable text. Font and software differences can affect rendered bytes across systems.
+
+The [versioned artifact configuration](config/final_artifacts_20261023_v1.json) identifies the inputs and numbering. The plotting implementation is in [final_figures.py](src/capsaicin/final_figures.py), and [final_artifacts.py](src/capsaicin/final_artifacts.py) exports the numbered tables. The historical renderer, [build_scientific_figures.py](scripts/build_scientific_figures.py), reproduces the earlier October 4 export.
+
+## Repository structure
+
+| Location | Contents |
+| --- | --- |
+| [`src/capsaicin/`](src/capsaicin/) and [`R/`](R/) | Data contracts, quality control, descriptive analyses, working models, prediction and readiness gates |
+| [`config/`](config/) and [`schemas/`](schemas/) | Versioned method parameters, execution contracts and blank input schemas |
+| [`dependencies/`](dependencies/) and [`renv.lock`](renv.lock) | Python and R environment records |
+| [`tests/`](tests/) | Synthetic ingestion, analysis-contract and release-integrity tests |
+| [`data/aggregate_sources/20261004/`](data/aggregate_sources/20261004/) | Reviewed aggregate analysis results |
+| [`data/aggregate_sources/20261023/`](data/aggregate_sources/20261023/) | Retained aggregate inputs for the final figure layout |
+| [`data/published/20261023/`](data/published/20261023/) | Current numbered figures and tables |
+| [`docs/`](docs/) | Analysis plan, code guide, data definitions, reproduction instructions and publication records |
+
+The [code guide](docs/code_guide.md) maps analysis domains to their implementations. [Code style](docs/code_style.md) documents contributor checks.
+
+## Data access and verification
+
+Public content includes code, method configurations, blank schemas, synthetic examples and reviewed aggregate outputs. Participant-level ratings, symptom-region records, identity mappings and original physiological signals require controlled access. [Data handling](docs/data_privacy.md) explains their treatment. Running individual-level analyses requires the relevant controlled inputs, provenance checks, execution configuration and Python/R environment.
+
+The [October 23 verification record](docs/artifact_alignment_verification_20261023.json) documents **318 passing synthetic tests**, ten PNGs matching the target figures byte for byte, and all 74 rows/rules in the three newly exported tables matching their existing aggregate sources. The [release inventory](docs/release_inventory.json) records source and published file hashes. Current GitHub checks are linked in the badge above; the [publication receipt](docs/artifact_publication_status_20261023.json) records the verified artifact revision and its independent-clone checks.
