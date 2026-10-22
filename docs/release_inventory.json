@@ -1,5 +1,5 @@
 {
-  "version": "public_release_inventory_20261005_code_review_v1",
+  "version": "public_release_inventory_20261023_artifact_alignment_v1",
   "created_utc": "2026-10-05T09:46:58.170058+00:00",
   "source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
   "source_worktree_was_dirty": true,
@@ -2184,9 +2184,10 @@
     },
     "config/modules.json": {
       "source_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
-      "published_sha256": "fb706287bb0915e2c9ea2ab8f225163202583b6cac13f6f341768ba588052b4e",
-      "transformation": "none; publication CLI/status/rendering adapter",
-      "source_origin": "current analysis workspace"
+      "published_sha256": "0c1604407236f997a050dbccac25fb6ad9da77329981183e3cc2e17d1a30a527",
+      "transformation": "none; publication CLI/status/rendering adapter; 2026-10-23 artifact alignment and measurement/reporting metadata",
+      "source_origin": "current analysis workspace",
+      "prior_published_sha256": "fb706287bb0915e2c9ea2ab8f225163202583b6cac13f6f341768ba588052b4e"
     },
     "config/physiology_complete_v1.json": {
       "source_sha256": "5b1959c51ca03317767b53f35f261ec99ee8e45a98955df6d0b0dcd334cdabf9",
@@ -2409,6 +2410,96 @@
       "published_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
       "transformation": "historical module inventory retained under dated filename",
       "source_origin": "current analysis config/modules.json (historical inventory)"
+    },
+    "README.md": {
+      "source_sha256": "08679d0e5a635673a93b0eb0f3a7a61b1e1dfbaad9a3ac8a9b3a4c44c30f3de8",
+      "published_sha256": "a98b774c3a4a0da5952a7c4a0e7c29e36380c4d009a817148aa954466fb843ab",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "config/final_artifacts_20261023_v1.json": {
+      "source_sha256": "674d3fbf4a58ce276f3f27880d9877c0b1eed43d0f274d49d3a604e40c75ab1d",
+      "published_sha256": "674d3fbf4a58ce276f3f27880d9877c0b1eed43d0f274d49d3a604e40c75ab1d",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "dependencies/requirements-rendering.txt": {
+      "source_sha256": "9692f289fcf5ea4afd23a0464220161a8c753f41942bb73b5658c5a38812b807",
+      "published_sha256": "9692f289fcf5ea4afd23a0464220161a8c753f41942bb73b5658c5a38812b807",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "src/capsaicin/final_artifacts.py": {
+      "source_sha256": "fc08f9deeef754ed239ed91ffb2aafc2202a189d024d533c0b2406f0d5efbe4b",
+      "published_sha256": "fc08f9deeef754ed239ed91ffb2aafc2202a189d024d533c0b2406f0d5efbe4b",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "src/capsaicin/final_figures.py": {
+      "source_sha256": "2172721b5ed256944064e836870d9a6ecd7c1b67542edbad14da1f2ba0e99499",
+      "published_sha256": "1eea47e0c8857ff853a85507c6536f630df994ae2cd719ac5fcabeb9c1688f6f",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "retained final plotting implementation"
+    },
+    "scripts/build_final_artifacts.py": {
+      "source_sha256": "acce69905f4ec78364ac69835cc393f6b67bd80f3114ab648b7922ea6f3c68d2",
+      "published_sha256": "acce69905f4ec78364ac69835cc393f6b67bd80f3114ab648b7922ea6f3c68d2",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "tests/test_final_artifacts.py": {
+      "source_sha256": "96d599bb187b239ab98b87fd9eeb93375210c3755440664b4e6dcff4473a8449",
+      "published_sha256": "96d599bb187b239ab98b87fd9eeb93375210c3755440664b4e6dcff4473a8449",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/analysis_plan.md": {
+      "source_sha256": "51f08517ce1b3ffc54bb0d6072f1a7d74ef164b4bca7d16873dd1963b1021f14",
+      "published_sha256": "dcd811500a28e93761d7c0c99d609a3c54692342500639e7703893f23ca60d07",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/code_guide.md": {
+      "source_sha256": "4c976b286397e7f1be2267a1484ff30763a4dbcfed02f35528cdd86a5de218a3",
+      "published_sha256": "882c3f60c7b48679dfb6287d3a052ba5219f01a549ecc0e29786d7c60c285389",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/data_dictionary.md": {
+      "source_sha256": "2643465fddf8506eebdb9e8a1793f353d63bf5c7fd2ba5e48048ad32e825869a",
+      "published_sha256": "4148b05733177175c8a93fc22dd1e139987a146cb829eab5c4892666e6354779",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/field_contract.md": {
+      "source_sha256": "2889ed87d4ecdcdf5a0aa1c20794c6572f83fb17b8e7b02cbe0130378da7a345",
+      "published_sha256": "c6122fd6f89581464f6b8b04b920b8c639eee8354e86b7876bdab66fd8dbbaac",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/reproducibility.md": {
+      "source_sha256": "bc91fae03252727b5588620774dccff2a35934a9dfb9bdea1491ef5c3f7d6abc",
+      "published_sha256": "6f4283de8a90ab4d8a88324b4704fb1bec56a0cff285e7a7ea0e21c79a5c2671",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/decision_log.md": {
+      "source_sha256": "8e81e1bdfd9d746faede009cdda4af4b6a385bb2476cf345c4e0d2e25a737526",
+      "published_sha256": "e19b4c9fbbd221b9eaac8e27dd6b0d0bed7521b134fb096314b5f032318cc9f5",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/artifact_alignment.md": {
+      "source_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
+      "published_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
+    },
+    "docs/artifact_alignment_verification_20261023.json": {
+      "source_sha256": "8f6c431c572cd38ec793ad93bf2e1d9cc433f58b537ea24e41967b45179e1257",
+      "published_sha256": "8f6c431c572cd38ec793ad93bf2e1d9cc433f58b537ea24e41967b45179e1257",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "source_origin": "public artifact alignment"
     }
   },
   "excluded_files": [
@@ -3124,6 +3215,558 @@
       "published_sha256": "59f752040fd02b474692ffd2497ab1efdf2c5ea34f84e59f6a407b94e0581675",
       "transformation": "generated artifact links only; no manuscript narrative",
       "source_origin": "public aggregate artifact index"
+    },
+    "data/aggregate_sources/20261023/GAMM_reference_curves.json": {
+      "source_sha256": "ed3ead67551ac5c5fa016128b8aebc7d3595c789fc230ddb0029316e8886f8ef",
+      "published_sha256": "ed3ead67551ac5c5fa016128b8aebc7d3595c789fc230ddb0029316e8886f8ef",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/aggregate_sources/20261023/bounded_means.csv": {
+      "source_sha256": "88da20e8d23b706454fae4d35092ab11c97094dd9604dbf9e3ca6b9f1ec8348f",
+      "published_sha256": "88da20e8d23b706454fae4d35092ab11c97094dd9604dbf9e3ca6b9f1ec8348f",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 20
+    },
+    "data/aggregate_sources/20261023/marker_distribution.csv": {
+      "source_sha256": "d2b2cc83599c65bdbc788044c4d61a344089120a49d7d2b93df4c8620d30835a",
+      "published_sha256": "d2b2cc83599c65bdbc788044c4d61a344089120a49d7d2b93df4c8620d30835a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 20
+    },
+    "data/published/20261023/README.md": {
+      "source_sha256": "624419833390358a957c9b3eecfe0c59590929398bf7ae470a8fc892b78fb7ae",
+      "published_sha256": "624419833390358a957c9b3eecfe0c59590929398bf7ae470a8fc892b78fb7ae",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figure_index.json": {
+      "source_sha256": "c51767c53bdf5fe1791bb9317e2b96f3c3d6b483a213aeeed360aeede80a7fb5",
+      "published_sha256": "c51767c53bdf5fe1791bb9317e2b96f3c3d6b483a213aeeed360aeede80a7fb5",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure1_temporal_sensation.pdf": {
+      "source_sha256": "63c8c66a79e8e3991f96467373e7807bed462da8c8217e4ff0fcc099137e36a0",
+      "published_sha256": "63c8c66a79e8e3991f96467373e7807bed462da8c8217e4ff0fcc099137e36a0",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure1_temporal_sensation.png": {
+      "source_sha256": "e62b3eeb2557967d12a737bc5809d2d4457ce46dfd73e7ddc3141409fd579df1",
+      "published_sha256": "e62b3eeb2557967d12a737bc5809d2d4457ce46dfd73e7ddc3141409fd579df1",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure1_temporal_sensation.svg": {
+      "source_sha256": "b499d38a59bf4ff3f029010cc9de8c8f587068619c69d4a8e8b7d95f67144659",
+      "published_sha256": "b499d38a59bf4ff3f029010cc9de8c8f587068619c69d4a8e8b7d95f67144659",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure2_temporal_patterns.pdf": {
+      "source_sha256": "7d1133f76ea49536c5c103a895deccd7f03dfca956ce73e812577a0d5e62a40a",
+      "published_sha256": "7d1133f76ea49536c5c103a895deccd7f03dfca956ce73e812577a0d5e62a40a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure2_temporal_patterns.png": {
+      "source_sha256": "98f237a4df508477b7993f4f3fd633cf4968059ac743431710da39330605444d",
+      "published_sha256": "98f237a4df508477b7993f4f3fd633cf4968059ac743431710da39330605444d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure2_temporal_patterns.svg": {
+      "source_sha256": "32b6502d7123caa5911f01702bd5ce89227646d7ed9f226620f40e2b4139f4da",
+      "published_sha256": "32b6502d7123caa5911f01702bd5ce89227646d7ed9f226620f40e2b4139f4da",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure3_symptoms_regions.pdf": {
+      "source_sha256": "d6fe260f4109233e167e7896682b9babfefc615c91635b6d301e17029e8ccd11",
+      "published_sha256": "d6fe260f4109233e167e7896682b9babfefc615c91635b6d301e17029e8ccd11",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure3_symptoms_regions.png": {
+      "source_sha256": "70575f905883eb45d46967091e6718bbb99ffa9d9d153ef7068ae33704ba2221",
+      "published_sha256": "70575f905883eb45d46967091e6718bbb99ffa9d9d153ef7068ae33704ba2221",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure3_symptoms_regions.svg": {
+      "source_sha256": "e96a47fe79249ba1a8fb085953f61fb9ece3d9983d1d43611e826c3e1f30461c",
+      "published_sha256": "e96a47fe79249ba1a8fb085953f61fb9ece3d9983d1d43611e826c3e1f30461c",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure4_future_score_prediction.pdf": {
+      "source_sha256": "42a52b796b92cf73c99eabc598406ca46512ce5ff7cd955109eefffbe7e7d608",
+      "published_sha256": "42a52b796b92cf73c99eabc598406ca46512ce5ff7cd955109eefffbe7e7d608",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure4_future_score_prediction.png": {
+      "source_sha256": "18a33336a39a4b6b931e68541bd48c8207f7d9b081373f8674f438ba51c3ee5b",
+      "published_sha256": "18a33336a39a4b6b931e68541bd48c8207f7d9b081373f8674f438ba51c3ee5b",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/Figure4_future_score_prediction.svg": {
+      "source_sha256": "d7765584e422ca940934063a6f6b92e109a7edd1929280431edb8c177707fa2b",
+      "published_sha256": "d7765584e422ca940934063a6f6b92e109a7edd1929280431edb8c177707fa2b",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS1_FPCA_stability_reconstruction.pdf": {
+      "source_sha256": "ba95f50ac85dd34feddd1686b7babfc6158de776067a9e12fd9fbfe42a88cb73",
+      "published_sha256": "ba95f50ac85dd34feddd1686b7babfc6158de776067a9e12fd9fbfe42a88cb73",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS1_FPCA_stability_reconstruction.png": {
+      "source_sha256": "7ca34fab62804d007235ca49c65dbbbcce1a92abc4416f378ad53989a6eb066b",
+      "published_sha256": "7ca34fab62804d007235ca49c65dbbbcce1a92abc4416f378ad53989a6eb066b",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS1_FPCA_stability_reconstruction.svg": {
+      "source_sha256": "3568149da0f14b500de65668c48fc78a7bce0a77d2876823a7b7ee38446096b4",
+      "published_sha256": "3568149da0f14b500de65668c48fc78a7bce0a77d2876823a7b7ee38446096b4",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS2_GAMM_numerical_diagnostics.pdf": {
+      "source_sha256": "081490216afcf4e2861879d08c3d1bdbab42358100e8cefdb2cbcf2e9a795adc",
+      "published_sha256": "081490216afcf4e2861879d08c3d1bdbab42358100e8cefdb2cbcf2e9a795adc",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS2_GAMM_numerical_diagnostics.png": {
+      "source_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "published_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS2_GAMM_numerical_diagnostics.svg": {
+      "source_sha256": "e5a8ed47b6f1eb071ed41fe95cc3c42d2878967904b3be7f86cfa544771a71bc",
+      "published_sha256": "e5a8ed47b6f1eb071ed41fe95cc3c42d2878967904b3be7f86cfa544771a71bc",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS3_candidate_support_diagnostics.pdf": {
+      "source_sha256": "c685c38fd8a304d022ee878992233657881f673b39e3bf178e20cfabbca4b5ec",
+      "published_sha256": "c685c38fd8a304d022ee878992233657881f673b39e3bf178e20cfabbca4b5ec",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS3_candidate_support_diagnostics.png": {
+      "source_sha256": "94911e88f8059a893fb5d723a048fdcd4b3498793b98f30ee29eb21a54abea9b",
+      "published_sha256": "94911e88f8059a893fb5d723a048fdcd4b3498793b98f30ee29eb21a54abea9b",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS3_candidate_support_diagnostics.svg": {
+      "source_sha256": "1086809c3ae23e07a535050eed0aa732cfb2e7f62275a9fb397a5216269b4d51",
+      "published_sha256": "1086809c3ae23e07a535050eed0aa732cfb2e7f62275a9fb397a5216269b4d51",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS4_bounds_all_MC_status.pdf": {
+      "source_sha256": "e825cfe91be90541230cfb703757c9eef074e9a4f7187a4129dafd73eb69e239",
+      "published_sha256": "e825cfe91be90541230cfb703757c9eef074e9a4f7187a4129dafd73eb69e239",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS4_bounds_all_MC_status.png": {
+      "source_sha256": "5d9b8479a01b86c0355a189c5a674817c984350551d14c878d6751c32f919db3",
+      "published_sha256": "5d9b8479a01b86c0355a189c5a674817c984350551d14c878d6751c32f919db3",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS4_bounds_all_MC_status.svg": {
+      "source_sha256": "26bec6da425971168d5f52ebf03a79a30a4e9bb512920b2c989a494728f9eed0",
+      "published_sha256": "26bec6da425971168d5f52ebf03a79a30a4e9bb512920b2c989a494728f9eed0",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS5_partition_recovery_baseline.pdf": {
+      "source_sha256": "29a1545955818d69a5c2b0c7885e3f10778980f199cd28a12d4e6473e69aa09a",
+      "published_sha256": "29a1545955818d69a5c2b0c7885e3f10778980f199cd28a12d4e6473e69aa09a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS5_partition_recovery_baseline.png": {
+      "source_sha256": "a7762ec18c0a8fc8730f603cf28a3355d6c16b98daa0e965e616c9e7ac48c51c",
+      "published_sha256": "a7762ec18c0a8fc8730f603cf28a3355d6c16b98daa0e965e616c9e7ac48c51c",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS5_partition_recovery_baseline.svg": {
+      "source_sha256": "32760ff3f33d87b2027a31137a00103f6629b0b0b1fcd3557a2c4b933ec359f5",
+      "published_sha256": "32760ff3f33d87b2027a31137a00103f6629b0b0b1fcd3557a2c4b933ec359f5",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS6_observation_support.pdf": {
+      "source_sha256": "59887e38d9c0b2b323ce52c22e4e5564a79ccb0d9c8a7ee6de605cba6bed6d9d",
+      "published_sha256": "59887e38d9c0b2b323ce52c22e4e5564a79ccb0d9c8a7ee6de605cba6bed6d9d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS6_observation_support.png": {
+      "source_sha256": "ddd1755e810bf0c07ec1ff6413d56e3c82f5aacb7cdd8e581463480b08afbb51",
+      "published_sha256": "ddd1755e810bf0c07ec1ff6413d56e3c82f5aacb7cdd8e581463480b08afbb51",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/figures/FigureS6_observation_support.svg": {
+      "source_sha256": "bca083741496d7048d5aabc76cc16fb9d384f218c1174a281bba98d4d1279b92",
+      "published_sha256": "bca083741496d7048d5aabc76cc16fb9d384f218c1174a281bba98d4d1279b92",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/manifest.json": {
+      "source_sha256": "d2c6421aad510d4b400de473111658f82954b6b483c1a2a741fe188582aaf2cc",
+      "published_sha256": "d2c6421aad510d4b400de473111658f82954b6b483c1a2a741fe188582aaf2cc",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/metadata.json": {
+      "source_sha256": "1975cd2d5b618a1367cf2fb58648518d653aafb0ba394a7d0589d4e2a34d25c8",
+      "published_sha256": "1975cd2d5b618a1367cf2fb58648518d653aafb0ba394a7d0589d4e2a34d25c8",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure1_temporal_sensation_deuteranopia.png": {
+      "source_sha256": "0cff488190ea3e78351eac3bf143056bacac689d9716486e66f643bc6cc2b41d",
+      "published_sha256": "0cff488190ea3e78351eac3bf143056bacac689d9716486e66f643bc6cc2b41d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure1_temporal_sensation_gray.png": {
+      "source_sha256": "36d29dfa4ddf74139862564ddefa25690d9a64047b81ba7e4daf3bd64618f354",
+      "published_sha256": "36d29dfa4ddf74139862564ddefa25690d9a64047b81ba7e4daf3bd64618f354",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure1_temporal_sensation_protanopia.png": {
+      "source_sha256": "9e1493f0891696dce9f8331550128fbdd297a266c8602237d837394b57d09ac4",
+      "published_sha256": "9e1493f0891696dce9f8331550128fbdd297a266c8602237d837394b57d09ac4",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure2_temporal_patterns_deuteranopia.png": {
+      "source_sha256": "7b7b39ad5b4ced822a802e0cd6d3c7a8723d57943092726e18bd11e4b3a89f64",
+      "published_sha256": "7b7b39ad5b4ced822a802e0cd6d3c7a8723d57943092726e18bd11e4b3a89f64",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure2_temporal_patterns_gray.png": {
+      "source_sha256": "3cc56aa01eec8b195af9b90a939eb0d80bc8fa28faf22f91e817d148a52871b3",
+      "published_sha256": "3cc56aa01eec8b195af9b90a939eb0d80bc8fa28faf22f91e817d148a52871b3",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure2_temporal_patterns_protanopia.png": {
+      "source_sha256": "f8c144b5ad4c41ab8089ddff163d00e1d7fcc336592dc6404faafef7af088c04",
+      "published_sha256": "f8c144b5ad4c41ab8089ddff163d00e1d7fcc336592dc6404faafef7af088c04",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure3_symptoms_regions_deuteranopia.png": {
+      "source_sha256": "4a4d027ae3ab29fd6891cd7386e23cd6a30c6404328e522f2a321830e98cb048",
+      "published_sha256": "4a4d027ae3ab29fd6891cd7386e23cd6a30c6404328e522f2a321830e98cb048",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure3_symptoms_regions_gray.png": {
+      "source_sha256": "610021d9e7394ab222161a3eb26f856de87009ba267fbcb72b0e58489a768c80",
+      "published_sha256": "610021d9e7394ab222161a3eb26f856de87009ba267fbcb72b0e58489a768c80",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure3_symptoms_regions_protanopia.png": {
+      "source_sha256": "15baac7ad86a0153d186d73b98191a721ef26be61b5e8ab9a3ae2fb94ed84ead",
+      "published_sha256": "15baac7ad86a0153d186d73b98191a721ef26be61b5e8ab9a3ae2fb94ed84ead",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure4_future_score_prediction_deuteranopia.png": {
+      "source_sha256": "9669879d1c6fc0afc398422a0bf787042e12b2bba66e653de53bd38d0f931fb6",
+      "published_sha256": "9669879d1c6fc0afc398422a0bf787042e12b2bba66e653de53bd38d0f931fb6",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure4_future_score_prediction_gray.png": {
+      "source_sha256": "19f5f5e276e968b7af84d9cc64fdeec9f2aded5df4d78e9ee89f2f8790eba942",
+      "published_sha256": "19f5f5e276e968b7af84d9cc64fdeec9f2aded5df4d78e9ee89f2f8790eba942",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/Figure4_future_score_prediction_protanopia.png": {
+      "source_sha256": "ea3dc6df4783c0b3c99112c72604a4a62614dbaa1a0e2e449d5344581e24c66d",
+      "published_sha256": "ea3dc6df4783c0b3c99112c72604a4a62614dbaa1a0e2e449d5344581e24c66d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS1_FPCA_stability_reconstruction_deuteranopia.png": {
+      "source_sha256": "ade3ce0bf54b704b2a8d1ec2d44ea4c18c5d38e486bfc764156b8c96a0ac8db2",
+      "published_sha256": "ade3ce0bf54b704b2a8d1ec2d44ea4c18c5d38e486bfc764156b8c96a0ac8db2",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS1_FPCA_stability_reconstruction_gray.png": {
+      "source_sha256": "cd326f7a46293854b8034808d2e43481f0224a0c7a880e9e279b61febb048a51",
+      "published_sha256": "cd326f7a46293854b8034808d2e43481f0224a0c7a880e9e279b61febb048a51",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS1_FPCA_stability_reconstruction_protanopia.png": {
+      "source_sha256": "52a9a363f2626b28c6e7b1830f4e4e4056597c12f7d8ab7f0dd07c67ae0cdfe0",
+      "published_sha256": "52a9a363f2626b28c6e7b1830f4e4e4056597c12f7d8ab7f0dd07c67ae0cdfe0",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS2_GAMM_numerical_diagnostics_deuteranopia.png": {
+      "source_sha256": "fc453ab42fafc57f8521a9a3ac3eba89f8672d9919a8c52bee46a9bab7837e29",
+      "published_sha256": "fc453ab42fafc57f8521a9a3ac3eba89f8672d9919a8c52bee46a9bab7837e29",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS2_GAMM_numerical_diagnostics_gray.png": {
+      "source_sha256": "68cb9789ab29b3779ee03972639a7a428194f09a14342b009f12c515017245e9",
+      "published_sha256": "68cb9789ab29b3779ee03972639a7a428194f09a14342b009f12c515017245e9",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS2_GAMM_numerical_diagnostics_protanopia.png": {
+      "source_sha256": "a9d8fd06130d637a178f66b15b547a1b24c375fe684826abf6f0757c6c309ed6",
+      "published_sha256": "a9d8fd06130d637a178f66b15b547a1b24c375fe684826abf6f0757c6c309ed6",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS3_candidate_support_diagnostics_deuteranopia.png": {
+      "source_sha256": "a9d6c53075de43a0965891ae61546e6fe3fd268cf72b70ebc5f4aa65c30bab88",
+      "published_sha256": "a9d6c53075de43a0965891ae61546e6fe3fd268cf72b70ebc5f4aa65c30bab88",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS3_candidate_support_diagnostics_gray.png": {
+      "source_sha256": "86483a09ae4290ce0942d72ff9cbfa3014822964870764abd7dacd97a5a84ad4",
+      "published_sha256": "86483a09ae4290ce0942d72ff9cbfa3014822964870764abd7dacd97a5a84ad4",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS3_candidate_support_diagnostics_protanopia.png": {
+      "source_sha256": "59e41ab9488111da3094bea21c62ea5f0bda57f428117f7b9bb2d38b2b0aae65",
+      "published_sha256": "59e41ab9488111da3094bea21c62ea5f0bda57f428117f7b9bb2d38b2b0aae65",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS4_bounds_all_MC_status_deuteranopia.png": {
+      "source_sha256": "168c7c3d2f831290a11f773c61cd1a757ab6ddab93e85ecb70e0fed4b31c5d1f",
+      "published_sha256": "168c7c3d2f831290a11f773c61cd1a757ab6ddab93e85ecb70e0fed4b31c5d1f",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS4_bounds_all_MC_status_gray.png": {
+      "source_sha256": "038aafad19a734b27e1bf69c4999579cbbf7e4e296ecb1cde81a59e417603b4e",
+      "published_sha256": "038aafad19a734b27e1bf69c4999579cbbf7e4e296ecb1cde81a59e417603b4e",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS4_bounds_all_MC_status_protanopia.png": {
+      "source_sha256": "fbcc54467ca31424831948d599bfe7dc67f00f085c53a6209402f8df6b25eada",
+      "published_sha256": "fbcc54467ca31424831948d599bfe7dc67f00f085c53a6209402f8df6b25eada",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS5_partition_recovery_baseline_deuteranopia.png": {
+      "source_sha256": "6a9704c9ac7a0eb3c8bb1e7512577e38e80218d3b4aa484d345bf5e703c4a665",
+      "published_sha256": "6a9704c9ac7a0eb3c8bb1e7512577e38e80218d3b4aa484d345bf5e703c4a665",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS5_partition_recovery_baseline_gray.png": {
+      "source_sha256": "6b80478dfaa295613d1556fbc67ff070a7ecdd6f77f24f59112ae23489822a36",
+      "published_sha256": "6b80478dfaa295613d1556fbc67ff070a7ecdd6f77f24f59112ae23489822a36",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS5_partition_recovery_baseline_protanopia.png": {
+      "source_sha256": "6ec1752bfe1d691a6d15bf3984a0f87f2d070ab739a465440217434fc966dd84",
+      "published_sha256": "6ec1752bfe1d691a6d15bf3984a0f87f2d070ab739a465440217434fc966dd84",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS6_observation_support_deuteranopia.png": {
+      "source_sha256": "465d8161d5f2b1afffdb5833d9665dfe9c005501590d59a89f18c0d221c496c5",
+      "published_sha256": "465d8161d5f2b1afffdb5833d9665dfe9c005501590d59a89f18c0d221c496c5",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS6_observation_support_gray.png": {
+      "source_sha256": "20943139552ede80fb86f3b5e05fc5cda4e8ececa534b13994187dec4b4f180a",
+      "published_sha256": "20943139552ede80fb86f3b5e05fc5cda4e8ececa534b13994187dec4b4f180a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/FigureS6_observation_support_protanopia.png": {
+      "source_sha256": "030e1f1b7aee2e730c3078ee42b744a32baf6fe5fbfbd5db56178d9e24400197",
+      "published_sha256": "030e1f1b7aee2e730c3078ee42b744a32baf6fe5fbfbd5db56178d9e24400197",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/qa/text_bounds.json": {
+      "source_sha256": "9cd999af099f799b0f26c041dcf6b4ad03acecea3577bee0c2651f12bc4e2b1f",
+      "published_sha256": "9cd999af099f799b0f26c041dcf6b4ad03acecea3577bee0c2651f12bc4e2b1f",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/render_manifest.json": {
+      "source_sha256": "f2b131037201a5ce5f4c0041f81fa38a41d02c35dc2f0c1ac7c818f9789ff995",
+      "published_sha256": "f2b131037201a5ce5f4c0041f81fa38a41d02c35dc2f0c1ac7c818f9789ff995",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": null
+    },
+    "data/published/20261023/tables/Table1_cohort_and_analysis_sets.csv": {
+      "source_sha256": "3aceb2d59f9a093e4d405f421e48650c13e712fdddf22f147c367fd7f8c41309",
+      "published_sha256": "3aceb2d59f9a093e4d405f421e48650c13e712fdddf22f147c367fd7f8c41309",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 13
+    },
+    "data/published/20261023/tables/Table2_early_group_recognition.csv": {
+      "source_sha256": "b967369ab0f967a6ea026702db15c24d2021308e9204ebc59d1485ac30c08051",
+      "published_sha256": "b967369ab0f967a6ea026702db15c24d2021308e9204ebc59d1485ac30c08051",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 16
+    },
+    "data/published/20261023/tables/Table3_prediction_primary_paired.csv": {
+      "source_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "published_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 4
+    },
+    "data/published/20261023/tables/TableS10_partition_recovery_and_baseline.csv": {
+      "source_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "published_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 232
+    },
+    "data/published/20261023/tables/TableS11_baseline_descriptive.csv": {
+      "source_sha256": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+      "published_sha256": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 12
+    },
+    "data/published/20261023/tables/TableS12_FPCA_redundancy.csv": {
+      "source_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "published_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 24
+    },
+    "data/published/20261023/tables/TableS13_prediction_all20_repeats.csv": {
+      "source_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "published_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 800
+    },
+    "data/published/20261023/tables/TableS14_FPCA_FVE_and_basis.csv": {
+      "source_sha256": "196aa8564476360c875251ca8a38f5ba4a2f3db63d1a0863d773b35e0ead4e6c",
+      "published_sha256": "196aa8564476360c875251ca8a38f5ba4a2f3db63d1a0863d773b35e0ead4e6c",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 120
+    },
+    "data/published/20261023/tables/TableS15_FPCA_reconstruction_all_repeats.csv": {
+      "source_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "published_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 200
+    },
+    "data/published/20261023/tables/TableS16_GAMM_reference_diagnostics.csv": {
+      "source_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "published_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 7
+    },
+    "data/published/20261023/tables/TableS17_GAMM_conditional_diagnostics.csv": {
+      "source_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "published_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 39
+    },
+    "data/published/20261023/tables/TableS18_candidate_support_diagnostics.csv": {
+      "source_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "published_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 3
+    },
+    "data/published/20261023/tables/TableS19_reference_group_sizes.csv": {
+      "source_sha256": "bc23d9f735d3805ab33bf8007bc1648933f1bfd85499bfef25604433a9fe5d43",
+      "published_sha256": "bc23d9f735d3805ab33bf8007bc1648933f1bfd85499bfef25604433a9fe5d43",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 48
+    },
+    "data/published/20261023/tables/TableS1_all18_modules.csv": {
+      "source_sha256": "219154112a6741e72949cf0f344ecb22d85550b8e2db6817bee1175c36e62e6e",
+      "published_sha256": "219154112a6741e72949cf0f344ecb22d85550b8e2db6817bee1175c36e62e6e",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 18
+    },
+    "data/published/20261023/tables/TableS20_descriptive_symptom_region_rules.csv": {
+      "source_sha256": "79adea8eb7eb503bfc014c53096e78fc752735c25abaabac7295a5bdff261992",
+      "published_sha256": "79adea8eb7eb503bfc014c53096e78fc752735c25abaabac7295a5bdff261992",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 10
+    },
+    "data/published/20261023/tables/TableS2_recorded_codes_all139.csv": {
+      "source_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "published_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 139
+    },
+    "data/published/20261023/tables/TableS3_finite_changes_all364.csv": {
+      "source_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "published_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 364
+    },
+    "data/published/20261023/tables/TableS4_FPCA_all24_diagnostics.csv": {
+      "source_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "published_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 24
+    },
+    "data/published/20261023/tables/TableS5_prediction_all_weights.csv": {
+      "source_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "published_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 40
+    },
+    "data/published/20261023/tables/TableS6_all1255_MC_statistics.csv": {
+      "source_sha256": "f9e6de8fe73f3bdae3749bc920aac47ff5284e38eb30151230aa2c644e62acf3",
+      "published_sha256": "f9e6de8fe73f3bdae3749bc920aac47ff5284e38eb30151230aa2c644e62acf3",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 1255
+    },
+    "data/published/20261023/tables/TableS7_cluster_summary.csv": {
+      "source_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "published_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 176
+    },
+    "data/published/20261023/tables/TableS8_U06_variability_summary.csv": {
+      "source_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "published_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 96
+    },
+    "data/published/20261023/tables/TableS9_candidate_summary.csv": {
+      "source_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "published_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "kind": "reviewed_aggregate_alignment_20261023",
+      "rows": 178
     }
   },
   "source_report_manifest_sha256": "7a9ecd2d23f2a8fdb7967b6970439a818d249cdfbc7bd0d54dafb0ff97c0229f",
@@ -3142,6 +3785,16 @@
     "scope": "pre-publication snapshot; live receipt is docs/publication_status.json"
   },
   "maintenance_scope": {
+    "date": "2026-10-23",
+    "source_snapshot_files": 416,
+    "approved_aggregate_files": 208,
+    "unpublished_writing_excluded_from_current_tree": true,
+    "analytical_expressions_preserved": true,
+    "original_source_hashes_retained": true,
+    "verification_record": "docs/artifact_alignment_verification_20261023.json"
+  },
+  "updated_utc": "2026-10-22T23:23:24.747217+00:00",
+  "prior_maintenance_scope": {
     "date": "2026-10-05",
     "source_snapshot_files": 401,
     "approved_aggregate_files": 116,
@@ -3149,5 +3802,14 @@
     "analytical_expressions_preserved": true,
     "original_source_hashes_retained": true,
     "verification_record": "docs/code_review_20261005.json"
+  },
+  "artifact_alignment": {
+    "target_revision": "2026-10-14",
+    "artifact_version": "20261023",
+    "source_figure_script_sha256": "2172721b5ed256944064e836870d9a6ecd7c1b67542edbad14da1f2ba0e99499",
+    "config": "config/final_artifacts_20261023_v1.json",
+    "manifest": "data/published/20261023/manifest.json",
+    "source_and_target_cross_checks": "all ten PNG files byte-identical; all 74 new-table rows/rules matched; original analysis files retained",
+    "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642"
   }
 }

@@ -1,12 +1,12 @@
-# Current exploratory analysis plan — public edition 2026-10-05
+# Current exploratory analysis plan — public edition 2026-10-23
 
-This document summarizes the completed, data-supported analysis as of 2026-10-04. It replaces the old publication pipeline as the current entry point. The upstream plan describes additional, results-informed analyses of an existing cohort; it is not a preregistration. Draft parameters are not automatically frozen scientific decisions. The original private plan and decision log are retained with source hashes in `release_inventory.json`; individual adjudications are not reproduced here.
+This document summarizes the completed, data-supported analysis as of 2026-10-04, with artifact numbering and measurement wording aligned to the 2026-10-14 revision. It replaces the old publication pipeline as the current entry point. The upstream plan describes additional, results-informed analyses of an existing cohort; it is not a preregistration. Draft parameters are not automatically frozen scientific decisions. The original private plan and decision log are retained with source hashes in `release_inventory.json`; individual adjudications are not reproduced here.
 
 ## Population, scale and observed support
 
-The current identity-aware cohort has 215 people and 3,424 numeric VAS ratings at actual integer minutes 1–20 on the 0–10 scale. Complete minutes 1–10 include 206 people; complete 1–20 include 56. There is no measured minute-zero VAS in the published analysis input. Do not fabricate a baseline value. Investigator-confirmed dose is 10% w/v × 10 μL = 1 mg.
+The current identity-aware cohort has 215 people and 3,424 custom overall sensation ratings at actual integer minutes 1–20 on the 0–10 scale. Historical VAS variable names refer to this custom score; they do not identify a validated visual analogue scale. Complete minutes 1–10 include 206 people; complete 1–20 include 56. There is no measured minute-zero VAS in the published analysis input. Do not fabricate a baseline value. Investigator-confirmed dose is 10% w/v × 10 μL = 1 mg.
 
-E records stopping after two pain-free minutes; T records discontinuation, usually excessive stimulation. Preserve codes and later missing cells separately. The first code column is a recorded minute, not a verified precise stop time or the start of a pain-free interval. Neither mechanism justifies random missingness, zero filling or last-observation carry-forward.
+E records stopping after two consecutive zeros with confirmed absence of discomfort; T records discontinuation for intolerable sensations rated 10. Preserve codes and later missing cells separately. The first code column is a recorded minute, not a verified precise stop time or the start of a no-discomfort interval. Neither mechanism justifies random missingness, zero filling or last-observation carry-forward.
 
 The primary descriptive target is the VAS process among people actually observed at each minute. A full-cohort counterfactual 20-minute trajectory is not identified without assumptions. Complete cases, observed-pair composition decompositions and scale-bounded algebraic ranges have different targets and are labelled separately.
 
@@ -32,4 +32,4 @@ MC targets were met for 135/139 recorded-code statistics and 336/364 finite-chan
 
 ## Scientific conditions still unmet
 
-Independent physiology reference/QC, source units/clocks, calibrated instantaneous derivative inference, clinical Markov states and implementation, phase/directionality, external prediction and clinical phenotype validation remain unmet. Sealed validation has not been opened. Interface-only or design-only code must continue to reject unsupported inference; no invented estimates may replace an error. The full 18-module status is [Table S1](../data/published/20261004/tables/TableS1_all18_modules.csv).
+Independent physiology reference/QC, source units/clocks, calibrated instantaneous derivative inference, clinical Markov states and implementation, phase/directionality, external prediction and clinical phenotype validation remain unmet. Sealed validation has not been opened. Interface-only or design-only code must continue to reject unsupported inference; no invented estimates may replace an error. The full 18-module status is [Table S1](../data/published/20261023/tables/TableS1_all18_modules.csv).

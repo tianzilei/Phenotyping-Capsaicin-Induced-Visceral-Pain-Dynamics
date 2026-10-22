@@ -1,0 +1,45 @@
+# Final aggregate figures and tables
+
+Artifact numbering follows the October 14, 2026 revision.
+
+## Figures
+
+- [Figure1_temporal_sensation](figures/Figure1_temporal_sensation.png): [PDF](figures/Figure1_temporal_sensation.pdf), [SVG](figures/Figure1_temporal_sensation.svg)
+- [Figure2_temporal_patterns](figures/Figure2_temporal_patterns.png): [PDF](figures/Figure2_temporal_patterns.pdf), [SVG](figures/Figure2_temporal_patterns.svg)
+- [Figure3_symptoms_regions](figures/Figure3_symptoms_regions.png): [PDF](figures/Figure3_symptoms_regions.pdf), [SVG](figures/Figure3_symptoms_regions.svg)
+- [Figure4_future_score_prediction](figures/Figure4_future_score_prediction.png): [PDF](figures/Figure4_future_score_prediction.pdf), [SVG](figures/Figure4_future_score_prediction.svg)
+- [FigureS1_FPCA_stability_reconstruction](figures/FigureS1_FPCA_stability_reconstruction.png): [PDF](figures/FigureS1_FPCA_stability_reconstruction.pdf), [SVG](figures/FigureS1_FPCA_stability_reconstruction.svg)
+- [FigureS2_GAMM_numerical_diagnostics](figures/FigureS2_GAMM_numerical_diagnostics.png): [PDF](figures/FigureS2_GAMM_numerical_diagnostics.pdf), [SVG](figures/FigureS2_GAMM_numerical_diagnostics.svg)
+- [FigureS3_candidate_support_diagnostics](figures/FigureS3_candidate_support_diagnostics.png): [PDF](figures/FigureS3_candidate_support_diagnostics.pdf), [SVG](figures/FigureS3_candidate_support_diagnostics.svg)
+- [FigureS4_bounds_all_MC_status](figures/FigureS4_bounds_all_MC_status.png): [PDF](figures/FigureS4_bounds_all_MC_status.pdf), [SVG](figures/FigureS4_bounds_all_MC_status.svg)
+- [FigureS5_partition_recovery_baseline](figures/FigureS5_partition_recovery_baseline.png): [PDF](figures/FigureS5_partition_recovery_baseline.pdf), [SVG](figures/FigureS5_partition_recovery_baseline.svg)
+- [FigureS6_observation_support](figures/FigureS6_observation_support.png): [PDF](figures/FigureS6_observation_support.pdf), [SVG](figures/FigureS6_observation_support.svg)
+
+## Tables
+
+- [Table1_cohort_and_analysis_sets](tables/Table1_cohort_and_analysis_sets.csv)
+- [Table2_early_group_recognition](tables/Table2_early_group_recognition.csv)
+- [Table3_prediction_primary_paired](tables/Table3_prediction_primary_paired.csv)
+- [TableS10_partition_recovery_and_baseline](tables/TableS10_partition_recovery_and_baseline.csv)
+- [TableS11_baseline_descriptive](tables/TableS11_baseline_descriptive.csv)
+- [TableS12_FPCA_redundancy](tables/TableS12_FPCA_redundancy.csv)
+- [TableS13_prediction_all20_repeats](tables/TableS13_prediction_all20_repeats.csv)
+- [TableS14_FPCA_FVE_and_basis](tables/TableS14_FPCA_FVE_and_basis.csv)
+- [TableS15_FPCA_reconstruction_all_repeats](tables/TableS15_FPCA_reconstruction_all_repeats.csv)
+- [TableS16_GAMM_reference_diagnostics](tables/TableS16_GAMM_reference_diagnostics.csv)
+- [TableS17_GAMM_conditional_diagnostics](tables/TableS17_GAMM_conditional_diagnostics.csv)
+- [TableS18_candidate_support_diagnostics](tables/TableS18_candidate_support_diagnostics.csv)
+- [TableS19_reference_group_sizes](tables/TableS19_reference_group_sizes.csv)
+- [TableS1_all18_modules](tables/TableS1_all18_modules.csv)
+- [TableS20_descriptive_symptom_region_rules](tables/TableS20_descriptive_symptom_region_rules.csv)
+- [TableS2_recorded_codes_all139](tables/TableS2_recorded_codes_all139.csv)
+- [TableS3_finite_changes_all364](tables/TableS3_finite_changes_all364.csv)
+- [TableS4_FPCA_all24_diagnostics](tables/TableS4_FPCA_all24_diagnostics.csv)
+- [TableS5_prediction_all_weights](tables/TableS5_prediction_all_weights.csv)
+- [TableS6_all1255_MC_statistics](tables/TableS6_all1255_MC_statistics.csv)
+- [TableS7_cluster_summary](tables/TableS7_cluster_summary.csv)
+- [TableS8_U06_variability_summary](tables/TableS8_U06_variability_summary.csv)
+- [TableS9_candidate_summary](tables/TableS9_candidate_summary.csv)
+
+Table S1 separates historical plans from completed resampling and validation budgets.
+The prior minute-support table remains an input under the October 4 artifact version.

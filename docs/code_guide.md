@@ -13,7 +13,9 @@
 | `R/vas_models.R`, `fpca_followup.R`, `sparse_fpca.R` | Implemented working models and FPCA analyses |
 | `R/interfaces.R` | Unimplemented interfaces that raise errors |
 | `scripts/deidentify_data.py` | Private-input export CLI |
-| `scripts/build_scientific_figures.py` | All final figures/tables rendered from public aggregates, no fitting |
+| `scripts/build_final_artifacts.py` | Current 4/6 figures and 3/20 tables from public aggregates, no fitting |
+| `src/capsaicin/final_figures.py`, `final_artifacts.py` | Final layout and numbered aggregate table exports |
+| `scripts/build_scientific_figures.py` | Historical October 4 artifact renderer |
 | `scripts/verify_public_release.py` | Current-tree privacy, credential-pattern and aggregate-hash audit |
 | `scripts/verify_repository_structure.py` | Current-tree writing boundaries and English comments/docstrings |
 | `scripts/verify_public_history.py` | All reachable commits/objects, integrity and concurrent-ref checks |

@@ -1,0 +1,222 @@
+{
+  "version": "final_artifacts_20261023_v1",
+  "target_revision": "2026-10-14",
+  "analysis_as_of": "2026-10-04",
+  "prior_tables": "data/published/20261004/tables",
+  "prior_aggregates": "data/aggregate_sources/20261004",
+  "plot_inputs": "data/aggregate_sources/20261023",
+  "rule_definitions": "resources/legacy_codebook/analysis/rome_rules.py",
+  "new_inference": false,
+  "main_figures": 4,
+  "supplement_figures": 6,
+  "main_tables": 3,
+  "supplement_tables": 20,
+  "figure_mapping": {
+    "Figure1_temporal_sensation": "Figure2_VAS_composition_finite_changes",
+    "Figure2_temporal_patterns": "Figure4_complete_FPCA",
+    "Figure3_symptoms_regions": "Figure3_symptoms_regions_cooccurrence",
+    "Figure4_future_score_prediction": "Figure5_internal_prediction",
+    "FigureS1_FPCA_stability_reconstruction": "FigureS1_FPCA_stability_reconstruction",
+    "FigureS2_GAMM_numerical_diagnostics": "FigureS2_GAMM_numerical_diagnostics",
+    "FigureS3_candidate_support_diagnostics": "FigureS3_candidate_support_diagnostics",
+    "FigureS4_bounds_all_MC_status": "FigureS4_bounds_all_MC_status",
+    "FigureS5_partition_recovery_baseline": "FigureS5_partition_recovery_baseline",
+    "FigureS6_observation_support": "Figure1_observation_support"
+  },
+  "module_reporting": {
+    "U01": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/observations/VAS_observation_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/observations/VAS_observation_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_observation_bootstrap_20261003_v2.json"
+      ]
+    },
+    "U02": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/R_main/gamm_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/R_main/gamm_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_R_analysis_20261003_v1.json"
+      ]
+    },
+    "U04": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/python_remaining/cluster_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/python_remaining/cluster_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U06": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/variability/U06_variability_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/variability/U06_variability_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_variability_bootstrap_20261003_v2.json"
+      ]
+    },
+    "U07": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/completion/symptoms_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/completion/symptoms_summary.json"
+      ],
+      "method_configurations": [
+        "config/scientific_completion_20261004_v1.json"
+      ]
+    },
+    "U08": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U09": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U10": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/python_remaining/candidate_summary.json"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U15": {
+      "bootstrap_sources": {
+        "actual_bootstrap_replicates_per_specification": "data/aggregate_sources/20261004/completion/finite_changes_summary.json"
+      },
+      "result_sources": [
+        "data/aggregate_sources/20261004/completion/finite_changes_summary.json"
+      ],
+      "method_configurations": [
+        "config/scientific_completion_20261004_v1.json"
+      ]
+    },
+    "U03": {
+      "bootstrap_sources": {
+        "actual_complete_fpca_replicates_per_interval": "data/aggregate_sources/20261004/FPCA_precision/complete_summary.json",
+        "actual_sparse_fpca_replicates_per_specification": "data/aggregate_sources/20261004/R_main/sparse_summary.json"
+      },
+      "validation_repeats": 20,
+      "result_sources": [
+        "data/aggregate_sources/20261004/FPCA_precision/complete_summary.json",
+        "data/aggregate_sources/20261004/R_main/sparse_summary.json",
+        "data/published/20261004/tables/TableS15_FPCA_reconstruction_all_repeats.csv"
+      ],
+      "method_configurations": [
+        "config/dask_R_complete_precision_20261004_v1.json",
+        "config/dask_R_analysis_20261003_v1.json"
+      ]
+    },
+    "U05": {
+      "validation_repeats": 20,
+      "result_sources": [
+        "data/published/20261004/tables/TableS10_partition_recovery_and_baseline.csv"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U11": {
+      "validation_repeats": 20,
+      "result_sources": [
+        "data/published/20261004/tables/TableS10_partition_recovery_and_baseline.csv"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U12": {
+      "validation_repeats": 20,
+      "result_sources": [
+        "data/published/20261004/tables/TableS10_partition_recovery_and_baseline.csv"
+      ],
+      "method_configurations": [
+        "config/dask_python_remaining_20261003_v1.json"
+      ]
+    },
+    "U13": {
+      "validation_repeats": 20,
+      "result_sources": [
+        "data/published/20261004/tables/TableS13_prediction_all20_repeats.csv"
+      ],
+      "method_configurations": [
+        "config/dask_prediction_repeats_20261003_v1.json"
+      ]
+    }
+  },
+  "input_sha256": {
+    "config/dask_R_analysis_20261003_v1.json": "582d7d1ed823fbd841511a8a1960f7597952884ece03bd2e08f3b0e836a4f91f",
+    "config/dask_R_complete_precision_20261004_v1.json": "67b5962a9f5fd98d989f064c6bcb20e8993a8f527347c3ddf078b1eb40070ab5",
+    "config/dask_observation_bootstrap_20261003_v2.json": "45eca903ae1707f3ec861e8b98d05ebfb4eb9f9b6be8105b94ce42523c22ba9c",
+    "config/dask_prediction_repeats_20261003_v1.json": "04805e40d839fdb3da21f365afd513fd6addc52b4ab24f4e4d9451ee9e2b2c94",
+    "config/dask_python_remaining_20261003_v1.json": "9e4aaf9bd27f984423b6d7aabc3c5b7378ec223bb77727fd3cdfbc183b1298e9",
+    "config/dask_variability_bootstrap_20261003_v2.json": "2f9f8861d94186d3989f25d62d975a089e00645eaca6b97e9a5fb0538c8c8661",
+    "config/scientific_completion_20261004_v1.json": "c83da00b623632e7bf0c4585d95d7037d9a95f4826bf0402294b5748f1d9b166",
+    "data/aggregate_sources/20261004/FPCA_precision/complete_summary.json": "db02dca861d05bc232377308e6c87b54116d3176755200574512bb40634cf445",
+    "data/aggregate_sources/20261004/R_main/gamm_summary.json": "26af83b8900fb9ce884e5271eb5a3c32fd0c6d031e30750c673822242da29629",
+    "data/aggregate_sources/20261004/R_main/sparse_summary.json": "21cb88b66f43ba7f6d862ef33dae8e6e95ab9111e8a8d83b932c41a2f7614246",
+    "data/aggregate_sources/20261004/completion/finite_changes_summary.json": "e2b73f84255d9261c769ef62839d700d99d5130f1a06a02274c0a375afe52fa5",
+    "data/aggregate_sources/20261004/completion/symptoms_summary.json": "a1ae248b9a88e0ff8e9446b5a2bc156c5bb87835a06921dc5175243dcaee1c44",
+    "data/aggregate_sources/20261004/observations/VAS_observation_summary.json": "0c235848c1edf79346e8957035ce24d739e9fbc6ec8cd52200e421dc1a51bdee",
+    "data/aggregate_sources/20261004/python_remaining/candidate_summary.json": "5a00c57f19f11d2400820442d2e365e9fa050f9d02917d517201b073ecea3b25",
+    "data/aggregate_sources/20261004/python_remaining/cluster_summary.json": "5db7f9c65a6bae4de9ef0489aeab5a6be82926613841176a0dfdfbc860b2069a",
+    "data/aggregate_sources/20261004/variability/U06_variability_summary.json": "1d38e0b9a9724f05bb2baba832aab6a330054ddc03c152a8c6884eb0bd08b30f",
+    "data/aggregate_sources/20261023/GAMM_reference_curves.json": "ed3ead67551ac5c5fa016128b8aebc7d3595c789fc230ddb0029316e8886f8ef",
+    "data/aggregate_sources/20261023/bounded_means.csv": "88da20e8d23b706454fae4d35092ab11c97094dd9604dbf9e3ca6b9f1ec8348f",
+    "data/aggregate_sources/20261023/marker_distribution.csv": "d2b2cc83599c65bdbc788044c4d61a344089120a49d7d2b93df4c8620d30835a",
+    "data/published/20261004/tables/Table1_cohort_and_analysis_sets.csv": "3770512f99847aa96c34ee695c90e245bca5d95b265e35ada7f57c45e5a36cf9",
+    "data/published/20261004/tables/Table2_minute_support_composition_finite_rates.csv": "db3c81491a0f60aa317f8baae6502e526b89bdc733a9ccaad667225f2690dbcf",
+    "data/published/20261004/tables/Table3_prediction_primary_paired.csv": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+    "data/published/20261004/tables/TableS10_partition_recovery_and_baseline.csv": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+    "data/published/20261004/tables/TableS11_baseline_descriptive.csv": "99771c0ae9c2a8f89773316d2f206c5e87aac8873140fa52603e3565b87e969a",
+    "data/published/20261004/tables/TableS12_FPCA_redundancy.csv": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+    "data/published/20261004/tables/TableS13_prediction_all20_repeats.csv": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+    "data/published/20261004/tables/TableS14_FPCA_FVE_and_basis.csv": "196aa8564476360c875251ca8a38f5ba4a2f3db63d1a0863d773b35e0ead4e6c",
+    "data/published/20261004/tables/TableS15_FPCA_reconstruction_all_repeats.csv": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+    "data/published/20261004/tables/TableS16_GAMM_reference_diagnostics.csv": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+    "data/published/20261004/tables/TableS17_GAMM_conditional_diagnostics.csv": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+    "data/published/20261004/tables/TableS18_candidate_support_diagnostics.csv": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+    "data/published/20261004/tables/TableS1_all18_modules.csv": "024880198d9bfaad27c5c6ef3d37c723e9aff4a3f5b4ee11991f85bd6b7430b5",
+    "data/published/20261004/tables/TableS2_recorded_codes_all139.csv": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+    "data/published/20261004/tables/TableS3_finite_changes_all364.csv": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+    "data/published/20261004/tables/TableS4_FPCA_all24_diagnostics.csv": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+    "data/published/20261004/tables/TableS5_prediction_all_weights.csv": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+    "data/published/20261004/tables/TableS6_all1255_MC_statistics.csv": "f9e6de8fe73f3bdae3749bc920aac47ff5284e38eb30151230aa2c644e62acf3",
+    "data/published/20261004/tables/TableS7_cluster_summary.csv": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+    "data/published/20261004/tables/TableS8_U06_variability_summary.csv": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+    "data/published/20261004/tables/TableS9_candidate_summary.csv": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+    "resources/legacy_codebook/analysis/rome_rules.py": "9ee84797659477d3ad485a7c5e22e8d2907ebe8e9c607ac73f47041f1c95607c"
+  }
+}

@@ -1,0 +1,11 @@
+rule,required_all,required_any,required_region_any,supportive_symptoms,supportive_regions,count,denominator_people,proportion
+Functional Heartburn,,heartburn; acid regurgitation,epigastrium,belching; nausea,right hypochondrium; left hypochondrium,0,204,0.0
+Belching Disorder,,belching,epigastrium,acid regurgitation; bloating,right hypochondrium; left hypochondrium; umbilical,1,204,0.004901960784313725
+Chronic Nausea Vomiting Syndrome,,nausea; vomiting,epigastrium,loss of appetite; abdominal pain,right hypochondrium; left hypochondrium; umbilical,1,204,0.004901960784313725
+Functional Dyspepsia - PDS-like,,loss of appetite; nausea,epigastrium,belching; bloating; acid regurgitation; abdominal distension,right hypochondrium; left hypochondrium; umbilical,1,204,0.004901960784313725
+Functional Dyspepsia - EPS-like,,abdominal pain; heartburn,epigastrium,nausea; belching; acid regurgitation; bloating,right hypochondrium; left hypochondrium,0,204,0.0
+Irritable Bowel Syndrome-like,abdominal pain,bloating; tenesmus; abdominal distension,umbilical; hypogastrium; right lumbar; left lumbar,,right inguinal; left inguinal,28,204,0.13725490196078433
+Functional Abdominal Bloating/Distension-like,,bloating; abdominal distension,umbilical; epigastrium; hypogastrium,abdominal pain,right lumbar; left lumbar,64,204,0.3137254901960784
+Functional Constipation / Defecatory Disorder-like,,tenesmus,hypogastrium; right inguinal; left inguinal,abdominal pain; bloating; abdominal distension,umbilical,9,204,0.04411764705882353
+Biliary Pain-like,,abdominal pain; nausea; vomiting,right hypochondrium; epigastrium,loss of appetite,left hypochondrium,86,204,0.4215686274509804
+Unspecified Functional GI Symptom Pattern,,palpitations; irritability,epigastrium; umbilical; hypogastrium,,,22,204,0.10784313725490197

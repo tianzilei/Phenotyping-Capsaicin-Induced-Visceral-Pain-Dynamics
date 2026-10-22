@@ -1,0 +1,39 @@
+{
+  "version": "artifact_alignment_verification_20261023_v1",
+  "scope": "pre-publication content, artifact and synthetic verification for the October 14 revision",
+  "target_revision": "2026-10-14",
+  "analysis_as_of": "2026-10-04",
+  "artifact_version": "20261023",
+  "main_figures": 4,
+  "supplement_figures": 6,
+  "main_tables": 3,
+  "supplement_tables": 20,
+  "synthetic_tests": {
+    "count": 318,
+    "status": "PASS",
+    "python": "3.12.13"
+  },
+  "pinned_formatting": {
+    "ruff": "0.16.10",
+    "air": "0.12.0",
+    "status": "PASS"
+  },
+  "PNG_byte_identical_to_target": 10,
+  "new_table_rows_verified": {
+    "Table2": 16,
+    "TableS19": 48,
+    "TableS20": 10
+  },
+  "unchanged_numerical_tables": 18,
+  "prior_aggregate_files_preserved": 116,
+  "expanded_main_table1_rows": 13,
+  "final_module_metadata_rows": 18,
+  "all_figure_text_within_canvas": true,
+  "plotting_expressions_preserved_after_identifier_mapping": true,
+  "public_participant_records": false,
+  "new_inference": false,
+  "real_model_refits": false,
+  "historical_writing_or_private_sources_imported": false,
+  "current_tree_audit": "verified separately by verify_public_release.py with the release inventory",
+  "Git_history_audit": "verified separately before publication with verify_public_history.py"
+}

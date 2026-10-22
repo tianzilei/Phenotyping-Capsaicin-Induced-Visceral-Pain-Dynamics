@@ -3,10 +3,10 @@
 | Field or artifact | Meaning | Handling |
 | --- | --- | --- |
 | `ID` | Subject key; `SYN...` in public examples, random `P_...` in restricted copies | Private mappings never enter Git |
-| `VAS_1min` … `VAS_20min` | Scheduled actual-minute cells, VAS 0–10 | Keep original strings, missing tokens and E/T |
+| `VAS_1min` … `VAS_20min` | Scheduled actual-minute cells for the custom 0–10 overall sensation score; VAS is a historical variable name | Keep original strings, missing tokens and E/T |
 | Numeric `0` | Observed zero rating | Never treat as missing or synthesize baseline zeros |
-| `E` | Stopping after two pain-free minutes | Code, not a score, state or exact event time |
-| `T` | Discontinuation, usually excessive stimulation | Separate from E; no filling |
+| `E` | Stopping after two consecutive zero ratings with confirmed absence of discomfort | Code, not a score, state or exact event time |
+| `T` | Discontinuation for intolerable sensations rated 10 | Separate from E; no filling |
 | Empty/`NA`/`N/A`/`NaN` | Missing representation under the input contract | Preserve source token; do not invent observations |
 | `Sex`, `Age`, height/weight/BMI | Recorded baseline demographic/body measures | Quasi-identifiers; individual values restricted |
 | Intake, spiciness, `CCEI`, `AES`, GI baseline fields | Recorded questionnaire/intake fields | Do not repair without documented evidence |
@@ -20,3 +20,5 @@
 | `MC_PRECISION_MET` / `MC_PRECISION_INSUFFICIENT` | Endpoint calculation precision status | Does not establish scientific validity or absence of an effect |
 
 Blank templates under `schemas/` define interfaces; they do not certify input provenance, measurement units, artifact QC or scientific readiness. `data/aggregate_sources/20261004/` contains only aggregate rendering inputs, not raw or subject-level records. All reported numeric values retain their original precision.
+
+The score is custom and has not been validated as a standard pain or visual analogue scale. Its anchors are 0, no discomfort; 1, any discomfort; and 10, an intolerable sensation. Values 2–9 have no additional verbal anchors.

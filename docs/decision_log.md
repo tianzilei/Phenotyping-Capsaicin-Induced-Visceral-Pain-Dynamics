@@ -1,5 +1,13 @@
 # Public decision log
 
+## 2026-10-23 — Align the public artifacts with the October 14 revision
+
+The owner requested correction of the repository-to-document discrepancies. Public measurement descriptions now identify the custom 0–10 overall sensation score and the confirmed E/T rules; historical VAS variable names remain intact. The source plotting implementation and its three aggregate inputs were checked against the retained analysis workspace before import. Only figure identifiers, the module description and pinned formatting changed in that plotting implementation; its drawing expressions and numerical settings are preserved.
+
+The new `data/published/20261023/` export contains four main and six supporting figures and three main and twenty supporting tables. All ten PNGs match the current document figures byte for byte. The three-group recognition table, 48 reference group sizes and ten descriptive symptom-region rules derive from existing public aggregates. Main Table 1 now includes the baseline entries. Table S1 separately records historical plans, completed bootstrap draws and validation repetitions, including the final complete-FPCA and sparse-FPCA budgets. The earlier October 4 aggregate files are preserved.
+
+No participant-level input was used, no model was refitted and no new statistical result was inferred. The full 318-test synthetic suite, pinned Python/R formatting checks, artifact comparisons and release checks document this update. The current numbering and generation entry point are described in `artifact_alignment.md`; the dated verification record is `artifact_alignment_verification_20261023.json`. The October 5 publication and host-retention records below retain their historical scope.
+
 ## 2026-10-05 — Update the former publication repository
 
 The user requested anonymization and updated code/documentation, and confirmed using the analysis completed on 2026-10-04 with aggregate results made public. The old publication working tree was clean before this update. The initial update occurred on `codex/public-release-20261005`, without a push or historical rewrite at that stage.

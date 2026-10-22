@@ -1,0 +1,182 @@
+[
+  {
+    "id": "FigureS6_observation_support",
+    "width_mm": 165.1,
+    "height_mm": 112.0,
+    "png_pixels": [
+      3900,
+      2645
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 82,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "Figure1_temporal_sensation",
+    "width_mm": 165.1,
+    "height_mm": 175.0,
+    "png_pixels": [
+      3900,
+      4133
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 101,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "Figure3_symptoms_regions",
+    "width_mm": 165.1,
+    "height_mm": 214.0,
+    "png_pixels": [
+      3900,
+      5055
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 194,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "Figure2_temporal_patterns",
+    "width_mm": 165.1,
+    "height_mm": 182.0,
+    "png_pixels": [
+      3900,
+      4299
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 90,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "Figure4_future_score_prediction",
+    "width_mm": 165.1,
+    "height_mm": 155.0,
+    "png_pixels": [
+      3900,
+      3661
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 50,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "FigureS1_FPCA_stability_reconstruction",
+    "width_mm": 165.1,
+    "height_mm": 148.0,
+    "png_pixels": [
+      3900,
+      3496
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 68,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "FigureS2_GAMM_numerical_diagnostics",
+    "width_mm": 165.1,
+    "height_mm": 178.0,
+    "png_pixels": [
+      3900,
+      4204
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 68,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "FigureS3_candidate_support_diagnostics",
+    "width_mm": 165.1,
+    "height_mm": 144.0,
+    "png_pixels": [
+      3900,
+      3401
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 50,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "FigureS4_bounds_all_MC_status",
+    "width_mm": 165.1,
+    "height_mm": 178.0,
+    "png_pixels": [
+      3900,
+      4204
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 51,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  },
+  {
+    "id": "FigureS5_partition_recovery_baseline",
+    "width_mm": 165.1,
+    "height_mm": 204.99999999999997,
+    "png_pixels": [
+      3900,
+      4842
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 97,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans"
+  }
+]

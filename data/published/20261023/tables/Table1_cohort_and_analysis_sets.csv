@@ -1,0 +1,14 @@
+characteristic,participants_or_value,recorded_scores_or_predictions
+Unique analytic participants,215,"3424 ratings, minutes 1–20"
+Female / male participants,125 / 90,
+"Age, years, median [first, third quartile]","20.00 [19.00, 21.00]",
+"Weight, kg, median [first, third quartile]","57.00 [52.00, 67.00]",
+"Body mass index, kg/m², median [first, third quartile]","20.90 [18.95, 22.95]",
+Recorded E / T / neither stopping code,150 / 9 / 56,
+Complete minutes 1–10,206,2060 ratings
+Complete minutes 1–20,56,1120 ratings
+Symptom information recorded,209,
+Region information recorded,209,
+Both types of information recorded,204,
+Next-rating objective,213,2781 eligible predictions
+Minutes 1–5 to minute 10 objective,206,206 eligible predictions
