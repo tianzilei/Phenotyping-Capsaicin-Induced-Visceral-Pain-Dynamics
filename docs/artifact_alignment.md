@@ -47,3 +47,5 @@ python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY
 ```
 
 The versioned configuration checks input hashes before output creation and again after rendering. Existing output directories are refused. `manifest.json` records reviewed input, configuration, implementation and output hashes; `render_manifest.json` records the graphics environment, font hash and rendering settings. `metadata.json` and `qa/text_bounds.json` retain export and layout diagnostics. The input configuration and existing public parameter files preserve their stated scientific scope; this artifact update changes no statistical estimand or fitted result.
+
+The [October 23 publication receipt](artifact_publication_status_20261023.json) identifies the remotely verified artifact commit, fresh-clone audits and successful GitHub workflow.

@@ -2479,7 +2479,7 @@
     },
     "docs/reproducibility.md": {
       "source_sha256": "bc91fae03252727b5588620774dccff2a35934a9dfb9bdea1491ef5c3f7d6abc",
-      "published_sha256": "6f4283de8a90ab4d8a88324b4704fb1bec56a0cff285e7a7ea0e21c79a5c2671",
+      "published_sha256": "de9237d32da203b12f83077cf2979ce007b9213e09f5360be6cfb4bd99c9514c",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
@@ -2491,7 +2491,7 @@
     },
     "docs/artifact_alignment.md": {
       "source_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
-      "published_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
+      "published_sha256": "bf898b7c77010c1dbfde7ff3ffd05d68dc9d8949494684df7b1bc016590092c9",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
@@ -2500,6 +2500,12 @@
       "published_sha256": "8f6c431c572cd38ec793ad93bf2e1d9cc433f58b537ea24e41967b45179e1257",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
+    },
+    "docs/artifact_publication_status_20261023.json": {
+      "source_sha256": "b538e2fd6e84483706d057851b5ef25cd575d13971f64a70381a8f40d01f3697",
+      "published_sha256": "b538e2fd6e84483706d057851b5ef25cd575d13971f64a70381a8f40d01f3697",
+      "transformation": "verified publication receipt; no analytical changes",
+      "source_origin": "remote ref, fresh public clone and GitHub workflow checks"
     }
   },
   "excluded_files": [
@@ -3786,14 +3792,14 @@
   },
   "maintenance_scope": {
     "date": "2026-10-23",
-    "source_snapshot_files": 416,
+    "source_snapshot_files": 417,
     "approved_aggregate_files": 208,
     "unpublished_writing_excluded_from_current_tree": true,
     "analytical_expressions_preserved": true,
     "original_source_hashes_retained": true,
     "verification_record": "docs/artifact_alignment_verification_20261023.json"
   },
-  "updated_utc": "2026-10-22T23:23:24.747217+00:00",
+  "updated_utc": "2026-10-22T23:28:28.473664+00:00",
   "prior_maintenance_scope": {
     "date": "2026-10-05",
     "source_snapshot_files": 401,
@@ -3810,6 +3816,7 @@
     "config": "config/final_artifacts_20261023_v1.json",
     "manifest": "data/published/20261023/manifest.json",
     "source_and_target_cross_checks": "all ten PNG files byte-identical; all 74 new-table rows/rules matched; original analysis files retained",
-    "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642"
+    "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642",
+    "publication_receipt": "docs/artifact_publication_status_20261023.json"
   }
 }
