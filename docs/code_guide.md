@@ -13,8 +13,9 @@
 | `R/vas_models.R`, `fpca_followup.R`, `sparse_fpca.R` | Implemented working models and FPCA analyses |
 | `R/interfaces.R` | Unimplemented interfaces that raise errors |
 | `scripts/deidentify_data.py` | Private-input export CLI |
-| `scripts/build_final_artifacts.py` | Current 4/6 figures and 3/20 tables from public aggregates, no fitting |
-| `src/capsaicin/final_figures.py`, `final_artifacts.py` | Final layout and numbered aggregate table exports |
+| `scripts/build_final_artifacts.py` | Current 4/6 figures and 2/29 tables from public aggregates, no fitting |
+| `src/capsaicin/final_figures.py`, `aligned_artifacts.py` | Current layout and numbered aggregate table exports |
+| `scripts/physiology_20261017/` | Retained 161-test and 54-test execution, sensitivity and independent covariance programs; controlled inputs only |
 | `scripts/build_scientific_figures.py` | Historical October 4 artifact renderer |
 | `scripts/verify_public_release.py` | Current-tree privacy, credential-pattern and aggregate-hash audit |
 | `scripts/verify_repository_structure.py` | Current-tree writing boundaries and English comments/docstrings |
@@ -29,3 +30,5 @@ Analytical scripts retain versioned run contracts. Some require private upstream
 Public rendering has its own versioned configuration. It verifies aggregate-source hashes and writes a fresh directory. It never contacts the historical Dask cluster. Full real-data verification is distinct and cannot be performed using the released aggregates alone.
 
 See [code style and repository boundaries](code_style.md) for pinned formatters, contributor checks, and the separation of public methods from unpublished writing. The field summary is in [field contract](field_contract.md).
+
+See [physiological inference and execution](physiology_20261017.md) for explicit private run locations, frozen configurations, original scientific parameters and retained verification records. No individual record is distributed.

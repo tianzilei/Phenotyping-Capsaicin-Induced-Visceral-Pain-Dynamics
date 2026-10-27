@@ -1,0 +1,42 @@
+[
+  {
+    "figure": "FigureS1_observation_support",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "Figure1_temporal_sensation",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "Figure3_symptoms_regions",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "Figure2_temporal_patterns",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "Figure4_future_score_prediction",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "FigureS3_FPCA_stability_reconstruction",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "FigureS4_GAMM_numerical_diagnostics",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "FigureS6_candidate_support_diagnostics",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "FigureS2_bounds_all_MC_status",
+    "outside_canvas_text": []
+  },
+  {
+    "figure": "FigureS5_partition_recovery_baseline",
+    "outside_canvas_text": []
+  }
+]

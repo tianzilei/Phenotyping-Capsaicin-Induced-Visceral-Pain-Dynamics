@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "synthetic_models": 8,
+  "max_absolute_differences": {
+    "beta vs beta_R": 4.996003610813204e-16,
+    "se_CR1 vs se_CR1_R": 4.996003610813204e-16,
+    "se_CR2_python vs se_CR2_R": 1.1400602684119576e-14,
+    "df_CR2_python vs df_CR2_R": 1.9539925233402755e-13,
+    "p_CR2_python vs p_CR2_R": 1.9984014443252818e-15
+  }
+}

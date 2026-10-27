@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "core_models": 54,
+  "core_failures": 0,
+  "synthetic_reference_models": 8,
+  "CR2_reference": "R4.6.1 clubSandwich0.7.0; explicit lm fixed effects; CR2 identity working covariance; Satterthwaite",
+  "CR2_correction_scope": "OLS only; full fixed effects retained. No GLS shortcut from original Theorem2 used; 2023 corrigendum restriction respected.",
+  "independent_numeric_differences": {
+    "beta_vs_beta_R": 4.884981308350689e-15,
+    "se_CR1_vs_se_CR1_R": 8.881784197001252e-16,
+    "se_CR2_python_vs_se_CR2_R": 3.1809971323681907e-13,
+    "df_CR2_python_vs_df_CR2_R": 2.39573694216233e-10,
+    "p_CR2_python_vs_p_CR2_R": 3.2662206272959793e-12
+  },
+  "BY_BH_independently_checked": true,
+  "intended_timing_positions": 432,
+  "timing_estimated": 430,
+  "timing_inherited_duration_ineligible": 2,
+  "sample_scale_time_decomposition_max_error": 8.881784197001252e-16,
+  "bilateral_identity_checks": 8,
+  "same_HR_rows_and_scale_checks": 22,
+  "numerical_warnings": 0,
+  "submission_zip_unchanged": true
+}

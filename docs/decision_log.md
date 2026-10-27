@@ -1,5 +1,14 @@
 # Public decision log
 
+## 2026-10-27 — Align code and artifacts with the current document revision
+
+The owner requested unification and a local commit, with push reserved for the owner. The current export uses four main/six supporting figures and two main/29 supporting tables. Full-precision source tables, native document PNGs, additional physiological code, public frozen configurations and aggregate results are imported from retained verified deliveries. The October 4 and October 23 exports remain unchanged.
+
+The newly included October 17 programs implement a 161-test exploratory evaluation and a separate 54-test extension, retaining CR1 main inference, CR2 sensitivity, original multiplicity families and duration-ineligible timing positions. Historical candidate p/q fields and scientific gates remain unchanged. Personal source locations and historical document-preservation checks are excluded from the public copies; input/output configuration and exclusive-output guards are added without changing scientific numerical functions. Formatting and equivalence checks are recorded separately.
+
+This integration performs no real-data fitting, parameter selection, participant export or new inference. Current artifact checks and synthetic tests are recorded in `artifact_alignment_verification_20261027.json`. The user will push the local commit; old publication receipts retain their original dated scope.
+
+
 ## 2026-10-23 — Align the public artifacts with the October 14 revision
 
 The owner requested correction of the repository-to-document discrepancies. Public measurement descriptions now identify the custom 0–10 overall sensation score and the confirmed E/T rules; historical VAS variable names remain intact. The source plotting implementation and its three aggregate inputs were checked against the retained analysis workspace before import. Only figure identifiers, the module description and pinned formatting changed in that plotting implementation; its drawing expressions and numerical settings are preserved.

@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "explicit_design_coefficients_verified": 156,
+  "max_beta_difference": 8.215650382226158e-15,
+  "max_se_difference": 2.1817270212665107e-13,
+  "wild_replicates_independently_verified": 80,
+  "max_wild_t_difference": 1.887379141862766e-15,
+  "FDR_independent_scipy_check": "PASS",
+  "duplicate_and_rank_edge_checks": "PASS",
+  "v1_v2_max_differences": {
+    "beta": 6.661338147750939e-16,
+    "se_CR1": 7.771561172376096e-16,
+    "p_CR1": 1.1102230246251565e-15,
+    "p_wild": 0.0
+  },
+  "warnings_v2": 0
+}

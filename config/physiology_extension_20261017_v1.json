@@ -1,0 +1,70 @@
+{
+  "version": "physiology_extension_20261017_v1",
+  "created_utc": "2026-10-17T12:53:47.968106+00:00",
+  "status": "frozen_before_extension_fits",
+  "role": "post_hoc_exploratory; existing associations inspected",
+  "cohort": 215,
+  "sources": {
+    "person_run": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed",
+    "vas_delivery": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/delivery_584fdac4",
+    "vas_run": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/vas_models",
+    "descriptives": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/descriptives_eff94054",
+    "clustering": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/clustering_4cd765ea",
+    "prefix": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed/prefix_recoverability_43f2788f",
+    "next_rating": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/next_rating_67111ea9",
+    "symptoms": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed/symptom_context_f97f3b17",
+    "ecg_egg": "08_outputs/reanalysis_20260926_20260927T141237Z_c57a7087/ecg_5db91f25",
+    "hb": "08_outputs/hb_combined_20260927T161640Z_7b0bff85",
+    "associations": "08_outputs/hb_combined_20260927T161640Z_7b0bff85/candidate_associations_dcd804f1",
+    "session_dates": "02_quality_control/cross_modal_sessions_20260927T141722Z_89250a1e",
+    "rest_candidates": "08_outputs/rest_signal_reference_20260929T165843Z_438daf0e",
+    "e07": "08_outputs/rest_post_hrv_pair_symmetric_20260930T103338Z_cb862411",
+    "e08": "08_outputs/e08_adaptive_egg_20260929T110000Z",
+    "e05": "08_outputs/e05_bypass_decision_20260929T120000Z",
+    "integrity": "02_quality_control/recent_electrophysiology_integrity_20260930T104502Z_bf0d720d",
+    "validation": "02_quality_control/validation_metadata_audit_20260930T104534Z_e9be0a07"
+  },
+  "prior_run": "08_outputs/physiology_inference_20261017_v2",
+  "roster": "data/aggregate_sources/20261017/physiology_extension_20261017/planned_core_tests_54.csv",
+  "modules_this_run": [
+    "A_existing_resource_inventory",
+    "B_fixed_support_and_fixed_scale",
+    "C1_original24",
+    "C2_direct_bilateral8",
+    "C3_HR_conditioned22",
+    "shared_measured_region_component22_descriptive"
+  ],
+  "core_total": 54,
+  "families": {
+    "C1_original24": 24,
+    "C2_bilateral8": 8,
+    "C3_HR_conditioned22": 22
+  },
+  "support": "five observed numeric ratings; >=2 distinct blocks per person; finite measured data; no E/T imputation, no baseline zero, no gap bridging",
+  "nominal": {
+    "support_spec": "A",
+    "offset_s": 0,
+    "drift_ppm": 0,
+    "mad": 6,
+    "guard_s": 2,
+    "coverage_threshold": 0.9,
+    "roi_fraction": 0.5
+  },
+  "B": "compare original nominal, nominal restricted to exact shared person-block-minute-score support, shifted on that support; mean/SD fixed from nominal shared support; pairwise intersections; no inference or p-based selection across scenarios",
+  "C1_scale": "inherited nominal within-person sample SD Hb; HR bpm; candidate RR-RMSSD ms",
+  "C2_scale": "each side standardized by its own nominal common-support within-person SD; left minus right; all four existing anatomical pairs x two chromophores",
+  "C3_scale": "inherited nominal Hb scale shared identically by paired models; common-support restandardization sensitivity",
+  "C3_model": "Hb ~ vas_mean + HR + participant FE + categorical block FE; no-HR fit on exactly same rows",
+  "primary_inference": "CR1 cluster sandwich; finite factor G/(G-1)*(N-1)/(N-G-K), K slope and nonredundant block columns; two-sided t(G-1); marginal95% intervals",
+  "sensitivity_inference": "delete-one-participant jackknife CRV3 and official clubSandwich CR2/Satterthwaite; explicit-full-FE independent covariance check; no selection of smaller p",
+  "multiplicity": "BY/BH within fixed families and over54; CR2 corrections separate sensitivity; old161 retained, new54 cannot replace old161",
+  "common_component": "other10 of fixed11 ROI standardized equal mean on exact all11 shared person-block rows; chromophores separate; coefficients and intervals as descriptive sensitivity, no new discovery selection",
+  "disabled": [
+    "minute-level extraction and lags without time evidence",
+    "rest re-extraction until target-specific errors/coverage contract frozen",
+    "new gastric-rhythm claims",
+    "prediction before prefix-only extraction/vendor future-dependence check",
+    "new human annotation or independent verification claims"
+  ],
+  "public_configuration_note": "Personal locations removed; configure a controlled analysis root and a new private run directory. Original scientific parameters are unchanged."
+}

@@ -1,0 +1,8 @@
+cell,apVar_finite,apVar_condition,bootstrap_apVar_nonfinite,bootstrap_apVar_finite,apVar_message,optimizer_exit_code,role
+G10_common_k6,False,,2579,2421,Non-positive definite approximate variance-covariance,,working model; no likelihood-profile identifiability proof
+G10_complete_k6,False,,2459,2541,Non-positive definite approximate variance-covariance,,working model; no likelihood-profile identifiability proof
+G20_complete_k6,False,,2300,2700,Non-positive definite approximate variance-covariance,,working model; no likelihood-profile identifiability proof
+G20_independent_k6,True,3755.9627030029123,0,5000,,,working model; no likelihood-profile identifiability proof
+G20_k4,True,2201435.5513398526,2830,2170,,,working model; no likelihood-profile identifiability proof
+G20_k8,False,,2744,2256,Non-positive definite approximate variance-covariance,,working model; no likelihood-profile identifiability proof
+G20_primary_k6,True,3310043.2896111384,2739,2261,,,working model; no likelihood-profile identifiability proof

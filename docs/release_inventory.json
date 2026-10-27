@@ -1,5 +1,5 @@
 {
-  "version": "public_release_inventory_20261023_artifact_alignment_v1",
+  "version": "public_release_inventory_20261027_alignment_v1",
   "created_utc": "2026-10-05T09:46:58.170058+00:00",
   "source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
   "source_worktree_was_dirty": true,
@@ -2184,7 +2184,7 @@
     },
     "config/modules.json": {
       "source_sha256": "b69457e613cf11e8c52324e2d90bdfbdfb2d03dd0c73a31083469027ad5cd529",
-      "published_sha256": "0c1604407236f997a050dbccac25fb6ad9da77329981183e3cc2e17d1a30a527",
+      "published_sha256": "18841c9d478e05bd9797a72cb555ab9616a648c529c35864705c5d7b8a264d61",
       "transformation": "none; publication CLI/status/rendering adapter; 2026-10-23 artifact alignment and measurement/reporting metadata",
       "source_origin": "current analysis workspace",
       "prior_published_sha256": "fb706287bb0915e2c9ea2ab8f225163202583b6cac13f6f341768ba588052b4e"
@@ -2413,7 +2413,7 @@
     },
     "README.md": {
       "source_sha256": "08679d0e5a635673a93b0eb0f3a7a61b1e1dfbaad9a3ac8a9b3a4c44c30f3de8",
-      "published_sha256": "c53a37887502cda188d14f313aa98a6b365d3e55a5d7f4d6c68e9e165f7ad86b",
+      "published_sha256": "7000c148df79b9e0a72e957df9677c7fa48a1da397b4bfe90a0c416b8811a0a5",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; README resource navigation, scientific scope and reproduction documentation updated 2026-10-23",
       "source_origin": "public artifact alignment"
     },
@@ -2437,13 +2437,13 @@
     },
     "src/capsaicin/final_figures.py": {
       "source_sha256": "2172721b5ed256944064e836870d9a6ecd7c1b67542edbad14da1f2ba0e99499",
-      "published_sha256": "1eea47e0c8857ff853a85507c6536f630df994ae2cd719ac5fcabeb9c1688f6f",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "936ed362e872c45be22df7a384e48a28767486ee0f92484bed55f8c39999a99c",
+      "transformation": "optional figure identifiers and physiology labels; historical defaults unchanged",
       "source_origin": "retained final plotting implementation"
     },
     "scripts/build_final_artifacts.py": {
       "source_sha256": "acce69905f4ec78364ac69835cc393f6b67bd80f3114ab648b7922ea6f3c68d2",
-      "published_sha256": "acce69905f4ec78364ac69835cc393f6b67bd80f3114ab648b7922ea6f3c68d2",
+      "published_sha256": "88086a3b225652d88f8e0220d5d2cbddbb74ea237b7ea2c7495accf7901c239c",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
@@ -2455,19 +2455,19 @@
     },
     "docs/analysis_plan.md": {
       "source_sha256": "51f08517ce1b3ffc54bb0d6072f1a7d74ef164b4bca7d16873dd1963b1021f14",
-      "published_sha256": "dcd811500a28e93761d7c0c99d609a3c54692342500639e7703893f23ca60d07",
+      "published_sha256": "6b68c5c3768dff866df599d7886ec347cd0bf1014c6e7b7582746aa206e828d5",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
     "docs/code_guide.md": {
       "source_sha256": "4c976b286397e7f1be2267a1484ff30763a4dbcfed02f35528cdd86a5de218a3",
-      "published_sha256": "882c3f60c7b48679dfb6287d3a052ba5219f01a549ecc0e29786d7c60c285389",
+      "published_sha256": "c0a3da0981347bf4cc6e3481d93c01b6de547d4be4bc7a351c6db2f21692cb9a",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
     "docs/data_dictionary.md": {
       "source_sha256": "2643465fddf8506eebdb9e8a1793f353d63bf5c7fd2ba5e48048ad32e825869a",
-      "published_sha256": "4148b05733177175c8a93fc22dd1e139987a146cb829eab5c4892666e6354779",
+      "published_sha256": "4e29d6b8d6f32ad61a133b6891e38a3c5c8bb7f1ea5f172908156ae91e8cc4dc",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
@@ -2479,19 +2479,19 @@
     },
     "docs/reproducibility.md": {
       "source_sha256": "bc91fae03252727b5588620774dccff2a35934a9dfb9bdea1491ef5c3f7d6abc",
-      "published_sha256": "de9237d32da203b12f83077cf2979ce007b9213e09f5360be6cfb4bd99c9514c",
+      "published_sha256": "5774d0a9f325b5602e5863a0d7af5d17a4d5602fc5803940dc025812bd3efe1b",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
     "docs/decision_log.md": {
       "source_sha256": "8e81e1bdfd9d746faede009cdda4af4b6a385bb2476cf345c4e0d2e25a737526",
-      "published_sha256": "e19b4c9fbbd221b9eaac8e27dd6b0d0bed7521b134fb096314b5f032318cc9f5",
+      "published_sha256": "a4f1589890a73b62034343d6e15660897a8931822127afae6aaf4a5c6639d6d1",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
     "docs/artifact_alignment.md": {
       "source_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
-      "published_sha256": "bf898b7c77010c1dbfde7ff3ffd05d68dc9d8949494684df7b1bc016590092c9",
+      "published_sha256": "240e219cabea54bc470ea529fe8ea30e5ecd0e31eef3739b968749b90e3885d5",
       "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
       "source_origin": "public artifact alignment"
     },
@@ -2506,6 +2506,162 @@
       "published_sha256": "b538e2fd6e84483706d057851b5ef25cd575d13971f64a70381a8f40d01f3697",
       "transformation": "verified publication receipt; no analytical changes",
       "source_origin": "remote ref, fresh public clone and GitHub workflow checks"
+    },
+    "config/aligned_artifacts_20261027_v1.json": {
+      "source_sha256": "76229dd30c98dd822640ad0260ae285b692cb6395dd7d24299f88d2151e83d61",
+      "published_sha256": "76229dd30c98dd822640ad0260ae285b692cb6395dd7d24299f88d2151e83d61",
+      "source_origin": "October 27 release integration",
+      "transformation": "new release configuration"
+    },
+    "config/physiology_extension_20261017_v1.json": {
+      "source_sha256": "76ce555e047703e0193a7986fcb42330183609a9f8f1d1e885a64713ae722db3",
+      "published_sha256": "5cd563d19d4ab710747e81352496076b9f8775531074168b170a7d10ce2ee091",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "config/physiology_inference_20261017_v1.json": {
+      "source_sha256": "89bafdb224c9f0a2c26192555c34d6835873e9a03d31217c2c3819dab602760e",
+      "published_sha256": "a7656bd3393d6116a476168af4b37622a206e2c1d6a08a575c9e3a1fe7840b24",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "dependencies/physiology-20261017.json": {
+      "source_sha256": "8f807afcb9358c860c462cf2d1157f7a0afcfe9644b4509144284811feda6b21",
+      "published_sha256": "8f807afcb9358c860c462cf2d1157f7a0afcfe9644b4509144284811feda6b21",
+      "source_origin": "October 27 release integration",
+      "transformation": "new release configuration"
+    },
+    "scripts/physiology_20261017/analyse.py": {
+      "source_sha256": "69bed925a2b1078d7320bcb5d68c932d2907ac23f28b2493f859dedb0614e325",
+      "published_sha256": "b95326c6f7d3609618349dfc9a893ec4936ed29ab5ce4512a2e85567cbb0d5bb",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/check_CR2.R": {
+      "source_sha256": "a0c85d60c766f783e7ee86ba7298e2faaccef9bf4309a25b7f9d5db74ae53092",
+      "published_sha256": "95af4c6263b0f6ccde3881ad97537da14cf93da50a35864ab61dba8f9ad518a7",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/decompose.py": {
+      "source_sha256": "b84f23e3ebdffa8065e49f258bef0d180eb16bd02ed5dd42c662cd88819ea871",
+      "published_sha256": "7f84a563145ba42bcc7ad743496e867f67f23df670422f5407a8732418b4ce10",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/run_extension.py": {
+      "source_sha256": "e1e60161e81019ffddda65fd098d8b027cd1c3554560827a3f9d7999ae03878c",
+      "published_sha256": "97ff3f2e47b7b2dd20f59c0d7217f5cb12774bfa47bb9f7a9bfb703bef145434",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/runtime.py": {
+      "source_sha256": "869250dd311f5e98d543220d56d66843159688b379388f523afa86799d35fd78",
+      "published_sha256": "869250dd311f5e98d543220d56d66843159688b379388f523afa86799d35fd78",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/sensitivities.py": {
+      "source_sha256": "98bdbde3a02f51ff6b8902fb9711a214c51a97df8f263fd6312d66dbe16f92cd",
+      "published_sha256": "0eacbf1078d447da0c1bdf431f7890e96f08c6aa8d47998342afd20d155011b5",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/verify_extension.py": {
+      "source_sha256": "3bb500da81d2374b2c26692ef28462d12463e7c5b1806524a7a1ec8e6b4dd704",
+      "published_sha256": "dad57e83a47255acc79eb973dd08549e6b7ad77e1a056f6fc17c491b9967dd20",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "scripts/physiology_20261017/verify_inference.py": {
+      "source_sha256": "dc0d0366b0d3cb71404d6b6c799053438df65f9986311029f7f28552185c8eb4",
+      "published_sha256": "2e9a25ecd34beb567fc0cd71e785fba448648f981b75cb6054757fd59f44f310",
+      "source_origin": "retained analysis workspace",
+      "transformation": "controlled input/output locations; exclusive fresh outputs; scientific functions preserved; pinned formatting pending; pinned formatting; scientific function AST equivalence checked"
+    },
+    "src/capsaicin/aligned_artifacts.py": {
+      "source_sha256": "554a69610f0b3be02c04499eeabe4c12c0b30161f25b95c6a6edbe066dbf1b23",
+      "published_sha256": "554a69610f0b3be02c04499eeabe4c12c0b30161f25b95c6a6edbe066dbf1b23",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "tests/test_aligned_release.py": {
+      "source_sha256": "53539582435c43d5354653f6efee9291f6cee47d2b4811e5bd41d4f345239438",
+      "published_sha256": "53539582435c43d5354653f6efee9291f6cee47d2b4811e5bd41d4f345239438",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code; pinned formatting; scientific function AST equivalence checked"
+    },
+    "config/data_locations.example.json": {
+      "source_sha256": "dc6b3f83549d3a4f8921d7b6dc1ac678544e29b419e43d04b2e87c6fa51258cf",
+      "published_sha256": "dc6b3f83549d3a4f8921d7b6dc1ac678544e29b419e43d04b2e87c6fa51258cf",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "config/public_figures_20261005_v1.json": {
+      "source_sha256": "fb56cf22de042dd7b4506a52b54709f7f8457ee5d83e9824c748b21ad06075c2",
+      "published_sha256": "fb56cf22de042dd7b4506a52b54709f7f8457ee5d83e9824c748b21ad06075c2",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "config/validation_20261005_v1.json": {
+      "source_sha256": "86daf4c35a9e68412d3f133614f1e893dadcdf3d08e1f6724630d1b680753a14",
+      "published_sha256": "86daf4c35a9e68412d3f133614f1e893dadcdf3d08e1f6724630d1b680753a14",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "scripts/deidentify_data.py": {
+      "source_sha256": "722bddd69761f76be7704cf5ea4f7cec40a346e16d747dda24bc28aee5b6aaff",
+      "published_sha256": "722bddd69761f76be7704cf5ea4f7cec40a346e16d747dda24bc28aee5b6aaff",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "scripts/verify_public_history.py": {
+      "source_sha256": "ff4e84c99b6bc46843eb63354138b98449fbf7492ce734757f7bc88e071d13a8",
+      "published_sha256": "ff4e84c99b6bc46843eb63354138b98449fbf7492ce734757f7bc88e071d13a8",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "scripts/verify_public_release.py": {
+      "source_sha256": "3deb22068b6ba640bc3b0bc25e3db11a2db9d3841bde20d5a0e23a3abfb0e36b",
+      "published_sha256": "3deb22068b6ba640bc3b0bc25e3db11a2db9d3841bde20d5a0e23a3abfb0e36b",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "scripts/verify_repository_structure.py": {
+      "source_sha256": "189d9961d6f02d1b4865c151a3818b77bce64574052c1df9b10c3a6965f927e4",
+      "published_sha256": "189d9961d6f02d1b4865c151a3818b77bce64574052c1df9b10c3a6965f927e4",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "src/capsaicin/privacy.py": {
+      "source_sha256": "decaf38ae1c9dffa99cfce1544a6edccc728cdb6435df28bd252231ea31c4f92",
+      "published_sha256": "decaf38ae1c9dffa99cfce1544a6edccc728cdb6435df28bd252231ea31c4f92",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "tests/test_history_guard.py": {
+      "source_sha256": "425787efde3177411e716e2c2244e559850b6830257468d7295ae5ed3f6bcebd",
+      "published_sha256": "425787efde3177411e716e2c2244e559850b6830257468d7295ae5ed3f6bcebd",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "tests/test_privacy.py": {
+      "source_sha256": "cc48dd56d8c5ae3db742494e91936f88362f75f11de8977cb06723566b5b787d",
+      "published_sha256": "cc48dd56d8c5ae3db742494e91936f88362f75f11de8977cb06723566b5b787d",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "tests/test_release_guard.py": {
+      "source_sha256": "37e5e91cb4ba8f15394b9053cebfa051167464fe07a30c28165bf8ab619cf4cc",
+      "published_sha256": "37e5e91cb4ba8f15394b9053cebfa051167464fe07a30c28165bf8ab619cf4cc",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
+    },
+    "tests/test_repository_structure.py": {
+      "source_sha256": "25e442a18862bdd23d1fea57737cb1ad1d84f4cd22755ba5af8f7f5f9a6cb336",
+      "published_sha256": "25e442a18862bdd23d1fea57737cb1ad1d84f4cd22755ba5af8f7f5f9a6cb336",
+      "source_origin": "October 27 release integration",
+      "transformation": "new integration code"
     }
   },
   "excluded_files": [
@@ -3773,6 +3929,900 @@
       "published_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
       "kind": "reviewed_aggregate_alignment_20261023",
       "rows": 178
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/Hb_QC_sensitivity.csv": {
+      "source_sha256": "64db2a5f060aafd410bd32f815e5574e1dde25f659e34d88707405b8ceb66e53",
+      "published_sha256": "64db2a5f060aafd410bd32f815e5574e1dde25f659e34d88707405b8ceb66e53",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/VAS_feature_sensitivities.csv": {
+      "source_sha256": "3d76b134f3e478413fa4eadd6120263a7d21722d7fde84a1bc5fdc3f2df4d2f3",
+      "published_sha256": "3d76b134f3e478413fa4eadd6120263a7d21722d7fde84a1bc5fdc3f2df4d2f3",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/all_161_results.csv": {
+      "source_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "published_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/independent_covariance_verification.csv": {
+      "source_sha256": "df2fb9b0d69797a4665446692c60f24b2ebd37ed1c7508bc961bb8224b6dafe4",
+      "published_sha256": "df2fb9b0d69797a4665446692c60f24b2ebd37ed1c7508bc961bb8224b6dafe4",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/point_estimate_verification.csv": {
+      "source_sha256": "ad8a1fa684ba6044482fa8ea0b319bd703a27da027a54312b237e77ae59eb16b",
+      "published_sha256": "ad8a1fa684ba6044482fa8ea0b319bd703a27da027a54312b237e77ae59eb16b",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/rest_pair_summary.json": {
+      "source_sha256": "43ffcda53f777cd6e4998ce38cf2ae66fc4cb444c483aa01a72ca50db063a6e6",
+      "published_sha256": "1b8724bb9dcb088ae58ad7be0b257343724730a0f95095a2702e6e2d3a6477d5",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/timing_reproduction_check.csv": {
+      "source_sha256": "d4ed7aad505b29189b25fb2658b179c793fbee0b9a06a99fea922195189c36b0",
+      "published_sha256": "d4ed7aad505b29189b25fb2658b179c793fbee0b9a06a99fea922195189c36b0",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/timing_support_sensitivity.csv": {
+      "source_sha256": "a93b8cbf0a2ab4f477c95f4b7c0734d0efc2f6dae6ca2c2eb5bd42e644ac0a7c",
+      "published_sha256": "a93b8cbf0a2ab4f477c95f4b7c0734d0efc2f6dae6ca2c2eb5bd42e644ac0a7c",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/verification.json": {
+      "source_sha256": "8a6f305a5d6c516cf6368ef18d34c677e60dcdf96e790024068784a8d03c01d2",
+      "published_sha256": "ad6419da3d304f95235e4fc067b9a19a3b18aff6a42e9ea3654be68087a38f57",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/HR_same_rows_comparisons.csv": {
+      "source_sha256": "452676ba3e2a46d8e85a215ea536f34288995dd1a0a9423268225e6ec85b8b2e",
+      "published_sha256": "452676ba3e2a46d8e85a215ea536f34288995dd1a0a9423268225e6ec85b8b2e",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/bilateral_contrast_identity_check.csv": {
+      "source_sha256": "7db1fa3969d2b73c6ef14686b9128d877d439e8512193a97d4864544135568e1",
+      "published_sha256": "7db1fa3969d2b73c6ef14686b9128d877d439e8512193a97d4864544135568e1",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/core_54_results_verified.csv": {
+      "source_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "published_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/core_CR2_R.csv": {
+      "source_sha256": "edd047ba079f43b8d6fc04a6a109990e6df0d3c42436b8f108038972f7741f0d",
+      "published_sha256": "edd047ba079f43b8d6fc04a6a109990e6df0d3c42436b8f108038972f7741f0d",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/data_availability.csv": {
+      "source_sha256": "8b7ff7dc22f88726f19d279e24b5b398f56919cea5fa9bbf94c45e8c9b3d34c2",
+      "published_sha256": "8b7ff7dc22f88726f19d279e24b5b398f56919cea5fa9bbf94c45e8c9b3d34c2",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/failures.csv": {
+      "source_sha256": "234f95ba60cdff4debc72267d817e108e54432aded8423a27665ad92222d4e57",
+      "published_sha256": "234f95ba60cdff4debc72267d817e108e54432aded8423a27665ad92222d4e57",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/fixed_support_block_coverage.csv": {
+      "source_sha256": "a97dab771eb41d774d19f46f565f778bed9252d8817f801ad595742a207d6da5",
+      "published_sha256": "a97dab771eb41d774d19f46f565f778bed9252d8817f801ad595742a207d6da5",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/fixed_support_timing.csv": {
+      "source_sha256": "cd4e79a8f5cae3a8275631caae661d994a21a15e252c5c42bbc622fb794b053b",
+      "published_sha256": "cd4e79a8f5cae3a8275631caae661d994a21a15e252c5c42bbc622fb794b053b",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/independent_full_FE_checks.csv": {
+      "source_sha256": "9644994e1344a3e9e0e642594a6577ac4d067b42117831bf59862219155c0110",
+      "published_sha256": "9644994e1344a3e9e0e642594a6577ac4d067b42117831bf59862219155c0110",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/numerical_warnings.csv": {
+      "source_sha256": "8b5cbe69a3c271017ecc47cca7bf43f09ef6afb70c11efdf606ea63f82967c7c",
+      "published_sha256": "8b5cbe69a3c271017ecc47cca7bf43f09ef6afb70c11efdf606ea63f82967c7c",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/original24_reproduction.csv": {
+      "source_sha256": "dd800a3c81cc5f368fbab822610ebcdec73688898610deb48b32899c60846ac2",
+      "published_sha256": "dd800a3c81cc5f368fbab822610ebcdec73688898610deb48b32899c60846ac2",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/planned_core_tests_54.csv": {
+      "source_sha256": "a27d257f17d9f5d55c0757dcfa3aa5ae133d7bc302584481d8202251573b0cd8",
+      "published_sha256": "a27d257f17d9f5d55c0757dcfa3aa5ae133d7bc302584481d8202251573b0cd8",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/sample_scale_timing_decomposition.csv": {
+      "source_sha256": "d7dd824b66b234190cd65207bfcfc90a1435bd5b8882428dbebfa3f15691a93e",
+      "published_sha256": "d7dd824b66b234190cd65207bfcfc90a1435bd5b8882428dbebfa3f15691a93e",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/shared_measured_component_diagnostic.csv": {
+      "source_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "published_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/synthetic_checks_R.csv": {
+      "source_sha256": "8aaea37f983fc2983b72c36d12edc4ffee810cdc952820fad701f5bb3f3264ac",
+      "published_sha256": "8aaea37f983fc2983b72c36d12edc4ffee810cdc952820fad701f5bb3f3264ac",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/synthetic_checks_python.csv": {
+      "source_sha256": "fb479efe3019f7e6a7bfe59364fd26b1083a0bae0cc97aa533e0c130d2db2fb8",
+      "published_sha256": "fb479efe3019f7e6a7bfe59364fd26b1083a0bae0cc97aa533e0c130d2db2fb8",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/synthetic_verification.json": {
+      "source_sha256": "5c85fc26093517b931d3ca5a58b160c805f4de4a277e74a84344c94b8f9a7260",
+      "published_sha256": "5c85fc26093517b931d3ca5a58b160c805f4de4a277e74a84344c94b8f9a7260",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/timing_all432_disposition.csv": {
+      "source_sha256": "4b42366d8c12ede551986c406e3ee891c0ce77d241d2f0be2b649677cbc25204",
+      "published_sha256": "4b42366d8c12ede551986c406e3ee891c0ce77d241d2f0be2b649677cbc25204",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/verification.json": {
+      "source_sha256": "2391ae0e54087b94f2bdba74f1e3ebf51b8a535340f8a9e185415327a4f1abba",
+      "published_sha256": "e4c8c7eb3ae1f4e65f111646cbf409d2fb3f1ae6d316c1996e2a5766f95208f7",
+      "source_origin": "retained analysis workspace",
+      "transformation": "public path configuration; scientific parameters retained"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/Figure1_temporal_sensation.png": {
+      "source_sha256": "c22e36fe3b739f6840e569bd0f1e6449f17a8bb0dcef69401d6b685e97a38616",
+      "published_sha256": "c22e36fe3b739f6840e569bd0f1e6449f17a8bb0dcef69401d6b685e97a38616",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/Figure2_temporal_patterns.png": {
+      "source_sha256": "0729a8a0f8ab03b249ba21a2fbeb62d146d4f1b4e12a02db9f9c4bed30fd0a13",
+      "published_sha256": "0729a8a0f8ab03b249ba21a2fbeb62d146d4f1b4e12a02db9f9c4bed30fd0a13",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/Figure3_symptoms_regions.png": {
+      "source_sha256": "abe0ec61216e20b5e5c43a2c966d29f2da92960031619dafe771e6a6fcfefe5e",
+      "published_sha256": "abe0ec61216e20b5e5c43a2c966d29f2da92960031619dafe771e6a6fcfefe5e",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/Figure4_future_score_prediction.png": {
+      "source_sha256": "7579cc32d002fb2ba2eb4d76b5f760451fb1771f8802fab07c7eee404556f49e",
+      "published_sha256": "7579cc32d002fb2ba2eb4d76b5f760451fb1771f8802fab07c7eee404556f49e",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS1_observation_support.png": {
+      "source_sha256": "69a969a1c6777ef027f1b022320420e659ccb2a7d6d87d8d31d201756f89c45b",
+      "published_sha256": "69a969a1c6777ef027f1b022320420e659ccb2a7d6d87d8d31d201756f89c45b",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS2_bounds_all_MC_status.png": {
+      "source_sha256": "844be3d33e1d604088b375ffb1c6cdd0968c68181442c059298bfa94773deabd",
+      "published_sha256": "844be3d33e1d604088b375ffb1c6cdd0968c68181442c059298bfa94773deabd",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS3_FPCA_stability_reconstruction.png": {
+      "source_sha256": "add74c08f5c5eb3616bb997ed0565d424c0e816d81100bab13f0938e3b23b7ed",
+      "published_sha256": "add74c08f5c5eb3616bb997ed0565d424c0e816d81100bab13f0938e3b23b7ed",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS4_GAMM_numerical_diagnostics.png": {
+      "source_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "published_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS5_partition_recovery_baseline.png": {
+      "source_sha256": "fa3f0653fa3d36f1694d6efe0c1afa92109ff5eab59ed7c74126a9dfe6fc8984",
+      "published_sha256": "fa3f0653fa3d36f1694d6efe0c1afa92109ff5eab59ed7c74126a9dfe6fc8984",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/figure_pngs/FigureS6_candidate_support_diagnostics.png": {
+      "source_sha256": "b370b19f4c771a9d5c330be9f08defb28478afedb8d833a0dbfbbfca13a1328a",
+      "published_sha256": "b370b19f4c771a9d5c330be9f08defb28478afedb8d833a0dbfbbfca13a1328a",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS1_analysis_subsets.csv": {
+      "source_sha256": "5c104633c5321eb9b0cb96ab69c9cb433ba59d0fb14f30916cbfd46bcc32174a",
+      "published_sha256": "5c104633c5321eb9b0cb96ab69c9cb433ba59d0fb14f30916cbfd46bcc32174a",
+      "source_origin": "October 27 release integration",
+      "transformation": "current aggregate definition table"
+    },
+    "data/aggregate_sources/20261027/tables/TableS21_physiological_associations.csv": {
+      "source_sha256": "d7fce4a68d942b7f5743b4ea29582d68885ff93dce22713efbdf72c2acf35ebc",
+      "published_sha256": "d7fce4a68d942b7f5743b4ea29582d68885ff93dce22713efbdf72c2acf35ebc",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS22_physiological_inference_24.csv": {
+      "source_sha256": "cdc2c08e09925464f316c53a0694fac8634b615ef9086ca6e1e672c9321353a4",
+      "published_sha256": "cdc2c08e09925464f316c53a0694fac8634b615ef9086ca6e1e672c9321353a4",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS23_physiological_inference_all_161.csv": {
+      "source_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "published_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS24_bilateral_Hb_contrasts.csv": {
+      "source_sha256": "53380b69d6bc6d00cfd619b6a9ca719ac36e365ec40217def9d08954417216ad",
+      "published_sha256": "53380b69d6bc6d00cfd619b6a9ca719ac36e365ec40217def9d08954417216ad",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS25_HR_conditioned_Hb_associations.csv": {
+      "source_sha256": "30664fa5d4b6ddf891fbb6a6b814dcc3db8dbc3184231fad5df23b138adbeba2",
+      "published_sha256": "30664fa5d4b6ddf891fbb6a6b814dcc3db8dbc3184231fad5df23b138adbeba2",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS26_expanded_physiology_all54.csv": {
+      "source_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "published_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS27_common_support_timing_all432.csv": {
+      "source_sha256": "5b3694e4cae726cc5087fd8ffbeb134d77bde22a8d2fdd4acce86e994e7f55a8",
+      "published_sha256": "5b3694e4cae726cc5087fd8ffbeb134d77bde22a8d2fdd4acce86e994e7f55a8",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS28_shared_region_Hb_diagnostics.csv": {
+      "source_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "published_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS29_fnirs_channel_assignment.csv": {
+      "source_sha256": "c8236e545e4b8e5528a202faa5dcffc42bfca36eb5920410dd75738cc9fe13da",
+      "published_sha256": "c8236e545e4b8e5528a202faa5dcffc42bfca36eb5920410dd75738cc9fe13da",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS30_physiology_population_flow.csv": {
+      "source_sha256": "f646a61bfd92508d2a911cfd7d008164d882fdc9d8e7ddd9fd25968218a4b199",
+      "published_sha256": "f646a61bfd92508d2a911cfd7d008164d882fdc9d8e7ddd9fd25968218a4b199",
+      "source_origin": "reviewed aggregate delivery",
+      "transformation": "none"
+    },
+    "data/aggregate_sources/20261027/tables/TableS3_symptom_region_codes.csv": {
+      "source_sha256": "4583316a7cb868e6238e85683b92784fd318030616f72392ad64a0deac6aa51b",
+      "published_sha256": "4583316a7cb868e6238e85683b92784fd318030616f72392ad64a0deac6aa51b",
+      "source_origin": "October 27 release integration",
+      "transformation": "current aggregate definition table"
+    },
+    "data/published/20261027/README.md": {
+      "source_sha256": "fcec6e258029e9bf366162008a1180a2ac4df8ef412dd02dd56c66cb1a88f1fe",
+      "published_sha256": "fcec6e258029e9bf366162008a1180a2ac4df8ef412dd02dd56c66cb1a88f1fe",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figure_index.json": {
+      "source_sha256": "cbf03e8f04806bf6d12ef6abbdfa3c3619980a3776e9cf878c960d3465978640",
+      "published_sha256": "cbf03e8f04806bf6d12ef6abbdfa3c3619980a3776e9cf878c960d3465978640",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure1_temporal_sensation.pdf": {
+      "source_sha256": "9ceea638a06088994d90fa8a33ef362c27712368000d86f6aeebcefbbae49bda",
+      "published_sha256": "9ceea638a06088994d90fa8a33ef362c27712368000d86f6aeebcefbbae49bda",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure1_temporal_sensation.png": {
+      "source_sha256": "c22e36fe3b739f6840e569bd0f1e6449f17a8bb0dcef69401d6b685e97a38616",
+      "published_sha256": "c22e36fe3b739f6840e569bd0f1e6449f17a8bb0dcef69401d6b685e97a38616",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure1_temporal_sensation.svg": {
+      "source_sha256": "e2d1e07f9da99b345951cbedd52b91e201368f78ddfbe044233f15f6a6f57027",
+      "published_sha256": "e2d1e07f9da99b345951cbedd52b91e201368f78ddfbe044233f15f6a6f57027",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure2_temporal_patterns.pdf": {
+      "source_sha256": "01dc77607d4118b784227d9a89714f640648865ba7a298e8984e6c698f041a73",
+      "published_sha256": "01dc77607d4118b784227d9a89714f640648865ba7a298e8984e6c698f041a73",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure2_temporal_patterns.png": {
+      "source_sha256": "0729a8a0f8ab03b249ba21a2fbeb62d146d4f1b4e12a02db9f9c4bed30fd0a13",
+      "published_sha256": "0729a8a0f8ab03b249ba21a2fbeb62d146d4f1b4e12a02db9f9c4bed30fd0a13",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure2_temporal_patterns.svg": {
+      "source_sha256": "252033b19b494d2f199df7c21b6ed521455fa66f9394f77e852a2c323e0d5cd7",
+      "published_sha256": "252033b19b494d2f199df7c21b6ed521455fa66f9394f77e852a2c323e0d5cd7",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure3_symptoms_regions.pdf": {
+      "source_sha256": "b14de37c72bd7a846a69b44378a048e7e8a14a4d86b8ad99f7dc0e88b1c075db",
+      "published_sha256": "b14de37c72bd7a846a69b44378a048e7e8a14a4d86b8ad99f7dc0e88b1c075db",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure3_symptoms_regions.png": {
+      "source_sha256": "abe0ec61216e20b5e5c43a2c966d29f2da92960031619dafe771e6a6fcfefe5e",
+      "published_sha256": "abe0ec61216e20b5e5c43a2c966d29f2da92960031619dafe771e6a6fcfefe5e",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure3_symptoms_regions.svg": {
+      "source_sha256": "bc999360b26a3c12ad5d800769a546ca101ed9b0fd5be3d7dd3644da1a10a113",
+      "published_sha256": "bc999360b26a3c12ad5d800769a546ca101ed9b0fd5be3d7dd3644da1a10a113",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure4_future_score_prediction.pdf": {
+      "source_sha256": "29d1550242d0833b5e38d7284b15e02a6da20fadb5a2bd70811f0c1d0e7dd199",
+      "published_sha256": "29d1550242d0833b5e38d7284b15e02a6da20fadb5a2bd70811f0c1d0e7dd199",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure4_future_score_prediction.png": {
+      "source_sha256": "7579cc32d002fb2ba2eb4d76b5f760451fb1771f8802fab07c7eee404556f49e",
+      "published_sha256": "7579cc32d002fb2ba2eb4d76b5f760451fb1771f8802fab07c7eee404556f49e",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/Figure4_future_score_prediction.svg": {
+      "source_sha256": "2fedb0738651fd98e62657bd3d7813a554a7ddb387b5dc80852f1797ccc91cc6",
+      "published_sha256": "2fedb0738651fd98e62657bd3d7813a554a7ddb387b5dc80852f1797ccc91cc6",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS1_observation_support.pdf": {
+      "source_sha256": "8cec981d63dcd526d20be29c43fcb5900c0b0f872bb190bc1b35f5d2bea6f7a4",
+      "published_sha256": "8cec981d63dcd526d20be29c43fcb5900c0b0f872bb190bc1b35f5d2bea6f7a4",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS1_observation_support.png": {
+      "source_sha256": "69a969a1c6777ef027f1b022320420e659ccb2a7d6d87d8d31d201756f89c45b",
+      "published_sha256": "69a969a1c6777ef027f1b022320420e659ccb2a7d6d87d8d31d201756f89c45b",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS1_observation_support.svg": {
+      "source_sha256": "699dfaaa4753744dad4374b58b1c5dddf0d6d2bb092e3754ef663386bb6b82a1",
+      "published_sha256": "699dfaaa4753744dad4374b58b1c5dddf0d6d2bb092e3754ef663386bb6b82a1",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS2_bounds_all_MC_status.pdf": {
+      "source_sha256": "64fa0a0d4f5afc9687071fba1f4339021841cb59ed4fcdd04d665b9ad0a99485",
+      "published_sha256": "64fa0a0d4f5afc9687071fba1f4339021841cb59ed4fcdd04d665b9ad0a99485",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS2_bounds_all_MC_status.png": {
+      "source_sha256": "844be3d33e1d604088b375ffb1c6cdd0968c68181442c059298bfa94773deabd",
+      "published_sha256": "844be3d33e1d604088b375ffb1c6cdd0968c68181442c059298bfa94773deabd",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS2_bounds_all_MC_status.svg": {
+      "source_sha256": "2f24924f10f7d257738f3656353ef8ff6654434a23bb528e6d63fdbba4d80c0f",
+      "published_sha256": "2f24924f10f7d257738f3656353ef8ff6654434a23bb528e6d63fdbba4d80c0f",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS3_FPCA_stability_reconstruction.pdf": {
+      "source_sha256": "4f9b14d96d72d71abe24742cc7a19cfd9db8138bb830e2cff1301c1b7e37f032",
+      "published_sha256": "4f9b14d96d72d71abe24742cc7a19cfd9db8138bb830e2cff1301c1b7e37f032",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS3_FPCA_stability_reconstruction.png": {
+      "source_sha256": "add74c08f5c5eb3616bb997ed0565d424c0e816d81100bab13f0938e3b23b7ed",
+      "published_sha256": "add74c08f5c5eb3616bb997ed0565d424c0e816d81100bab13f0938e3b23b7ed",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS3_FPCA_stability_reconstruction.svg": {
+      "source_sha256": "d5c0dbd78ce6e716c59dca3f2778fe91a7b475c96e282308aed1453535466b1a",
+      "published_sha256": "d5c0dbd78ce6e716c59dca3f2778fe91a7b475c96e282308aed1453535466b1a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS4_GAMM_numerical_diagnostics.pdf": {
+      "source_sha256": "d5a0226c767570367b87afa01887e8db33f87850976fb722a5291e790a2c9678",
+      "published_sha256": "d5a0226c767570367b87afa01887e8db33f87850976fb722a5291e790a2c9678",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS4_GAMM_numerical_diagnostics.png": {
+      "source_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "published_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS4_GAMM_numerical_diagnostics.svg": {
+      "source_sha256": "0fdc88ee3ddb462407c00fc9b0311cb82799f9568e9280624d1e1167982133aa",
+      "published_sha256": "0fdc88ee3ddb462407c00fc9b0311cb82799f9568e9280624d1e1167982133aa",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS5_partition_recovery_baseline.pdf": {
+      "source_sha256": "a38538c7784347a1116e7a83b8de53430e6cb3b4d1786b79ca6bfae6e50e13f9",
+      "published_sha256": "a38538c7784347a1116e7a83b8de53430e6cb3b4d1786b79ca6bfae6e50e13f9",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS5_partition_recovery_baseline.png": {
+      "source_sha256": "fa3f0653fa3d36f1694d6efe0c1afa92109ff5eab59ed7c74126a9dfe6fc8984",
+      "published_sha256": "fa3f0653fa3d36f1694d6efe0c1afa92109ff5eab59ed7c74126a9dfe6fc8984",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS5_partition_recovery_baseline.svg": {
+      "source_sha256": "3caa4cdbd23fe20987aebaa8e12188fd4c1156a6bad35fdb575258167d480465",
+      "published_sha256": "3caa4cdbd23fe20987aebaa8e12188fd4c1156a6bad35fdb575258167d480465",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS6_candidate_support_diagnostics.pdf": {
+      "source_sha256": "590c73f9e4e532e7d9e42954da60a6de183e948ec202cbfdcf2b5f02d5727467",
+      "published_sha256": "590c73f9e4e532e7d9e42954da60a6de183e948ec202cbfdcf2b5f02d5727467",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS6_candidate_support_diagnostics.png": {
+      "source_sha256": "b370b19f4c771a9d5c330be9f08defb28478afedb8d833a0dbfbbfca13a1328a",
+      "published_sha256": "b370b19f4c771a9d5c330be9f08defb28478afedb8d833a0dbfbbfca13a1328a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/figures/FigureS6_candidate_support_diagnostics.svg": {
+      "source_sha256": "8ffde799de98b4677601b4108948a1a223bbdccd4fbd5dfdb1f49ff8b805560b",
+      "published_sha256": "8ffde799de98b4677601b4108948a1a223bbdccd4fbd5dfdb1f49ff8b805560b",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/manifest.json": {
+      "source_sha256": "93c3f89b6f8bb6a7ecea65de9d5d9d079bbd730f5092bd169509de91d825a134",
+      "published_sha256": "93c3f89b6f8bb6a7ecea65de9d5d9d079bbd730f5092bd169509de91d825a134",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/metadata.json": {
+      "source_sha256": "df16b91c93bea2af77b0a646524559a3bab8169d63c28cd688e9c55682492953",
+      "published_sha256": "df16b91c93bea2af77b0a646524559a3bab8169d63c28cd688e9c55682492953",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure1_temporal_sensation_deuteranopia.png": {
+      "source_sha256": "0cff488190ea3e78351eac3bf143056bacac689d9716486e66f643bc6cc2b41d",
+      "published_sha256": "0cff488190ea3e78351eac3bf143056bacac689d9716486e66f643bc6cc2b41d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure1_temporal_sensation_gray.png": {
+      "source_sha256": "36d29dfa4ddf74139862564ddefa25690d9a64047b81ba7e4daf3bd64618f354",
+      "published_sha256": "36d29dfa4ddf74139862564ddefa25690d9a64047b81ba7e4daf3bd64618f354",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure1_temporal_sensation_protanopia.png": {
+      "source_sha256": "9e1493f0891696dce9f8331550128fbdd297a266c8602237d837394b57d09ac4",
+      "published_sha256": "9e1493f0891696dce9f8331550128fbdd297a266c8602237d837394b57d09ac4",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure2_temporal_patterns_deuteranopia.png": {
+      "source_sha256": "7b7b39ad5b4ced822a802e0cd6d3c7a8723d57943092726e18bd11e4b3a89f64",
+      "published_sha256": "7b7b39ad5b4ced822a802e0cd6d3c7a8723d57943092726e18bd11e4b3a89f64",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure2_temporal_patterns_gray.png": {
+      "source_sha256": "3cc56aa01eec8b195af9b90a939eb0d80bc8fa28faf22f91e817d148a52871b3",
+      "published_sha256": "3cc56aa01eec8b195af9b90a939eb0d80bc8fa28faf22f91e817d148a52871b3",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure2_temporal_patterns_protanopia.png": {
+      "source_sha256": "f8c144b5ad4c41ab8089ddff163d00e1d7fcc336592dc6404faafef7af088c04",
+      "published_sha256": "f8c144b5ad4c41ab8089ddff163d00e1d7fcc336592dc6404faafef7af088c04",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure3_symptoms_regions_deuteranopia.png": {
+      "source_sha256": "4a4d027ae3ab29fd6891cd7386e23cd6a30c6404328e522f2a321830e98cb048",
+      "published_sha256": "4a4d027ae3ab29fd6891cd7386e23cd6a30c6404328e522f2a321830e98cb048",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure3_symptoms_regions_gray.png": {
+      "source_sha256": "610021d9e7394ab222161a3eb26f856de87009ba267fbcb72b0e58489a768c80",
+      "published_sha256": "610021d9e7394ab222161a3eb26f856de87009ba267fbcb72b0e58489a768c80",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure3_symptoms_regions_protanopia.png": {
+      "source_sha256": "15baac7ad86a0153d186d73b98191a721ef26be61b5e8ab9a3ae2fb94ed84ead",
+      "published_sha256": "15baac7ad86a0153d186d73b98191a721ef26be61b5e8ab9a3ae2fb94ed84ead",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure4_future_score_prediction_deuteranopia.png": {
+      "source_sha256": "9669879d1c6fc0afc398422a0bf787042e12b2bba66e653de53bd38d0f931fb6",
+      "published_sha256": "9669879d1c6fc0afc398422a0bf787042e12b2bba66e653de53bd38d0f931fb6",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure4_future_score_prediction_gray.png": {
+      "source_sha256": "19f5f5e276e968b7af84d9cc64fdeec9f2aded5df4d78e9ee89f2f8790eba942",
+      "published_sha256": "19f5f5e276e968b7af84d9cc64fdeec9f2aded5df4d78e9ee89f2f8790eba942",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/Figure4_future_score_prediction_protanopia.png": {
+      "source_sha256": "ea3dc6df4783c0b3c99112c72604a4a62614dbaa1a0e2e449d5344581e24c66d",
+      "published_sha256": "ea3dc6df4783c0b3c99112c72604a4a62614dbaa1a0e2e449d5344581e24c66d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS1_observation_support_deuteranopia.png": {
+      "source_sha256": "465d8161d5f2b1afffdb5833d9665dfe9c005501590d59a89f18c0d221c496c5",
+      "published_sha256": "465d8161d5f2b1afffdb5833d9665dfe9c005501590d59a89f18c0d221c496c5",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS1_observation_support_gray.png": {
+      "source_sha256": "20943139552ede80fb86f3b5e05fc5cda4e8ececa534b13994187dec4b4f180a",
+      "published_sha256": "20943139552ede80fb86f3b5e05fc5cda4e8ececa534b13994187dec4b4f180a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS1_observation_support_protanopia.png": {
+      "source_sha256": "030e1f1b7aee2e730c3078ee42b744a32baf6fe5fbfbd5db56178d9e24400197",
+      "published_sha256": "030e1f1b7aee2e730c3078ee42b744a32baf6fe5fbfbd5db56178d9e24400197",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS2_bounds_all_MC_status_deuteranopia.png": {
+      "source_sha256": "168c7c3d2f831290a11f773c61cd1a757ab6ddab93e85ecb70e0fed4b31c5d1f",
+      "published_sha256": "168c7c3d2f831290a11f773c61cd1a757ab6ddab93e85ecb70e0fed4b31c5d1f",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS2_bounds_all_MC_status_gray.png": {
+      "source_sha256": "038aafad19a734b27e1bf69c4999579cbbf7e4e296ecb1cde81a59e417603b4e",
+      "published_sha256": "038aafad19a734b27e1bf69c4999579cbbf7e4e296ecb1cde81a59e417603b4e",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS2_bounds_all_MC_status_protanopia.png": {
+      "source_sha256": "fbcc54467ca31424831948d599bfe7dc67f00f085c53a6209402f8df6b25eada",
+      "published_sha256": "fbcc54467ca31424831948d599bfe7dc67f00f085c53a6209402f8df6b25eada",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS3_FPCA_stability_reconstruction_deuteranopia.png": {
+      "source_sha256": "ade3ce0bf54b704b2a8d1ec2d44ea4c18c5d38e486bfc764156b8c96a0ac8db2",
+      "published_sha256": "ade3ce0bf54b704b2a8d1ec2d44ea4c18c5d38e486bfc764156b8c96a0ac8db2",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS3_FPCA_stability_reconstruction_gray.png": {
+      "source_sha256": "cd326f7a46293854b8034808d2e43481f0224a0c7a880e9e279b61febb048a51",
+      "published_sha256": "cd326f7a46293854b8034808d2e43481f0224a0c7a880e9e279b61febb048a51",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS3_FPCA_stability_reconstruction_protanopia.png": {
+      "source_sha256": "52a9a363f2626b28c6e7b1830f4e4e4056597c12f7d8ab7f0dd07c67ae0cdfe0",
+      "published_sha256": "52a9a363f2626b28c6e7b1830f4e4e4056597c12f7d8ab7f0dd07c67ae0cdfe0",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS4_GAMM_numerical_diagnostics_deuteranopia.png": {
+      "source_sha256": "fc453ab42fafc57f8521a9a3ac3eba89f8672d9919a8c52bee46a9bab7837e29",
+      "published_sha256": "fc453ab42fafc57f8521a9a3ac3eba89f8672d9919a8c52bee46a9bab7837e29",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS4_GAMM_numerical_diagnostics_gray.png": {
+      "source_sha256": "68cb9789ab29b3779ee03972639a7a428194f09a14342b009f12c515017245e9",
+      "published_sha256": "68cb9789ab29b3779ee03972639a7a428194f09a14342b009f12c515017245e9",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS4_GAMM_numerical_diagnostics_protanopia.png": {
+      "source_sha256": "a9d8fd06130d637a178f66b15b547a1b24c375fe684826abf6f0757c6c309ed6",
+      "published_sha256": "a9d8fd06130d637a178f66b15b547a1b24c375fe684826abf6f0757c6c309ed6",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS5_partition_recovery_baseline_deuteranopia.png": {
+      "source_sha256": "6a9704c9ac7a0eb3c8bb1e7512577e38e80218d3b4aa484d345bf5e703c4a665",
+      "published_sha256": "6a9704c9ac7a0eb3c8bb1e7512577e38e80218d3b4aa484d345bf5e703c4a665",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS5_partition_recovery_baseline_gray.png": {
+      "source_sha256": "6b80478dfaa295613d1556fbc67ff070a7ecdd6f77f24f59112ae23489822a36",
+      "published_sha256": "6b80478dfaa295613d1556fbc67ff070a7ecdd6f77f24f59112ae23489822a36",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS5_partition_recovery_baseline_protanopia.png": {
+      "source_sha256": "6ec1752bfe1d691a6d15bf3984a0f87f2d070ab739a465440217434fc966dd84",
+      "published_sha256": "6ec1752bfe1d691a6d15bf3984a0f87f2d070ab739a465440217434fc966dd84",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS6_candidate_support_diagnostics_deuteranopia.png": {
+      "source_sha256": "5d1fcb5864c1ab0751264a3effd52e4f63ef762027a0139e8f01a887b9d4892d",
+      "published_sha256": "5d1fcb5864c1ab0751264a3effd52e4f63ef762027a0139e8f01a887b9d4892d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS6_candidate_support_diagnostics_gray.png": {
+      "source_sha256": "62da3eb31fa7f26ba2ae3ae37e6a33df063ecdef27a3025c5d7082b3711e6cbc",
+      "published_sha256": "62da3eb31fa7f26ba2ae3ae37e6a33df063ecdef27a3025c5d7082b3711e6cbc",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/FigureS6_candidate_support_diagnostics_protanopia.png": {
+      "source_sha256": "adaf0aa43661a6ae4dcfce1f32e12831694ebe6a9fa429dd23268dd70a5234e6",
+      "published_sha256": "adaf0aa43661a6ae4dcfce1f32e12831694ebe6a9fa429dd23268dd70a5234e6",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/qa/text_bounds.json": {
+      "source_sha256": "7ea692eaf347d64a563cd7770827cd3e9424e0fd6c4c8cb5852e830c1d846d93",
+      "published_sha256": "7ea692eaf347d64a563cd7770827cd3e9424e0fd6c4c8cb5852e830c1d846d93",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/render_manifest.json": {
+      "source_sha256": "686c52e507aba71021f42f4c8cd50b4ea7d68176597c2af48a756b9591e6816f",
+      "published_sha256": "686c52e507aba71021f42f4c8cd50b4ea7d68176597c2af48a756b9591e6816f",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/Table1_cohort_and_analysis_sets.csv": {
+      "source_sha256": "3aceb2d59f9a093e4d405f421e48650c13e712fdddf22f147c367fd7f8c41309",
+      "published_sha256": "3aceb2d59f9a093e4d405f421e48650c13e712fdddf22f147c367fd7f8c41309",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/Table2_future_score_errors.csv": {
+      "source_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "published_sha256": "0ecbe9d654a1572d4176face64b309142f3c69f2b53a9e5290a8ae09c0d8f389",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS10_prediction_all_weights.csv": {
+      "source_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "published_sha256": "0a8af13891eae7f217e71b491b58a87822a2ddae75576ee25a8a3ac366f64c7a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS11_GAMM_reference_diagnostics.csv": {
+      "source_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "published_sha256": "c6af6bb78992036452035a63de8c50f7cbf0b22aaf37768b6433f6911117016d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS12_GAMM_conditional_diagnostics.csv": {
+      "source_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "published_sha256": "dd16c3e54058d3477906283c994b827e70dd33f9ed9ed6564f3968b311d8fd5c",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS13_U06_variability_summary.csv": {
+      "source_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "published_sha256": "5e8c1fb98b43fa9273e2e6a19a4e774d9ecabf7e9e25371f65569e9256dd4dfe",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS14_cluster_summary.csv": {
+      "source_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "published_sha256": "b64f994e6e88e58bc003faaae6ed447c8c079db2b5d1a9116b182370ac9e3dea",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS15_partition_recovery_and_baseline.csv": {
+      "source_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "published_sha256": "9cc40b7ebcc396434484e6ba28f0aa49609ceb6a8b7c696cd841485eeaa28817",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS16_early_group_recognition.csv": {
+      "source_sha256": "b967369ab0f967a6ea026702db15c24d2021308e9204ebc59d1485ac30c08051",
+      "published_sha256": "b967369ab0f967a6ea026702db15c24d2021308e9204ebc59d1485ac30c08051",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS17_reference_group_sizes.csv": {
+      "source_sha256": "bc23d9f735d3805ab33bf8007bc1648933f1bfd85499bfef25604433a9fe5d43",
+      "published_sha256": "bc23d9f735d3805ab33bf8007bc1648933f1bfd85499bfef25604433a9fe5d43",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS18_fnirs_channel_assignment.csv": {
+      "source_sha256": "c8236e545e4b8e5528a202faa5dcffc42bfca36eb5920410dd75738cc9fe13da",
+      "published_sha256": "c8236e545e4b8e5528a202faa5dcffc42bfca36eb5920410dd75738cc9fe13da",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS19_physiology_population_flow.csv": {
+      "source_sha256": "f646a61bfd92508d2a911cfd7d008164d882fdc9d8e7ddd9fd25968218a4b199",
+      "published_sha256": "f646a61bfd92508d2a911cfd7d008164d882fdc9d8e7ddd9fd25968218a4b199",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS1_analysis_subsets.csv": {
+      "source_sha256": "5c104633c5321eb9b0cb96ab69c9cb433ba59d0fb14f30916cbfd46bcc32174a",
+      "published_sha256": "5c104633c5321eb9b0cb96ab69c9cb433ba59d0fb14f30916cbfd46bcc32174a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS20_candidate_summary.csv": {
+      "source_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "published_sha256": "467852d2c6d4e57bc043a6dd14047aa4b3d7bf3a3d8460432f040821ebb37a2d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS21_physiological_associations.csv": {
+      "source_sha256": "d7fce4a68d942b7f5743b4ea29582d68885ff93dce22713efbdf72c2acf35ebc",
+      "published_sha256": "d7fce4a68d942b7f5743b4ea29582d68885ff93dce22713efbdf72c2acf35ebc",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS22_physiological_inference_24.csv": {
+      "source_sha256": "cdc2c08e09925464f316c53a0694fac8634b615ef9086ca6e1e672c9321353a4",
+      "published_sha256": "cdc2c08e09925464f316c53a0694fac8634b615ef9086ca6e1e672c9321353a4",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS23_physiological_inference_all_161.csv": {
+      "source_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "published_sha256": "896cbb0f8e4aa363a9ed5916176123b9a4c9cc71c2a89ed079b6c472347fe0fb",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS24_candidate_support_diagnostics.csv": {
+      "source_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "published_sha256": "3d2111c0e83bb8df214c0564326050411e138be0fd708390cc1bfe6f92b1a2da",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS25_bilateral_Hb_contrasts.csv": {
+      "source_sha256": "53380b69d6bc6d00cfd619b6a9ca719ac36e365ec40217def9d08954417216ad",
+      "published_sha256": "53380b69d6bc6d00cfd619b6a9ca719ac36e365ec40217def9d08954417216ad",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS26_HR_conditioned_Hb_associations.csv": {
+      "source_sha256": "30664fa5d4b6ddf891fbb6a6b814dcc3db8dbc3184231fad5df23b138adbeba2",
+      "published_sha256": "30664fa5d4b6ddf891fbb6a6b814dcc3db8dbc3184231fad5df23b138adbeba2",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS27_expanded_physiology_all54.csv": {
+      "source_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "published_sha256": "08824934fa5e735b623022e6e4052f64000beee02a95bc8b897c474ab23ad6d5",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS28_common_support_timing_all432.csv": {
+      "source_sha256": "5b3694e4cae726cc5087fd8ffbeb134d77bde22a8d2fdd4acce86e994e7f55a8",
+      "published_sha256": "5b3694e4cae726cc5087fd8ffbeb134d77bde22a8d2fdd4acce86e994e7f55a8",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS29_shared_region_Hb_diagnostics.csv": {
+      "source_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "published_sha256": "510070d18654ac7e39c0cef4a1376ff600c61558543809de03acaf31a7324445",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS2_finite_changes_all364.csv": {
+      "source_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "published_sha256": "4b01480be99a7859bc241bf568f5cbe5fd9cab50d07df4917525fe350da7ec1d",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS3_symptom_region_codes.csv": {
+      "source_sha256": "4583316a7cb868e6238e85683b92784fd318030616f72392ad64a0deac6aa51b",
+      "published_sha256": "4583316a7cb868e6238e85683b92784fd318030616f72392ad64a0deac6aa51b",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS4_recorded_codes_all139.csv": {
+      "source_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "published_sha256": "f2dbd778912458987c5572cd386a6664ea0a21799dbd975d2f52ed64cf50988e",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS5_descriptive_symptom_region_rules.csv": {
+      "source_sha256": "79adea8eb7eb503bfc014c53096e78fc752735c25abaabac7295a5bdff261992",
+      "published_sha256": "79adea8eb7eb503bfc014c53096e78fc752735c25abaabac7295a5bdff261992",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS6_FPCA_redundancy.csv": {
+      "source_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "published_sha256": "e9398b91b5ea2567789a034448572eef3ac9d3979a967059cc20b4f189d474a5",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS7_FPCA_all24_diagnostics.csv": {
+      "source_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "published_sha256": "53252316a5f439775420e645aec3864ea2c7157f2ff592e1a2bede5a3113c53a",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS8_FPCA_reconstruction_all_repeats.csv": {
+      "source_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "published_sha256": "c56a494032b091d23e363817eab4fee0c5281d5a08186f2d259641ec278f91a5",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/published/20261027/tables/TableS9_prediction_all20_repeats.csv": {
+      "source_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "published_sha256": "30d844d50d7fc37b0ca7d774b5f91b75ccaa11a93f74480aa8c5ba83c3860a13",
+      "source_origin": "reviewed October 27 aggregate export",
+      "transformation": "generated from reviewed aggregates; no inference"
+    },
+    "data/aggregate_sources/20261017/physiology_20261017/run_provenance.json": {
+      "source_sha256": "e34425fafde9a39af8a0fe39a6210668525b0b6e5d767e46febdd81cbb0ac2aa",
+      "published_sha256": "ed36464a5bcf69042475f7a720a4b657a41ddf4852f3f7176d82032ef62493d0",
+      "transformation": "select run/config/code/input hashes and software; remove personal locations and individual records",
+      "source_origin": "retained verified October 17 run"
+    },
+    "data/aggregate_sources/20261017/physiology_extension_20261017/run_provenance.json": {
+      "source_sha256": "71d9bab12c3266a65c445641a90e4e5e1a79884275081aa3c277716bd7ba9995",
+      "published_sha256": "2468c0558f09ffca586e03a5653baab3c246b012b9549bf294060a375a5fa380",
+      "transformation": "select run/config/code/input hashes and software; remove personal locations and individual records",
+      "source_origin": "retained verified October 17 run"
     }
   },
   "source_report_manifest_sha256": "7a9ecd2d23f2a8fdb7967b6970439a818d249cdfbc7bd0d54dafb0ff97c0229f",
@@ -3791,6 +4841,16 @@
     "scope": "pre-publication snapshot; live receipt is docs/publication_status.json"
   },
   "maintenance_scope": {
+    "date": "2026-10-27",
+    "source_snapshot_files": 443,
+    "approved_aggregate_files": 357,
+    "unpublished_writing_excluded_from_current_tree": true,
+    "analytical_expressions_preserved": true,
+    "original_source_hashes_retained": true,
+    "verification_record": "docs/artifact_alignment_verification_20261027.json"
+  },
+  "updated_utc": "2026-10-27T15:37:35.237216+00:00",
+  "prior_maintenance_scope": {
     "date": "2026-10-23",
     "source_snapshot_files": 417,
     "approved_aggregate_files": 208,
@@ -3799,17 +4859,22 @@
     "original_source_hashes_retained": true,
     "verification_record": "docs/artifact_alignment_verification_20261023.json"
   },
-  "updated_utc": "2026-10-22T23:41:02.054072+00:00",
-  "prior_maintenance_scope": {
-    "date": "2026-10-05",
-    "source_snapshot_files": 401,
-    "approved_aggregate_files": 116,
-    "unpublished_writing_excluded_from_current_tree": true,
-    "analytical_expressions_preserved": true,
-    "original_source_hashes_retained": true,
-    "verification_record": "docs/code_review_20261005.json"
-  },
   "artifact_alignment": {
+    "target_revision": "2026-10-27",
+    "artifact_version": "20261027",
+    "config": "config/aligned_artifacts_20261027_v1.json",
+    "manifest": "data/published/20261027/manifest.json",
+    "prior_public_head": "137b33325454663b414c1fa336ca270ac8fa504d",
+    "remote_push_performed": false,
+    "scope": "local integration; user manages push"
+  },
+  "readme_update": {
+    "date": "2026-10-23",
+    "scope": "current release navigation, measurement and analysis descriptions, reproduction instructions, and verification links",
+    "analytical_code_changed": false,
+    "aggregate_files_changed": false
+  },
+  "prior_artifact_alignment": {
     "target_revision": "2026-10-14",
     "artifact_version": "20261023",
     "source_figure_script_sha256": "2172721b5ed256944064e836870d9a6ecd7c1b67542edbad14da1f2ba0e99499",
@@ -3818,11 +4883,5 @@
     "source_and_target_cross_checks": "all ten PNG files byte-identical; all 74 new-table rows/rules matched; original analysis files retained",
     "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642",
     "publication_receipt": "docs/artifact_publication_status_20261023.json"
-  },
-  "readme_update": {
-    "date": "2026-10-23",
-    "scope": "current release navigation, measurement and analysis descriptions, reproduction instructions, and verification links",
-    "analytical_code_changed": false,
-    "aggregate_files_changed": false
   }
 }

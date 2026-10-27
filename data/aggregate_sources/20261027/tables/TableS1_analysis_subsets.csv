@@ -1,0 +1,9 @@
+Analysis,Required observations,Available participants or predictions,Interpretation
+Observed minute mean,Recorded score at the selected minute,215 at minute 1; 56 at minute 20,Different observed subsets by minute
+Complete 10-minute FPCA,Scores at all minutes 1-10,206 participants,Patterns within complete recordings
+Complete 20-minute FPCA,Scores at all minutes 1-20,56 participants,Separate subset with complete recordings
+Finite change over a specified interval,Numerical ratings at every minute from interval start through end,Recomputed for each interval,Change among participants measured throughout the interval
+Symptom or region listing,Relevant information recorded,209 participants for each type of information,Proportion among participants with the relevant information
+Symptom and region co-listing,Both types of information recorded,204 participants,Participants listing both a symptom and a region
+Next rating,"Ratings at the current minute, the two preceding minutes and the following minute; origins 3-19",2781 eligible predictions in 213 participants,Recorded next-minute score
+Minute 10,Scores at minutes 1-5 and 10,206 participants,Recorded score at minute 10

@@ -1,0 +1,92 @@
+{
+  "status": "PASS",
+  "programs": [
+    {
+      "file": "scripts/physiology_20261017/analyse.py",
+      "source_sha256": "69bed925a2b1078d7320bcb5d68c932d2907ac23f28b2493f859dedb0614e325",
+      "published_sha256": "b95326c6f7d3609618349dfc9a893ec4936ed29ab5ce4512a2e85567cbb0d5bb",
+      "scientific_functions_identical": [
+        "sha",
+        "loadcsv",
+        "prepare",
+        "fit",
+        "wild",
+        "row_of",
+        "adjust"
+      ],
+      "IO_functions_adapted": [
+        "write"
+      ]
+    },
+    {
+      "file": "scripts/physiology_20261017/sensitivities.py",
+      "source_sha256": "98bdbde3a02f51ff6b8902fb9711a214c51a97df8f263fd6312d66dbe16f92cd",
+      "published_sha256": "0eacbf1078d447da0c1bdf431f7890e96f08c6aa8d47998342afd20d155011b5",
+      "scientific_functions_identical": [],
+      "IO_functions_adapted": []
+    },
+    {
+      "file": "scripts/physiology_20261017/verify_inference.py",
+      "source_sha256": "dc0d0366b0d3cb71404d6b6c799053438df65f9986311029f7f28552185c8eb4",
+      "published_sha256": "2e9a25ecd34beb567fc0cd71e785fba448648f981b75cb6054757fd59f44f310",
+      "scientific_functions_identical": [
+        "direct"
+      ],
+      "IO_functions_adapted": []
+    },
+    {
+      "file": "scripts/physiology_20261017/run_extension.py",
+      "source_sha256": "e1e60161e81019ffddda65fd098d8b027cd1c3554560827a3f9d7999ae03878c",
+      "published_sha256": "97ff3f2e47b7b2dd20f59c0d7217f5cb12774bfa47bb9f7a9bfb703bef145434",
+      "scientific_functions_identical": [
+        "sha",
+        "read",
+        "keep_people",
+        "standardize",
+        "full_design_check",
+        "estimate",
+        "raw_path",
+        "inventory",
+        "scenario_data",
+        "fixed_support"
+      ],
+      "IO_functions_adapted": [
+        "save",
+        "main"
+      ]
+    },
+    {
+      "file": "scripts/physiology_20261017/decompose.py",
+      "source_sha256": "b84f23e3ebdffa8065e49f258bef0d180eb16bd02ed5dd42c662cd88819ea871",
+      "published_sha256": "7f84a563145ba42bcc7ad743496e867f67f23df670422f5407a8732418b4ce10",
+      "scientific_functions_identical": [],
+      "IO_functions_adapted": []
+    },
+    {
+      "file": "scripts/physiology_20261017/verify_extension.py",
+      "source_sha256": "3bb500da81d2374b2c26692ef28462d12463e7c5b1806524a7a1ec8e6b4dd704",
+      "published_sha256": "dad57e83a47255acc79eb973dd08549e6b7ad77e1a056f6fc17c491b9967dd20",
+      "scientific_functions_identical": [],
+      "IO_functions_adapted": []
+    }
+  ],
+  "configurations": [
+    {
+      "file": "config/physiology_inference_20261017_v1.json",
+      "scientific_parameters_identical": true,
+      "source_sha256": "89bafdb224c9f0a2c26192555c34d6835873e9a03d31217c2c3819dab602760e",
+      "published_sha256": "a7656bd3393d6116a476168af4b37622a206e2c1d6a08a575c9e3a1fe7840b24"
+    },
+    {
+      "file": "config/physiology_extension_20261017_v1.json",
+      "scientific_parameters_identical": true,
+      "source_sha256": "76ce555e047703e0193a7986fcb42330183609a9f8f1d1e885a64713ae722db3",
+      "published_sha256": "5cd563d19d4ab710747e81352496076b9f8775531074168b170a7d10ce2ee091"
+    }
+  ],
+  "excluded_nonanalysis_checks": "Historical private document and ZIP preservation checks are omitted. Numerical verification remains.",
+  "formatting": {
+    "ruff": "0.16.10",
+    "air": "0.12.0"
+  }
+}

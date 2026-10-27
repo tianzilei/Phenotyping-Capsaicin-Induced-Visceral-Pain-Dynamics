@@ -158,7 +158,8 @@ def repeat_cloud(a, values, position, color, marker="o", horizontal=False):
         a.plot(position, np.median(values), "D", color="black", ms=3.8)
 
 
-def build(data, output):
+def build(data, output, *, names=None, physiological_label="Earlier"):
+    figure_names = NAMES if names is None else names
     if output.exists():
         raise FileExistsError(output)
     (output / "figures").mkdir(parents=True)
@@ -341,7 +342,7 @@ def build(data, output):
             transform=b.transAxes,
             fontsize=7.5,
         )
-        save(f, NAMES[0])
+        save(f, figure_names[0])
 
         f = canvas(175)
         g = f.add_gridspec(3, 3, height_ratios=[1, 1.15, 1])
@@ -430,7 +431,7 @@ def build(data, output):
                 va="top",
                 fontsize=7.5,
             )
-        save(f, NAMES[1])
+        save(f, figure_names[1])
 
         s = table("TableS2_recorded_codes_all139")
         margins = {k: s[s.kind == k].copy() for k in ["symptom", "region"]}
@@ -516,7 +517,7 @@ def build(data, output):
         cb.set_label("Both listed (% of 204)", fontsize=7.5)
         cb.solids.set_rasterized(False)
         cb.solids.set_edgecolor("face")
-        save(f, NAMES[2])
+        save(f, figure_names[2])
 
         fp = table("TableS4_FPCA_all24_diagnostics")
         basis = table("TableS14_FPCA_FVE_and_basis")
@@ -594,7 +595,7 @@ def build(data, output):
             a.set_ylim(0, 8)
             a.set_xticks([1, 5, 10])
             legend(a, loc="upper right")
-        save(f, NAMES[3])
+        save(f, figure_names[3])
 
         rep = table("TableS13_prediction_all20_repeats")
         f = canvas(155)
@@ -649,7 +650,7 @@ def build(data, output):
                     a.axvline(0, color="#777777", lw=0.7)
                 else:
                     a.set_xlim((0.55, 1.02) if j == 0 else (1.15, 2.3))
-        save(f, NAMES[4])
+        save(f, figure_names[4])
 
         f = canvas(148)
         axes = f.subplots(2, 2)
@@ -716,7 +717,7 @@ def build(data, output):
             a.axhline(0, color="#555555", lw=0.7)
             a.set_xticks(range(5))
             a.set_ylim(-0.9, 0.8)
-        save(f, NAMES[5])
+        save(f, figure_names[5])
 
         diagnostics = json.loads((data / "GAMM_reference_curves.json").read_text())
         diag = table("TableS16_GAMM_reference_diagnostics")
@@ -782,12 +783,12 @@ def build(data, output):
         a.set_ylim(-0.5, len(diag) + 0.2)
         a.set_yticks(yy, [labels[x] for x in diag.cell])
         axis(a, "D", "Covariance conditioning", "Condition number (log scale)")
-        save(f, NAMES[6])
+        save(f, figure_names[6])
 
         cand = table("TableS9_candidate_summary").drop_duplicates("cell")
         ct = table("TableS18_candidate_support_diagnostics")
         kinds = ["planned24", "joint22", "egg66"]
-        pretty = ["Earlier (24)", "Joint (22)", "EGG–Hb (66)"]
+        pretty = [f"{physiological_label} (24)", "Joint (22)", "EGG–Hb (66)"]
         f = canvas(144)
         g = f.add_gridspec(2, 2)
         a = f.add_subplot(g[0, :])
@@ -838,12 +839,12 @@ def build(data, output):
             linewidth=0.25,
             hatch="///",
         )
-        a.set_xticks(yy, ["Earlier", "Joint", "EGG–Hb"])
+        a.set_xticks(yy, [physiological_label, "Joint", "EGG–Hb"])
         axis(a, "C", "Rank failures retained", y="Failed fits")
         for i, v in enumerate(d.failed_fits):
             a.text(i, v + 2, str(int(v)), ha="center", fontsize=7.5)
         a.set_ylim(0, 140)
-        save(f, NAMES[7])
+        save(f, figure_names[7])
 
         bounds = table("bounded_means")
         mc = table("TableS6_all1255_MC_statistics")
@@ -908,7 +909,7 @@ def build(data, output):
         a.set_xlim(0, 420)
         axis(a, "B", "Precision inventory: 1,255 statistics", "Statistics")
         legend(a, ncol=2, loc="lower right")
-        save(f, NAMES[8])
+        save(f, figure_names[8])
 
         recovery = table("TableS10_partition_recovery_and_baseline")
         f = canvas(205)
@@ -1000,7 +1001,7 @@ def build(data, output):
                 "Balanced accuracy",
             )
             legend(a, ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.04))
-        save(f, NAMES[9])
+        save(f, figure_names[9])
 
     assert before == {
         p.name: sha(p)

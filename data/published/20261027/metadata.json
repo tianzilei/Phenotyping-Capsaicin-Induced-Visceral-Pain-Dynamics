@@ -1,0 +1,202 @@
+[
+  {
+    "id": "Figure1_temporal_sensation",
+    "width_mm": 165.1,
+    "height_mm": 175.0,
+    "png_pixels": [
+      3900,
+      4133
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 101,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "c22e36fe3b739f6840e569bd0f1e6449f17a8bb0dcef69401d6b685e97a38616"
+  },
+  {
+    "id": "Figure2_temporal_patterns",
+    "width_mm": 165.1,
+    "height_mm": 182.0,
+    "png_pixels": [
+      3900,
+      4299
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 90,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "0729a8a0f8ab03b249ba21a2fbeb62d146d4f1b4e12a02db9f9c4bed30fd0a13"
+  },
+  {
+    "id": "Figure3_symptoms_regions",
+    "width_mm": 165.1,
+    "height_mm": 214.0,
+    "png_pixels": [
+      3900,
+      5055
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 194,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "abe0ec61216e20b5e5c43a2c966d29f2da92960031619dafe771e6a6fcfefe5e"
+  },
+  {
+    "id": "Figure4_future_score_prediction",
+    "width_mm": 165.1,
+    "height_mm": 155.0,
+    "png_pixels": [
+      3900,
+      3661
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 50,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "7579cc32d002fb2ba2eb4d76b5f760451fb1771f8802fab07c7eee404556f49e"
+  },
+  {
+    "id": "FigureS1_observation_support",
+    "width_mm": 165.1,
+    "height_mm": 112.0,
+    "png_pixels": [
+      3900,
+      2645
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 82,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "69a969a1c6777ef027f1b022320420e659ccb2a7d6d87d8d31d201756f89c45b"
+  },
+  {
+    "id": "FigureS2_bounds_all_MC_status",
+    "width_mm": 165.1,
+    "height_mm": 178.0,
+    "png_pixels": [
+      3900,
+      4204
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 51,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "844be3d33e1d604088b375ffb1c6cdd0968c68181442c059298bfa94773deabd"
+  },
+  {
+    "id": "FigureS3_FPCA_stability_reconstruction",
+    "width_mm": 165.1,
+    "height_mm": 148.0,
+    "png_pixels": [
+      3900,
+      3496
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 68,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "add74c08f5c5eb3616bb997ed0565d424c0e816d81100bab13f0938e3b23b7ed"
+  },
+  {
+    "id": "FigureS4_GAMM_numerical_diagnostics",
+    "width_mm": 165.1,
+    "height_mm": 178.0,
+    "png_pixels": [
+      3900,
+      4204
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 68,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "ef30e263309596d91cef5b855632513d0891853faafcb04a8392aea3635116a8"
+  },
+  {
+    "id": "FigureS5_partition_recovery_baseline",
+    "width_mm": 165.1,
+    "height_mm": 204.99999999999997,
+    "png_pixels": [
+      3900,
+      4842
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 97,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "fa3f0653fa3d36f1694d6efe0c1afa92109ff5eab59ed7c74126a9dfe6fc8984"
+  },
+  {
+    "id": "FigureS6_candidate_support_diagnostics",
+    "width_mm": 165.1,
+    "height_mm": 144.0,
+    "png_pixels": [
+      3900,
+      3401
+    ],
+    "png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "opaque": true,
+    "svg_text_nodes": 50,
+    "svg_raster_nodes": 0,
+    "min_font_pt": 7.5,
+    "font": "DejaVu Sans",
+    "png_origin": "reviewed native document image",
+    "png_sha256": "b370b19f4c771a9d5c330be9f08defb28478afedb8d833a0dbfbbfca13a1328a"
+  }
+]

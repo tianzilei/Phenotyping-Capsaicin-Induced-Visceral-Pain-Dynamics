@@ -129,7 +129,18 @@
     ],
     "final_method_configurations": [
       "config/dask_python_remaining_20261003_v1.json"
-    ]
+    ],
+    "additional_exploratory_inference": {
+      "role": "separately frozen post-hoc measured-feature inference; historical gate unchanged",
+      "configurations": [
+        "config/physiology_inference_20261017_v1.json",
+        "config/physiology_extension_20261017_v1.json"
+      ],
+      "results": [
+        "data/published/20261027/tables/TableS23_physiological_inference_all_161.csv",
+        "data/published/20261027/tables/TableS27_expanded_physiology_all54.csv"
+      ]
+    }
   },
   {
     "id": "U09",
@@ -144,7 +155,18 @@
     ],
     "final_method_configurations": [
       "config/dask_python_remaining_20261003_v1.json"
-    ]
+    ],
+    "additional_exploratory_inference": {
+      "role": "separately frozen post-hoc measured-feature inference; historical gate unchanged",
+      "configurations": [
+        "config/physiology_inference_20261017_v1.json",
+        "config/physiology_extension_20261017_v1.json"
+      ],
+      "results": [
+        "data/published/20261027/tables/TableS23_physiological_inference_all_161.csv",
+        "data/published/20261027/tables/TableS27_expanded_physiology_all54.csv"
+      ]
+    }
   },
   {
     "id": "U10",
@@ -159,7 +181,18 @@
     ],
     "final_method_configurations": [
       "config/dask_python_remaining_20261003_v1.json"
-    ]
+    ],
+    "additional_exploratory_inference": {
+      "role": "separately frozen post-hoc measured-feature inference; historical gate unchanged",
+      "configurations": [
+        "config/physiology_inference_20261017_v1.json",
+        "config/physiology_extension_20261017_v1.json"
+      ],
+      "results": [
+        "data/published/20261027/tables/TableS23_physiological_inference_all_161.csv",
+        "data/published/20261027/tables/TableS27_expanded_physiology_all54.csv"
+      ]
+    }
   },
   {
     "id": "U11",

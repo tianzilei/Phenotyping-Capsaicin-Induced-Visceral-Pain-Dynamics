@@ -1,28 +1,23 @@
 # Reproducibility
 
-Three different tasks have different prerequisites:
+## Current aggregate export
 
-1. **Format/QC demonstration:** Python ≥3.11 standard library, public synthetic fixture and `config/synthetic.json`. `run.py demo` creates a new ignored run. No real records or statistical fitting are used.
-2. **Public aggregate rendering:** NumPy, pandas, Matplotlib and Pillow in the project Python environment. The public aggregate manifest and rendering configuration identify every input hash; no private data, R or Dask workers are needed. `python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY` recreates the current four main/six supporting figures and three main/twenty supporting tables. Install `dependencies/requirements-rendering.txt` for the retained figure environment. The historical `build_scientific_figures.py` recreates the October 4 export (ten figures and 21 tables). It refuses an existing output and performs no fitting/inference. Fonts and metadata may change image/PDF bytes across systems; numeric table values should match.
-3. **Controlled individual analysis:** verified private records, aliases/session/clock/unit/QC evidence, new locally frozen execution configurations, and the relevant Python/R/Dask environment. Aggregate files cannot substitute for individual records or independent reference labels. Keep derived individual outputs and mappings outside Git and preserve input/config/code/environment hashes for each new run.
+Use Python 3.12.13 and `dependencies/requirements-rendering.txt`. Run `python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY` to create four main figures, six supporting figures, two main tables and 29 supporting tables. No private data, R, remote cluster or model fitting is used. The builder refuses an existing destination and checks every reviewed input hash before and after rendering.
 
-The source analysis environment records Python 3.12.13, R 4.6.1 and the package locks under `dependencies/project-python312-20261003-v2.lock.txt`, `dependencies/r-runtime-20261003-v1.csv` and `renv.lock`. The public full suite was checked in the existing project environment; no historical repair code or real inference was run for this update. Installing locked dependencies is a separate environment setup step, not scientific validation.
+`config/aligned_artifacts_20261027_v1.json` defines all 31 table sources, ten native PNG sources, vector-rendering inputs and current numbering. CSV exports and native PNGs reproduce source bytes exactly. Editable SVG and PDF plots are rendered from the retained aggregates with the current identifiers and physiology labels; environment differences may change vector bytes. Per-file output hashes, configuration/code hashes, plot environment and font hash are recorded in the output manifests. Native images remain separate from vector rasterization in the metadata.
 
-Use `CAPSAICIN_DATA_LOCATIONS=/absolute/private/locations.json` or ignored `config/local.json` for private location configuration. Exact alias indices remain private. The public location template is inactive. Generalized addresses/paths in historical parameter files require adaptation and a new frozen execution manifest; public copies are not the original byte-identical configuration. The inventory records both hashes and transformations.
+Historical exports remain reproducible. Add `--config config/final_artifacts_20261023_v1.json` for the October 23 layout and 3/20 tables. `scripts/build_scientific_figures.py` reproduces the earlier October 4 export. Historical completed budgets and the 18-module inventory retain their original table identities in those archives; current Table S1 describes analysis subsets.
 
-`docs/release_inventory.json` records the source revision and per-file original/published hashes, including uncommitted source work and the current artifact alignment. `docs/release_verification.json` records the October 5 pre-publication checks; `docs/publication_status.json` retains that publication phase and remote/fresh-clone receipt. Those dated receipts retain their original scope. The October 23 artifact comparison and test record is `docs/artifact_alignment_verification_20261023.json`; its Git publication receipt is recorded separately. The original private run manifests, input hashes, source snapshots and backups are retained outside Git. Their audit history is preserved; no old scientific output was overwritten.
+## Controlled individual analysis
 
-Run both content and full-history audits before any publication:
+Verified private records, participant/session identity evidence, clocks, units, QC and a new locally frozen execution configuration are required. Keep all individual outputs and mappings outside Git. Preserve input/configuration/code/environment hashes for each run. Public historical parameters and format validation alone do not authorize inference or establish physiological validity.
 
-```sh
-python3 scripts/verify_public_release.py
-python3 scripts/verify_public_history.py
-```
+The original environment records Python 3.12.13, R 4.6.1 and the locks under `dependencies/`. The separate October 17 inference environment, code, results and execution prerequisites are described in [physiological inference](physiology_20261017.md). The original 161-test and extension 54-test families remain separate, and no historical p/q field is overwritten.
 
-The history audit checks all locally reachable commits and stored objects. These audits do not certify anonymity, consent, statistical coverage, remote retained copies, or external scientific validation. Read [data privacy](data_privacy.md) and [history cleanup](history_cleanup.md) with its result.
+Use `CAPSAICIN_DATA_LOCATIONS` or ignored `config/local.json` for private location configuration. Exact identities and individual adjudications remain private. Generalized public configurations require locally frozen execution paths; original and public hashes and transformations are recorded in `docs/release_inventory.json`.
 
-Contributor formatting and structure checks are documented in [code style](code_style.md). Public rendering writes figures, full-precision tables, and an artifact index; manuscript narratives and submission-planning files are excluded.
+## Verification and publication
 
-The current artifact configuration is `config/final_artifacts_20261023_v1.json`. It checks every reviewed aggregate/configuration input hash before and after rendering. The two retained plotting CSVs and seven GAMM reference curves under `data/aggregate_sources/20261023/` preserve the later plotting inputs. Final table exports derive recognition accuracy from Table S10, reference group sizes from the aggregate cluster summary, and rule definitions/counts from the static codebook and Table S2. The final Table S1 labels historical plans separately from completed bootstrap draws and validation repetitions. See [artifact alignment](artifact_alignment.md) for the complete numbering map.
+Run `python3 -m unittest discover -s tests -v`, `python3 scripts/verify_repository_structure.py`, `python3 scripts/verify_public_release.py` and `python3 scripts/verify_public_history.py`, together with the pinned Ruff/Air checks in [code style](code_style.md).
 
-The [October 23 publication receipt](artifact_publication_status_20261023.json) identifies the remotely verified artifact commit, fresh-clone audits and successful GitHub workflow.
+[Current verification](artifact_alignment_verification_20261027.json) records the local integration checks. `docs/release_inventory.json` preserves source/public hashes. Prior October 5 and October 23 publication receipts are historical evidence for their own revisions. This change is prepared as a local commit for a user-managed push; it does not claim a new remote CI result or server-side historical erasure. [Data privacy](data_privacy.md) and [history cleanup](history_cleanup.md) retain the applicable scope.

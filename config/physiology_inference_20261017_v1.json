@@ -1,0 +1,68 @@
+{
+  "version": "physiology_inference_20261017_v1",
+  "created_utc": "2026-10-17T08:02:53.298028+00:00",
+  "status": "frozen_before_new_inferential_results",
+  "role": "post_hoc_exploratory_inference_on_algorithm_screened_measured_features",
+  "cohort": 215,
+  "input_selection": "explicit current sources from analysis_completion_20261002_v1; no directory-order selection",
+  "model": "physiological feature ~ VAS + participant fixed effects + categorical 5-minute block",
+  "unit": "unique participant",
+  "support": "complete 5 observed numeric minutes per block; >=2 distinct blocks; no imputation",
+  "hb_scale": "sample SD across eligible blocks within participant, inherited frozen model-input scale; not absolute concentration",
+  "inference": {
+    "estimator": "OLS with absorbed participant fixed effects",
+    "variance": "CR1 cluster sandwich; finite factor G/(G-1)*(N-1)/(N-G-K), K slope and nonredundant block columns",
+    "reference": "two-sided t(G-1)",
+    "interval": "marginal 95% t interval, not multiplicity-adjusted",
+    "sensitivity": "delete-one-participant CRV3 jackknife variance and t(G-1); complete four-block subset; strictly adjacent first differences",
+    "wild_cluster": {
+      "scope": "all 24 original VAS-feature targets",
+      "method": "null-restricted Rademacher participant wild bootstrap-t; CR1 studentization each replicate",
+      "replicates": 19999,
+      "seed": 2026101701,
+      "p": "(1+number abs(t*)>=abs(t))/(B+1)"
+    }
+  },
+  "families": {
+    "VAS_features": 24,
+    "EGG_Hb": 66,
+    "joint_VAS": 66,
+    "EGG_VAS": 3,
+    "rest_challenge": 2
+  },
+  "multiplicity": {
+    "within_family_primary": "Benjamini-Yekutieli q<0.05",
+    "within_family_sensitivity": "Benjamini-Hochberg",
+    "global_all_161": "BY and BH, all estimates and nulls retained",
+    "wild": "BY n=24 and conservative global n=161"
+  },
+  "joint": "VAS ~ HR + candidate RR-RMSSD + one Hb feature + participant and block fixed effects, same rows; no predictive-gain claim",
+  "EGG_VAS": "each of 3 frozen EGG descriptors ~ VAS + participant and block fixed effects",
+  "rest_challenge": "mean of paired measured candidate differences; one approved E-source matched to baseline N per unique current participant; exclude source ambiguity before quality; paired t CI/test, jackknife/median descriptive sensitivity; record averages have unequal durations",
+  "rest_source_rule": "match E raw SHA256 to selected source audit; map confirmed aliases; exclude multiple retained approved pairs rather than choose by effect or quality; original >=0.85 valid-RR fraction both records",
+  "timing_sensitivity": "refit 24 targets for frozen A/B x offsets 0, +/-10, +/-30, +/-60 s and frozen drift +/-100 ppm; label nominal time uncertainty; no significance-based selection",
+  "Hb_QC_sensitivity": "original mask MAD6 guard2s; compare coverage .90/.95 and ROI .50/.75; no parameter selection by effects",
+  "limitations": "no independent normal-beat reference, accepted gastric rhythm reference or cortical source specificity; statistics refer to measured features and do not remove measurement error or confounding",
+  "preservation": "source and historical outputs immutable; no sealed annotations accessed; no human expert validation claimed",
+  "sources": {
+    "person_run": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed",
+    "vas_delivery": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/delivery_584fdac4",
+    "vas_run": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/vas_models",
+    "descriptives": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/descriptives_eff94054",
+    "clustering": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/clustering_4cd765ea",
+    "prefix": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed/prefix_recoverability_43f2788f",
+    "next_rating": "08_outputs/reanalysis_20260926_20260925T165400Z_c9b9d41d/next_rating_67111ea9",
+    "symptoms": "08_outputs/reanalysis_20260926_20260927T141652Z_4008dbed/symptom_context_f97f3b17",
+    "ecg_egg": "08_outputs/reanalysis_20260926_20260927T141237Z_c57a7087/ecg_5db91f25",
+    "hb": "08_outputs/hb_combined_20260927T161640Z_7b0bff85",
+    "associations": "08_outputs/hb_combined_20260927T161640Z_7b0bff85/candidate_associations_dcd804f1",
+    "session_dates": "02_quality_control/cross_modal_sessions_20260927T141722Z_89250a1e",
+    "rest_candidates": "08_outputs/rest_signal_reference_20260929T165843Z_438daf0e",
+    "e07": "08_outputs/rest_post_hrv_pair_symmetric_20260930T103338Z_cb862411",
+    "e08": "08_outputs/e08_adaptive_egg_20260929T110000Z",
+    "e05": "08_outputs/e05_bypass_decision_20260929T120000Z",
+    "integrity": "02_quality_control/recent_electrophysiology_integrity_20260930T104502Z_bf0d720d",
+    "validation": "02_quality_control/validation_metadata_audit_20260930T104534Z_e9be0a07"
+  },
+  "public_configuration_note": "Personal locations removed; configure a controlled analysis root and a new private run directory. Original scientific parameters are unchanged."
+}

@@ -1,0 +1,22 @@
+Field,Code,Retained label,Participants with recorded information
+symptom,A,abdominal pain,209
+symptom,B,bloating,209
+symptom,C,abdominal distension,209
+symptom,D,heartburn,209
+symptom,E,acid regurgitation,209
+symptom,F,belching,209
+symptom,G,nausea,209
+symptom,H,vomiting,209
+symptom,I,loss of appetite,209
+symptom,J,tenesmus,209
+symptom,K,palpitations,209
+symptom,L,irritability,209
+region,1,epigastrium,209
+region,2,right hypochondrium,209
+region,3,left hypochondrium,209
+region,4,umbilical,209
+region,5,hypogastrium,209
+region,6,right lumbar,209
+region,7,left lumbar,209
+region,8,right inguinal,209
+region,9,left inguinal,209

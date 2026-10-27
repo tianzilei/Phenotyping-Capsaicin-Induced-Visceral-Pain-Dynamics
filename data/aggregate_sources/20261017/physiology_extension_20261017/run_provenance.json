@@ -1,0 +1,22 @@
+{
+  "original_run_manifest_sha256": "71d9bab12c3266a65c445641a90e4e5e1a79884275081aa3c277716bd7ba9995",
+  "original_code_sha256": "e1e60161e81019ffddda65fd098d8b027cd1c3554560827a3f9d7999ae03878c",
+  "original_configuration_sha256": "76ce555e047703e0193a7986fcb42330183609a9f8f1d1e885a64713ae722db3",
+  "original_source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
+  "original_input_container_sha256": [
+    "043545f8138e41e7fdb44d98cce649924f8c27b214293ae8b0efca3d1164975f",
+    "0e5981575179f62f48525408e2bd080df26ee90dd28d0b78767fb58c6912179b",
+    "1438ed3d8bc1b6e5209c8d97b9f9aef7ef3468cca3cc96e68f75921ff6bf7ef5",
+    "9e6ca91270a7581bf442d2703f52596eb63435f7f2d96f8868c73d7c29121d3c",
+    "a67282021d19a8edcadaf251ff32f4bd5be74e832992726c661f2776bceb6457",
+    "d792bd880f22b8eb0ba6bf4b497d755be8fa2873a5e435118f90ac478da2c1d3",
+    "e7de188d95cd90b0ee432e170eb602468c35c4f828dc910ba6993a299cd18758"
+  ],
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3"
+  },
+  "published_configuration": "config/physiology_extension_20261017_v1.json",
+  "scope": "Retained completed October 17 run. Personal input locations and individual records are excluded. Public code path adaptation is recorded separately."
+}

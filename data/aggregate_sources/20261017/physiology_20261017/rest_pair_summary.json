@@ -1,0 +1,24 @@
+{
+  "candidate_hr_bpm": {
+    "n": 78,
+    "baseline_mean": 73.75492694530574,
+    "challenge_mean": 74.2571061269956,
+    "baseline_median": 72.88299489039511,
+    "challenge_median": 73.80732639618945,
+    "median_paired_change": 0.06915865769784446,
+    "wilcoxon_sensitivity_p": 0.3326667798871109,
+    "positive": 39,
+    "negative": 39
+  },
+  "candidate_rmssd_ms": {
+    "n": 78,
+    "baseline_mean": 47.64863316249942,
+    "challenge_mean": 47.87547312689215,
+    "baseline_median": 48.023890821035614,
+    "challenge_median": 47.952075530047864,
+    "median_paired_change": 1.0373416216948712,
+    "wilcoxon_sensitivity_p": 0.29673177208617496,
+    "positive": 44,
+    "negative": 34
+  }
+}

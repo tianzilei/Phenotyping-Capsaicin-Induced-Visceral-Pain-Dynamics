@@ -6,21 +6,21 @@ Analysis code, method configurations and public aggregate results for studying t
 
 This is an exploratory, results-informed reanalysis of an existing cohort. The [analysis plan](docs/analysis_plan.md) describes its scientific scope, and the [decision log](docs/decision_log.md) records methodological choices. The plan is not a preregistration.
 
-## Current public release
+## Current release
 
-The **October 23, 2026 export** follows the numbering in the **October 14, 2026 document revision** and uses analysis results completed through **October 4, 2026**. It contains **4 main figures, 6 supporting figures, 3 main tables and 20 supporting tables**.
+The **October 27, 2026 export** follows the current document numbering and includes analysis results completed through **October 17, 2026**. It contains **4 main figures, 6 supporting figures, 2 main tables and 29 supporting tables**.
 
 | Resource | Contents |
 | --- | --- |
-| [Current figures and tables](data/published/20261023/README.md) | Complete numbered index with PNG, PDF, SVG and CSV files |
-| [CSV tables](data/published/20261023/tables/) | Cohort and analysis sets; early three-group recognition; future-score errors; Tables S1–S20 |
-| [Figure numbering and sources](docs/artifact_alignment.md) | Mapping from the earlier export and the aggregate sources behind each table |
-| [Reproduction guide](docs/reproducibility.md) | Rendering environment, input hashes and controlled-analysis prerequisites |
-| [Publication receipt](docs/artifact_publication_status_20261023.json) | Verified artifact commit, independent-clone checks and GitHub workflow result |
+| [Current figures and tables](data/published/20261027/README.md) | PNG, editable SVG/PDF plots and all 31 numbered CSV tables |
+| [Figure and table alignment](docs/artifact_alignment.md) | Current numbering and correspondence with earlier exports |
+| [Physiological inference](docs/physiology_20261017.md) | 161-test evaluation, 54-test extension, CR1/CR2 and controlled-input execution |
+| [Reproduction guide](docs/reproducibility.md) | Aggregate rendering, input hashes and individual-analysis prerequisites |
+| [Local verification record](docs/artifact_alignment_verification_20261027.json) | Current export and synthetic checks; remote publication is a separate action |
 
-The main figures show [temporal sensation and finite changes](data/published/20261023/figures/Figure1_temporal_sensation.png), [functional trajectory patterns](data/published/20261023/figures/Figure2_temporal_patterns.png), [symptoms and perceived regions](data/published/20261023/figures/Figure3_symptoms_regions.png), and [future-score prediction](data/published/20261023/figures/Figure4_future_score_prediction.png).
+Main Table 2 reports future-score prediction; early three-group recognition is Table S16. The observation-support plot is Figure S1. Tables S22–S23 retain the physiological inference, and Tables S25–S29 retain bilateral, heart-rate-conditioned, covariance and timing sensitivities. Original native PNGs are retained exactly; SVG and PDF plots are generated from the same reviewed aggregates.
 
-The [October 4 export](data/published/20261004/README.md) retains its earlier numbering and layout. In the current export, **Table 2 describes early group recognition**, and the observation-support plot is **Figure S6**. Table S19 provides all 48 reference group-size specifications; Table S20 provides all ten descriptive symptom-region rules. Table S1 separates historical plans from completed resampling budgets and validation repetitions.
+The [October 23](data/published/20261023/README.md) and [October 4](data/published/20261004/README.md) exports preserve their historical numbering and results. The retained 18-module inventory belongs to those historical analyses; current Table S1 describes analysis subsets.
 
 ## Study and measurements
 
@@ -43,7 +43,7 @@ Symptom and perceived-region information is available for **209 participants per
 | Trajectory groups | Ordinary, fuzzy and dynamic-time-warping grouping, partition stability, and recovery of training-defined groups from early prefixes or training-selected shapelets |
 | Symptoms and regions | Marginal codes, all symptom-region co-occurrences and descriptive historical rule matches, with field-specific and joint denominators |
 | Future-score prediction | Last-value, ridge and random-forest comparisons using 20 repetitions of nested participant validation: 5 outer and 4 inner folds, with preprocessing fitted within training participants |
-| Candidate physiology | Exploratory ECG, haemoglobin and EGG analyses with source, unit, clock and quality checks; independent physiological validation remains required |
+| Exploratory physiology | Participant/block fixed-effect models of measured ECG, haemoglobin and EGG features; CR1 intervals and BY/BH correction, CRV3/wild/CR2 sensitivities, bilateral and HR-conditioned comparisons; independent signal validation remains required |
 
 Next-rating prediction uses **2,781 eligible targets from 213 participants**. Prediction of minute 10 from minutes 1–5 uses **206 participants**. Complete-curve reconstruction, trajectory-group recovery and future-score prediction have separate evaluation targets. Empirical groups and descriptive symptom-rule matches do not establish clinical phenotypes or diagnoses. Resampling ranges and validation-repeat ranges retain their stated descriptive roles.
 
@@ -58,9 +58,9 @@ python3 -m pip install -r dependencies/requirements-rendering.txt
 python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY
 ```
 
-Choose a new output directory. The builder checks reviewed input hashes before and after rendering and exports the current figures, 23 CSV tables, figure index, layout diagnostics and provenance manifests. It uses public aggregates without participant records, model fitting or new resampling. PNGs use 600 dpi; PDFs embed TrueType fonts; SVGs retain editable text. Font and software differences can affect rendered bytes across systems.
+Choose a new output directory. The builder checks reviewed input hashes before and after rendering and exports the current figures, 31 CSV tables, figure index, layout diagnostics and provenance manifests. It uses public aggregates without participant records, model fitting or new resampling. PNGs use 600 dpi; PDFs embed TrueType fonts; SVGs retain editable text. Font and software differences can affect rendered bytes across systems.
 
-The [versioned artifact configuration](config/final_artifacts_20261023_v1.json) identifies the inputs and numbering. The plotting implementation is in [final_figures.py](src/capsaicin/final_figures.py), and [final_artifacts.py](src/capsaicin/final_artifacts.py) exports the numbered tables. The historical renderer, [build_scientific_figures.py](scripts/build_scientific_figures.py), reproduces the earlier October 4 export.
+The [versioned artifact configuration](config/aligned_artifacts_20261027_v1.json) identifies the inputs and numbering. The plotting implementation is in [final_figures.py](src/capsaicin/final_figures.py), and [aligned_artifacts.py](src/capsaicin/aligned_artifacts.py) exports the numbered tables. The historical renderer, [build_scientific_figures.py](scripts/build_scientific_figures.py), reproduces the earlier October 4 export.
 
 ## Repository structure
 
@@ -72,7 +72,9 @@ The [versioned artifact configuration](config/final_artifacts_20261023_v1.json) 
 | [`tests/`](tests/) | Synthetic ingestion, analysis-contract and release-integrity tests |
 | [`data/aggregate_sources/20261004/`](data/aggregate_sources/20261004/) | Reviewed aggregate analysis results |
 | [`data/aggregate_sources/20261023/`](data/aggregate_sources/20261023/) | Retained aggregate inputs for the final figure layout |
-| [`data/published/20261023/`](data/published/20261023/) | Current numbered figures and tables |
+| [`data/aggregate_sources/20261017/`](data/aggregate_sources/20261017/) | Exploratory physiological aggregates and verification summaries |
+| [`data/aggregate_sources/20261027/`](data/aggregate_sources/20261027/) | Current definition tables, physiological tables and native images |
+| [`data/published/20261027/`](data/published/20261027/) | Current numbered figures and tables |
 | [`docs/`](docs/) | Analysis plan, code guide, data definitions, reproduction instructions and publication records |
 
 The [code guide](docs/code_guide.md) maps analysis domains to their implementations. [Code style](docs/code_style.md) documents contributor checks.
@@ -81,4 +83,4 @@ The [code guide](docs/code_guide.md) maps analysis domains to their implementati
 
 Public content includes code, method configurations, blank schemas, synthetic examples and reviewed aggregate outputs. Participant-level ratings, symptom-region records, identity mappings and original physiological signals require controlled access. [Data handling](docs/data_privacy.md) explains their treatment. Running individual-level analyses requires the relevant controlled inputs, provenance checks, execution configuration and Python/R environment.
 
-The [October 23 verification record](docs/artifact_alignment_verification_20261023.json) documents **318 passing synthetic tests**, ten PNGs matching the target figures byte for byte, and all 74 rows/rules in the three newly exported tables matching their existing aggregate sources. The [release inventory](docs/release_inventory.json) records source and published file hashes. Current GitHub checks are linked in the badge above; the [publication receipt](docs/artifact_publication_status_20261023.json) records the verified artifact revision and its independent-clone checks.
+The [October 27 verification record](docs/artifact_alignment_verification_20261027.json) records current synthetic and artifact checks, ten native PNG comparisons and all 31 table-source comparisons. The [release inventory](docs/release_inventory.json) records original and public file hashes. Prior dated publication receipts retain their original scope. This revision is prepared for a user-managed push; no new remote-publication success is claimed.
