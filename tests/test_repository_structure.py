@@ -5,7 +5,7 @@ import sys
 import unittest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
-from verify_repository_structure import artifact_issue, comment_issues
+from verify_repository_structure import artifact_issue, comment_issues, prose_issue
 
 
 class RepositoryStructureTests(unittest.TestCase):
@@ -13,6 +13,7 @@ class RepositoryStructureTests(unittest.TestCase):
         for name in [
             "MANUSCRIPT.md",
             "supplementary_latest.md",
+            "supplementary_methods.md",
             "drafts/paper.md",
             "docs/manuscripts/current.md",
             "submission/story.json",
@@ -25,6 +26,42 @@ class RepositoryStructureTests(unittest.TestCase):
             self.assertIsNotNone(artifact_issue(name), name)
         for name in ["docs/analysis_plan.md", "config/analysis.json", "README.md"]:
             self.assertIsNone(artifact_issue(name))
+
+    def test_renamed_article_body_is_rejected(self):
+        paragraph = (
+            "Synthetic fixture words describe a made up document for testing. " * 8
+        )
+        markdown = "\n".join(
+            f"## {heading}\n{paragraph}"
+            for heading in [
+                "Abstract",
+                "Introduction",
+                "Methods",
+                "Results",
+                "Discussion",
+            ]
+        )
+        self.assertIsNotNone(prose_issue("notes.md", markdown))
+        html = "".join(
+            f"<h2>{h}</h2><p>{paragraph}</p>"
+            for h in ["Abstract", "Results", "Discussion"]
+        )
+        self.assertIsNotNone(prose_issue("notes.html", html))
+        import json
+
+        structured = json.dumps(
+            {h: paragraph for h in ["abstract", "results", "discussion"]}
+        )
+        self.assertIsNotNone(prose_issue("notes.json", structured))
+
+    def test_technical_reproduction_documentation_is_allowed(self):
+        technical = "# Methods\nConfigure the input root and run the synthetic checks.\n# Results\nSee the numeric CSV files.\n"
+        self.assertIsNone(prose_issue("docs/reproduction.md", technical))
+        self.assertIsNone(
+            prose_issue(
+                "config/settings.json", '{"results": "tables.csv", "method": "OLS"}'
+            )
+        )
 
     def test_python_comments_and_docstrings_checked(self):
         phrase = "\u6d4b\u8bd5"

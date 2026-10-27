@@ -12,9 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 NON_ENGLISH = re.compile(
     r"[\u0400-\u052f\u0600-\u06ff\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af]"
 )
-UNPUBLISHED = re.compile(
-    r"manuscript|supplementary_latest|submission_integration", re.I
-)
+UNPUBLISHED = re.compile(r"manuscript|supplementary|submission_integration", re.I)
 WRITING_NAME = re.compile(
     r"(?:^|[._-])(?:paper|article|submission|draft)(?:[._-]|$)", re.I
 )
@@ -42,6 +40,61 @@ def artifact_issue(name):
         part.lower() in {"drafts", "manuscripts", "submission"} for part in path.parts
     ):
         return "Unpublished writing directory excluded from public tree"
+    return None
+
+
+def prose_issue(name, text):
+    """Reject article bodies disguised as ordinary documentation files."""
+    if Path(name).suffix.lower() not in {
+        ".md",
+        ".rst",
+        ".txt",
+        ".html",
+        ".json",
+        ".ipynb",
+    }:
+        return None
+    heading_names = {
+        "abstract",
+        "introduction",
+        "methods",
+        "materials and methods",
+        "results",
+        "discussion",
+        "conclusions",
+        "references",
+    }
+    if Path(name).suffix.lower() == ".json":
+        try:
+            obj = json.loads(text)
+        except ValueError:
+            obj = None
+        headings = (
+            {str(key).casefold() for key in obj} & heading_names
+            if isinstance(obj, dict)
+            else set()
+        )
+    else:
+        html_headings = re.findall(
+            r"<h[1-6]\b[^>]*>\s*([^<]+?)\s*</h[1-6]>", text, re.I
+        )
+        plain_headings = re.findall(
+            r"(?im)^\s*(?:#{1,6}\s*)?(?:\d+[.)]?\s+)?"
+            r"(abstract|introduction|methods|materials and methods|results|"
+            r"discussion|conclusions|references)\s*:?\s*$",
+            text,
+        )
+        headings = {h.casefold().strip() for h in html_headings + plain_headings}
+    article_structure = (
+        "abstract" in headings
+        and "results" in headings
+        and bool(headings & {"discussion", "introduction"})
+    ) or len(
+        headings
+        & {"introduction", "methods", "materials and methods", "results", "discussion"}
+    ) >= 4
+    if article_structure and len(re.findall(r"\b\w+\b", text)) >= 80:
+        return "Article-style body prose excluded from public repository"
     return None
 
 
@@ -137,6 +190,13 @@ def verify(root=ROOT):
         issue = artifact_issue(name)
         if issue:
             failures.append({"file": name, "reason": issue})
+        if path.suffix.lower() in {".md", ".rst", ".txt", ".html", ".json", ".ipynb"}:
+            try:
+                issue = prose_issue(name, path.read_text(encoding="utf-8"))
+            except UnicodeDecodeError:
+                issue = "Unreadable documentation file"
+            if issue:
+                failures.append({"file": name, "reason": issue})
         if path.suffix in counts:
             counts[path.suffix] += 1
             try:

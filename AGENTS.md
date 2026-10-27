@@ -5,6 +5,7 @@ Read README.md, docs/analysis_plan.md and docs/decision_log.md before changing a
 - This is an exploratory, results-informed reanalysis, not a preregistration.
 - Preserve E/T, missing values and actual minutes. Never fill baseline VAS with zero or bridge missing minutes.
 - Keep real individual data, pseudonymized copies, source paths, identity mappings and individual adjudications outside Git. Synthetic fixtures must be explicitly labelled.
+- Keep manuscript and supplementary body prose outside Git, including renamed writing files, generated narrative reports, copied paragraphs and prose hidden in metadata. Public code, parameter contracts, aggregate data, figures and technical reproduction instructions may be retained.
 - Never modify candidate inputs in place. Create new, versioned outputs and record input/configuration/code hashes and software versions.
 - Freeze the estimand, scale, interval and parameters before new inference. Published historical parameters and format validity do not confer scientific readiness.
 - Resample/split at subject level and fit every prediction preprocessing step inside training subjects.

@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "Current tracked repository and readable PDF text. Exact normalized phrase matching is a copy screen, not an authorship test. Protected source strings and excerpts stay outside Git.",
+  "base_code_commit": "18acf772706888f8b532cfaffc1055294f0d77aa",
+  "reference_paragraphs": 186,
+  "consecutive_token_threshold": 12,
+  "matching_phrases": 0,
+  "writing_filenames": 0,
+  "PDF_files": 31,
+  "PDF_pages": 40,
+  "PDF_embedded_files": 0,
+  "synthetic_tests_passed": 323,
+  "scientific_parameter_values_changed": false,
+  "aggregate_data_changed": false,
+  "push_performed": false
+}

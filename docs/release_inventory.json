@@ -2413,8 +2413,8 @@
     },
     "README.md": {
       "source_sha256": "08679d0e5a635673a93b0eb0f3a7a61b1e1dfbaad9a3ac8a9b3a4c44c30f3de8",
-      "published_sha256": "7000c148df79b9e0a72e957df9677c7fa48a1da397b4bfe90a0c416b8811a0a5",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; README resource navigation, scientific scope and reproduction documentation updated 2026-10-23",
+      "published_sha256": "062cc42ae601d1ecbc1578620a887346d10a42d660be95e97704a4399124cb8d",
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged",
       "source_origin": "public artifact alignment"
     },
     "config/final_artifacts_20261023_v1.json": {
@@ -2527,9 +2527,9 @@
     },
     "dependencies/physiology-20261017.json": {
       "source_sha256": "8f807afcb9358c860c462cf2d1157f7a0afcfe9644b4509144284811feda6b21",
-      "published_sha256": "8f807afcb9358c860c462cf2d1157f7a0afcfe9644b4509144284811feda6b21",
+      "published_sha256": "dbb3ec188bfe2551ed42c89a8a682edd18647349063aa6f3635716f8421a1c69",
       "source_origin": "October 27 release integration",
-      "transformation": "new release configuration"
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged"
     },
     "scripts/physiology_20261017/analyse.py": {
       "source_sha256": "69bed925a2b1078d7320bcb5d68c932d2907ac23f28b2493f859dedb0614e325",
@@ -2629,9 +2629,9 @@
     },
     "scripts/verify_repository_structure.py": {
       "source_sha256": "189d9961d6f02d1b4865c151a3818b77bce64574052c1df9b10c3a6965f927e4",
-      "published_sha256": "189d9961d6f02d1b4865c151a3818b77bce64574052c1df9b10c3a6965f927e4",
+      "published_sha256": "7af8ddd00c861c408f037157348a3ce16a1a134cae73cc9d63b5b7094deae5bb",
       "source_origin": "October 27 release integration",
-      "transformation": "new integration code"
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged"
     },
     "src/capsaicin/privacy.py": {
       "source_sha256": "decaf38ae1c9dffa99cfce1544a6edccc728cdb6435df28bd252231ea31c4f92",
@@ -2659,9 +2659,15 @@
     },
     "tests/test_repository_structure.py": {
       "source_sha256": "25e442a18862bdd23d1fea57737cb1ad1d84f4cd22755ba5af8f7f5f9a6cb336",
-      "published_sha256": "25e442a18862bdd23d1fea57737cb1ad1d84f4cd22755ba5af8f7f5f9a6cb336",
+      "published_sha256": "a10fae80c2e86bbd5f121f922a54856aacced8691c238b954e0083429d0db827",
       "source_origin": "October 27 release integration",
-      "transformation": "new integration code"
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged"
+    },
+    "AGENTS.md": {
+      "source_sha256": "e69797b5e8b412fe52bfc59ed43bd2e40800baa79dd335d96e5123dec6c095af",
+      "source_origin": "existing public code documentation",
+      "published_sha256": "c5abab3df2bb764ebfc5e35a8ac648abff998110c0c907d4e7272cda0f37f7ec",
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged"
     }
   },
   "excluded_files": [
@@ -4842,7 +4848,7 @@
   },
   "maintenance_scope": {
     "date": "2026-10-27",
-    "source_snapshot_files": 443,
+    "source_snapshot_files": 444,
     "approved_aggregate_files": 357,
     "unpublished_writing_excluded_from_current_tree": true,
     "analytical_expressions_preserved": true,

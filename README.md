@@ -81,6 +81,6 @@ The [code guide](docs/code_guide.md) maps analysis domains to their implementati
 
 ## Data access and verification
 
-Public content includes code, method configurations, blank schemas, synthetic examples and reviewed aggregate outputs. Participant-level ratings, symptom-region records, identity mappings and original physiological signals require controlled access. [Data handling](docs/data_privacy.md) explains their treatment. Running individual-level analyses requires the relevant controlled inputs, provenance checks, execution configuration and Python/R environment.
+Public content includes code, method configurations, blank schemas, synthetic examples and reviewed aggregate outputs. Individual rating and symptom records, source signals and identifier maps remain under controlled access. [Data handling](docs/data_privacy.md) describes the access requirements. Individual analyses need verified inputs, a frozen local configuration and the recorded Python/R environment. Manuscript and supplementary body prose are excluded from this repository.
 
 The [October 27 verification record](docs/artifact_alignment_verification_20261027.json) records current synthetic and artifact checks, ten native PNG comparisons and all 31 table-source comparisons. The [release inventory](docs/release_inventory.json) records original and public file hashes. Prior dated publication receipts retain their original scope. This revision is prepared for a user-managed push; no new remote-publication success is claimed.
