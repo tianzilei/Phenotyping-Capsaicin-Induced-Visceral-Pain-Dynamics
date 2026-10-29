@@ -2,7 +2,6 @@
   "version": "scientific_figures_20261004_v1",
   "type": "reporting_and_rendering_only_no_new_inference",
   "source_bundle": "/private/capsaicin-owner/.local/share/capsaicin-dask/deliveries/scientific_report_sources_20261004_v3",
-  "source_manifest_sha256": "ebac4ef1f8b6061310cba9d332f828380845dd262aaa62554f53825ea1e83729",
   "Gemini": {
     "initial_request": "req_efreSE8aKgDZNTzNWSn-eQ",
     "initial_result": "res_067e653e1a9d8e7a6b83",
@@ -45,7 +44,6 @@
   "finite_change_incomplete_marker": "hollow marker/dagger for actual displayed insufficient statistics; all32 new insufficient in full tables",
   "phi_unit": "weighted basis amplitude, minute^-1/2 for fixed trapezoid minute weights",
   "clinical_or_safety_claims": false,
-  "primary_p_q": null,
   "sealed_opened": false,
   "old_outputs_overwritten": false
 }

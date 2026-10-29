@@ -1,12 +1,11 @@
 [
   {
     "MC_max_endpoint_half_width": 0.00878214695718138,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1c4334be6b7c3e81",
+    "cell": "model_0018",
     "cell_description": {
-      "data_key": "A_1c4334be6b7c3e81",
-      "id": "A_1c4334be6b7c3e81",
+      "data_key": "model_0018",
+      "id": "model_0018",
       "kind": "planned24",
       "labels": [
         "ECG",
@@ -36,8 +35,6 @@
       "upper_MC": 0.13548328243662877,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -55,12 +52,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.04331652831359056,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_25abd8124bbd60d8",
+    "cell": "model_0024",
     "cell_description": {
-      "data_key": "A_25abd8124bbd60d8",
-      "id": "A_25abd8124bbd60d8",
+      "data_key": "model_0024",
+      "id": "model_0024",
       "kind": "planned24",
       "labels": [
         "ECG",
@@ -90,8 +86,6 @@
       "upper_MC": -1.9889490995853112,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -109,12 +103,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004068799516928942,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3ce8bb2a84cef358",
+    "cell": "model_0037",
     "cell_description": {
-      "data_key": "A_3ce8bb2a84cef358",
-      "id": "A_3ce8bb2a84cef358",
+      "data_key": "model_0037",
+      "id": "model_0037",
       "kind": "planned24",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -144,8 +137,6 @@
       "upper_MC": -0.01213390221430394,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -163,12 +154,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003651566110178389,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_a95d350f358e7cdc",
+    "cell": "model_0088",
     "cell_description": {
-      "data_key": "A_a95d350f358e7cdc",
-      "id": "A_a95d350f358e7cdc",
+      "data_key": "model_0088",
+      "id": "model_0088",
       "kind": "planned24",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -198,8 +188,6 @@
       "upper_MC": -0.12043962846998103,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -217,12 +205,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003910247041702881,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_42f83844a638312a",
+    "cell": "model_0043",
     "cell_description": {
-      "data_key": "A_42f83844a638312a",
-      "id": "A_42f83844a638312a",
+      "data_key": "model_0043",
+      "id": "model_0043",
       "kind": "planned24",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -252,8 +239,6 @@
       "upper_MC": 0.003567030417203042,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -271,12 +256,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004377681530255084,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_8117955e15d07ede",
+    "cell": "model_0073",
     "cell_description": {
-      "data_key": "A_8117955e15d07ede",
-      "id": "A_8117955e15d07ede",
+      "data_key": "model_0073",
+      "id": "model_0073",
       "kind": "planned24",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -306,8 +290,6 @@
       "upper_MC": -0.16710835957510856,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -325,12 +307,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0033429316667596964,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_ad2faf7784072d89",
+    "cell": "model_0089",
     "cell_description": {
-      "data_key": "A_ad2faf7784072d89",
-      "id": "A_ad2faf7784072d89",
+      "data_key": "model_0089",
+      "id": "model_0089",
       "kind": "planned24",
       "labels": [
         "Frontal_Mid_L",
@@ -360,8 +341,6 @@
       "upper_MC": 0.04583124317726034,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -379,12 +358,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0034603322736823927,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_0634a6544ed39532",
+    "cell": "model_0003",
     "cell_description": {
-      "data_key": "A_0634a6544ed39532",
-      "id": "A_0634a6544ed39532",
+      "data_key": "model_0003",
+      "id": "model_0003",
       "kind": "planned24",
       "labels": [
         "Frontal_Mid_L",
@@ -414,8 +392,6 @@
       "upper_MC": -0.24188224238707914,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -433,12 +409,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003705513295306745,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_a239e5028db9fec3",
+    "cell": "model_0087",
     "cell_description": {
-      "data_key": "A_a239e5028db9fec3",
-      "id": "A_a239e5028db9fec3",
+      "data_key": "model_0087",
+      "id": "model_0087",
       "kind": "planned24",
       "labels": [
         "Frontal_Mid_R",
@@ -468,8 +443,6 @@
       "upper_MC": 0.005795568274939748,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -487,12 +460,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003560343092186613,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_34821e2a1730266a",
+    "cell": "model_0034",
     "cell_description": {
-      "data_key": "A_34821e2a1730266a",
-      "id": "A_34821e2a1730266a",
+      "data_key": "model_0034",
+      "id": "model_0034",
       "kind": "planned24",
       "labels": [
         "Frontal_Mid_R",
@@ -522,8 +494,6 @@
       "upper_MC": -0.191714229448893,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -541,12 +511,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0032161640554530524,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_53da895805c5fb40",
+    "cell": "model_0055",
     "cell_description": {
-      "data_key": "A_53da895805c5fb40",
-      "id": "A_53da895805c5fb40",
+      "data_key": "model_0055",
+      "id": "model_0055",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_L",
@@ -576,8 +545,6 @@
       "upper_MC": 0.04558727870510028,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -595,12 +562,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003909098309639994,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_199f045377ba4e5a",
+    "cell": "model_0016",
     "cell_description": {
-      "data_key": "A_199f045377ba4e5a",
-      "id": "A_199f045377ba4e5a",
+      "data_key": "model_0016",
+      "id": "model_0016",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_L",
@@ -630,8 +596,6 @@
       "upper_MC": -0.2639360479892236,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -649,12 +613,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003114594622669234,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_f7e7779e48e82d31",
+    "cell": "model_0112",
     "cell_description": {
-      "data_key": "A_f7e7779e48e82d31",
-      "id": "A_f7e7779e48e82d31",
+      "data_key": "model_0112",
+      "id": "model_0112",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -684,8 +647,6 @@
       "upper_MC": 0.09712626336091468,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -703,12 +664,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0036816899956416405,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4d7c2f1f67321842",
+    "cell": "model_0053",
     "cell_description": {
-      "data_key": "A_4d7c2f1f67321842",
-      "id": "A_4d7c2f1f67321842",
+      "data_key": "model_0053",
+      "id": "model_0053",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -738,8 +698,6 @@
       "upper_MC": -0.13089818035376818,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -757,12 +715,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0033658695721733196,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4a4af13574527dd5",
+    "cell": "model_0050",
     "cell_description": {
-      "data_key": "A_4a4af13574527dd5",
-      "id": "A_4a4af13574527dd5",
+      "data_key": "model_0050",
+      "id": "model_0050",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_R",
@@ -792,8 +749,6 @@
       "upper_MC": -0.0021938003294760364,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -811,12 +766,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003392409896041476,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_6695d90a009846ae",
+    "cell": "model_0066",
     "cell_description": {
-      "data_key": "A_6695d90a009846ae",
-      "id": "A_6695d90a009846ae",
+      "data_key": "model_0066",
+      "id": "model_0066",
       "kind": "planned24",
       "labels": [
         "Frontal_Sup_R",
@@ -846,8 +800,6 @@
       "upper_MC": -0.188133328194425,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -865,12 +817,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00369150563059905,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9c0985d90142e044",
+    "cell": "model_0083",
     "cell_description": {
-      "data_key": "A_9c0985d90142e044",
-      "id": "A_9c0985d90142e044",
+      "data_key": "model_0083",
+      "id": "model_0083",
       "kind": "planned24",
       "labels": [
         "Postcentral_L",
@@ -900,8 +851,6 @@
       "upper_MC": -0.039169426145279476,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -919,12 +868,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004107384513522008,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4c7926fcf9f1254b",
+    "cell": "model_0052",
     "cell_description": {
-      "data_key": "A_4c7926fcf9f1254b",
-      "id": "A_4c7926fcf9f1254b",
+      "data_key": "model_0052",
+      "id": "model_0052",
       "kind": "planned24",
       "labels": [
         "Postcentral_L",
@@ -954,8 +902,6 @@
       "upper_MC": -0.11009731639817319,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -973,12 +919,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0033102447058637637,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3cf809391077cbc6",
+    "cell": "model_0038",
     "cell_description": {
-      "data_key": "A_3cf809391077cbc6",
-      "id": "A_3cf809391077cbc6",
+      "data_key": "model_0038",
+      "id": "model_0038",
       "kind": "planned24",
       "labels": [
         "Postcentral_R",
@@ -1008,8 +953,6 @@
       "upper_MC": -0.006047379234901714,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1027,12 +970,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003443001448124844,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_00517bbe03ed8ce8",
+    "cell": "model_0001",
     "cell_description": {
-      "data_key": "A_00517bbe03ed8ce8",
-      "id": "A_00517bbe03ed8ce8",
+      "data_key": "model_0001",
+      "id": "model_0001",
       "kind": "planned24",
       "labels": [
         "Postcentral_R",
@@ -1062,8 +1004,6 @@
       "upper_MC": -0.16721543731940744,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1081,12 +1021,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0041975186970975,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9958238aaf1ddc9d",
+    "cell": "model_0079",
     "cell_description": {
-      "data_key": "A_9958238aaf1ddc9d",
-      "id": "A_9958238aaf1ddc9d",
+      "data_key": "model_0079",
+      "id": "model_0079",
       "kind": "planned24",
       "labels": [
         "Precentral_L",
@@ -1116,8 +1055,6 @@
       "upper_MC": -0.005550226472943226,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1135,12 +1072,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004016706200533696,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_7d912fe16af7a3d7",
+    "cell": "model_0072",
     "cell_description": {
-      "data_key": "A_7d912fe16af7a3d7",
-      "id": "A_7d912fe16af7a3d7",
+      "data_key": "model_0072",
+      "id": "model_0072",
       "kind": "planned24",
       "labels": [
         "Precentral_L",
@@ -1170,8 +1106,6 @@
       "upper_MC": -0.09216988453240355,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1189,12 +1123,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003499252982199552,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2a4c15d083bfcd9e",
+    "cell": "model_0025",
     "cell_description": {
-      "data_key": "A_2a4c15d083bfcd9e",
-      "id": "A_2a4c15d083bfcd9e",
+      "data_key": "model_0025",
+      "id": "model_0025",
       "kind": "planned24",
       "labels": [
         "Precentral_R",
@@ -1224,8 +1157,6 @@
       "upper_MC": 0.06104746792110726,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1243,12 +1174,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.003875626239811123,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d2865d4c965d8771",
+    "cell": "model_0099",
     "cell_description": {
-      "data_key": "A_d2865d4c965d8771",
-      "id": "A_d2865d4c965d8771",
+      "data_key": "model_0099",
+      "id": "model_0099",
       "kind": "planned24",
       "labels": [
         "Precentral_R",
@@ -1278,8 +1208,6 @@
       "upper_MC": -0.16906178247354084,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_vas_mean",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1297,12 +1225,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006659613123568137,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2424872a3a611332",
+    "cell": "model_0023",
     "cell_description": {
-      "data_key": "A_2424872a3a611332",
-      "id": "A_2424872a3a611332",
+      "data_key": "model_0023",
+      "id": "model_0023",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1333,8 +1260,6 @@
       "upper_MC": -0.12407559137817775,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1352,12 +1277,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010823469081848919,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d8bc00b45798b130",
+    "cell": "model_0102",
     "cell_description": {
-      "data_key": "A_d8bc00b45798b130",
-      "id": "A_d8bc00b45798b130",
+      "data_key": "model_0102",
+      "id": "model_0102",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1388,8 +1312,6 @@
       "upper_MC": -0.31750222798569006,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1407,12 +1329,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05254338002018155,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b399745f762dc5ef",
+    "cell": "model_0090",
     "cell_description": {
-      "data_key": "A_b399745f762dc5ef",
-      "id": "A_b399745f762dc5ef",
+      "data_key": "model_0090",
+      "id": "model_0090",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1443,8 +1364,6 @@
       "upper_MC": -1.3195895543514997,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1462,12 +1381,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008079450628078716,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d5506838667ac1fe",
+    "cell": "model_0101",
     "cell_description": {
-      "data_key": "A_d5506838667ac1fe",
-      "id": "A_d5506838667ac1fe",
+      "data_key": "model_0101",
+      "id": "model_0101",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1498,8 +1416,6 @@
       "upper_MC": -0.19595568337194888,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1517,12 +1433,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.01217506277805272,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1273041bfe288bad",
+    "cell": "model_0010",
     "cell_description": {
-      "data_key": "A_1273041bfe288bad",
-      "id": "A_1273041bfe288bad",
+      "data_key": "model_0010",
+      "id": "model_0010",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1553,8 +1468,6 @@
       "upper_MC": -0.13721290385334375,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1572,12 +1485,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.06782286666374948,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_35321c8a158904eb",
+    "cell": "model_0035",
     "cell_description": {
-      "data_key": "A_35321c8a158904eb",
-      "id": "A_35321c8a158904eb",
+      "data_key": "model_0035",
+      "id": "model_0035",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -1608,8 +1520,6 @@
       "upper_MC": -0.5840017447127578,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1627,12 +1537,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007536474652676928,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_094c884d93f6ec97",
+    "cell": "model_0009",
     "cell_description": {
-      "data_key": "A_094c884d93f6ec97",
-      "id": "A_094c884d93f6ec97",
+      "data_key": "model_0009",
+      "id": "model_0009",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1663,8 +1572,6 @@
       "upper_MC": -0.05223888753437763,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1682,12 +1589,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010048275744420465,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5c064b7f07151bd4",
+    "cell": "model_0061",
     "cell_description": {
-      "data_key": "A_5c064b7f07151bd4",
-      "id": "A_5c064b7f07151bd4",
+      "data_key": "model_0061",
+      "id": "model_0061",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1718,8 +1624,6 @@
       "upper_MC": -0.25680773203387364,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1737,12 +1641,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.07455080936345437,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4a966040fbb42fb3",
+    "cell": "model_0051",
     "cell_description": {
-      "data_key": "A_4a966040fbb42fb3",
-      "id": "A_4a966040fbb42fb3",
+      "data_key": "model_0051",
+      "id": "model_0051",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1773,8 +1676,6 @@
       "upper_MC": -1.6114235979349785,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1792,12 +1693,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008291145810755352,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_cb6d286d74bb60f3",
+    "cell": "model_0095",
     "cell_description": {
-      "data_key": "A_cb6d286d74bb60f3",
-      "id": "A_cb6d286d74bb60f3",
+      "data_key": "model_0095",
+      "id": "model_0095",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1828,8 +1728,6 @@
       "upper_MC": -0.14906615189467454,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1847,12 +1745,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.011848410148100313,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9ad56232f89b5fc7",
+    "cell": "model_0082",
     "cell_description": {
-      "data_key": "A_9ad56232f89b5fc7",
-      "id": "A_9ad56232f89b5fc7",
+      "data_key": "model_0082",
+      "id": "model_0082",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1883,8 +1780,6 @@
       "upper_MC": -0.30996121696473966,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1902,12 +1797,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.054166953822635144,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_18e4834bde01c5e1",
+    "cell": "model_0015",
     "cell_description": {
-      "data_key": "A_18e4834bde01c5e1",
-      "id": "A_18e4834bde01c5e1",
+      "data_key": "model_0015",
+      "id": "model_0015",
       "kind": "egg66",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -1938,8 +1832,6 @@
       "upper_MC": -1.3899901933811483,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -1957,12 +1849,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005932308226786198,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_468a5462ab7be38a",
+    "cell": "model_0046",
     "cell_description": {
-      "data_key": "A_468a5462ab7be38a",
-      "id": "A_468a5462ab7be38a",
+      "data_key": "model_0046",
+      "id": "model_0046",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -1993,8 +1884,6 @@
       "upper_MC": -0.043391044152324455,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2012,12 +1901,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.011669655154737113,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_455b12e6c8d890d6",
+    "cell": "model_0045",
     "cell_description": {
-      "data_key": "A_455b12e6c8d890d6",
-      "id": "A_455b12e6c8d890d6",
+      "data_key": "model_0045",
+      "id": "model_0045",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -2048,8 +1936,6 @@
       "upper_MC": -0.10308699407340335,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2067,12 +1953,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.06223170985306026,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d9b6871d3ccff85b",
+    "cell": "model_0103",
     "cell_description": {
-      "data_key": "A_d9b6871d3ccff85b",
-      "id": "A_d9b6871d3ccff85b",
+      "data_key": "model_0103",
+      "id": "model_0103",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -2103,8 +1988,6 @@
       "upper_MC": -1.1013665895534328,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2122,12 +2005,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006589929143157813,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_30080c1b42dbe1da",
+    "cell": "model_0029",
     "cell_description": {
-      "data_key": "A_30080c1b42dbe1da",
-      "id": "A_30080c1b42dbe1da",
+      "data_key": "model_0029",
+      "id": "model_0029",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -2158,8 +2040,6 @@
       "upper_MC": -0.08383081294425315,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2177,12 +2057,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.013839478294836782,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_de13a5816df30a3f",
+    "cell": "model_0106",
     "cell_description": {
-      "data_key": "A_de13a5816df30a3f",
-      "id": "A_de13a5816df30a3f",
+      "data_key": "model_0106",
+      "id": "model_0106",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -2213,8 +2092,6 @@
       "upper_MC": -0.4556739202071729,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2232,12 +2109,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.059268678024625654,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_f01c9b32796472bc",
+    "cell": "model_0109",
     "cell_description": {
-      "data_key": "A_f01c9b32796472bc",
-      "id": "A_f01c9b32796472bc",
+      "data_key": "model_0109",
+      "id": "model_0109",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_L",
@@ -2268,8 +2144,6 @@
       "upper_MC": -2.1441912535503995,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2287,12 +2161,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00818969330467366,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5539d29225ccfc24",
+    "cell": "model_0057",
     "cell_description": {
-      "data_key": "A_5539d29225ccfc24",
-      "id": "A_5539d29225ccfc24",
+      "data_key": "model_0057",
+      "id": "model_0057",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2323,8 +2196,6 @@
       "upper_MC": -0.08393036466596468,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2342,12 +2213,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.011075943762057477,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9dd43db409175137",
+    "cell": "model_0085",
     "cell_description": {
-      "data_key": "A_9dd43db409175137",
-      "id": "A_9dd43db409175137",
+      "data_key": "model_0085",
+      "id": "model_0085",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2378,8 +2248,6 @@
       "upper_MC": -0.36498690208892887,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2397,12 +2265,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05393861710394998,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_155195ceb91002d3",
+    "cell": "model_0012",
     "cell_description": {
-      "data_key": "A_155195ceb91002d3",
-      "id": "A_155195ceb91002d3",
+      "data_key": "model_0012",
+      "id": "model_0012",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2433,8 +2300,6 @@
       "upper_MC": -1.6065585802455156,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2452,12 +2317,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00797337923136704,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_dc8ca4c78d19ff24",
+    "cell": "model_0105",
     "cell_description": {
-      "data_key": "A_dc8ca4c78d19ff24",
-      "id": "A_dc8ca4c78d19ff24",
+      "data_key": "model_0105",
+      "id": "model_0105",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2488,8 +2352,6 @@
       "upper_MC": -0.2351333829934801,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2507,12 +2369,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0110970585764546,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_074c71ab05fb6d51",
+    "cell": "model_0005",
     "cell_description": {
-      "data_key": "A_074c71ab05fb6d51",
-      "id": "A_074c71ab05fb6d51",
+      "data_key": "model_0005",
+      "id": "model_0005",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2543,8 +2404,6 @@
       "upper_MC": -0.14704816405368656,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2562,12 +2421,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05253729866255319,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_015fddb9feee38e5",
+    "cell": "model_0002",
     "cell_description": {
-      "data_key": "A_015fddb9feee38e5",
-      "id": "A_015fddb9feee38e5",
+      "data_key": "model_0002",
+      "id": "model_0002",
       "kind": "egg66",
       "labels": [
         "Frontal_Mid_R",
@@ -2598,8 +2456,6 @@
       "upper_MC": -0.9485173007448097,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2617,12 +2473,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006022600609314416,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3f56568b169c450c",
+    "cell": "model_0042",
     "cell_description": {
-      "data_key": "A_3f56568b169c450c",
-      "id": "A_3f56568b169c450c",
+      "data_key": "model_0042",
+      "id": "model_0042",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2653,8 +2508,6 @@
       "upper_MC": 0.017486812755349027,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2672,12 +2525,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010893182714261818,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9fb29d1b1c7cca18",
+    "cell": "model_0086",
     "cell_description": {
-      "data_key": "A_9fb29d1b1c7cca18",
-      "id": "A_9fb29d1b1c7cca18",
+      "data_key": "model_0086",
+      "id": "model_0086",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2708,8 +2560,6 @@
       "upper_MC": -0.13210492765076853,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2727,12 +2577,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05595727746299306,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_064d25f8dc76e58c",
+    "cell": "model_0004",
     "cell_description": {
-      "data_key": "A_064d25f8dc76e58c",
-      "id": "A_064d25f8dc76e58c",
+      "data_key": "model_0004",
+      "id": "model_0004",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2763,8 +2612,6 @@
       "upper_MC": -1.2627538789172377,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2782,12 +2629,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00708711992528098,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d3bbd37b8ba0a506",
+    "cell": "model_0100",
     "cell_description": {
-      "data_key": "A_d3bbd37b8ba0a506",
-      "id": "A_d3bbd37b8ba0a506",
+      "data_key": "model_0100",
+      "id": "model_0100",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2818,8 +2664,6 @@
       "upper_MC": -0.20760277084717774,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2837,12 +2681,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.012001485190011985,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b5bc7b4e7bbad76f",
+    "cell": "model_0092",
     "cell_description": {
-      "data_key": "A_b5bc7b4e7bbad76f",
-      "id": "A_b5bc7b4e7bbad76f",
+      "data_key": "model_0092",
+      "id": "model_0092",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2873,8 +2716,6 @@
       "upper_MC": -0.3608100835479317,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2892,12 +2733,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05530461145877874,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_07a725f68bc9f15d",
+    "cell": "model_0007",
     "cell_description": {
-      "data_key": "A_07a725f68bc9f15d",
-      "id": "A_07a725f68bc9f15d",
+      "data_key": "model_0007",
+      "id": "model_0007",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_L",
@@ -2928,8 +2768,6 @@
       "upper_MC": -1.5913521292301285,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -2947,12 +2785,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006710652845948545,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3d4d70f8aef7d910",
+    "cell": "model_0039",
     "cell_description": {
-      "data_key": "A_3d4d70f8aef7d910",
-      "id": "A_3d4d70f8aef7d910",
+      "data_key": "model_0039",
+      "id": "model_0039",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -2983,8 +2820,6 @@
       "upper_MC": -0.09328200368923283,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3002,12 +2837,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010890843176875244,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_84cea9464aa3750e",
+    "cell": "model_0074",
     "cell_description": {
-      "data_key": "A_84cea9464aa3750e",
-      "id": "A_84cea9464aa3750e",
+      "data_key": "model_0074",
+      "id": "model_0074",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -3038,8 +2872,6 @@
       "upper_MC": -0.0029524630234939995,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3057,12 +2889,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05178236594538177,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1d6982f4aa3846af",
+    "cell": "model_0019",
     "cell_description": {
-      "data_key": "A_1d6982f4aa3846af",
-      "id": "A_1d6982f4aa3846af",
+      "data_key": "model_0019",
+      "id": "model_0019",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -3093,8 +2924,6 @@
       "upper_MC": -0.30232869699581394,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3112,12 +2941,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008030376985864202,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_326e549593b47a14",
+    "cell": "model_0032",
     "cell_description": {
-      "data_key": "A_326e549593b47a14",
-      "id": "A_326e549593b47a14",
+      "data_key": "model_0032",
+      "id": "model_0032",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -3148,8 +2976,6 @@
       "upper_MC": -0.11790044795643234,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3167,12 +2993,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.01168639560391449,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_67487865eb18f5af",
+    "cell": "model_0067",
     "cell_description": {
-      "data_key": "A_67487865eb18f5af",
-      "id": "A_67487865eb18f5af",
+      "data_key": "model_0067",
+      "id": "model_0067",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -3203,8 +3028,6 @@
       "upper_MC": -0.1776891259352063,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3222,12 +3045,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.051290842686225524,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4a3f4dd33cbe1498",
+    "cell": "model_0049",
     "cell_description": {
-      "data_key": "A_4a3f4dd33cbe1498",
-      "id": "A_4a3f4dd33cbe1498",
+      "data_key": "model_0049",
+      "id": "model_0049",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -3258,8 +3080,6 @@
       "upper_MC": -1.0137228969812693,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3277,12 +3097,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005934009614813322,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5f2b22e6e4beca0f",
+    "cell": "model_0063",
     "cell_description": {
-      "data_key": "A_5f2b22e6e4beca0f",
-      "id": "A_5f2b22e6e4beca0f",
+      "data_key": "model_0063",
+      "id": "model_0063",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3313,8 +3132,6 @@
       "upper_MC": 0.059547441846133344,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3332,12 +3149,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010382486591436202,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_58a160babb42a3c9",
+    "cell": "model_0058",
     "cell_description": {
-      "data_key": "A_58a160babb42a3c9",
-      "id": "A_58a160babb42a3c9",
+      "data_key": "model_0058",
+      "id": "model_0058",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3368,8 +3184,6 @@
       "upper_MC": -0.2069123019484438,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3387,12 +3201,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05412969207960572,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_96a5d64adaf18108",
+    "cell": "model_0077",
     "cell_description": {
-      "data_key": "A_96a5d64adaf18108",
-      "id": "A_96a5d64adaf18108",
+      "data_key": "model_0077",
+      "id": "model_0077",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3423,8 +3236,6 @@
       "upper_MC": -1.950570716275632,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3442,12 +3253,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0069635719332113155,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4da378b49ae8147c",
+    "cell": "model_0054",
     "cell_description": {
-      "data_key": "A_4da378b49ae8147c",
-      "id": "A_4da378b49ae8147c",
+      "data_key": "model_0054",
+      "id": "model_0054",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3478,8 +3288,6 @@
       "upper_MC": -0.10960172542392602,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3497,12 +3305,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.013061194340796625,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_98715b76bff3db6e",
+    "cell": "model_0078",
     "cell_description": {
-      "data_key": "A_98715b76bff3db6e",
-      "id": "A_98715b76bff3db6e",
+      "data_key": "model_0078",
+      "id": "model_0078",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3533,8 +3340,6 @@
       "upper_MC": -0.40128144976656677,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3552,12 +3357,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.04884199928471672,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_180b4bde646efe82",
+    "cell": "model_0013",
     "cell_description": {
-      "data_key": "A_180b4bde646efe82",
-      "id": "A_180b4bde646efe82",
+      "data_key": "model_0013",
+      "id": "model_0013",
       "kind": "egg66",
       "labels": [
         "Frontal_Sup_R",
@@ -3588,8 +3392,6 @@
       "upper_MC": -2.4866919820638334,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3607,12 +3409,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006825080586491644,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_475bf302208abdb5",
+    "cell": "model_0047",
     "cell_description": {
-      "data_key": "A_475bf302208abdb5",
-      "id": "A_475bf302208abdb5",
+      "data_key": "model_0047",
+      "id": "model_0047",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3643,8 +3444,6 @@
       "upper_MC": -0.1167242083992249,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3662,12 +3461,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010926929941631053,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5e16a3b9bb8aa855",
+    "cell": "model_0062",
     "cell_description": {
-      "data_key": "A_5e16a3b9bb8aa855",
-      "id": "A_5e16a3b9bb8aa855",
+      "data_key": "model_0062",
+      "id": "model_0062",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3698,8 +3496,6 @@
       "upper_MC": -0.55975312690127,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3717,12 +3513,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.055308596258337284,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_0799e5a96b948874",
+    "cell": "model_0006",
     "cell_description": {
-      "data_key": "A_0799e5a96b948874",
-      "id": "A_0799e5a96b948874",
+      "data_key": "model_0006",
+      "id": "model_0006",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3753,8 +3548,6 @@
       "upper_MC": -1.762987431348555,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3772,12 +3565,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006920330444683667,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b9dba4ca06ffe734",
+    "cell": "model_0094",
     "cell_description": {
-      "data_key": "A_b9dba4ca06ffe734",
-      "id": "A_b9dba4ca06ffe734",
+      "data_key": "model_0094",
+      "id": "model_0094",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3808,8 +3600,6 @@
       "upper_MC": -0.28122374833637814,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3827,12 +3617,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.012527812593122772,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_4511c62da4741ebc",
+    "cell": "model_0044",
     "cell_description": {
-      "data_key": "A_4511c62da4741ebc",
-      "id": "A_4511c62da4741ebc",
+      "data_key": "model_0044",
+      "id": "model_0044",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3863,8 +3652,6 @@
       "upper_MC": -0.15529535310555087,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3882,12 +3669,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0633896354846849,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9cfd8f2278d62fc5",
+    "cell": "model_0084",
     "cell_description": {
-      "data_key": "A_9cfd8f2278d62fc5",
-      "id": "A_9cfd8f2278d62fc5",
+      "data_key": "model_0084",
+      "id": "model_0084",
       "kind": "egg66",
       "labels": [
         "Postcentral_L",
@@ -3918,8 +3704,6 @@
       "upper_MC": -0.16665435931533096,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3937,12 +3721,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00865343644237962,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2f40fe0fd2ec5dc4",
+    "cell": "model_0028",
     "cell_description": {
-      "data_key": "A_2f40fe0fd2ec5dc4",
-      "id": "A_2f40fe0fd2ec5dc4",
+      "data_key": "model_0028",
+      "id": "model_0028",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -3973,8 +3756,6 @@
       "upper_MC": -0.2420498752335796,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -3992,12 +3773,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.011198119226124487,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_f50271f49cc2df66",
+    "cell": "model_0110",
     "cell_description": {
-      "data_key": "A_f50271f49cc2df66",
-      "id": "A_f50271f49cc2df66",
+      "data_key": "model_0110",
+      "id": "model_0110",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -4028,8 +3808,6 @@
       "upper_MC": -0.27427997185627245,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4047,12 +3825,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.06071588240238501,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5996348872813d66",
+    "cell": "model_0059",
     "cell_description": {
-      "data_key": "A_5996348872813d66",
-      "id": "A_5996348872813d66",
+      "data_key": "model_0059",
+      "id": "model_0059",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -4083,8 +3860,6 @@
       "upper_MC": -0.844148606239723,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4102,12 +3877,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007094421880629281,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3ee447a46853ffb4",
+    "cell": "model_0040",
     "cell_description": {
-      "data_key": "A_3ee447a46853ffb4",
-      "id": "A_3ee447a46853ffb4",
+      "data_key": "model_0040",
+      "id": "model_0040",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -4138,8 +3912,6 @@
       "upper_MC": -0.21565577183994109,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4157,12 +3929,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.012600952955226286,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_3f4ff1edfde8de66",
+    "cell": "model_0041",
     "cell_description": {
-      "data_key": "A_3f4ff1edfde8de66",
-      "id": "A_3f4ff1edfde8de66",
+      "data_key": "model_0041",
+      "id": "model_0041",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -4193,8 +3964,6 @@
       "upper_MC": -0.1285450470141848,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4212,12 +3981,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0513439349076823,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_223682221d1f680d",
+    "cell": "model_0022",
     "cell_description": {
-      "data_key": "A_223682221d1f680d",
-      "id": "A_223682221d1f680d",
+      "data_key": "model_0022",
+      "id": "model_0022",
       "kind": "egg66",
       "labels": [
         "Postcentral_R",
@@ -4248,8 +4016,6 @@
       "upper_MC": -0.9249864697275278,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4267,12 +4033,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00611868341788082,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_48aa338409744815",
+    "cell": "model_0048",
     "cell_description": {
-      "data_key": "A_48aa338409744815",
-      "id": "A_48aa338409744815",
+      "data_key": "model_0048",
+      "id": "model_0048",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4303,8 +4068,6 @@
       "upper_MC": -0.010406723632845491,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4322,12 +4085,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010463966587804907,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_37c60e41bd0b0e3c",
+    "cell": "model_0036",
     "cell_description": {
-      "data_key": "A_37c60e41bd0b0e3c",
-      "id": "A_37c60e41bd0b0e3c",
+      "data_key": "model_0036",
+      "id": "model_0036",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4358,8 +4120,6 @@
       "upper_MC": -0.36636943166949837,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4377,12 +4137,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05495959912699144,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_31a6322cc135883a",
+    "cell": "model_0031",
     "cell_description": {
-      "data_key": "A_31a6322cc135883a",
-      "id": "A_31a6322cc135883a",
+      "data_key": "model_0031",
+      "id": "model_0031",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4413,8 +4172,6 @@
       "upper_MC": -2.060076298745194,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4432,12 +4189,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007288538136199533,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9221b2f5f35d5f2b",
+    "cell": "model_0076",
     "cell_description": {
-      "data_key": "A_9221b2f5f35d5f2b",
-      "id": "A_9221b2f5f35d5f2b",
+      "data_key": "model_0076",
+      "id": "model_0076",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4468,8 +4224,6 @@
       "upper_MC": -0.33885245451453344,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4487,12 +4241,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.012636702954616663,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_f5bcfd2963bda9ff",
+    "cell": "model_0111",
     "cell_description": {
-      "data_key": "A_f5bcfd2963bda9ff",
-      "id": "A_f5bcfd2963bda9ff",
+      "data_key": "model_0111",
+      "id": "model_0111",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4523,8 +4276,6 @@
       "upper_MC": -0.2710490880542391,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4542,12 +4293,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.055691242421256115,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_75172323bee96fe8",
+    "cell": "model_0071",
     "cell_description": {
-      "data_key": "A_75172323bee96fe8",
-      "id": "A_75172323bee96fe8",
+      "data_key": "model_0071",
+      "id": "model_0071",
       "kind": "egg66",
       "labels": [
         "Precentral_L",
@@ -4578,8 +4328,6 @@
       "upper_MC": -1.2258891614016612,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4597,12 +4345,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005642512688373846,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1a9d63ea56e27f42",
+    "cell": "model_0017",
     "cell_description": {
-      "data_key": "A_1a9d63ea56e27f42",
-      "id": "A_1a9d63ea56e27f42",
+      "data_key": "model_0017",
+      "id": "model_0017",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4633,8 +4380,6 @@
       "upper_MC": 0.06796688725513662,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4652,12 +4397,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010928899331647784,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_184f7df42f3fea9e",
+    "cell": "model_0014",
     "cell_description": {
-      "data_key": "A_184f7df42f3fea9e",
-      "id": "A_184f7df42f3fea9e",
+      "data_key": "model_0014",
+      "id": "model_0014",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4688,8 +4432,6 @@
       "upper_MC": 0.08253798810344715,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4707,12 +4449,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05609392100020816,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5536f6ee728bb0c1",
+    "cell": "model_0056",
     "cell_description": {
-      "data_key": "A_5536f6ee728bb0c1",
-      "id": "A_5536f6ee728bb0c1",
+      "data_key": "model_0056",
+      "id": "model_0056",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4743,8 +4484,6 @@
       "upper_MC": -0.3673749298835674,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4762,12 +4501,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00782656507864121,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_66224d68613d2590",
+    "cell": "model_0065",
     "cell_description": {
-      "data_key": "A_66224d68613d2590",
-      "id": "A_66224d68613d2590",
+      "data_key": "model_0065",
+      "id": "model_0065",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4798,8 +4536,6 @@
       "upper_MC": -0.001444663232321381,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4817,12 +4553,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.010410144589919318,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_eccf18d544db012f",
+    "cell": "model_0108",
     "cell_description": {
-      "data_key": "A_eccf18d544db012f",
-      "id": "A_eccf18d544db012f",
+      "data_key": "model_0108",
+      "id": "model_0108",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4853,8 +4588,6 @@
       "upper_MC": -0.27323264820644155,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4872,12 +4605,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.05309642458927355,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d16a76f98d4ae2ed",
+    "cell": "model_0097",
     "cell_description": {
-      "data_key": "A_d16a76f98d4ae2ed",
-      "id": "A_d16a76f98d4ae2ed",
+      "data_key": "model_0097",
+      "id": "model_0097",
       "kind": "egg66",
       "labels": [
         "Precentral_R",
@@ -4908,8 +4640,6 @@
       "upper_MC": -2.22238103014455,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_egg_value",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4927,12 +4657,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004580913151592633,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_69864ba86bbe347b",
+    "cell": "model_0069",
     "cell_description": {
-      "data_key": "A_69864ba86bbe347b",
-      "id": "A_69864ba86bbe347b",
+      "data_key": "model_0069",
+      "id": "model_0069",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -4964,8 +4693,6 @@
       "upper_MC": 0.060936709440960427,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -4983,12 +4710,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0014218491829790375,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_69864ba86bbe347b",
+    "cell": "model_0069",
     "cell_description": {
-      "data_key": "A_69864ba86bbe347b",
-      "id": "A_69864ba86bbe347b",
+      "data_key": "model_0069",
+      "id": "model_0069",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5020,8 +4746,6 @@
       "upper_MC": -0.03383934983740505,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5039,12 +4763,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008836011306931207,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_69864ba86bbe347b",
+    "cell": "model_0069",
     "cell_description": {
-      "data_key": "A_69864ba86bbe347b",
-      "id": "A_69864ba86bbe347b",
+      "data_key": "model_0069",
+      "id": "model_0069",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5076,8 +4799,6 @@
       "upper_MC": -0.21240602258511856,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5097,10 +4818,10 @@
     "MC_max_endpoint_half_width": 0.5936329015017918,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_69864ba86bbe347b",
+    "cell": "model_0069",
     "cell_description": {
-      "data_key": "A_69864ba86bbe347b",
-      "id": "A_69864ba86bbe347b",
+      "data_key": "model_0069",
+      "id": "model_0069",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5132,8 +4853,6 @@
       "upper_MC": 0.0025842696472295756,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5151,12 +4870,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0045179601462141325,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b41367d79cc2d1ec",
+    "cell": "model_0091",
     "cell_description": {
-      "data_key": "A_b41367d79cc2d1ec",
-      "id": "A_b41367d79cc2d1ec",
+      "data_key": "model_0091",
+      "id": "model_0091",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5188,8 +4906,6 @@
       "upper_MC": 0.06169472062407734,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5207,12 +4923,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0014273006963998885,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b41367d79cc2d1ec",
+    "cell": "model_0091",
     "cell_description": {
-      "data_key": "A_b41367d79cc2d1ec",
-      "id": "A_b41367d79cc2d1ec",
+      "data_key": "model_0091",
+      "id": "model_0091",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5244,8 +4959,6 @@
       "upper_MC": -0.03282356164755479,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5263,12 +4976,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008822352986927684,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b41367d79cc2d1ec",
+    "cell": "model_0091",
     "cell_description": {
-      "data_key": "A_b41367d79cc2d1ec",
-      "id": "A_b41367d79cc2d1ec",
+      "data_key": "model_0091",
+      "id": "model_0091",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5300,8 +5012,6 @@
       "upper_MC": -0.20028586274876028,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5321,10 +5031,10 @@
     "MC_max_endpoint_half_width": 0.5295517889645112,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_b41367d79cc2d1ec",
+    "cell": "model_0091",
     "cell_description": {
-      "data_key": "A_b41367d79cc2d1ec",
-      "id": "A_b41367d79cc2d1ec",
+      "data_key": "model_0091",
+      "id": "model_0091",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Oper_R",
@@ -5356,8 +5066,6 @@
       "upper_MC": 0.0030386463188563084,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5375,12 +5083,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004238889054683975,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_13b87e3c041e83b5",
+    "cell": "model_0011",
     "cell_description": {
-      "data_key": "A_13b87e3c041e83b5",
-      "id": "A_13b87e3c041e83b5",
+      "data_key": "model_0011",
+      "id": "model_0011",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5412,8 +5119,6 @@
       "upper_MC": 0.0329001687487721,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5431,12 +5136,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0012368578486912293,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_13b87e3c041e83b5",
+    "cell": "model_0011",
     "cell_description": {
-      "data_key": "A_13b87e3c041e83b5",
-      "id": "A_13b87e3c041e83b5",
+      "data_key": "model_0011",
+      "id": "model_0011",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5468,8 +5172,6 @@
       "upper_MC": -0.0326714509745499,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5487,12 +5189,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008066615882392436,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_13b87e3c041e83b5",
+    "cell": "model_0011",
     "cell_description": {
-      "data_key": "A_13b87e3c041e83b5",
-      "id": "A_13b87e3c041e83b5",
+      "data_key": "model_0011",
+      "id": "model_0011",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5524,8 +5225,6 @@
       "upper_MC": -0.06157633629797458,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5545,10 +5244,10 @@
     "MC_max_endpoint_half_width": 0.7993391336720492,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_13b87e3c041e83b5",
+    "cell": "model_0011",
     "cell_description": {
-      "data_key": "A_13b87e3c041e83b5",
-      "id": "A_13b87e3c041e83b5",
+      "data_key": "model_0011",
+      "id": "model_0011",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5580,8 +5279,6 @@
       "upper_MC": 0.009839543768123349,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5599,12 +5296,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004807222571469975,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_68ef6c8d34b9789c",
+    "cell": "model_0068",
     "cell_description": {
-      "data_key": "A_68ef6c8d34b9789c",
-      "id": "A_68ef6c8d34b9789c",
+      "data_key": "model_0068",
+      "id": "model_0068",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5636,8 +5332,6 @@
       "upper_MC": 0.040151964721866176,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5655,12 +5349,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013970479894593046,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_68ef6c8d34b9789c",
+    "cell": "model_0068",
     "cell_description": {
-      "data_key": "A_68ef6c8d34b9789c",
-      "id": "A_68ef6c8d34b9789c",
+      "data_key": "model_0068",
+      "id": "model_0068",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5692,8 +5385,6 @@
       "upper_MC": -0.03413016756577279,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5711,12 +5402,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.009030937461444899,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_68ef6c8d34b9789c",
+    "cell": "model_0068",
     "cell_description": {
-      "data_key": "A_68ef6c8d34b9789c",
-      "id": "A_68ef6c8d34b9789c",
+      "data_key": "model_0068",
+      "id": "model_0068",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5748,8 +5438,6 @@
       "upper_MC": -0.2747374716159355,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5769,10 +5457,10 @@
     "MC_max_endpoint_half_width": 0.8251922671295233,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_68ef6c8d34b9789c",
+    "cell": "model_0068",
     "cell_description": {
-      "data_key": "A_68ef6c8d34b9789c",
-      "id": "A_68ef6c8d34b9789c",
+      "data_key": "model_0068",
+      "id": "model_0068",
       "kind": "joint22",
       "labels": [
         "Frontal_Inf_Tri_L",
@@ -5804,8 +5492,6 @@
       "upper_MC": 0.0042274632705243675,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5823,12 +5509,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005295663111101665,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_094c1a14755473e8",
+    "cell": "model_0008",
     "cell_description": {
-      "data_key": "A_094c1a14755473e8",
-      "id": "A_094c1a14755473e8",
+      "data_key": "model_0008",
+      "id": "model_0008",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -5860,8 +5545,6 @@
       "upper_MC": 0.032323069153619814,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5879,12 +5562,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013071211305064681,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_094c1a14755473e8",
+    "cell": "model_0008",
     "cell_description": {
-      "data_key": "A_094c1a14755473e8",
-      "id": "A_094c1a14755473e8",
+      "data_key": "model_0008",
+      "id": "model_0008",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -5916,8 +5598,6 @@
       "upper_MC": -0.03143606937244556,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5935,12 +5615,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.009135612021050787,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_094c1a14755473e8",
+    "cell": "model_0008",
     "cell_description": {
-      "data_key": "A_094c1a14755473e8",
-      "id": "A_094c1a14755473e8",
+      "data_key": "model_0008",
+      "id": "model_0008",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -5972,8 +5651,6 @@
       "upper_MC": -0.07636424732732831,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -5993,10 +5670,10 @@
     "MC_max_endpoint_half_width": 1.0892314022432856,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_094c1a14755473e8",
+    "cell": "model_0008",
     "cell_description": {
-      "data_key": "A_094c1a14755473e8",
-      "id": "A_094c1a14755473e8",
+      "data_key": "model_0008",
+      "id": "model_0008",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -6028,8 +5705,6 @@
       "upper_MC": 0.010464149140148038,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6047,12 +5722,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004999934592281385,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2f3346ecfecb3c1b",
+    "cell": "model_0027",
     "cell_description": {
-      "data_key": "A_2f3346ecfecb3c1b",
-      "id": "A_2f3346ecfecb3c1b",
+      "data_key": "model_0027",
+      "id": "model_0027",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -6084,8 +5758,6 @@
       "upper_MC": 0.033330912255041804,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6103,12 +5775,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0015751499168049528,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2f3346ecfecb3c1b",
+    "cell": "model_0027",
     "cell_description": {
-      "data_key": "A_2f3346ecfecb3c1b",
-      "id": "A_2f3346ecfecb3c1b",
+      "data_key": "model_0027",
+      "id": "model_0027",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -6140,8 +5811,6 @@
       "upper_MC": -0.029435880763775915,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6159,12 +5828,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.009339928544820297,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2f3346ecfecb3c1b",
+    "cell": "model_0027",
     "cell_description": {
-      "data_key": "A_2f3346ecfecb3c1b",
-      "id": "A_2f3346ecfecb3c1b",
+      "data_key": "model_0027",
+      "id": "model_0027",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -6196,8 +5864,6 @@
       "upper_MC": -0.418511951504763,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6217,10 +5883,10 @@
     "MC_max_endpoint_half_width": 1.3745914128259074,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_2f3346ecfecb3c1b",
+    "cell": "model_0027",
     "cell_description": {
-      "data_key": "A_2f3346ecfecb3c1b",
-      "id": "A_2f3346ecfecb3c1b",
+      "data_key": "model_0027",
+      "id": "model_0027",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_L",
@@ -6252,8 +5918,6 @@
       "upper_MC": 0.20597522296105808,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6271,12 +5935,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.006026961133802862,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d24d4a8ef5b267b3",
+    "cell": "model_0098",
     "cell_description": {
-      "data_key": "A_d24d4a8ef5b267b3",
-      "id": "A_d24d4a8ef5b267b3",
+      "data_key": "model_0098",
+      "id": "model_0098",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6308,8 +5971,6 @@
       "upper_MC": 0.05274899918423159,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6327,12 +5988,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0012767014879787736,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d24d4a8ef5b267b3",
+    "cell": "model_0098",
     "cell_description": {
-      "data_key": "A_d24d4a8ef5b267b3",
-      "id": "A_d24d4a8ef5b267b3",
+      "data_key": "model_0098",
+      "id": "model_0098",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6364,8 +6024,6 @@
       "upper_MC": -0.031997787123945735,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6383,12 +6041,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.009843720783649756,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_d24d4a8ef5b267b3",
+    "cell": "model_0098",
     "cell_description": {
-      "data_key": "A_d24d4a8ef5b267b3",
-      "id": "A_d24d4a8ef5b267b3",
+      "data_key": "model_0098",
+      "id": "model_0098",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6420,8 +6077,6 @@
       "upper_MC": -0.1768801649218115,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6441,10 +6096,10 @@
     "MC_max_endpoint_half_width": 0.7003748741802269,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_d24d4a8ef5b267b3",
+    "cell": "model_0098",
     "cell_description": {
-      "data_key": "A_d24d4a8ef5b267b3",
-      "id": "A_d24d4a8ef5b267b3",
+      "data_key": "model_0098",
+      "id": "model_0098",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6476,8 +6131,6 @@
       "upper_MC": 0.0028183544174567032,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6495,12 +6148,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0042853105131295255,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_31485bf3d880360d",
+    "cell": "model_0030",
     "cell_description": {
-      "data_key": "A_31485bf3d880360d",
-      "id": "A_31485bf3d880360d",
+      "data_key": "model_0030",
+      "id": "model_0030",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6532,8 +6184,6 @@
       "upper_MC": 0.049411047540548585,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6551,12 +6201,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.001658273965423021,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_31485bf3d880360d",
+    "cell": "model_0030",
     "cell_description": {
-      "data_key": "A_31485bf3d880360d",
-      "id": "A_31485bf3d880360d",
+      "data_key": "model_0030",
+      "id": "model_0030",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6588,8 +6237,6 @@
       "upper_MC": -0.03584135226224839,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6607,12 +6254,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007988840919616852,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_31485bf3d880360d",
+    "cell": "model_0030",
     "cell_description": {
-      "data_key": "A_31485bf3d880360d",
-      "id": "A_31485bf3d880360d",
+      "data_key": "model_0030",
+      "id": "model_0030",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6644,8 +6290,6 @@
       "upper_MC": -0.34691332704842565,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6665,10 +6309,10 @@
     "MC_max_endpoint_half_width": 0.8690962031392928,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_31485bf3d880360d",
+    "cell": "model_0030",
     "cell_description": {
-      "data_key": "A_31485bf3d880360d",
-      "id": "A_31485bf3d880360d",
+      "data_key": "model_0030",
+      "id": "model_0030",
       "kind": "joint22",
       "labels": [
         "Frontal_Mid_R",
@@ -6700,8 +6344,6 @@
       "upper_MC": 0.016362225964655863,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6719,12 +6361,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0047266013536999725,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_6a7902472185a998",
+    "cell": "model_0070",
     "cell_description": {
-      "data_key": "A_6a7902472185a998",
-      "id": "A_6a7902472185a998",
+      "data_key": "model_0070",
+      "id": "model_0070",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -6756,8 +6397,6 @@
       "upper_MC": 0.03366161082588972,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6775,12 +6414,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.001241555555607697,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_6a7902472185a998",
+    "cell": "model_0070",
     "cell_description": {
-      "data_key": "A_6a7902472185a998",
-      "id": "A_6a7902472185a998",
+      "data_key": "model_0070",
+      "id": "model_0070",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -6812,8 +6450,6 @@
       "upper_MC": -0.031554803424957645,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6831,12 +6467,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008689358966188554,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_6a7902472185a998",
+    "cell": "model_0070",
     "cell_description": {
-      "data_key": "A_6a7902472185a998",
-      "id": "A_6a7902472185a998",
+      "data_key": "model_0070",
+      "id": "model_0070",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -6868,8 +6503,6 @@
       "upper_MC": -0.03804545029313436,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6889,10 +6522,10 @@
     "MC_max_endpoint_half_width": 0.743434962007882,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_6a7902472185a998",
+    "cell": "model_0070",
     "cell_description": {
-      "data_key": "A_6a7902472185a998",
-      "id": "A_6a7902472185a998",
+      "data_key": "model_0070",
+      "id": "model_0070",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -6924,8 +6557,6 @@
       "upper_MC": 0.01679237004435663,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6943,12 +6574,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004450043371584507,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_99abc02406c4098e",
+    "cell": "model_0081",
     "cell_description": {
-      "data_key": "A_99abc02406c4098e",
-      "id": "A_99abc02406c4098e",
+      "data_key": "model_0081",
+      "id": "model_0081",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -6980,8 +6610,6 @@
       "upper_MC": 0.04408582039838793,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -6999,12 +6627,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013462088452888474,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_99abc02406c4098e",
+    "cell": "model_0081",
     "cell_description": {
-      "data_key": "A_99abc02406c4098e",
-      "id": "A_99abc02406c4098e",
+      "data_key": "model_0081",
+      "id": "model_0081",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -7036,8 +6663,6 @@
       "upper_MC": -0.03142912753680798,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7055,12 +6680,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008666984286419988,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_99abc02406c4098e",
+    "cell": "model_0081",
     "cell_description": {
-      "data_key": "A_99abc02406c4098e",
-      "id": "A_99abc02406c4098e",
+      "data_key": "model_0081",
+      "id": "model_0081",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -7092,8 +6716,6 @@
       "upper_MC": -0.4789430425866691,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7113,10 +6735,10 @@
     "MC_max_endpoint_half_width": 1.5748408647968404,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_99abc02406c4098e",
+    "cell": "model_0081",
     "cell_description": {
-      "data_key": "A_99abc02406c4098e",
-      "id": "A_99abc02406c4098e",
+      "data_key": "model_0081",
+      "id": "model_0081",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_L",
@@ -7148,8 +6770,6 @@
       "upper_MC": 1.0889112269852603,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7167,12 +6787,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0043347633790362106,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5fc286ba79e6dac0",
+    "cell": "model_0064",
     "cell_description": {
-      "data_key": "A_5fc286ba79e6dac0",
-      "id": "A_5fc286ba79e6dac0",
+      "data_key": "model_0064",
+      "id": "model_0064",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7204,8 +6823,6 @@
       "upper_MC": 0.016003121141895338,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7223,12 +6840,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.001444350535727952,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5fc286ba79e6dac0",
+    "cell": "model_0064",
     "cell_description": {
-      "data_key": "A_5fc286ba79e6dac0",
-      "id": "A_5fc286ba79e6dac0",
+      "data_key": "model_0064",
+      "id": "model_0064",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7260,8 +6876,6 @@
       "upper_MC": -0.03093611394744313,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7279,12 +6893,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007519689602076274,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5fc286ba79e6dac0",
+    "cell": "model_0064",
     "cell_description": {
-      "data_key": "A_5fc286ba79e6dac0",
-      "id": "A_5fc286ba79e6dac0",
+      "data_key": "model_0064",
+      "id": "model_0064",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7316,8 +6929,6 @@
       "upper_MC": 0.08909108293243485,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7337,10 +6948,10 @@
     "MC_max_endpoint_half_width": 1.1365094329604517,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_5fc286ba79e6dac0",
+    "cell": "model_0064",
     "cell_description": {
-      "data_key": "A_5fc286ba79e6dac0",
-      "id": "A_5fc286ba79e6dac0",
+      "data_key": "model_0064",
+      "id": "model_0064",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7372,8 +6983,6 @@
       "upper_MC": 1.1841023789949077,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7391,12 +7000,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004840329946663176,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_335eae19c8c0c44e",
+    "cell": "model_0033",
     "cell_description": {
-      "data_key": "A_335eae19c8c0c44e",
-      "id": "A_335eae19c8c0c44e",
+      "data_key": "model_0033",
+      "id": "model_0033",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7428,8 +7036,6 @@
       "upper_MC": 0.05939112329017238,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7447,12 +7053,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013759056610047615,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_335eae19c8c0c44e",
+    "cell": "model_0033",
     "cell_description": {
-      "data_key": "A_335eae19c8c0c44e",
-      "id": "A_335eae19c8c0c44e",
+      "data_key": "model_0033",
+      "id": "model_0033",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7484,8 +7089,6 @@
       "upper_MC": -0.03211081629944235,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7503,12 +7106,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008897806423479149,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_335eae19c8c0c44e",
+    "cell": "model_0033",
     "cell_description": {
-      "data_key": "A_335eae19c8c0c44e",
-      "id": "A_335eae19c8c0c44e",
+      "data_key": "model_0033",
+      "id": "model_0033",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7540,8 +7142,6 @@
       "upper_MC": -0.21555013248667082,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7561,10 +7161,10 @@
     "MC_max_endpoint_half_width": 0.5950859556634782,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_335eae19c8c0c44e",
+    "cell": "model_0033",
     "cell_description": {
-      "data_key": "A_335eae19c8c0c44e",
-      "id": "A_335eae19c8c0c44e",
+      "data_key": "model_0033",
+      "id": "model_0033",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_Medial_L",
@@ -7596,8 +7196,6 @@
       "upper_MC": 0.0023334677049433594,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7615,12 +7213,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004395587413570157,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_89d0fe15ef9953d4",
+    "cell": "model_0075",
     "cell_description": {
-      "data_key": "A_89d0fe15ef9953d4",
-      "id": "A_89d0fe15ef9953d4",
+      "data_key": "model_0075",
+      "id": "model_0075",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7652,8 +7249,6 @@
       "upper_MC": 0.0483294048929729,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7671,12 +7266,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00147684524926614,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_89d0fe15ef9953d4",
+    "cell": "model_0075",
     "cell_description": {
-      "data_key": "A_89d0fe15ef9953d4",
-      "id": "A_89d0fe15ef9953d4",
+      "data_key": "model_0075",
+      "id": "model_0075",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7708,8 +7302,6 @@
       "upper_MC": -0.03105746330254109,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7727,12 +7319,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007927951074704509,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_89d0fe15ef9953d4",
+    "cell": "model_0075",
     "cell_description": {
-      "data_key": "A_89d0fe15ef9953d4",
-      "id": "A_89d0fe15ef9953d4",
+      "data_key": "model_0075",
+      "id": "model_0075",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7764,8 +7355,6 @@
       "upper_MC": -0.07820546818915294,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7785,10 +7374,10 @@
     "MC_max_endpoint_half_width": 0.8571521934987345,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_89d0fe15ef9953d4",
+    "cell": "model_0075",
     "cell_description": {
-      "data_key": "A_89d0fe15ef9953d4",
-      "id": "A_89d0fe15ef9953d4",
+      "data_key": "model_0075",
+      "id": "model_0075",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7820,8 +7409,6 @@
       "upper_MC": 0.008724142821108671,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7839,12 +7426,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004937336859272758,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1e9de077cec2bf6d",
+    "cell": "model_0020",
     "cell_description": {
-      "data_key": "A_1e9de077cec2bf6d",
-      "id": "A_1e9de077cec2bf6d",
+      "data_key": "model_0020",
+      "id": "model_0020",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7876,8 +7462,6 @@
       "upper_MC": 0.0443761757609315,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7895,12 +7479,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00133226830941683,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1e9de077cec2bf6d",
+    "cell": "model_0020",
     "cell_description": {
-      "data_key": "A_1e9de077cec2bf6d",
-      "id": "A_1e9de077cec2bf6d",
+      "data_key": "model_0020",
+      "id": "model_0020",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7932,8 +7515,6 @@
       "upper_MC": -0.033799708315307916,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -7951,12 +7532,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0084780830554394,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_1e9de077cec2bf6d",
+    "cell": "model_0020",
     "cell_description": {
-      "data_key": "A_1e9de077cec2bf6d",
-      "id": "A_1e9de077cec2bf6d",
+      "data_key": "model_0020",
+      "id": "model_0020",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -7988,8 +7568,6 @@
       "upper_MC": -0.30813291086240663,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8009,10 +7587,10 @@
     "MC_max_endpoint_half_width": 0.8743183124208258,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_1e9de077cec2bf6d",
+    "cell": "model_0020",
     "cell_description": {
-      "data_key": "A_1e9de077cec2bf6d",
-      "id": "A_1e9de077cec2bf6d",
+      "data_key": "model_0020",
+      "id": "model_0020",
       "kind": "joint22",
       "labels": [
         "Frontal_Sup_R",
@@ -8044,8 +7622,6 @@
       "upper_MC": 0.006984036597430077,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8063,12 +7639,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005438180237995777,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9983802c08d656bf",
+    "cell": "model_0080",
     "cell_description": {
-      "data_key": "A_9983802c08d656bf",
-      "id": "A_9983802c08d656bf",
+      "data_key": "model_0080",
+      "id": "model_0080",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8100,8 +7675,6 @@
       "upper_MC": 0.05221467736649796,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8119,12 +7692,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.001612379679982047,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9983802c08d656bf",
+    "cell": "model_0080",
     "cell_description": {
-      "data_key": "A_9983802c08d656bf",
-      "id": "A_9983802c08d656bf",
+      "data_key": "model_0080",
+      "id": "model_0080",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8156,8 +7728,6 @@
       "upper_MC": -0.03310678747794793,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8175,12 +7745,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008998814498213048,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_9983802c08d656bf",
+    "cell": "model_0080",
     "cell_description": {
-      "data_key": "A_9983802c08d656bf",
-      "id": "A_9983802c08d656bf",
+      "data_key": "model_0080",
+      "id": "model_0080",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8212,8 +7781,6 @@
       "upper_MC": -0.2624347102963251,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8233,10 +7800,10 @@
     "MC_max_endpoint_half_width": 0.6459005681181793,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_9983802c08d656bf",
+    "cell": "model_0080",
     "cell_description": {
-      "data_key": "A_9983802c08d656bf",
-      "id": "A_9983802c08d656bf",
+      "data_key": "model_0080",
+      "id": "model_0080",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8268,8 +7835,6 @@
       "upper_MC": 0.003432756366464673,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8287,12 +7852,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005304615100318669,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_db59ef5ef9d5645d",
+    "cell": "model_0104",
     "cell_description": {
-      "data_key": "A_db59ef5ef9d5645d",
-      "id": "A_db59ef5ef9d5645d",
+      "data_key": "model_0104",
+      "id": "model_0104",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8324,8 +7888,6 @@
       "upper_MC": 0.05266119239632231,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8343,12 +7905,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0016299649155896226,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_db59ef5ef9d5645d",
+    "cell": "model_0104",
     "cell_description": {
-      "data_key": "A_db59ef5ef9d5645d",
-      "id": "A_db59ef5ef9d5645d",
+      "data_key": "model_0104",
+      "id": "model_0104",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8380,8 +7941,6 @@
       "upper_MC": -0.03368415439065485,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8399,12 +7958,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008471253314301042,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_db59ef5ef9d5645d",
+    "cell": "model_0104",
     "cell_description": {
-      "data_key": "A_db59ef5ef9d5645d",
-      "id": "A_db59ef5ef9d5645d",
+      "data_key": "model_0104",
+      "id": "model_0104",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8436,8 +7994,6 @@
       "upper_MC": -0.16500220260103765,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8457,10 +8013,10 @@
     "MC_max_endpoint_half_width": 0.5887579328723973,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_db59ef5ef9d5645d",
+    "cell": "model_0104",
     "cell_description": {
-      "data_key": "A_db59ef5ef9d5645d",
-      "id": "A_db59ef5ef9d5645d",
+      "data_key": "model_0104",
+      "id": "model_0104",
       "kind": "joint22",
       "labels": [
         "Postcentral_L",
@@ -8492,8 +8048,6 @@
       "upper_MC": 0.002649037826813583,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8511,12 +8065,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.005098908504955212,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b87ce68fc30fd1a4",
+    "cell": "model_0093",
     "cell_description": {
-      "data_key": "A_b87ce68fc30fd1a4",
-      "id": "A_b87ce68fc30fd1a4",
+      "data_key": "model_0093",
+      "id": "model_0093",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8548,8 +8101,6 @@
       "upper_MC": 0.037175295212246814,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8567,12 +8118,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0016574438410520906,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b87ce68fc30fd1a4",
+    "cell": "model_0093",
     "cell_description": {
-      "data_key": "A_b87ce68fc30fd1a4",
-      "id": "A_b87ce68fc30fd1a4",
+      "data_key": "model_0093",
+      "id": "model_0093",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8604,8 +8154,6 @@
       "upper_MC": -0.034919090278638404,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8623,12 +8171,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007763883748000633,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_b87ce68fc30fd1a4",
+    "cell": "model_0093",
     "cell_description": {
-      "data_key": "A_b87ce68fc30fd1a4",
-      "id": "A_b87ce68fc30fd1a4",
+      "data_key": "model_0093",
+      "id": "model_0093",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8660,8 +8207,6 @@
       "upper_MC": -0.06757636335807864,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8681,10 +8226,10 @@
     "MC_max_endpoint_half_width": 0.862654860558763,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_b87ce68fc30fd1a4",
+    "cell": "model_0093",
     "cell_description": {
-      "data_key": "A_b87ce68fc30fd1a4",
-      "id": "A_b87ce68fc30fd1a4",
+      "data_key": "model_0093",
+      "id": "model_0093",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8716,8 +8261,6 @@
       "upper_MC": 0.011367584706363232,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8735,12 +8278,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004142606003830179,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5a33a4b21d923fa9",
+    "cell": "model_0060",
     "cell_description": {
-      "data_key": "A_5a33a4b21d923fa9",
-      "id": "A_5a33a4b21d923fa9",
+      "data_key": "model_0060",
+      "id": "model_0060",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8772,8 +8314,6 @@
       "upper_MC": 0.04070532101386776,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8791,12 +8331,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0011698034987410247,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5a33a4b21d923fa9",
+    "cell": "model_0060",
     "cell_description": {
-      "data_key": "A_5a33a4b21d923fa9",
-      "id": "A_5a33a4b21d923fa9",
+      "data_key": "model_0060",
+      "id": "model_0060",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8828,8 +8367,6 @@
       "upper_MC": -0.03478062832278768,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8847,12 +8384,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008349639260037386,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_5a33a4b21d923fa9",
+    "cell": "model_0060",
     "cell_description": {
-      "data_key": "A_5a33a4b21d923fa9",
-      "id": "A_5a33a4b21d923fa9",
+      "data_key": "model_0060",
+      "id": "model_0060",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8884,8 +8420,6 @@
       "upper_MC": -0.3498304188928232,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8905,10 +8439,10 @@
     "MC_max_endpoint_half_width": 0.861237661085795,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_5a33a4b21d923fa9",
+    "cell": "model_0060",
     "cell_description": {
-      "data_key": "A_5a33a4b21d923fa9",
-      "id": "A_5a33a4b21d923fa9",
+      "data_key": "model_0060",
+      "id": "model_0060",
       "kind": "joint22",
       "labels": [
         "Postcentral_R",
@@ -8940,8 +8474,6 @@
       "upper_MC": 0.01942202528209691,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -8959,12 +8491,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004704393476001913,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_ecaa558badfe6c09",
+    "cell": "model_0107",
     "cell_description": {
-      "data_key": "A_ecaa558badfe6c09",
-      "id": "A_ecaa558badfe6c09",
+      "data_key": "model_0107",
+      "id": "model_0107",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -8996,8 +8527,6 @@
       "upper_MC": 0.04554243231579034,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9015,12 +8544,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.001307500121886615,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_ecaa558badfe6c09",
+    "cell": "model_0107",
     "cell_description": {
-      "data_key": "A_ecaa558badfe6c09",
-      "id": "A_ecaa558badfe6c09",
+      "data_key": "model_0107",
+      "id": "model_0107",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9052,8 +8580,6 @@
       "upper_MC": -0.033137753038683604,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9071,12 +8597,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.009375858867600534,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_ecaa558badfe6c09",
+    "cell": "model_0107",
     "cell_description": {
-      "data_key": "A_ecaa558badfe6c09",
-      "id": "A_ecaa558badfe6c09",
+      "data_key": "model_0107",
+      "id": "model_0107",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9108,8 +8633,6 @@
       "upper_MC": -0.15274481782433064,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9129,10 +8652,10 @@
     "MC_max_endpoint_half_width": 0.6128901612798927,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_ecaa558badfe6c09",
+    "cell": "model_0107",
     "cell_description": {
-      "data_key": "A_ecaa558badfe6c09",
-      "id": "A_ecaa558badfe6c09",
+      "data_key": "model_0107",
+      "id": "model_0107",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9164,8 +8687,6 @@
       "upper_MC": 0.0031769783804520557,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9183,12 +8704,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004148375689471573,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_20d3dddff12f1f5d",
+    "cell": "model_0021",
     "cell_description": {
-      "data_key": "A_20d3dddff12f1f5d",
-      "id": "A_20d3dddff12f1f5d",
+      "data_key": "model_0021",
+      "id": "model_0021",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9220,8 +8740,6 @@
       "upper_MC": 0.05416189848128624,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9239,12 +8757,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013163328351485093,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_20d3dddff12f1f5d",
+    "cell": "model_0021",
     "cell_description": {
-      "data_key": "A_20d3dddff12f1f5d",
-      "id": "A_20d3dddff12f1f5d",
+      "data_key": "model_0021",
+      "id": "model_0021",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9276,8 +8793,6 @@
       "upper_MC": -0.03266974448984187,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9295,12 +8810,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00737446685851223,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_20d3dddff12f1f5d",
+    "cell": "model_0021",
     "cell_description": {
-      "data_key": "A_20d3dddff12f1f5d",
-      "id": "A_20d3dddff12f1f5d",
+      "data_key": "model_0021",
+      "id": "model_0021",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9332,8 +8846,6 @@
       "upper_MC": -0.1476042900378062,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9353,10 +8865,10 @@
     "MC_max_endpoint_half_width": 0.6013925141037362,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_20d3dddff12f1f5d",
+    "cell": "model_0021",
     "cell_description": {
-      "data_key": "A_20d3dddff12f1f5d",
-      "id": "A_20d3dddff12f1f5d",
+      "data_key": "model_0021",
+      "id": "model_0021",
       "kind": "joint22",
       "labels": [
         "Precentral_L",
@@ -9388,8 +8900,6 @@
       "upper_MC": 0.002692082826740716,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9407,12 +8917,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.004676947832361413,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_cb91d0f5af9d4a82",
+    "cell": "model_0096",
     "cell_description": {
-      "data_key": "A_cb91d0f5af9d4a82",
-      "id": "A_cb91d0f5af9d4a82",
+      "data_key": "model_0096",
+      "id": "model_0096",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9444,8 +8953,6 @@
       "upper_MC": 0.022376416661615574,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9463,12 +8970,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0013234367816582701,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_cb91d0f5af9d4a82",
+    "cell": "model_0096",
     "cell_description": {
-      "data_key": "A_cb91d0f5af9d4a82",
-      "id": "A_cb91d0f5af9d4a82",
+      "data_key": "model_0096",
+      "id": "model_0096",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9500,8 +9006,6 @@
       "upper_MC": -0.03402511266174485,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9519,12 +9023,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.008319270957669135,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_cb91d0f5af9d4a82",
+    "cell": "model_0096",
     "cell_description": {
-      "data_key": "A_cb91d0f5af9d4a82",
-      "id": "A_cb91d0f5af9d4a82",
+      "data_key": "model_0096",
+      "id": "model_0096",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9556,8 +9059,6 @@
       "upper_MC": -0.02288128170660912,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9577,10 +9078,10 @@
     "MC_max_endpoint_half_width": 0.9864974141133303,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_cb91d0f5af9d4a82",
+    "cell": "model_0096",
     "cell_description": {
-      "data_key": "A_cb91d0f5af9d4a82",
-      "id": "A_cb91d0f5af9d4a82",
+      "data_key": "model_0096",
+      "id": "model_0096",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9612,8 +9113,6 @@
       "upper_MC": 0.03643893465130077,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9631,12 +9130,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.00456754812880239,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2cde923009f3a4c2",
+    "cell": "model_0026",
     "cell_description": {
-      "data_key": "A_2cde923009f3a4c2",
-      "id": "A_2cde923009f3a4c2",
+      "data_key": "model_0026",
+      "id": "model_0026",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9668,8 +9166,6 @@
       "upper_MC": 0.04273078330048861,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_HR",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9687,12 +9183,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.0014002521045337196,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2cde923009f3a4c2",
+    "cell": "model_0026",
     "cell_description": {
-      "data_key": "A_2cde923009f3a4c2",
-      "id": "A_2cde923009f3a4c2",
+      "data_key": "model_0026",
+      "id": "model_0026",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9724,8 +9219,6 @@
       "upper_MC": -0.03584263806102212,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_candidate_RR_RMSSD",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9743,12 +9236,11 @@
   },
   {
     "MC_max_endpoint_half_width": 0.007457220790302116,
-    "absolute_MC_tolerance": null,
     "attempted": 20000,
-    "cell": "A_2cde923009f3a4c2",
+    "cell": "model_0026",
     "cell_description": {
-      "data_key": "A_2cde923009f3a4c2",
-      "id": "A_2cde923009f3a4c2",
+      "data_key": "model_0026",
+      "id": "model_0026",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9780,8 +9272,6 @@
       "upper_MC": -0.2965310607217355,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "coefficient_hb_within_person_SD",
     "status": "MC_PRECISION_MET",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",
@@ -9801,10 +9291,10 @@
     "MC_max_endpoint_half_width": 0.7334964441261036,
     "absolute_MC_tolerance": 0.01,
     "attempted": 20000,
-    "cell": "A_2cde923009f3a4c2",
+    "cell": "model_0026",
     "cell_description": {
-      "data_key": "A_2cde923009f3a4c2",
-      "id": "A_2cde923009f3a4c2",
+      "data_key": "model_0026",
+      "id": "model_0026",
       "kind": "joint22",
       "labels": [
         "Precentral_R",
@@ -9836,8 +9326,6 @@
       "upper_MC": 0.007742109891353266,
       "upper_rank": 587
     },
-    "primary_p": null,
-    "primary_q": null,
     "statistic": "same_row_SSE_reduction",
     "status": "MC_PRECISION_INSUFFICIENT",
     "uncertainty_role": "descriptive_empirical_resampling_not_population_coverage",

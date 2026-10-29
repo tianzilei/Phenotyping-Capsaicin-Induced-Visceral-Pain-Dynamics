@@ -1,2 +1,1 @@
-# Format validation/demo and public hash audit use Python >=3.11 standard library.
 # The full synthetic scientific test suite requires the recorded project lock.

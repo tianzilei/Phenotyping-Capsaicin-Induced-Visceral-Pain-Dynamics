@@ -96,5 +96,5 @@
   ],
   "parent_execution": "config/dask_variability_bootstrap_20261003_v1.json",
   "extension_reason": "39of96_MC_insufficient_in_independent_fixed20k_pilot",
-  "parent_execution_sha256": "80af8a3f6cfe4060eb20adfc6f8f0051dcf307408e96c8dea2ed51e620c58f08"
+  "random_stream_scheme": "logical-stream-v2"
 }

@@ -1,13 +1,11 @@
-# Public CRF field contract
+# Input field contract
 
-This document describes the fields used by the current analysis. The original blank collection form and historical manuscript are preserved in the private pre-update archive. This summary is not a new study protocol, clinical diagnostic instrument or change to collected data.
+Wide rating tables require a unique participant key and columns for the expected actual minutes. Numerical scores must fall within the configured scale. The parser preserves numerical values, missing entries and categorical stopping markers. Numeric observations after a stopping marker, mixed stopping markers and duplicate participant keys are rejected.
 
-The investigator confirmed capsaicin exposure of 10% w/v, 10 μL, equivalent to 1 mg. A custom overall sensation score uses 0–10 at actual minutes 1–20: 0 means no discomfort, 1 any discomfort, and 10 an intolerable sensation. Historical VAS labels refer to this score, which is not a validated standard pain or visual analogue scale. No observed minute-zero VAS is available here. Record numeric zero as zero, missing as missing, and preserve E/T. E denotes stopping after two consecutive zero ratings with staff-confirmed absence of discomfort; T denotes discontinuation for intolerable sensations rated 10. The first E/T cell is a recorded minute and cannot substitute for a verified precise event time.
+Zero is a numerical observation. A missing cell is not zero. Adjacent-change calculations require observed consecutive minutes; incomplete intervals are not connected by interpolation. The input format does not supply a baseline observation.
 
-The rating clock begins when the water used to swallow the capsule has been finished. Each prompt permits a 10-second keypad response. Staff confirmation distinguishes a zero recorded after no keypress from an unrecorded response. Symptoms and regions were elicited once after the session; preset choices and additional descriptions feed the retained categorical code sets. Food and beverage choices and quantities were not measured and must not be reconstructed from nominal serving sizes. See the [measurement contract](measurement_contract.md) for acquisition and processing parameters.
+Registry-based source selection uses explicit paths, acquisition dates and unique ownership. Tied dates for different paths remain ambiguous. A registry documents a selection decision; it does not establish signal quality or biological validity.
 
-Structured baseline fields cover sex, age, height, weight, BMI, alcohol/spiciness/intake questionnaire fields, CCEI, AES, baseline GI symptoms and time since last meal. Symptom and region code dictionaries are retained under `resources/legacy_codebook/constants.json`. Exact individual demographics and trajectories stay restricted.
+Reference-admission metadata identify the source record, reviewer, independent-human attestation, adjudication and annotation version. Required metadata are a contract, not proof that an annotation is correct.
 
-`Additional_symptoms` free text and `ACQ_CNP_files` source links are excluded from the random-ID export. Historical calculated fields are preserved only as source values in the restricted archive and are not silently recomputed. Missing code fields are unrecorded; unlisted codes are not clinical negatives. Historical Rome logical matches are not diagnoses.
-
-See [data dictionary](data_dictionary.md) and [privacy handling](data_privacy.md). Any future collection or inference requires its own frozen design/configuration and the relevant scientific and participant-data authorization.
+Blank schemas and synthetic fixtures describe interfaces. They do not grant scientific readiness or permission to process real records.

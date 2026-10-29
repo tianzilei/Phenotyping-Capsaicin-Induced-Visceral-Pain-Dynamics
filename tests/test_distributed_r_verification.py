@@ -72,7 +72,7 @@ class VerificationTests(unittest.TestCase):
         self.assertLess(max(result["max_absolute_difference"].values()), 1e-12)
 
     def test_portable_checker_serialization(self):
-        from distributed.protocol.pickle import dumps, loads
+        from cloudpickle import dumps, loads
 
         request, saved = self.reconstruction_fixture()
         checker = loads(dumps(portable_reconstruction_checker()))

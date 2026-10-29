@@ -1,4 +1,3 @@
-import hashlib
 import json
 import subprocess
 import sys
@@ -22,29 +21,18 @@ class DistributedRTests(unittest.TestCase):
         lib.mkdir()
         self.runtime = dict(rscript=str(exe), library=str(lib))
         self.assets = {"R/distributed_vas_backend.R": b"# synthetic fixture"}
-        self.hashes = {k: hashlib.sha256(v).hexdigest() for k, v in self.assets.items()}
         self.request = dict(task="synthetic", kind="qa", seed=7)
 
-    def test_rejects_corrupt_asset_before_subprocess(self):
+    def test_requires_backend_asset(self):
         with patch("capsaicin.distributed_r.run_process") as run:
             with self.assertRaises(ValueError):
-                execute_r(
-                    self.runtime,
-                    self.assets,
-                    {k: "wrong" for k in self.assets},
-                    self.request,
-                )
+                execute_r(self.runtime, {}, self.request)
             run.assert_not_called()
 
     def test_rejects_parent_asset_path(self):
         assets = {"../escape.R": b"# synthetic"}
         with self.assertRaises(ValueError):
-            execute_r(
-                self.runtime,
-                assets,
-                {k: hashlib.sha256(v).hexdigest() for k, v in assets.items()},
-                self.request,
-            )
+            execute_r(self.runtime, assets, self.request)
 
     def test_no_invented_result_after_failed_process(self):
         with patch(
@@ -52,9 +40,10 @@ class DistributedRTests(unittest.TestCase):
             return_value=subprocess.CompletedProcess([], 1, "", "synthetic failure"),
         ):
             with self.assertRaisesRegex(RuntimeError, "synthetic failure"):
-                execute_r(self.runtime, self.assets, self.hashes, self.request)
+                execute_r(self.runtime, self.assets, self.request)
 
     def test_result_identity_and_explicit_runtime(self):
+
         def fake_run(command, **kwargs):
             root = Path(kwargs["cwd"])
             self.assertEqual(command[0], self.runtime["rscript"])
@@ -71,7 +60,7 @@ class DistributedRTests(unittest.TestCase):
 
         with patch("capsaicin.distributed_r.run_process", side_effect=fake_run):
             with self.assertRaisesRegex(ValueError, "task mismatch"):
-                execute_r(self.runtime, self.assets, self.hashes, self.request)
+                execute_r(self.runtime, self.assets, self.request)
 
     def test_nonfinite_request_is_not_silently_replaced(self):
         with self.assertRaises(ValueError):

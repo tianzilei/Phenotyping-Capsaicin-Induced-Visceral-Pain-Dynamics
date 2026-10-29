@@ -2,15 +2,11 @@
   "version": "resampling_server_plan_20261003_v2",
   "status": "resource_and_precision_proposal_not_activated",
   "study_role": "results_informed_exploratory_planning_not_preregistered",
-  "requested_scope": "existing_manuscript_and_supplement_stability_plus_derivative_Markov_and_valid_null_synthetic_development",
   "server": {
-    "connection": null,
-    "specifications": null,
     "execution_started": false,
     "benchmark_required": true
   },
   "scientific_estimator_parameters_changed": false,
-  "primary_physiology_p_q": null,
   "sealed_pool_opened": false,
   "real_state_inference_enabled": false,
   "real_phase_inference_enabled": false,
@@ -102,7 +98,6 @@
     ],
     "depends_on_worker_count": false,
     "depends_on_execution_order": false,
-    "python_builtin_hash_forbidden": true,
     "cross_hardware_bitwise_guarantee": false
   },
   "environment": {
@@ -110,17 +105,14 @@
     "RF_n_jobs_per_worker": 1,
     "container_or_lock_required": true,
     "retain_old_environment": true,
-    "Windows_Rscript_paths_need_portability_adapter": true,
-    "code_revision_plus_working_tree_snapshot_required": true
+    "Windows_Rscript_paths_need_portability_adapter": true
   },
   "module_matrix": [
     {
       "module_id": "U00",
       "module": "队列与来源",
       "method": "deterministic_audit",
-      "proposed_replicates": null,
-      "permutation_policy": "not_required",
-      "scope": "source_identity_hash_audit"
+      "permutation_policy": "not_required"
     },
     {
       "module_id": "U01",
@@ -206,7 +198,6 @@
       "module_id": "U11",
       "module": "基线/静息分类",
       "method": "training_person_pipeline_repeat_20",
-      "proposed_replicates": null,
       "permutation_policy": "not_activated",
       "scope": "eligible_development_tasks_only_sealed_closed"
     },
@@ -230,7 +221,6 @@
       "module_id": "U14",
       "module": "安全中止",
       "method": "source_audit",
-      "proposed_replicates": null,
       "permutation_policy": "not_activated",
       "scope": "unknown_not_zero"
     },
@@ -254,7 +244,6 @@
       "module_id": "U17",
       "module": "相位/相干/方向性",
       "method": "synthetic_stress_design_only",
-      "proposed_replicates": null,
       "permutation_policy": "real_surrogates_disabled",
       "scope": "phase_timing_duration_reference_gates"
     }
@@ -356,7 +345,6 @@
   "all_module_review_does_not_mean_all_validated": true,
   "module_contracts": {
     "U00": {
-      "role": "deterministic_source_identity_and_hash_audit",
       "unknown_sources_remain_missing": true
     },
     "U01": {
@@ -480,8 +468,7 @@
         "rank",
         "leave_person_sensitivity",
         "block_confounding"
-      ],
-      "primary_p_q": null
+      ]
     },
     "U09": {
       "role": "Hb_relative_within_person_block_SD_FE_associations",
@@ -496,14 +483,12 @@
       "zero_or_small_SD": "freeze_undefined_and_leverage_policy_no_silent_replacement",
       "within_vs_between": "person_FE_absorbs_time_invariant_person_features_between_target_requires_distinct_model",
       "joint22": "paired_same_rows_SSE_change_only_no_ordinary_F_test_or_OOF_gain_claim",
-      "family": "existing24_primary_candidate_family_retained_not_activated_66_and22_relationship_requires_explicit_claims",
-      "primary_p_q": null
+      "family": "existing24_primary_candidate_family_retained_not_activated_66_and22_relationship_requires_explicit_claims"
     },
     "U10": {
       "role": "66_neutral_EGG_Hb_candidate_FE_associations",
       "within_person_time_shuffle": false,
-      "spectral_estimator_diagnostics": "see_spectral_contract_below_not_gastric_rhythm_or_brain_source_validation",
-      "primary_p_q": null
+      "spectral_estimator_diagnostics": "see_spectral_contract_below_not_gastric_rhythm_or_brain_source_validation"
     },
     "U11": {
       "role": "21_person_development_pool_feasible_tasks_exploratory_only",
@@ -571,7 +556,6 @@
     "U16": {
       "role": "synthetic_transition_estimator_development",
       "real_inference": false,
-      "clinical_thresholds": null,
       "details": "simulation_development_v2_M_Markov"
     },
     "U17": {

@@ -18,7 +18,6 @@
     "minimum": 0.49000000000000005,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -40,7 +39,6 @@
     "minimum": 0.45666666666666667,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -62,7 +60,6 @@
     "minimum": 0.3352380952380952,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -84,7 +81,6 @@
     "minimum": 0.44000000000000006,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -106,7 +102,6 @@
     "minimum": 0.3833333333333333,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -128,7 +123,6 @@
     "minimum": 0.27999999999999997,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -150,7 +144,6 @@
     "minimum": 0.45999999999999996,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -172,7 +165,6 @@
     "minimum": 0.4,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -194,7 +186,6 @@
     "minimum": 0.27142857142857146,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -216,7 +207,6 @@
     "minimum": 0.24,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -238,7 +228,6 @@
     "minimum": 0.25,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -260,7 +249,6 @@
     "minimum": 0.1511111111111111,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -282,7 +270,6 @@
     "minimum": 0.19,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -304,7 +291,6 @@
     "minimum": 0.21666666666666665,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -326,7 +312,6 @@
     "minimum": 0.10888888888888888,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -348,7 +333,6 @@
     "minimum": 0.32999999999999996,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -370,7 +354,6 @@
     "minimum": 0.3333333333333333,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -392,7 +375,6 @@
     "minimum": 0.15365079365079365,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -414,7 +396,6 @@
     "minimum": 0.15,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -436,7 +417,6 @@
     "minimum": 0.11666666666666665,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -458,7 +438,6 @@
     "minimum": 0.07833333333333334,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -480,7 +459,6 @@
     "minimum": 0.27,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -502,7 +480,6 @@
     "minimum": 0.2333333333333333,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -524,7 +501,6 @@
     "minimum": 0.15166666666666667,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -546,7 +522,6 @@
     "minimum": 0.15,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -568,7 +543,6 @@
     "minimum": 0.13333333333333333,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -590,7 +564,6 @@
     "minimum": 0.05333333333333333,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -606,13 +579,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -628,13 +597,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "balanced_accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -650,13 +615,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "macro_F1_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -672,13 +633,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -694,13 +651,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "balanced_accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -716,13 +669,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "macro_F1_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "questionnaire_plus_rest_candidates",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -738,13 +687,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -760,13 +705,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "balanced_accuracy_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {
@@ -782,13 +723,9 @@
     },
     "complete_repeats": 0,
     "incomplete_repeats": 20,
-    "maximum": null,
-    "median": null,
     "metric": "macro_F1_equal_fold_mean",
-    "minimum": null,
     "missing_classes": "macroF1_frozen_allk_zero_division0_balanced_accuracy_present_reference_classes",
     "model": "training_majority",
-    "prefix": null,
     "scope": "training_partition_recovery_split_sensitivity_not_population_CI"
   },
   {

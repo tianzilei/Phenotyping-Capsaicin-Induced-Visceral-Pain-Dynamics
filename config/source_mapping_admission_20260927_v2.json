@@ -56,8 +56,7 @@
         "exact_log_participant_actual_date_and_existing_identity_anchor"
       ],
       "required_fields": [
-        "evidence_log_path",
-        "evidence_log_sha256"
+        "evidence_log_path"
       ]
     },
     {

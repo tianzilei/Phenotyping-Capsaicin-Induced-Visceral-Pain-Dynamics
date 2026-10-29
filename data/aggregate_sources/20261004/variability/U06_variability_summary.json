@@ -3047,8 +3047,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.25701798201798176,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3086,8 +3085,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.2155859548887179,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3125,8 +3123,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.23840852130325818,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3164,8 +3161,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.18643623533329423,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3203,8 +3199,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.2122186772715381,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3242,8 +3237,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.23840852130325818,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3398,8 +3392,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.23106060606060608,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3437,8 +3430,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.242393633302724,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3476,8 +3468,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.2222222222222222,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3515,8 +3506,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.13777056277056277,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3554,8 +3544,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.20506887052341577,
     "gamma_per_endpoint": 0.00026041666666666666,
@@ -3593,8 +3582,7 @@
     "aggregation": "median",
     "attempted": 200000,
     "bounds": [
-      0,
-      null
+      0
     ],
     "empirical_range_width": 0.2222222222222222,
     "gamma_per_endpoint": 0.00026041666666666666,

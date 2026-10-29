@@ -17,8 +17,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -53,8 +51,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -89,8 +85,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -125,8 +119,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -161,8 +153,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -197,8 +187,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -233,8 +221,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -269,8 +255,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -305,8 +289,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -341,8 +323,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -377,8 +357,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -413,8 +391,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -449,8 +425,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -485,8 +459,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -521,8 +493,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -557,8 +527,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -593,8 +561,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -629,8 +595,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -665,8 +629,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -701,8 +663,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -737,8 +697,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -773,8 +731,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -809,8 +765,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -845,8 +799,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -881,8 +833,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -917,8 +867,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -953,8 +901,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -989,8 +935,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1025,8 +969,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1061,8 +1003,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1097,8 +1037,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1133,8 +1071,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1169,8 +1105,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1205,8 +1139,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1241,8 +1173,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1277,8 +1207,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1313,8 +1241,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1349,8 +1275,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1385,8 +1309,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1421,8 +1343,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1457,8 +1377,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1493,8 +1411,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1529,8 +1445,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1565,8 +1479,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1601,8 +1513,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1637,8 +1547,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1673,8 +1581,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1709,8 +1615,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1745,8 +1649,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1781,8 +1683,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1817,8 +1717,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1853,8 +1751,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1889,8 +1785,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1925,8 +1819,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1961,8 +1853,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -1997,8 +1887,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2033,8 +1921,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2069,8 +1955,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2105,8 +1989,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2141,8 +2023,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2177,8 +2057,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2213,8 +2091,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2249,8 +2125,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2285,8 +2159,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2321,8 +2193,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2357,8 +2227,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2393,8 +2261,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2429,8 +2295,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2465,8 +2329,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2501,8 +2363,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2537,8 +2397,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2573,8 +2431,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2609,8 +2465,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2645,8 +2499,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2681,8 +2533,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2717,8 +2567,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2753,8 +2601,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2789,8 +2635,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2825,8 +2669,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2861,8 +2703,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2897,8 +2737,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2933,8 +2771,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -2969,8 +2805,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3005,8 +2839,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3041,8 +2873,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3077,8 +2907,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3113,8 +2941,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3149,8 +2975,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3185,8 +3009,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3221,8 +3043,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3257,8 +3077,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3293,8 +3111,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3329,8 +3145,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3365,8 +3179,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3401,8 +3213,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3437,8 +3247,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3473,8 +3281,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3509,8 +3315,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3545,8 +3349,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3581,8 +3383,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3617,8 +3417,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3653,8 +3451,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3689,8 +3485,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3725,8 +3519,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3761,8 +3553,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3797,8 +3587,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3833,8 +3621,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3869,8 +3655,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3905,8 +3689,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3941,8 +3723,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -3977,8 +3757,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4013,8 +3791,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4049,8 +3825,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4085,8 +3859,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4121,8 +3893,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4157,8 +3927,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4193,8 +3961,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4229,8 +3995,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4265,8 +4029,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",
@@ -4301,8 +4063,6 @@
       "upper_rank": 169
     },
     "metric": "curve",
-    "primary_p": null,
-    "primary_q": null,
     "publication": "success_conditional_descriptive_range",
     "role": "exploratory_stability_no_nominal_coverage_validation",
     "status": "MC_PRECISION_INSUFFICIENT",

@@ -1,18 +1,12 @@
 """Export the final numbered tables from reviewed aggregates without inference."""
 
 from __future__ import annotations
-
 import ast
 import csv
-import hashlib
 import json
 from pathlib import Path
 import shutil
 import tempfile
-
-
-def sha(path):
-    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
 def read_rows(path):
@@ -32,14 +26,14 @@ def load(path):
 
 
 def verify_inputs(root, config):
-    """Reject changed or external inputs before creating an output directory."""
+    """Require existing local input files and reject external paths or symlinks."""
     root = Path(root).resolve()
-    for relative, expected in config["input_sha256"].items():
+    for relative in config["inputs"]:
         path = root / relative
         if path.is_symlink() or not path.resolve().is_relative_to(root):
-            raise ValueError("Input is outside the reviewed repository")
-        if sha(path) != expected:
-            raise ValueError(f"Reviewed input hash differs: {relative}")
+            raise ValueError("Input is outside the repository")
+        if not path.is_file():
+            raise FileNotFoundError(relative)
 
 
 def early_recognition(rows):
@@ -108,10 +102,14 @@ def symptom_rules(code, summaries):
     """Read static definitions without importing or executing historical code."""
     tree = ast.parse(code)
     rules = next(
-        ast.literal_eval(node.value)
-        for node in tree.body
-        if isinstance(node, ast.Assign)
-        and any(isinstance(t, ast.Name) and t.id == "ROME_RULES" for t in node.targets)
+        (
+            ast.literal_eval(node.value)
+            for node in tree.body
+            if isinstance(node, ast.Assign)
+            and any(
+                (isinstance(t, ast.Name) and t.id == "ROME_RULES" for t in node.targets)
+            )
+        )
     )
     counts = {x["code"]: x for x in summaries if x["kind"] == "legacy_rule_pattern"}
     if set(counts) != set(rules):
@@ -169,8 +167,10 @@ def cohort_table(supports, baseline):
     add(
         "Recorded E / T / neither stopping code",
         " / ".join(
-            integer(all_people[k])
-            for k in ["first_E_people", "first_T_people", "no_marker_people"]
+            (
+                integer(all_people[k])
+                for k in ["first_E_people", "first_T_people", "no_marker_people"]
+            )
         ),
     )
     for name in ["Complete minutes 1–10", "Complete minutes 1–20"]:
@@ -274,7 +274,7 @@ def export_tables(root, config, destination):
 
 
 def build(root, config_path, output):
-    """Render a new directory using only hash-checked, public aggregate inputs."""
+    """Render a new directory using only local public aggregate inputs."""
     from .final_figures import build as render
 
     root = Path(root).resolve()
@@ -350,23 +350,12 @@ def build(root, config_path, output):
     manifest = dict(
         version=config["version"],
         target_revision=config["target_revision"],
-        config_sha256=sha(config_path),
-        input_sha256=config["input_sha256"],
-        code_sha256={
-            str(Path(__file__).relative_to(root)): sha(__file__),
-            "src/capsaicin/final_figures.py": sha(
-                root / "src/capsaicin/final_figures.py"
-            ),
-        },
         main_figures=4,
         supplement_figures=6,
         main_tables=3,
         supplement_tables=20,
         new_inference=False,
         individual_records_used=False,
-        outputs_sha256={
-            str(p.relative_to(output)): sha(p) for p in output.rglob("*") if p.is_file()
-        },
     )
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest

@@ -1,44 +1,21 @@
-"""Adaptive continuous-run EGG spectrum estimand for the E08 conflict.
-
-The legacy dual-256-second requirement is audited separately and never
-relabelled as passed. The alternative estimator uses only uninterrupted,
-finite, jointly valid runs and never interpolates or bridges gaps.
-"""
+"""Standalone numerical helpers; legacy private-run orchestration is excluded."""
 
 from __future__ import annotations
-import csv
-import hashlib
-import json
-import platform
-import sys
-from datetime import datetime, timezone
 from pathlib import Path
 import numpy as np
 from scipy import signal
+from run_rest_waveform_qc import channel_indices, downsample
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "08_outputs/e08_adaptive_egg_20260929T110000Z"
-CFG_PATH = ROOT / "config/e08_adaptive_egg_v1.json"
-sys.path.insert(0, str(ROOT / "scripts"))
-from run_rest_waveform_qc import read_rows, read_acq, channel_indices, downsample
-
 MIN_RUN = 120.0
 MIN_TOTAL = 180.0
 QUALITY_MIN = 0.65
 SLOW = (0.033, 0.067)
-BAND = (0.008, 0.150)
-
-
-def sha(p: Path) -> str:
-    h = hashlib.sha256()
-    with p.open("rb") as f:
-        for b in iter(lambda: f.read(1024 * 1024), b""):
-            h.update(b)
-    return h.hexdigest()
+BAND = (0.008, 0.15)
 
 
 def longest_runs(mask: np.ndarray, fs: float, minimum: float):
-    runs, start = [], None
+    runs, start = ([], None)
     for i, ok in enumerate(np.asarray(mask, dtype=bool)):
         if ok and start is None:
             start = i
@@ -51,8 +28,6 @@ def longest_runs(mask: np.ndarray, fs: float, minimum: float):
 
 
 def quality_mask(x: np.ndarray, fs: float) -> np.ndarray:
-    # Keep only jointly finite samples. Hardware units are not known well
-    # enough to infer amplitude-based artifact thresholds here.
     return np.all(np.isfinite(np.asarray(x, dtype=float)), axis=0)
 
 
@@ -63,8 +38,8 @@ def multitaper_psd(x: np.ndarray, fs: float):
     spectra = []
     for taper in tapers:
         z = np.fft.rfft(y * taper)
-        spectra.append((np.abs(z) ** 2) / (fs * np.sum(taper * taper)))
-    return np.fft.rfftfreq(n, 1 / fs), np.mean(spectra, axis=0)
+        spectra.append(np.abs(z) ** 2 / (fs * np.sum(taper * taper)))
+    return (np.fft.rfftfreq(n, 1 / fs), np.mean(spectra, axis=0))
 
 
 def band_integral(f, p, lo, hi):
@@ -129,7 +104,7 @@ def analyze_record(arr, fs, names, stage):
     x, fs = downsample(arr[egg_idx], fs, 100)
     mask = quality_mask(x, fs)
     runs = longest_runs(mask, fs, MIN_RUN)
-    total = sum(b - a for a, b in runs) / fs
+    total = sum((b - a for a, b in runs)) / fs
     longest = max((b - a for a, b in runs), default=0) / fs
     total_record = x.shape[1] / fs
     coverage = min(total / max(total_record, 1e-12), 1.0)
@@ -138,11 +113,10 @@ def analyze_record(arr, fs, names, stage):
     aqs = 0.4 * coverage + 0.3 * continuity + 0.3 * agreement
     metrics = (
         spectrum_metrics(x, fs, runs)
-        if longest >= MIN_RUN and total >= MIN_TOTAL and aqs >= QUALITY_MIN
+        if longest >= MIN_RUN and total >= MIN_TOTAL and (aqs >= QUALITY_MIN)
         else {}
     )
     alt = "E08_ALT_ESTIMATED" if metrics else "E08_ALT_INESTIMABLE"
-    # Two 256 s windows at 50% overlap require a continuous 384 s run.
     legacy = (
         "LEGACY_DUAL_256S_AVAILABLE" if longest >= 384.0 else "STRUCTURALLY_UNFULFILLED"
     )
@@ -160,76 +134,3 @@ def analyze_record(arr, fs, names, stage):
         "e08_alt_status": alt,
         **metrics,
     }
-
-
-def main():
-    OUT.mkdir(parents=True, exist_ok=True)
-    rows, hashes = [], {}
-    mapping = (
-        ROOT
-        / "01_data/bids_capsaicin_20260925/sourcedata/migration/subject_to_files_D_private.csv"
-    )
-    hashes[str(mapping)] = sha(mapping)
-    for sid, stem, bp, ep, base_stage in read_rows():
-        for stage, path in ((base_stage, bp), ("E", ep)):
-            try:
-                hashes[str(path)] = sha(path)
-                arr, fs, names = read_acq(path)
-                row = {
-                    "subject_id": sid,
-                    "recording_stem": stem,
-                    "source_path": str(path),
-                    **analyze_record(arr, fs, names, stage),
-                }
-            except Exception as ex:
-                row = {
-                    "subject_id": sid,
-                    "recording_stem": stem,
-                    "source_path": str(path),
-                    "stage": stage,
-                    "e08_legacy_dual_256s_status": "UNKNOWN",
-                    "e08_alt_status": "E08_ALT_INESTIMABLE",
-                    "error": f"{type(ex).__name__}: {ex}",
-                }
-            rows.append(row)
-    fields = list(dict.fromkeys(k for r in rows for k in r))
-    with (OUT / "e08_adaptive_egg.csv").open(
-        "w", encoding="utf-8-sig", newline=""
-    ) as f:
-        w = csv.DictWriter(f, fieldnames=fields)
-        w.writeheader()
-        w.writerows(rows)
-    summary = {
-        "records": len(rows),
-        "alt_estimated": sum(
-            r.get("e08_alt_status") == "E08_ALT_ESTIMATED" for r in rows
-        ),
-        "alt_inestimable": sum(
-            r.get("e08_alt_status") == "E08_ALT_INESTIMABLE" for r in rows
-        ),
-        "legacy_structurally_unfulfilled": sum(
-            r.get("e08_legacy_dual_256s_status") == "STRUCTURALLY_UNFULFILLED"
-            for r in rows
-        ),
-        "scientific_status": "alternative_egg_estimand_descriptive_only",
-    }
-    (OUT / "summary.json").write_text(
-        json.dumps(summary, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    manifest = {
-        "created_utc": datetime.now(timezone.utc).isoformat(),
-        "config": str(CFG_PATH.relative_to(ROOT)),
-        "config_sha256": sha(CFG_PATH),
-        "input_sha256": hashes,
-        "python": sys.version,
-        "platform": platform.platform(),
-        "summary": summary,
-    }
-    (OUT / "run_manifest.json").write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(json.dumps(summary, ensure_ascii=False))
-
-
-if __name__ == "__main__":
-    main()

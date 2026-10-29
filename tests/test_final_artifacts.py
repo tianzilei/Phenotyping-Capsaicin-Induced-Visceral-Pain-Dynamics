@@ -19,12 +19,13 @@ from capsaicin.final_artifacts import (
 
 
 class FinalArtifactTests(unittest.TestCase):
-    def test_changed_inputs_rejected(self):
+    def test_missing_and_external_inputs_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)
-            (root / "aggregate.json").write_text("{}")
-            with self.assertRaisesRegex(ValueError, "hash differs"):
-                verify_inputs(root, {"input_sha256": {"aggregate.json": "0" * 64}})
+            with self.assertRaises(FileNotFoundError):
+                verify_inputs(root, {"inputs": ["missing.csv"]})
+            with self.assertRaisesRegex(ValueError, "outside"):
+                verify_inputs(root, {"inputs": ["../outside.csv"]})
 
     def test_recognition_does_not_substitute_balanced_accuracy(self):
         config = load(ROOT / "config/final_artifacts_20261023_v1.json")

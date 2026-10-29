@@ -1,23 +1,18 @@
 """Repeated person-held-out nested CV; folds are never independent subjects."""
 
 from __future__ import annotations
-import hashlib
+from .execution import memory_usage
 import numpy as np
 
 
 def seed(config, stage, repeat, purpose, fold=None):
-    from .distributed_development import canonical
+    from .random_streams import integer_seed
 
-    return int.from_bytes(
-        hashlib.sha256(
-            canonical([config["master_seed"], stage, repeat, purpose, fold])
-        ).digest()[:4],
-        "little",
-    )
+    return integer_seed(config["master_seed"], stage, repeat, purpose, fold)
 
 
 def prepare_arrays(values, stage):
-    x, y, groups, minutes = [], [], [], []
+    x, y, groups, minutes = ([], [], [], [])
     for person, row in enumerate(values):
         if stage == "next_rating":
             for t in range(3, 20):
@@ -71,11 +66,10 @@ def fold_indices(config, prepared, stage, repeat, fold):
     for a, b in inner:
         if set(groups[train[a]]) & set(groups[train[b]]):
             raise ValueError("Inner person leakage")
-    return train, test, inner
+    return (train, test, inner)
 
 
 def execute_fold(config, prepared, stage, repeat, fold):
-    from .distributed_development import digest
     from sklearn.pipeline import make_pipeline
     from sklearn.preprocessing import StandardScaler
     from sklearn.linear_model import Ridge
@@ -85,7 +79,6 @@ def execute_fold(config, prepared, stage, repeat, fold):
     import os
     import platform
     import time
-    import psutil
 
     began = time.monotonic()
     x, y, groups, minutes = prepared
@@ -131,8 +124,6 @@ def execute_fold(config, prepared, stage, repeat, fold):
         stage=stage,
         repeat=repeat,
         fold=fold,
-        config_sha256=digest(config),
-        input_sha256=config["prepared_input_sha256"][stage],
         outer_seed=seed(config, stage, repeat, "outer"),
         inner_seed=seed(config, stage, repeat, "inner", fold),
         forest_seed=seed(config, stage, repeat, "forest", fold),
@@ -149,12 +140,11 @@ def execute_fold(config, prepared, stage, repeat, fold):
     )
     return dict(
         payload=payload,
-        payload_sha256=digest(payload),
         execution=dict(
             host=platform.node(),
             pid=os.getpid(),
             seconds=time.monotonic() - began,
-            rss_bytes=psutil.Process().memory_info().rss,
+            **memory_usage(),
         ),
     )
 
@@ -165,7 +155,7 @@ def repeat_summary(payloads, prepared, config):
     x, y, groups, _ = prepared
     if (
         len(payloads) != config["outer_folds"]
-        or sorted(p["fold"] for p in payloads) != list(range(config["outer_folds"]))
+        or sorted((p["fold"] for p in payloads)) != list(range(config["outer_folds"]))
         or len({(p["stage"], p["repeat"]) for p in payloads}) != 1
     ):
         raise ValueError("OOF fold identities differ")
@@ -194,7 +184,7 @@ def repeat_summary(payloads, prepared, config):
         not np.array_equal(reported_groups, groups)
         or not np.array_equal(reported_times, prepared[3])
         or predicted.shape != (len(y), 3)
-        or not np.isfinite(predicted).all()
+        or (not np.isfinite(predicted).all())
     ):
         raise ValueError("OOF person/time/prediction rows changed")
     unique, inverse = np.unique(groups, return_inverse=True)

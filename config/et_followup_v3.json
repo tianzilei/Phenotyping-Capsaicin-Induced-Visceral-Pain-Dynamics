@@ -50,8 +50,7 @@
     "assume_post_E_zero": false,
     "assume_post_T_high": false,
     "meaning": "finite_sample_identification_ranges_not_confidence_intervals_or_imputed_data",
-    "counterfactual_caveat": "continued_observation_VAS_requires_a_well_defined_post_stop_care_regime_not_currently_verified",
-    "numerical_bias_scenarios": null
+    "counterfactual_caveat": "continued_observation_VAS_requires_a_well_defined_post_stop_care_regime_not_currently_verified"
   },
   "model_refit": false,
   "model_refit_reason": "requires_matching_refitted_v3_model",

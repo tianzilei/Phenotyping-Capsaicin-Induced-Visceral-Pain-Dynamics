@@ -39,7 +39,6 @@
   "joint": "VAS ~ HR + candidate RR-RMSSD + one Hb feature + participant and block fixed effects, same rows; no predictive-gain claim",
   "EGG_VAS": "each of 3 frozen EGG descriptors ~ VAS + participant and block fixed effects",
   "rest_challenge": "mean of paired measured candidate differences; one approved E-source matched to baseline N per unique current participant; exclude source ambiguity before quality; paired t CI/test, jackknife/median descriptive sensitivity; record averages have unequal durations",
-  "rest_source_rule": "match E raw SHA256 to selected source audit; map confirmed aliases; exclude multiple retained approved pairs rather than choose by effect or quality; original >=0.85 valid-RR fraction both records",
   "timing_sensitivity": "refit 24 targets for frozen A/B x offsets 0, +/-10, +/-30, +/-60 s and frozen drift +/-100 ppm; label nominal time uncertainty; no significance-based selection",
   "Hb_QC_sensitivity": "original mask MAD6 guard2s; compare coverage .90/.95 and ROI .50/.75; no parameter selection by effects",
   "limitations": "no independent normal-beat reference, accepted gastric rhythm reference or cortical source specificity; statistics refer to measured features and do not remove measurement error or confounding",

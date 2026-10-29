@@ -1,23 +1,25 @@
-# Reproducibility
+# Reproduction
 
-## Current aggregate export
+## Public aggregate rendering
 
-Use Python 3.12.13 and `dependencies/requirements-rendering.txt`. Run `python3 scripts/build_final_artifacts.py --output NEW_DIRECTORY` to create four main figures, six supporting figures, two main tables and 29 supporting tables. No private data, R, remote cluster or model fitting is used. The builder refuses an existing destination and checks every reviewed input hash before and after rendering.
+Install the package versions listed in `dependencies/requirements-rendering.txt`, then run:
 
-`config/aligned_artifacts_20261027_v1.json` defines all 31 table sources, ten native PNG sources, vector-rendering inputs and current numbering. CSV exports and native PNGs reproduce source bytes exactly. Editable SVG and PDF plots are rendered from the retained aggregates with the current identifiers and physiology labels; environment differences may change vector bytes. Per-file output hashes, configuration/code hashes, plot environment and font hash are recorded in the output manifests. Native images remain separate from vector rasterization in the metadata.
+```sh
+python scripts/build_final_artifacts.py --output NEW_DIRECTORY
+```
 
-Historical exports remain reproducible. Add `--config config/final_artifacts_20261023_v1.json` for the October 23 layout and 3/20 tables. `scripts/build_scientific_figures.py` reproduces the earlier October 4 export. Historical completed budgets and the 18-module inventory retain their original table identities in those archives; current Table S1 describes analysis subsets.
+The default configuration is `config/aligned_artifacts_20261027_v1.json`. Its `inputs` list identifies allowed source files, `table_sources` maps output tables, and `native_pngs` maps retained images. The renderer refuses existing destinations and external input paths. Source CSVs are copied without numerical rounding. Editable SVG/PDF output is generated from retained aggregates. Output records describe versions, counts and plotting settings.
 
-## Controlled individual analysis
+The 20261023 layout remains available through its configuration. Historical 20261004 files are retained as aggregate artifacts; the former private-bundle rendering launcher is retired.
 
-Verified private records, participant/session identity evidence, clocks, units, QC and a new locally frozen execution configuration are required. Keep all individual outputs and mappings outside Git. Preserve input/configuration/code/environment hashes for each run. Public historical parameters and format validation alone do not authorize inference or establish physiological validity.
+## New numerical runs
 
-The original environment records Python 3.12.13, R 4.6.1 and the locks under `dependencies/`. The separate October 17 inference environment, code, results and execution prerequisites are described in [physiological inference](physiology_20261017.md). The original 161-test and extension 54-test families remain separate, and no historical p/q field is overwritten.
+Supply controlled individual inputs separately, preserve actual observation times and define eligibility before fitting. Keep all individual outputs outside the public repository. Record the complete configuration and software environment in a new output directory. Historical private run inventories and recovery journals are not required by the supported library APIs.
 
-Use `CAPSAICIN_DATA_LOCATIONS` or ignored `config/local.json` for private location configuration. Exact identities and individual adjudications remain private. Generalized public configurations require locally frozen execution paths; original and public hashes and transformations are recorded in `docs/release_inventory.json`.
+The `logical-stream-v2` rule serializes the complete logical seed tuple as canonical UTF-8 JSON, includes its byte length, pads to 32-bit boundaries and supplies the resulting unsigned words to NumPy SeedSequence. Task identity and replicate number determine streams independently of scheduling order. This rule changes future draws relative to earlier software; it does not recreate historical replicate streams. Retained aggregate estimates are unchanged.
 
-## Verification and publication
+Recorded dependency pins describe the original environments. A different Python or numerical-library version must be reported as a different execution environment. Resource telemetry is optional for numerical workers; an unavailable monitor is labelled explicitly. Running the R subprocess resource guard requires psutil.
 
-Run `python3 -m unittest discover -s tests -v`, `python3 scripts/verify_repository_structure.py`, `python3 scripts/verify_public_release.py` and `python3 scripts/verify_public_history.py`, together with the pinned Ruff/Air checks in [code style](code_style.md).
+## Checks
 
-[Final document verification](document_alignment_verification_20261029.json) records the October 29 alignment and local checks. [Earlier integration verification](artifact_alignment_verification_20261027.json) retains the October 27 checks. Measurement and extraction parameters are summarized in the [measurement contract](measurement_contract.md). The unchanged ten native PNGs and 31 CSVs were compared directly with the final documents and accompanying materials; this review did not rerun inference. `docs/release_inventory.json` preserves source/public hashes. Prior October 5 and October 23 publication receipts are historical evidence for their own revisions. This change is prepared as a local commit for a user-managed push; it does not claim a new remote CI result or server-side historical erasure. [Data privacy](data_privacy.md) and [history cleanup](history_cleanup.md) retain the applicable scope.
+Run the synthetic tests and both current-tree publication checks from the README. Test fixtures must remain synthetic. Statistical equivalence checks compare numerical arrays, coefficients and output tables directly. No publication success is implied by a local test result.

@@ -183,7 +183,6 @@
   "MC_cluster_ARI_absolute": 0.005,
   "MC_cluster_proportion_absolute": 0.002,
   "MC_cluster_entropy_absolute": 0.002,
-  "MC_candidate_coefficient_absolute": null,
   "MC_candidate_SSE_absolute": 0.01,
   "quantile": "generalized_inverse_ceiling_Bp_ties_retained_exact_binomial_MC_ranks",
   "checkpoints": "fixed5000_cluster_and20000_candidate_final_only_no_effect_direction_or_significance_stopping",
@@ -191,7 +190,6 @@
   "driver_timeout_seconds": 86400,
   "per_task_threads": 1,
   "scientific_gates_changed": false,
-  "primary_physiology_p_q": null,
   "sealed_pool_opened": false,
   "not_in_this_batch": [
     "R_Gaussian_CAR1_GAMM_full_refits",
@@ -199,5 +197,6 @@
     "R_fdapace_sparse_FPCA",
     "real_Markov_derivative_phase_and_validated_physiology",
     "optional_U07_population_summary_bootstrap"
-  ]
+  ],
+  "random_stream_scheme": "logical-stream-v2"
 }

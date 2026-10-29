@@ -1,6 +1,5 @@
 {
   "result": {
-    "Hessian": null,
     "Hessian_note": "apVar is an approximate covariance, not the Hessian; no Hessian recomputation in this diagnostic phase",
     "R_version": "4.6.1",
     "VarCorr_columns": [
@@ -62,16 +61,9 @@
         "2.1531458818"
       ]
     ],
-    "apVar_Pars": null,
     "apVar_class": "character",
-    "apVar_covariance_condition_number": null,
-    "apVar_covariance_eigenvalues": null,
     "apVar_finite_matrix": false,
-    "apVar_matrix": null,
     "apVar_message": "Non-positive definite approximate variance-covariance",
-    "apVar_natural": null,
-    "apVar_parameter_names": null,
-    "apVar_positive_definite": null,
     "curve": [
       3.0090978458436886,
       3.7527624067990306,
@@ -87,9 +79,7 @@
     "edf": 5.755125639602504,
     "logLik": -3151.608540327322,
     "model_formula": "y ~ X - 1",
-    "optimizer_exit_code": null,
     "optimizer_exit_code_note": "Not retained in returned lme object; no fabricated code",
-    "optimizer_iterations": null,
     "residual_sigma": 2.1531458818211457,
     "rho": 0.8884077752604878,
     "rho_unconstrained": 2.074579467236426,

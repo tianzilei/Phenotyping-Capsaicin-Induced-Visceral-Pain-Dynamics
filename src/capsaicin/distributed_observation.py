@@ -1,8 +1,7 @@
 """Whole-person observation and paired fixed-OOF empirical resampling."""
 
 from __future__ import annotations
-
-import hashlib
+from .execution import memory_usage
 import math
 import numpy as np
 from scipy.stats import binom
@@ -37,63 +36,56 @@ def tokens_to_arrays(tokens):
                 if stopped:
                     raise ValueError("Numeric observation after termination")
                 values[i, j] = number
-    return values, events
+    return (values, events)
 
 
 def index_stream(seed, stage, replicate, n):
-    key = f"{seed}|{stage}|{replicate}|subject_multiplicity".encode()
-    h = hashlib.sha256(key).digest()
-    rng = np.random.default_rng(
-        np.random.SeedSequence(np.frombuffer(h, dtype="<u4").tolist())
-    )
+    from .random_streams import generator
+
+    rng = generator(seed, stage, replicate, "subject_multiplicity")
     index = rng.integers(0, n, size=n)
-    return np.bincount(index, minlength=n), hashlib.sha256(
-        index.astype("<i8").tobytes()
-    ).hexdigest()
+    return (np.bincount(index, minlength=n), index.tolist())
 
 
 def observation_statistics(values, events, weights):
     numeric = np.isfinite(values)
     denominator = weights @ numeric
-    # Zeros below are masked additive identities, never imputed observations.
     numerator = weights @ np.where(numeric, values, 0.0)
     means = np.divide(
         numerator, denominator, out=np.full(20, np.nan), where=denominator > 0
     )
     minutes = np.arange(1, 21)
     fractions = denominator / weights.sum()
-    e = (weights @ (events[:, 0, None] <= minutes)) / weights.sum()
-    t = (weights @ (events[:, 1, None] <= minutes)) / weights.sum()
+    e = weights @ (events[:, 0, None] <= minutes) / weights.sum()
+    t = weights @ (events[:, 1, None] <= minutes) / weights.sum()
     return np.r_[means, fractions, e, t]
 
 
 def prediction_statistics(prepared, weights, person_equal=False):
     counts, absolute, squared = prepared
     if person_equal:
-        mae = (weights @ (absolute / counts[:, None])) / weights.sum()
-        mse = (weights @ (squared / counts[:, None])) / weights.sum()
+        mae = weights @ (absolute / counts[:, None]) / weights.sum()
+        mse = weights @ (squared / counts[:, None]) / weights.sum()
     else:
         denominator = weights @ counts
-        mae = (weights @ absolute) / denominator
-        mse = (weights @ squared) / denominator
+        mae = weights @ absolute / denominator
+        mse = weights @ squared / denominator
     rmse = np.sqrt(mse)
     return np.r_[mae, rmse, mae[1:] - mae[0], rmse[1:] - rmse[0]]
 
 
 def bootstrap_batch(config, prepared, stage, start, stop):
-    from .distributed_development import digest
     import os
     import platform
     import time
-    import psutil
 
     started = time.monotonic()
-    rows, index_hashes = [], []
+    rows, draws = ([], [])
     n = len(prepared[0])
     with threadpool_limits(limits=1):
         for replicate in range(start, stop):
             w, h = index_stream(config["master_seed"], stage, replicate, n)
-            index_hashes.append(h)
+            draws.append(h)
             if stage == "VAS_observation":
                 row = observation_statistics(*prepared, w)
             else:
@@ -120,27 +112,23 @@ def bootstrap_batch(config, prepared, stage, start, stop):
         stop=stop,
         statistics=rows,
         point=[float(x) if np.isfinite(x) else None for x in point],
-        index_sha256=index_hashes,
-        config_sha256=digest(config),
-        input_sha256=config["prepared_input_sha256"][stage],
     )
     return dict(
         payload=payload,
-        payload_sha256=digest(payload),
         execution=dict(
             host=platform.node(),
             pid=os.getpid(),
             seconds=time.monotonic() - started,
-            rss_bytes=psutil.Process().memory_info().rss,
+            **memory_usage(),
         ),
     )
 
 
 def rank_interval(b, probability, gamma):
     """Exact binomial rank endpoints, including sentinel ranks 0 and B+1."""
-    if b < 1 or not 0 < probability < 1 or not 0 < gamma < 1:
+    if b < 1 or not 0 < probability < 1 or (not 0 < gamma < 1):
         raise ValueError("Invalid rank interval parameters")
-    low, high = 0, b
+    low, high = (0, b)
     while low < high:
         mid = (low + high + 1) // 2
         if binom.cdf(mid - 1, b, probability) <= gamma / 2:
@@ -148,14 +136,14 @@ def rank_interval(b, probability, gamma):
         else:
             high = mid - 1
     r = low
-    low, high = 1, b + 1
+    low, high = (1, b + 1)
     while low < high:
         mid = (low + high) // 2
         if binom.sf(mid - 1, b, probability) <= gamma / 2:
             high = mid
         else:
             low = mid + 1
-    return r, low
+    return (r, low)
 
 
 def endpoint(values, probability, gamma, known_bounds):
@@ -187,7 +175,7 @@ def summarize_column(values, config, bounds, unit):
     lower, upper = [endpoint(valid, p, gamma, bounds) for p in (0.025, 0.975)]
     width = upper["estimate"] - lower["estimate"]
     widths = [lower["MC_half_width"], upper["MC_half_width"]]
-    mc = max(widths) if all(x is not None for x in widths) else None
+    mc = max(widths) if all((x is not None for x in widths)) else None
     relative = mc is not None and (mc <= 0.02 * width if width else mc == 0)
     absolute = mc is not None and mc <= (0.002 if unit == "proportion" else 0.01)
     return dict(

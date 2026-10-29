@@ -1,9 +1,10 @@
 """Native Python stability and training repeats; physiological inference stays closed."""
 
 from __future__ import annotations
+from .execution import memory_usage
 import warnings
 import numpy as np
-from .distributed_development import canonical, digest
+from .distributed_development import canonical
 from .distributed_observation import index_stream
 from .distributed_prediction import seed
 from .distributed_cluster_legacy import dtw, pam, fuzzy
@@ -31,23 +32,21 @@ def assignments(x, fit, method, distances=None):
     from scipy.spatial.distance import cdist
 
     if method == "dtw_pam":
-        return np.argmin(distances, axis=1), None
+        return (np.argmin(distances, axis=1), None)
     distance = cdist(x, fit["centers"])
     if method == "fuzzy_cmeans":
-        u = np.maximum(distance, 1e-12) ** -2
+        u = np.maximum(distance, 1e-12) ** (-2)
         u /= u.sum(axis=1, keepdims=True)
-        return u.argmax(axis=1), u
-    return distance.argmin(axis=1), None
+        return (u.argmax(axis=1), u)
+    return (distance.argmin(axis=1), None)
 
 
-def distance_matrix(x, key):
-    if key not in _DISTANCES:
-        matrix = np.zeros((len(x), len(x)))
-        for i in range(len(x)):
-            for j in range(i):
-                matrix[i, j] = matrix[j, i] = dtw(x[i], x[j], radius=2)
-        _DISTANCES[key] = matrix
-    return _DISTANCES[key]
+def distance_matrix(x, key=None):
+    matrix = np.zeros((len(x), len(x)))
+    for i in range(len(x)):
+        for j in range(i):
+            matrix[i, j] = matrix[j, i] = dtw(x[i], x[j], radius=2)
+    return matrix
 
 
 def partition_metrics(reference, predicted, oob, k, u=None):
@@ -80,7 +79,7 @@ def partition_metrics(reference, predicted, oob, k, u=None):
         oob_fitted_classes=len(np.unique(predicted[oob])),
         collapsed_fit=len(np.unique(predicted)) < k,
     )
-    return [ari, ari_oob, matched, entropy, entropy_oob], flags
+    return ([ari, ari_oob, matched, entropy, entropy_oob], flags)
 
 
 def cluster_batch(config, data, job):
@@ -89,16 +88,10 @@ def cluster_batch(config, data, job):
     k = cell["k"]
     method = cell["method"]
     n = len(x)
-    distance_key = digest(
-        [config["prepared_input_sha256"][cell["data_key"]], config["dtw_radius"]]
-    )
-    dd = distance_matrix(x, distance_key) if method == "dtw_pam" else None
-    ref_key = digest([distance_key, method, k, config["reference_seed"]])
-    if ref_key not in _REFERENCES:
-        _REFERENCES[ref_key] = fit_partition(
-            x, method, k, config["reference_seed"], dd, full=True
-        )
-    reference = _REFERENCES[ref_key]["labels"]
+    dd = distance_matrix(x) if method == "dtw_pam" else None
+    reference = fit_partition(x, method, k, config["reference_seed"], dd, full=True)[
+        "labels"
+    ]
     rows = []
     indices = []
     flags = []
@@ -108,16 +101,7 @@ def cluster_batch(config, data, job):
             config["master_seed"], "cluster_" + cell["interval_key"], rep, n
         )
         take = np.repeat(np.arange(n), w)
-        # Preserve the logical draw order for initialization-dependent medoid methods.
-        key = f"{config['master_seed']}|cluster_{cell['interval_key']}|{rep}|subject_multiplicity".encode()
-        import hashlib
-
-        rng = np.random.default_rng(
-            np.random.SeedSequence(
-                np.frombuffer(hashlib.sha256(key).digest(), dtype="<u4").tolist()
-            )
-        )
-        take = rng.integers(0, n, size=n)
+        take = np.asarray(h, dtype=int)
         s = seed(config, "cluster_" + cell["id"], rep, "fit")
         try:
             fit = fit_partition(
@@ -148,7 +132,6 @@ def cluster_batch(config, data, job):
         indices.append(h)
     return dict(
         statistics=rows,
-        index_sha256=indices,
         flags=flags,
         failures=failures,
         reference_cluster_sizes=np.bincount(reference, minlength=k).tolist(),
@@ -158,7 +141,7 @@ def cluster_batch(config, data, job):
 def classifier_metrics(reference, predicted, k):
     from sklearn.metrics import f1_score
 
-    reference, predicted = np.asarray(reference), np.asarray(predicted)
+    reference, predicted = (np.asarray(reference), np.asarray(predicted))
     if not len(reference):
         return [np.nan] * 3
     present = np.unique(reference)
@@ -393,7 +376,7 @@ def candidate_batch(config, data, job):
                 if base is None:
                     raise ValueError("inestimable_base_design_rank")
                 reduction = base["sse"] - fit["sse"]
-                if reduction < -1e-7:
+                if reduction < -1e-07:
                     raise ValueError("nested_SSE_identity")
                 row.append(float(max(0.0, reduction)))
             rows.append(row)
@@ -401,7 +384,7 @@ def candidate_batch(config, data, job):
         except (ValueError, np.linalg.LinAlgError) as exc:
             rows.append([np.nan] * (cell["p"] + (cell["kind"] == "joint22")))
             failures.append(str(exc))
-    return dict(statistics=rows, index_sha256=indices, failures=failures)
+    return dict(statistics=rows, failures=failures)
 
 
 def execute(config, data, job):
@@ -409,7 +392,6 @@ def execute(config, data, job):
     import os
     import platform
     import time
-    import psutil
 
     started = time.monotonic()
     with warnings.catch_warnings(record=True) as caught, threadpool_limits(limits=1):
@@ -422,7 +404,6 @@ def execute(config, data, job):
         else:
             raise ValueError("Unknown native Python stage")
 
-    # JSON null preserves undefined values and failed replicates.
     def clean(x):
         if isinstance(x, (float, np.floating)):
             return float(x) if np.isfinite(x) else None
@@ -441,18 +422,15 @@ def execute(config, data, job):
             cell=job["cell"]["id"],
             job=job,
             result=result,
-            warnings=sorted(set(str(w.message) for w in caught)),
-            config_sha256=digest(config),
-            input_sha256=config["prepared_input_sha256"][job["cell"]["data_key"]],
+            warnings=sorted(set((str(w.message) for w in caught))),
         )
     )
     return dict(
         payload=payload,
-        payload_sha256=digest(payload),
         execution=dict(
             host=platform.node(),
             pid=os.getpid(),
             seconds=time.monotonic() - started,
-            rss_bytes=psutil.Process().memory_info().rss,
+            **memory_usage(),
         ),
     )

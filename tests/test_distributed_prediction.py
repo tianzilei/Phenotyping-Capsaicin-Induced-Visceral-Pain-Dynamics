@@ -21,15 +21,6 @@ class DistributedPredictionTests(unittest.TestCase):
                 / "config/dask_prediction_repeats_20261003_v1.json"
             ).read_text()
         )
-        cfg.update(
-            forest_trees=3,
-            ridge_alpha=[1],
-            forest_depth=[2],
-            prepared_input_sha256={
-                "next_rating": "synthetic",
-                "five_to_ten": "synthetic",
-            },
-        )
         return cfg
 
     def test_future_targets_do_not_bridge_gaps_or_impute_tails(self):

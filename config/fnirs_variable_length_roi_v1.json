@@ -19,12 +19,33 @@
   "input_semantics": {
     "signal": "vendor_processed_Hb TXT export",
     "channels": 42,
-    "variables": ["oxyHb", "deoxyHb", "totalHb"],
+    "variables": [
+      "oxyHb",
+      "deoxyHb",
+      "totalHb"
+    ],
     "absolute_units": "not declared; do not report as verified concentration",
     "filename_T_stage_exclusion": true
   },
   "windowing": {
-    "windows": [[1, 5], [6, 10], [11, 15], [16, 20]],
+    "windows": [
+      [
+        1,
+        5
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        16,
+        20
+      ]
+    ],
     "frame": "recording_relative protocol block; minute-scale approximate VAS alignment",
     "minimum_numeric_vas": 3,
     "minimum_valid_channel_fraction": 0.5,
@@ -34,14 +55,16 @@
   "roi": {
     "source_is_confirmed_by_user": true,
     "aggregation": "mean across mapped channels within ROI; Shimadzu TXT HbO/HbR/HbT triplets parsed as one channel",
-    "primary_outputs": ["HbO", "HbR"],
+    "primary_outputs": [
+      "HbO",
+      "HbR"
+    ],
     "all_mapped_channels_preserved": true
   },
   "inference": {
     "model": "subject fixed effects with categorical 5-minute block and ROI-specific exploratory association",
     "bootstrap_unit": "subject",
     "bootstrap_replicates": 2000,
-    "causal_interpretation": false,
-    "human_review": "review algorithmic QC, alignment, and ROI summaries before manuscript use"
+    "causal_interpretation": false
   }
 }

@@ -14,19 +14,23 @@ class ReferenceValidationTests(unittest.TestCase):
 
     def test_source_and_human_attestation_required(self):
         row = dict(
-            source_sha256="a",
+            source_record="synthetic_record",
             reviewer_id="synthetic",
             independence_attestation="independent_human_attested",
             adjudication_id="synthetic",
             annotation_version="fixture",
         )
-        self.assertTrue(reference_contract(row, "a")["admissible_contract"])
-        self.assertFalse(reference_contract(row, "b")["admissible_contract"])
+        self.assertTrue(
+            reference_contract(row, "synthetic_record")["admissible_contract"]
+        )
+        self.assertFalse(reference_contract(row, "other_record")["admissible_contract"])
         row["independence_attestation"] = "algorithm_generated"
-        self.assertFalse(reference_contract(row, "a")["admissible_contract"])
+        self.assertFalse(
+            reference_contract(row, "synthetic_record")["admissible_contract"]
+        )
 
     def test_match_is_one_to_one_and_minimizes_error(self):
-        r = match_events([1.0, 2.0], [0.90, 1.01, 2.02], 0.15)
+        r = match_events([1.0, 2.0], [0.9, 1.01, 2.02], 0.15)
         self.assertEqual(r["pairs"], [(0, 1), (1, 2)])
         self.assertEqual((r["TP"], r["FP"], r["FN"]), (2, 1, 0))
 

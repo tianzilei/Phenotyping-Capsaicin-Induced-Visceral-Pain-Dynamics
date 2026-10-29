@@ -1,14 +1,12 @@
 """Portable, isolated R subprocess execution; no implicit R or library discovery."""
 
 from __future__ import annotations
-import hashlib
 import json
 import os
 import subprocess
 import tempfile
 import time
 from pathlib import Path
-import psutil
 
 
 def canonical(value):
@@ -21,11 +19,9 @@ def canonical(value):
     ).encode("utf-8")
 
 
-def sha_bytes(value):
-    return hashlib.sha256(value).hexdigest()
-
-
 def run_process(command, *, cwd, env, timeout, rss_limit):
+    import psutil
+
     """Dask's worker RSS omits R children; bound the subprocess tree separately."""
     start = time.monotonic()
     process = subprocess.Popen(
@@ -45,7 +41,7 @@ def run_process(command, *, cwd, env, timeout, rss_limit):
             try:
                 parent = psutil.Process(process.pid)
                 processes = [parent, *parent.children(recursive=True)]
-                rss = sum(p.memory_info().rss for p in processes if p.is_running())
+                rss = sum((p.memory_info().rss for p in processes if p.is_running()))
                 peak = max(peak, rss)
                 if rss > rss_limit:
                     raise MemoryError("R subprocess tree exceeded frozen RSS limit")
@@ -76,7 +72,7 @@ def run_process(command, *, cwd, env, timeout, rss_limit):
         raise
 
 
-def execute_r(runtime, assets, expected_hashes, request):
+def execute_r(runtime, assets, request):
     """Infrastructure errors raise; estimator failures are recorded by the R backend.
 
     Requests contain explicit subject indices and logical seeds. Each invocation
@@ -86,13 +82,11 @@ def execute_r(runtime, assets, expected_hashes, request):
     library = Path(runtime["library"])
     if not rscript.is_file() or not library.is_dir():
         raise ValueError("Explicit Rscript or R library is unavailable")
-    if set(assets) != set(expected_hashes):
-        raise ValueError("R asset roster mismatch")
     for name, data in assets.items():
         if Path(name).is_absolute() or ".." in Path(name).parts:
             raise ValueError("Unsafe R asset path")
-        if sha_bytes(data) != expected_hashes[name]:
-            raise ValueError("R asset hash mismatch: " + name)
+    if "R/distributed_vas_backend.R" not in assets:
+        raise ValueError("Missing R backend asset")
     started = time.monotonic()
     with tempfile.TemporaryDirectory(prefix="capsaicin-r-") as tmp:
         directory = Path(tmp)
@@ -139,8 +133,6 @@ def execute_r(runtime, assets, expected_hashes, request):
             raise ValueError("R result task mismatch")
         return dict(
             task=request["task"],
-            request_sha256=sha_bytes(request_bytes),
-            assets_sha256=expected_hashes,
             result=result,
             stdout=process.stdout,
             stderr=process.stderr,

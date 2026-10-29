@@ -58,10 +58,12 @@ class PrivacyTests(unittest.TestCase):
         self.assertNotIn("Additional_symptoms", fields)
         self.assertEqual(self.source.read_bytes(), before)
         self.assertEqual(result["canonical_people"], 2)
-        self.assertEqual(os.stat(out).st_mode & 0o777, 0o700)
-        self.assertEqual(
-            os.stat(out / "identity_mapping_PRIVATE.csv").st_mode & 0o777, 0o600
-        )
+        if os.name != "nt":
+            self.assertEqual(os.stat(out).st_mode & 0o777, 0o700)
+        if os.name != "nt":
+            self.assertEqual(
+                os.stat(out / "identity_mapping_PRIVATE.csv").st_mode & 0o777, 0o600
+            )
 
     def test_refuses_overwrite_and_git_checkout(self):
         out = self.root / "existing"

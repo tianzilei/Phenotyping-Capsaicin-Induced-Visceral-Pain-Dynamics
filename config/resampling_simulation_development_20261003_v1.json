@@ -116,7 +116,6 @@
   "M_Markov": {
     "implementation_state": "real_regression_interface_only_new_synthetic_estimator_pending_implementation",
     "real_inference": false,
-    "clinical_VAS_thresholds": null,
     "input": "synthetic_named_states_S1_S2_S3_only_not_discretized_real_VAS",
     "estimands": [
       "adjacent_transition_kernel_for_generated_complete_process",
@@ -286,8 +285,8 @@
     "development_manifest_and_failures",
     "locked_independent_validation_config",
     "per_cell_results_and_MC_precision",
-    "all_failure_disposition",
-    "input_config_code_environment_output_hashes"
+    "all_failure_disposition"
   ],
-  "current_delivery": "configuration_and_design_only_no_fabricated_estimates"
+  "current_delivery": "configuration_and_design_only_no_fabricated_estimates",
+  "random_stream_scheme": "logical-stream-v2"
 }

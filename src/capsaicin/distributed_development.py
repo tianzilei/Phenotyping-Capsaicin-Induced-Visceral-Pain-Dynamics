@@ -1,15 +1,13 @@
 """Synthetic derivative development; no real data or scientific acceptance gate."""
 
 from __future__ import annotations
-
-import hashlib
+from .execution import memory_usage
 import importlib.metadata
 import json
 import os
 import platform
 import sys
 import time
-
 import numpy as np
 from threadpoolctl import threadpool_limits
 
@@ -20,21 +18,17 @@ def canonical(value):
     ).encode()
 
 
-def digest(value):
-    return hashlib.sha256(canonical(value)).hexdigest()
-
-
 def environment(lock_text):
     import psutil
     from packaging.requirements import Requirement
 
-    issues, packages = [], {}
+    issues, packages = ([], {})
     for raw in lock_text.splitlines():
         line = raw.strip().removesuffix("\\").strip()
         if not line or line.startswith(("#", "--")):
             continue
         requirement = Requirement(line)
-        if requirement.marker and not requirement.marker.evaluate():
+        if requirement.marker and (not requirement.marker.evaluate()):
             continue
         try:
             actual = importlib.metadata.version(requirement.name)
@@ -62,19 +56,16 @@ def environment(lock_text):
 
 def generate(config, cell, stage, replicate):
     seed_key = [config["master_seed"], "D", stage, cell["id"], replicate, "data"]
-    seed_hex = hashlib.sha256(canonical(seed_key)).hexdigest()
-    rng = np.random.default_rng(
-        np.random.SeedSequence(
-            np.frombuffer(bytes.fromhex(seed_hex), dtype="<u4").tolist()
-        )
-    )
-    n, end = cell["subjects"], cell["end_minute"]
+    from .random_streams import generator
+
+    rng = generator(*seed_key)
+    n, end = (cell["subjects"], cell["end_minute"])
     grid = np.arange(1.0, end + 1)
     scenario = cell["scenario"]
     if scenario == "flat_complete":
-        mu, analytic = np.full(end, 4.0), np.zeros(end)
+        mu, analytic = (np.full(end, 4.0), np.zeros(end))
     elif scenario == "linear_random_missing":
-        mu, analytic = 2 + 0.15 * grid, np.full(end, 0.15)
+        mu, analytic = (2 + 0.15 * grid, np.full(end, 0.15))
     elif scenario == "wave_dropout":
         mu = 4 + np.sin(2 * np.pi * (grid - 1) / 19)
         analytic = 2 * np.pi / 19 * np.cos(2 * np.pi * (grid - 1) / 19)
@@ -85,7 +76,7 @@ def generate(config, cell, stage, replicate):
         "heavy_tailed_complete",
         "informative_dropout",
     ):
-        mu, analytic = 2 + 0.5 * grid - 0.02 * grid**2, 0.5 - 0.04 * grid
+        mu, analytic = (2 + 0.5 * grid - 0.02 * grid**2, 0.5 - 0.04 * grid)
     else:
         raise ValueError(f"Unknown frozen scenario: {scenario}")
     dgp = config["dgp"]
@@ -119,26 +110,12 @@ def generate(config, cell, stage, replicate):
     times = np.broadcast_to(grid, (n, end))[keep]
     means = np.broadcast_to(mu, (n, end))[keep]
     values = y[keep]
-    h = hashlib.sha256()
-    for a in (ids, times, values, means):
-        h.update(canonical(list(a.shape)))
-        h.update(np.asarray(a, dtype="<f8").tobytes())
-    return dict(
-        ids=ids,
-        times=times,
-        values=values,
-        means=means,
-        analytic=analytic,
-        seed_hex=seed_hex,
-        input_sha256=h.hexdigest(),
-    )
+    return dict(ids=ids, times=times, values=values, means=means, analytic=analytic)
 
 
 def execute(config, cell, stage, replicate):
     """One logical replicate; expected fitting failures remain in the denominator."""
-    # Injected only into the immutable worker bundle; local tests use the real module.
     from .derivative_v5 import basis, fit_derivative
-    import psutil
 
     start = time.monotonic()
     with threadpool_limits(limits=1):
@@ -147,9 +124,6 @@ def execute(config, cell, stage, replicate):
             cell=cell["id"],
             stage=stage,
             replicate=replicate,
-            config_sha256=digest(config),
-            input_sha256=data["input_sha256"],
-            seed_hex=data["seed_hex"],
             success=False,
             projection_covered=False,
             analytic_covered=False,
@@ -178,9 +152,8 @@ def execute(config, cell, stage, replicate):
                 minimum_subjects=config["minimum_subjects"],
                 minimum_support=config["minimum_support"],
             )
-            # Equal observed rows, using the exact realized design of the estimator.
             truth = derivative @ np.linalg.solve(x.T @ x, x.T @ data["means"])
-            lower, upper = fit["lower"], fit["upper"]
+            lower, upper = (fit["lower"], fit["upper"])
             projected = (lower <= truth) & (truth <= upper)
             analytic = (lower <= data["analytic"]) & (data["analytic"] <= upper)
             result.update(
@@ -204,15 +177,13 @@ def execute(config, cell, stage, replicate):
             )
         except (ValueError, np.linalg.LinAlgError) as exc:
             result.update(failure_type=type(exc).__name__, failure_reason=str(exc))
-    # Host/runtime fields are deliberately outside the reproducible scientific payload.
     return dict(
         payload=result,
-        payload_sha256=digest(result),
         execution=dict(
             host=platform.node(),
             pid=os.getpid(),
             seconds=time.monotonic() - start,
-            rss_bytes=psutil.Process().memory_info().rss,
+            **memory_usage(),
         ),
     )
 

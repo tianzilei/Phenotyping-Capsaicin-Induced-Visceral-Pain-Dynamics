@@ -22,14 +22,12 @@ class DistributedVariabilityTests(unittest.TestCase):
                 / "config/dask_variability_bootstrap_20261003_v1.json"
             ).read_text()
         )
-        cfg["prepared_input_sha256"] = {"U06_variability": "synthetic_only"}
         return cfg
 
     def test_exact_piecewise_linear_burden_and_zero_area(self):
-        # y=t on [1,5]: area12, first moment124/3, late area8.
         area, centroid, fraction = burden_metrics(np.arange(1, 6), np.arange(1, 6))
         self.assertAlmostEqual(area, 12)
-        self.assertAlmostEqual(centroid, (124 / 3) / 12)
+        self.assertAlmostEqual(centroid, 124 / 3 / 12)
         self.assertAlmostEqual(fraction, 8 / 12)
         area, centroid, fraction = burden_metrics([1, 2, 3], [0, 0, 0])
         self.assertEqual(area, 0)
@@ -44,7 +42,7 @@ class DistributedVariabilityTests(unittest.TestCase):
         x = np.c_[np.ones(6), t - t.mean()]
         e = y - x @ np.linalg.lstsq(x, y, rcond=None)[0]
         variance, mssd, raw = residual_metrics(t, y, 1)
-        self.assertAlmostEqual(variance, (e @ e) / 4)
+        self.assertAlmostEqual(variance, e @ e / 4)
         self.assertAlmostEqual(mssd, np.mean(np.diff(e)[np.diff(t) == 1] ** 2))
         self.assertAlmostEqual(raw, np.mean([4, 1, 1, 4]))
         with self.assertRaises(ValueError):
@@ -97,7 +95,6 @@ class DistributedVariabilityTests(unittest.TestCase):
         a = bootstrap_batch(cfg, (matrix,), "U06_variability", 5, 10)["payload"]
         b = bootstrap_batch(cfg, (matrix,), "U06_variability", 0, 5)["payload"]
         self.assertEqual(full["statistics"], b["statistics"] + a["statistics"])
-        self.assertEqual(full["index_sha256"], b["index_sha256"] + a["index_sha256"])
 
 
 if __name__ == "__main__":

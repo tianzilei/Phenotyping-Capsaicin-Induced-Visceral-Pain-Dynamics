@@ -1,15 +1,10 @@
-"""Resolve exact source aliases through the verified local D: copy index."""
+"""Standalone numerical helpers; legacy private-run orchestration is excluded."""
 
-import sys
+from __future__ import annotations
 from pathlib import Path
+from capsaicin.data_locations import resolve_input
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / "src"))
-from capsaicin.data_locations import (
-    resolve_input,
-    execution_config,
-    relocation_evidence,
-)
 
 
 def resolve_external_path(value):

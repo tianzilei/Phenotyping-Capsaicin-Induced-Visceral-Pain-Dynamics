@@ -93,5 +93,6 @@
     "GAMM_FPCA_cluster_refits",
     "20_repeat_nested_CV",
     "Markov_null_phase_tests"
-  ]
+  ],
+  "random_stream_scheme": "logical-stream-v2"
 }

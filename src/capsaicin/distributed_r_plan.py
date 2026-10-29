@@ -1,6 +1,5 @@
 """Whole-person R task roster and explicit, batch-independent random streams."""
 
-import hashlib
 import numpy as np
 from sklearn.model_selection import KFold
 
@@ -16,19 +15,19 @@ def long_rows(values, rows, end):
 
 
 def r_seed(master, label, replicate):
-    value = hashlib.sha256(f"{master}|R_fit|{label}|{replicate}".encode()).digest()
-    return int.from_bytes(value[:8], "little") % (2**31 - 1)
+    from .random_streams import integer_seed
+
+    return integer_seed(master, "R_fit", label, replicate) % (2**31 - 1)
 
 
 def subject_indices(master, frame, replicate, n):
-    raw = hashlib.sha256(
-        f"{master}|R_{frame}|{replicate}|subject_multiplicity".encode()
-    ).digest()
-    rng = np.random.default_rng(
-        np.random.SeedSequence(np.frombuffer(raw, dtype="<u4").tolist())
+    from .random_streams import generator
+
+    return (
+        generator(master, "R_" + frame, replicate, "subject_multiplicity")
+        .integers(0, n, size=n)
+        .tolist()
     )
-    index = rng.integers(0, n, size=n)
-    return index.tolist(), hashlib.sha256(index.astype("<i8").tobytes()).hexdigest()
 
 
 def cells(config):
@@ -122,12 +121,11 @@ def request_for(config, data, job):
             )
             for rep in range(job["start"], job["stop"])
         ]
-        request["draws"] = [x[0] for x in draws]
+        request["draws"] = draws
         request["replicate_seeds"] = [
             r_seed(config["master_seed"], cell["id"], rep)
             for rep in range(job["start"], job["stop"])
         ]
-        request["indices_sha256"] = [x[1] for x in draws]
     elif stage == "reconstruction":
         cv = config["complete"]["reconstruction"]
         seed = r_seed(config["master_seed"], cell["frame"] + "_cv", job["repeat"])

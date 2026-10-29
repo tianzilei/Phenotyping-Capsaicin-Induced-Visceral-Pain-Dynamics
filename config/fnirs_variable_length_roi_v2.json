@@ -7,10 +7,59 @@
   "roi_mapping": "00_protocol/acquisition_qc_20260919/data/16_fnirs_channel_qc.csv",
   "dose_time_definition": "recording_start",
   "ttl_source": "all_available_record_level_ttl_logs",
-  "synchronization": {"method":"recording_relative_block_matching_with_ttl_retention","vas_resolution_minutes":1,"block_seconds":300,"minimum_numeric_vas":3,"no_vas_imputation":true,"no_cross_gap":true},
-  "input_semantics": {"signal":"vendor_processed_Hb TXT export","channels":42,"variables":["oxyHb","deoxyHb","totalHb"],"absolute_units":"not declared; report vendor processed Hb/relative signal only","filename_T_stage_exclusion":true},
-  "windowing": {"windows":[[1,5],[6,10],[11,15],[16,20]],"frame":"recording_relative; dose equals recording start by user definition","minimum_numeric_vas":3},
-  "roi": {"aggregation":"mean across mapped channels within ROI","primary_outputs":["HbO","HbR"],"all_mapped_channels_preserved":true},
-  "inference": {"model":"subject fixed effects with categorical 5-minute block","bootstrap_unit":"subject","bootstrap_replicates":2000,"causal_interpretation":false},
-  "identity_policy":"same-hash export duplicates collapse to one canonical path; different-hash multiple E records remain excluded pending identity adjudication"
+  "synchronization": {
+    "method": "recording_relative_block_matching_with_ttl_retention",
+    "vas_resolution_minutes": 1,
+    "block_seconds": 300,
+    "minimum_numeric_vas": 3,
+    "no_vas_imputation": true,
+    "no_cross_gap": true
+  },
+  "input_semantics": {
+    "signal": "vendor_processed_Hb TXT export",
+    "channels": 42,
+    "variables": [
+      "oxyHb",
+      "deoxyHb",
+      "totalHb"
+    ],
+    "absolute_units": "not declared; report vendor processed Hb/relative signal only",
+    "filename_T_stage_exclusion": true
+  },
+  "windowing": {
+    "windows": [
+      [
+        1,
+        5
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        11,
+        15
+      ],
+      [
+        16,
+        20
+      ]
+    ],
+    "frame": "recording_relative; dose equals recording start by user definition",
+    "minimum_numeric_vas": 3
+  },
+  "roi": {
+    "aggregation": "mean across mapped channels within ROI",
+    "primary_outputs": [
+      "HbO",
+      "HbR"
+    ],
+    "all_mapped_channels_preserved": true
+  },
+  "inference": {
+    "model": "subject fixed effects with categorical 5-minute block",
+    "bootstrap_unit": "subject",
+    "bootstrap_replicates": 2000,
+    "causal_interpretation": false
+  }
 }

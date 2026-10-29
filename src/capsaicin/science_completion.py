@@ -1,7 +1,6 @@
 """Observed-support finite changes and recorded-code descriptive proportions."""
 
 from __future__ import annotations
-import hashlib
 import io
 import json
 import numpy as np
@@ -36,7 +35,7 @@ def finite_design(values, hs=(1, 2, 5)):
                     people=int(valid.sum()),
                 )
             )
-    return np.asarray(support), np.asarray(change), metadata
+    return (np.asarray(support), np.asarray(change), metadata)
 
 
 def evaluate(stage, prepared, weights):
@@ -44,7 +43,7 @@ def evaluate(stage, prepared, weights):
     if (
         weights.ndim != 2
         or np.any(weights < 0)
-        or not np.all(weights == weights.astype(int))
+        or (not np.all(weights == weights.astype(int)))
     ):
         raise ValueError("Expected nonnegative whole-person multiplicities")
     if stage == "symptoms":
@@ -113,17 +112,12 @@ def execute_batch(config, prepared, stage, start, stop):
     begun = time.monotonic()
     n = config["expected_people"]
     weights = []
-    hasher = hashlib.sha256()
     with threadpool_limits(limits=1):
         for rep in range(start, stop):
-            raw = hashlib.sha256(
-                f"{config['master_seed']}|{stage}|{rep}".encode()
-            ).digest()
-            rng = np.random.default_rng(
-                np.random.SeedSequence(np.frombuffer(raw, dtype="<u4").tolist())
-            )
+            from .random_streams import generator
+
+            rng = generator(config["master_seed"], stage, rep)
             indices = rng.integers(0, n, n)
-            hasher.update(indices.astype("<i8").tobytes())
             weights.append(np.bincount(indices, minlength=n))
         values = evaluate(stage, prepared, np.asarray(weights))
     buffer = io.BytesIO()
@@ -133,10 +127,6 @@ def execute_batch(config, prepared, stage, start, stop):
         start=start,
         stop=stop,
         values_shape=list(values.shape),
-        logical_values_sha256=hashlib.sha256(
-            values.astype("<f8").tobytes()
-        ).hexdigest(),
-        subject_indices_sha256=hasher.hexdigest(),
         blob=buffer.getvalue(),
         host=platform.node(),
         seconds=time.monotonic() - begun,

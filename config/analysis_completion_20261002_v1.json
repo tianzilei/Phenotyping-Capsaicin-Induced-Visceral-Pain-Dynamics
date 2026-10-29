@@ -31,14 +31,28 @@
     "baseline_zero_imputation": false,
     "gap_bridging": false,
     "resampling_unit": "unique_person",
-    "sealed_reference_activation": false,
-    "primary_physiology_p_q": null
+    "sealed_reference_activation": false
   },
   "legacy_comparison": {
-    "intervals": [10, 20],
-    "k": [2, 3, 4, 5],
-    "methods": ["euclidean_kmeans", "dtw_pam", "fuzzy_cmeans"],
-    "transformations": ["raw", "within_person_centered"],
+    "intervals": [
+      10,
+      20
+    ],
+    "k": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "methods": [
+      "euclidean_kmeans",
+      "dtw_pam",
+      "fuzzy_cmeans"
+    ],
+    "transformations": [
+      "raw",
+      "within_person_centered"
+    ],
     "seed": 20260926,
     "kmeans_n_init": 20,
     "fuzzy_n_init": 5,
@@ -48,19 +62,60 @@
     "purpose": "compare coding and level sensitivity on identical complete-person subsets; persist fuzzy centers and memberships"
   },
   "post_stop_scenarios": {
-    "scale": [0, 10],
-    "minutes": [1, 20],
-    "constant_E_levels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-    "constant_T_levels": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "scale": [
+      0,
+      10
+    ],
+    "minutes": [
+      1,
+      20
+    ],
+    "constant_E_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "constant_T_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
     "other_missing": "retain 0-10 bounds",
     "estimand": "algebraic full-cohort sensitivity under hypothetical constant unobserved scores; no identified counterfactual or calibrated interval",
     "parameter_basis": "entire confirmed VAS scale on integer display grid; no clinical plausibility ranking or preferred scenario",
     "output": "aggregate curves and trapezoidal area bounds only; no individual imputation"
   },
   "shapelet_recovery": {
-    "intervals": [10, 20],
-    "prefixes": [5, 8],
-    "k": [2, 3, 4, 5],
+    "intervals": [
+      10,
+      20
+    ],
+    "prefixes": [
+      5,
+      8
+    ],
+    "k": [
+      2,
+      3,
+      4,
+      5
+    ],
     "folds": 5,
     "split_seed": 20260926,
     "partition_seed": 20260926,
@@ -75,16 +130,45 @@
     "role": "internal retrospective partition recovery; no clinical labels or validated phenotype"
   },
   "baseline_recovery": {
-    "intervals": [10, 20],
-    "k": [2, 3, 4, 5],
+    "intervals": [
+      10,
+      20
+    ],
+    "k": [
+      2,
+      3,
+      4,
+      5
+    ],
     "folds": 5,
     "split_seed": 20260926,
     "partition_seed": 20260926,
     "pool": "development only for every baseline comparison",
     "minimum_training_members_per_class": 2,
-    "numeric_questionnaire": ["Age", "BMI", "CCEI", "AES"],
-    "categorical_questionnaire": ["Sex", "Alcohol_consumption", "Spicy_food_frequency", "Usual_spiciness_level", "Spicy_food_preference", "Max_tolerable_spiciness", "Recent_spicy_intake_24h", "Baseline_GI_symptoms"],
-    "rest_features": ["candidate_hr_bpm", "candidate_rmssd_ms", "egg_candidate_peak_cpm", "egg_slow_power_ratio", "egg_spectral_entropy", "egg_slow_coherence"],
+    "numeric_questionnaire": [
+      "Age",
+      "BMI",
+      "CCEI",
+      "AES"
+    ],
+    "categorical_questionnaire": [
+      "Sex",
+      "Alcohol_consumption",
+      "Spicy_food_frequency",
+      "Usual_spiciness_level",
+      "Spicy_food_preference",
+      "Max_tolerable_spiciness",
+      "Recent_spicy_intake_24h",
+      "Baseline_GI_symptoms"
+    ],
+    "rest_features": [
+      "candidate_hr_bpm",
+      "candidate_rmssd_ms",
+      "egg_candidate_peak_cpm",
+      "egg_slow_power_ratio",
+      "egg_spectral_entropy",
+      "egg_slow_coherence"
+    ],
     "preprocessing": "fit median/mode imputation, category encoding and standardization on training persons only",
     "classifier": "logistic C=1 with training-only preprocessing; majority baseline",
     "reference": "training-defined full-interval partition; not clinical truth",
@@ -103,7 +187,11 @@
     "hb_scale": "within-person block SD; not absolute concentration",
     "egg_welch_seconds": 128,
     "egg_channel_aggregation": "two available channels with at least two retained continuous spectral segments each; equal mean of each descriptor",
-    "egg_predictors": ["peak_cpm", "log_power_1_9", "spectral_fraction_2_4"],
+    "egg_predictors": [
+      "peak_cpm",
+      "log_power_1_9",
+      "spectral_fraction_2_4"
+    ],
     "egg_predictor_role": "spectral argmax including boundary maxima, log broad-band power and neutral band ratio; not accepted gastric rhythm",
     "egg_hb_model": "Hb within-person standardized candidate on each EGG descriptor plus person and categorical block fixed effects",
     "egg_hb_targets": 66,

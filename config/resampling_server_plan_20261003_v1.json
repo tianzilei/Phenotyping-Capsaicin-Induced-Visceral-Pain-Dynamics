@@ -2,15 +2,11 @@
   "version": "resampling_server_plan_20261003_v1",
   "status": "resource_and_precision_proposal_not_activated",
   "study_role": "results_informed_exploratory_planning_not_preregistered",
-  "requested_scope": "existing_manuscript_and_supplement_stability_plus_derivative_Markov_and_valid_null_synthetic_development",
   "server": {
-    "connection": null,
-    "specifications": null,
     "execution_started": false,
     "benchmark_required": true
   },
   "scientific_estimator_parameters_changed": false,
-  "primary_physiology_p_q": null,
   "sealed_pool_opened": false,
   "real_state_inference_enabled": false,
   "real_phase_inference_enabled": false,
@@ -90,7 +86,6 @@
     ],
     "depends_on_worker_count": false,
     "depends_on_execution_order": false,
-    "python_builtin_hash_forbidden": true,
     "cross_hardware_bitwise_guarantee": false
   },
   "environment": {
@@ -98,17 +93,14 @@
     "RF_n_jobs_per_worker": 1,
     "container_or_lock_required": true,
     "retain_old_environment": true,
-    "Windows_Rscript_paths_need_portability_adapter": true,
-    "code_revision_plus_working_tree_snapshot_required": true
+    "Windows_Rscript_paths_need_portability_adapter": true
   },
   "module_matrix": [
     {
       "module_id": "U00",
       "module": "队列与来源",
       "method": "deterministic_audit",
-      "proposed_replicates": null,
-      "permutation_policy": "not_required",
-      "scope": "source_identity_hash_audit"
+      "permutation_policy": "not_required"
     },
     {
       "module_id": "U01",
@@ -194,7 +186,6 @@
       "module_id": "U11",
       "module": "基线/静息分类",
       "method": "training_person_pipeline_repeat_20",
-      "proposed_replicates": null,
       "permutation_policy": "not_activated",
       "scope": "eligible_development_tasks_only_sealed_closed"
     },
@@ -218,7 +209,6 @@
       "module_id": "U14",
       "module": "安全中止",
       "method": "source_audit",
-      "proposed_replicates": null,
       "permutation_policy": "not_activated",
       "scope": "unknown_not_zero"
     },
@@ -242,7 +232,6 @@
       "module_id": "U17",
       "module": "相位/相干/方向性",
       "method": "synthetic_stress_design_only",
-      "proposed_replicates": null,
       "permutation_policy": "real_surrogates_disabled",
       "scope": "phase_timing_duration_reference_gates"
     }

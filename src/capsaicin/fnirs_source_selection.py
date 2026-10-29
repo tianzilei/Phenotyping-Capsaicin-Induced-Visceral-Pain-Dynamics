@@ -1,6 +1,5 @@
 """User-authorized fNIRS source choices with strict dates and unique ownership."""
 
-import hashlib
 import json
 from datetime import datetime
 from pathlib import Path
@@ -17,20 +16,15 @@ def measured_date(path):
 
 
 def choose_latest(candidates):
-    """Each candidate must carry an ISO acquisition datetime and verified SHA256."""
+    """Each candidate must carry an acquisition datetime and explicit local path."""
     if not candidates:
         raise ValueError("Empty candidate set")
     dated = [(datetime.fromisoformat(r["measured_date"]), r) for r in candidates]
-    newest = max(date for date, _ in dated)
+    newest = max((date for date, _ in dated))
     winners = [r for date, r in dated if date == newest]
-    if len({r["sha256"] for r in winners}) != 1:
+    if len({str(Path(r["local_path"]).resolve()).casefold() for r in winners}) != 1:
         raise ValueError("Different files have tied acquisition dates")
     return winners[0]
-
-
-def sha(path):
-    with Path(path).open("rb") as stream:
-        return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
 def adjudicate_mapping(rows, pointer=None):
@@ -41,18 +35,16 @@ def adjudicate_mapping(rows, pointer=None):
         if pointer
         else ROOT / "config/fnirs_source_adjudication_active.json"
     )
-    if cp is not None and not cp.exists():
-        return rows, [], []
+    if cp is not None and (not cp.exists()):
+        return (rows, [], [])
     cfg = (
         pointer
         if isinstance(pointer, dict)
         else json.loads(cp.read_text(encoding="utf-8"))
     )
     if not cfg.get("active"):
-        return rows, [], []
+        return (rows, [], [])
     rp = local_path(cfg["registry"])
-    if sha(rp) != cfg["registry_sha256"]:
-        raise ValueError("fNIRS decision registry changed")
     registry = json.loads(rp.read_text(encoding="utf-8"))
     rows = list(rows)
     existing = {
@@ -74,8 +66,6 @@ def adjudicate_mapping(rows, pointer=None):
                 path_key(resolve_input(row["path"]))
             )
             if ownership:
-                if sha(resolve_input(row["path"])) != ownership["sha256"]:
-                    raise ValueError("Owned Hb changed")
                 if sid != ownership["owner"]:
                     audit.append(
                         dict(
@@ -99,10 +89,6 @@ def adjudicate_mapping(rows, pointer=None):
         )
         if candidate is None:
             raise ValueError("Unadjudicated candidate added for a decided subject")
-        if key not in cache:
-            cache[key] = sha(local_path(candidate["local_path"]))
-        if cache[key] != candidate["sha256"]:
-            raise ValueError("Adjudicated signal changed")
         selected = key == path_key(local_path(decision["selected"]["local_path"]))
         accepted = selected and decision["analysis_status"] == "accepted_unique_owner"
         ownership = registry.get("file_owners", {}).get(key)
@@ -115,7 +101,6 @@ def adjudicate_mapping(rows, pointer=None):
                 subject_id=sid,
                 path=row["path"],
                 local_path=candidate["local_path"],
-                sha256=candidate["sha256"],
                 measured_date=candidate["measured_date"],
                 selected_source=selected,
                 selection_policy=registry.get("version", ""),
@@ -125,4 +110,4 @@ def adjudicate_mapping(rows, pointer=None):
                 else decision["analysis_status"],
             )
         )
-    return result, audit, ([cp] if cp is not None else []) + [rp, Path(__file__)]
+    return (result, audit, ([cp] if cp is not None else []) + [rp, Path(__file__)])

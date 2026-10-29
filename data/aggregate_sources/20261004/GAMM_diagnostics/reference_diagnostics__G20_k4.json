@@ -1,6 +1,5 @@
 {
   "result": {
-    "Hessian": null,
     "Hessian_note": "apVar is an approximate covariance, not the Hessian; no Hessian recomputation in this diagnostic phase",
     "R_version": "4.6.1",
     "VarCorr_columns": [
@@ -94,7 +93,6 @@
         0.0009123346951280173
       ]
     ],
-    "apVar_message": null,
     "apVar_natural": true,
     "apVar_parameter_names": [
       "reStruct.subject_id",
@@ -128,9 +126,7 @@
     "edf": 3.957630948234783,
     "logLik": -4914.562804385294,
     "model_formula": "y ~ X - 1",
-    "optimizer_exit_code": null,
     "optimizer_exit_code_note": "Not retained in returned lme object; no fabricated code",
-    "optimizer_iterations": null,
     "residual_sigma": 2.1573752374643487,
     "rho": 0.894389713495235,
     "rho_unconstrained": 2.136385824712,

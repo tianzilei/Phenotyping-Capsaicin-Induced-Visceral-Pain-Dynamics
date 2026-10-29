@@ -6,13 +6,11 @@ existing output directories are refused. All presentation settings live here.
 
 from pathlib import Path
 import argparse
-import hashlib
 import json
 import shutil
 import sys
 import textwrap
 import xml.etree.ElementTree as ET
-
 import numpy as np
 import pandas as pd
 import matplotlib
@@ -24,7 +22,6 @@ from matplotlib.patches import Patch, Rectangle
 from matplotlib.font_manager import findfont, FontProperties
 from PIL import Image
 
-# Configuration: physical width matches the existing Word image width (6.5 in).
 WIDTH_MM = 165.1
 DPI = 600
 FONT = "DejaVu Sans"
@@ -68,10 +65,6 @@ STYLE = {
     "text.color": "#222222",
     "axes.labelcolor": "#222222",
 }
-
-
-def sha(p):
-    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 
 
 def dump(p, obj):
@@ -166,9 +159,9 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
     (output / "qa").mkdir()
     font_path = findfont(FontProperties(family=FONT), fallback_to_default=False)
     before = {
-        p.name: sha(p)
+        p.name: p.read_bytes()
         for p in data.iterdir()
-        if p.is_file() and not p.name.startswith("._")
+        if p.is_file() and (not p.name.startswith("._"))
     }
     tables = {}
 
@@ -192,7 +185,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             ]:
                 lo, hi = sorted(limits)
                 unused_ticks.update(
-                    id(t) for v, t in zip(values, texts) if not lo <= v <= hi
+                    (id(t) for v, t in zip(values, texts) if not lo <= v <= hi)
                 )
         for t in f.findobj(matplotlib.text.Text):
             if not t.get_visible() or not t.get_text() or id(t) in unused_ticks:
@@ -202,7 +195,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 box.x0 < -0.5
                 or box.y0 < -0.5
                 or box.x1 > f.bbox.width + 0.5
-                or box.y1 > f.bbox.height + 0.5
+                or (box.y1 > f.bbox.height + 0.5)
             ):
                 outside.append(t.get_text())
         text_bounds.append({"figure": name, "outside_canvas_text": outside})
@@ -210,12 +203,16 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             f.savefig(
                 output / "figures" / f"{name}.{suffix}", dpi=DPI, bbox_inches=None
             )
-        # Rendered QA variants remain separate from the publication exports.
+            if suffix == "svg":
+                from .vector_ids import normalize
+
+                vector = output / "figures" / f"{name}.svg"
+                vector.write_text(
+                    normalize(vector.read_text(encoding="utf-8")), encoding="utf-8"
+                )
         preview = Image.open(output / "figures" / f"{name}.png").convert("RGB")
         preview.thumbnail((1300, 1800))
         rgb = np.asarray(preview) / 255.0
-        # Machado severity-1 matrices act on linear RGB, then return to sRGB.
-        # Explicit component sums avoid local BLAS warnings in QA transforms.
         linear = np.where(rgb <= 0.04045, rgb / 12.92, ((rgb + 0.055) / 1.055) ** 2.4)
         gray = (
             0.2126 * linear[:, :, 0]
@@ -229,7 +226,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 [
                     [0.367322, 0.860646, -0.227968],
                     [0.280085, 0.672501, 0.047413],
-                    [-0.011820, 0.042940, 0.968881],
+                    [-0.01182, 0.04294, 0.968881],
                 ],
             ),
             (
@@ -243,7 +240,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
         ]:
             values = np.stack(
                 [
-                    sum(matrix[c][k] * linear[:, :, k] for k in range(3))
+                    sum((matrix[c][k] * linear[:, :, k] for k in range(3)))
                     for c in range(3)
                 ],
                 axis=2,
@@ -275,9 +272,11 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                     root.findall(".//{http://www.w3.org/2000/svg}image")
                 ),
                 "min_font_pt": min(
-                    t.get_fontsize()
-                    for t in f.findobj(matplotlib.text.Text)
-                    if t.get_visible() and t.get_text()
+                    (
+                        t.get_fontsize()
+                        for t in f.findobj(matplotlib.text.Text)
+                        if t.get_visible() and t.get_text()
+                    )
                 ),
                 "font": FONT,
             }
@@ -343,7 +342,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             fontsize=7.5,
         )
         save(f, figure_names[0])
-
         f = canvas(175)
         g = f.add_gridspec(3, 3, height_ratios=[1, 1.15, 1])
         a = f.add_subplot(g[0, :])
@@ -432,7 +430,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 fontsize=7.5,
             )
         save(f, figure_names[1])
-
         s = table("TableS2_recorded_codes_all139")
         margins = {k: s[s.kind == k].copy() for k in ["symptom", "region"]}
         f = canvas(214)
@@ -470,14 +467,13 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             a.set_xticks([0, 25, 50, 75, 100])
         a = f.add_subplot(g[2])
         pairs = s[s.kind == "symptom_region_pair"].set_index("code")
-        sm, rg = margins["symptom"], margins["region"]
+        sm, rg = (margins["symptom"], margins["region"])
         count = np.array(
             [
                 [int(pairs.loc[f"{sc}_{rc}", "count"]) for rc in rg.code]
                 for sc in sm.code
             ]
         )
-        # Editable vector cells: no rasterized heatmap inside SVG/PDF.
         cmap = plt.get_cmap("Blues")
         vmax = count.max() / 204 * 100
         for (i, j), n in np.ndenumerate(count):
@@ -500,7 +496,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
         a.set_xlim(-0.5, 8.5)
         a.set_ylim(11.5, -0.5)
         a.set_yticks(range(12), [f"{r.code}  {r.label}" for r in sm.itertuples()])
-        # Region codes on the heatmap refer to fully spelled-out labels in B.
         a.set_xticks(range(9), rg.code.tolist())
         a.set_xlabel("Region code (defined in B)")
         a.set_title("C  Symptom–region co-occurrence (n = 204)", pad=8)
@@ -518,7 +513,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
         cb.solids.set_rasterized(False)
         cb.solids.set_edgecolor("face")
         save(f, figure_names[2])
-
         fp = table("TableS4_FPCA_all24_diagnostics")
         basis = table("TableS14_FPCA_FVE_and_basis")
         f = canvas(182)
@@ -560,7 +554,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 chr(67 + j),
                 f"Component functions, 1–{end} min",
                 "Minute",
-                r"Basis (min$^{-1/2}$)",
+                "Basis (min$^{-1/2}$)",
             )
             axes[1, j].axhline(0, color="#555555", lw=0.6)
             axes[1, j].set_ylim(-0.65, 1.02)
@@ -596,7 +590,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             a.set_xticks([1, 5, 10])
             legend(a, loc="upper right")
         save(f, figure_names[3])
-
         rep = table("TableS13_prediction_all20_repeats")
         f = canvas(155)
         axes = f.subplots(2, 2)
@@ -615,7 +608,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 )
                 labels = []
                 for i, (metric, model) in enumerate(
-                    (m, mo) for m in ["MAE", "RMSE"] for mo in models
+                    ((m, mo) for m in ["MAE", "RMSE"] for mo in models)
                 ):
                     name = metric + "_" + model + ("_minus_last_value" if diff else "")
                     d = rep[
@@ -643,7 +636,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 axis(
                     a,
                     chr(65 + 2 * j + int(diff)),
-                    ("Paired differences" if diff else f"{title} (n = {n})"),
+                    "Paired differences" if diff else f"{title} (n = {n})",
                     "Model − last value (score)" if diff else "Error (score)",
                 )
                 if diff:
@@ -651,7 +644,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 else:
                     a.set_xlim((0.55, 1.02) if j == 0 else (1.15, 2.3))
         save(f, figure_names[4])
-
         f = canvas(148)
         axes = f.subplots(2, 2)
         for j, metric in enumerate(
@@ -659,9 +651,11 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
         ):
             if metric not in fp.metric.unique():
                 metric = next(
-                    m
-                    for m in fp.metric.unique()
-                    if ("angle" in m if j == 0 else "inner" in m)
+                    (
+                        m
+                        for m in fp.metric.unique()
+                        if ("angle" in m if j == 0 else "inner" in m)
+                    )
                 )
             a = axes[0, j]
             for k, cell in enumerate(["F10", "F20"]):
@@ -687,7 +681,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                     color=COLORS[k],
                     marker=MARKERS[k],
                     ms=3,
-                    label=f"1–{10 if k == 0 else 20} min",
+                    label=f"1–{(10 if k == 0 else 20)} min",
                 )
             axis(
                 a,
@@ -710,7 +704,7 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             axis(
                 a,
                 chr(67 + j),
-                f"Complete 1–{10 if j == 0 else 20} min",
+                f"Complete 1–{(10 if j == 0 else 20)} min",
                 "Components",
                 "Paired RMSE change (score)",
             )
@@ -718,10 +712,8 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             a.set_xticks(range(5))
             a.set_ylim(-0.9, 0.8)
         save(f, figure_names[5])
-
         diagnostics = json.loads((data / "GAMM_reference_curves.json").read_text())
         diag = table("TableS16_GAMM_reference_diagnostics")
-        # Labels explain the existing configurations without changing their cells.
         labels = {
             "G10_common_k6": "Observed 10 min",
             "G10_complete_k6": "Complete 10 min",
@@ -779,12 +771,11 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             else:
                 a.text(1200, i, "Nonfinite", va="center", fontsize=7.5, color="#555555")
         a.set_xscale("log")
-        a.set_xlim(1e3, 1e7)
+        a.set_xlim(1000.0, 10000000.0)
         a.set_ylim(-0.5, len(diag) + 0.2)
         a.set_yticks(yy, [labels[x] for x in diag.cell])
         axis(a, "D", "Covariance conditioning", "Condition number (log scale)")
         save(f, figure_names[6])
-
         cand = table("TableS9_candidate_summary").drop_duplicates("cell")
         ct = table("TableS18_candidate_support_diagnostics")
         kinds = ["planned24", "joint22", "egg66"]
@@ -845,7 +836,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             a.text(i, v + 2, str(int(v)), ha="center", fontsize=7.5)
         a.set_ylim(0, 140)
         save(f, figure_names[7])
-
         bounds = table("bounded_means")
         mc = table("TableS6_all1255_MC_statistics")
         group_labels = {
@@ -910,7 +900,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
         axis(a, "B", "Precision inventory: 1,255 statistics", "Statistics")
         legend(a, ncol=2, loc="lower right")
         save(f, figure_names[8])
-
         recovery = table("TableS10_partition_recovery_and_baseline")
         f = canvas(205)
         g = f.add_gridspec(2, 1, height_ratios=[1.2, 1])
@@ -945,7 +934,6 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
                 if j == 0
                 else ["Questionnaire", "+ Rest candidates", "Training majority"]
             )
-            # Rotating 24 dense cell IDs is replaced by k/p labels grouped by interval.
             for mi, model in enumerate(model_names):
                 for i, (cell, prefix) in enumerate(keys):
                     dd = rows[(rows.cell == cell) & (rows.model == model)]
@@ -979,9 +967,11 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             a.set_xlim(-0.7, len(keys) - 0.3)
             a.set_ylim(-0.15, 1.15)
             boundary = next(
-                i
-                for i, k in enumerate(keys)
-                if k[0].startswith("R20" if j == 0 else "B20")
+                (
+                    i
+                    for i, k in enumerate(keys)
+                    if k[0].startswith("R20" if j == 0 else "B20")
+                )
             )
             a.axvline(boundary - 0.5, color="#999999", lw=0.6, ls=":")
             for lo, hi, txt in [
@@ -1002,34 +992,25 @@ def build(data, output, *, names=None, physiological_label="Earlier"):
             )
             legend(a, ncol=3, loc="upper center", bbox_to_anchor=(0.5, 1.04))
         save(f, figure_names[9])
-
     assert before == {
-        p.name: sha(p)
+        p.name: p.read_bytes()
         for p in data.iterdir()
-        if p.is_file() and not p.name.startswith("._")
+        if p.is_file() and (not p.name.startswith("._"))
     }
     dump(output / "metadata.json", metadata)
     dump(output / "qa/text_bounds.json", text_bounds)
     dump(
         output / "render_manifest.json",
         {
-            "inputs_sha256": before,
-            "script_sha256": sha(__file__),
             "backend": "python",
             "python": sys.version,
             "numpy": np.__version__,
             "pandas": pd.__version__,
             "matplotlib": matplotlib.__version__,
-            "font_file_sha256": sha(font_path),
             "style": STYLE,
             "new_inference": False,
             "new_exclusions": False,
             "seed": "No random generation; deterministic display offsets",
-            "outputs_sha256": {
-                str(p.relative_to(output)): sha(p)
-                for p in output.rglob("*")
-                if p.is_file() and not p.name.startswith("._")
-            },
         },
     )
     print(

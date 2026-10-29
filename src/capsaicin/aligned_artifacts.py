@@ -4,8 +4,7 @@ import json
 from pathlib import Path
 import shutil
 import tempfile
-
-from .final_artifacts import load, sha, verify_inputs
+from .final_artifacts import load, verify_inputs
 
 
 def export_tables(root, config, destination):
@@ -50,10 +49,7 @@ def build(root, config_path, output):
         ]:
             shutil.copyfile(root / config["plot_inputs"] / name, stage / name)
         render(
-            stage,
-            output,
-            names=config["figure_names"],
-            physiological_label="Sensation",
+            stage, output, names=config["figure_names"], physiological_label="Sensation"
         )
     export_tables(root, config, output / "tables")
     metadata = load(output / "metadata.json")
@@ -64,7 +60,6 @@ def build(root, config_path, output):
             row["png_pixels"] = list(native.size)
             row["png_dpi"] = list(native.info.get("dpi", ()))
         row["png_origin"] = "reviewed native document image"
-        row["png_sha256"] = sha(source)
     metadata.sort(key=lambda x: ("S" in x["id"].split("_")[0], x["id"]))
     (output / "metadata.json").write_text(json.dumps(metadata, indent=2) + "\n")
     index = [
@@ -102,16 +97,6 @@ def build(root, config_path, output):
     )
     (output / "README.md").write_text("\n".join(lines))
     render_record = load(output / "render_manifest.json")
-    render_record["native_pngs_sha256"] = {
-        name: sha(root / source) for name, source in config["native_pngs"].items()
-    }
-    render_record["outputs_sha256"] = {
-        str(p.relative_to(output)): sha(p)
-        for p in output.rglob("*")
-        if p.is_file()
-        and not p.name.startswith("._")
-        and p.name != "render_manifest.json"
-    }
     (output / "render_manifest.json").write_text(
         json.dumps(render_record, indent=2) + "\n"
     )
@@ -120,26 +105,12 @@ def build(root, config_path, output):
         "version": config["version"],
         "target_revision": config["target_revision"],
         "analysis_as_of": config["analysis_as_of"],
-        "configuration_sha256": sha(config_path),
-        "input_sha256": config["input_sha256"],
-        "code_sha256": {
-            name: sha(root / name)
-            for name in [
-                "src/capsaicin/aligned_artifacts.py",
-                "src/capsaicin/final_figures.py",
-            ]
-        },
         "main_figures": 4,
         "supplement_figures": 6,
         "main_tables": 2,
         "supplement_tables": 29,
         "new_inference": False,
         "individual_records_used": False,
-        "outputs_sha256": {
-            str(p.relative_to(output)): sha(p)
-            for p in output.rglob("*")
-            if p.is_file() and not p.name.startswith("._")
-        },
     }
     (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
     return manifest

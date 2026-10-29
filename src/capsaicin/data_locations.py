@@ -18,13 +18,11 @@ class DataLocator:
         self.config = (
             config
             if config is not None
-            else (
-                os.environ.get("CAPSAICIN_DATA_LOCATIONS")
-                or (
-                    ROOT / "config/local.json"
-                    if (ROOT / "config/local.json").exists()
-                    else ROOT / "config/data_locations.json"
-                )
+            else os.environ.get("CAPSAICIN_DATA_LOCATIONS")
+            or (
+                ROOT / "config/local.json"
+                if (ROOT / "config/local.json").exists()
+                else ROOT / "config/data_locations.json"
             )
         )
         self.settings = (
@@ -70,8 +68,7 @@ class DataLocator:
                 if ".." in suffix.split("/"):
                     raise ValueError("Parent traversal in relocated path")
                 return self.root / suffix
-        if re.match(r"^[A-Za-z]:/", raw) and not Path(raw).is_absolute():
-            # External source names may be resolved only by the exact data index.
+        if re.match("^[A-Za-z]:/", raw) and (not Path(raw).is_absolute()):
             return Path(raw)
         return Path(value)
 
@@ -82,8 +79,10 @@ class DataLocator:
         try:
             suffix = absolute.relative_to(self.root).as_posix()
             keys.extend(
-                path_key(str(old).rstrip("/\\") + "/" + suffix)
-                for old in self.settings.get("repository_root_aliases", [])
+                (
+                    path_key(str(old).rstrip("/\\") + "/" + suffix)
+                    for old in self.settings.get("repository_root_aliases", [])
+                )
             )
         except ValueError:
             pass
@@ -122,7 +121,7 @@ def local_path(value):
 
 
 def relocation_evidence():
-    """Files to hash alongside analysis code in future run manifests."""
+    """Local files needed alongside analysis code."""
     loc = locator()
     files = [Path(__file__)]
     if Path(loc.config).is_file():

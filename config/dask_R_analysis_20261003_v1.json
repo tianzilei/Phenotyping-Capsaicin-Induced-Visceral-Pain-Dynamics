@@ -37,7 +37,6 @@
     "replacement_failed_replicates": false,
     "scientific_gates_changed": false,
     "sealed_pool_opened": false,
-    "primary_physiology_p_q": null,
     "derivative_inference_enabled": false
   },
   "sequence": [
@@ -215,8 +214,6 @@
     "no_automatic_extension": true
   },
   "RNG": {
-    "indices": "SHA256(master|R_frame|replicate|subject_multiplicity), numpy SeedSequence PCG64 index draws; explicit zero-based subject rows passed to R",
-    "reference_and_fit": "SHA256 logical module/cell/replicate folded to R signed 31-bit seed; per-replicate reset independent of batch or worker",
     "R_kind": [
       "Mersenne-Twister",
       "Inversion",
@@ -230,5 +227,6 @@
     "real_Markov_or_phase",
     "CR2_or_null_calibration",
     "sealed_pool_classification"
-  ]
+  ],
+  "random_stream_scheme": "logical-stream-v2"
 }

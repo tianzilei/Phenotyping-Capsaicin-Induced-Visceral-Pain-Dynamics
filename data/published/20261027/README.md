@@ -1,10 +1,6 @@
-# Aggregate figures and tables
+# Aggregate artifact index
 
-Numbering follows the October 27, 2026 revision.
-Four main figures, six supporting figures, two main tables and 29 supporting tables.
-Native PNGs match the supplied document images; editable SVG/PDF plots use the same reviewed aggregates.
-
-## Figures
+Retained numerical tables and figures for export 20261027.
 
 - [Figure1_temporal_sensation](figures/Figure1_temporal_sensation.png): [PDF](figures/Figure1_temporal_sensation.pdf), [SVG](figures/Figure1_temporal_sensation.svg)
 - [Figure2_temporal_patterns](figures/Figure2_temporal_patterns.png): [PDF](figures/Figure2_temporal_patterns.pdf), [SVG](figures/Figure2_temporal_patterns.svg)
@@ -16,9 +12,6 @@ Native PNGs match the supplied document images; editable SVG/PDF plots use the s
 - [FigureS4_GAMM_numerical_diagnostics](figures/FigureS4_GAMM_numerical_diagnostics.png): [PDF](figures/FigureS4_GAMM_numerical_diagnostics.pdf), [SVG](figures/FigureS4_GAMM_numerical_diagnostics.svg)
 - [FigureS5_partition_recovery_baseline](figures/FigureS5_partition_recovery_baseline.png): [PDF](figures/FigureS5_partition_recovery_baseline.pdf), [SVG](figures/FigureS5_partition_recovery_baseline.svg)
 - [FigureS6_candidate_support_diagnostics](figures/FigureS6_candidate_support_diagnostics.png): [PDF](figures/FigureS6_candidate_support_diagnostics.pdf), [SVG](figures/FigureS6_candidate_support_diagnostics.svg)
-
-## Tables
-
 - [Table1_cohort_and_analysis_sets](tables/Table1_cohort_and_analysis_sets.csv)
 - [Table2_future_score_errors](tables/Table2_future_score_errors.csv)
 - [TableS10_prediction_all_weights](tables/TableS10_prediction_all_weights.csv)
@@ -50,6 +43,3 @@ Native PNGs match the supplied document images; editable SVG/PDF plots use the s
 - [TableS7_FPCA_all24_diagnostics](tables/TableS7_FPCA_all24_diagnostics.csv)
 - [TableS8_FPCA_reconstruction_all_repeats](tables/TableS8_FPCA_reconstruction_all_repeats.csv)
 - [TableS9_prediction_all20_repeats](tables/TableS9_prediction_all20_repeats.csv)
-
-The earlier exports retain historical numbering and results.
-The 161-test and 54-test physiological families remain separate; CR1 is the main inference and CR2 a sensitivity.

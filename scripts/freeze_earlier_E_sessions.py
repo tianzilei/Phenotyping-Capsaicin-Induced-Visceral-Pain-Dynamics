@@ -1,9 +1,13 @@
-"""Generic date-ranking helper. Individual adjudication is kept outside Git."""
+from __future__ import annotations
+from pathlib import Path
+
+"Standalone numerical helpers; legacy private-run orchestration is excluded."
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def earlier_date_candidates(rows):
     """Rank actual acquisition dates, without inventing a same-day tie breaker."""
-    if not rows or any(len(r["acquisition_dates"]) != 1 for r in rows):
+    if not rows or any((len(r["acquisition_dates"]) != 1 for r in rows)):
         raise ValueError("Missing or multi-day acquisition date")
-    day = min(r["acquisition_dates"][0] for r in rows)
+    day = min((r["acquisition_dates"][0] for r in rows))
     return [r for r in rows if r["acquisition_dates"] == [day]]

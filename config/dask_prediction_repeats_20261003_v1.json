@@ -60,7 +60,6 @@
   ],
   "next_primary_weighting": "eligible_windows_equal_person_equal_sensitivity",
   "five_weighting": "person_equal",
-  "seed_definition": "SHA256_master_stage_repeat_purpose_fold_first4bytes_little_endian_uint32",
   "repeat_role": "training_and_partition_sensitivity_repeats_and_folds_not_independent_people_or_calibrated_CIs",
   "reported_repeat_summary": "median_min_max_of20_paired_repeat_metrics_no_p_values_no_best_repeat_selection",
   "failure": "no_seed_substitution_no_failed_repeat_dropping_infrastructure_resume_same_logical_fold",
@@ -76,5 +75,6 @@
     "GAMM_FPCA_cluster_refits",
     "Markov_null_phase_tests",
     "independent_external_prediction_validation"
-  ]
+  ],
+  "random_stream_scheme": "logical-stream-v2"
 }

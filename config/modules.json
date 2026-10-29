@@ -4,7 +4,7 @@
     "name": "队列与来源",
     "status": "source_audit_complete",
     "permitted_target": "来源确定性审计",
-    "scientific_gate": "输入和归属哈希；缺来源保持缺失",
+    "scientific_gate": "明确来源与唯一归属；缺来源保持缺失",
     "historical_run_reference": "private-computation/runs/science_completion_20261003T180414Z_fc7855a4",
     "current_reporting_table": "data/published/20261023/tables/TableS1_all18_modules.csv"
   },

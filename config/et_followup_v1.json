@@ -6,8 +6,14 @@
   "seed": 20260916,
   "data_config": "config/provisional_vas_v1.json",
   "semantics_config": "config/vas_marker_semantics_v2.json",
-  "interval_minutes": [1, 20],
-  "scale": [0, 10],
+  "interval_minutes": [
+    1,
+    20
+  ],
+  "scale": [
+    0,
+    10
+  ],
   "E_audit": {
     "window": "two_scheduled_minutes_immediately_preceding_first_E",
     "criterion": "both_numeric_and_exactly_zero",
@@ -36,12 +42,15 @@
   "bounds": {
     "estimand": "candidate_cohort_mean_of_bounded_unobserved_VAS_and_trapezoidal_area_1_to_20",
     "method": "algebraic_extremes_over_all_unobserved_cells",
-    "unknown_contributions": ["E", "T", "other_missing"],
+    "unknown_contributions": [
+      "E",
+      "T",
+      "other_missing"
+    ],
     "assume_post_E_zero": false,
     "assume_post_T_high": false,
     "meaning": "finite_sample_identification_ranges_not_confidence_intervals_or_imputed_data",
-    "counterfactual_caveat": "continued_observation_VAS_requires_a_well_defined_post_stop_care_regime_not_currently_verified",
-    "numerical_bias_scenarios": null
+    "counterfactual_caveat": "continued_observation_VAS_requires_a_well_defined_post_stop_care_regime_not_currently_verified"
   },
   "model_refit": false,
   "model_refit_reason": "observed_model_inputs_unchanged; retain_existing_provisional_models_and_undercoverage_flag",

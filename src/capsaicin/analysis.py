@@ -12,8 +12,7 @@ import subprocess
 import sys
 import time
 import uuid
-
-from .cli import ROOT, digest, git_revision, resolve, write_csv, write_json
+from .cli import ROOT, resolve, write_csv, write_json
 from .contracts import ContractError, read_wide
 from .qc import subject_descriptives, time_counts
 from .data_locations import execution_config, relocation_evidence
@@ -79,7 +78,7 @@ def observed_summaries(rows):
         pairs = [(a, b) for a, b in zip(z, z[1:]) if b["time_min"] - a["time_min"] == 1]
         peak = max((r["vas"] for r in z), default=None)
         summary.update(
-            observed_adjacent_auc=sum((a["vas"] + b["vas"]) / 2 for a, b in pairs)
+            observed_adjacent_auc=sum(((a["vas"] + b["vas"]) / 2 for a, b in pairs))
             if pairs
             else None,
             auc_covered_minutes=len(pairs),
@@ -99,7 +98,7 @@ def locate_rscript(explicit=None):
     else:
         found = shutil.which("Rscript")
         candidates = sorted(Path("C:/Program Files/R").glob("R-*/bin/Rscript.exe"))
-        path = Path(found) if found else (candidates[-1] if candidates else None)
+        path = Path(found) if found else candidates[-1] if candidates else None
     if path is None or not path.is_file():
         raise ContractError(
             "Rscript missing; install R with mgcv/nlme or pass --rscript"
@@ -114,7 +113,7 @@ def csv_rows(path):
 
 def run_analysis(input_path, config_path, output=None, rscript=None, evidence_paths=()):
     start = datetime.now(timezone.utc)
-    input_path, config_path = resolve(input_path), execution_config(config_path)
+    input_path, config_path = (resolve(input_path), execution_config(config_path))
     config = json.loads(config_path.read_text(encoding="utf-8"))
     validate_execution_config(config)
     r = locate_rscript(rscript)
@@ -130,11 +129,10 @@ def run_analysis(input_path, config_path, output=None, rscript=None, evidence_pa
         semantics = json.loads(semantic_path.read_text(encoding="utf-8"))
     if config.get("coding_rule_config"):
         sources.append(resolve(config["coding_rule_config"]))
-    hashes = {str(p): digest(p) for p in sources}
+    input_bytes = {str(p): p.read_bytes() for p in sources}
     rows = read_wide(input_path, config)
     name = f"provisional_vas_{start:%Y%m%dT%H%M%SZ}_{uuid.uuid4().hex[:8]}"
     out = resolve(output) if output else ROOT / "08_outputs" / name
-    # Individual records must remain excluded from Git, even for explicit destinations.
     relative = out.resolve().relative_to(ROOT.resolve())
     git_command = ["git", "-c", f"safe.directory={ROOT.as_posix()}"]
     probe = subprocess.run(
@@ -154,15 +152,6 @@ def run_analysis(input_path, config_path, output=None, rscript=None, evidence_pa
         "status": "running",
         "synthetic": config["execution"]["synthetic"],
         "scientific_readiness": "provisional_identity_and_semantics_pending",
-        "git_commit": subprocess.run(
-            git_command + ["rev-parse", "HEAD"],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-            check=True,
-        ).stdout.strip(),
-        "code_sha256": {str(p.relative_to(ROOT)): digest(p) for p in code_paths},
-        "input_sha256": hashes,
         "config_version": config["execution_version"],
         "python": sys.version,
         "platform": platform.platform(),
@@ -224,11 +213,11 @@ def run_analysis(input_path, config_path, output=None, rscript=None, evidence_pa
         write_csv(out / "observed_minute_means.csv", minute_means)
         overview = {
             "candidate_rows": len(summaries),
-            "observed_values": sum(x["n_observed"] for x in summaries),
-            "complete_1_20": sum(x["complete_1_20"] for x in summaries),
-            "all_missing": sum(x["n_observed"] == 0 for x in summaries),
+            "observed_values": sum((x["n_observed"] for x in summaries)),
+            "complete_1_20": sum((x["complete_1_20"] for x in summaries)),
+            "all_missing": sum((x["n_observed"] == 0 for x in summaries)),
             "termination_subjects": dict(
-                Counter(x["termination_code"] or "none" for x in summaries)
+                Counter((x["termination_code"] or "none" for x in summaries))
             ),
         }
         write_json(out / "data_overview.json", overview)
@@ -326,18 +315,16 @@ def run_analysis(input_path, config_path, output=None, rscript=None, evidence_pa
                 "## 核对后重跑",
                 "",
                 "保留本次目录，修改配置为新版本，再用相同 analyze 入口运行。先核对重复身份/访视、VAS 对应关系、E/T 定义及事件时间；生理关联还需窗口、单位、同步与质量审计。",
-                "输入、配置和实际代码摘要见 run_manifest.json；软件环境见 sessionInfo.txt。个体记录均仅保存在本地 Git 忽略目录。",
+                "输入与运行参数见 run_manifest.json；软件环境见 sessionInfo.txt。个体记录均仅保存在本地 Git 忽略目录。",
             ]
         )
         (out / "REPORT.md").write_text("\n".join(report) + "\n", encoding="utf-8")
-        changed = [str(p) for p in sources if digest(p) != hashes[str(p)]]
+        changed = [str(p) for p in sources if p.read_bytes() != input_bytes[str(p)]]
         if changed:
             raise RuntimeError("Input/config/evidence changed during run")
-        if any(digest(ROOT / p) != h for p, h in manifest["code_sha256"].items()):
-            raise RuntimeError("Execution code changed during run")
         manifest["status"] = (
             "completed_provisional"
-            if all(z["status"] == "completed_provisional" for z in statuses)
+            if all((z["status"] == "completed_provisional" for z in statuses))
             else "completed_with_model_issues"
         )
         manifest["model_status"] = statuses
@@ -354,11 +341,6 @@ def run_analysis(input_path, config_path, output=None, rscript=None, evidence_pa
         raise
     finally:
         manifest["finished_utc"] = datetime.now(timezone.utc).isoformat()
-        manifest["outputs_sha256"] = {
-            p.name: digest(p)
-            for p in out.iterdir()
-            if p.is_file() and p.name != "run_manifest.json"
-        }
         write_json(out / "run_manifest.json", manifest)
     print(json.dumps({"output": str(out), "status": manifest["status"]}), flush=True)
     return 0 if manifest["status"] == "completed_provisional" else 2

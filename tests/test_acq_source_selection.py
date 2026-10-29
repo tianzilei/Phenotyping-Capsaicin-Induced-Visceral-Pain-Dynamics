@@ -18,36 +18,22 @@ class ACQSelection(unittest.TestCase):
         ]
         reg = {
             "decisions": [
-                dict(
-                    person_id=r["current_subject_id"],
-                    path=r["path"],
-                    sha256="hash",
-                    selected=i == 0,
-                )
+                dict(person_id=r["current_subject_id"], path=r["path"], selected=i == 0)
                 for i, r in enumerate(rows)
             ]
         }
-        kept, audit = apply_acq_registry(rows, reg, lambda p: "hash")
+        kept, audit = apply_acq_registry(rows, reg)
         self.assertEqual(kept, [rows[0]])
         self.assertEqual(len(audit), 3)
         self.assertEqual(rows[1]["current_subject_id"], "SYN_SUBJECT010")
 
-    def test_changed_bytes_and_unregistered_records_rejected(self):
+    def test_unregistered_records_and_duplicate_decisions_rejected(self):
         row = dict(current_subject_id="SYN_SUBJECT001", path="synthetic.acq")
-        reg = {
-            "decisions": [
-                dict(
-                    person_id="SYN_SUBJECT001",
-                    path="synthetic.acq",
-                    sha256="old",
-                    selected=True,
-                )
-            ]
-        }
+        decision = dict(person_id="SYN_SUBJECT001", path="synthetic.acq", selected=True)
         with self.assertRaises(ValueError):
-            apply_acq_registry([row], reg, lambda p: "new")
+            apply_acq_registry([dict(row, path="other.acq")], {"decisions": [decision]})
         with self.assertRaises(ValueError):
-            apply_acq_registry([dict(row, path="other.acq")], reg, lambda p: "old")
+            apply_acq_registry([row], {"decisions": [decision, decision]})
 
     def test_registry_cannot_keep_two_people_for_one_file(self):
         rows = [
@@ -56,14 +42,9 @@ class ACQSelection(unittest.TestCase):
         ]
         reg = {
             "decisions": [
-                dict(
-                    person_id=r["current_subject_id"],
-                    path=r["path"],
-                    sha256="h",
-                    selected=True,
-                )
+                dict(person_id=r["current_subject_id"], path=r["path"], selected=True)
                 for r in rows
             ]
         }
         with self.assertRaises(ValueError):
-            apply_acq_registry(rows, reg, lambda p: "h")
+            apply_acq_registry(rows, reg)

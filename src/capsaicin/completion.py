@@ -11,7 +11,12 @@ def relative_manifest_path(directory, value):
     """Resolve Windows/POSIX relative manifest paths without guessing filenames."""
     normalized = str(value).replace("\\", "/")
     path = Path(normalized)
-    if path.is_absolute() or ":" in normalized or ".." in path.parts:
+    if (
+        normalized.startswith("/")
+        or path.is_absolute()
+        or ":" in normalized
+        or ".." in path.parts
+    ):
         raise ValueError("Manifest output must be a confined relative path")
     return Path(directory) / path
 

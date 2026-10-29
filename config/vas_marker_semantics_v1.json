@@ -24,6 +24,5 @@
     "include": false
   },
   "effect_on_existing_model_input": "none",
-  "effect_on_interpretation": "T_is_discontinuation_usually_due_to_excessive_stimulation_not_generic_technical_missingness",
-  "numeric_dropout_sensitivity_parameters": null
+  "effect_on_interpretation": "T_is_discontinuation_usually_due_to_excessive_stimulation_not_generic_technical_missingness"
 }

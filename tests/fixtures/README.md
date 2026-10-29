@@ -1,1 +1,3 @@
-全部样例由程序构造，无真实受试者。SYN 前缀仅供测试。包含完整、E/T、间断缺测、全零和全缺失轨迹。不能用于方法有效性或统计结论。
+# Synthetic fixtures
+
+The rating table in this directory is an artificial format example. Its identifiers use the SYN prefix. It includes numerical scores, missing entries and distinct stopping markers for contract tests. It is not a study record or an expected scientific result.

@@ -1,6 +1,6 @@
-# Aggregate figures and tables
+# Aggregate artifact index
 
-## Figures
+Retained numerical tables and figures for export 20261004.
 
 - [Figure1_observation_support](figures/Figure1_observation_support.png): [PDF](figures/Figure1_observation_support.pdf), [SVG](figures/Figure1_observation_support.svg)
 - [Figure2_VAS_composition_finite_changes](figures/Figure2_VAS_composition_finite_changes.png): [PDF](figures/Figure2_VAS_composition_finite_changes.pdf), [SVG](figures/Figure2_VAS_composition_finite_changes.svg)
@@ -12,9 +12,6 @@
 - [FigureS3_candidate_support_diagnostics](figures/FigureS3_candidate_support_diagnostics.png): [PDF](figures/FigureS3_candidate_support_diagnostics.pdf), [SVG](figures/FigureS3_candidate_support_diagnostics.svg)
 - [FigureS4_bounds_all_MC_status](figures/FigureS4_bounds_all_MC_status.png): [PDF](figures/FigureS4_bounds_all_MC_status.pdf), [SVG](figures/FigureS4_bounds_all_MC_status.svg)
 - [FigureS5_partition_recovery_baseline](figures/FigureS5_partition_recovery_baseline.png): [PDF](figures/FigureS5_partition_recovery_baseline.pdf), [SVG](figures/FigureS5_partition_recovery_baseline.svg)
-
-## Tables
-
 - [Table1_cohort_and_analysis_sets](tables/Table1_cohort_and_analysis_sets.csv)
 - [Table2_minute_support_composition_finite_rates](tables/Table2_minute_support_composition_finite_rates.csv)
 - [Table3_prediction_primary_paired](tables/Table3_prediction_primary_paired.csv)
@@ -36,5 +33,4 @@
 - [TableS7_cluster_summary](tables/TableS7_cluster_summary.csv)
 - [TableS8_U06_variability_summary](tables/TableS8_U06_variability_summary.csv)
 - [TableS9_candidate_summary](tables/TableS9_candidate_summary.csv)
-
 [Combined figure PDF](figure_review.pdf)

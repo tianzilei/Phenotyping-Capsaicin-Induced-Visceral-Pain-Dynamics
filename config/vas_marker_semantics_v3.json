@@ -41,6 +41,5 @@
   },
   "effect_on_existing_model_input": "eight_zero_scores_reclassified_as_E_in_authorized_copy",
   "effect_on_interpretation": "E_is_protocol_stopping_after_two_pain_free_minutes_T_is_discontinuation_usually_due_to_excessive_stimulation_analyze_mechanisms_separately",
-  "numeric_dropout_sensitivity_parameters": null,
   "supersedes": "vas_marker_semantics_v2"
 }

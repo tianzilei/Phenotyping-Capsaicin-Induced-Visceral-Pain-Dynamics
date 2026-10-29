@@ -1,10 +1,8 @@
 {
   "R_version": "4.6.1",
   "actual_options": {
-    "FVEfittedCov": null,
     "FVEthreshold": 1,
     "dataType": "Sparse",
-    "diagnosticsPlot": null,
     "error": true,
     "fitEigenValues": false,
     "imputeScores": true,
@@ -19,7 +17,6 @@
     "methodSelectK": 4,
     "methodXi": "CE",
     "nRegGrid": 51,
-    "numBins": null,
     "outPercent": [
       0,
       1
@@ -35,10 +32,6 @@
     "useBinnedData": "OFF",
     "userBwCov": 2,
     "userBwMu": 1.5,
-    "userCov": null,
-    "userMu": null,
-    "userRho": null,
-    "userSigma2": null,
     "usergrid": false,
     "verbose": false,
     "yname": "Ly"

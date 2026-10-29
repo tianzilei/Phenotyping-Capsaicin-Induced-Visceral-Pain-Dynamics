@@ -1,8 +1,6 @@
-# Final aggregate figures and tables
+# Aggregate artifact index
 
-Artifact numbering follows the October 14, 2026 revision.
-
-## Figures
+Retained numerical tables and figures for export 20261023.
 
 - [Figure1_temporal_sensation](figures/Figure1_temporal_sensation.png): [PDF](figures/Figure1_temporal_sensation.pdf), [SVG](figures/Figure1_temporal_sensation.svg)
 - [Figure2_temporal_patterns](figures/Figure2_temporal_patterns.png): [PDF](figures/Figure2_temporal_patterns.pdf), [SVG](figures/Figure2_temporal_patterns.svg)
@@ -14,9 +12,6 @@ Artifact numbering follows the October 14, 2026 revision.
 - [FigureS4_bounds_all_MC_status](figures/FigureS4_bounds_all_MC_status.png): [PDF](figures/FigureS4_bounds_all_MC_status.pdf), [SVG](figures/FigureS4_bounds_all_MC_status.svg)
 - [FigureS5_partition_recovery_baseline](figures/FigureS5_partition_recovery_baseline.png): [PDF](figures/FigureS5_partition_recovery_baseline.pdf), [SVG](figures/FigureS5_partition_recovery_baseline.svg)
 - [FigureS6_observation_support](figures/FigureS6_observation_support.png): [PDF](figures/FigureS6_observation_support.pdf), [SVG](figures/FigureS6_observation_support.svg)
-
-## Tables
-
 - [Table1_cohort_and_analysis_sets](tables/Table1_cohort_and_analysis_sets.csv)
 - [Table2_early_group_recognition](tables/Table2_early_group_recognition.csv)
 - [Table3_prediction_primary_paired](tables/Table3_prediction_primary_paired.csv)
@@ -40,6 +35,3 @@ Artifact numbering follows the October 14, 2026 revision.
 - [TableS7_cluster_summary](tables/TableS7_cluster_summary.csv)
 - [TableS8_U06_variability_summary](tables/TableS8_U06_variability_summary.csv)
 - [TableS9_candidate_summary](tables/TableS9_candidate_summary.csv)
-
-Table S1 separates historical plans from completed resampling and validation budgets.
-The prior minute-support table remains an input under the October 4 artifact version.

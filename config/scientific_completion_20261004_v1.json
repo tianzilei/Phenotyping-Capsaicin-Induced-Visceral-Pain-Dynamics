@@ -8,10 +8,12 @@
   "prediction_run": "/private/capsaicin-owner/.local/share/capsaicin-dask/runs/dask_prediction_repeats_20261003T105043Z_8eaf27a2",
   "expected_people": 215,
   "expected_numeric_ratings": 3424,
-  "sequence": ["symptoms", "finite_changes"],
+  "sequence": [
+    "symptoms",
+    "finite_changes"
+  ],
   "replicates_per_stage": 200000,
   "batch_size": 1000,
-  "resampling": "all 215 whole subjects; logical PCG64 streams SHA256(master|stage|replicate); same multiplicity for all statistics in a stage replicate",
   "symptoms": {
     "estimand": "proportion listing a code among people with a recorded relevant field; symptom-region pairs among both fields recorded",
     "code_absent_from_recorded_set": "not listed; not a clinical absence assertion",
@@ -23,16 +25,35 @@
     "unknown_code_policy": "reject before inference; no silent removal"
   },
   "finite_changes": {
-    "h_minutes": [1, 2, 5],
-    "interval": [1, 20],
+    "h_minutes": [
+      1,
+      2,
+      5
+    ],
+    "interval": [
+      1,
+      20
+    ],
     "support": "all h+1 actual consecutive numeric minutes t..t+h required",
     "estimand": "change among subjects actually observed throughout each specified interval; each t,h has its own support",
-    "statistics": ["mean_change", "median_change", "mean_rate", "median_rate", "rise_proportion", "fall_proportion", "unchanged_proportion"],
+    "statistics": [
+      "mean_change",
+      "median_change",
+      "mean_rate",
+      "median_rate",
+      "rise_proportion",
+      "fall_proportion",
+      "unchanged_proportion"
+    ],
     "change": "VAS(t+h)-VAS(t), signed VAS units",
     "rate": "change/h, signed VAS units per minute; never instantaneous derivative",
     "median": "generalized inverse empirical CDF, ceil(n*.5); same rule in bootstrap",
     "positive_negative_zero": "exact comparison of observed arithmetic changes; no clinical threshold",
-    "absolute_MC_targets": {"change": 0.01, "rate": 0.01, "proportion": 0.002},
+    "absolute_MC_targets": {
+      "change": 0.01,
+      "rate": 0.01,
+      "proportion": 0.002
+    },
     "zero_support": "undefined and retained, never bridged or substituted"
   },
   "MC": {
@@ -49,8 +70,16 @@
     "new_training": false,
     "verify": "all 200 fold payloads, whole-person outer/inner partitions, OOF row coverage, targets and persistence predictions",
     "all_repeats": 20,
-    "models": ["last_value", "ridge", "random_forest"],
-    "metrics": ["MAE", "RMSE", "model_minus_last_value"],
+    "models": [
+      "last_value",
+      "ridge",
+      "random_forest"
+    ],
+    "metrics": [
+      "MAE",
+      "RMSE",
+      "model_minus_last_value"
+    ],
     "weights": "original next-rating primary window-equal plus person-equal sensitivity; five-to-ten person-equal",
     "repeat_ranges": "median/min/max across all 20; partition/training sensitivity, not CI or external validation"
   },
@@ -61,7 +90,7 @@
   "real_instantaneous_derivative_activated": false,
   "real_Markov_activated": false,
   "sealed_opened": false,
-  "primary_physiology_p_q": null,
   "source_mutation": false,
-  "old_outputs_overwritten": false
+  "old_outputs_overwritten": false,
+  "random_stream_scheme": "logical-stream-v2"
 }

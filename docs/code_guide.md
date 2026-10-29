@@ -1,34 +1,23 @@
 # Code guide
 
-`run.py` and the installed `capsaicin` entry point expose environment checks, aggregate inventory, module status, a synthetic demo, wide-table validation, and the explicitly provisional VAS working-model runner. The default analysis plan is draft; use a versioned, locally frozen controlled-input configuration before inference.
-
-| Location | Role |
+| Location | Supported role |
 | --- | --- |
-| `src/capsaicin/contracts.py`, `qc.py`, `analysis.py` | Token-preserving ingestion and actual-adjacent descriptive QC |
-| `src/capsaicin/privacy.py` | Restricted, non-overwriting random-ID export with explicit field selection |
-| `src/capsaicin/science_completion.py` | Whole-subject recorded-code/finite-change statistics |
-| `src/capsaicin/distributed_*.py` | Resampling, subject-level prediction and R task contracts |
-| `src/capsaicin/ecg_*`, `egg_*`, `reanalysis_signals.py` | Candidate signal processing; scientific gates remain separate |
-| `src/capsaicin/states.py`, `readiness.py`, `reference_validation.py` | Descriptive states and explicit readiness gates |
-| `R/vas_models.R`, `fpca_followup.R`, `sparse_fpca.R` | Implemented working models and FPCA analyses |
-| `R/interfaces.R` | Unimplemented interfaces that raise errors |
-| `scripts/deidentify_data.py` | Private-input export CLI |
-| `scripts/build_final_artifacts.py` | Current 4/6 figures and 2/29 tables from public aggregates, no fitting |
-| `src/capsaicin/final_figures.py`, `aligned_artifacts.py` | Current layout and numbered aggregate table exports |
-| `scripts/physiology_20261017/` | Retained 161-test and 54-test execution, sensitivity and independent covariance programs; controlled inputs only |
-| `scripts/build_scientific_figures.py` | Historical October 4 artifact renderer |
-| `scripts/verify_public_release.py` | Current-tree privacy, credential-pattern and aggregate-hash audit |
-| `scripts/verify_repository_structure.py` | Current-tree writing boundaries and English comments/docstrings |
-| `scripts/verify_public_history.py` | All reachable commits/objects, integrity and concurrent-ref checks |
-| `tests/` | Synthetic tests only |
-| `config/` | Historical method parameters and publication/format configurations |
+| `run.py`, `src/capsaicin/cli.py` | Environment information, aggregate inventory, synthetic demo and wide-table validation |
+| `contracts.py`, `qc.py`, `stopping.py` | Input tokens, observation counts and adjacent-time summaries |
+| `analysis.py`, `R/vas_models.R` | Explicitly provisional working-model execution with local inputs |
+| `completion.py`, `science_completion.py`, `variability.py` | Finite changes, fixed-effect sufficient statistics and variability calculations |
+| `distributed_*.py` | Numerical task definitions, participant splits and logical resampling streams |
+| `random_streams.py` | Versioned seed construction from explicit logical identifiers |
+| `physiology.py` | Repeated-block fixed effects, CR1/CRV3, wild bootstrap, BY/BH and independent full-design covariance calculations |
+| `ecg_*`, `egg_*`, `reanalysis_signals.py` | Candidate signal-processing functions |
+| `fnirs_source_selection.py`, `acq_source_selection.py` | Explicit registry/path ownership and source selection |
+| `reference_validation.py`, `readiness.py`, `states.py` | Reference-admission contracts and scientific readiness gates |
+| `privacy.py`, `scripts/deidentify_data.py` | Restricted random-ID export to a separate destination |
+| `final_figures.py`, `final_artifacts.py`, `aligned_artifacts.py` | Aggregate plotting and numbered table export |
+| `scripts/build_final_artifacts.py` | Public aggregate rendering command |
+| `scripts/verify_public_release.py`, `verify_repository_structure.py` | Current publication-tree checks |
+| `R/`, remaining script helpers | Numerical functions and standalone statistical helpers |
 
-Analytical scripts retain versioned run contracts. Some require private upstream manifests/registries, a new site-specific execution configuration and remote compute; they cannot recreate individual analyses from aggregates alone. Example network addresses use the documentation-only `192.0.2.*` range, not an operational cluster. Individual identity/session-adjudication scripts and active pointers were excluded. No placeholder private registry is supplied.
+Paths in the first column below `src/capsaicin/` refer to modules in that package. Standalone helpers expose functions; their former private-run scheduling commands are retired. Individual analysis inputs cannot be reconstructed from aggregate tables.
 
-`config/modules.json` reports the current 18-module status. The historical M00–M09 interface inventory is preserved separately as `modules_legacy_20260918.json`; its dated state should not be used as the current execution report. The old `python -m analysis ...` pipeline and in-place repair scripts are retired.
-
-Public rendering has its own versioned configuration. It verifies aggregate-source hashes and writes a fresh directory. It never contacts the historical Dask cluster. Full real-data verification is distinct and cannot be performed using the released aggregates alone.
-
-See [code style and repository boundaries](code_style.md) for pinned formatters, contributor checks, and the separation of public methods from unpublished writing. The field summary is in [field contract](field_contract.md).
-
-See [physiological inference and execution](physiology_20261017.md) for explicit private run locations, frozen configurations, original scientific parameters and retained verification records. No individual record is distributed.
+The provisional runner still requires a locally frozen execution configuration and an R installation. R interfaces marked unavailable remain unavailable. Use a fresh destination for every analysis or render.

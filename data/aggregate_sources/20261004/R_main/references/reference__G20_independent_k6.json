@@ -25,12 +25,10 @@
   "diagnostics": {
     "apVar_detail": "",
     "apVar_ok": true,
-    "correlation_boundary": null,
     "edf": 5.759536600191512,
     "fitted_out_of_0_10": 0,
     "n_observations": 3424,
     "n_people": 215,
-    "optimizer_iterations": null,
     "residual_adjacent_correlation": 0.7829642771857015,
     "residual_adjacent_pairs": 3209,
     "residual_quantiles": [
@@ -109,8 +107,7 @@
         1.4281626154231124,
         1.515329726346329
       ]
-    },
-    "rho": null
+    }
   },
   "empirical_mean": [
     3.0046511627906978,

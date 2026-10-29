@@ -48,11 +48,11 @@ class AdmissionV2(unittest.TestCase):
             self.row,
             basis="exact_log_participant_actual_date_and_existing_identity_anchor",
             evidence_log_path="synthetic/log.csv",
-            evidence_log_sha256="a" * 64,
+            evidence_log="synthetic_review",
         )
         self.assertTrue(source_mapping_admission(row, self.cfg)[0])
         self.assertFalse(
-            source_mapping_admission(dict(row, evidence_log_sha256=""), self.cfg)[0]
+            source_mapping_admission(dict(row, evidence_log_path=""), self.cfg)[0]
         )
         row = dict(
             self.row,

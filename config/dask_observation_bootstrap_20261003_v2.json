@@ -75,5 +75,6 @@
   ],
   "parent_execution": "config/dask_observation_bootstrap_20261003_v1.json",
   "extension_reason": "58_of110_endpoints_not_MC_precision_sufficient_in_fixed20k_run; fixed200k_fresh_independent_stream_no_optional_peeking",
-  "independent_MC_evaluation": "new_fixed_budget_chosen_from_independent_v1_pilot_final_only_110x2_family_no_combined_all_look_confidence_claim"
+  "independent_MC_evaluation": "new_fixed_budget_chosen_from_independent_v1_pilot_final_only_110x2_family_no_combined_all_look_confidence_claim",
+  "random_stream_scheme": "logical-stream-v2"
 }

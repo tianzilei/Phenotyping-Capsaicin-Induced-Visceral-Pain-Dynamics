@@ -20,7 +20,6 @@
     "fitted_out_of_0_10": 0,
     "n_observations": 2115,
     "n_people": 215,
-    "optimizer_iterations": null,
     "residual_adjacent_correlation": 0.09364359841981436,
     "residual_adjacent_pairs": 1900,
     "residual_quantiles": [

@@ -116,7 +116,6 @@
     "finite_n": 0,
     "metric": "rho",
     "n": 5000,
-    "quantiles": null,
     "role": "post_fit_conditional_descriptive_only"
   },
   {

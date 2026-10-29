@@ -3,7 +3,6 @@
 import argparse
 import csv
 from datetime import datetime, timezone
-import hashlib
 import json
 from pathlib import Path
 import platform
@@ -11,7 +10,6 @@ import shutil
 import subprocess
 import tempfile
 import uuid
-
 from . import __version__
 from .contracts import ContractError, read_wide
 from .qc import time_counts, subject_descriptives
@@ -23,11 +21,6 @@ def resolve(value):
     from .data_locations import resolve_input
 
     return resolve_input(Path(value).expanduser())
-
-
-def digest(path):
-    with Path(path).open("rb") as handle:
-        return hashlib.file_digest(handle, "sha256").hexdigest()
 
 
 def write_json(path, data):
@@ -45,27 +38,17 @@ def write_csv(path, rows):
         writer.writerows(rows)
 
 
-def git_revision():
-    if not shutil.which("git"):
-        return None
-    result = subprocess.run(
-        ["git", "rev-parse", "HEAD"],
-        cwd=ROOT,
-        capture_output=True,
-        text=True,
-        timeout=10,
-    )
-    return result.stdout.strip() if result.returncode == 0 else None
-
-
 def validate(input_path, config_path, output=None, synthetic=False):
-    input_path, config_path = resolve(input_path), resolve(config_path)
+    input_path, config_path = (resolve(input_path), resolve(config_path))
     config = json.loads(config_path.read_text(encoding="utf-8"))
     if not synthetic and config.get("status") == "synthetic_only":
         raise ContractError("synthetic_only 配置仅可用于 demo，不用于真实文件验证。")
-    input_hash, config_hash = digest(input_path), digest(config_path)
+    input_bytes, config_bytes = (input_path.read_bytes(), config_path.read_bytes())
     rows = read_wide(input_path, config)
-    if digest(input_path) != input_hash or digest(config_path) != config_hash:
+    if (
+        input_path.read_bytes() != input_bytes
+        or config_path.read_bytes() != config_bytes
+    ):
         raise ContractError("读取期间输入或配置发生变化，请固定来源后重新验证。")
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     name = (
@@ -78,7 +61,6 @@ def validate(input_path, config_path, output=None, synthetic=False):
     if destination.exists():
         raise ContractError("输出目录已存在；指定新目录以保留既有运行。")
     destination.parent.mkdir(parents=True, exist_ok=True)
-    # Publish the run atomically only once all output files are complete.
     temporary = Path(tempfile.mkdtemp(prefix=".pending_", dir=destination.parent))
     try:
         write_csv(temporary / "vas_long.csv", rows)
@@ -94,17 +76,12 @@ def validate(input_path, config_path, output=None, synthetic=False):
                 else "format_validation_passed",
                 "scope": "wide-table format and descriptive QC only; not scientific readiness",
                 "input": str(input_path),
-                "input_sha256": input_hash,
                 "config": str(config_path),
-                "config_sha256": config_hash,
-                "git_commit": git_revision(),
                 "python": platform.python_version(),
                 "synthetic": synthetic,
                 "n_subjects": len({r["subject_id"] for r in rows}),
                 "n_scheduled_rows": len(rows),
-                "files": {
-                    p.name: digest(p) for p in temporary.iterdir() if p.is_file()
-                },
+                "files": [p.name for p in temporary.iterdir() if p.is_file()],
             },
         )
         temporary.rename(destination)
@@ -141,11 +118,7 @@ def doctor():
         ],
     }
     if result["Rscript"]:
-        expression = (
-            'cat(R.version.string,"\\n"); '
-            'for (p in c("renv","mgcv","nlme","fdapace","jsonlite")) '
-            'cat(p, if(requireNamespace(p,quietly=TRUE)) as.character(packageVersion(p)) else "MISSING", "\\n")'
-        )
+        expression = 'cat(R.version.string,"\\n"); for (p in c("renv","mgcv","nlme","fdapace","jsonlite")) cat(p, if(requireNamespace(p,quietly=TRUE)) as.character(packageVersion(p)) else "MISSING", "\\n")'
         process = subprocess.run(
             [result["Rscript"], "-e", expression],
             cwd=ROOT,
@@ -162,40 +135,12 @@ def doctor():
 
 
 def inventory():
-    manifest = json.loads(
-        (ROOT / "docs/release_inventory.json").read_text(encoding="utf-8")
-    )
-    result = []
-    for name, record in manifest["aggregate_files"].items():
-        path = ROOT / name
-        result.append(
-            {
-                "file": name,
-                "exists": path.is_file(),
-                "sha256_matches_release": digest(path) == record["published_sha256"]
-                if path.is_file()
-                else False,
-            }
-        )
-    passed = all(row["exists"] and row["sha256_matches_release"] for row in result)
+    roots = [ROOT / "data/aggregate_sources", ROOT / "data/published"]
+    files = [p for root in roots for p in root.rglob("*") if p.is_file()]
     print(
-        json.dumps(
-            {
-                "status": "PASS" if passed else "FAIL",
-                "scope": "current public aggregate files only",
-                "files": len(result),
-                "history_checked": False,
-                "issues": [
-                    row
-                    for row in result
-                    if not row["exists"] or not row["sha256_matches_release"]
-                ],
-            },
-            ensure_ascii=False,
-            indent=2,
-        )
+        json.dumps({"files": len(files), "scope": "aggregate file inventory"}, indent=2)
     )
-    return 0 if passed else 2
+    return 0
 
 
 def main(argv=None):

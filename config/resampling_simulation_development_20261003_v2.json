@@ -141,18 +141,14 @@
       "flat_maximum_one_sided_Wilson_FWER_upper": 0.06,
       "MC_interval_confidence": 0.95,
       "MC_allocation": "freeze_per_cell_or_simultaneous_across_cells_before_confirmation",
-      "upper_coverage_limit": null,
       "conservative_coverage": "allowed_report_interval_width_and_power",
       "failure": "count_as_noncoverage_and_report_flat_false_rejection_bounds_with_failure_disposition",
-      "power_minimum": null,
-      "width_maximum": null,
       "interpretation": "tolerance_benchmark_not_proof_of_exact95_coverage_or_old_instantaneous_goal"
     }
   },
   "M_Markov": {
     "implementation_state": "real_regression_interface_only_new_synthetic_estimator_pending_implementation",
     "real_inference": false,
-    "clinical_VAS_thresholds": null,
     "input": "synthetic_named_states_S1_S2_S3_only_not_discretized_real_VAS",
     "estimands": [
       "adjacent_transition_kernel_for_generated_complete_process",
@@ -360,8 +356,7 @@
     "development_manifest_and_failures",
     "locked_independent_validation_config",
     "per_cell_results_and_MC_precision",
-    "all_failure_disposition",
-    "input_config_code_environment_output_hashes"
+    "all_failure_disposition"
   ],
   "current_delivery": "configuration_and_design_only_no_fabricated_estimates",
   "parent_configuration": "config/resampling_simulation_development_20261003_v1.json",
@@ -376,5 +371,6 @@
     "MC_error_allocation",
     "implemented_estimator_tests_and_portability",
     "postdevelopment_config_and_code_lock"
-  ]
+  ],
+  "random_stream_scheme": "logical-stream-v2"
 }

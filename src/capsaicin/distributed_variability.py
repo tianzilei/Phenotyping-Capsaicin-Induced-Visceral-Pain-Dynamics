@@ -1,10 +1,9 @@
 """Observed person-level variability and complete-interval burden resampling."""
 
 from __future__ import annotations
-
+from .execution import memory_usage
 import numpy as np
 from .variability import window_metrics
-
 
 RAW = (
     "mean_vas",
@@ -17,11 +16,11 @@ RAW = (
 
 
 def residual_metrics(t, y, degree):
-    t, y = np.asarray(t, float), np.asarray(y, float)
-    if len(t) != len(y) or len(np.unique(t)) != len(t) or not np.isfinite(y).all():
+    t, y = (np.asarray(t, float), np.asarray(y, float))
+    if len(t) != len(y) or len(np.unique(t)) != len(t) or (not np.isfinite(y).all()):
         raise ValueError("Invalid residual series")
     order = np.argsort(t)
-    t, y = t[order], y[order]
+    t, y = (t[order], y[order])
     x = (t - t.mean())[:, None] ** np.arange(degree + 1)
     coef, _, rank, _ = np.linalg.lstsq(x, y, rcond=None)
     if rank != degree + 1 or len(y) <= degree + 1:
@@ -36,20 +35,21 @@ def residual_metrics(t, y, degree):
 
 
 def segment_integrals(t, y):
-    t, y = np.asarray(t, float), np.asarray(y, float)
-    a, h, v, d = t[:-1], np.diff(t), y[:-1], np.diff(y)
-    return float(np.sum(h * (v + d / 2))), float(
-        np.sum(h * (a * v + (a * d + h * v) / 2 + h * d / 3))
+    t, y = (np.asarray(t, float), np.asarray(y, float))
+    a, h, v, d = (t[:-1], np.diff(t), y[:-1], np.diff(y))
+    return (
+        float(np.sum(h * (v + d / 2))),
+        float(np.sum(h * (a * v + (a * d + h * v) / 2 + h * d / 3))),
     )
 
 
 def burden_metrics(t, y):
-    t, y = np.asarray(t, float), np.asarray(y, float)
+    t, y = (np.asarray(t, float), np.asarray(y, float))
     if (
         len(t) != len(y)
         or len(t) < 2
-        or not np.all(np.diff(t) == 1)
-        or not np.isfinite(y).all()
+        or (not np.all(np.diff(t) == 1))
+        or (not np.isfinite(y).all())
         or np.any(y < 0)
     ):
         raise ValueError("Complete consecutive nonnegative series required")
@@ -137,7 +137,7 @@ def prepare_matrix(values, config):
                 cells.extend(
                     [m[k] if eligible and m[k] is not None else np.nan for k in RAW]
                 )
-        early, late = windows[1, 5], windows[16, 20]
+        early, late = (windows[1, 5], windows[16, 20])
         cells.extend(
             [
                 late[k] - early[k] if early["complete"] and late["complete"] else np.nan
@@ -166,7 +166,7 @@ def prepare_matrix(values, config):
 
 def weighted_statistics(matrix, weights, specs):
     """Exact median of expanded person copies, including even-sample averaging."""
-    matrix, weights = np.asarray(matrix), np.asarray(weights)
+    matrix, weights = (np.asarray(matrix), np.asarray(weights))
     if (
         weights.shape != (len(matrix),)
         or np.any(weights < 0)
@@ -195,28 +195,26 @@ def weighted_statistics(matrix, weights, specs):
         out=np.full(means.sum(), np.nan),
         where=counts[means] > 0,
     )
-    return result, counts
+    return (result, counts)
 
 
 def bootstrap_batch(config, prepared, stage, start, stop):
     from .distributed_observation import index_stream
-    from .distributed_development import digest
     from threadpoolctl import threadpool_limits
     import os
     import platform
     import time
-    import psutil
 
     begun = time.monotonic()
     matrix = prepared[0]
     specs = specifications(config)
-    statistics, hashes, supports = [], [], []
+    statistics, draws, supports = ([], [], [])
     with threadpool_limits(limits=1):
         for replicate in range(start, stop):
             w, h = index_stream(config["master_seed"], stage, replicate, len(matrix))
             row, count = weighted_statistics(matrix, w, specs)
             statistics.append([float(v) if np.isfinite(v) else None for v in row])
-            hashes.append(h)
+            draws.append(h)
             supports.append(count)
         point, count = weighted_statistics(
             matrix, np.ones(len(matrix), dtype=int), specs
@@ -226,21 +224,17 @@ def bootstrap_batch(config, prepared, stage, start, stop):
         start=start,
         stop=stop,
         statistics=statistics,
-        index_sha256=hashes,
         point=[float(v) if np.isfinite(v) else None for v in point],
         original_eligible_counts=count.tolist(),
         resampled_support_min=np.min(supports, axis=0).tolist(),
         resampled_support_max=np.max(supports, axis=0).tolist(),
-        config_sha256=digest(config),
-        input_sha256=config["prepared_input_sha256"][stage],
     )
     return dict(
         payload=payload,
-        payload_sha256=digest(payload),
         execution=dict(
             host=platform.node(),
             pid=os.getpid(),
             seconds=time.monotonic() - begun,
-            rss_bytes=psutil.Process().memory_info().rss,
+            **memory_usage(),
         ),
     )
