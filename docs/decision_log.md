@@ -1,5 +1,11 @@
 # Public decision log
 
+## 2026-10-29 — Check final document correspondence
+
+The owner requested alignment with the final DOCX pair and a local commit, with no push. All 31 accompanying CSV files and ten embedded PNG figures match the 20261027 export byte for byte. The release therefore retains that artifact version and the completed October 17 analyses. The title and entry-point descriptions now identify gastrointestinal sensation trajectories and symptom profiles. A technical measurement contract records rating origin, zero-response handling, signal units, extraction parameters and block eligibility.
+
+Document hashes and local verification are recorded in `document_alignment_verification_20261029.json`. No scientific code, parameter, aggregate result or figure is replaced. The public tree continues to exclude body prose, source paths and individual records. No remote publication or CI success is claimed.
+
 ## 2026-10-27 — Align code and artifacts with the current document revision
 
 The owner requested unification and a local commit, with push reserved for the owner. The current export uses four main/six supporting figures and two main/29 supporting tables. Full-precision source tables, native document PNGs, additional physiological code, public frozen configurations and aggregate results are imported from retained verified deliveries. The October 4 and October 23 exports remain unchanged.

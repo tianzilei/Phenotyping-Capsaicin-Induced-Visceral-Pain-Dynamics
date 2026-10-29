@@ -1,5 +1,7 @@
 # Current artifact alignment
 
+The final DOCX pair was checked on October 29, 2026; the [verification record](document_alignment_verification_20261029.json) identifies both files by SHA-256 and records all 31 accompanying CSV comparisons and ten embedded PNG comparisons. These match the existing export, so the artifact version remains 20261027.
+
 The October 27 export uses four main/six supporting figures and two main/29 supporting tables. Existing October 4 and October 23 exports retain their historical numbering. Statistical results include the separately frozen October 17 physiological analyses; this export performs no inference.
 
 ## Table sources

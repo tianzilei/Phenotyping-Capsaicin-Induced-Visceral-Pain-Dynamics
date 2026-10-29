@@ -1,5 +1,5 @@
 {
-  "version": "public_release_inventory_20261027_alignment_v1",
+  "version": "public_release_inventory_20261029_document_alignment_v1",
   "created_utc": "2026-10-05T09:46:58.170058+00:00",
   "source_revision": "0abd304a302550aa9352dba1e7ff3aea6af13a25",
   "source_worktree_was_dirty": true,
@@ -2413,8 +2413,8 @@
     },
     "README.md": {
       "source_sha256": "08679d0e5a635673a93b0eb0f3a7a61b1e1dfbaad9a3ac8a9b3a4c44c30f3de8",
-      "published_sha256": "062cc42ae601d1ecbc1578620a887346d10a42d660be95e97704a4399124cb8d",
-      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged",
+      "published_sha256": "e88f894326c6d81e507bccd7d04c9dbd8415992703484bd6d0b42b142950055b",
+      "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "config/final_artifacts_20261023_v1.json": {
@@ -2455,8 +2455,8 @@
     },
     "docs/analysis_plan.md": {
       "source_sha256": "51f08517ce1b3ffc54bb0d6072f1a7d74ef164b4bca7d16873dd1963b1021f14",
-      "published_sha256": "6b68c5c3768dff866df599d7886ec347cd0bf1014c6e7b7582746aa206e828d5",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "e88ddd2753c5e4d1d29310c8edb387de2f5a8b6b501b18dc997187ea359c8e25",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/code_guide.md": {
@@ -2467,32 +2467,32 @@
     },
     "docs/data_dictionary.md": {
       "source_sha256": "2643465fddf8506eebdb9e8a1793f353d63bf5c7fd2ba5e48048ad32e825869a",
-      "published_sha256": "4e29d6b8d6f32ad61a133b6891e38a3c5c8bb7f1ea5f172908156ae91e8cc4dc",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "bac9ac285d247d6672dd73cdf9f0aaa2fa45b8662d03d504b1a1c19f616cae1a",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/field_contract.md": {
       "source_sha256": "2889ed87d4ecdcdf5a0aa1c20794c6572f83fb17b8e7b02cbe0130378da7a345",
-      "published_sha256": "c6122fd6f89581464f6b8b04b920b8c639eee8354e86b7876bdab66fd8dbbaac",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "f7f9cfc5badddf49e644534c7954d89f9594f22dcf172a4abe14358df0a38ee5",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/reproducibility.md": {
       "source_sha256": "bc91fae03252727b5588620774dccff2a35934a9dfb9bdea1491ef5c3f7d6abc",
-      "published_sha256": "5774d0a9f325b5602e5863a0d7af5d17a4d5602fc5803940dc025812bd3efe1b",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "d8c97d984f073b5d4d2fbcc5b037abb723a84b20393e70fa9d6528c621ffb8b4",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/decision_log.md": {
       "source_sha256": "8e81e1bdfd9d746faede009cdda4af4b6a385bb2476cf345c4e0d2e25a737526",
-      "published_sha256": "a4f1589890a73b62034343d6e15660897a8931822127afae6aaf4a5c6639d6d1",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "74f1e4f872c040407e6104823c43e894d9f40708d637654c473941a8241346bd",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/artifact_alignment.md": {
       "source_sha256": "d07d16dbc2c524485334048ed865788d40abe8a33c8a7c9d7976ceb13cf45953",
-      "published_sha256": "240e219cabea54bc470ea529fe8ea30e5ecd0e31eef3739b968749b90e3885d5",
-      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference",
+      "published_sha256": "cf124a8de4ab95cfe1935fa4058482e039b6ab093358d0f4865db0e410dcc65b",
+      "transformation": "2026-10-23 public aggregate artifact alignment; no new inference; technical documentation aligned with final document definitions on 2026-10-29",
       "source_origin": "public artifact alignment"
     },
     "docs/artifact_alignment_verification_20261023.json": {
@@ -2668,6 +2668,24 @@
       "source_origin": "existing public code documentation",
       "published_sha256": "c5abab3df2bb764ebfc5e35a8ac648abff998110c0c907d4e7272cda0f37f7ec",
       "transformation": "code-only publication boundary; no manuscript prose; scientific values unchanged"
+    },
+    "docs/measurement_contract.md": {
+      "source_sha256": "80ba2db691937ba59927e6f4636afa7b2fc611612f9ca36274774b88e007e1eb",
+      "published_sha256": "80ba2db691937ba59927e6f4636afa7b2fc611612f9ca36274774b88e007e1eb",
+      "transformation": "new public technical documentation or verification metadata; no body prose or individual records",
+      "source_origin": "2026-10-29 local document alignment"
+    },
+    "docs/physiology_20261017.md": {
+      "source_sha256": "7fad9c80b8e8a11713d722d504d1fdb0baa17f776a9f3668750e6dfbbb219dd2",
+      "published_sha256": "86a30169bdb584156325e669edfff5b9d37fbe76430ac3a917ab6582cbde1496",
+      "transformation": "existing public physiological execution guide; link and measurement definitions aligned on 2026-10-29",
+      "source_origin": "prior public revision 2550d5426b26ca19f4e662ac52117cb4fb706fa1"
+    },
+    "docs/document_alignment_verification_20261029.json": {
+      "source_sha256": "deb8b605ed32c053750fc10e6a952ceae19ea665c044cd090f4d1b70df311b02",
+      "published_sha256": "deb8b605ed32c053750fc10e6a952ceae19ea665c044cd090f4d1b70df311b02",
+      "transformation": "new public technical documentation or verification metadata; no body prose or individual records",
+      "source_origin": "2026-10-29 local document alignment"
     }
   },
   "excluded_files": [
@@ -4889,5 +4907,21 @@
     "source_and_target_cross_checks": "all ten PNG files byte-identical; all 74 new-table rows/rules matched; original analysis files retained",
     "prior_public_head": "340d86013bae8e4987cc3986d272d4fdc2a4e642",
     "publication_receipt": "docs/artifact_publication_status_20261023.json"
-  }
+  },
+  "document_alignment_20261029": {
+    "source_document_sha256": {
+      "manuscript_final.docx": "18b0287ee843a177212333d2641685268eaf997827ec56d886d4866ca2c8d9dc",
+      "supplementary_final.docx": "2d22990b84766da6080f6f0122edf3299be235827c577f29872c7b08197bd0a2"
+    },
+    "verification": "docs/document_alignment_verification_20261029.json",
+    "artifact_version": "20261027",
+    "csv_matches": 31,
+    "embedded_png_matches": 10,
+    "displayed_numeric_cells_checked": 425,
+    "analytical_code_changed": false,
+    "aggregate_files_changed": false,
+    "remote_push_performed": false,
+    "scope": "local documentation alignment and local commit; owner manages push"
+  },
+  "last_document_review_date": "2026-10-29"
 }

@@ -6,6 +6,8 @@ The original evaluation contains 24 sensation–ECG/Hb coefficients, 66 EGG–Hb
 
 The 54-test extension contains the original 24, eight direct left-minus-right Hb contrasts and 22 sensation–Hb coefficients conditional on heart rate. Paired models share observations and scale. CR1 remains the main inference. Explicit full fixed-effect OLS with identity working covariance and clubSandwich 0.7.0 supplies CR2/Satterthwaite sensitivity. BY/BH adjustment is retained within each fixed family and across all 54. It does not replace the separate all-161 evaluation. Common-support timing comparisons retain all 432 positions; two −100 ppm RR-RMSSD positions are duration-ineligible at 299.97 s. Shared-region comparisons are descriptive and retain all coefficients.
 
+Acquisition units, signal extraction, block alignment and quality thresholds are listed in the [measurement contract](measurement_contract.md). Nominal physiological time starts at the selected recording/segment; it is not a verified administration timestamp. Hb coefficients use participant-specific sample SDs, while original instrument exports retain the manufacturer's relative scale.
+
 ## Files
 
 - [Frozen original inference configuration](../config/physiology_inference_20261017_v1.json)

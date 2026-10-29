@@ -1,14 +1,14 @@
-# Capsaicin-Induced Visceral Pain Dynamics
+# Gastrointestinal sensations after oral capsaicin
 
 [![Public release checks](https://github.com/tianzilei/Phenotyping-Capsaicin-Induced-Visceral-Pain-Dynamics/actions/workflows/public-release.yml/badge.svg)](https://github.com/tianzilei/Phenotyping-Capsaicin-Induced-Visceral-Pain-Dynamics/actions/workflows/public-release.yml)
 
-Analysis code, method configurations and public aggregate results for studying the time course and individual variation of responses to an oral capsaicin challenge. The analyses cover overall sensation ratings, symptoms and perceived regions, trajectory structure, early group recognition, later-score prediction and exploratory physiological measurements.
+Analysis code, method configurations and public aggregate results accompanying **Gastrointestinal sensation trajectories and symptom profiles after oral capsaicin in healthy volunteers**. The measured outcome is overall gastrointestinal sensation after a single oral capsaicin exposure. The analyses cover overall sensation ratings, symptoms and perceived regions, trajectory structure, early group recognition, later-score prediction and exploratory physiological measurements.
 
 This is an exploratory, results-informed reanalysis of an existing cohort. The [analysis plan](docs/analysis_plan.md) describes its scientific scope, and the [decision log](docs/decision_log.md) records methodological choices. The plan is not a preregistration.
 
 ## Current release
 
-The **October 27, 2026 export** follows the current document numbering and includes analysis results completed through **October 17, 2026**. It contains **4 main figures, 6 supporting figures, 2 main tables and 29 supporting tables**.
+The final DOCX pair was checked on **October 29, 2026** against the **October 27, 2026 export**, which includes analysis results completed through **October 17, 2026**. All 31 accompanying CSV tables and all ten embedded PNG figures match the retained export byte for byte. It contains **4 main figures, 6 supporting figures, 2 main tables and 29 supporting tables**.
 
 | Resource | Contents |
 | --- | --- |
@@ -16,7 +16,9 @@ The **October 27, 2026 export** follows the current document numbering and inclu
 | [Figure and table alignment](docs/artifact_alignment.md) | Current numbering and correspondence with earlier exports |
 | [Physiological inference](docs/physiology_20261017.md) | 161-test evaluation, 54-test extension, CR1/CR2 and controlled-input execution |
 | [Reproduction guide](docs/reproducibility.md) | Aggregate rendering, input hashes and individual-analysis prerequisites |
-| [Local verification record](docs/artifact_alignment_verification_20261027.json) | Current export and synthetic checks; remote publication is a separate action |
+| [Final document alignment checks](docs/document_alignment_verification_20261029.json) | Document hashes, table and figure comparisons, and local checks |
+| [Measurement and acquisition contract](docs/measurement_contract.md) | Rating origin, response coding, signal units, processing and observation requirements |
+| [October 27 integration checks](docs/artifact_alignment_verification_20261027.json) | Earlier export and synthetic verification |
 
 Main Table 2 reports future-score prediction; early three-group recognition is Table S16. The observation-support plot is Figure S1. Tables S22–S23 retain the physiological inference, and Tables S25–S29 retain bilateral, heart-rate-conditioned, covariance and timing sensitivities. Original native PNGs are retained exactly; SVG and PDF plots are generated from the same reviewed aggregates.
 
@@ -26,7 +28,7 @@ The [October 23](data/published/20261023/README.md) and [October 4](data/publish
 
 The reconciled cohort contains **215 participants** and **3,424 numerical ratings**. Each participant received **10 microlitres of a 10% w/v capsaicin preparation, equivalent to 1 mg**. Ratings were scheduled at actual integer minutes **1–20**. Complete minutes 1–10 are available for **206 participants** and complete minutes 1–20 for **56**.
 
-The recorded outcome is a **custom 0–10 overall sensation score**: 0 denotes no discomfort, 1 any discomfort, and 10 an intolerable sensation. It has not been validated as a standard pain or visual analogue scale. Historical `VAS` field and file names refer to this custom score. No numerical minute-zero rating is available.
+The recorded outcome is a **custom 0–10 overall sensation score**: 0 denotes no discomfort, 1 any discomfort, and 10 an intolerable sensation. It has not been validated as a standard pain or visual analogue scale. Historical `VAS` field and file names refer to this custom score. The rating clock starts after the water used to swallow the capsule has been finished; the first scheduled rating is at minute 1. No numerical minute-zero rating is available.
 
 **E** records stopping after two consecutive zero ratings with staff-confirmed absence of discomfort; **T** records discontinuation for intolerable sensations rated 10. Numerical ratings, E, T and missing entries remain separate. First recorded codes are recording markers rather than verified exact event times. Missing minutes and post-stop scores are left unfilled.
 
@@ -83,4 +85,4 @@ The [code guide](docs/code_guide.md) maps analysis domains to their implementati
 
 Public content includes code, method configurations, blank schemas, synthetic examples and reviewed aggregate outputs. Individual rating and symptom records, source signals and identifier maps remain under controlled access. [Data handling](docs/data_privacy.md) describes the access requirements. Individual analyses need verified inputs, a frozen local configuration and the recorded Python/R environment. Manuscript and supplementary body prose are excluded from this repository.
 
-The [October 27 verification record](docs/artifact_alignment_verification_20261027.json) records current synthetic and artifact checks, ten native PNG comparisons and all 31 table-source comparisons. The [release inventory](docs/release_inventory.json) records original and public file hashes. Prior dated publication receipts retain their original scope. This revision is prepared for a user-managed push; no new remote-publication success is claimed.
+The [October 29 verification record](docs/document_alignment_verification_20261029.json) identifies the final source documents by hash and records the current alignment and local checks. The [October 27 verification record](docs/artifact_alignment_verification_20261027.json) retains the earlier export checks. The [release inventory](docs/release_inventory.json) records original and public file hashes. Prior dated publication receipts retain their original scope. This revision is prepared for a user-managed push; no new remote-publication success is claimed.

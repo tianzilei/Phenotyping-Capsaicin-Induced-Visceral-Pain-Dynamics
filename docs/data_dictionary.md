@@ -23,4 +23,6 @@ Blank templates under `schemas/` define interfaces; they do not certify input pr
 
 The score is custom and has not been validated as a standard pain or visual analogue scale. Its anchors are 0, no discomfort; 1, any discomfort; and 10, an intolerable sensation. Values 2–9 have no additional verbal anchors.
 
+The [measurement contract](measurement_contract.md) defines the rating-clock origin, staff-confirmed zeros and signal acquisition. Exported Hb values represent concentration change multiplied by optical path length; inferential Hb coefficients use participant-specific SD units. Original ACQ ECG/EGG channels use mV. The signal extraction environment is separate from the inference environment.
+
 Physiological inference columns `beta`, `se_CR1`, `ci95_low`, `ci95_high` and `p_CR1` refer to the same participant/block fixed-effect model. `q_BY_family` and `q_BY_global161`/`q_BY_global54` retain different multiplicity families. `p_CR2_R` and `q_CR2_*` are sensitivity results. They do not replace historical gated `primary_p`/`primary_q`.

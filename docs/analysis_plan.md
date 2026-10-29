@@ -1,4 +1,6 @@
-# Current exploratory analysis plan — public edition 2026-10-27
+# Current exploratory analysis plan
+
+Measurement definitions and artifact correspondence were checked against the final DOCX pair on October 29, 2026. The [measurement contract](measurement_contract.md) and [alignment checks](document_alignment_verification_20261029.json) record this review. The completed analyses and 20261027 artifact version are retained.
 
 This document summarizes the completed, data-supported analysis through 2026-10-17, with artifact numbering aligned to the 2026-10-27 revision. It replaces the old publication pipeline as the current entry point. The upstream plan describes additional, results-informed analyses of an existing cohort; it is not a preregistration. Draft parameters are not automatically frozen scientific decisions. The original private plan and decision log are retained with source hashes in `release_inventory.json`; individual adjudications are not reproduced here.
 
